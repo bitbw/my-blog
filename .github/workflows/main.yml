@@ -16,4 +16,4 @@ jobs:
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
       BRANCH: gh-pages 
       FOLDER: public 
-      BUILD_SCRIPT: npm install && npm run build
+      BUILD_SCRIPT:  rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm install && npm run build
