@@ -4,12 +4,12 @@
 
 # Site
 title: 张博文
-subtitle: 'Zhang's personal blog'
-description: '张博文个人博客'
+subtitle: Zhang's personal blog
+description: 张博文个人博客
 keywords: 
 author: ZhangBoWen
 language: zh-CN
-timezone: ''
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
