@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 张博文
-subtitle: ''
-description: '张博文个人博客'
+title: 张博文个人博客
+subtitle: 'Zhang's personal blog'
+description: ''
 keywords: 
 author: ZhangBoWen
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://zhangbowen-1.github.io
 root: /my-blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
