@@ -240,6 +240,22 @@ timeout(100).then((value) => {
   - 如果你返回的直接就是一个 promise 对象，则不作任何处理
   - 如果你什么都没有反回，则返回一个空的promise对象
 
+### await
+
+await 代表等待的意思，就是等待后面的promise执行完返回后 在执行后续代码 ，相当于将后面的代码改成同步执行
+
+```js
+async function ayrequest () {
+     const res = await request('http://jsonplaceholder.typicode.com/users')
+     console.log(1)  //此代码会等待上面代码返回后再执行
+     request('http://jsonplaceholder.typicode.com/users')
+     console.log(2) // 此代码不会等待上面代码返回 ， 直接执行
+     
+}
+```
+
+
+
 ### async函数-异常处理
 
 跟推荐使用try catch 语法来获取异常
