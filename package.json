@@ -17,6 +17,7 @@
     "hexo-asset-image": "https://github.com/CodeFalling/hexo-asset-image",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
+    "hexo-generator-cname": "^0.3.0",
     "hexo-generator-index": "^1.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
