@@ -1,7 +1,8 @@
 ---
 title: RegExp对象和string.replac方法
-date: 2019-12-04 17:19:26
+date: 2018-12-04 17:19:26
 tags: js
+categories: js
 ---
 
 ## RegExp 对象

@@ -1,19 +1,16 @@
 ---
 title: Promise对象和async函数
-date: 2019-11-28 18:52:44
+date: 2018-5-28 18:52:44
 tags: es6
+categories: es6
 ---
-
-
-
-
 
 ## 异步代码
 
 ### 现在常见的的异步代码
 
 - 定时器
-- ajax请求
+- ajax 请求
 
 #### 注意事项：
 
@@ -23,126 +20,111 @@ tags: es6
 
 ### 基于回调函数的异步流程控制
 
-封装一个原生get请求
+封装一个原生 get 请求
 
 ```js
-function get(url,cd) {
-      const xhr = new XMLHttpRequest()
-      xhr.open('get',url)
-      xhr.send()
-      xhr.onload=function () {
-         cd(this.response)
-      }
-    }
+function get(url, cd) {
+	const xhr = new XMLHttpRequest();
+	xhr.open("get", url);
+	xhr.send();
+	xhr.onload = function () {
+		cd(this.response);
+	};
+}
 ```
 
-#### 原生ajax请求注意事项： 
+#### 原生 ajax 请求注意事项：
 
-事件最好放在发送请求前  不然像捕获发送失败这种函数会获不到
+事件最好放在发送请求前 不然像捕获发送失败这种函数会获不到
 
 ```js
-  const xhr = new XMLHttpRequest()
-                xhr.addEventListener('load',function () {
-                    resolve(this.response)
-                })
-                xhr.addEventListener("error", function (err) {
-                    reject(err)
-                })
-                xhr.open('get',url)
-                xhr.send()
+const xhr = new XMLHttpRequest();
+xhr.addEventListener("load", function () {
+	resolve(this.response);
+});
+xhr.addEventListener("error", function (err) {
+	reject(err);
+});
+xhr.open("get", url);
+xhr.send();
 ```
 
-
-
-#### 异步并行 : 
+#### 异步并行 :
 
 - 一起执行 不分先后顺序
 
 ```js
-
-    get('http://jsonplaceholder.typicode.com/posts',function (res) {
-       console.log(1);
-       
-    })
-    get('http://jsonplaceholder.typicode.com/comments',function (res) {
-       console.log(2);
-       
-    })
-    get('http://jsonplaceholder.typicode.com/users',function (res) {
-       console.log(3);
-       
-    })
+get("http://jsonplaceholder.typicode.com/posts", function (res) {
+	console.log(1);
+});
+get("http://jsonplaceholder.typicode.com/comments", function (res) {
+	console.log(2);
+});
+get("http://jsonplaceholder.typicode.com/users", function (res) {
+	console.log(3);
+});
 ```
 
-#### 异步串行  :
+#### 异步串行 :
 
-- 依次执行  上一层执行完毕在执行下面代码
+- 依次执行 上一层执行完毕在执行下面代码
 
 ```js
-  get('http://jsonplaceholder.typicode.com/posts',function (res) {
-       console.log(1);
-       get('http://jsonplaceholder.typicode.com/comments',function (res) {
-            console.log(2);
-            get('http://jsonplaceholder.typicode.com/users',function (res) {
-                console.log(3);
-            
-            })
-       
-        })
-       
-    })
+get("http://jsonplaceholder.typicode.com/posts", function (res) {
+	console.log(1);
+	get("http://jsonplaceholder.typicode.com/comments", function (res) {
+		console.log(2);
+		get("http://jsonplaceholder.typicode.com/users", function (res) {
+			console.log(3);
+		});
+	});
+});
 ```
 
 ### 回调地狱
 
-异步串行如果嵌套过深会造成经典的`回调地狱`   这时需要用到es6新增的Promise 对象来解决
+异步串行如果嵌套过深会造成经典的`回调地狱` 这时需要用到 es6 新增的 Promise 对象来解决
 
 ![img](Promise对象和async函数/timg.jpg)
 
-
-
-
-
-### axios的串行
+### axios 的串行
 
 ```js
 axios({
-      method: 'GET',
-      url: 'http://jsonplaceholder.typicode.com/posts'
-    })
-    .then(res => {
-      console.log('2 posts 的响应结果')
-      return axios({
-        method: 'GET',
-        url: 'http://jsonplaceholder.typicode.com/users'
-      })
-    })
-    .then(res => {
-      console.log('3 users 的响应结果')
-      return axios({
-        method: 'GET',
-        url: 'http://jsonplaceholder.typicode.com/comments'
-      })
-    })
-    .then(res => {
-      console.log('4 comments 的响应结果')
-    })
+	method: "GET",
+	url: "http://jsonplaceholder.typicode.com/posts",
+})
+	.then((res) => {
+		console.log("2 posts 的响应结果");
+		return axios({
+			method: "GET",
+			url: "http://jsonplaceholder.typicode.com/users",
+		});
+	})
+	.then((res) => {
+		console.log("3 users 的响应结果");
+		return axios({
+			method: "GET",
+			url: "http://jsonplaceholder.typicode.com/comments",
+		});
+	})
+	.then((res) => {
+		console.log("4 comments 的响应结果");
+	});
 ```
 
-### 补充：setTimeout、setInterval被遗忘的第三个参数
+### 补充：setTimeout、setInterval 被遗忘的第三个参数
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)介绍
 
 定时器启动时候，第三个以后的参数是作为第一个`func()`的参数传进去。
 
 ```js
-var sum = function(x,y,z) {
-    console.log(x+y+z);   // 打印6
-}
-setTimeout(sum,1000,1,2,3)   
+var sum = function (x, y, z) {
+	console.log(x + y + z); // 打印6
+};
+setTimeout(sum, 1000, 1, 2, 3);
 ```
-
-
 
 ## Promise 对象
 
@@ -192,29 +174,27 @@ const promise = new Promise(function(resolve, reject) {
 
 ```js
 function timeout(ms) {
-  return new Promise((resolve, reject) => {
-    setTimeout(resolve, ms, 'done');
-  });
+	return new Promise((resolve, reject) => {
+		setTimeout(resolve, ms, "done");
+	});
 }
 
 timeout(100).then((value) => {
-  console.log(value);
+	console.log(value);
 });
 ```
 
 上面代码中，`timeout`方法返回一个`Promise`实例，表示一段时间以后才会发生的结果。过了指定的时间（`ms`参数）以后，`Promise`实例的状态变为`resolved`，就会触发`then`方法绑定的回调函数。
 
-### Promise-then方法
+### Promise-then 方法
 
 - then 方法执行完以后会返回一个新的 Promise 对象
 - 如果是普通数据，那么它会把该数据包装为那个返回的 Promise 的 resolve 结果
 - 如果你返回的数据就是一个 Promise 对象，那它就不做任何处理了
 
+## async 函数
 
-
-## async函数
-
-**Async 函数简化了 Promise 的调用，本质还是 Promise，有点类似promise的then方法**  
+**Async 函数简化了 Promise 的调用，本质还是 Promise，有点类似 promise 的 then 方法**
 
 **任何函数都可以被标记为 async 函数**
 
@@ -232,52 +212,49 @@ timeout(100).then((value) => {
     // }
 ```
 
-### async函数-返回值
+### async 函数-返回值
 
 - async 函数始终返回 Promise
 - async 函数的返回值
   - 如果是普通数据，则直接把它包装到 promise 对象中，数据就是 resolve 的结果
   - 如果你返回的直接就是一个 promise 对象，则不作任何处理
-  - 如果你什么都没有反回，则返回一个空的promise对象
+  - 如果你什么都没有反回，则返回一个空的 promise 对象
 
 ### await
 
-await 代表等待的意思，就是等待后面的promise执行完返回后 在执行后续代码 ，相当于将后面的代码改成同步执行
+await 代表等待的意思，就是等待后面的 promise 执行完返回后 在执行后续代码 ，相当于将后面的代码改成同步执行
 
 ```js
-async function ayrequest () {
-     const res = await request('http://jsonplaceholder.typicode.com/users')
-     console.log(1)  //此代码会等待上面代码返回后再执行
-     request('http://jsonplaceholder.typicode.com/users')
-     console.log(2) // 此代码不会等待上面代码返回 ， 直接执行
-     
+async function ayrequest() {
+	const res = await request("http://jsonplaceholder.typicode.com/users");
+	console.log(1); //此代码会等待上面代码返回后再执行
+	request("http://jsonplaceholder.typicode.com/users");
+	console.log(2); // 此代码不会等待上面代码返回 ， 直接执行
 }
 ```
 
+### async 函数-异常处理
 
-
-### async函数-异常处理
-
-跟推荐使用try catch 语法来获取异常
+跟推荐使用 try catch 语法来获取异常
 
 ```js
- async function ayrequest () {
-        const res = await request('http://jsonplaceholder.typicode.com/users')
-        return request('http://jsonplaceholder.typicode.com/posts')
-    // 异常处理
-     try {
-         console.log(1);
-         const res = await request('sdf://dsfsdfsdf.sdf.com/dsf')
-         console.log(2);
-         console.log(res)
-     } catch (error) {
-         console.log(3);
-         console.log('发送失败',error)
-     }
-    }
+async function ayrequest() {
+	const res = await request("http://jsonplaceholder.typicode.com/users");
+	return request("http://jsonplaceholder.typicode.com/posts");
+	// 异常处理
+	try {
+		console.log(1);
+		const res = await request("sdf://dsfsdfsdf.sdf.com/dsf");
+		console.log(2);
+		console.log(res);
+	} catch (error) {
+		console.log(3);
+		console.log("发送失败", error);
+	}
+}
 ```
 
-### 在Vue中使用async函数
+### 在 Vue 中使用 async 函数
 
 ```js
 async created () {
@@ -289,4 +266,3 @@ async created () {
         })
 	}
 ```
-

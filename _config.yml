@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 张博文
+title: 张博文的个人博客
 subtitle: Zhang's personal blog
-description: 张博文的个人博客
+description: vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客
 keywords:
 author: 张博文
 language: zh-CN
@@ -13,10 +13,11 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zhangbowen.xyz/
+url: https://zhangbowen.xyz/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
+  category: 默认分类
 pretty_urls:
   trailing_index: true # Set to false to remove trailing index.html from permalinks
 
@@ -59,7 +60,7 @@ index_generator:
   order_by: -date
 
 # Category & Tag
-default_category: uncategorized
+default_category: 默认分类
 category_map:
 tag_map:
 
@@ -90,10 +91,18 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
+#搜索
+search:
+path: search.xml
+field: post
+format: html
+limit: 10000
+# 分享
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git # 使用 Git 提交
   repository: https://github.com/zhangbowen-github/my-blog.git # 就是存放博客的仓库地址
+

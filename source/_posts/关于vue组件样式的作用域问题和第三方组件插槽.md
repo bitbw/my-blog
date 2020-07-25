@@ -2,11 +2,12 @@
 title: 关于vue组件样式的作用域问题
 date: 2019-12-03 22:15:57
 tags: vue
+categories: vue
 ---
 
->参考文档：
+> 参考文档：
 >
->- https://vue-loader.vuejs.org/zh/guide/scoped-css.html
+> - https://vue-loader.vuejs.org/zh/guide/scoped-css.html
 
 ## 关于组件的作用域样式
 
@@ -14,7 +15,7 @@ tags: vue
 
 ```html
 <style>
-  /* 全局样式 */
+	/* 全局样式 */
 </style>
 ```
 
@@ -22,13 +23,13 @@ tags: vue
 
 ```html
 <style scoped>
-.example {
-  color: red;
-}
+	.example {
+		color: red;
+	}
 </style>
 
 <template>
-  <div class="example">hi</div>
+	<div class="example">hi</div>
 </template>
 ```
 
@@ -36,13 +37,13 @@ tags: vue
 
 ```html
 <style>
-.example[data-v-f3f3eg9] {
-  color: red;
-}
+	.example[data-v-f3f3eg9] {
+		color: red;
+	}
 </style>
 
 <template>
-  <div class="example" data-v-f3f3eg9>hi</div>
+	<div class="example" data-v-f3f3eg9>hi</div>
 </template>
 ```
 
@@ -50,11 +51,11 @@ tags: vue
 
 ```html
 <style>
-/* 全局样式 */
+	/* 全局样式 */
 </style>
 
 <style scoped>
-/* 本地样式 */
+	/* 本地样式 */
 </style>
 ```
 
@@ -72,9 +73,9 @@ tags: vue
 
 以上两种方式也只能作用到子组件的根节点 ，想要作用子组件内部的节点有两种方法
 
-方法一：为当前样式单独包一个style标签，去掉scoped作用全局即可，但不是很推荐
+方法一：为当前样式单独包一个 style 标签，去掉 scoped 作用全局即可，但不是很推荐
 
-方法二：使用vue提供的深度作用选择器， 强烈推荐！
+方法二：使用 vue 提供的深度作用选择器， 强烈推荐！
 
 ## 深度作用选择器
 
@@ -82,19 +83,21 @@ tags: vue
 
 ```html
 <style scoped>
-.a >>> .b { /* ... */ }
+	.a >>> .b {
+		/* ... */
+	}
 </style>
 ```
 
 上述代码将会编译成：
 
 ```css
-.a[data-v-f3f3eg9] .b { /* ... */ }
+.a[data-v-f3f3eg9] .b {
+	/* ... */
+}
 ```
 
 有些像 Sass 之类的预处理器无法正确解析 `>>>`。这种情况下你可以使用 `/deep/` 或 `::v-deep` 操作符取而代之——两者都是 `>>>` 的别名，同样可以正常工作。
-
-
 
 建议使用 `/deep/` 或者 `::v-deep`，因为 `>>>` 可能在预处理器中报错。
 
@@ -103,8 +106,6 @@ tags: vue
 .a /deep/ .b { /* ... */ }
 </style>
 ```
-
-
 
 ## 总结
 
@@ -127,14 +128,13 @@ tags: vue
 <van-cell title="单元格" value="内容" label="hello" />
 
 <van-cell title="单元格" value="内容" label="hello">
-  <button slot="title">hello</button>
+	<button slot="title">hello</button>
 
-  <!-- 当你没有给元素插槽起名字的时候，这个组件提供了默认插槽 -->
-  <span>默认内容</span>
-  <span slot="default">默认内容</span>
+	<!-- 当你没有给元素插槽起名字的时候，这个组件提供了默认插槽 -->
+	<span>默认内容</span>
+	<span slot="default">默认内容</span>
 
-  <!-- 同名插槽可以插入多次 -->
-  <span slot="title">world</span>
+	<!-- 同名插槽可以插入多次 -->
+	<span slot="title">world</span>
 </van-cell>
 ```
-

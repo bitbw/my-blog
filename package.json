@@ -15,14 +15,17 @@
   "dependencies": {
     "hexo": "^4.0.0",
     "hexo-asset-image": "https://github.com/CodeFalling/hexo-asset-image",
+    "hexo-footnotes": "^1.0.2",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-cname": "^0.3.0",
     "hexo-generator-index": "^1.0.0",
+    "hexo-generator-searchdb": "^1.3.2",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0"
+    "hexo-server": "^1.0.0",
+    "hexo-wordcount": "^6.0.1"
   }
 }

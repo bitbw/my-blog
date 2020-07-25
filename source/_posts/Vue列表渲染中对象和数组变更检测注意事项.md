@@ -1,10 +1,9 @@
 ---
 title: Vue列表渲染中对象和数组变更检测注意事项
-date: 2019-12-04 10:49:58
+date: 2018-12-04 10:49:58
 tags: vue
+categories: vue
 ---
-
-
 
 ## 对象变更检测注意事项
 
@@ -14,67 +13,68 @@ tags: vue
 
 ```js
 var vm = new Vue({
-  data: {
-    a: 1
-  }
-})
+	data: {
+		a: 1,
+	},
+});
 // `vm.a` 现在是响应式的
 
-vm.b = 2
+vm.b = 2;
 // `vm.b` 不是响应式的
-
 ```
 
 对于已经创建的实例，Vue 不允许动态添加根级别的响应式属性。但是，可以使用 `Vue.set(object, propertyName, value)` 方法向嵌套对象添加响应式属性。例如，对于：
 
 ```js
 var vm = new Vue({
-  data: {
-    userProfile: {
-      name: 'Anika'
-    }
-  }
-})
+	data: {
+		userProfile: {
+			name: "Anika",
+		},
+	},
+});
 ```
 
 你可以添加一个新的 `age` 属性到嵌套的 `userProfile` 对象：
 
 ```js
-Vue.set(vm.userProfile, 'age', 27)
+Vue.set(vm.userProfile, "age", 27);
 ```
 
 你还可以使用 `vm.$set` 实例方法，它只是全局 `Vue.set` 的别名：
 
 ```js
-vm.$set(vm.userProfile, 'age', 27)
+vm.$set(vm.userProfile, "age", 27);
 ```
 
-如果你想给一个data中的对象新加属性又不想使用到以上方法
+如果你想给一个 data 中的对象新加属性又不想使用到以上方法
 
-建议使用一个变量接收添加完新属性的对象，然后在从新赋值给原data中的数据 
+建议使用一个变量接收添加完新属性的对象，然后在从新赋值给原 data 中的数据
 
 ```js
-const  userProfile = vm.userProfile
-userProfile.age = 27
-vm.userProfile = userProfile
+const userProfile = vm.userProfile;
+userProfile.age = 27;
+vm.userProfile = userProfile;
 ```
 
 有时你可能需要为已有对象赋值多个新属性，比如使用 `Object.assign()` 或 `jQuery.extend()`。在这种情况下，你应该用两个对象的属性创建一个新的对象。所以，如果你想添加新的响应式属性，不要像这样：
 
 ```js
-Object.assign(vm.userProfile, {  //不要仅仅直接添加属性的方式
-  age: 27, 
-  favoriteColor: 'Vue Green'
-})
+Object.assign(vm.userProfile, {
+	//不要仅仅直接添加属性的方式
+	age: 27,
+	favoriteColor: "Vue Green",
+});
 ```
 
 你应该这样做：
 
 ```js
-vm.userProfile = Object.assign({}, vm.userProfile, { //建议新建一个对象合并和后在重新赋值
-  age: 27,
-  favoriteColor: 'Vue Green'
-})
+vm.userProfile = Object.assign({}, vm.userProfile, {
+	//建议新建一个对象合并和后在重新赋值
+	age: 27,
+	favoriteColor: "Vue Green",
+});
 ```
 
 ## Object.assign() 方法
@@ -87,7 +87,7 @@ const source1 = { b: 2 };
 const source2 = { c: 3 };
 
 Object.assign(target, source1, source2);
-target // {a:1, b:2, c:3}
+target; // {a:1, b:2, c:3}
 ```
 
 ## 数组更新检测
@@ -114,8 +114,8 @@ Vue 将被侦听的数组的变异方法进行了包裹，所以它们也将会�
 
 ```js
 example1.items = example1.items.filter(function (item) {
-  return item.message.match(/Foo/)
-})
+	return item.message.match(/Foo/);
+});
 ```
 
 你可能认为这将导致 Vue 丢弃现有 DOM 并重新渲染整个列表。幸运的是，事实并非如此。Vue 为了使得 DOM 元素得到最大范围的重用而实现了一些智能的启发式方法，所以用一个含有相同元素的数组去替换原来的数组是非常高效的操作。
@@ -160,4 +160,4 @@ vm.$set(vm.items, indexOfItem, newValue)
 vm.items.splice(newLength)
 ```
 
-#### **建议如果需要替换数组中某一项统一使用splice方法**
+#### **建议如果需要替换数组中某一项统一使用 splice 方法**

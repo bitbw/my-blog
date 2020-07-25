@@ -1,7 +1,8 @@
 ---
-title: yarn和npm
-date: 2019-11-30 18:27:25
+title: yarn 和 npm
+date: 2018-04-30 18:27:25
 tags: 工具使用
+categories: 工具使用
 ---
 
 ## 关于 npm 和 yarn
@@ -10,7 +11,7 @@ npm 和 yarn 都是管理第三方包的。
 
 yarn 相比 npm 稍微快一些。
 
-下面是npm 和 yarn 常用命令对照表：
+下面是 npm 和 yarn 常用命令对照表：
 
 ```bash
 # yarn init
@@ -43,7 +44,7 @@ npm uninstall --global 包名
 
 2、使用你要使用的包管理工具把所有依赖重新安装一遍
 
-- 如果是 yarn 就直接执行 `yarn ` 或者 `yarn install`
+- 如果是 yarn 就直接执行 `yarn` 或者 `yarn install`
 - 如果 npm 就执行 `npm install`
 
 3、之后都使用你切换之后的包管理工具进行装包
@@ -73,6 +74,6 @@ Vue CLI v4.1.1
 
 但是之后你使用 `vue` 命令创建项目的时候，它都会使用你之前选择的包管理工具安装依赖，而不再给你提示选择的机会。
 
-这是因为 VueCLI 默认记住了你第1次选择使用的包管理器，是好事儿也是坏事儿。
+这是因为 VueCLI 默认记住了你第 1 次选择使用的包管理器，是好事儿也是坏事儿。
 
 如果你想要在初始化的时候重新选择使用的包管理工具，那就找到你操作系统用户目录下的 `.vuerc` 将其删除即可。

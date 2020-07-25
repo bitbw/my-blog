@@ -1,17 +1,8 @@
-<!--
- * @Description:
- * @Autor: zhangbowen
- * @Date: 2020-07-22 14:12:33
- * @LastEditors: zhangbowen
- * @LastEditTime: 2020-07-22 15:29:27
--->
-
 ---
-
 title: vue 移动端采坑
-date: 2019-11-30 20:54:04
+date: 2019-2-30 20:54:04
 tags: vue
-
+categories: vue
 ---
 
 ## 1.报错

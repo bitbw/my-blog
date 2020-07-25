@@ -1,12 +1,13 @@
 ---
 title: WebSocket的简单了解和使用
-date: 2019-12-09 08:15:26
+date: 2018-2-09 08:15:26
 tags: 网络应用
+categories: 网络应用
 ---
 
 ## WebSocket
 
-![img](F:/%E9%BB%91%E9%A9%AC%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%B0%B1%E4%B8%9A%E7%8F%AD%EF%BC%89/14.Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/Day7/%E8%B5%84%E6%96%99/3-%E7%AC%94%E8%AE%B0/assets/bg2017051501.png)
+![img](WebSocket的简单了解和使用/bg2017051501.png)
 
 - WebSocket 是一种数据通信协议，类似于我们常见的 http
 - 既然有 http，为啥还要 WebSocket
@@ -40,7 +41,7 @@ WebSocket 打电话：
 
 - 双向对话
 
-![img](F:/%E9%BB%91%E9%A9%AC%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%B0%B1%E4%B8%9A%E7%8F%AD%EF%BC%89/14.Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/Day7/%E8%B5%84%E6%96%99/3-%E7%AC%94%E8%AE%B0/assets/bg2017051502.png)
+![img](WebSocket的简单了解和使用/bg2017051502.png)
 
 > HTTP 和 WebSocket 通信模型
 
@@ -64,7 +65,7 @@ WebSocket 打电话：
 ws://example.com:80/some/path
 ```
 
-![img](F:/%E9%BB%91%E9%A9%AC%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%B0%B1%E4%B8%9A%E7%8F%AD%EF%BC%89/14.Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/Day7/%E8%B5%84%E6%96%99/3-%E7%AC%94%E8%AE%B0/assets/bg2017051503.jpg)
+![img](WebSocket的简单了解和使用/bg2017051503.jpg)
 
 ## 使用原生 WebSocket（了解）
 
@@ -126,7 +127,7 @@ ws://example.com:80/some/path
 
 怎么查看 WebSocket 请求日志：
 
-![1569575005360](F:/%E9%BB%91%E9%A9%AC%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%B0%B1%E4%B8%9A%E7%8F%AD%EF%BC%89/14.Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/Day7/%E8%B5%84%E6%96%99/3-%E7%AC%94%E8%AE%B0/assets/1569575005360.png)
+![1569575005360](WebSocket的简单了解和使用/1569575005360.png)
 
 > 朝上的绿色箭头是发出去的消息
 >
