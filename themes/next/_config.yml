@@ -684,10 +684,10 @@ cnzz_siteid:
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
   enable: true
-  app_id: # <your app id>
-  app_key: # <your app key>
+  app_id: tOh3zAjRBKEly3WzeiAOIbgA-gzGzoHsz
+  app_key: hhk8N3PgDjBEMgSzjrc1xvtd
   # Required for apps from CN region
-  server_url: # <your server url>
+  server_url: https://toh3zajr.lc-cn-n1-shared.com
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
