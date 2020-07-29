@@ -37,7 +37,7 @@ custom_file_path:
 # Site Information Settings
 # See: https://theme-next.org/docs/getting-started/
 # ---------------------------------------------------------------
-
+#网站favicon图标设置
 favicon:
   small: /images/favicon-16x16-next.png
   medium: /images/favicon-32x32-next.png
@@ -255,6 +255,8 @@ symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: false
+  awl: 5
+  wpm: 200
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -606,17 +608,17 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
-  notify: false # Mail notifier
-  verify: false # Verification code
-  placeholder: Just go go # Comment box placeholder
+  enable: true
+  appid: tOh3zAjRBKEly3WzeiAOIbgA-gzGzoHsz
+  appkey: hhk8N3PgDjBEMgSzjrc1xvtd
+  notify: true # Mail notifier
+  verify: true # Verification code
+  placeholder: 欢迎交流讨论... # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: zh-cn
-  visitor: false # Article reading statistic
+  visitor: true # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   recordIP: false # Whether to record the commenter IP
   serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
@@ -705,7 +707,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
