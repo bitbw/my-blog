@@ -2,14 +2,12 @@
 title: element+sortablejs实现表格托拽
 date: 2020-07-31 14:36:01
 tags: elementUI vue  sortablejs
-categories:vue 
+categories: vue
 ---
 
+最终实现效果：![el-table托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/el-table%E6%89%98%E6%8B%BD.gif)
 
-
-最终实现效果：![el-table托拽](C:/Users/ThinkPad/Desktop/el-table%E6%89%98%E6%8B%BD.gif)
-
-js部分实现
+js 部分实现
 
 ```js
 import Sortable from 'sortablejs';//引入sortablejs
@@ -47,35 +45,34 @@ this.$nextTick(() => {
 	}
 ```
 
-css部分
+css 部分
 
 ```css
 //针对固定列的table需要处理hover的样式
 tr.hover-row {
+	&,
+	&.el-table__row--striped {
 		&,
-		&.el-table__row--striped {
-			&,
-			&.current-row {
-				> td {
-					background-color: transparent;
-				}
+		&.current-row {
+			> td {
+				background-color: transparent;
 			}
 		}
 	}
+}
 //托拽时的样式
 .sortable-ghost {
-    opacity: 0.8;
-    color: #fff !important;
-    background: #42b983 !important;
+	opacity: 0.8;
+	color: #fff !important;
+	background: #42b983 !important;
 }
 ```
 
-> 注意事项：el-table需要指定 row-key  否则会发生不生效的现象，托拽时的样式不生效时，需要将el-table的hover样式去掉
+> 注意事项：el-table 需要指定 row-key 否则会发生不生效的现象，托拽时的样式不生效时，需要将 el-table 的 hover 样式去掉
 
-## 两个table的相互托拽
+## 两个 table 的相互托拽
 
-![el-table相互托拽](C:/Users/ThinkPad/Desktop/el-table%E7%9B%B8%E4%BA%92%E6%89%98%E6%8B%BD.gif)
-
+![el-table相互托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/el-table%E7%9B%B8%E4%BA%92%E6%89%98%E6%8B%BD.gif)
 
 ```js
 // 初始化拖拽
@@ -179,4 +176,3 @@ tr.hover-row {
 		});
 	}
 ```
-
