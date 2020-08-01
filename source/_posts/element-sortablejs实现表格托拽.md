@@ -1,11 +1,16 @@
 ---
 title: element+sortablejs实现表格托拽
 date: 2020-07-31 14:36:01
-tags: elementUI vue  sortablejs
+tags: 
+	- elementUI 
+	- vue  
+	- sortablejs
 categories: vue
 ---
 
 最终实现效果：![el-table托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/el-table%E6%89%98%E6%8B%BD.gif)
+
+<!--more-->
 
 js 部分实现
 

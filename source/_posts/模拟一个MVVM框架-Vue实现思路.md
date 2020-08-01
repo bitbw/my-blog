@@ -17,6 +17,8 @@ MVVM 框架实现了数据双向绑定
 MVVM 框架实现了视图与模型层的相互解耦
 ![Vue双向绑定原理MVVM](模拟一个MVVM框架-Vue实现思路/Vue双向绑定原理MVVM.png)
 
+<!--more-->
+
 ## 几种双向数据绑定的方式
 
 - 发布-订阅者模式（backbone.js）
@@ -138,7 +140,7 @@ class Compile {
 		// 调用conpileUtils插值表达式解析器
 		conpileUtils.mustache(node, this.vm);
 	}
-
+	
 	/**
 	 * 工具方法
 	 */
@@ -393,7 +395,7 @@ class Watcher {
  * 创建一个Dep对象用于管理这个订阅者也就是每个watcher实例
  * 并且在改变后通知每个订阅者
  */
-
+ 
 class Dep {
 	constructor() {
 		// 用于储存所有订阅者

@@ -16,7 +16,7 @@ yarn 相比 npm 稍微快一些。
 ```bash
 # yarn init
 npm init
-
+ 
 # yarn add 包名
 npm install 包名
 
@@ -35,6 +35,8 @@ npm install --global 包名
 # yarn global remove 包名
 npm uninstall --global 包名
 ```
+
+<!--more-->
 
 在一个项目中，使用哪个包管理工具那你就自始至终都使用这个工具，千万不要混用，否则会导致文件丢失。
 

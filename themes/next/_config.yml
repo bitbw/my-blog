@@ -156,7 +156,7 @@ sidebar:
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
-# Sidebar Avatar
+# Sidebar Avatar 创建人图片展示
 avatar:
   # Replace the default image and set the url here.
   url: /images/无限循环1.gif
@@ -174,13 +174,13 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   # 等等
-  GitHub: https://github.com/yourname || fab fa-github
-  "微博": http://weibo.com/your-user-name || fab fa-weibo
-  "知乎": http://www.zhihu.com/people/your-user-name || fab fa-zhihu
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com || fab fa-github
+  "微博": http://weibo.com || fab fa-weibo
+  "知乎": http://www.zhihu.com || fab fa-zhihu
+  E-Mail: 18211132604@163.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
-  Google: https://plus.google.com/yourname || fab fa-google
-  Twitter: https://twitter.com/yourname || fab fa-twitter
+  # Google: https://plus.google.com/yourname || fab fa-google
+  Twitter: https://twitter.com/P67OE6poKekkt2b || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
   YouTube: https://youtube.com/yourname || fab fa-youtube
@@ -189,13 +189,10 @@ social:
   #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
-  enable: true
-  icons_only: false
-  transition: false
-# 开启打赏功能
-reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
-wechatpay: /images/支付宝二维码.jpg
-alipay: /images/支付宝二维码.jpg
+  enable: false
+  icons_only: true
+  transition: true
+
 # Blog rolls
 links_settings:
   icon: fa fa-link
@@ -233,11 +230,15 @@ chat:
 # See: https://theme-next.org/docs/theme-settings/posts
 # ---------------------------------------------------------------
 
-# Automatically excerpt description in homepage as preamble text.
+# Automatically excerpt description in homepage as preamble text.  自动摘要
 excerpt_description: true
-
+excerpt:
+  depth: 2
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
 # Read more button
-# If true, the read more button will be displayed in excerpt section.
+# If true, the read more button will be displayed in excerpt section. 显示阅读全文按钮
 read_more_btn: true
 
 # Post meta display settings
@@ -261,17 +262,17 @@ symbols_count_time:
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
 
-# Reward (Donate)
+# Reward (Donate) 开启打赏功能
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, reward will be displayed in every article by default.
-  enable: false
+  enable: true
   animation: false
-  #comment: Donate comment here.
+  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
+  wechatpay: /images/wechatpay.jpg
+  alipay: /images/alipay.jpg
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -294,7 +295,7 @@ related_posts:
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
-    #isExcerpt: false
+    isExcerpt: true
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -343,15 +344,15 @@ text_align:
   desktop: justify
   mobile: justify
 
-# Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+# Reduce padding / margin indents on devices with narrow width. 移动端布局
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
 
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
-
+#代码块样式
 codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
@@ -359,20 +360,20 @@ codeblock:
   highlight_theme: night eighties
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
-    style:
-
+    style: mac
+#返回顶部按钮
 back2top:
   enable: true
   # Back to top in sidebar.
   sidebar: false
-  # Scroll percent label in b2t button.
-  scrollpercent: false
+  # Scroll percent label in b2t button. 返回顶部按钮的百分比
+  scrollpercent: true
 
-# Reading progress bar
+# Reading progress bar 阅读进度
 reading_progress:
   enable: false
   # Available values: top | bottom
@@ -380,9 +381,9 @@ reading_progress:
   color: "#37c6c0"
   height: 3px
 
-# Bookmark Support
+# Bookmark Support 书签
 bookmark:
-  enable: false
+  enable: true
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
@@ -391,8 +392,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com
   title: Follow me on GitHub
 
 # ---------------------------------------------------------------
@@ -445,7 +446,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: PT Mono
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -614,7 +615,7 @@ valine:
   notify: true # Mail notifier
   verify: true # Verification code
   placeholder: 欢迎交流讨论... # Comment box placeholder
-  avatar: mm # Gravatar style
+  avatar: retro # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
   language: zh-cn
@@ -836,7 +837,7 @@ motion:
 # Dependencies: https://github.com/theme-next/theme-next-pace
 # For more information: https://github.com/HubSpot/pace
 pace:
-  enable: true
+  enable: false
   # Themes list:
   # big-counter | bounce | barber-shop | center-atom | center-circle | center-radar | center-simple
   # corner-indicator | fill-left | flat-top | flash | loading-bar | mac-osx | material | minimal
