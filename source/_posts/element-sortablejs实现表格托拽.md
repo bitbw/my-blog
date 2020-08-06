@@ -8,7 +8,9 @@ tags:
 categories: vue
 ---
 
-最终实现效果：![el-table托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/el-table%E6%89%98%E6%8B%BD.gif)
+最终实现效果：
+
+![单表格托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/%E5%8D%95%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD.gif)
 
 <!--more-->
 
@@ -77,7 +79,9 @@ tr.hover-row {
 
 ## 两个 table 的相互托拽
 
-![el-table相互托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/el-table%E7%9B%B8%E4%BA%92%E6%89%98%E6%8B%BD.gif)
+最终实现效果：
+
+![双表格表格托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/%E5%8F%8C%E8%A1%A8%E6%A0%BC%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD.gif)
 
 ```js
 // 初始化拖拽
