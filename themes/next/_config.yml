@@ -375,7 +375,7 @@ back2top:
 
 # Reading progress bar 阅读进度
 reading_progress:
-  enable: false
+  enable: true
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
@@ -383,21 +383,21 @@ reading_progress:
 
 # Bookmark Support 书签
 bookmark:
-  enable: true
+  enable: false
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
   # If manual, only save it by clicking the bookmark-icon.
-  save: auto
+  save: manual
 
-# `Follow me on GitHub` banner in the top-right corner.
+# `Follow me on ` banner in the top-right corner. GitHub
 github_banner:
   enable: true
   permalink: https://github.com
   title: Follow me on GitHub
 
 # ---------------------------------------------------------------
-# Font Settings
+# Font Settings  字体
 # See: https://theme-next.org/docs/theme-settings/#Fonts-Customization
 # ---------------------------------------------------------------
 # Find fonts on Google Fonts (https://www.google.com/fonts)
@@ -457,7 +457,7 @@ disable_baidu_transformation: false
 
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
-index_with_subtitle: false
+index_with_subtitle: true
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: false
@@ -476,10 +476,10 @@ yandex_site_verification:
 
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
-baidu_site_verification:
+baidu_site_verification: http://data.zz.baidu.com/urls?site=https://zhangbowen.xyz&token=SQqfOYyQKNbs0xaf
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 # ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
