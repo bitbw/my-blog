@@ -13,9 +13,22 @@ categories: hexo
 内容提要
 
 - 开启赞赏打赏码
+
 - 设置阅读时长和本文字数
+
 - 添加背景动画效果
+
 - 阅读全文设置
+
+- 阅读全文 去掉自动定位more
+
+- 修改文章及主题样式
+
+- 代码段调整上下行距及样式
+
+- 代码块背景色缺失问题
+
+  
 
 <!--more-->
 
@@ -216,6 +229,24 @@ npm install hexo-excerpt --save
 ### 3.展示效果
 
 ![image-20200801163505378](next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/image-20200801163505378.png)
+
+## 阅读全文 去掉自动定位more
+
+老版本中可以使用`scroll_to_more: false` 这个选项
+
+最新版本已经移除此选项，官方认为scroll_to_more是个默认行为for任何hexo主题
+
+新版本解决方案：强制修改\themes\next\layout_macro\post.swig中 
+
+```hmtl
+ <a class="btn" href="{{ url_for(post.path) }}#more" rel="contents">
+```
+
+修改为 去除#more 锚点即可
+
+```html
+ <a class="btn" href="{{ url_for(post.path) }}" rel="contents">
+```
 
 
 
