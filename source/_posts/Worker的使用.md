@@ -1,16 +1,11 @@
 ---
-layout: web
 title: Web Worker的使用
 date: 2020-08-19 09:58:11
 tags: js
 categories: js
 ---
 
-
-
 ![img](Worker%E7%9A%84%E4%BD%BF%E7%94%A8/bg2018070801.png)
-
-
 
 先来一段阮一峰大神的教程 , 原文链接:http://www.ruanyifeng.com/blog/2018/07/web-worker.html
 
@@ -56,13 +51,13 @@ Worker 线程无法读取本地文件，即不能打开本机的文件系统（`
 > var worker = new Worker('work.js');
 > ```
 
-`Worker()`构造函数的参数是一个脚本文件，该文件就是 Worker 线程所要执行的任务。由于 Worker 不能读取本地文件，所以这个脚本必须来自网络。如果下载没有成功（比如404错误），Worker 就会默默地失败。
+`Worker()`构造函数的参数是一个脚本文件，该文件就是 Worker 线程所要执行的任务。由于 Worker 不能读取本地文件，所以这个脚本必须来自网络。如果下载没有成功（比如 404 错误），Worker 就会默默地失败。
 
 然后，主线程调用`worker.postMessage()`方法，向 Worker 发消息。
 
 > ```javascript
 > worker.postMessage('Hello World');
-> worker.postMessage({method: 'echo', args: ['Work']});
+> worker.postMessage({ method: 'echo', args: ['Work'] });
 > ```
 
 `worker.postMessage()`方法的参数，就是主线程传给 Worker 的数据。它可以是各种数据类型，包括二进制数据。
@@ -71,13 +66,13 @@ Worker 线程无法读取本地文件，即不能打开本机的文件系统（`
 
 > ```javascript
 > worker.onmessage = function (event) {
->   console.log('Received message ' + event.data);
->   doSomething();
-> }
-> 
+> 	console.log('Received message ' + event.data);
+> 	doSomething();
+> };
+>
 > function doSomething() {
->   // 执行任务
->   worker.postMessage('Work done!');
+> 	// 执行任务
+> 	worker.postMessage('Work done!');
 > }
 > ```
 
@@ -94,23 +89,35 @@ Worker 完成任务以后，主线程就可以把它关掉。
 Worker 线程内部需要有一个监听函数，监听`message`事件。
 
 > ```javascript
-> self.addEventListener('message', function (e) {
->   self.postMessage('You said: ' + e.data);
-> }, false);
+> self.addEventListener(
+> 	'message',
+> 	function (e) {
+> 		self.postMessage('You said: ' + e.data);
+> 	},
+> 	false,
+> );
 > ```
 
 上面代码中，`self`代表子线程自身，即子线程的全局对象。因此，等同于下面两种写法。
 
 > ```javascript
 > // 写法一
-> this.addEventListener('message', function (e) {
->   this.postMessage('You said: ' + e.data);
-> }, false);
-> 
+> this.addEventListener(
+> 	'message',
+> 	function (e) {
+> 		this.postMessage('You said: ' + e.data);
+> 	},
+> 	false,
+> );
+>
 > // 写法二
-> addEventListener('message', function (e) {
->   postMessage('You said: ' + e.data);
-> }, false);
+> addEventListener(
+> 	'message',
+> 	function (e) {
+> 		postMessage('You said: ' + e.data);
+> 	},
+> 	false,
+> );
 > ```
 
 除了使用`self.addEventListener()`指定监听函数，也可以使用`self.onmessage`指定。监听函数的参数是一个事件对象，它的`data`属性包含主线程发来的数据。`self.postMessage()`方法用来向主线程发送消息。
@@ -118,20 +125,24 @@ Worker 线程内部需要有一个监听函数，监听`message`事件。
 根据主线程发来的数据，Worker 线程可以调用不同的方法，下面是一个例子。
 
 > ```javascript
-> self.addEventListener('message', function (e) {
->   var data = e.data;
->   switch (data.cmd) {
->     case 'start':
->       self.postMessage('WORKER STARTED: ' + data.msg);
->       break;
->     case 'stop':
->       self.postMessage('WORKER STOPPED: ' + data.msg);
->       self.close(); // Terminates the worker.
->       break;
->     default:
->       self.postMessage('Unknown command: ' + data.msg);
->   };
-> }, false);
+> self.addEventListener(
+> 	'message',
+> 	function (e) {
+> 		var data = e.data;
+> 		switch (data.cmd) {
+> 			case 'start':
+> 				self.postMessage('WORKER STARTED: ' + data.msg);
+> 				break;
+> 			case 'stop':
+> 				self.postMessage('WORKER STOPPED: ' + data.msg);
+> 				self.close(); // Terminates the worker.
+> 				break;
+> 			default:
+> 				self.postMessage('Unknown command: ' + data.msg);
+> 		}
+> 	},
+> 	false,
+> );
 > ```
 
 上面代码中，`self.close()`用于在 Worker 内部关闭自身。
@@ -156,14 +167,12 @@ Worker 内部如果要加载其他脚本，有一个专门的方法`importScript
 
 > ```javascript
 > worker.onerror(function (event) {
->   console.log([
->     'ERROR: Line ', e.lineno, ' in ', e.filename, ': ', e.message
->   ].join(''));
+> 	console.log(['ERROR: Line ', e.lineno, ' in ', e.filename, ': ', e.message].join(''));
 > });
-> 
+>
 > // 或者
 > worker.addEventListener('error', function (event) {
->   // ...
+> 	// ...
 > });
 > ```
 
@@ -176,7 +185,7 @@ Worker 内部也可以监听`error`事件。
 > ```javascript
 > // 主线程
 > worker.terminate();
-> 
+>
 > // Worker 线程
 > self.close();
 > ```
@@ -191,15 +200,15 @@ Worker 内部也可以监听`error`事件。
 > // 主线程
 > var uInt8Array = new Uint8Array(new ArrayBuffer(10));
 > for (var i = 0; i < uInt8Array.length; ++i) {
->   uInt8Array[i] = i * 2; // [0, 2, 4, 6, 8,...]
+> 	uInt8Array[i] = i * 2; // [0, 2, 4, 6, 8,...]
 > }
 > worker.postMessage(uInt8Array);
-> 
+>
 > // Worker 线程
 > self.onmessage = function (e) {
->   var uInt8Array = e.data;
->   postMessage('Inside worker.js: uInt8Array.toString() = ' + uInt8Array.toString());
->   postMessage('Inside worker.js: uInt8Array.byteLength = ' + uInt8Array.byteLength);
+> 	var uInt8Array = e.data;
+> 	postMessage('Inside worker.js: uInt8Array.toString() = ' + uInt8Array.toString());
+> 	postMessage('Inside worker.js: uInt8Array.byteLength = ' + uInt8Array.byteLength);
 > };
 > ```
 
@@ -210,7 +219,7 @@ Worker 内部也可以监听`error`事件。
 > ```javascript
 > // Transferable Objects 格式
 > worker.postMessage(arrayBuffer, [arrayBuffer]);
-> 
+>
 > // 例子
 > var ab = new ArrayBuffer(1);
 > worker.postMessage(ab, [ab]);
@@ -240,9 +249,9 @@ Worker 内部也可以监听`error`事件。
 > var blob = new Blob([document.querySelector('#worker').textContent]);
 > var url = window.URL.createObjectURL(blob);
 > var worker = new Worker(url);
-> 
+>
 > worker.onmessage = function (e) {
->   // e.data === 'some message'
+> 	// e.data === 'some message'
 > };
 > ```
 
@@ -259,16 +268,16 @@ Worker 内部也可以监听`error`事件。
 >   var worker = new Worker(url);
 >   return worker;
 > }
-> 
+>
 > var pollingWorker = createWorker(function (e) {
 >   var cache;
-> 
+>
 >   function compare(new, old) { ... };
-> 
+>
 >   setInterval(function () {
 >     fetch('/my-api-endpoint').then(function (res) {
 >       var data = res.json();
-> 
+>
 >       if (!compare(data, cache)) {
 >         cache = data;
 >         self.postMessage(data);
@@ -276,11 +285,11 @@ Worker 内部也可以监听`error`事件。
 >     })
 >   }, 1000)
 > });
-> 
+>
 > pollingWorker.onmessage = function () {
 >   // render data
 > }
-> 
+>
 > pollingWorker.postMessage('init');
 > ```
 
@@ -288,14 +297,14 @@ Worker 内部也可以监听`error`事件。
 
 ## 六、实例： Worker 新建 Worker
 
-Worker 线程内部还能再新建 Worker 线程（目前只有 Firefox 浏览器支持）。下面的例子是将一个计算密集的任务，分配到10个 Worker。
+Worker 线程内部还能再新建 Worker 线程（目前只有 Firefox 浏览器支持）。下面的例子是将一个计算密集的任务，分配到 10 个 Worker。
 
 主线程代码如下。
 
 > ```javascript
 > var worker = new Worker('worker.js');
 > worker.onmessage = function (event) {
->   document.getElementById('result').textContent = event.data;
+> 	document.getElementById('result').textContent = event.data;
 > };
 > ```
 
@@ -303,56 +312,55 @@ Worker 线程代码如下。
 
 > ```javascript
 > // worker.js
-> 
+>
 > // settings
 > var num_workers = 10;
 > var items_per_worker = 1000000;
-> 
+>
 > // start the workers
 > var result = 0;
 > var pending_workers = num_workers;
 > for (var i = 0; i < num_workers; i += 1) {
->   var worker = new Worker('core.js');
->   worker.postMessage(i * items_per_worker);
->   worker.postMessage((i + 1) * items_per_worker);
->   worker.onmessage = storeResult;
+> 	var worker = new Worker('core.js');
+> 	worker.postMessage(i * items_per_worker);
+> 	worker.postMessage((i + 1) * items_per_worker);
+> 	worker.onmessage = storeResult;
 > }
-> 
+>
 > // handle the results
 > function storeResult(event) {
->   result += event.data;
->   pending_workers -= 1;
->   if (pending_workers <= 0)
->     postMessage(result); // finished!
+> 	result += event.data;
+> 	pending_workers -= 1;
+> 	if (pending_workers <= 0) postMessage(result); // finished!
 > }
 > ```
 
-上面代码中，Worker 线程内部新建了10个 Worker 线程，并且依次向这10个 Worker 发送消息，告知了计算的起点和终点。计算任务脚本的代码如下。
+上面代码中，Worker 线程内部新建了 10 个 Worker 线程，并且依次向这 10 个 Worker 发送消息，告知了计算的起点和终点。计算任务脚本的代码如下。
 
 > ```javascript
 > // core.js
 > var start;
 > onmessage = getStart;
 > function getStart(event) {
->   start = event.data;
->   onmessage = getEnd;
+> 	start = event.data;
+> 	onmessage = getEnd;
 > }
-> 
+>
 > var end;
 > function getEnd(event) {
->   end = event.data;
->   onmessage = null;
->   work();
+> 	end = event.data;
+> 	onmessage = null;
+> 	work();
 > }
-> 
+>
 > function work() {
->   var result = 0;
->   for (var i = start; i < end; i += 1) {
->     // perform some complex calculation here
->     result += 1;
->   }
->   postMessage(result);
->   close();
+> 	var result = 0;
+> 	for (var i = start; i < end; i += 1) {
+> 		// perform some complex calculation here
+> 		result += 1;
+> 	}
+> 	postMessage(result);
+> 	close();
 > }
 > ```
 
@@ -370,10 +378,10 @@ Worker 线程代码如下。
 
 > ```javascript
 > // 主线程
-> var myWorker = new Worker('worker.js', { name : 'myWorker' });
-> 
+> var myWorker = new Worker('worker.js', { name: 'myWorker' });
+>
 > // Worker 线程
-> self.name // myWorker
+> self.name; // myWorker
 > ```
 
 `Worker()`构造函数返回一个 Worker 线程对象，用来供主线程操作 Worker。Worker 线程对象的属性和方法如下。
@@ -397,19 +405,19 @@ Worker 线程有一些自己的全局属性和方法。
 > - self.postMessage()：向产生这个 Worker 线程发送消息。
 > - self.importScripts()：加载 JS 脚本。
 
-##  Web Worker的使用场景
+## Web Worker 的使用场景
 
-worker可以让js有多线程一样的特性，什么地方该用呢？写了个例子：http://jsfiddle.net/walker/9angN/（请使用最新版的谷歌或火狐进行测试）。
+worker 可以让 js 有多线程一样的特性，什么地方该用呢？写了个例子：http://jsfiddle.net/walker/9angN/（请使用最新版的谷歌或火狐进行测试）。
 
-同样一个50亿次的空循环，一个用了worker，一个是普通写法。跑起来明显的区别，worker在后台的时候，整个浏览器是可以响应的，并且页面上的计数器也能非常流畅地跳动；而普通写法是比较考验浏览器的，不那么强悍的浏览器就直接无响应了，并且计数器根本就不工作。
+同样一个 50 亿次的空循环，一个用了 worker，一个是普通写法。跑起来明显的区别，worker 在后台的时候，整个浏览器是可以响应的，并且页面上的计数器也能非常流畅地跳动；而普通写法是比较考验浏览器的，不那么强悍的浏览器就直接无响应了，并且计数器根本就不工作。
 
-结果已经比较明显了，显然worker非常适合后台要做大量运算的耗时长的工作，这样会大大减少浏览器不响应的情况。不适合的地方在哪？
+结果已经比较明显了，显然 worker 非常适合后台要做大量运算的耗时长的工作，这样会大大减少浏览器不响应的情况。不适合的地方在哪？
 
-我们的主线程和worker是通过postMessage来通信的，监听一个message事件。而postMessage是相当消耗资源的，看这个例子，http://jsfiddle.net/walker/9angN/7/，如果每个循环里都postMessage的话（我已经把循环次数从10亿减到50万），但是响应时间还是远远超出了仅post一次的时间（如果接到message还要操作DOM或者要记录到console，那时间更是显著增加）。这还不是重点，关键是postMessage会造成页面不响应。**注意**，这里请结合第一个示例进行测试。
+我们的主线程和 worker 是通过 postMessage 来通信的，监听一个 message 事件。而 postMessage 是相当消耗资源的，看这个例子，http://jsfiddle.net/walker/9angN/7/，如果每个循环里都postMessage的话（我已经把循环次数从10亿减到50万），但是响应时间还是远远超出了仅post一次的时间（如果接到message还要操作DOM或者要记录到console，那时间更是显著增加）。这还不是重点，关键是postMessage会造成页面不响应。**注意**，这里请结合第一个示例进行测试。
 
-第一个例子，虽然worker在后台工作，但是页面是可以响应的，比如对页面文字进行选择操作。但是第二个例子中，50万次循环没进行完前，你的浏览器可以响应，但是页面已经不响应了，你也选择不了页面任何元素。如果这个页面是嵌套在iframe中的，那么主页面也会被锁住。
+第一个例子，虽然 worker 在后台工作，但是页面是可以响应的，比如对页面文字进行选择操作。但是第二个例子中，50 万次循环没进行完前，你的浏览器可以响应，但是页面已经不响应了，你也选择不了页面任何元素。如果这个页面是嵌套在 iframe 中的，那么主页面也会被锁住。
 
-所以worker适合后台来做运算，但是不要频繁跟调用者通信，这样得不偿失。
+所以 worker 适合后台来做运算，但是不要频繁跟调用者通信，这样得不偿失。
 
 代码示例
 
@@ -460,4 +468,3 @@ worker可以让js有多线程一样的特性，什么地方该用呢？写了个
 	</body>
 </html>
 ```
-
