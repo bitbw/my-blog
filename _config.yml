@@ -110,7 +110,7 @@ deploy:
 
 ##加载速度优化
 filter_optimize:
-  enable: true
+  enable: false
   # remove the surrounding comments in each of the bundled files
   remove_comments: false
   css:
