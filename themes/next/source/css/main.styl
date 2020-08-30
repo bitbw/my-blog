@@ -45,3 +45,18 @@ for $inject_mixin in hexo-config('injects.mixin')
 // --------------------------------------------------
 for $inject_style in hexo-config('injects.style')
   @import $inject_style;
+
+//滚动条样式
+// --------------------------------------------------
+::-webkit-scrollbar-thumb:hover {
+    background: #94b6f9;
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background: #d3d3d4;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}

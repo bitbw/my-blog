@@ -159,7 +159,8 @@ sidebar:
 # Sidebar Avatar 创建人图片展示
 avatar:
   # Replace the default image and set the url here.
-  url: /images/无限循环1.gif
+  #url: /images/无限循环1.gif
+  url: /images/apple-touch-icon-next.png
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
@@ -617,7 +618,7 @@ valine:
   placeholder: 欢迎交流讨论... # Comment box placeholder
   avatar: retro # Gravatar style
   guest_info: nick,mail,link # Custom comment header
-  pageSize: 10 # Pagination size
+  pageSize: 2 # Pagination size
   language: zh-cn
   visitor: false # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
@@ -726,7 +727,7 @@ busuanzi_count:
 algolia_search:
   enable: false
   hits:
-    per_page: 10
+    per_page: 2
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
@@ -987,3 +988,14 @@ vendors:
 css: css
 js: js
 images: images
+# # 首页分页
+# index_generator:
+#   path: ''
+#   per_page: 3
+#   order_by: -date
+
+# # 归档页面
+# archive_generator:
+#   per_page: 50
+#   yearly: true
+#   monthly: true

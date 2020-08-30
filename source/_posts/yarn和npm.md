@@ -16,7 +16,7 @@ yarn 相比 npm 稍微快一些。
 ```bash
 # yarn init
 npm init
- 
+
 # yarn add 包名
 npm install 包名
 

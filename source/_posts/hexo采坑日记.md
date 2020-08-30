@@ -6,7 +6,7 @@ categories: 工具使用
 ---
 
 ## hexo 上传 github 后图片不显示问题
-
+<!--more-->
 - 在文件夹下找到\_config.yml 文件 将`post_asset_folder:`修改为 true
 
 - 将上面的参数修改后 直接`hexo new 文件名` 会自动创建出一个跟文件同名的文件夹 ，将图片等资料都放到文件夹中
@@ -21,8 +21,6 @@ categories: 工具使用
 
   ![image-20200725174552781](hexo%E9%87%87%E5%9D%91%E6%97%A5%E8%AE%B0/image-20200725174552781.png)
   
-  
-
 ## 注意事项
 
 **编辑好 md 文档先在`hexo server` 运行一下在提交 github**
@@ -46,8 +44,7 @@ canvas_ribbon 和 tree 需要配合在CDN中添加 git默认不上传lib下的�
 ```yml
 social:
   # 微博: http://weibo.com/your-user-name  这里不能使用中文  确使用方式如下  地址后是图标
-  "微博": http://weibo.com/your-user-name || fab fa-weibo 
+  "微博": http://weibo.com/your-user-name || fab fa-weibo
   "知乎": http://www.zhihu.com/people/your-user-name || fab fa-zhihu
 
 ```
-

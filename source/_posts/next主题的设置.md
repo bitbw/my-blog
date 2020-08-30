@@ -28,8 +28,6 @@ categories: hexo
 
 - 代码块背景色缺失问题
 
-  
-
 <!--more-->
 
 ## 开启赞赏打赏码
@@ -37,7 +35,7 @@ categories: hexo
 ### 1.获取支付宝和微信打赏码
 
 - 支付宝打赏码
-  - https://qr.alipay.com/paipai/open.htm
+  - <https://qr.alipay.com/paipai/open.htm>
 - 微信打赏码
   - 打开手机微信
   - 选择我的–支付
@@ -69,7 +67,7 @@ reward:
 
 ```css
 //路径 next/source/css/_common/components/post/post-reward.styl
-//简单的改了一下按钮样式 
+//简单的改了一下按钮样式
   button {
     background: transparent;
     border: 1px solid #fc6423;
@@ -80,7 +78,7 @@ reward:
     outline: none;
     padding: 0 15px;
     vertical-align: text-top;
-    
+
     &:hover {
       background: #fc6423;
       border: 1px solid transparent;
@@ -106,7 +104,7 @@ symbols_count_time:
   wpm: 200 #每分钟字数
 ```
 
-> 详细配置介绍 https://github.com/theme-next/hexo-symbols-count-time
+> 详细配置介绍 <https://github.com/theme-next/hexo-symbols-count-time>
 
 ### 2.对应文字修改
 
@@ -125,8 +123,6 @@ symbols_count_time:
 ![image-20200801130036785](next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/image-20200801130036785.png)
 
 ## 设置阅读次数和评论数
-
-
 
 ## 添加背景动画效果
 
@@ -186,13 +182,13 @@ $ ls
 _config.yml  crowdin.yml  docs  gulpfile.js  languages  layout  LICENSE.md  package.json  README.md  scripts  source
 ```
 
-2. 将模块安装到`source/lib`目录 
+2. 将模块安装到`source/lib`目录
 
 ```
-$ git clone https://github.com/theme-next/theme-next-three source/lib/three
+git clone https://github.com/theme-next/theme-next-three source/lib/three
 ```
 
-3.  启动服务查看效果
+3. 启动服务查看效果
 
 ```
 hexo s
@@ -220,8 +216,6 @@ read_more_btn: true
 npm install hexo-excerpt --save
 ```
 
-
-
 >- 比较不好的一点是这个只能自动读取摘要 不是很智能 ，读取的摘要狠多 ，推荐编写文章时自己设置摘要
 >
 >- 若想保留了样式并且自行选择显示哪些内容来预览。就可以在写md博文时，在想要显示预览的部分后加上`<I--more-->`，这样这样首页和列表页展示的文章内容就是`<!--more-->`之前的文字，而之后的就不会显示了，同时也保留文章原样式。
@@ -236,7 +230,7 @@ npm install hexo-excerpt --save
 
 最新版本已经移除此选项，官方认为scroll_to_more是个默认行为for任何hexo主题
 
-新版本解决方案：强制修改\themes\next\layout_macro\post.swig中 
+新版本解决方案：强制修改\themes\next\layout_macro\post.swig中
 
 ```hmtl
  <a class="btn" href="{{ url_for(post.path) }}#more" rel="contents">
@@ -247,8 +241,6 @@ npm install hexo-excerpt --save
 ```html
  <a class="btn" href="{{ url_for(post.path) }}" rel="contents">
 ```
-
-
 
 ## 修改文章及主题样式
 
@@ -286,7 +278,7 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme  白色主题 normal
-  highlight_theme: normal     
+  highlight_theme: normal
   # Add copy button on codeblock 复制按钮
   copy_button:
     enable: true
@@ -309,8 +301,8 @@ codeblock:
 pre {
   @extend $code-block;
   overflow: auto;
-  padding: 2px 10px;  //我这里上下调整为2px 
-    
+  padding: 2px 10px;  //我这里上下调整为2px
+
 }
 ```
 
@@ -372,4 +364,3 @@ tbody tr:hover {
   }
 
 ```
-

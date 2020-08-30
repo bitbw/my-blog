@@ -13,9 +13,9 @@ categories: vue
 
 ```js
 var vm = new Vue({
-	data: {
-		a: 1,
-	},
+ data: {
+  a: 1,
+ },
 });
 // `vm.a` 现在是响应式的
 
@@ -27,11 +27,11 @@ vm.b = 2;
 
 ```js
 var vm = new Vue({
-	data: {
-		userProfile: {
-			name: "Anika",
-		},
-	},
+ data: {
+  userProfile: {
+   name: "Anika",
+  },
+ },
 });
 ```
 
@@ -61,9 +61,9 @@ vm.userProfile = userProfile;
 
 ```js
 Object.assign(vm.userProfile, {
-	//不要仅仅直接添加属性的方式
-	age: 27,
-	favoriteColor: "Vue Green",
+ //不要仅仅直接添加属性的方式
+ age: 27,
+ favoriteColor: "Vue Green",
 });
 ```
 
@@ -71,9 +71,9 @@ Object.assign(vm.userProfile, {
 
 ```js
 vm.userProfile = Object.assign({}, vm.userProfile, {
-	//建议新建一个对象合并和后在重新赋值
-	age: 27,
-	favoriteColor: "Vue Green",
+ //建议新建一个对象合并和后在重新赋值
+ age: 27,
+ favoriteColor: "Vue Green",
 });
 ```
 
@@ -114,7 +114,7 @@ Vue 将被侦听的数组的变异方法进行了包裹，所以它们也将会�
 
 ```js
 example1.items = example1.items.filter(function (item) {
-	return item.message.match(/Foo/);
+ return item.message.match(/Foo/);
 });
 ```
 

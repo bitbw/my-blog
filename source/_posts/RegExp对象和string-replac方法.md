@@ -9,7 +9,7 @@ categories: js
 
 RegExp 对象表示正则表达式，它是对字符串执行模式匹配的强大工具。
 
-### 创建 RegExp 对象的语法：
+### 创建 RegExp 对象的语法
 
 ```js
 new RegExp(pattern, attributes);
@@ -92,8 +92,8 @@ _replacement_ 可以是字符串，也可以是函数。如果它是字符串，
 
 ```js
 <script type="text/javascript">
-	var str="Visit Microsoft!" document.write(str.replace(/Microsoft/,
-	"W3School"))
+ var str="Visit Microsoft!" document.write(str.replace(/Microsoft/,
+ "W3School"))
 </script>
 ```
 
@@ -109,9 +109,9 @@ Visit W3School!
 
 ```js
 <script type="text/javascript">
-	var str="Welcome to Microsoft! " str=str + "We are proud to announce that
-	Microsoft has " str=str + "one of the largest Web Developers sites in the
-	world." document.write(str.replace(/Microsoft/g, "W3School"))
+ var str="Welcome to Microsoft! " str=str + "We are proud to announce that
+ Microsoft has " str=str + "one of the largest Web Developers sites in the
+ world." document.write(str.replace(/Microsoft/g, "W3School"))
 </script>
 ```
 
@@ -156,6 +156,6 @@ name.replace(/"([^"]*)"/g, "'$1'");
 ```js
 name = "aaa bbb ccc";
 uw = name.replace(/\b\w+\b/g, function (word) {
-	return word.substring(0, 1).toUpperCase() + word.substring(1);
+ return word.substring(0, 1).toUpperCase() + word.substring(1);
 });
 ```

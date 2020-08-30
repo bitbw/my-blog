@@ -19,9 +19,17 @@
   }
 
   .post-block {
-    margin-top: initial !important;
+    margin-top: 10px !important;
     // Inside posts blocks content padding (default 40px).
     padding: $content-mobile-padding 18px $content-mobile-padding !important;
+  }
+  //文章上边距
+  .post-block:first-child{
+    margin-top: 0 !important;
+  }
+  //滚动条
+  ::-webkit-scrollbar-thumb:hover{
+    background: #d3d3d4;
   }
 
   .posts-collapse {

@@ -12,7 +12,7 @@ categories: es6
 - 定时器
 - ajax 请求
 
-#### 注意事项：
+#### 注意事项
 
 **1.在 JavaScript 中，记住一件事儿：所有的异步回调函数执行一定在普通代码执行之后**
 
@@ -24,60 +24,60 @@ categories: es6
 
 ```js
 function get(url, cd) {
-	const xhr = new XMLHttpRequest();
-	xhr.open("get", url);
-	xhr.send();
-	xhr.onload = function () {
-		cd(this.response);
-	};
+ const xhr = new XMLHttpRequest();
+ xhr.open("get", url);
+ xhr.send();
+ xhr.onload = function () {
+  cd(this.response);
+ };
 }
 ```
 
-#### 原生 ajax 请求注意事项：
+#### 原生 ajax 请求注意事项
 
 事件最好放在发送请求前 不然像捕获发送失败这种函数会获不到
 
 ```js
 const xhr = new XMLHttpRequest();
 xhr.addEventListener("load", function () {
-	resolve(this.response);
+ resolve(this.response);
 });
 xhr.addEventListener("error", function (err) {
-	reject(err);
+ reject(err);
 });
 xhr.open("get", url);
 xhr.send();
 ```
 
-#### 异步并行 :
+#### 异步并行
 
 - 一起执行 不分先后顺序
 
 ```js
 get("http://jsonplaceholder.typicode.com/posts", function (res) {
-	console.log(1);
+ console.log(1);
 });
 get("http://jsonplaceholder.typicode.com/comments", function (res) {
-	console.log(2);
+ console.log(2);
 });
 get("http://jsonplaceholder.typicode.com/users", function (res) {
-	console.log(3);
+ console.log(3);
 });
 ```
 
-#### 异步串行 :
+#### 异步串行
 
 - 依次执行 上一层执行完毕在执行下面代码
 
 ```js
 get("http://jsonplaceholder.typicode.com/posts", function (res) {
-	console.log(1);
-	get("http://jsonplaceholder.typicode.com/comments", function (res) {
-		console.log(2);
-		get("http://jsonplaceholder.typicode.com/users", function (res) {
-			console.log(3);
-		});
-	});
+ console.log(1);
+ get("http://jsonplaceholder.typicode.com/comments", function (res) {
+  console.log(2);
+  get("http://jsonplaceholder.typicode.com/users", function (res) {
+   console.log(3);
+  });
+ });
 });
 ```
 
@@ -91,26 +91,26 @@ get("http://jsonplaceholder.typicode.com/posts", function (res) {
 
 ```js
 axios({
-	method: "GET",
-	url: "http://jsonplaceholder.typicode.com/posts",
+ method: "GET",
+ url: "http://jsonplaceholder.typicode.com/posts",
 })
-	.then((res) => {
-		console.log("2 posts 的响应结果");
-		return axios({
-			method: "GET",
-			url: "http://jsonplaceholder.typicode.com/users",
-		});
-	})
-	.then((res) => {
-		console.log("3 users 的响应结果");
-		return axios({
-			method: "GET",
-			url: "http://jsonplaceholder.typicode.com/comments",
-		});
-	})
-	.then((res) => {
-		console.log("4 comments 的响应结果");
-	});
+ .then((res) => {
+  console.log("2 posts 的响应结果");
+  return axios({
+   method: "GET",
+   url: "http://jsonplaceholder.typicode.com/users",
+  });
+ })
+ .then((res) => {
+  console.log("3 users 的响应结果");
+  return axios({
+   method: "GET",
+   url: "http://jsonplaceholder.typicode.com/comments",
+  });
+ })
+ .then((res) => {
+  console.log("4 comments 的响应结果");
+ });
 ```
 
 ### 补充：setTimeout、setInterval 被遗忘的第三个参数
@@ -121,7 +121,7 @@ axios({
 
 ```js
 var sum = function (x, y, z) {
-	console.log(x + y + z); // 打印6
+ console.log(x + y + z); // 打印6
 };
 setTimeout(sum, 1000, 1, 2, 3);
 ```
@@ -174,13 +174,13 @@ const promise = new Promise(function(resolve, reject) {
 
 ```js
 function timeout(ms) {
-	return new Promise((resolve, reject) => {
-		setTimeout(resolve, ms, "done");
-	});
+ return new Promise((resolve, reject) => {
+  setTimeout(resolve, ms, "done");
+ });
 }
 
 timeout(100).then((value) => {
-	console.log(value);
+ console.log(value);
 });
 ```
 
@@ -208,7 +208,7 @@ timeout(100).then((value) => {
     //   sayHello: async function () {}
     //   sayHello: async () => {}
 注意对象里函数的简写  async写在方法名的前面 其他的放在函数前即可
-	//   async sayHello () {}
+ //   async sayHello () {}
     // }
 ```
 
@@ -226,10 +226,10 @@ await 代表等待的意思，就是等待后面的 promise 执行完返回后 �
 
 ```js
 async function ayrequest() {
-	const res = await request("http://jsonplaceholder.typicode.com/users");
-	console.log(1); //此代码会等待上面代码返回后再执行
-	request("http://jsonplaceholder.typicode.com/users");
-	console.log(2); // 此代码不会等待上面代码返回 ， 直接执行
+ const res = await request("http://jsonplaceholder.typicode.com/users");
+ console.log(1); //此代码会等待上面代码返回后再执行
+ request("http://jsonplaceholder.typicode.com/users");
+ console.log(2); // 此代码不会等待上面代码返回 ， 直接执行
 }
 ```
 
@@ -239,18 +239,18 @@ async function ayrequest() {
 
 ```js
 async function ayrequest() {
-	const res = await request("http://jsonplaceholder.typicode.com/users");
-	return request("http://jsonplaceholder.typicode.com/posts");
-	// 异常处理
-	try {
-		console.log(1);
-		const res = await request("sdf://dsfsdfsdf.sdf.com/dsf");
-		console.log(2);
-		console.log(res);
-	} catch (error) {
-		console.log(3);
-		console.log("发送失败", error);
-	}
+ const res = await request("http://jsonplaceholder.typicode.com/users");
+ return request("http://jsonplaceholder.typicode.com/posts");
+ // 异常处理
+ try {
+  console.log(1);
+  const res = await request("sdf://dsfsdfsdf.sdf.com/dsf");
+  console.log(2);
+  console.log(res);
+ } catch (error) {
+  console.log(3);
+  console.log("发送失败", error);
+ }
 }
 ```
 
@@ -264,5 +264,5 @@ async created () {
         }).then(res => {
           console.log(res)
         })
-	}
+ }
 ```

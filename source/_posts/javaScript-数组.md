@@ -87,7 +87,7 @@ var sum = arr[0] + arr[1] + arr[2] + arr[3] + arr[4];
 // 循环 这个从0~最后一个索引，有重复的思想在里面，使用循环。
 var sum = 0;
 for (var i = 0; i <= 4; i++) {
-	sum += arr[i];
+ sum += arr[i];
 }
 console.log(sum); // 输出 370，和我们一个一个相加是一样的
 ```
@@ -110,12 +110,12 @@ console.log(arr.length); // 数组.length 就是数组的长度
 
 ```js
 for (var i = 0; i <= arr.length - 1; i++) {
-	console.log(arr[i]);
+ console.log(arr[i]);
 }
 
 // 简化一下
 for (var i = 0; i < arr.length; i++) {
-	console.log(arr[i]);
+ console.log(arr[i]);
 }
 ```
 
@@ -129,7 +129,7 @@ for (var i = 0; i < arr.length; i++) {
 // 还可以更简单
 var sum = 0;
 for (var i = 0; i < arr.length; i++) {
-	sum += arr[i];
+ sum += arr[i];
 }
 console.log(sum);
 
@@ -149,9 +149,9 @@ var avg = sum / arr.length;
 ```js
 var max = arr[0];
 for (var i = 0; i < arr.length; i++) {
-	if (max < arr[i]) {
-		max = arr[i];
-	}
+ if (max < arr[i]) {
+  max = arr[i];
+ }
 }
 ```
 
@@ -162,10 +162,10 @@ for (var i = 0; i < arr.length; i++) {
 var max_index = 0;
 var max = arr[max_index];
 for (var i = 0; i < arr.length; i++) {
-	if (max < arr[i]) {
-		max = arr[i];
-		max_index = i;
-	}
+ if (max < arr[i]) {
+  max = arr[i];
+  max_index = i;
+ }
 }
 ```
 
@@ -209,15 +209,15 @@ console.log(arr); // 输出 [empty × 10]
 
 ```js
 function unique4(arr) {
-	var hash = [];
-	for (var i = 0; i < arr.length; i++) {
-		for (var j = i + 1; j < arr.length; j++) {
-			if (arr[i] === arr[j]) {
-				++i;
-			}
-		}
-		hash.push(arr[i]);
-	}
-	return hash;
+ var hash = [];
+ for (var i = 0; i < arr.length; i++) {
+  for (var j = i + 1; j < arr.length; j++) {
+   if (arr[i] === arr[j]) {
+    ++i;
+   }
+  }
+  hash.push(arr[i]);
+ }
+ return hash;
 }
 ```

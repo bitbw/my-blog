@@ -94,7 +94,7 @@ categories: js
 - 只要有一个条件为 true 结果为 true，两个都是 false 才是 false
 - 逻辑短路：当第一个值为 true 将不再判断第二个值 直接返回第一个值
 
-#### 逻辑非！
+#### 逻辑非
 
 - 把 true 变 false 把 false 变 true
 
@@ -170,7 +170,7 @@ else {
 //例如: 判断一下一个人的性别是不是男的,如果是男的，让他去男厕所，如果是女的，让他去女厕所 ， 否则不让他上厕所
 var gender = prompt('请输入性别');
 if(gender === '男'){
-	console.log('请去男厕所');
+ console.log('请去男厕所');
 }else if(gender === '女') {
   console.log('请去女厕所');
 }else {
@@ -188,18 +188,18 @@ switch-case 结构主要用于多个固定值之间的判断
 //例如： 判断一下一个人的性别是不是男的,如果是男的，让他去男厕所，如果是女的，让他去女厕所 ，如果是人妖，去人妖专用厕所，如果都不是，打晕送走
 var gender = prompt("请输入性别");
 switch (gender) {
-	case "男":
-		console.log("请去男厕所");
-		break;
-	case "女":
-		console.log("请去女厕所");
-		break;
-	case "人妖":
-		console.log("请去人妖专用厕所");
-		break;
-	default:
-		console.log("净给我添乱，打晕送走");
-		break;
+ case "男":
+  console.log("请去男厕所");
+  break;
+ case "女":
+  console.log("请去女厕所");
+  break;
+ case "人妖":
+  console.log("请去人妖专用厕所");
+  break;
+ default:
+  console.log("净给我添乱，打晕送走");
+  break;
 }
 ```
 
@@ -236,7 +236,7 @@ console.log(max);
 
 ```js
 for (初始化表达式; 条件表达式; 自增表达式) {
-	循环体;
+ 循环体;
 }
 //初始化表达式只是开始用到 后期反复执行。。。条件-->循环体-->自增-->条件。。。。。
 ```
@@ -254,7 +254,7 @@ for (初始化表达式; 条件表达式; 自增表达式) {
 
 ```js
 while (条件表达式) {
-	循环体;
+ 循环体;
 }
 // 循环体就是重复执行的代码
 //可以做无限循环（true）就可以实现
@@ -273,7 +273,7 @@ while (条件表达式) {
 
 ```js
 do {
-	循环体;
+ 循环体;
 } while (条件表达式);
 ```
 
