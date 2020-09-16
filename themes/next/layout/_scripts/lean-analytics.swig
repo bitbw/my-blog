@@ -71,12 +71,12 @@ function addCount(Counter) {
 		}
 	});
 }
-$(function() {
+/**$(function() {
 	var Counter = AV.Object.extend("Counter");
 	if ($('.leancloud_visitors').length == 1) {
 		addCount(Counter);
 	} else if ($('.post-title-link').length > 1) {
 		showTime(Counter);
 	}
-});
+});**/
 </script>

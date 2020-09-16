@@ -566,18 +566,18 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
-  active:
+  active: gitalk
   # Setting `true` means remembering the comment system selected by the visitor.
-  storage: true
+  storage: false
   # Lazyload all comment systems.
-  lazyload: false
+  lazyload: true
   # Modify texts or order for any navs, here are some examples.
   nav:
     #disqus:
     #  text: Load Disqus
     #  order: -1
-    #gitalk:
-    #  order: -2
+    gitalk:
+     order: -2
 
 # Disqus
 disqus:
@@ -610,7 +610,7 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: true
+  enable: false
   appid: tOh3zAjRBKEly3WzeiAOIbgA-gzGzoHsz
   appkey: hhk8N3PgDjBEMgSzjrc1xvtd
   notify: true # Mail notifier
@@ -630,16 +630,16 @@ valine:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 livere_uid: # <your_uid>
 
-# Gitalk
+# Gitalk github版评论系统
 # For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
-  enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
-  distraction_free_mode: true # Facebook-like distraction free mode
+  enable: true
+  github_id: zhangbowen-github # GitHub repo owner
+  repo: gitalk-store # Repository name to store issues
+  client_id: 49cd750cea7ba78c7bbe # GitHub Application Client ID
+  client_secret: e26347d4ce1308d282f5477cbe3d325f83232cb6 # GitHub Application Client Secret
+  admin_user: zhangbowen-github # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  distraction_free_mode: false # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
@@ -706,7 +706,7 @@ firestore:
   apiKey: # Required
   projectId: # Required
 
-# Show Views / Visitors of the website / page with busuanzi.
+# Show Views / Visitors of the website / page with busuanzi.显示阅读次数
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
   enable: true
@@ -901,10 +901,10 @@ vendors:
   # pjax:
 
   # FancyBox
-  # jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
+  jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js
   # fancybox: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js
   # fancybox_css: //cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css
-  jquery:
+  # jquery:
   fancybox:
   fancybox_css:
 
@@ -933,15 +933,15 @@ vendors:
   disqusjs_css:
 
   # Valine
-  # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
+  valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
   # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js
-  valine:
+  # valine:
 
   # Gitalk
-  # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
-  gitalk_js:
-  gitalk_css:
+  gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+  gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
+  # gitalk_js:
+  # gitalk_css:
 
   # Algolia Search
   # algolia_search: //cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
@@ -988,14 +988,3 @@ vendors:
 css: css
 js: js
 images: images
-# # 首页分页
-# index_generator:
-#   path: ''
-#   per_page: 3
-#   order_by: -date
-
-# # 归档页面
-# archive_generator:
-#   per_page: 50
-#   yearly: true
-#   monthly: true
