@@ -513,7 +513,7 @@ math:
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: true
+pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
 # For more information: https://fancyapps.com/fancybox
@@ -607,7 +607,7 @@ changyan:
   appkey:
   #post_meta_order: 0
 
-# Valine
+# Valine 基于leancloud_visitors的评论
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
   enable: false
@@ -687,7 +687,7 @@ cnzz_siteid:
 # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: tOh3zAjRBKEly3WzeiAOIbgA-gzGzoHsz
   app_key: hhk8N3PgDjBEMgSzjrc1xvtd
   # Required for apps from CN region
@@ -932,8 +932,8 @@ vendors:
   disqusjs_js:
   disqusjs_css:
 
-  # Valine
-  valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
+  # Valine 另一版评论
+  # valine: //cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js
   # valine: //cdnjs.cloudflare.com/ajax/libs/valine/1.3.10/Valine.min.js
   # valine:
 

@@ -122,7 +122,34 @@ symbols_count_time:
 
 ![image-20200801130036785](next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/image-20200801130036785.png)
 
-## 设置阅读次数和评论数
+## 设置阅读次数和评论
+
+### 建议添加gitalk评论系统
+
+参考文章：https://www.jianshu.com/p/02fc71f3633f
+
+### 展示效果：
+
+![image-20200916135526251](next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/image-20200916135526251.png)
+
+### 显示阅读次数
+
+1.配置主题_config.yml
+
+```yml
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: fa fa-eye
+```
+
+### 展示效果：
+
+![image-20200916135902653](next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/image-20200916135902653.png)
 
 ## 添加背景动画效果
 

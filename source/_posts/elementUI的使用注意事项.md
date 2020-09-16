@@ -1,11 +1,12 @@
 ---
 title: elementUI的使用注意事项
-date: 2020-09-16 11:17:23
-tags: 
-  - elementUI 
+tags:
+  - elementUI
   - vue
 categories: elementUI
+date: 2020-09-16 11:17:23
 ---
+
 
 >这篇文章是我在工作中使用elementUi遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助
 
