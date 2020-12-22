@@ -1,8 +1,9 @@
 ---
 title: hexo采坑日记
 date: 2019-11-28 17:25:06
-tags: 工具使用
-categories: 工具使用
+tags: 
+	- hexo
+categories: hexo
 ---
 
 ## hexo 上传 github 后图片不显示问题
@@ -23,7 +24,7 @@ categories: 工具使用
 
 - 使用 typroa 修改图片路径 下面这种方法 typroa 会自动保存到命名文件夹下，并自动encode
 
-  ![image-20200725174552781](hexo%E9%87%87%E5%9D%91%E6%97%A5%E8%AE%B0/image-20200725174552781.png)
+  ![image-20201215135603281](hexo%E9%87%87%E5%9D%91%E6%97%A5%E8%AE%B0/image-20201215135603281.png)
   
 ## 注意事项
 

@@ -1,10 +1,10 @@
 ---
-title: 	NexT主题的设置
+title: 	NexT主题的设置 - hexo新版主题next7.x设置
 date: 2020-08-01 12:46:20
 tags:
- -hexo
- -next
- -NexT 
+	- hexo
+	- next
+	- NexT 
 categories: hexo
 ---
 
