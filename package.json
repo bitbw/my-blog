@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "updata": "git add . && git commit -m 'updata' && git push"
+    "update": "git add . && git commit -m 'updata' && git push"
   },
   "hexo": {
     "version": "4.0.0"
