@@ -143,3 +143,27 @@ this.arr.forEach((item , index) => {
 ## router 传参 注意事项
 
 >路由传参query 和 params 显示到地址栏形式的 注意 不要超长 ，否则浏览器会报413错误 ， 传参需要按需传送
+
+## prop 中默认值返回空对象
+
+prop 中 default 默认值 返回对象或数组需要使用工厂函数 ，一般我们都会用箭头函数简写 
+
+```js
+  props: {
+    defaultText: {
+      type: Array,
+      default: ()=> []	   // 工厂函数返回空数组
+    },
+    // 错误写法
+    defaultAttrs: {
+      type: Object,
+      default: ()=> {}    // 但是返回空对象就不能直接=>{} 这样就代表函数的块级作用域了 会报错
+    },
+    // 正确写法
+     defaultAttrs: {
+      type: Object,
+      default: ()=> ({})    // 在{}外面包一层()即可
+    },    
+  },
+```
+
