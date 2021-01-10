@@ -42,6 +42,12 @@ export NODE_HOME=/root/node-v12.18.1-linux-x64
 export PATH=NODE_HOME/bin:$PATH
 ```
 
+如果profile不可修改 添加可写权
+
+```bash
+sudo chmod  a=rw  /etc/profile
+```
+
 立即生效
 
 ```bash
