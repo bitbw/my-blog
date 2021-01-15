@@ -9,6 +9,8 @@ categories: vue
 
 # vue3 新特性
 
+> 整理的比较好的文档：https://www.jianshu.com/p/1fd73091e2e4
+
 
 
 ## 组合式 API
@@ -24,6 +26,12 @@ export default function handle(vue,xx){
     ....
 }
 ```
+
+### setup
+
+> 在Vue3中，定义 `methods`、`watch`、`computed`、`data`数据 等都放在了 `setup()` 函数中
+
+
 
 
 
@@ -235,7 +243,7 @@ handleCapitalize(event) {
 /* 简写 */
 :deep(.foo) {}
 
-/* 插槽 ：TODO:目前没发现怎么用 如果是父组件里写 直接加悬选择器就可以 子组件又怎么确定选择器呢 ？ */
+/* 插槽 ：TODO:目前没发现怎么用 如果是父组件里写 直接加选择器就可以 子组件又怎么确定选择器呢 ？ */
 ::v-slotted(.foo) {}
 /* 简写 */
 :slotted(.foo) {}
@@ -252,4 +260,35 @@ handleCapitalize(event) {
 ## tip 名词含义
 
 - `SFC`  -  单文件组件
+
+# 使用typescript
+
+
+
+```javascript
+import { setup } from "@/components/setup";	// 定义好setup 导入的方式使用
+import { defineComponent } from "vue";  // 使用defineComponent创建vue实例
+export default defineComponent({
+  name: "HelloWorld",
+  emits: ["update:title"],
+  props: {
+    title: String,
+    titleModifiers: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  setup,
+  methods: {
+    handleCapitalize(event: InputEvent, val: string) {
+      let value = (event.target as HTMLInputElement).value;
+      if (this.titleModifiers.capitalize) {
+        value = value.toLocaleUpperCase();
+      }
+      this.$emit("update:title", value);
+    }
+  }
+});
+</script>
+```
 

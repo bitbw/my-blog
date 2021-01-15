@@ -18,6 +18,8 @@ categories: vue
 
 ![实现ctrl+f的搜索功能](vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/%E5%AE%9E%E7%8E%B0ctrl+f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.gif)
 
+<!--more-->
+
 模板部分
 
 ```vue
