@@ -17,7 +17,7 @@ categories: Nodejs
 ## 获取Node.js 安装包
 
 - Node.js 安装包及源码下载地址为：https://nodejs.org/en/download/，你可以根据不同平台系统选择你需要的 Node.js 安装包，这里选择的是 [LTS] Linux Binaries (x64)。
-- 百度云备用下载地址：[node-v12.18.1-linux-x64.tar.xz](https://pan.baidu.com/s/1Uinqm09KzWfRiDKgqAjJdA)，提取码：oibi
+- 官方下载地址  https://nodejs.org/dist/latest-v12.x/
 
 ## Linux 上安装 Node.js
 
@@ -27,13 +27,15 @@ tar xf node-v12.18.1-linux-x64.tar.xz                                   // 解�
 cd node-v12.18.1-linux-x64                                              // 进入解压目录
 ```
 
-解压文件的 bin 目录底下包含了 node、npm 等命令，我们可以修改linux系统的环境变量（profile）来设置直接运行命令：
+解压文件的 bin 目录底下包含了 node、npm 等命令（npm 全局安装的包），我们可以修改linux系统的环境变量（profile）来设置直接运行命令：
 
 **老规矩先备份，养成修改重要文件之前先备份的好习惯。**
 
 ```bash
 cp /etc/profile /etc/profile.bak
 ```
+
+> /etc/profile 文件介绍： https://www.cnblogs.com/xiaoshuxiaoshu/p/4689447.html
 
 然后 vim /etc/profile，在最下面添加 export PATH=$PATH: 后面跟上 node 下 bin 目录的路径
 
