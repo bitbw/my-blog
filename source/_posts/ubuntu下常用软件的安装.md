@@ -5,7 +5,7 @@ tags:
 	- Linux
 	- ubuntu
 	- git
-categories:Linux
+categories: Linux
 ---
 
 

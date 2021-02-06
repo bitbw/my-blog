@@ -4,7 +4,7 @@ date: 2021-01-10 08:34:56
 tags:
 	- Linux
 	- ubuntu
-categories:Linux
+categories: Linux
 ---
 
 ## **1、tar.gz软件包的安装**

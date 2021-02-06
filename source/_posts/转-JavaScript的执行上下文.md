@@ -3,7 +3,7 @@ title: 'JavaScript的执行上下文，理解JavaScript的作用域链，JavaScr
 date: 2021-01-15 10:00:59
 tags:
 	-js
-categories:js
+categories: js
 ---
 
 
