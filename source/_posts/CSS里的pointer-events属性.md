@@ -9,10 +9,6 @@ categories: css
 
 
 
-dsaf
-
-
-
 ## 因为pointer-events出现的问题
 
 在Vuetify项目中，因为在input中使用了tooltip ，意愿是文字溢出隐藏显示... , 

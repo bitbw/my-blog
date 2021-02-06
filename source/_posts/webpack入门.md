@@ -54,7 +54,7 @@ webpack 出来之前，还有一些别的构建工具：
 
 
 
-![image-20191122114402722](webpack%E5%85%A5%E9%97%A8/image-20191122114402722.png)
+![image-20191122114402722](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122114402722.png)
 
 打包 -> 打包结果 -> 浏览器就可以识别运行。 
 
@@ -99,7 +99,7 @@ npm install --save-dev webpack webpack-cli
 
 3、将 package.json 的 `scripts` 中新增
 
-![image-20191122121632366](webpack%E5%85%A5%E9%97%A8/image-20191122121632366.png)
+![image-20191122121632366](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122121632366.png)
 
 三、打包
 
@@ -188,7 +188,7 @@ module.exports = {
 
 2、然后修改 `package.json` 文件中的 `build` 配置项（非必须）
 
-![image-20191122124307295](webpack%E5%85%A5%E9%97%A8/image-20191122124307295.png)
+![image-20191122124307295](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122124307295.png)
 
 > webpack 会自动加载执行名字叫 `webpack.config.js` 的配置文件，如果你使用了别的名字，那么就在这里自定义.
 
@@ -222,7 +222,7 @@ mode 用来配置打包模式，有两种模式可选：
 
 建议开发过程使用开发模式，发布上线使用生产模式。
 
-![image-20191122155129511](webpack%E5%85%A5%E9%97%A8/image-20191122155129511.png)
+![image-20191122155129511](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122155129511.png)
 
 ## 打包 CSS
 
@@ -234,7 +234,7 @@ npm install --save-dev style-loader css-loader
 
 2、修改打包配置文件
 
-![image-20191122152632937](webpack%E5%85%A5%E9%97%A8/image-20191122152632937.png)
+![image-20191122152632937](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122152632937.png)
 
 3、打包测试
 
@@ -248,7 +248,7 @@ npm install --save-dev file-loader
 
 2、配置
 
-![image-20191122153520233](webpack%E5%85%A5%E9%97%A8/image-20191122153520233.png)
+![image-20191122153520233](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122153520233.png)
 
 3、打包配置
 
@@ -315,7 +315,7 @@ module.exports = {
 
 还是使用 file-loader，只需要增加一个配置规则即可：
 
-![image-20191122162620802](webpack%E5%85%A5%E9%97%A8/image-20191122162620802.png)
+![image-20191122162620802](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122162620802.png)
 
 ## 打包 Less
 
@@ -328,7 +328,7 @@ npm install less less-loader style-loader css-loader --save-dev
 
 2、配置
 
-![image-20191122163446652](webpack%E5%85%A5%E9%97%A8/image-20191122163446652.png)
+![image-20191122163446652](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122163446652.png)
 
 3、打包测试
 
@@ -350,7 +350,7 @@ npm install -D babel-loader @babel/core @babel/preset-env webpack
 
 2、配置
 
-![image-20191122165529066](webpack%E5%85%A5%E9%97%A8/image-20191122165529066.png)
+![image-20191122165529066](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191122165529066.png)
 
 3、打包测试
 
@@ -383,7 +383,7 @@ npm install --save @babel/polyfill
 
 2、配置
 
-![image-20191124090523101](webpack%E5%85%A5%E9%97%A8/image-20191124090523101.png)
+![image-20191124090523101](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124090523101.png)
 
 
 
@@ -393,19 +393,19 @@ npm install --save @babel/polyfill
 
 当代码文件比较多的时候，babel 打包非常耗时，我们建议开启缓存用以提高打包的效率。
 
-![image-20191124091122427](webpack%E5%85%A5%E9%97%A8/image-20191124091122427.png)
+![image-20191124091122427](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124091122427.png)
 
 ## 增加 source maps
 
 > 建议阅读：[An Introduction to Source Maps]( https://blog.teamtreehouse.com/introduction-source-maps )
 
-![image-20191124093220937](webpack%E5%85%A5%E9%97%A8/image-20191124093220937.png)
+![image-20191124093220937](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124093220937.png)
 
 ## 使用 watch 监视模式
 
 在 package.json 文件中新增一个 scripts 脚本：
 
-![image-20191124095723565](webpack%E5%85%A5%E9%97%A8/image-20191124095723565.png)
+![image-20191124095723565](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124095723565.png)
 
 ## 使用 webpack-dev-server
 
@@ -424,11 +424,11 @@ npm install --save-dev webpack-dev-server
 
 2、配置
 
-![image-20191124100620633](webpack%E5%85%A5%E9%97%A8/image-20191124100620633.png)
+![image-20191124100620633](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124100620633.png)
 
 > 在 `webpack.config.js` 中新增的配置项
 
-![image-20191124100646425](webpack%E5%85%A5%E9%97%A8/image-20191124100646425.png)
+![image-20191124100646425](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124100646425.png)
 
 > 在 `package.json` 文件中新增 NPM Scripts 脚本
 
@@ -444,7 +444,7 @@ npm run serve
 
 webpack-dev-server 默认是刷新整个页面实现更新。我们有一种更好的方式：热更新，可以在不刷新页面的情况下更新内容变化，效率更高。
 
-![image-20191124101715767](webpack%E5%85%A5%E9%97%A8/image-20191124101715767.png)
+![image-20191124101715767](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124101715767.png)
 
 > 在 webpack 配置文件中
 
@@ -464,7 +464,7 @@ npm install -D vue-loader vue-template-compiler
 
 2、配置
 
-![image-20191124104029319](webpack%E5%85%A5%E9%97%A8/image-20191124104029319.png)
+![image-20191124104029319](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124104029319.png)
 
 3、打包测试
 
@@ -481,13 +481,13 @@ webpack 默认只支持省略：
 
 如果想要让其支持其它的可省略的后缀名，需要单独配置。
 
-![image-20191124110450652](webpack%E5%85%A5%E9%97%A8/image-20191124110450652.png)
+![image-20191124110450652](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124110450652.png)
 
 ## 配置路径别名
 
 在 Vue CLI 项目中，使用过一个路径别名：`@`，它表示 `src` 的路径。
 
-![image-20191124111510567](webpack%E5%85%A5%E9%97%A8/image-20191124111510567.png)
+![image-20191124111510567](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124111510567.png)
 
 ## 使用 ESLint
 
@@ -511,7 +511,7 @@ npm install eslint eslint-loader --save-dev
 
 2、配置 webpack 配置文件
 
-![image-20191124115208034](webpack%E5%85%A5%E9%97%A8/image-20191124115208034.png)
+![image-20191124115208034](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20191124115208034.png)
 
 > 在 webpack 配置文件的 module.rules 中新增
 

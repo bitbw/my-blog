@@ -10,7 +10,7 @@ categories: vue
 
 最终实现效果：
 <!--more-->
-![单表格托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/%E5%8D%95%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD.gif)
+![单表格托拽](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/单表格托拽.gif)
 
 js 部分实现
 
@@ -79,7 +79,7 @@ tr.hover-row {
 
 最终实现效果：
 
-![双表格表格托拽](element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/%E5%8F%8C%E8%A1%A8%E6%A0%BC%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD.gif)
+![双表格表格托拽](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/双表格表格托拽.gif)
 
 ```js
 // 初始化拖拽

@@ -11,7 +11,7 @@ date: 2020-09-14 10:35:43
 <!--more-->
 事件循环示意
 
-![bg2014100802](js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/bg2014100802.png)
+![bg2014100802](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/bg2014100802.png)
 
 ### 注意点1
 
@@ -23,6 +23,6 @@ date: 2020-09-14 10:35:43
 
 asycn  的 await 下面的代码相当于都在promise的then里面都是本轮事件循环的最末执行，也就是说await下面的代码在等待await期间会被放到栈尾，而执行asnyc 函数下的代码
 
-![微观任务和宏观任务](js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1.png)
+![微观任务和宏观任务](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/微观任务和宏观任务.png)
 
 总结：遇到setimeout 就放一边 ，遇到setImmediate也放 一边，遇到promise或者nextTick就放到本轮最后，等到本轮执行结束去找可以执行的settimeout或**setImmediate**

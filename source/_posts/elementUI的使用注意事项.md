@@ -34,7 +34,7 @@ date: 2020-09-16 11:17:23
 
 > elementUI的table 的每一项的min-width不要使用百分比 ,不然会出现这种情况
 
-![image-20200227163411930](elementUI%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/image-20200227163411930.png)
+![image-20200227163411930](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20200227163411930.png)
 
 > 固定的序号和checkbox 会掉下来
 
@@ -176,7 +176,7 @@ this.currentNode.loadData();
 
 >正则一直不好 无法输入小数点 ， 是因为加了number 修饰符无法输入小数点， 找了我一个多小时啊
 
-![正则不生效原因](elementUI%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E6%AD%A3%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E5%8E%9F%E5%9B%A0.jpg)
+![正则不生效原因](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/正则不生效原因.jpg)
 
 ### 工作中出现的---表头带input搜索框 搜索后点击表格会刷新数据bug
 

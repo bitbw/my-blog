@@ -13,7 +13,7 @@ categories: vscode
 
 首选项 -> 设置 ->文本编辑器 ->文件
 
-![image-20201224095242258](vscode%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%A5%E4%BD%95%E7%A7%8D%E6%96%B9%E5%BC%8F%E9%AB%98%E4%BA%AE%E8%A7%A3%E6%9E%90/image-20201224095242258.png)
+![image-20201224095242258](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20201224095242258.png)
 
 修改保存即可 ，语言要写全名 像`javascript `不要写成`js`
 
@@ -21,7 +21,7 @@ categories: vscode
 
 ## setting 修改
 
-![image-20201224095505868](vscode%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%A5%E4%BD%95%E7%A7%8D%E6%96%B9%E5%BC%8F%E9%AB%98%E4%BA%AE%E8%A7%A3%E6%9E%90/image-20201224095505868.png)
+![image-20201224095505868](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20201224095505868.png)
 
 json中添加
 

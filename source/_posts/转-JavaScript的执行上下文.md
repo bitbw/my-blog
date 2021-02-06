@@ -72,7 +72,7 @@ outerFunc()
 
 代码首先进入Global Execution Context，然后依次进入outerFunc，innerFunc和foo的执行上下文，执行上下文栈就可以表示为：
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025201151427-127726802.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025201151427-127726802.png)
 
 当JavaScript代码执行的时候，第一个进入的总是默认的Global Execution Context，所以说它总是在ECS的最底部。
 
@@ -80,7 +80,7 @@ outerFunc()
 
 当然，除了这三个属性之外，根据实现的需要，Execution Context还可以有一些附加属性。
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025201152849-1821016303.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025201152849-1821016303.png)
 
 ## VO和AO
 
@@ -96,7 +96,7 @@ outerFunc()
 
 当JavaScript代码运行中，如果试图寻找一个变量的时候，就会首先查找VO。对于前面例子中的代码，Global Execution Context中的VO就可以表示如下：
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025201154239-918576092.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025201154239-918576092.png)
 
 **注意，**假如上面的例子代码中有下面两个语句，Global VO仍将不变。
 
@@ -126,7 +126,7 @@ Arguments Objects 是函数上下文里的激活对象AO中的内部对象，它
 
 当上面的例子开始执行outerFunc的时候，就会有一个outerFunc的AO被创建：
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025201156317-195051519.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025201156317-195051519.png)
 
 通过上面的介绍，我们现在了解了VO和AO是什么，以及他们之间的关系了。下面就需要看看JavaScript解释器是怎么执行一段代码，以及设置VO和AO了。
 
@@ -243,7 +243,7 @@ fooExecutionContext = {
 
 代码解释：匿名函数会首先进入"创建结果"，JavaScript解释器会创建一个"Function Execution Context"，然后创建Scope chain，VO/AO和this。根据前面的介绍，解释器会扫描函数和变量声明，如下的AO会被创建：
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025201158208-1634029739.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025201158208-1634029739.png)
 
 所以，对于bar，我们会得到"undefined"这个输出，表现的行为就是，我们在声明一个变量之前就访问了这个变量。这个就是JavaScript中"Hoisting"。
 
@@ -315,7 +315,7 @@ fooExecutionContext = {
 
 > 下面是自己理解的 函数内部上下文执行流程图
 
-![JavaScript的执行上下文（函数内部的执行流程Execution Context）](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%88%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8BExecution%20Context%EF%BC%89.png)
+![JavaScript的执行上下文（函数内部的执行流程Execution Context）](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/JavaScript的执行上下文（函数内部的执行流程Execution Context）.png)
 
 ## 总结
 
@@ -407,7 +407,7 @@ foo();
 
 上面代码的输出结果为"60"，函数bar可以直接访问"z"，然后通过作用域链访问上层的"x"和"y"。
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025202341552-94941711.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025202341552-94941711.png)
 
 - 绿色箭头指向VO/AO
 - 蓝色箭头指向scope chain（VO/AO + All Parent VO/AOs）
@@ -457,7 +457,7 @@ console.log(ctor.decrease());
 
 \1. 当代码进入Global Context后，会创建Global VO
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025202343192-1736899039.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025202343192-1736899039.png)
 
 - 绿色箭头指向VO/AO
 - 蓝色箭头指向scope chain（VO/AO + All Parent VO/AOs）
@@ -466,19 +466,19 @@ console.log(ctor.decrease());
 
 \2. 当代码执行到"var cter = counter();"语句的时候，进入counter Execution Context；根据上一篇文章的介绍，这里会创建counter AO，并设置counter Execution Context的scope chain
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025202345224-1059314508.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025202345224-1059314508.png)
 
  
 
 \3. 当counter函数执行的最后，并退出的时候，Global VO中的ctor就会被设置；这里需要注意的是，虽然counter Execution Context退出了执行上下文栈，但是因为ctor中的成员仍然引用counter AO（因为counter AO是increase和decrease函数的parent scope），所以counter AO依然在Scope中。
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025202347208-254025968.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025202347208-254025968.png)
 
  
 
 \4. 当执行"ctor.increase()"代码的时候，代码将进入ctor.increase Execution Context，并为该执行上下文创建VO/AO，scope chain和设置this；这时，ctor.increase AO将指向counter AO。
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025202349224-1554337822.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025202349224-1554337822.png)
 
 - 绿色箭头指向VO/AO
 - 蓝色箭头指向scope chain（VO/AO + All Parent VO/AOs）
@@ -520,7 +520,7 @@ baz()();
 
 对于这个例子，可以通过下图进行解释，代码首先通过作用域链（scope chain）查找"foo"，最终在Global context中找到；然后因为"foo"中没有找到属性"a"，将继续沿着原型链（prototype chain）查找属性"a"。
 
-![img](%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025202351395-1888858218.png)
+![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/593627-20151025202351395-1888858218.png)
 
 - 蓝色箭头表示作用域链查找
 - 橘色箭头表示原型链查找

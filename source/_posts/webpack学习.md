@@ -23,7 +23,7 @@ https://webpack.js.org/api/cli/
 
 webpack 的打包过程
 
-![](webpack%E5%AD%A6%E4%B9%A0/web%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png)
+![](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/web工作流程.png)
 
 ## webpack初体验
 

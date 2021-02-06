@@ -1,8 +1,11 @@
 ---
 title: yarn 和 npm
 date: 2018-04-30 18:27:25
-tags: 工具使用
-categories: 工具使用
+tags: 
+	- 工具使用
+	- npm
+	- yarn
+categories: npm
 ---
 
 ## 关于 npm 和 yarn

@@ -15,7 +15,7 @@ categories: vue
 
 <!--more-->
 
-![vuetfiy抽屉效果](vuetify%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E5%BA%A6%E5%8A%A8%E7%94%BBcreateSimpleTransition%E7%9A%84%E4%BD%BF%E7%94%A8/vuetfiy%E6%8A%BD%E5%B1%89%E6%95%88%E6%9E%9C.gif)
+![vuetfiy抽屉效果](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/vuetfiy抽屉效果.gif)
 
 ```vue
 <template>
