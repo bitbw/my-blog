@@ -9,7 +9,7 @@
       "customUrl": "https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main",
       "path": "img/",
       "repo": "zhangbowen-github/my-gallery",
-      "token": "5fcc67787af3d565841804d347043720e5d6fdf2"
+      "token": "c3acae73cd94eb3ec68ef8f2e22969f9a96f1e43"
     },
     "uploader": "github"
   },
