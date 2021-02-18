@@ -354,7 +354,28 @@ postcss-preset-env :
     ]
 ```
 
+#### browserslist 
 
+具体配置说明 https://github.com/browserslist/browserslist
+
+在 package.json 中配置 browserslist 或添加 .browserslistrc文件
+
+具体的环境是根据 process.env.NODE_ENV 确定， 所以需要设置 process.env.NODE_ENV ，光设置 mode: 'production' 无用
+
+```json
+"browserslist": {
+    "development": [
+      "last 1 chrome version",//兼容最近的谷歌浏览器
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.01%",//兼容>0.01%
+      "not dead",//不用管弃用的浏览器
+      "not op_mini all"//不用op
+    ]
+  }
+```
 
 
 
