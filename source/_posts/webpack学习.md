@@ -377,7 +377,34 @@ postcss-preset-env :
   }
 ```
 
+## 压缩css
 
+webpack v4 使用 optimize-css-assets-webpack-plugin
+
+对于webpack v5或更高版本，请改用css-minimizer-webpack-plugin。
+
+#### 下载插件
+
+```bash
+npm install --save-dev css-minimizer-webpack-plugin
+```
+
+#### 修改配置
+
+```js
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+  
+module :...,
+plugins:...,
+optimization: {
+    minimize: true,
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`,
+      new CssMinimizerPlugin(),
+    ],
+  },
+```
 
 
 
