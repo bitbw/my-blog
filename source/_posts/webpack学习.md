@@ -4,26 +4,32 @@ date: 2021-01-02 16:09:17
 tags:
 	- Webpack
 	- webpakc-cli
-categories:  Webpack
+categories: Webpack
 ---
 
 
 
-## 需要用到的包介绍
+
+
+
+
+## webpack 基础知识
+
+### 需要用到的包介绍
 
 - webpack  - webpack 的核心包
 - webpack-cli - webpack 的命令行工具
 - webpack-dev-server - webpack 的开发服务器 （热更新）
 
-## webpack-cil 命令参考
+### webpack-cil 命令参考
 
 https://webpack.js.org/api/cli/
 
-## webpack 的打包过程
+### webpack 的打包过程
 
 ![](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/web工作流程.png)
 
-## webpack初体验
+### webpack初体验
 
 - webpack将ES6的模块化编译成浏览器能够识别的模块化
 - webpack默认只能打包js 和json文件
@@ -38,11 +44,9 @@ webpack --entry  ./src/index.js -o ./dist --mode=production #生产模式
 
 ```
 
+### webpack.config.js
 
-
-## webpack.config.js
-
->指示webpack来干那些活 当运行 webpack指令时 会加载里面的配置
+>指示 webpack 来干那些活 当运行 webpack 指令时 会加载里面的配置
 
 
 
@@ -406,15 +410,221 @@ optimization: {
   },
 ```
 
+## js语法检查
 
+#### 下载插件
 
+```bash
+npm install --save-dev eslint-loader eslint eslint-config-airbnb-base eslint-plugin-import 
+```
 
+- eslint-loader 已经弃用  请使用 eslint-webpack-plugin
 
+- eslint-config-airbnb-base ：airbnb标准的所以规则 需要`eslint`和`eslint-plugin-import`。
 
+```bash
+npm install --save-dev eslint-webpack-plugin
+```
 
+#### 修改配置
 
+##### eslint-loader （已经弃用）
 
+```js
+...
+  module: {
+    rules: [
+      /*
+        语法检查： eslint-loader  eslint
+          注意：只检查自己写的源代码，第三方的库是不用检查的
+          设置检查规则：
+            package.json中eslintConfig中设置~
+              "eslintConfig": {
+                "extends": "airbnb-base"
+              }
+            airbnb --> eslint-config-airbnb-base  eslint-plugin-import eslint
+      */
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        options: {
+          // 自动修复eslint的错误
+          fix: true
+        }
+      }
+    ]
+  },
+```
 
+##### eslint-webpack-plugin
+
+```js
+const ESLintPlugin = require('eslint-webpack-plugin');
+
+module.exports = {
+  // ...
+  plugins: [new ESLintPlugin(options)],
+  // ...
+};
+```
+
+##### eslint 的配置
+
+ 在 package.json 中的`"eslintConfig"`   或者 `.eslintrc.js`  中修改 eslint 的配置
+
+```js
+  extends: "airbnb-base",
+  env: {
+    browser: true
+  },
+  rules: {
+    "no-console": process.env.NODE_ENV === "development" ? "off" : "warn"
+  }
+```
+
+> eslint 全配置：https://eslint.bootcss.com/docs/user-guide/configuring#extending-configuration-files
+
+## js兼容性处理
+
+#### 下载插件
+
+```bash
+npm install --save-dev  babel babel-loader @babel/core @babel/preset-env @babel/polyfill core-js 
+```
+
+- @babel/preset-env  babel预设环境
+
+- @babel/polyfill   所有的转换包集合 Babel 7.4.0开始，不赞成使用此软件包
+
+- core-js  是babel-polyfill 的底层依赖 可以配合useBuiltIns 选项实现按需加载
+
+#### 修改配置
+
+有两种方式配置babel
+
+- 在webpack.config.js中配置
+- 在babel.config.js中配置
+
+##### 在webpack.config.js中配置
+
+```js
+...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          rootMode: "upward",
+        },
+        options: {
+          // 预设：指示babel做怎么样的兼容性处理
+          presets: [
+            [
+              '@babel/preset-env',
+              {
+                // 按需加载
+                useBuiltIns: 'usage',
+                // 指定core-js版本
+                corejs: {
+                  version: 3
+                },
+                // 指定兼容性做到哪个版本浏览器
+                targets: {
+                  chrome: '60',
+                  firefox: '60',
+                  ie: '9',
+                  safari: '10',
+                  edge: '17'
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ]
+  },
+```
+
+##### 在babel.config.js中配置
+
+或者将配置放到项目根目录的babel.config.js
+
+```js
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          rootMode: "upward",  // 需要配置 rootMode: "upward" 意思是向上查找 找到 babel.config.[json | js]
+        },
+      }
+    ]
+  },
+```
+
+babel.config.js
+
+```js
+module.exports = {
+    
+  // 预设：指示 babel 做怎么样的兼容性处理
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        // 按需加载
+        useBuiltIns: 'usage',
+        // 指定core-js版本
+        corejs: {
+          version: 3
+        },
+        // 指定兼容性做到哪个版本浏览器
+        targets: {
+          chrome: '60',
+          firefox: '60',
+          ie: '9',
+          safari: '10',
+          edge: '17'
+        }
+      }
+    ]
+  ]
+};
+```
+
+## js压缩和html压缩
+
+#### 修改配置
+
+```js
+...
+// 生产环境下会自动压缩js代码 和 html代码
+mode: 'production'
+```
+
+ 也可以自定义压缩配置
+
+```js
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      // 当webpack的默认mode值为'production' 自动设置 minify: true 
+      // 全部配置查看：https://www.npmjs.com/package/html-webpack-plugin#minification
+      // 压缩html代码
+      minify: {
+        // 移除空格
+        collapseWhitespace: true,
+        // 移除注释
+        removeComments: true
+      }
+    })
+  ]
+```
 
 
 
@@ -446,7 +656,64 @@ Error: Automatic publicPath is not supported in this browser
 
 设置 output 中 publicPath: ''  为空字符串
 
-## tip ：node模块的搜索流程
+## tip ：项目中的基础知识
+
+### node模块的搜索流程
 
 > node在使用模块名来引入模块时,会首先在当前目录的node_modules中寻找是否有该模块
 > 如果有则直接使用,如果没有则会一直向上一级目录的node_modules中寻找，直到磁盘的根目录
+
+### .browserslistrc
+
+对应package.json 中的 browserslist   
+
+postcss-preset-env 会找到 browserslist  作为兼容的基础
+
+browserslist   配置  https://github.com/browserslist/browserslist
+
+### .eslintrc.js
+
+对应package.json 中的 eslintConfig  
+
+eslint 配置  https://eslint.org/docs/developer-guide/nodejs-api#%E2%97%86-new-eslint-options
+
+### babel.config.js
+
+bable 的配置文件 对应 webpack.config.js 中 babel-loader 的 options
+
+babel.config.js文件，可以使用不同的扩展名（`.js`，`.cjs`，`.mjs`)
+
+bable的配置文件分为两种：
+
+- babel.config.js 整个项目都用这个babel配置（项目范围的配置）
+- .babelrc.js  配置文件是否仅适用于项目的某个部分  （相对文件配置）
+
+具体配置：https://babeljs.io/docs/en/config-files
+
+### .prettierrc.js
+
+ vscode 中的 prettier 插件 会优先已这个文件作为格式化的配置
+
+配置同 prettier 插件 https://prettier.io/docs/en/options.html
+
+
+
+## 核心模块
+
+### postcss
+
+>css 兼容性插件
+
+ 配合webpack使用 ：postcss-loader  https://www.npmjs.com/package/postcss-loader
+
+### eslint
+
+>语法检查校验插件
+
+ 配合webpack使用 ：eslint-webpack-plugin  https://www.npmjs.com/package/eslint-webpack-plugin
+
+### babel
+
+>js 兼容性插件
+
+ 配合webpack使用 ： babel-loader https://www.npmjs.com/package/babel-loader
