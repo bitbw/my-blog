@@ -52,7 +52,15 @@ webpack --entry  ./src/index.js -o ./dist --mode=production #生产模式
 
 ## 打包样式资源
 
-### 普通css文件
+#### 下载插件
+
+```bash
+npm i css-loader style-loader less-loader less -D
+```
+
+#### 修改配置
+
+##### 普通css文件
 
 ```js
 // webpack.config.js
@@ -87,7 +95,7 @@ module.exports = {
 import "./index.css"
 ```
 
-### 引入less 或sass 样式处理文件
+##### 引入less 或sass 样式处理文件
 
 ```js
 // rules 中 添加 less  或 sass 的处理规则
@@ -104,7 +112,7 @@ import "./index.css"
  }
 ```
 
-### 注意事项：
+#### 注意事项：
 
 less 和 sass 不光要下对应的loader 还需要 less 或 sass 包  
 
@@ -114,12 +122,20 @@ ps：node-sass 安装起来比较麻烦 可以参照 https://www.cnblogs.com/zhi
 
 ## 打包HTML资源
 
+#### 下载插件
+
+```bash
+npm install --save-dev html-webpack-plugin
+```
+
 tip: html-webpack-plugin 和 html-loader 的不同
 
 -  html-loader  是用来解析入口文件中关联的html中的image图片的引入
 - html-webpack-plugin  是用来自动生成最后dist目录下的index.html  (并自动导入打包好的js)
 
 html-webpack-plugin  插件的更多配置见官网 ：https://github.com/jantimon/html-webpack-plugin
+
+#### 修改配置
 
 ```js
 // webpack.config.js
@@ -149,6 +165,14 @@ module.exports = {
 
 
 ## 打包图片资源
+
+#### 下载插件
+
+```bash
+npm install --save-dev html-loader url-loader file-loader
+```
+
+#### 修改配置
 
 ```js
 const { resolve } = require("path");
@@ -202,6 +226,8 @@ module.exports = {
 
 ## 打包其他资源（字体等）
 
+#### 修改配置
+
 ```js
   {
     // 处理其他资源
@@ -217,6 +243,14 @@ module.exports = {
 
 
 ## devServer
+
+#### 下载插件
+
+```bash
+npm i webpack-dev-server -D
+```
+
+#### 修改配置
 
 webpack.config.js 中添加
 
@@ -243,7 +277,7 @@ devServer: {
 
 启动服务后不会生成固定文件 devserver会在内存中进行编译
 
-### 使用express作为开发服务器配置
+#### 使用express作为开发服务器配置
 
 https://webpack.docschina.org/guides/development/#using-webpack-dev-middleware
 
@@ -297,11 +331,11 @@ postcss 相当于一个启动器，里面可以装各种 插件 如 postcss-pres
 npm install --save-dev postcss-loader postcss-preset-env
 ```
 
-postcss-loader ：
+- postcss-loader ：
 
 >在所有css | sass | less  loader前使用   作用： 使用 postcss 来解析 css
 
-postcss-preset-env :
+- postcss-preset-env :
 
 >帮你将最新的 CSS 语法转换成大多数浏览器都能理解的语法，并根据你的目标浏览器或运行时环境来确定你需要的 polyfillss （postcss-preset-env 为 postcss 的 预设环境）
 
@@ -364,7 +398,7 @@ postcss-preset-env :
 
 在 package.json 中配置 browserslist 或添加 .browserslistrc文件
 
-具体的环境是根据 process.env.NODE_ENV 确定， 所以需要设置 process.env.NODE_ENV ，光设置 mode: 'production' 无用
+具体的环境是根据 process.env.NODE_ENV 确定， 所以需要设置 process.env.NODE_ENV ，只设置 mode: 'production' 不好使
 
 ```json
 "browserslist": {
