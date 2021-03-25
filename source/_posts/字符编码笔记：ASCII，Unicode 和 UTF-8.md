@@ -1,8 +1,11 @@
 ---
 title: 字符编码笔记：ASCII，Unicode 和 UTF-8
 date: 2020-12-7 14:48:29
-tags: js
-categories: js
+tags: 
+	- 计算机通用知识
+	- js
+
+categories: 计算机通用知识
 ---
 
 这里引用阮一峰的两篇文章：
