@@ -1,8 +1,10 @@
 ---
 title: Promise对象和async函数
 date: 2018-5-28 18:52:44
-tags: es6
-categories: es6
+tags: 
+	- es6
+	- js
+categories: js
 ---
 
 ## 异步代码
@@ -128,6 +130,8 @@ setTimeout(sum, 1000, 1, 2, 3);
 
 ## Promise 对象
 
+> 
+
 ### Promise 的含义
 
 Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了`Promise`对象。
@@ -191,6 +195,30 @@ timeout(100).then((value) => {
 - then 方法执行完以后会返回一个新的 Promise 对象
 - 如果是普通数据，那么它会把该数据包装为那个返回的 Promise 的 resolve 结果
 - 如果你返回的数据就是一个 Promise 对象，那它就不做任何处理了
+
+### Promise.all
+
+ \* Promise.all()方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
+
+ \* 所有参数的状态都变成fulfilled，res的状态才会变成fulfilled
+
+### Promise.race
+
+ \* Promise.race()方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
+
+ \* 参数之中有一个实例率先改变状态，res的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给p的回调函数
+
+### Promise.allSettled
+
+ \* Promise.allSettled()方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例。
+
+ \* 只有等到所有这些参数实例都返回结果，不管是fulfilled还是rejected，包装实例才会结束。
+
+### Promise.any
+
+​    \* Promise.any()方法。该方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例返回。
+
+​    \* 只要参数实例有一个变成fulfilled状态，包装实例就会变成fulfilled状态；
 
 ## async 函数
 
@@ -258,11 +286,55 @@ async function ayrequest() {
 
 ```js
 async created () {
-        axios({
-          method: 'GET',
-          url: 'http://jsonplaceholder.typicode.com/posts'
-        }).then(res => {
-          console.log(res)
-        })
+    axios({
+      method: 'GET',
+      url: 'http://jsonplaceholder.typicode.com/posts'
+    }).then(res => {
+      console.log(res)
+    })
  }
 ```
+
+## 利用Promise + aysnc 实现对原生ajax的封装
+
+>这里利用 module 的 顶端可以直接使用 await 的特性
+
+```html
+<script type="module">
+  function get(url) {
+     // 返回一个封装的 Promise
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.addEventListener("load", res => {
+        let reseult = JSON.parse(res.target.response || "{}");
+        // 成功resolve返回结果 状态变为 fulfilled （已成功）
+        resolve(reseult);
+      });
+      xhr.addEventListener("error", err => {
+        // 失败reject返回错误 状态变为 rejected （已失败）
+        reject(err);
+      });
+      xhr.open("get", url);
+      xhr.send();
+    });
+  }
+   // 使用 await 等待 Promise的 返回值
+   let res = await get("http://localhost:8848/getSysDB");
+</script>
+```
+
+## 使用Promise的注意事项
+
+### 将多个Promise包装成一个Promise的方法 ，都是并行执行
+
+- Promise.all
+- Promise.race
+- Promise.allSettled
+- Promise.any
+
+这几个方法都用于将Promise 实例作为参数，包装成一个新的 Promise 实例返回
+
+这几个方法在执行的 Promise 时候，都是并行执行 
+
+**注意：如果有先执行完某个Promise 在执行某个 Promise 的时候不可以这几种方法，需要改串行执行（一个执行完再执行另一个）**
+

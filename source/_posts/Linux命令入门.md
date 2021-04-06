@@ -856,7 +856,7 @@ scp -r user@remote:Desktop demo
 
 ##### 示意图
 
-![001_组示意图](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/003_SSH 免密码示意图.png))
+![001_组示意图](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/003_SSH%20%E5%85%8D%E5%AF%86%E7%A0%81%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 
 > 非对称加密算法
 >
