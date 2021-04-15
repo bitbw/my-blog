@@ -303,3 +303,26 @@ powershell.exe中的普通空格
 在Windows  terminal 中空格变成
 
 ![image-20210414172703793](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210414172703793.png)
+
+### 解决
+
+更换[**Oh my Posh**](https://ohmyposh.dev/)官方推荐字体：https://ohmyposh.dev/docs/fonts/
+
+使用[Meslo LGM NF](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip)
+
+![image03](https://user-images.githubusercontent.com/55389796/114845441-56ec7580-9e0e-11eb-8c6c-d2512fdc7bf8.png)
+
+#### setting.json
+
+```json
+  "fontFace" : "MesloLGM Nerd Font",
+```
+
+## 修改vscode终端字体
+
+#### setting.json
+
+```json
+"terminal.integrated.fontFamily": "MesloLGL Nerd Font"
+```
+
