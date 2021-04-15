@@ -57,3 +57,37 @@ service nginx stop
 ```
 
 详细教程：https://blog.csdn.net/qq_23832313/article/details/83578836
+
+## 使用深度进行安装
+
+> 官方地址：https://github.com/zq1997/deepin-wine
+
+1. 执行命令
+
+```bash
+wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
+```
+
+> 这一步将apt的存储库重定向到Deeppin储存库
+
+成功将提示
+
+```bash
+大功告成，现在可以试试安装更新deepin-wine软件了，如：
+微信：sudo apt-get install com.qq.weixin.deepin
+QQ：sudo apt-get install com.qq.im.deepin
+钉钉：sudo apt-get install com.dingtalk.deepin
+由于新版变化，安装完成后需要注销重登录才能正常显示应用图标。
+如果觉得有用，请到 https://github.com/zq1997/deepin-wine 点个star吧。
+```
+
+微信 文字乱码问题：https://github.com/zq1997/deepin-wine/issues/15
+
+自己测试没问题的解决方案
+
+```bash
+sudo apt-get install ttf-wqy-microhei  #文泉驿-微米黑
+sudo apt-get install ttf-wqy-zenhei  #文泉驿-正黑
+sudo apt-get install xfonts-wqy #文泉驿-点阵宋体
+```
+
