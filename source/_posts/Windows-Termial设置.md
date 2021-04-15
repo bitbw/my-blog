@@ -17,7 +17,7 @@ https://github.com/microsoft/terminal
 
 ## 在 PowerShell 中设置 Powerline
 
-https://docs.microsoft.com/zh-cn/windows/terminal/tutorials/powerline-setup
+https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
 
 ### 安装 Cascadia Mono PL 字体
 
@@ -32,6 +32,8 @@ Set-Theme报错：Set-Theme : 无法将“Set-Theme”项识别为 cmdlet、函�
 解决方案：https://www.icode9.com/content-4-866063.html
 
 官网介绍：https://ohmyposh.dev/docs/upgrading/ 
+
+官方是使用 **Get-PoshThemes** 查看支持主题；**Set-PoshPrompt paradox** 设置主题。
 
 > 原因：oh-my-posh  v3 不支持 Set-Theme命令 ，需要使用 Set-PoshPrompt -Theme xxx
 
@@ -90,12 +92,30 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
                 "hidden": false,
-                "acrylicOpacity": 0.7,
-                "colorScheme" : "Frost",
-                "cursorColor" : "#000000",
+                // 浅色主题
+                // "acrylicOpacity": 0.7,
+                // "colorScheme" : "Frost",
+                // "cursorColor" : "#000000",
+                // "fontFace" : "Cascadia Code PL",
+                // "useAcrylic": true
+                // 深色主题
+                "acrylicOpacity" : 0.7,
+                "colorScheme" : "Campbell",
+                "cursorColor" : "#FFFFFD",
                 "fontFace" : "Cascadia Code PL",
-                "useAcrylic": true
-                // "startingDirectory": null
+                "useAcrylic" : true
+            },
+            {
+                "guid": "{3ef3d962-7a99-4b13-93b6-b92a4d42a2e0}",
+                "hidden": false,
+                "name": "bash",
+                "commandline":"C:\\Program Files\\Git\\bin\\bash.exe",
+                "colorScheme" : "Raspberry",
+                "cursorColor" : "#FFFFFF",
+                "fontFace" : "Cascadia Code PL",
+                "padding" : "5, 5, 5, 5",
+                "suppressApplicationTitle": true,
+                "tabTitle": "bash"
             },
             {
                 // Make changes here to the cmd.exe profile.
@@ -111,7 +131,7 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
                 "padding" : "5, 5, 5, 5",
                 "tabTitle" : "Command Prompt",
                 "fontFace": "PxPlus IBM VGA8",
-                "experimental.retroTerminalEffect": true,
+                "experimental.retroTerminalEffect": true
             },
             {
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
@@ -130,20 +150,8 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 // "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{3ef3d962-7a99-4b13-93b6-b92a4d42a2e0}",
-                "hidden": false,
-                "name": "bash",
-                "commandline":"C:\\Program Files\\Git\\bin\\bash.exe",
-                "colorScheme" : "Raspberry",
-                "cursorColor" : "#FFFFFF",
-                "fontFace" : "Cascadia Code PL",
-                "padding" : "5, 5, 5, 5",
-                "suppressApplicationTitle": true,
-                "tabTitle": "bash"
-
             }
+
         ]
     },
 
@@ -242,7 +250,7 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
 
 ```
 
-### 添加注册列表(右键菜单)
+## 添加注册列表(右键菜单)
 
 https://blog.csdn.net/u011532601/article/details/106305373/
 
@@ -282,3 +290,16 @@ github上有对应的issues:https://github.com/microsoft/terminal/issues/8105
 
 完成后记得[重新启动资源管理器](https://www.howtogeek.com/198815/use-this-secret-trick-to-close-and-restart-explorer.exe-in-windows/)
 
+## 问题：
+
+https://github.com/microsoft/terminal/issues/9806
+
+powershell.exe中的普通空格
+
+
+
+![image-20210414173814189](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210414173814189.png)
+
+在Windows  terminal 中空格变成
+
+![image-20210414172703793](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210414172703793.png)
