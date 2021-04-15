@@ -326,3 +326,7 @@ powershell.exe中的普通空格
 "terminal.integrated.fontFamily": "MesloLGL Nerd Font"
 ```
 
+```json
+"terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font"
+```
+
