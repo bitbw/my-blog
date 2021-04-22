@@ -23,25 +23,29 @@ https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
 
 https://github.com/microsoft/cascadia-code/releases
 
-如果显示
+使用`notepad $PROFILE`打开编辑文本 
 
-### Set-Theme报错
+设置启动后导入 posh-git， oh-my-posh ，
 
-Set-Theme报错：Set-Theme : 无法将“Set-Theme”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+设置主题powerline：Set-PoshPrompt paradox 
+
+```bash
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-PoshPrompt paradox
+```
+
+### 注意事项
+
+使用 Set-Theme 会报错：Set-Theme : 无法将“Set-Theme”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
+
+>原因：oh-my-posh  v3 不支持 Set-Theme命令 ，需要使用 Set-PoshPrompt -Theme xxx
 
 解决方案：https://www.icode9.com/content-4-866063.html
 
 官网介绍：https://ohmyposh.dev/docs/upgrading/ 
 
-官方是使用 **Get-PoshThemes** 查看支持主题；**Set-PoshPrompt paradox** 设置主题。
-
-> 原因：oh-my-posh  v3 不支持 Set-Theme命令 ，需要使用 Set-PoshPrompt -Theme xxx
-
-```
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-PoshPrompt paradox
-```
+官方是使用 **Get-PoshThemes** 查看支持主题；
 
 ## 分屏操作
 
@@ -82,7 +86,9 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "startingDirectory": null
+            "startingDirectory": null,
+            "fontFace" : "MesloLGM Nerd Font",
+            "fontSize": 12
         },
         "list":
         [
@@ -100,9 +106,9 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
                 // "useAcrylic": true
                 // 深色主题
                 "acrylicOpacity" : 0.7,
-                "colorScheme" : "Campbell",
+                "colorScheme" : "Vintage",
                 "cursorColor" : "#FFFFFD",
-                "fontFace" : "Cascadia Code PL",
+                "fontFace" : "MesloLGM Nerd Font",
                 "useAcrylic" : true
             },
             {
@@ -112,7 +118,7 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
                 "commandline":"C:\\Program Files\\Git\\bin\\bash.exe",
                 "colorScheme" : "Raspberry",
                 "cursorColor" : "#FFFFFF",
-                "fontFace" : "Cascadia Code PL",
+                // "fontFace" : "Cascadia Code PL",
                 "padding" : "5, 5, 5, 5",
                 "suppressApplicationTitle": true,
                 "tabTitle": "bash"
@@ -140,16 +146,27 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
                 // "source": "Windows.Terminal.Wsl",
                 "colorScheme" : "Raspberry",
                 "cursorColor" : "#FFFFFF",
-                "fontFace" : "Cascadia Code PL",
+                "fontFace" : "MesloLGM Nerd Font",
                 "padding" : "5, 5, 5, 5",
                 "suppressApplicationTitle": true,
                 "tabTitle": "Ubuntu"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore",
+                "acrylicOpacity" : 0.7,
+                "colorScheme" : "Vintage",
+                "cursorColor" : "#FFFFFD",
+                "fontFace" : "MesloLGM Nerd Font",
+                "useAcrylic" : true
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
                 "name": "Azure Cloud Shell",
-                // "source": "Windows.Terminal.Azure"
+                "source": "Windows.Terminal.Azure"
             }
 
         ]
@@ -158,6 +175,7 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
     "schemes": [
+        // 毛玻璃
         {
             "name" : "Frost",
             "background" : "#FFFFFF",
@@ -179,6 +197,7 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
             "white" : "#6E386E",
             "yellow" : "#991070"
         },
+        // 复古
         {
             "name": "Retro",
             "background": "#000000",
@@ -200,6 +219,7 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
             "white": "#00ff00",
             "yellow": "#00ff00"
         },
+        // ubuntu
         {
             "name" : "Raspberry",
             "background" : "#3C0315",
@@ -323,10 +343,7 @@ powershell.exe中的普通空格
 #### setting.json
 
 ```json
-"terminal.integrated.fontFamily": "MesloLGL Nerd Font"
-```
-
-```json
 "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font"
 ```
 
+> 注意：vscode只能使用等宽字体 所以得单独设置
