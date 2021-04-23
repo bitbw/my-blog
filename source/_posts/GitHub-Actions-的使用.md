@@ -8,23 +8,96 @@ tags:
 categories: github
 ---
 
-111
+
 
 ##  自动部署：GitHub Actions
 
-### **生成** **token** 秘钥
+阮一峰关于GitHub Actions的教程： http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
+
+>注意：因为部署插件不断更新需要根据新的插件改相应配置
+
+
+
+### 生成 **token** 秘钥
 
 >官网：https://docs.github.com/en/actions/reference/encrypted-secrets
+>
+>注意：github-pages-deploy-action V4开始不需要添加token
 
-
-
-### 配置文件
+### 添加配置文件
 
 - 在项目目录下新建`.github\workflows`
 - 随便命名一个yml配置文件 我的命名`main.yml`
 - 填写配置
 
+### 填写配置
+
+#### 关于github-pages-deploy-action
+
+注意：
+
+- JamesIves/github-pages-deploy-action@master 无法使用，继续使用会报错
+
+- github-pages-deploy-action V4开始不需要添加token ，如果添加会报128错误
+
+- github关于128错误的解答：https://github.com/JamesIves/github-pages-deploy-action/issues/624
+
+  
+
+#### github-pages-deploy-action@v2
+
+```yaml
+name: GitHub Actions Build and Deploy Demo 
+on:
+  push:
+    branches: 
+      - master 
+jobs: 
+ build-and-deploy:
+   runs-on: ubuntu-latest
+   steps: 
+   - name: Checkout 
+     uses: actions/checkout@v2
+      
+   - name: Build and Deploy 
+     uses: JamesIves/github-pages-deploy-action@releases/v2
+     env:
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
+      BASE_BRANCH: master
+      BRANCH: gh-pages 
+      FOLDER: public 
+      BUILD_SCRIPT:  npm install && npm run build
 ```
+
+#### github-pages-deploy-action@v4
+
+```yaml
+name: GitHub Actions Build and Deploy Demo 
+on:
+  push:
+    branches: 
+      - master 
+jobs: 
+ build-and-deploy:
+   runs-on: ubuntu-latest
+   steps: 
+   - name: Checkout 
+     uses: actions/checkout@v2
+   - name: Install and Build 🔧 
+     run: |
+        npm install
+        npm run build
+   - name:  Deploy 
+    # JamesIves/github-pages-deploy-action@4.1.1 not need token
+     uses: JamesIves/github-pages-deploy-action@4.1.1
+     with:
+      branch: gh-pages
+      folder: public
 
 ```
 
+## GitHub Pages
+
+### 创建
+
+https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
