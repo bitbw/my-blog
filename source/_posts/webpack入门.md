@@ -3,7 +3,7 @@ title: webpack入门
 date: 2021-01-02 16:24:55
 tags: 
 	- Webpack
-	- webpack-cil
+	- webpack-cli
 categories: webpack
 ---
 
