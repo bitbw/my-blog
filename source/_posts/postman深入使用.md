@@ -1,7 +1,9 @@
 ---
 title: postman 深入使用
 date: 2018-11-28 16:56:05
-tags: 工具使用
+tags: 
+	- 工具使用
+	- postman
 categories: 工具使用
 ---
 
@@ -14,6 +16,18 @@ categories: 工具使用
 ```
 
 ![1574932590726](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/1574932590726.png)
+
+
+
+## 设置环境变量
+
+### 小技巧
+
+>可将不同环境的baseurl 统一设置成一个变量名，然后只需要切换环境就可以请求不同baseurl的接口，在配合接口调试阶段很好用
+
+![image-20210425165810147](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210425165810147.png)
+
+
 
 ## 拦截器：统一设置 token
 
