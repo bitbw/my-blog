@@ -15,8 +15,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zhangbowen.xyz/blog
-root: /blog/
+url: https://blog.zhangbowen.xyz
+root: /
 permalink: :category/:title/
 permalink_defaults:
   category: 默认分类
