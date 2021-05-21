@@ -17,7 +17,13 @@ categories: Linux
 
 ## 安装
 
-官方教学：https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
+Windows Terminal中ubuntu安装oh-my-posh教程：https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
+
+oh-my-posh 官网：https://ohmyposh.dev/docs/
+ - linux安装教程：https://ohmyposh.dev/docs/linux
+ - 字体安装教程：https://ohmyposh.dev/docs/fonts
+
+
 
 ### 安装oh-my-posh
 
@@ -44,6 +50,11 @@ sudo apt update
 ```
 
 ### 自定义您的Ubuntu提示
+
+查看所有主题
+```bash
+for file in ~/.poshthemes/*.omp.json; do echo "$file\n"; oh-my-posh --config $file --shell universal; echo "\n"; done;
+```
 
 `~/.bashrc`使用`nano ~/.bashrc`或您选择的文本编辑器打开文件。这是一个bash脚本，每次bash启动时运行。添加以下内容（将主题更改为您喜欢的主题）：
 
@@ -81,3 +92,11 @@ cd Meslo
 ```
 
 ![image-01](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210415135918711.png)
+
+
+## 在vscode中字体设置
+
+```json
+"terminal.integrated.fontFamily": "MesloLGM NF"
+
+```
