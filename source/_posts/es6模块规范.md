@@ -3,7 +3,8 @@ title: es6 模块规范
 date: 2019-11-30 18:13:47
 tags: 
 	- es6
-categories: es6
+	- js
+categories: js
 ---
 
 ### 导出 export

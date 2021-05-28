@@ -2,9 +2,9 @@
 title: vscode中jsconfig.json和tsconfig.json的配置
 date: 2021-04-12 15:21:42
 tags:
-	- ts
+	- TS
 	- vscode
-categories: vscode
+categories: 工具使用
 ---
 
 

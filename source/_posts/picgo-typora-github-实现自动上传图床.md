@@ -6,7 +6,7 @@ tags:
 	- typora
 	- github
 
-categories: typora
+categories: 工具使用
 ---
 
 

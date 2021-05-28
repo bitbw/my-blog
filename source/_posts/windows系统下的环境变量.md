@@ -3,7 +3,7 @@ title: windows系统下的环境变量
 date: 2021-03-19 13:22:32
 tags: 
 	- windows
-categories: windows
+categories: Windows
 ---
 
 

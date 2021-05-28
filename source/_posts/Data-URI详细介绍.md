@@ -4,7 +4,7 @@ date: 2020-12-31 09:09:56
 tags:
 	- HTML
 	- js
-	- css
+	- CSS
 categories: HTML
 ---
 

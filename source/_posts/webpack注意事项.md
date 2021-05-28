@@ -1,10 +1,10 @@
 ---
-title: webpack注意事项
+title: Webpack注意事项
 date: 2021-02-18 13:31:29
 tags:
-	- webpack
-	- webpack-cli
-categories: webpack
+	- Webpack
+	- Webpack-cli
+categories: Webpack
 ---
 
 

@@ -2,7 +2,7 @@
 title: 关于vue组件样式的作用域问题
 date: 2019-12-03 22:15:57
 tags: vue
-categories: vue
+categories: Vue
 ---
 
 > 参考文档：

@@ -5,7 +5,7 @@ tags:
 	- Nodejs
 	- npm 
 	- js
-categories: electron
+categories: Electron
 date: 2020-12-13 11:15:36
 ---
 

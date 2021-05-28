@@ -1,7 +1,7 @@
 ---
 title: Vue的使用注意事项
 tags: vue
-categories: vue
+categories: Vue
 date: 2020-09-16 11:34:54
 ---
 

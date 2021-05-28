@@ -5,7 +5,7 @@ tags:
 	- vue
 	- vuetify
 	- electron
-categories: vue
+categories: Vue
 ---
 
 

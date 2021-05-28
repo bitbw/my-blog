@@ -2,7 +2,7 @@
 title: Vue3学习理解
 date: 2020-12-24 14:35:01
 tags: vue
-categories: vue
+categories: Vue
 ---
 
 

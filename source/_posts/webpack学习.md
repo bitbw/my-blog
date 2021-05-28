@@ -3,7 +3,7 @@ title: webpack学习
 date: 2021-01-02 16:09:17
 tags:
 	- Webpack
-	- webpakc-cli
+	- Webpack-cli
 categories: Webpack
 ---
 
@@ -686,7 +686,6 @@ mode: 'production'
   * code split
   * 懒加载/预加载
   * pwa
-  
 
 
 

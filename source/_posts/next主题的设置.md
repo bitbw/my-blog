@@ -5,7 +5,7 @@ tags:
 	- hexo
 	- next
 	- NexT 
-categories: hexo
+categories: Hexo
 ---
 
 # hexo新版主题next7.x设置

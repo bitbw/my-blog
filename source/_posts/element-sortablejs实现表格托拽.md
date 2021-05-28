@@ -5,7 +5,7 @@ tags:
 	- elementUI 
 	- vue  
 	- sortablejs
-categories: vue
+categories: Vue
 ---
 
 最终实现效果：

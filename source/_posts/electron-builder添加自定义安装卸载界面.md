@@ -5,7 +5,7 @@ tags:
 	 - electron
 	 - electron-builder
 	 - nsis
-categories: electron
+categories: Electron
 ---
 
 

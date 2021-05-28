@@ -5,7 +5,7 @@ tags:
 	- GitHub Actions
 	- github
 	- ci/cd
-categories: github
+categories: Github
 ---
 
 

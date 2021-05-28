@@ -3,7 +3,7 @@ title: vscode tasks 任务的使用
 date: 2021-03-19 16:13:13
 tags:
 	- vscode
-categories: vscode
+categories: 工具使用
 ---
 
 

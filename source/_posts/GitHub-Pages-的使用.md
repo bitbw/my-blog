@@ -4,7 +4,7 @@ date: 2021-04-26 17:25:24
 tags:
 	- GitHub Pages
 	- github
-categories: github
+categories: Github
 ---
 
 ## 创建
