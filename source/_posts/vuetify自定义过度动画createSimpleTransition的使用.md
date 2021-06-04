@@ -2,8 +2,8 @@
 title: 'vuetify自定义过度动画createSimpleTransition的使用实现左右抽屉效果'
 date: 2021-01-11 17:40:14
 tags:
-	- vue
-	- vuetify
+	- Vue
+	- Vuetify
 categories: Vue
 ---
 

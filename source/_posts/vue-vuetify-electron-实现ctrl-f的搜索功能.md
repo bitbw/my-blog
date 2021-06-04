@@ -2,9 +2,9 @@
 title: vue + vuetify + electron 实现ctrl+f的搜索功能
 date: 2021-01-12 15:02:05
 tags:
-	- vue
-	- vuetify
-	- electron
+	- Vue
+	- Vuetify
+	- Electron
 categories: Vue
 ---
 

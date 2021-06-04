@@ -25,7 +25,7 @@ categories: CSS
 }
 ```
 
-- vue3官网
+- Vue3官网
 
   ![image-20210119161200747](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20210119161200747.png)
 

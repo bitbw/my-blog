@@ -31,8 +31,6 @@ Ubuntu默认不会开启ssh服务。所以我们无法对Ubuntu进行远程连�
 
 ***指令 1：ps -e | grep ssh（ 查看ssh服务是否开启）\***
 
-![img](https://upload-images.jianshu.io/upload_images/10819250-c4836ff808dd1b7b.png?imageMogr2/auto-orient/strip|imageView2/2/w/405/format/webp)
-
 运行***ps -e | grep ssh***得出如图一的两行结果。ssh-agent指的是ubuntu的ssh服务的客户端，用于该ubuntu远程连接其它Linux主机。sshd指的是ubuntu的ssh服务的服务端，用于其它主机通过ssh服务连接该主机。
 
 换句话说，如果没有sshd进程的话，别的系统是不能连接该ubuntu主机的，若是没有ssh-agent的话，该ubuntu主机也无法通过ssh连接其它主机。
@@ -45,9 +43,7 @@ Ubuntu默认不会开启ssh服务。所以我们无法对Ubuntu进行远程连�
 
 默认ssh的服务端是没有安装的，可用***ps -e | grep ssh\***查看。若是没有sshd的进程，则运行***apt-get install openssh-server***安装ssh服务端。接着重新执行ps -e | grep ssh便可发现sshd已启动。至此，其它主机便可通过ssh连接该主机。
 
-![img](https:////upload-images.jianshu.io/upload_images/10819250-60293234e0462d96.png?imageMogr2/auto-orient/strip|imageView2/2/w/471/format/webp)
-
-图二.sshd和ssh-agent都已经启动。其它主机便可通过ssh连接该主机 
+sshd和ssh-agent都已经启动。其它主机便可通过ssh连接该主机 
 
 ***指令 4：service ssh start 或者 /etc/init.d/ssh start（开启ssh服务）\***
 
@@ -86,6 +82,8 @@ gitlab社区版 --> ce
 推荐使用docker容器方式：https://docs.gitlab.com/omnibus/docker/
 
 ## 安装 ZeroTier One 内网穿透
+
+官网：https://www.zerotier.com/
 
 使用这行命令安装ZeroTier One
 

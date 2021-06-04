@@ -1,7 +1,7 @@
 ---
 title: 运行electron-builder-install-app-deps-卡住不动的问题解决
 tags: 
-	- electron
+	- Electron
 	- Nodejs
 	- npm 
 	- js
