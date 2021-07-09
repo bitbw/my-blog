@@ -23,7 +23,7 @@ docker pull jenkins/jenkins
 启动容器
 
 ```
-docker run -d -p 10240:8080 -p 10241:50000 -v /var/jenkins_mount:/var/jenkins_home -v /etc/localtime:/etc/localtime --name myjenkins jenkins/jenkins
+docker run -d -p 8868:8080 -p 10241:50000 -v C:/test/jenkins:/var/jenkins_home -v C:/test/localtime:/etc/localtime --name myjenkins 9927cde587ad
 ```
 
 创建并启动Jenkins容器

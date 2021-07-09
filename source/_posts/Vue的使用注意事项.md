@@ -1,6 +1,7 @@
 ---
 title: Vue的使用注意事项
-tags: vue
+tags: 
+	- vue
 categories: Vue
 date: 2020-09-16 11:34:54
 ---
@@ -134,6 +135,15 @@ this.arr.forEach((item , index) => {
 <!--注意： class 只能合并一次  最后显示 class="test test2"-->
 ```
 
+#### 模板 v-bind绑定值的变量名为class 报  'v-bind' directives require an attribute value.eslint
+
+>在模板中绑定的名称不要用class 作为命名 否则eslint会报'v-bind' directives require an attribute value.eslint 
+
+
+
+
+$attrs 可以获取任何绑定在组件上的属性 但（ `porp`中的属性和  `class` 和 `style` 除外）
+
 ## vue-property-decorator  注意事项（ts项目中）
 
 介绍链接[https://segmentfault.com/a/1190000019906321]
@@ -166,4 +176,6 @@ prop 中 default 默认值 返回对象或数组需要使用工厂函数 ，一�
     },    
   },
 ```
+
+>
 
