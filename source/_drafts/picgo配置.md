@@ -2,23 +2,26 @@
 
 ```json
 {
-  "picBed": {
-    "current": "github",
+ "picBed": {
+    "current": "gitee",
+    "uploader": "gitee",
+    "smms": {
+      "token": ""
+    },
     "github": {
       "branch": "main",
-      "customUrl": "https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main",
+      "customUrl": "https://raw.githubusercontent.com/bitbw/my-gallery/main",
       "path": "img/",
-      "repo": "zhangbowen-github/my-gallery",
-      "token": "05ae9b0188df6448b628550a491bcd05d47e42a2"
+      "repo": "bitbw/my-gallery",
+      "token": "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"
     },
-    "uploader": "github",
     "gitee": {
       "branch": "master",
       "customPath": "default",
-      "customUrl": "https://gitee.com/zhangbowen-1/my-gallery/raw/master",
+      "customUrl": "https://gitee.com/bitbw/my-gallery/raw/master",
       "path": "/img",
-      "repo": "zhangbowen-1/my-gallery",
-      "token": "101d31a30c5c8bec692f1107c0577f83"
+      "repo": "bitbw/my-gallery/img",
+      "token": "319e8648dc3d5af97c6dc108e00a0d47"
     }
   },
   "settings": {

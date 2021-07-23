@@ -74,3 +74,15 @@ module.exports = {
 }
 ```
 
+## 使用ipcRenderer.sendSync后程序卡住（阻塞）问题
+
+使用 ipcRenderer.sendSync 方法进行通信 ,对应的 ipcMain.on 中必须使用 event.returnValue 返回结果
+
+否则 sendSync 会将阻塞整个渲染进程 ，导致程序卡住
+
+官方文档中的警告
+
+> ⚠️**警告**：发送同步消息会阻塞整个渲染器进程，直到收到回复，所以只能作为最后的手段使用此方法。使用异步版本要好得多，[`invoke()`](https://www.electronjs.org/docs/api/ipc-renderer#ipcrendererinvokechannel-args).
+
+所以尽量使用ipcRenderer. send 而非 sendSync 方法，或者再每个 ipcMain.on 中都添加返回值 event.returnValue
+

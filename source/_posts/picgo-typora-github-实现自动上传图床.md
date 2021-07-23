@@ -1,11 +1,11 @@
 ---
-title: picgo + typroa + github 实现自动上传图床
+title: picgo + typroa + github (gitee) 实现自动上传图床
 date: 2021-02-06 16:18:02
 tags:
 	- picgo
 	- typora
 	- github
-
+	- gitee
 categories: 工具使用
 ---
 
@@ -25,12 +25,13 @@ categories: 工具使用
 {
   "picBed": {
     "current": "github",
+     // 具体配置
     "github": {
       "branch": "分支",
       "customUrl": "https://raw.githubusercontent.com/用户名/仓库/分支",
-      "path": "img/", //具体文件夹
-      "repo": "zhangbowen-github/my-gallery",
-      "token": "5fcc67787af3d565841804d347043720e5d6fdf2" //Settings -> Developer settings -> Personal access tokens->创建 全选
+      "path": "img/", //具体文件夹`路径/`
+      "repo": "zhangbowen-github/my-gallery",//  `/用户名/仓库`
+      "token": "sdfasdfasdfasdf" //Settings -> Developer settings -> Personal access tokens->创建 全选
     },
     "uploader": "github"
   },
@@ -66,3 +67,22 @@ categories: 工具使用
 >注意上传同名图片会导致失败
 
 常见报错：https://blog.csdn.net/qq754772661/article/details/111385955
+
+## 
+
+## PicGo 设置 gitee（码云）图床
+
+ 详细教程：https://blog.csdn.net/qq_39564555/article/details/105080209
+
+```json
+// 具体配置
+ "gitee": {
+      "branch": "master",
+      "customPath": "default",
+      "customUrl": "https://gitee.com/zhangbowen-1/my-gallery/raw/master",
+      "path": "/img",// `/路径`
+      "repo": "zhangbowen-1/my-gallery/img",// `/用户名/仓库/路径`
+      "token": "asdfasdfdfasdfasdfsadfasd"  // 设置-》私人令牌-》生产新令牌
+    }
+```
+
