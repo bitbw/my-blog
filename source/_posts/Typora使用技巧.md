@@ -9,17 +9,21 @@ categories: 工具使用
 
 
 
-typora，postman，vscode 都是使用 electron 构建而成的桌面应用
+typora，postman，vscode 等都是使用 electron 构建而成的桌面应用
 
 这篇文章主要记录下typora日常使用中的技巧
 
-## 命令行添加typora直接打开md文档的方法
+## win命令行添加typora直接打开md文档的方法
 
-### 添加环境变量
+### 添加path环境变量
 
 ```
 C:\app\Typora\bin
 ```
+
+新版的typora没有bin目录 那就直接`C:\app\Typora`
+
+注意：添加环境变量后需要重启计算机
 
 ## 通过修改注册表，在右键新建菜单中添加typora
 
