@@ -15,7 +15,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.zhangbowen.xyz
+url: https://blog.bitbw.top
 root: /
 permalink: :category/:title/
 permalink_defaults:
@@ -107,7 +107,7 @@ limit: 10000
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git # 使用 Git 提交
-  repository: https://github.com/zhangbowen-github/my-blog.git # 就是存放博客的仓库地址
+  repository: https://github.com/bitbw/my-blog.git # 就是存放博客的仓库地址
 
 ##加载速度优化
 filter_optimize:
