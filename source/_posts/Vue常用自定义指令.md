@@ -2,8 +2,8 @@
 title: Vue常用自定义指令
 date: 2021-03-25 10:19:42
 tags:
-	- vue
-categories: vue
+	- Vue
+categories: Vue
 ---
 Vue常用自定义指令
 

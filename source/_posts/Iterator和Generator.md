@@ -11,11 +11,11 @@ categories: js
 
 Iterator和Generator
 
-## Iterator
+## Iterator（迭代器）
 
 详细文档：[ECMAScript 6 入门-Iterator 和 for...of 循环](https://es6.ruanyifeng.com/#docs/iterator)
 
-### Iterator（遍历器）的概念
+### Iterator（迭代器）的概念
 
 Iterator 即遍历器对象
 
@@ -130,23 +130,85 @@ iterator.next() // { value: undefined, done: true }
 - Promise.all()
 - Promise.race()
 
-## Generator
+## Generator（生成器）
 
 详细文档：[ECMAScript 6 入门-Generator 函数的语法](https://es6.ruanyifeng.com/#docs/generator)
 
+建议看：JavaScript高级程序设计（第4版）中关于生成器的描述
+
 ### 基本概念
+
+Generator函数 是生成器函数，Generator函数 返回 Generator（生成器）
 
 Generator是一个状态机，封装了多个内部状态（本人的理解：是一个可以控制内部执行步骤的 函数）
 
-Generator 函数调用后可以返回一个遍历器对象 Iterator 
+Generator生成器 内部实现了 Iterator （迭代器）接口，因此具有 next() 方法。调用这个方法会让生
+
+成器开始或恢复执行
 
 ### 控制内部执行步骤
 
-yield 用来返回每一步的执行结果
+- 调用generatorFn生成器函数的时候并不会执行内部代码
 
-Iterator.next() 用来将指针指向下一步
+- generator调用next方法， 开始执行generatorFn内部代码
 
-程序执行`yield`命令就暂停，等到Iterator.next() ，再从暂停的地方继续往后执行
+- 遇到yield关键字将停止执行代码，并将yield后面的值返回
+
+- 再次调用next方法 将从上一个yield 所在行开始执行
+
+- 如果next中有参数将传递给开始执行所在行的yield，如果是首次调用next将没有yield可以供其赋值
+- 遇到return关键字将返回 { value: return后面的值, done: true } 
+- 如果函数内没有return也没有yield的了 将返回 { value: undefined, done: true } 
+
+#### 正常执行顺序
+
+```js
+function* generatorFn() {
+    console.log("0->yield1");
+    yield "yield1"					// 停止 返回 yield1
+    console.log("yield1->yield2");
+    yield 'yield2'					// 停止 返回 yield2
+    console.log("yield2->end");
+}
+
+const generator= generatorFn()
+console.log('next1',generator.next())
+// 0->yield1
+// next1 { value: 'yield1', done: false }
+console.log('next2',generator.next())
+// yield1->yield2
+// next2 { value: 'yield2', done: false }
+console.log('next3',generator.next())
+// yield2->end
+// next3 { value: undefined, done: true }
+```
+
+#### next 传参
+
+```js
+function* generatorFn(params) {
+    console.log(params);
+    console.log('yield1',yield "yield1");   // 遇到 yield ，yield所在行的代码都不会执行，但是 yield 后边的参数会返回
+    console.log('yield2',yield 'yield2');   // 不会执行console.log，下次调用next时才会执行console.log以及后面的代码
+    console.log('end');
+}
+
+const generator = generatorFn('foo')
+
+// ***第一次的bar并不会赋值给yield1关键字 因为这一次调用是为了开始执行生成器函数，第二次调用yield1的值变成baz***
+console.log('next1', generator.next('bar')) 
+// foo
+// next1 { value: 'yield1', done: false }
+console.log('next2', generator.next('baz'))
+// yield1 baz
+// next2 { value: 'yield2', done: false }
+console.log('next3', generator.next('qux'))
+// yield2 qux
+// end
+// next3 { value: undefined, done: true }
+```
+
+#### 带return的
 
 ```js
 function* helloWorldGenerator() {

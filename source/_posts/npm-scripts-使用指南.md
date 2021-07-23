@@ -4,9 +4,9 @@ date: 2021-01-03 10:50:45
 tags:
 	- npm
 	- js
-	- node
+	- Nodejs
 	- package.json
-categories: npm
+categories: Nodejs
 ---
 
 

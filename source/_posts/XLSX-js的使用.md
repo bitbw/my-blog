@@ -1,9 +1,13 @@
 ---
 title: XLSX.js的使用
 date: 2020-07-30 09:20:05
-tags: excel
-categories: excel
+tags: 
+	- XLSX
+	- 插件
+categories: XLSX
 ---
+
+[SheetJS js-xlsx](http://sheetjs.com/) 中文文档： https://github.com/rockboom/SheetJS-docs-zh-CN
 
 merges 的使用
 
@@ -21,3 +25,4 @@ data["!merges"] = [{
 }];
 ........
 ```
+

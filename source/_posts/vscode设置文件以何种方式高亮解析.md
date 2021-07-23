@@ -2,7 +2,7 @@
 title: vscode设置文件以何种方式高亮解析
 date: 2020-12-24 09:43:58
 tags:  vscode
-categories: vscode
+categories: 工具使用
 ---
 
 

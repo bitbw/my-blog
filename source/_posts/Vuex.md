@@ -2,7 +2,7 @@
 title: Vuex入门
 date: 2018-11-29 13:44:28
 tags: vue
-categories: vue
+categories: Vue
 ---
 
 ## 1. 介绍

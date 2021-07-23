@@ -5,7 +5,7 @@ tags:
 	- 工具使用
 	- npm
 	- yarn
-categories: npm
+categories: Nodejs
 ---
 
 ## 关于 npm 和 yarn

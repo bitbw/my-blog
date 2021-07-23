@@ -2,7 +2,7 @@
 title: vue 移动端采坑
 date: 2019-2-30 20:54:04
 tags: vue
-categories: vue
+categories: Vue
 ---
 
 ## 1.报错

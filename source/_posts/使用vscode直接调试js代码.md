@@ -3,7 +3,7 @@ title: 使用vscode直接调试js代码
 date: 2021-03-09 10:27:53
 tags:
 	- vscode
-categories: vscode
+categories: 工具使用
 ---
 
 

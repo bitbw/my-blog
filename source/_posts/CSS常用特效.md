@@ -16,7 +16,7 @@ categories: CSS
 
 - 谷歌卡片
 
-  ![image-20210119161631244](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20210119161631244.png)
+  ![image-20210119161631244](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210119161631244.png)
 
 ```css
 .block-anchor[_ngcontent-iki-c34]:hover {
@@ -25,7 +25,7 @@ categories: CSS
 }
 ```
 
-- vue3官网
+- Vue3官网
 
   ![image-20210119161200747](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20210119161200747.png)
 

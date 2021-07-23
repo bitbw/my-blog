@@ -6,16 +6,16 @@
 
 # Site
 title: 张博文的个人博客
-subtitle: Zhang's personal blog
+subtitle: Bowen's personal blog
 description: vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客
 keywords:
-author: 张博文
+author: Bowen
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://zhangbowen.xyz/
+url: https://blog.zhangbowen.xyz
 root: /
 permalink: :category/:title/
 permalink_defaults:

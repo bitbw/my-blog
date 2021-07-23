@@ -2,8 +2,8 @@
 title: elementUI的使用注意事项
 tags:
   - elementUI
-  - vue
-categories: elementUI
+  - Vue
+categories: Vue
 date: 2020-09-16 11:17:23
 ---
 

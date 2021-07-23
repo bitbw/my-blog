@@ -1,8 +1,8 @@
 ---
 title: HTML第一天
 date: 2018-11-21 20:54:00
-tags: html
-categories: html
+tags: HTML
+categories: HTML
 ---
 
 ![下载](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/下载.jpg)

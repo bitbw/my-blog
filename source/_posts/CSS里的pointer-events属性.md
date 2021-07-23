@@ -2,9 +2,9 @@
 title: CSS里的pointer-events属性
 date: 2020-12-30 09:57:22
 tags: 
-	- css
+	- CSS
 	- Vuetify 
-categories: css 
+categories: CSS
 ---
 
 

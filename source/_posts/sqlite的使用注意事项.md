@@ -4,7 +4,7 @@ date: 2021-04-22 17:30:03
 tags:
 	- SQL
 	- sqlite
-categories: sqlite
+categories: SQL
 ---
 
 

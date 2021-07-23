@@ -2,10 +2,10 @@
 title: electron-builder添加自定义安装卸载界面
 date: 2021-04-12 11:52:18
 tags:
-	 - electron
+	 - Electron
 	 - electron-builder
 	 - nsis
-categories: electron
+categories: Electron
 ---
 
 

@@ -2,7 +2,7 @@
 title: 模拟一个MVVM框架-Vue实现思路
 date: 2019-12-14 21:18:01
 tags: vue
-categories: vue
+categories: Vue
 ---
 
 ## MVVM 框架介绍
@@ -31,7 +31,7 @@ MVVM 框架实现了视图与模型层的相互解耦
 
 - 数据劫持
 
-  - vue.js 则是采用数据劫持结合发布者-订阅者模式的方式。通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
+  - Vue.js 则是采用数据劫持结合发布者-订阅者模式的方式。通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
     注意：vuejs 不兼容 IE8 以以下的版本
 
 ![1576331348832](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/1576331348832.png)

@@ -2,7 +2,7 @@
 title: Vue列表渲染中对象和数组变更检测注意事项
 date: 2018-12-04 10:49:58
 tags: vue
-categories: vue
+categories: Vue
 ---
 
 ## 对象变更检测注意事项

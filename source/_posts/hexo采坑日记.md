@@ -3,7 +3,7 @@ title: hexo采坑日记
 date: 2019-11-28 17:25:06
 tags: 
 	- hexo
-categories: hexo
+categories: Hexo
 ---
 
 ## hexo 上传 github 后图片不显示问题
