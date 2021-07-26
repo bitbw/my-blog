@@ -34,7 +34,7 @@ git remote set-url origin https://github.com/xxx/my-blog1.git
 
 ```
 
-### 查看GIT未推送的提交记录
+## 查看GIT未推送的提交记录
 
 #### 1 查看到未传送到远程代码库的提交次数
 
@@ -45,12 +45,13 @@ git status
 显示结果类似于这样：
 
 ```bash
+$ git status
 On branch master
-
 Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)     
+
+nothing to commit, working tree clean
 ```
-
-
 
 ####  2 查看到未传送到远程代码库的提交描述/说明
 
@@ -61,9 +62,8 @@ git cherry -v
 显示结果类似于这样：
 
 ```bash
-b6568326134dc7d55073b289b07c4b3d64eff2e7 add default charset for table items_has_images
-
-4cba858e87752363bd1ee8309c0048beef076c60 move Savant3 class into www/includes/class/
++ afd5134be3bee5285d6c2ee2c82fc323012d74bb Update commit 1
++ 37a165ec0586f4af745bf538bc139fda6f1df672 Update commit 2
 ```
 
 #### 3 查看到未传送到远程代码库的提交详情
@@ -76,7 +76,17 @@ git log master ^origin/master
 显示结果类似于这样：
 
 ```bash
+commit 37a165ec0586f4af745bf538bc139fda6f1df672 (HEAD -> master)
+Author: xxxx <xxxxx@163.com>
+Date:   Mon Jul 26 17:46:34 2021 +0800
 
+    Update commit 1
+
+commit afd5134be3bee5285d6c2ee2c82fc323012d74bb
+Author: xxx <xxxx@163.com>
+Date:   Mon Jul 26 09:54:24 2021 +0800
+
+    Update commit 2
 ```
 
 总结
