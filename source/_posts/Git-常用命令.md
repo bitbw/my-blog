@@ -34,3 +34,52 @@ git remote set-url origin https://github.com/xxx/my-blog1.git
 
 ```
 
+### 查看GIT未推送的提交记录
+
+#### 1 查看到未传送到远程代码库的提交次数
+
+```bash
+git status
+```
+
+显示结果类似于这样：
+
+```bash
+On branch master
+
+Your branch is ahead of 'origin/master' by 2 commits.
+```
+
+
+
+####  2 查看到未传送到远程代码库的提交描述/说明
+
+```bash
+git cherry -v
+```
+
+显示结果类似于这样：
+
+```bash
+b6568326134dc7d55073b289b07c4b3d64eff2e7 add default charset for table items_has_images
+
+4cba858e87752363bd1ee8309c0048beef076c60 move Savant3 class into www/includes/class/
+```
+
+#### 3 查看到未传送到远程代码库的提交详情
+
+```bash
+git log master ^origin/master
+```
+
+这是一个git log命令的过滤，^origin/master可改成其它分支。
+显示结果类似于这样：
+
+```bash
+
+```
+
+总结
+git status 只能查看未传送提交的次数
+git cherry -v只能查看未传送提交的描述/说明
+git log master ^origin/master则可以查看未传送提交的详细信息
