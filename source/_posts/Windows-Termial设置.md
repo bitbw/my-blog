@@ -2,7 +2,9 @@
 title: Windows Termial设置
 date: 2021-04-13 17:47:54
 tags:
-categories:
+    - windows
+
+categories: 工具使用 
 ---
 
 
