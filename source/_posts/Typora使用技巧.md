@@ -40,6 +40,6 @@ C:\app\Typora\bin
 （1）修改.md的默认值
 （2）添加ShellNew，添加NullFile
 
-![image-20210427142049929](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210427142049929.png)
+![image-20210427142049929](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210427142049929.png)
 
 > 原文：https://blog.csdn.net/m0_46588308/article/details/105919561

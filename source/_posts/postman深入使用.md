@@ -25,7 +25,7 @@ categories: 工具使用
 
 >可将不同环境的baseurl 统一设置成一个变量名，然后只需要切换环境就可以请求不同baseurl的接口，在配合接口调试阶段很好用
 
-![image-20210425165810147](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210425165810147.png)
+![image-20210425165810147](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210425165810147.png)
 
 
 

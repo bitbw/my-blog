@@ -91,7 +91,7 @@ cd Meslo
  sudo fc-cache -f -v
 ```
 
-![image-01](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210415135918711.png)
+![image-01](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210415135918711.png)
 
 
 ## 在vscode中字体设置

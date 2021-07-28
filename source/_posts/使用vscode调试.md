@@ -19,15 +19,15 @@ categories: 工具使用
 - 选择nodejs作为调试工具
 - 开始调试
 
-![image-20210309103224511](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210309103224511.png)
+![image-20210309103224511](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103224511.png)
 
 如果只调试js代码的话，选择nodejs即可
 
-![image-20210309103344902](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210309103344902.png)
+![image-20210309103344902](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103344902.png)
 
 ### 调试界面
 
-![image-20210309103733550](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210309103733550.png)
+![image-20210309103733550](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103733550.png)
 
 ### 总结
 
@@ -107,5 +107,5 @@ categories: 工具使用
 
 否则点击运行启动调试则只能调试当天打开的tab标签页
 
-![image-20210723134611394](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/vscode%E8%B0%83%E8%AF%95%E6%B3%A8%E6%84%8F01.png)
+![image-20210723134611394](https://gitee.com/bitbw/my-gallery/raw/master/img/vscode%E8%B0%83%E8%AF%95%E6%B3%A8%E6%84%8F01.png)
 

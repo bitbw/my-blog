@@ -73,7 +73,7 @@ Vue.directive("resize", resize);
 
 ### 效果：
 
-![拖拽指令 v-drag ](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/%E6%8B%96%E6%8B%BD%E6%8C%87%E4%BB%A4%20v-drag%20.gif)
+![拖拽指令 v-drag ](https://gitee.com/bitbw/my-gallery/raw/master/img/%E6%8B%96%E6%8B%BD%E6%8C%87%E4%BB%A4%20v-drag%20.gif)
 
 拖拽指令 v-drag 绑定元素需要定位
 

@@ -320,11 +320,11 @@ powershell.exe中的普通空格
 
 
 
-![image-20210414173814189](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210414173814189.png)
+![image-20210414173814189](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210414173814189.png)
 
 在Windows  terminal 中空格变成
 
-![image-20210414172703793](https://gitee.com/zhangbowen-1/my-gallery/raw/master/img/image-20210414172703793.png)
+![image-20210414172703793](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210414172703793.png)
 
 ### 解决
 
