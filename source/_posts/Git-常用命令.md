@@ -93,3 +93,24 @@ Date:   Mon Jul 26 09:54:24 2021 +0800
 git status 只能查看未传送提交的次数
 git cherry -v只能查看未传送提交的描述/说明
 git log master ^origin/master则可以查看未传送提交的详细信息
+
+
+## Github 相关
+
+新建仓库
+```bash
+echo "# test111" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bitbw/test111.git
+git push -u origin main
+```
+
+已有仓库
+```bash
+git remote add origin https://github.com/bitbw/test111.git
+git branch -M main
+git push -u origin main
+```
