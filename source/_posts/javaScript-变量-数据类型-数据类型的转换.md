@@ -1,6 +1,6 @@
 ---
 title: javaScript-变量-数据类型-数据类型的转换
-date: 2018-12-05 21:25:48
+date: 2016-6-05 21:25:48
 tags: js
 categories: js
 ---
