@@ -178,13 +178,13 @@ social:
   GitHub: https://github.com || fab fa-github
   "微博": http://weibo.com || fab fa-weibo
   "知乎": http://www.zhihu.com || fab fa-zhihu
-  E-Mail: 18211132604@163.com || fa fa-envelope
+  E-Mail: https://mail.163.com/ || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   # Google: https://plus.google.com/yourname || fab fa-google
-  Twitter: https://twitter.com/P67OE6poKekkt2b || fab fa-twitter
+  Twitter: https://twitter.com || fab fa-twitter
   #FB Page: https://www.facebook.com/yourname || fab fa-facebook
   #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  YouTube: https://youtube.com/yourname || fab fa-youtube
+  YouTube: https://youtube.com || fab fa-youtube
 
   #Instagram: https://instagram.com/yourname || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
@@ -202,7 +202,7 @@ links_settings:
   layout: block
 
 links:
-  "主题": http://example.com/
+  "主题": https://theme-next.org/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
