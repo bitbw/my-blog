@@ -121,7 +121,7 @@ com.jcraft.jsch.JSchException: invalid privatekey, 部分库（如：JSch）不�
 文件传输不过去，只需要删除.ssh目录下的known_hosts文件就能传输了
 `[root@xx]# rm -rf ~/.ssh/known_hosts`
 
-我的jenkinsfile
+#### 我的jenkinsfile
 
 ```
 pipeline {
@@ -156,4 +156,29 @@ pipeline {
 }
 
 ```
+
+## 构建触发器
+
+### 使用轮询SCM 实现收到 git post-commit 即构建
+
+![image-20210818150222789](https://gitee.com/bitbw/my-gallery/raw/master/img/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png)
+
+ 日程表使用cron语法
+
+```
+#每15分钟(可能在:07,22,37,52):
+H/15 * * * *
+每小时前半小时每十分钟一次(三次，可能在:04,14,24)
+H(0-29)/10 * * * *
+#每两个小时，在每小时后45分钟，从早上9:45开始，下午3:45结束，每周一次:
+45 9-16/2 * * 1-5
+#在工作日早上8点到下午4点之间每两个小时一次(可能在上午9:38，上午11:38，下午1:38，下午3:38):
+H H(8-15)/2 * * 1-5
+每月1号和15号每天一次，12月除外:
+H H 1,15 1-11 *
+```
+
+规则有点难可以使用cron在线解析工具：http://cron.qqe2.com/
+
+使用轮询SCM检查到commit 更新 就会触发构建
 

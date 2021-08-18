@@ -5,7 +5,7 @@ tags: HTML
 categories: HTML
 ---
 
-![下载](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/下载.jpg)
+![下载](https://gitee.com/bitbw/my-gallery/raw/master/img/下载.jpg)
 
 ## 开发工具
 
@@ -59,7 +59,7 @@ categories: HTML
 
 ## sublime 一些常用快捷键
 
-![1574421790594](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/1574421790594.png)
+![1574421790594](https://gitee.com/bitbw/my-gallery/raw/master/img/1574421790594.png)
 
 ## 字符集
 
@@ -136,7 +136,7 @@ vk control control 1.使用相应的 id 名标注跳转目标的位置。
 
 ## 特殊字符标签 （理解）
 
-![1574422894085](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/1574422894085.png)
+![1574422894085](https://gitee.com/bitbw/my-gallery/raw/master/img/1574422894085.png)
 
 ## 路径(重点、难点)
 

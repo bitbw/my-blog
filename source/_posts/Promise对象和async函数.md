@@ -87,7 +87,7 @@ get("http://jsonplaceholder.typicode.com/posts", function (res) {
 
 异步串行如果嵌套过深会造成经典的`回调地狱` 这时需要用到 es6 新增的 Promise 对象来解决
 
-![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/timg.jpg)
+![img](https://gitee.com/bitbw/my-gallery/raw/master/img/timg.jpg)
 
 ### axios 的串行
 

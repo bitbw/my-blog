@@ -13,7 +13,7 @@ categories: 工具使用
 
 首选项 -> 设置 ->文本编辑器 ->文件
 
-![image-20201224095242258](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20201224095242258.png)
+![image-20201224095242258](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20201224095242258.png)
 
 修改保存即可 ，语言要写全名 像`javascript `不要写成`js`
 
@@ -21,7 +21,7 @@ categories: 工具使用
 
 ## setting 修改
 
-![image-20201224095505868](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/image-20201224095505868.png)
+![image-20201224095505868](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20201224095505868.png)
 
 json中添加
 
