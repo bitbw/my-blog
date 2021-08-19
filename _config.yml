@@ -8,7 +8,7 @@
 title: 张博文的个人博客
 subtitle: Bowen's personal blog
 description: vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客
-keywords:
+keywords: vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客
 author: Bowen
 language: zh-CN
 timezone:
@@ -143,3 +143,9 @@ filter_optimize:
 #   per_page: 50
 #   yearly: true
 #   monthly: true
+
+# 站点收录
+baidusitemap:
+  path: baidusitemap.xml
+sitemap:
+  path: sitemap.xml

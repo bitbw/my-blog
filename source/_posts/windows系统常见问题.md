@@ -7,7 +7,7 @@ categories: Windows
 ---
 
 ## 电脑不进系统之开机重复自动修复不进系统
-
+{% note primary %} Content (md partial supported) {% endnote %}
 ### 修复：
 
 b站视频：https://www.bilibili.com/video/BV1Gv41177gU?p=1&share_medium=android&share_plat=android&share_session_id=19331413-99af-4377-82ff-8b31a9cc451c&share_source=WEIXIN&share_tag=s_i&timestamp=1628169593&unique_k=IAUbQn
