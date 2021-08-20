@@ -53,4 +53,4 @@ jobs:
       BASE_BRANCH: master
       BRANCH: gh-pages 
       FOLDER: public 
-      BUILD_SCRIPT:  npm install && npm run build && npm run pushBaidu
+      BUILD_SCRIPT:  npm install && npm run build

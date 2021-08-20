@@ -396,4 +396,8 @@ tbody tr:hover {
 
 别人写的比较好的博客：https://www.luanzhuxian.com/post/82d92ad4.html
 
-百度自动更新收录不好使需要使用postman调用百度api
+建议使用自动推送
+
+也可以调用百度api
+
+
