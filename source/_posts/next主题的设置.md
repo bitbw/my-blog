@@ -392,9 +392,28 @@ tbody tr:hover {
 
 ```
 
+## 字母溢出不自动换行问题
+> 中文汉字不会溢出，英文字母会溢出
+> 这个时候添加属性
+> word-break: break-all;
+**修改css样式**
+```css
+// themes\next\source\css\_common\components\post\post-header.styl
+.posts-expand .post-title-link {
+  // ...
+  word-break: break-all; // 添加样式防止字母不换行
+}
+// themes\next\source\css\_common\components\post\post-header.styl
+.post-body {
+  // ...
+  word-break: break-all; // 添加样式防止字母不换行
+}
+```
+
+
 ## Hexo + Next 主题博客提交百度谷歌收录
 
-别人写的比较好的博客：https://www.luanzhuxian.com/post/82d92ad4.html
+原文地址：https://www.luanzhuxian.com/post/82d92ad4.html
 
 建议使用自动推送
 
