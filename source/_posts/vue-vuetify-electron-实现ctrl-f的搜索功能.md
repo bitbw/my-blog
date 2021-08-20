@@ -16,7 +16,7 @@ categories: Vue
 
 ### 效果
 
-![实现ctrl+f的搜索功能](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/实现ctrl+f的搜索功能.gif)
+![实现ctrl+f的搜索功能](https://gitee.com/bitbw/my-gallery/raw/master/img/实现ctrl+f的搜索功能.gif)
 
 <!--more-->
 

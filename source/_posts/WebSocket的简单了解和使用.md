@@ -8,7 +8,7 @@ categories: 网络应用
 
 ## WebSocket
 
-![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/bg2017051501.png)
+![img](https://gitee.com/bitbw/my-gallery/raw/master/img/bg2017051501.png)
 
 - WebSocket 是一种数据通信协议，类似于我们常见的 http
 - 既然有 http，为啥还要 WebSocket
@@ -44,7 +44,7 @@ WebSocket 打电话：
 
 - 双向对话
 
-![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/bg2017051502.png)
+![img](https://gitee.com/bitbw/my-gallery/raw/master/img/bg2017051502.png)
 
 > HTTP 和 WebSocket 通信模型
 
@@ -68,7 +68,7 @@ WebSocket 打电话：
 ws://example.com:80/some/path
 ```
 
-![img](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/bg2017051503.jpg)
+![img](https://gitee.com/bitbw/my-gallery/raw/master/img/bg2017051503.jpg)
 
 
 
@@ -132,7 +132,7 @@ ws://example.com:80/some/path
 
 怎么查看 WebSocket 请求日志：
 
-![1569575005360](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/1569575005360.png)
+![1569575005360](https://gitee.com/bitbw/my-gallery/raw/master/img/1569575005360.png)
 
 > 朝上的绿色箭头是发出去的消息
 >

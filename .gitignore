@@ -5,5 +5,6 @@ db.json
 node_modules/
 public/
 .deploy*/
+.server
 # npm 
 package-lock.json
