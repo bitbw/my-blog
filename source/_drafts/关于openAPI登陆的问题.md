@@ -37,19 +37,19 @@ categories: js
 
 跳转到`/openid-service/openid_connect_login?identifier=https://g1openid.crcc.cn`后的过程
 
-1. ![image-20200803163300383](%E5%85%B3%E4%BA%8EopenAPI%E7%99%BB%E9%99%86%E7%9A%84%E9%97%AE%E9%A2%98/image-20200803163300383.png)
+1. ![image-20200803163300383](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200803163300383.png)
 
 2. 如果登陆了就给token ，没登陆 ，就继续重定向到单点登陆的ogin页面  
 
    2.1 没有登陆
 
-   ![image-20200803180837395](%E5%85%B3%E4%BA%8EopenAPI%E7%99%BB%E9%99%86%E7%9A%84%E9%97%AE%E9%A2%98/image-20200803180837395.png)
+   ![image-20200803180837395](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200803180837395.png)
 
-   2.2![image-20200803163758793](%E5%85%B3%E4%BA%8EopenAPI%E7%99%BB%E9%99%86%E7%9A%84%E9%97%AE%E9%A2%98/image-20200803163758793.png)
+   2.2![image-20200803163758793](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200803163758793.png)
 
 3. 
 
-![image-20200803164020930](%E5%85%B3%E4%BA%8EopenAPI%E7%99%BB%E9%99%86%E7%9A%84%E9%97%AE%E9%A2%98/image-20200803164020930.png)
+![image-20200803164020930](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200803164020930.png)
 
 4.login页返回index.html  就是这样的 
 
@@ -61,7 +61,7 @@ categories: js
 
 ![image-20200803164325452](C:%5CUsers%5CThinkPad%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200803164325452.png)
 
-![image-20200803165308105](%E5%85%B3%E4%BA%8EopenAPI%E7%99%BB%E9%99%86%E7%9A%84%E9%97%AE%E9%A2%98/image-20200803165308105.png)
+![image-20200803165308105](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200803165308105.png)
 
 login页的主要代码
 
