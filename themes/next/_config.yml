@@ -279,12 +279,12 @@ reward:
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
-# Subscribe through Telegram Channel, Twitter, etc.
+# Subscribe through Telegram Channel, Twitter, etc.  关注我的其他发布渠道
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
-  #Telegram: https://t.me/channel_name || fab fa-telegram
-  WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  # Telegram: https://t.me/channel_name || fab fa-telegram
+  #WeChat: /images/wechatpay.jpg || fab fa-weixin
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
