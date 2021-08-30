@@ -8,7 +8,7 @@ function deepclone(data) {
         return data
     }
 
-    if (Object.prototype.toString(data) === '[Object  Object]') {
+    if (Object.prototype.toString.call(data) === '[Object  Object]') {
         let obj = {}
         for (const key in data) {
             if (Object.hasOwnProperty.call(data, key)) {
@@ -19,18 +19,18 @@ function deepclone(data) {
         return obj
     }
 
-    if (Object.prototype.toString(data) === '[Object  Array]') {
+    if (Object.prototype.toString.call(data) === '[Object  Array]') {
         let arr = []
         for (const item of data) {
             arr.push(deepclone(item))
         }
         return arr
     }
-    if (Object.prototype.toString(data) === '[Object  Date]') {
+    if (Object.prototype.toString.call(data) === '[Object  Date]') {
         return new Date(data)
     }
 
-    if (Object.prototype.toString(data) === '[Object  RegExp]') {
+    if (Object.prototype.toString.call(data) === '[Object  RegExp]') {
         return new RegExp(data)
     }
 }
