@@ -2,18 +2,14 @@
 title: Windows Termial设置
 date: 2021-04-13 17:47:54
 tags:
-    - windows
+  - windows
 
-categories: 工具使用 
+categories: 工具使用
 ---
 
+# Windows Termial
 
-
-
-
-# Windows Termial 
-
-## 安装 Windows Termial 
+## 安装 Windows Termial
 
 https://github.com/microsoft/terminal
 
@@ -25,11 +21,11 @@ https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
 
 https://github.com/microsoft/cascadia-code/releases
 
-使用`notepad $PROFILE`打开编辑文本 
+使用`notepad $PROFILE`打开编辑文本
 
 设置启动后导入 posh-git， oh-my-posh ，
 
-设置主题powerline：Set-PoshPrompt paradox 
+设置主题 powerline：Set-PoshPrompt paradox
 
 ```bash
 Import-Module posh-git
@@ -41,11 +37,11 @@ Set-PoshPrompt paradox
 
 使用 Set-Theme 会报错：Set-Theme : 无法将“Set-Theme”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。
 
->原因：oh-my-posh  v3 不支持 Set-Theme命令 ，需要使用 Set-PoshPrompt -Theme xxx
+> 原因：oh-my-posh v3 不支持 Set-Theme 命令 ，需要使用 Set-PoshPrompt -Theme xxx
 
 解决方案：https://www.icode9.com/content-4-866063.html
 
-官网介绍：https://ohmyposh.dev/docs/upgrading/ 
+官网介绍：https://ohmyposh.dev/docs/upgrading/
 
 官方是使用 **Get-PoshThemes** 查看支持主题；
 
@@ -66,249 +62,264 @@ https://docs.microsoft.com/zh-cn/windows/terminal/panes
 // To view the default settings, hold "alt" while clicking on the "Settings" button.
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
-    "$schema": "https://aka.ms/terminal-profiles-schema",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+  "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
 
-    // You can add more global application settings here.
-    // To learn more about global settings, visit https://aka.ms/terminal-global-settings
+  // You can add more global application settings here.
+  // To learn more about global settings, visit https://aka.ms/terminal-global-settings
 
-    // If enabled, selections are automatically copied to your clipboard.
-    "copyOnSelect": true,
+  // If enabled, selections are automatically copied to your clipboard.
+  "copyOnSelect": true,
 
-    // If enabled, formatted data is also copied to your clipboard
-    "copyFormatting": true,
+  // If enabled, formatted data is also copied to your clipboard
+  "copyFormatting": true,
 
-    // A profile specifies a command to execute paired with information about how it should look and feel.
-    // Each one of them will appear in the 'New Tab' dropdown,
-    //   and can be invoked from the commandline with `wt.exe -p xxx`
-    // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
-    "profiles":
-    {
-        "defaults":
-        {
-            // Put settings here that you want to apply to all profiles.
-            "startingDirectory": null,
-            "fontFace" : "MesloLGM Nerd Font",
-            "fontSize": 12
-        },
-        "list":
-        [
-            {
-                // Make changes here to the powershell.exe profile.
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
-                "hidden": false,
-                // 浅色主题
-                // "acrylicOpacity": 0.7,
-                // "colorScheme" : "Frost",
-                // "cursorColor" : "#000000",
-                // "fontFace" : "Cascadia Code PL",
-                // "useAcrylic": true
-                // 深色主题
-                "acrylicOpacity" : 0.7,
-                "colorScheme" : "Vintage",
-                "cursorColor" : "#FFFFFD",
-                "fontFace" : "MesloLGM Nerd Font",
-                "useAcrylic" : true
-            },
-            {
-                "guid": "{3ef3d962-7a99-4b13-93b6-b92a4d42a2e0}",
-                "hidden": false,
-                "name": "bash",
-                "commandline":"C:\\Program Files\\Git\\bin\\bash.exe",
-                "colorScheme" : "Raspberry",
-                "cursorColor" : "#FFFFFF",
-                // "fontFace" : "Cascadia Code PL",
-                "padding" : "5, 5, 5, 5",
-                "suppressApplicationTitle": true,
-                "tabTitle": "bash"
-            },
-            {
-                // Make changes here to the cmd.exe profile.
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "命令提示符",
-                "commandline": "cmd.exe",
-                "hidden": false,
-                "closeOnExit" : true,
-                "colorScheme" : "Retro",
-                "cursorColor" : "#FFFFFF",
-                "cursorShape": "filledBox",
-                "fontSize" : 16,
-                "padding" : "5, 5, 5, 5",
-                "tabTitle" : "Command Prompt",
-                "fontFace": "PxPlus IBM VGA8",
-                "experimental.retroTerminalEffect": true
-            },
-            {
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "Ubuntu",
-                // "source": "Windows.Terminal.Wsl",
-                "colorScheme" : "Raspberry",
-                "cursorColor" : "#FFFFFF",
-                "fontFace" : "MesloLGM Nerd Font",
-                "padding" : "5, 5, 5, 5",
-                "suppressApplicationTitle": true,
-                "tabTitle": "Ubuntu"
-            },
-            {
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore",
-                "acrylicOpacity" : 0.7,
-                "colorScheme" : "Vintage",
-                "cursorColor" : "#FFFFFD",
-                "fontFace" : "MesloLGM Nerd Font",
-                "useAcrylic" : true
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            }
-
-        ]
+  // A profile specifies a command to execute paired with information about how it should look and feel.
+  // Each one of them will appear in the 'New Tab' dropdown,
+  //   and can be invoked from the commandline with `wt.exe -p xxx`
+  // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
+  "profiles": {
+    "defaults": {
+      // Put settings here that you want to apply to all profiles.
+      "startingDirectory": null,
+      "fontFace": "MesloLGM Nerd Font",
+      "fontSize": 12
     },
-
-    // Add custom color schemes to this array.
-    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-    "schemes": [
-        // 毛玻璃
-        {
-            "name" : "Frost",
-            "background" : "#FFFFFF",
-            "black" : "#3C5712",
-            "blue" : "#17b2ff",
-            "brightBlack" : "#749B36",
-            "brightBlue" : "#27B2F6",
-            "brightCyan" : "#13A8C0",
-            "brightGreen" : "#89AF50",
-            "brightPurple" : "#F2A20A",
-            "brightRed" : "#F49B36",
-            "brightWhite" : "#741274",
-            "brightYellow" : "#991070",
-            "cyan" : "#3C96A6",
-            "foreground" : "#000000",
-            "green" : "#6AAE08",
-            "purple" : "#991070",
-            "red" : "#8D0C0C",
-            "white" : "#6E386E",
-            "yellow" : "#991070"
-        },
-        // 复古
-        {
-            "name": "Retro",
-            "background": "#000000",
-            "black": "#00ff00",
-            "blue": "#00ff00",
-            "brightBlack": "#00ff00",
-            "brightBlue": "#00ff00",
-            "brightCyan": "#00ff00",
-            "brightGreen": "#00ff00",
-            "brightPurple": "#00ff00",
-            "brightRed": "#00ff00",
-            "brightWhite": "#00ff00",
-            "brightYellow": "#00ff00",
-            "cyan": "#00ff00",
-            "foreground": "#00ff00",
-            "green": "#00ff00",
-            "purple": "#00ff00",
-            "red": "#00ff00",
-            "white": "#00ff00",
-            "yellow": "#00ff00"
-        },
-        // ubuntu
-        {
-            "name" : "Raspberry",
-            "background" : "#3C0315",
-            "black" : "#282A2E",
-            "blue" : "#0170C5",
-            "brightBlack" : "#676E7A",
-            "brightBlue" : "#80c8ff",
-            "brightCyan" : "#8ABEB7",
-            "brightGreen" : "#B5D680",
-            "brightPurple" : "#AC79BB",
-            "brightRed" : "#BD6D85",
-            "brightWhite" : "#FFFFFD",
-            "brightYellow" : "#FFFD76",
-            "cyan" : "#3F8D83",
-            "foreground" : "#FFFFFD",
-            "green" : "#76AB23",
-            "purple" : "#7D498F",
-            "red" : "#BD0940",
-            "white" : "#FFFFFD",
-            "yellow" : "#E0DE48"
-        }
-    ],
-
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
-    "actions":
-    [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
-        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-        { "command": "paste", "keys": "ctrl+v" },
-
-        // Press Ctrl+Shift+F to open the search box
-        { "command": "find", "keys": "ctrl+f" },
-        { "command": "duplicateTab", "keys": "ctrl+shift+d" },
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "vertical", "splitMode": "duplicate" }, "keys": "shift+tab" },
-        { "command": { "action": "splitPane", "split": "horizontal","splitMode": "duplicate"}, "keys": "alt+shift+-" },
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
-        { "command": "closePane", "keys": "shift+w" }
+    "list": [
+      {
+        // Make changes here to the powershell.exe profile.
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false,
+        // 浅色主题
+        // "acrylicOpacity": 0.7,
+        // "colorScheme" : "Frost",
+        // "cursorColor" : "#000000",
+        // "fontFace" : "Cascadia Code PL",
+        // "useAcrylic": true
+        // 深色主题
+        "acrylicOpacity": 0.7,
+        "colorScheme": "Vintage",
+        "cursorColor": "#FFFFFD",
+        "fontFace": "MesloLGM Nerd Font",
+        "useAcrylic": true
+      },
+      {
+        "guid": "{3ef3d962-7a99-4b13-93b6-b92a4d42a2e0}",
+        "hidden": false,
+        "name": "bash",
+        "commandline": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "colorScheme": "Raspberry",
+        "cursorColor": "#FFFFFF",
+        // "fontFace" : "Cascadia Code PL",
+        "padding": "5, 5, 5, 5",
+        "suppressApplicationTitle": true,
+        "tabTitle": "bash"
+      },
+      {
+        // Make changes here to the cmd.exe profile.
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "命令提示符",
+        "commandline": "cmd.exe",
+        "hidden": false,
+        "closeOnExit": true,
+        "colorScheme": "Retro",
+        "cursorColor": "#FFFFFF",
+        "cursorShape": "filledBox",
+        "fontSize": 16,
+        "padding": "5, 5, 5, 5",
+        "tabTitle": "Command Prompt",
+        "fontFace": "PxPlus IBM VGA8",
+        "experimental.retroTerminalEffect": true
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        // "source": "Windows.Terminal.Wsl",
+        "colorScheme": "Raspberry",
+        "cursorColor": "#FFFFFF",
+        "fontFace": "MesloLGM Nerd Font",
+        "padding": "5, 5, 5, 5",
+        "suppressApplicationTitle": true,
+        "tabTitle": "Ubuntu"
+      },
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "name": "PowerShell",
+        "source": "Windows.Terminal.PowershellCore",
+        "acrylicOpacity": 0.7,
+        "colorScheme": "Vintage",
+        "cursorColor": "#FFFFFD",
+        "fontFace": "MesloLGM Nerd Font",
+        "useAcrylic": true
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": true,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      }
     ]
-}
+  },
 
+  // Add custom color schemes to this array.
+  // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
+  "schemes": [
+    // 毛玻璃
+    {
+      "name": "Frost",
+      "background": "#FFFFFF",
+      "black": "#3C5712",
+      "blue": "#17b2ff",
+      "brightBlack": "#749B36",
+      "brightBlue": "#27B2F6",
+      "brightCyan": "#13A8C0",
+      "brightGreen": "#89AF50",
+      "brightPurple": "#F2A20A",
+      "brightRed": "#F49B36",
+      "brightWhite": "#741274",
+      "brightYellow": "#991070",
+      "cyan": "#3C96A6",
+      "foreground": "#000000",
+      "green": "#6AAE08",
+      "purple": "#991070",
+      "red": "#8D0C0C",
+      "white": "#6E386E",
+      "yellow": "#991070"
+    },
+    // 复古
+    {
+      "name": "Retro",
+      "background": "#000000",
+      "black": "#00ff00",
+      "blue": "#00ff00",
+      "brightBlack": "#00ff00",
+      "brightBlue": "#00ff00",
+      "brightCyan": "#00ff00",
+      "brightGreen": "#00ff00",
+      "brightPurple": "#00ff00",
+      "brightRed": "#00ff00",
+      "brightWhite": "#00ff00",
+      "brightYellow": "#00ff00",
+      "cyan": "#00ff00",
+      "foreground": "#00ff00",
+      "green": "#00ff00",
+      "purple": "#00ff00",
+      "red": "#00ff00",
+      "white": "#00ff00",
+      "yellow": "#00ff00"
+    },
+    // ubuntu
+    {
+      "name": "Raspberry",
+      "background": "#3C0315",
+      "black": "#282A2E",
+      "blue": "#0170C5",
+      "brightBlack": "#676E7A",
+      "brightBlue": "#80c8ff",
+      "brightCyan": "#8ABEB7",
+      "brightGreen": "#B5D680",
+      "brightPurple": "#AC79BB",
+      "brightRed": "#BD6D85",
+      "brightWhite": "#FFFFFD",
+      "brightYellow": "#FFFD76",
+      "cyan": "#3F8D83",
+      "foreground": "#FFFFFD",
+      "green": "#76AB23",
+      "purple": "#7D498F",
+      "red": "#BD0940",
+      "white": "#FFFFFD",
+      "yellow": "#E0DE48"
+    }
+  ],
+
+  // Add custom actions and keybindings to this array.
+  // To unbind a key combination from your defaults.json, set the command to "unbound".
+  // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
+  "actions": [
+    // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+    // These two lines additionally bind them to Ctrl+C and Ctrl+V.
+    // To learn more about selection, visit https://aka.ms/terminal-selection
+    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+    { "command": "paste", "keys": "ctrl+v" },
+
+    // Press Ctrl+Shift+F to open the search box
+    { "command": "find", "keys": "ctrl+f" },
+    { "command": "duplicateTab", "keys": "ctrl+shift+d" },
+    // Press Alt+Shift+D to open a new pane.
+    // - "split": "auto" makes this pane open in the direction that provides the most surface area.
+    // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+    // To learn more about panes, visit https://aka.ms/terminal-panes
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "vertical",
+        "splitMode": "duplicate"
+      },
+      "keys": "shift+tab"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "horizontal",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+-"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+d"
+    },
+    { "command": "closePane", "keys": "shift+w" }
+  ]
+}
 ```
 
 ## 添加注册列表(右键菜单)
 
 https://blog.csdn.net/u011532601/article/details/106305373/
 
-#### 使用别人写好的bat程序
+#### 使用别人写好的 bat 程序
 
 下载地址：https://github.com/BroJenuel/Explorer-Context-Menu-Integration-for-windows-terminal
 
 #### 手动配置右键打开
 
-- Win+R输入regedit进入注册表目录HKEY_CLASSES_ROOT\Directory\Background\shell
+- Win+R 输入 regedit 进入注册表目录 HKEY_CLASSES_ROOT\Directory\Background\shell
 
-在这里新建一个项命名为WT并设置(默认)值为你想要的名称，比如Windows Terminal Here
+在这里新建一个项命名为 WT 并设置(默认)值为你想要的名称，比如 Windows Terminal Here
 
-- 再新建字符串值Icon即显示图标，并将值设设置C:\ProgramFiles\WindowsApps\Microsoft.WindowsTerminal_<version>\WindowsTerminal.exe
+- 再新建字符串值 Icon 即显示图标，并将值设设置 C:\ProgramFiles\WindowsApps\Microsoft.WindowsTerminal\_<version>\WindowsTerminal.exe
 
-  > Win10系统下WindowsApps文件夹拒绝访问如何获取权限：
+  > Win10 系统下 WindowsApps 文件夹拒绝访问如何获取权限：
   >
   > http://www.xitongcheng.com/jiaocheng/win10_article_45151.html
 
-- 注意：<version>值看你安装的具体版本，可通过Everything搜索查证，或者设置为cmd的图标C:\Windows\System32\cmd.exe免去更新的麻烦，再或者设置你自己的图标，这个不影响使用
+- 注意：<version>值看你安装的具体版本，可通过 Everything 搜索查证，或者设置为 cmd 的图标 C:\Windows\System32\cmd.exe 免去更新的麻烦，再或者设置你自己的图标，这个不影响使用
 
-- 如有需要的话可以将这个命令置顶，则添加新字符串值Position，值为Top
+- 如有需要的话可以将这个命令置顶，则添加新字符串值 Position，值为 Top
 
-- 然后再新建一个项command，默认值%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\wt.exe
+- 然后再新建一个项 command，默认值%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\wt.exe
 
-- 注意：如失效，可将%USERPROFILE%改为指定用户目录如C:\Users\<username>，并注销重启，<username>记得改成自己的用户名
+- 注意：如失效，可将%USERPROFILE%改为指定用户目录如 C:\Users\<username>，并注销重启，<username>记得改成自己的用户名
 
-一般出现explorer.exe错误多是没有用管理员权限写入导致的
+一般出现 explorer.exe 错误多是没有用管理员权限写入导致的
 
 > 注意：自动添加的右键菜单会出现复制窗口但工作目录变的情况
 
 ### 删除程序自带的右键菜单
 
-github上有对应的issues:https://github.com/microsoft/terminal/issues/8105 
+github 上有对应的 issues:https://github.com/microsoft/terminal/issues/8105
 
-😓看来大家都不喜欢程序自动添加的右键菜单
+😓 看来大家都不喜欢程序自动添加的右键菜单
 
 完成后记得[重新启动资源管理器](https://www.howtogeek.com/198815/use-this-secret-trick-to-close-and-restart-explorer.exe-in-windows/)
 
@@ -316,13 +327,11 @@ github上有对应的issues:https://github.com/microsoft/terminal/issues/8105
 
 https://github.com/microsoft/terminal/issues/9806
 
-powershell.exe中的普通空格
-
-
+powershell.exe 中的普通空格
 
 ![image-20210414173814189](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210414173814189.png)
 
-在Windows  terminal 中空格变成
+在 Windows terminal 中空格变成 
 
 ![image-20210414172703793](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210414172703793.png)
 
@@ -340,7 +349,7 @@ powershell.exe中的普通空格
   "fontFace" : "MesloLGM Nerd Font",
 ```
 
-## 修改vscode终端字体
+## 修改 vscode 终端字体
 
 #### setting.json
 
@@ -348,4 +357,14 @@ powershell.exe中的普通空格
 "terminal.integrated.fontFamily": "MesloLGSDZ Nerd Font"
 ```
 
-> 注意：vscode只能使用等宽字体 所以得单独设置
+> 注意：vscode 只能使用等宽字体 所以得单独设置
+
+## Git bash 乱码问题
+
+解决：https://www.cnblogs.com/ssrs-wanghao/articles/9216955.html
+
+我就用下面命令一下解决
+
+```bash
+    git config --global core.quotepath false
+```
