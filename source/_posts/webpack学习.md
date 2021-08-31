@@ -867,6 +867,7 @@ mode: "production";
 //所有代码都没有副作用（都可以进行tree shaking） 问题：可能会把css / @babel/polyfill （副作用）文件干掉
 "sideEffects": ["*.css", "*.less","*iconfont.js" ] //当需要保留的文件名放到数组中
 ```
+
 #### 官方结论
 
 因此，我们学到为了利用 _tree shaking_ 的优势， 你必须...
@@ -877,6 +878,7 @@ mode: "production";
 - 使用 `mode` 为 `"production"` 的配置项以启用[更多优化项](https://webpack.docschina.org/concepts/mode/#usage)，包括压缩代码与 tree shaking。
 
 你可以将应用程序想象成一棵树。绿色表示实际用到的 source code(源码) 和 library(库)，是树上活的树叶。灰色表示未引用代码，是秋天树上枯萎的树叶。为了除去死去的树叶，你必须摇动这棵树，使它们落下。
+
 ## code split 代码分割
 
 #### 修改配置
@@ -1001,7 +1003,246 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
+## 多进程打包
 
+官方文档：https://webpack.docschina.org/loaders/thread-loader/#root
+
+### 下载依赖
+
+```bash
+npm install --save-dev thread-loader
+```
+
+### 修改配置
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: path.resolve("src"),
+        /*
+          开启多进程打包
+          进程启动大概为600ms，进程通信也有开销。
+          只有工作消耗时间比较长，才需要多进程打包
+        */
+        use: [
+          "thread-loader"
+          // 耗时的 loader （例如 babel-loader）
+        ]
+      }
+    ]
+  }
+};
+```
+
+## externals 外部扩展 （排除无需打包的外部依赖）
+
+官方文档：https://webpack.docschina.org/configuration/externals/
+防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖(external dependencies)。
+例如，从 CDN 引入 react，而不是把它打包
+
+### 修改 html 模板
+
+```html
+<!-- index.html -->
+<script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+```
+
+### 修改配置
+
+```js
+module.exports = {
+  //...
+  externals: {
+    // 拒绝react被打包进来
+    // key -> import react from "react" 中的 "react"
+    // value -> react 的命名空间 namespace React
+    react: "React",
+    "react-dom": "ReactDOM"
+  }
+};
+```
+
+## DllPlugin （打包优化）
+
+官方文档：https://webpack.docschina.org/plugins/dll-plugin/
+dll 主要用户用于将第三方依赖 或者公共依赖 进行打包， 目的与 externals 差不多都是为了加快构建速度
+
+## 添加 webpack.dll.js
+
+webpack.dll.js 专门用于打包第三方依赖 或者公共依赖
+
+```js
+/**
+ *    webpack.dll.js
+ *   使用dll技术，对某些库（第三方库：jquery、react、vue...）进行单独打包
+ *     当你运行 webpack 时，默认查找 webpack.config.js 配置文件
+ *     需求：需要运行 webpack.dll.js 文件
+ *       --> webpack --config webpack.dll.js
+ *
+ * @format
+ */
+// 清理上次的打包文件
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { resolve } = require("path");
+const webpack = require("webpack");
+
+module.exports = {
+  entry: {
+    // 最终打包生成的 vendor --> MyDll.[name].js  name=vendor
+    // ['react',''react-dom'] --> 要打包的库是react  跟包名一致react
+    vendor: ["react", "react-dom"]
+  },
+  output: {
+    // 生成文件名
+    filename: "[name].dll.js",
+    path: resolve(__dirname, "dll"),
+    // 打包的库里面向外暴露出去的内容叫什么名字（全局变量名） 需要和 webpack.DllPlugin 中的 name 抱持一致
+    library: "[name]_[fullhash]_library"
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    // 打包生成一个 manifest.json --> 提供和react映射 manifest.json中映射library名称
+    new webpack.DllPlugin({
+      name: "[name]_[fullhash]_library", // 映射库的暴露的内容名称 不用管叫什么 打包后的代码会使用 咱们构建前的代码还是该怎么使就怎么使
+      path: resolve(__dirname, "dll/manifest.json") // 生成的清单文件 包含了react 和 react-dom
+    })
+  ],
+  mode: "production"
+};
+```
+
+执行 `npx webpack --config webpack.dll.js`
+会在当前目录下生成 dll 目录
+
+```
+dll
+├── manifest.json // 清单
+├── vendor.dll.js // 第三方包的集合
+└── vendor.dll.js.LICENSE.txt
+```
+
+manifest.json
+
+```json
+{
+  "name": "vendor_311590c415821fbaedf4_library",
+  "content": {
+    "../node_modules/react/index.js": {
+      "id": 378,
+      "buildMeta": {
+        "exportsType": "dynamic",
+        "defaultObject": "redirect"
+      },
+      "exports": [
+        "Children",
+        "Component",
+        "Fragment",
+        "Profiler",
+        "PureComponent",
+        "StrictMode",
+        "Suspense",
+        "__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED",
+        "cloneElement",
+        "createContext",
+        "createElement",
+        "createFactory",
+        "createRef",
+        "forwardRef",
+        "isValidElement",
+        "lazy",
+        "memo",
+        "useCallback",
+        "useContext",
+        "useDebugValue",
+        "useEffect",
+        "useImperativeHandle",
+        "useLayoutEffect",
+        "useMemo",
+        "useReducer",
+        "useRef",
+        "useState",
+        "version"
+      ]
+    },
+    "../node_modules/react-dom/index.js": {
+      "id": 542,
+      "buildMeta": {
+        "exportsType": "dynamic",
+        "defaultObject": "redirect"
+      },
+      "exports": [
+        "__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED",
+        "createPortal",
+        "findDOMNode",
+        "flushSync",
+        "hydrate",
+        "render",
+        "unmountComponentAtNode",
+        "unstable_batchedUpdates",
+        "unstable_createPortal",
+        "unstable_renderSubtreeIntoContainer",
+        "version"
+      ]
+    }
+  }
+}
+```
+
+## 修改配置
+
+webpack.config.js
+
+```js
+const webpack = require("webpack");
+// 自动在html中引入资源插件 (不用插件 手动在模板html中添加也可以)
+const AddAssetHtmlWebpackPlugin = require("add-asset-html-webpack-plugin");
+module.exports = {
+  plugins: [
+    // ...
+    // 告诉webpack哪些库不参与打包
+    new webpack.DllReferencePlugin({
+      manifest: resolve(__dirname, "dll/manifest.json")
+    }),
+    // 将某个文件打包输出去，并在html中自动引入该资源
+    new AddAssetHtmlWebpackPlugin({
+      filepath: resolve(__dirname, "dll/vendor.dll.js")
+    })
+  ]
+};
+```
+
+打包生成的结构
+
+```
+dist
+├── assets
+├── css
+├── index.html  // html中引入 vendor.dll.js <script defer="defer" src="./vendor.dll.js"></script>
+├── js
+├── vendor.dll.js // 将dll下的 vendor.dll.js  放到当前打包后的目录下
+└── vendor.dll.js.LICENSE.txt
+```
+
+## DLL 和 externals 、code split 的区别
+
+### DLL
+
+- 用于将第三方依赖单独打包构建，跟项目一起放到同一个服务器下进行加载
+- 优点：优化项目本地的构建速度
+
+### externals
+
+- 不打包第三方依赖，第三方依赖使用 CDN
+- 优点：优化项目本地的构建速度，因为使用 CDN 优化第三方依赖加载速度
+
+### code split
+
+- 将项目中的进行模块代码分割成多个js文件
+- 优点：优化项目本身加载速度，依靠代码分割可以实现模块的懒加载和预加载
 
 ## 官方文档
 
