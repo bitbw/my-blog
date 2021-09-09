@@ -29,7 +29,7 @@ categories: vue
 ### lint-staged 需要安装 否则会报找不到 lint-staged 命令
 
 ```bash
-	yarn add lint-staged --dev
+yarn add lint-staged --dev
 ```
 
 再次 commit 时会看到这样的提示
@@ -55,8 +55,82 @@ git commit -m "Update"
 
 ### `commit`时有警告
 
-```
+```bash
 ⚠ Some of your tasks use `git add` command. Please remove it from the config since all modifications made by tasks will be automatically added to the git commit index.
 ```
 
 意思是将`git add`删除 因为 lint-staged 会将格式化的后的代码自动添加到当前 commit 中
+
+## 自动 eslint 验证和格式化
+
+如果项目创建时没有 选择 linter / formatter config 需要设置一个标准让 eslint 执行格式化
+正常有三种标准可以选择
+
+```bash
+ESLint + Airbnb config
+ESLint + Standard config
+ESLint + Prettier
+```
+
+简单的方法想使用哪个标准 使用 vue-cli 创建一个新项目选择对应的标准然后跟现在的项目对比看看缺了些什么
+下面简单说下各个标准的配置和需要的插件
+
+### Airbnb
+
+下载插件
+
+```bash
+ npm install --save-dev @vue/eslint-config-airbnb
+```
+
+修改 eslintConfig
+
+```json
+"eslintConfig": {
+    ...
+    "extends": [
+      ...
+      "@vue/airbnb"
+    ],
+  },
+```
+
+### Standard
+
+下载插件
+
+```bash
+ npm install --save-dev @vue/eslint-config-standard
+```
+
+修改 eslintConfig
+
+```json
+"eslintConfig": {
+    ...
+    "extends": [
+      ...
+      "@vue/standard"
+    ],
+  },
+```
+
+### Prettier
+
+下载插件
+
+```bash
+ npm install --save-dev @vue/eslint-config-prettier
+```
+
+修改 eslintConfig
+
+```json
+"eslintConfig": {
+    ...
+    "extends": [
+      ...
+      "@vue/prettier"
+    ],
+  },
+```
