@@ -61,6 +61,41 @@ git commit -m "Update"
 
 意思是将`git add`删除 因为 lint-staged 会将格式化的后的代码自动添加到当前 commit 中
 
+## 使用 husky
+
+因为 yorkie 无法向后兼容 所以建议直接使用 husky 做 git hook
+自动安装配置 lint-staged 和 husky
+
+```bash
+npx mrm@2 lint-staged
+```
+
+修改 package.json
+
+```json
+"lint-staged": {
+    "*.{js,vue}": ["vue-cli-service lint"]
+  }
+```
+再次 commit 时会看到这样的提示
+```bash
+$ git commit -m "Update"
+[STARTED] Preparing...
+[SUCCESS] Preparing...
+[STARTED] Running tasks...
+[STARTED] Running tasks for *.{js,vue}
+[STARTED] vue-cli-service lint
+[SUCCESS] vue-cli-service lint
+[SUCCESS] Running tasks for *.{js,vue}
+[SUCCESS] Running tasks...
+[STARTED] Applying modifications...
+[SUCCESS] Applying modifications...
+[STARTED] Cleaning up...
+[SUCCESS] Cleaning up...
+[master c33d119] Update
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+```
+
 ## 自动 eslint 验证和格式化
 
 如果项目创建时没有 选择 linter / formatter config 需要设置一个标准让 eslint 执行格式化
