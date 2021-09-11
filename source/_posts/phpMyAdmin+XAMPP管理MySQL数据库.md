@@ -104,3 +104,12 @@ ctrl+R：输入regedit.exe
 
 第四步：回到XAMPP中启动mysql
 
+
+## 关闭或修改信息时报错
+
+Error: Cannot create file “D:xampp\xampp-controlin”.拒绝访问
+
+### 解决办法：
+右键该应用程序，在属性对话框选择"兼容性"–>“以管理员身份运行此程序”
+
+![在这里插入图片描述](https://gitee.com/bitbw/my-gallery/raw/master/img/9295a630b3aa4adc87c09ffd991663a9.png)
