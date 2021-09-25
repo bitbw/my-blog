@@ -24,3 +24,18 @@ categories: React
 - 有 value 的绑定，就得有对应的 onChange 或者 onInupt 通过 setState 修改 value
 - 如果让用户自行输入数据值，而无需对变化做处理 ，可以使用**非受控组件**
 
+### react-router-dom
+
+Route 放入 children 和 component 中的区别
+
+```js
+
+// children 中 home 通过 props 获取不到路由数据
+<Route path="/home">
+    <Home />
+</Route>
+// component 中 home 通过 props 可以获取到路由数据
+<Route path="/home" component={Home}>
+</Route>
+
+```
