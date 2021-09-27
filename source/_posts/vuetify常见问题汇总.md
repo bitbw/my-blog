@@ -9,7 +9,9 @@ categories: Vue
 
 ## vuetify 2.5.3版本提示DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
 
-github上的issues:https://github.com/vuetifyjs/vuetify/issues/13694
+### github issues:
+
+https://github.com/vuetifyjs/vuetify/issues/13694
 
 ### 完整提示
 
@@ -54,3 +56,22 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
 
 然后 npm install
 
+# v-autocomplete 多选 不保留滚动位置
+
+### github issues:
+
+https://github.com/vuetifyjs/vuetify/issues/11969
+
+### 问题原因
+
+https://github.com/treardon17/vuetify/commit/9f8059112eabbd890f9f3efbc59459235a777996
+
+```js
+//packages/vuetify/src/components/VSelect/VSelect.ts 
+// 删除下面的代码
+this.setMenuIndex(-1)
+```
+
+### 解决
+
+可以使用github issues 中的解决方案 ，或者等官方更新修复这个bug
