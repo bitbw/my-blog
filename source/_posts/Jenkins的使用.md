@@ -55,6 +55,10 @@ ps：
 
 基于这篇文章：https://blog.csdn.net/wangzan18/article/details/105864373/
 
+### sshPublisher文档：
+
+https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20send%20build%20artifacts%20over%20ssh
+
 ### 注意点：
 
 #### **Publish over SSH** 插件 ，
@@ -135,27 +139,34 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'npm install'
-                sh 'npm run build'
+                sh 'npm run buildtest'
                 sh 'ls -lha' 
             }
         }
 	stage('Deploy') {
             steps {
-                sshPublisher(publishers: [sshPublisherDesc(configName: '线上服务器', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''ls /home/ipsconfig/deployment/docker_vue/prod/dist_temp/
-                rm -rf /home/ipsconfig/deployment/docker_vue/prod/dist/
-                mkdir /home/ipsconfig/deployment/docker_vue/prod/dist/
-                cp -r /home/ipsconfig/deployment/docker_vue/prod/dist_temp/.   /home/ipsconfig/deployment/docker_vue/prod/dist/
-                ls /home/ipsconfig/deployment/docker_vue/prod/dist/
-                rm -rf /home/ipsconfig/deployment/docker_vue/prod/dist_temp/
-                docker rm -f manager-nginx-prod
-                docker run --name manager-nginx-prod -v /home/ipsconfig/deployment/docker_vue/prod/dist:/usr/share/nginx/html:ro -v /home/ipsconfig/deployment/docker_vue/prod/nginx.conf:/etc/nginx/nginx.conf -p 3002:80 -d ppc64le/nginx
-                ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/ipsconfig/deployment/docker_vue/prod/dist_temp/', remoteDirectorySDF: false, removePrefix: 'dist', sourceFiles: 'dist/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'IPSServer', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''
+                echo "dist_temp/ ls"
+                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/
+                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                mkdir /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                cp -r /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/.   /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                echo "dist/ ls"
+                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/
+                docker restart product-nginx-test
+                ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/', remoteDirectorySDF: false, removePrefix: 'dist', sourceFiles: 'dist/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
             }
         }
     }
 }
-
 ```
+
+#### sshPublisher 显示操作日志
+
+sshPublisher(publishers: [sshPublisherDesc()])内添加 verbose: true
+
+verbose：选择为 Jenkins 控制台启用大量信息 - 仅对帮助追踪问题非常有用。
 
 ## 构建触发器
 
