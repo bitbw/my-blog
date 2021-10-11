@@ -6,7 +6,7 @@ tags:
   - 博客园
   - node
 categories: Hexo
-hash: 27717f2f11644f58067d67fc0131e5aa552f44b471dae4019489fb54b0daa74c
+hash: 5fb0308da7f794c617d752c4bb9a3ae69c3092da295ca115f10ee6ef71d0ceda
 cnblogs:
   postid: "15393411"
 ---
@@ -327,7 +327,8 @@ function genArticleDate(articleOrigin) {
   const datas = articleOrigin.split("---");
   const temp = datas[1].replace(/\t/g, "");
   const titleObj = YAML.parse(temp);
-  const contentData = datas[2];
+ // datas.length > 3 为边际情况特殊处理一下
+  const contentData = datas.length > 3 ? datas.slice(2).join("---") : datas[2];
   return {
     titleObj,
     contentData,
@@ -446,38 +447,38 @@ function pushPost({ type = "add", content, title, postid }) {
     <methodName>metaWeblog.${type === "add" ? "newPost" : "editPost"}</methodName>
     <params>
     <param>
-        <value><string>${type === "add" ? "000000" : postid}</string></value>
+        <value><string>${type === "add" ? "623687" : postid}</string></value>
     </param>
     ${common}
         <param>
             <value>
-                <struct>
-                    <member>
-                        <name>description</name>
-                        <value>
-                            <string><![CDATA[${content}]]></string>
-                        </value>
-                    </member>
-                    <member>
-                        <name>title</name>
-                        <value>
-                            <string><![CDATA[${title}]]></string>
-                        </value>
-                    </member>
-                    <member>
-                        <name>categories</name>
-                        <value>
-                            <array>
-                                <data>
-                                    <value>
-                                        <string>[Markdown]</string>
-                                    </value>
-                                </data>
-                            </array>
-                        </value>
-                    </member>
-                </struct>
-            </value>
+                    <struct>
+                        <member>
+                            <name>description</name>
+                            <value>
+                                <string>${XMLEscape(content)}</string>
+                            </value>
+                        </member>
+                        <member>
+                            <name>title</name>
+                            <value>
+                                <string>${XMLEscape(title)}</string>
+                            </value>
+                        </member>
+                        <member>
+                            <name>categories</name>
+                            <value>
+                                <array>
+                                    <data>
+                                        <value>
+                                            <string>[Markdown]</string>
+                                        </value>
+                                    </data>
+                                </array>
+                            </value>
+                        </member>
+                    </struct>
+                </value>
         </param>
         <param>
             <value><boolean>1</boolean></value>
@@ -501,6 +502,16 @@ function getPost({ postid }) {
   </params>
 </methodCall>`
   );
+}
+
+function XMLEscape(content){
+  let newContent =content
+  newContent = newContent.replace(/&/g, "&amp;");
+  newContent = newContent.replace(/</g, "&lt;");
+  newContent = newContent.replace(/>/g, "&gt;");
+  newContent = newContent.replace(/"/g, "&quot;");
+  newContent = newContent.replace(/'/g, "&apos;");
+  return newContent
 }
 
 module.exports = {
