@@ -2,9 +2,12 @@
 title: windows系统常见问题
 date: 2021-08-06 08:54:29
 tags:
-  - windows 
-categories: Windows 
+  - windows
+categories: Windows
+cnblogs:
+  postid: "15392254"
 ---
+
 
 ## 电脑不进系统之开机重复自动修复不进系统
 {% note primary %} 修复建议使用wepe {% endnote %}
