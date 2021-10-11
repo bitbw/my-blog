@@ -2,9 +2,12 @@
 title: vuetify常见问题汇总
 date: 2021-06-09 10:06:39
 tags:
-	- Vuetify
-	- Vue
+  - Vuetify
+  - Vue
 categories: Vue
+cnblogs:
+  postid: "15393015"
+hash: e3060e904249cd9b53444aec1edb6e569ea12f11787cfe4115d99968a6f64f61
 ---
 
 ## vuetify 2.5.3版本提示DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.

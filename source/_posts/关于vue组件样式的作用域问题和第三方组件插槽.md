@@ -3,6 +3,9 @@ title: 关于vue组件样式的作用域问题
 date: 2019-12-03 22:15:57
 tags: vue
 categories: Vue
+cnblogs:
+  postid: "15393035"
+hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 ---
 
 > 参考文档：

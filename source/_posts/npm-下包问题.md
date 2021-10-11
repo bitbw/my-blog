@@ -1,11 +1,14 @@
 ---
 title: npm 下包问题
 date: 2020-12-12 18:40:51
-tags: 
-	- Nodejs
-	- npm 
-	- js
+tags:
+  - Nodejs
+  - npm
+  - js
 categories: Nodejs
+cnblogs:
+  postid: "15392980"
+hash: d91bd70ac16bf494ce72aa029595117b985d5b79ec4d4034dbc3629de263172d
 ---
 
 ## node 下包的过程

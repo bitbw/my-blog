@@ -1,10 +1,13 @@
 ---
 title: postman 深入使用
 date: 2018-11-28 16:56:05
-tags: 
-	- 工具使用
-	- postman
+tags:
+  - 工具使用
+  - postman
 categories: 工具使用
+cnblogs:
+  postid: "15392985"
+hash: 02f0aeca266c8f169c65a4cbc80f5009f6cbd815e26238701c8b769ca18df5ca
 ---
 
 ## 设置变量 用于地址拼接

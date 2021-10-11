@@ -2,8 +2,11 @@
 title: JS中常见获取随机数的方法
 date: 2021-07-02 13:58:11
 tags:
-	— js
+  - js
 categories: js
+cnblogs:
+  postid: "15392492"
+hash: 5bab5631ce34886997da7504571a3b3a94e981e80496d8eabd524aaff98d6035
 ---
 
 

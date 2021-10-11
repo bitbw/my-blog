@@ -1,9 +1,12 @@
 ---
 title: windows系统下的环境变量
 date: 2021-03-19 13:22:32
-tags: 
-	- windows
+tags:
+  - windows
 categories: Windows
+cnblogs:
+  postid: "15393027"
+hash: 82e3c10e236f1649f35ed0d85a86f37f468871cfe4efb8b0ec12b3c10e929299
 ---
 
 

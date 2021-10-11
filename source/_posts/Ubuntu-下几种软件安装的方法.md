@@ -2,9 +2,12 @@
 title: Ubuntu 下几种软件安装的方法
 date: 2021-01-10 08:34:56
 tags:
-	- Linux
-	- ubuntu
+  - Linux
+  - ubuntu
 categories: Linux
+cnblogs:
+  postid: "15393006"
+hash: 66d6015139c572dfe96e356b5ad6460451a2f5393759d375cbd9484d5877265c
 ---
 
 ## **1、tar.gz软件包的安装**

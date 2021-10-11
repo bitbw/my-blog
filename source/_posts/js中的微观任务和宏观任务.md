@@ -3,6 +3,9 @@ title: js中的微观任务和宏观任务
 tags: js
 categories: js
 date: 2020-09-14 10:35:43
+cnblogs:
+  postid: "15392523"
+hash: 58a33878c7fc80bb18d845928eff8ff371cfbc59a3829b9a40004189e0dcd7cf
 ---
 
 # js中的微观任务和宏观任务

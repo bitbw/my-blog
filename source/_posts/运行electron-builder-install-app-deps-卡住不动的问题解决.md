@@ -1,12 +1,15 @@
 ---
 title: 运行electron-builder-install-app-deps-卡住不动的问题解决
-tags: 
-	- Electron
-	- Nodejs
-	- npm 
-	- js
+tags:
+  - Electron
+  - Nodejs
+  - npm
+  - js
 categories: Electron
 date: 2020-12-13 11:15:36
+cnblogs:
+  postid: "15393048"
+hash: fc451eddd18f8c9fcf790bcd643ab969d1d8abd59a420e6e4328b13c02699fb4
 ---
 
  背景：使用electron-builder 和 @journeyapps/sqlcipher 的项目 ，在新电脑上clone项目，npm 装包时遇到错误

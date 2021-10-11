@@ -2,11 +2,14 @@
 title: npm scripts  使用指南
 date: 2021-01-03 10:50:45
 tags:
-	- npm
-	- js
-	- Nodejs
-	- package.json
+  - npm
+  - js
+  - Nodejs
+  - package.json
 categories: Nodejs
+cnblogs:
+  postid: "15392979"
+hash: 4e77ebcf4b997e5a02661057c9e03b5e0be9d6f1118ac262d87b302ddfed7244
 ---
 
 

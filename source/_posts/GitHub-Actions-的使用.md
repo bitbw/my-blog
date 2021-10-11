@@ -2,10 +2,13 @@
 title: GitHub Actions 的使用
 date: 2021-04-23 10:37:38
 tags:
-	- GitHub Actions
-	- github
-	- ci/cd
+  - GitHub Actions
+  - github
+  - ci/cd
 categories: Github
+cnblogs:
+  postid: "15392422"
+hash: 25fdef6518eea695d22cca79999addcb65cc4fc5a3c4ae8ffd21521c40a84ea8
 ---
 
 

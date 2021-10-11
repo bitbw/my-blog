@@ -2,10 +2,13 @@
 title: ubuntu下常用软件的安装
 date: 2021-01-10 08:15:42
 tags:
-	- Linux
-	- ubuntu
-	- git
+  - Linux
+  - ubuntu
+  - git
 categories: Linux
+cnblogs:
+  postid: "15393009"
+hash: ffff24c0248cf46a9749a1b5db8ca1c8d96a5813e4b0882a9f6997db1bc26754
 ---
 
 

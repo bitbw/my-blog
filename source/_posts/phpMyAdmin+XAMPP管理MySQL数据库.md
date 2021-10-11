@@ -2,9 +2,12 @@
 title: phpMyAdmin+XAMPP管理MySQL数据库
 date: 2021-04-22 17:30:03
 tags:
-	- phpMyAdmin
-	- MySQL
+  - phpMyAdmin
+  - MySQL
 categories: SQL
+cnblogs:
+  postid: "15392983"
+hash: 970dc1e6089f070ed5a1961b49d604316eebf6cbe1f24d3a17f913128a608360
 ---
 
 

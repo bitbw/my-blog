@@ -1,10 +1,13 @@
 ---
 title: es6 模块规范
 date: 2019-11-30 18:13:47
-tags: 
-	- es6
-	- js
+tags:
+  - es6
+  - js
 categories: js
+cnblogs:
+  postid: "15392420"
+hash: ec785f1ae1e82de3d017ec56f7ea8afbe3e98f854bc1ddbc8e2cf65e366db66a
 ---
 
 ### 导出 export

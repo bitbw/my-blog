@@ -1,9 +1,12 @@
 ---
 title: Vue的使用注意事项
-tags: 
-	- vue
+tags:
+  - vue
 categories: Vue
 date: 2020-09-16 11:34:54
+cnblogs:
+  postid: "15393020"
+hash: 9d7dbe77e51f41fe18a3f9705bff7517beaedc2a0206474fbe242a35264b5f2f
 ---
 
 

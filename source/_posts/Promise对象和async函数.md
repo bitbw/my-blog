@@ -1,10 +1,13 @@
 ---
 title: Promise对象和async函数
 date: 2018-5-28 18:52:44
-tags: 
-	- es6
-	- js
+tags:
+  - es6
+  - js
 categories: js
+cnblogs:
+  postid: "15392986"
+hash: 89113d8647682fd0f20faf0e8ed2e8bfb2bc01c18200cec6945505aa0891ac84
 ---
 
 ## 异步代码

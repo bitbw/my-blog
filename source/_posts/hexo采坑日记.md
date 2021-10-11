@@ -1,9 +1,12 @@
 ---
 title: hexo采坑日记
 date: 2019-11-28 17:25:06
-tags: 
-	- hexo
+tags:
+  - hexo
 categories: Hexo
+cnblogs:
+  postid: "15392424"
+hash: 0645b6373101bbc27c2e22eed051722a15f32d5f90c51e12abdddedef11cf16c
 ---
 
 ## hexo 上传 github 后图片不显示问题

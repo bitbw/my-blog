@@ -2,9 +2,12 @@
 title: linux 常用命令
 date: 2021-01-03 11:11:15
 tags:
-	- Linux
-	- ubuntu
+  - Linux
+  - ubuntu
 categories: Linux
+cnblogs:
+  postid: "15392569"
+hash: 1eeb1540162b0016a08230795ed1f7c075578013a4d9965b7c594603fd080f8d
 ---
 
 

@@ -2,9 +2,12 @@
 title: 快捷创建electron+vue项目的两种方式
 date: 2021-06-04 17:16:27
 tags:
-	- Vue
-	- Electron
+  - Vue
+  - Electron
 categories: Electron
+cnblogs:
+  postid: "15393040"
+hash: a4c41addc61407a4d4de06bf92f61902a818aa16b0d3839216c4ab4766605877
 ---
 
 

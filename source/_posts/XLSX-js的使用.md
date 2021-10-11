@@ -1,10 +1,13 @@
 ---
 title: XLSX.js的使用
 date: 2020-07-30 09:20:05
-tags: 
-	- XLSX
-	- 插件
+tags:
+  - XLSX
+  - 插件
 categories: XLSX
+cnblogs:
+  postid: "15393029"
+hash: 5638004f925ef5de9d2278245af4251bd8b0d2522416b8eb2f289e0eff3553b1
 ---
 
 [SheetJS js-xlsx](http://sheetjs.com/) 中文文档： https://github.com/rockboom/SheetJS-docs-zh-CN

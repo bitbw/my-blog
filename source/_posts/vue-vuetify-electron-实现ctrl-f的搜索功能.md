@@ -2,10 +2,13 @@
 title: vue + vuetify + electron 实现ctrl+f的搜索功能
 date: 2021-01-12 15:02:05
 tags:
-	- Vue
-	- Vuetify
-	- Electron
+  - Vue
+  - Vuetify
+  - Electron
 categories: Vue
+cnblogs:
+  postid: "15393013"
+hash: 196917a85c8214981abb9cc4bf16736fd56f8e66fa0ed83be80eee310264b9b7
 ---
 
 

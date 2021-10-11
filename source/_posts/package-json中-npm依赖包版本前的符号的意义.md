@@ -2,10 +2,13 @@
 title: package.json中 npm依赖包版本前的符号的意义
 date: 2021-06-16 14:38:23
 tags:
-	- package.json
-	- npm
-	- Nodejs
+  - package.json
+  - npm
+  - Nodejs
 categories: Nodejs
+cnblogs:
+  postid: "15392981"
+hash: e5d830a4bf277dfe4ad2f4d5aab91003a7961bbe48ca8cda30afa300f4bc032a
 ---
 
 

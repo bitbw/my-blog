@@ -2,9 +2,12 @@
 title: 使用 ubuntu 打造 NAS
 date: 2021-06-03 09:08:36
 tags:
-	- ubuntu
-	- Linux
+  - ubuntu
+  - Linux
 categories: Linux
+cnblogs:
+  postid: "15393032"
+hash: f8333292473bf93bae82b6dc752b0e1cb4fe9223a138de15e1b2b5819977ee9b
 ---
 
 

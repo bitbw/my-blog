@@ -3,6 +3,9 @@ title: HTML入门
 date: 2016-5-21 20:54:00
 tags: HTML
 categories: HTML
+cnblogs:
+  postid: "15392425"
+hash: 34887c328602cb15eb92f71b7f3fbe1aca6d425f3ded4d6703082added469fc4
 ---
 
 ![下载](https://gitee.com/bitbw/my-gallery/raw/master/img/下载.jpg)

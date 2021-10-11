@@ -3,8 +3,10 @@ title: Windows Termial设置
 date: 2021-04-13 17:47:54
 tags:
   - windows
-
 categories: 工具使用
+cnblogs:
+  postid: "15393026"
+hash: 6f9443729935c3ba7f0bba3ea7bcfe1372a06797a64626b34f347b268f501933
 ---
 
 # Windows Termial

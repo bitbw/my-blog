@@ -3,6 +3,9 @@ title: switch 多个case的用法
 date: 2018-12-15 16:07:07
 tags: js
 categories: js
+cnblogs:
+  postid: "15392992"
+hash: c172ec5ae10f1a98f38dd1e3456566d95519e11f2f0d73759091182bfffc8d55
 ---
 
 

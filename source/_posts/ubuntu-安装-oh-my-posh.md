@@ -2,11 +2,14 @@
 title: ubuntu 安装 oh-my-posh
 date: 2021-04-15 13:35:05
 tags:
-	- Linux
-	- ubuntu
-	- powerline
-	- oh-my-posh
+  - Linux
+  - ubuntu
+  - powerline
+  - oh-my-posh
 categories: Linux
+cnblogs:
+  postid: "15393007"
+hash: ccd7157cfd798b1900770682363335deb1191169bd7643bc8d997f39aaa7dacf
 ---
 
 

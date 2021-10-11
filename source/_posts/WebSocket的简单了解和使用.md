@@ -1,9 +1,12 @@
 ---
 title: WebSocket的简单了解和使用
 date: 2020-5-09 08:15:26
-tags: 
-	- 网络应用
+tags:
+  - 网络应用
 categories: 网络应用
+cnblogs:
+  postid: "15393025"
+hash: 1022e0779577ed020fe0135b365115549a3b53aae44d8344bd81494a8b1ccad9
 ---
 
 ## WebSocket

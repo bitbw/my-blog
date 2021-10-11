@@ -2,10 +2,13 @@
 title: path.resolve()的使用
 date: 2020-12-30 13:34:08
 tags:
-	- Nodejs
-	- path
-	- Nodejs
-categories:  Nodejs
+  - Nodejs
+  - path
+  - Nodejs
+categories: Nodejs
+cnblogs:
+  postid: "15392982"
+hash: 884f903343cd5bc487740f71264188010e73905ec13cd9a9dca1e500e3bc60fc
 ---
 
 

@@ -1,10 +1,13 @@
 ---
 title: Linux系统安装Nodejs和卸载Nodejs
 date: 2020-12-13 09:57:32
-tags: 
-	- Nodejs
-	- Linux
+tags:
+  - Nodejs
+  - Linux
 categories: Nodejs
+cnblogs:
+  postid: "15392583"
+hash: 3513c7419642cea6cbc0341ee78adf248a63e632db688cb849c8e1a00ef9d871
 ---
 
 > 不推荐安装最新的node版本 好多包都没有对应的最新node版本的编译好的包

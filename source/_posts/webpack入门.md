@@ -1,10 +1,13 @@
 ---
 title: webpack入门
 date: 2021-01-02 16:24:55
-tags: 
-	- Webpack
-	- Webpack-cli
+tags:
+  - Webpack
+  - Webpack-cli
 categories: Webpack
+cnblogs:
+  postid: "15393022"
+hash: dfbf1fea3a42bf83354067d26279487fc4d1245354ce541f13e5f4bdc78a9961
 ---
 
 

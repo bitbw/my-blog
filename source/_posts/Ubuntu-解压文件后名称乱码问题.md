@@ -2,9 +2,12 @@
 title: Ubuntu 解压文件后名称乱码问题
 date: 2021-01-10 16:09:01
 tags:
-	- Linux
-	- ubuntu
+  - Linux
+  - ubuntu
 categories: Linux
+cnblogs:
+  postid: "15393008"
+hash: dac2ad4de82cb1e64ae9d1174d6506dd189a5290b7e9c195c9dec02b8da105ed
 ---
 
 

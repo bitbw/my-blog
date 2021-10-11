@@ -3,6 +3,9 @@ title: javaScript-变量-数据类型-数据类型的转换
 date: 2016-6-05 21:25:48
 tags: js
 categories: js
+cnblogs:
+  postid: "15392427"
+hash: 30f64baa901226c8988763bcb7bfc66bb6d7bad11c225fd35f56d0ade2c3aec7
 ---
 
 ## 变量 （主要）

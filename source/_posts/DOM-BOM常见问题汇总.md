@@ -2,8 +2,11 @@
 title: DOM&BOM常见问题汇总
 date: 2021-03-25 09:56:48
 tags:
-	- DOM&BOM
+  - DOM&BOM
 categories: js
+cnblogs:
+  postid: "15392413"
+hash: bc032759d928b75c5d6d70dae8402a41d31a5d07e388afbb48ee038cd1571300
 ---
 
 

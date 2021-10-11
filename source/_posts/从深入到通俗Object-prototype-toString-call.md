@@ -2,8 +2,11 @@
 title: 转从深入到通俗Object.prototype.toString.call()
 date: 2021-07-23 13:38:06
 tags:
-	- js
+  - js
 categories: js
+cnblogs:
+  postid: "15393031"
+hash: fea424d6ada410363620c733646b19d89ee85cb1d20defb23a00d66f4f92b9ab
 ---
 
 
