@@ -157,4 +157,119 @@ this.currentNode.loadData();
 定义data中的绑定项的key
 
 | 参数     | 说明                                                     | 类型                          | 可选值 | 默认值 |
-| :
+| :------- | :------------------------------------------------------- | :---------------------------- | :----- | :----- |
+| label    | 指定节点标签为节点对象的某个属性值                       | string, function(data, node)  | —      | —      |
+| children | 指定子树为节点对象的某个属性值                           | string                        | —      | —      |
+| disabled | 指定节点选择框是否禁用为节点对象的某个属性值             | boolean, function(data, node) | —      | —      |
+| isLeaf   | 指定节点是否为叶子节点，仅在指定了 lazy 属性的情况下生效 | boolean, function(data, node) | —      | —      |
+
+## el-input
+
+### el-input 同过正则限制只能输入正数可以带小数点 但不生效问题
+
+代码：
+
+```js
+<el-input
+    type="text"
+    v-model.number="editingFormData.salary"
+    oninput="value=value.replace(/^\D*(\d*(?:\.\d{0,2})?).*$/g, '$1')"
+></el-input>
+```
+
+>正则一直不好 无法输入小数点 ， 是因为加了number 修饰符无法输入小数点， 找了我一个多小时啊
+
+![正则不生效原因](https://gitee.com/bitbw/my-gallery/raw/master/img/正则不生效原因.jpg)
+
+### 工作中出现的---表头带input搜索框 搜索后点击表格会刷新数据bug
+
+>表格带表头input搜索的结构 搜索需要回车，  发现每次搜索回车后 点击表格或其他地方， 表格会刷新一下，经同事指点打开Network 发现 ，点击其他地方会发次请求，打开table组件的源码发现 被别的同事添加了@blur失去焦点事件，并且与回车事件调用同一个函数，因为回车不会使input框失去焦点，点击表格其他地方时input失去焦点导致再次触发搜索，所有好像自己刷新了一下的样子。 下面是表格内input的代码
+
+```html
+ <el-input
+        v-if="[undefined, '', 'input', 'button', 'string'].includes(field.fieldType)"
+        v-bind="field.headerSearchAttrs"
+        v-model.trim="field.inputValue"
+        clearable
+        :placeholder="field.label"
+        @keyup.enter.native="handleBlur(field.prop, field.inputValue)"
+        @blur="handleBlur(field.prop, field.inputValue)"
+        @clear="clearQueryInput"
+    />
+<!-- @keyup.enter 和@blur调用同一函数产生的bug -->
+```
+
+## 
+
+## el-image
+
+### elementUI的image的src加载vue系统或本地图片的方法（重要）
+
+>正常情况以下情形是不生效的， 会提示找不到图片 所以需要用到，原生的require方法
+
+```vue
+<div class="message-item" v-for=" (item ,index) in uploadMessage" :key="index">
+    <span class="item-txt">{{item.txt}}</span>
+    <el-image :src="item.img" :preview-src-list="srcList"></el-image>
+</div>
+
+```
+
+```js
+//js部分
+ uploadMessage = [
+  {
+   txt: '1.进入税务系统',
+   img: '@/hrwa/assets/taxset-information-management/taxset1.png',
+  },
+  {
+   txt: '1.进入税务系统',
+   img: '@/hrwa/assets/taxset-information-management/taxset2.png',
+  },
+  {
+   txt: '1.进入税务系统',
+   img: '@/hrwa/assets/taxset-information-management/taxset3.png',
+  },
+  {
+   txt: '1.进入税务系统',
+   img: '@/hrwa/assets/taxset-information-management/taxset4.png',
+  },
+ ]; //提示
+```
+
+> 图片会显示加载失败 ，   修改后 的代码结构  如下
+
+```js
+ uploadMessage = [
+  {
+   txt: '1.进入税务系统',
+   img: require('@/hrwa/assets/taxset-information-management/taxset1.png'),
+  },
+  {
+   txt: '1.进入税务系统',
+   img: require('@/hrwa/assets/taxset-information-management/taxset2.png'),
+  },
+  {
+   txt: '1.进入税务系统',
+   img: require('@/hrwa/assets/taxset-information-management/taxset3.png'),
+  },
+  {
+   txt: '1.进入税务系统',
+   img: require('@/hrwa/assets/taxset-information-management/taxset4.png'),
+  },
+ ];
+ //大图地址也需要加require
+ srcList = [
+  require('@/hrwa/assets/taxset-information-management/taxset1.png'),
+  require('@/hrwa/assets/taxset-information-management/taxset2.png'),
+  require('@/hrwa/assets/taxset-information-management/taxset3.png'),
+  require('@/hrwa/assets/taxset-information-management/taxset4.png'),
+ ];
+```
+
+## 样式问题
+
+- table通过th display: table-cell !important; 控制在谷歌浏览器下边框不对齐问题
+- 导航菜单选中项样式问题通过类名.is-active 设置
+- 顶部logo部分的顶部栏的高度，和子项宽度 都是通过flex属性设置，flex ：0 0 220px
+- elementui的样式变量在E:\project\hr-web-container\node_modules\element-ui\packages\theme-chalk\src\common\var.scss内

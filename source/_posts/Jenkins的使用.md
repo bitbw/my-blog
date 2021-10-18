@@ -94,4 +94,105 @@ ps:
  cd .ssh/
  ll
 #total 20
-#drwx
+#drwx------  2 bowen bowen 4096 Aug  2 14:34 ./
+#drwxr-xr-x 13 bowen bowen 4096 Aug  4 09:24 ../
+#-rw-------  1 bowen bowen 3243 Aug  2 14:32 id_rsa
+#-rw-r--r--  1 bowen bowen  747 Aug  2 14:32 id_rsa.pub
+#-rw-r--r--  1 bowen bowen  222 Aug  2 13:43 known_hosts
+```
+
+id_rsa 就是私钥 
+
+```bash
+cat id_rsa
+```
+
+全部复制放到key字段中
+
+#### 问题
+
+##### 测试连接报错：jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key
+
+解决：http://www.wallcopper.com/linux/3689.htmljenkins
+
+无密码ssh时报错:jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key. Message [invalid privatekey: [B@6a581993]
+com.jcraft.jsch.JSchException: invalid privatekey, 部分库（如：JSch）不支持OPENSSH PRIVATE KEY格式的私钥
+
+1、jenkins使用 `ssh-keygen -m PEM -t rsa -b 4096` 来生成key就可以用了。
+-m 参数指定密钥的格式，PEM（也就是RSA格式）是之前使用的旧格式
+
+##### ssh-copy-id上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+
+解决：https://blog.csdn.net/weixin_44545265/article/details/88362272
+
+文件传输不过去，只需要删除.ssh目录下的known_hosts文件就能传输了
+`[root@xx]# rm -rf ~/.ssh/known_hosts`
+
+#### 我的jenkinsfile
+
+```
+pipeline {
+    agent {
+        docker {
+            image 'node:12-alpine' 
+            args '-p 3000:3000' 
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install'
+                sh 'npm run buildtest'
+                sh 'ls -lha' 
+            }
+        }
+	stage('Deploy') {
+            steps {
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'IPSServer', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''
+                echo "dist_temp/ ls"
+                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/
+                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                mkdir /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                cp -r /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/.   /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                echo "dist/ ls"
+                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist/
+                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/
+                docker restart product-nginx-test
+                ''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/', remoteDirectorySDF: false, removePrefix: 'dist', sourceFiles: 'dist/**')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
+            }
+        }
+    }
+}
+```
+
+#### sshPublisher 显示操作日志
+
+sshPublisher(publishers: [sshPublisherDesc()])内添加 verbose: true
+
+verbose：选择为 Jenkins 控制台启用大量信息 - 仅对帮助追踪问题非常有用。
+
+## 构建触发器
+
+### 使用轮询SCM 实现收到 git post-commit 即构建
+
+![image-20210818150222789](https://gitee.com/bitbw/my-gallery/raw/master/img/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png)
+
+ 日程表使用cron语法
+
+```
+#每15分钟(可能在:07,22,37,52):
+H/15 * * * *
+每小时前半小时每十分钟一次(三次，可能在:04,14,24)
+H(0-29)/10 * * * *
+#每两个小时，在每小时后45分钟，从早上9:45开始，下午3:45结束，每周一次:
+45 9-16/2 * * 1-5
+#在工作日早上8点到下午4点之间每两个小时一次(可能在上午9:38，上午11:38，下午1:38，下午3:38):
+H H(8-15)/2 * * 1-5
+每月1号和15号每天一次，12月除外:
+H H 1,15 1-11 *
+```
+
+规则有点难可以使用cron在线解析工具：http://cron.qqe2.com/
+
+使用轮询SCM检查到commit 更新 就会触发构建
+

@@ -18,3 +18,15 @@ vue.esm.js?efeb:591 [Vue warn]: Unknown custom element: <el-container> - did you
 
 found in
 
+---> <Container> at src/components/Container.vue
+       <App> at src/App.vue
+         <Root>
+```
+
+**以上错误 表示你没有注册这个组件 需要单独注册**
+
+### `JSON.parse()`的使用
+
+![搜狗截图20191201171855](https://gitee.com/bitbw/my-gallery/raw/master/img/搜狗截图20191201171855.jpg)
+
+> 注意：**`JSON.parse(null)` 是返回 null 其他除了 string 类型的数据都会报错**
