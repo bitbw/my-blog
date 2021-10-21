@@ -433,6 +433,52 @@ class Dep {
 
 > Dep 中使用的就是发布-订阅者模式
 
+## Vue
+
+```js
+/**
+ * 创建一个类用于 new Vue的实例
+ */
+ class Vue {
+    // 构造函数内部接收new实例传过来的对象vm
+    constructor(vm) {
+        // 将内部属性通过$属性名挂载
+        this.$el = vm.el,
+        this.$data = vm.data
+        this.$methods = vm.methods
+        // 调用代理方法
+        this.agency(this.$data)
+        this.agency(this.$methods)
+        new Observer(this.$data)
+        if (this.$el) {
+            // new Compile 实例用于解析模板内容
+            new Compile(this.$el, this)
+        }
+    }
+    // 实现将data，methods中的属性方法代理到vue实例上
+    agency(data){
+        Object.keys(data).forEach(key =>{
+            Object.defineProperty(this,key,{
+                enumerable:true,
+                configurable:true,
+                get(){
+                    // 实际上还是访问data中的数据
+                    return data[key]
+                },
+                set(newValue){
+                    if (newValue===data[key]) {
+                        return 
+                    }else{
+                         // 实际上还是修改data中的数据调用observer
+                        data[key]= newValue
+                    }
+                }
+            })
+        })
+    }
+}
+```
+
 ## html
 
 ```html
@@ -479,3 +525,13 @@ class Dep {
  </body>
 </html>
 ```
+
+## 总结
+
+1.Compile 解析模板时, 模板中挂载的data中的数据 ,用到的地方就 注册一个Watcher （new Watcher）
+
+2.new Watcher时将自身挂到Dep.target上同时将触发Observer的一次get, Observer 的get 会将判断Dep上有无Watcher实例，有的话就添加到订阅者subs中，然后清空Dep.target
+
+3.Observer set方法一但被调用就会触发 dep.notify方法 发布，notify方法依次调用subs（Watcher）的update 方法 ，更新视图
+
+![image-20211019130049831](https://gitee.com/bitbw/my-gallery/raw/master/img/20211019130057.png)
