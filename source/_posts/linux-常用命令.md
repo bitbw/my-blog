@@ -30,8 +30,6 @@ $ su [用户名]
 
 
 
-
-
 ## tar命令的用法
 
 参考 https://blog.csdn.net/kkw1992/article/details/80000653
@@ -143,7 +141,52 @@ tar
 
 ## **Linux常用命令大全（非常全！！！）**
 
- 
+### 中查看正在使用的端口
+
+参考：https://www.linuxidc.com/Linux/2019-08/160085.htm
+
+#### 使用 netstat 检查端口
+
+netstat  是一个命令行工具，可以提供有关网络连接的信息。
+
+要列出正在侦听的所有 TCP 或 UDP 端口，包括使用端口和套接字状态的服务，请使用以下命令：
+
+linuxidc@linuxidc:~/www.linuxidc.com$ sudo netstat -tunlp
+
+此命令中使用的选项具有以下含义：
+
+- -t - 显示 TCP 端口。
+- -u - 显示 UDP 端口。
+- -n - 显示数字地址而不是主机名。
+- -l - 仅显示侦听端口。
+- -p - 显示进程的 PID 和名称。仅当您以 root 或 sudo 用户身份运行命令时，才会显示此信息。
+
+输出示例如下所示： 
+
+```bash
+inuxidc@linuxidc:~/www.linuxidc.com$ sudo netstat -tunlp
+[sudo] linuxidc 的密码： 
+激活Internet连接 (仅服务器)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      1405/mysqld         
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1181/nginx: master  
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      784/systemd-resolve 
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      1081/cupsd          
+tcp6       0      0 :::80                   :::*                    LISTEN      1181/nginx: master  
+tcp6       0      0 ::1:631                 :::*                    LISTEN      1081/cupsd          
+udp        0      0 0.0.0.0:44785           0.0.0.0:*                           958/avahi-daemon: r 
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           784/systemd-resolve 
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           4581/dhclient       
+udp        0      0 0.0.0.0:631             0.0.0.0:*
+```
+
+我们例子中的比较重要的列是：
+
+- Proto - 套接字使用的协议。
+- Local Address - 进程侦听的 IP 地址和端口号。
+- PID/Program name - PID 和进程名称。
+
+
 
 ### **系统信息** 
 
@@ -647,3 +690,4 @@ smbget -Rr smb://ip_addr/share like wget can download files from a host windows 
 mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share mount a windows network share
 
 A man must be on his own！
+
