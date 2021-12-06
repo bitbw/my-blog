@@ -33,3 +33,12 @@ wxss
 }
 ```
 
+## IndexBar 索引栏
+
+### 问题
+
+在一个page中通过 if 或hidden显示IndexBar 索引栏组件会导致组件显示有问题
+
+### 解决
+
+将组件放在单独page中通过nav跳转
