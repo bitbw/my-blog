@@ -5,19 +5,20 @@ tags:
 	- Nginx
 categories: 工具使用
 ---
+
 !!
 
-## Nginx学习
+## Nginx 学习
 
-### **nginx** **常用的命令：** 
+### **nginx** **常用的命令：**
 
 （1）启动命令
 
-在/usr/local/nginx/sbin 目录下执行 ./nginx 
+在/usr/local/nginx/sbin 目录下执行 ./nginx
 
 （2）关闭命令
 
-在/usr/local/nginx/sbin 目录下执行 ./nginx -s stop 
+在/usr/local/nginx/sbin 目录下执行 ./nginx -s stop
 
 （3）重新加载命令
 
@@ -53,7 +54,7 @@ http {
 
     #文件扩展名与文件类型映射表
     include       mime.types;
-    
+
     #默认文件类型
     default_type  application/octet-stream;
 
@@ -89,13 +90,13 @@ http {
             root   html; #根路径
             index  index.html index.htm; #设置默认页面
         }
-        
+
         #自己添加
-        location /ooaa/ {   
-            #请求转向mysvr 定义的服务器列表        
+        location /ooaa/ {
+            #请求转向mysvr 定义的服务器列表
             proxy_pass http://127.0.0.1:8384/;  #注意：使用代理地址时末尾记得加上斜杠"/"。
             #deny 127.0.0.1;  #拒绝的ip【目前没有用过】
-            #allow 172.18.5.54; #允许的ip【目前没有用过】            
+            #allow 172.18.5.54; #允许的ip【目前没有用过】
         }
 
         #error_page  404              /404.html;
@@ -169,4 +170,3 @@ http {
 
 }
 ```
-

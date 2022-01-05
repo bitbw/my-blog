@@ -80,7 +80,9 @@ npx mrm@2 lint-staged
     "*.{js,vue}": ["vue-cli-service lint"]
   }
 ```
+
 再次 commit 时会看到这样的提示
+
 ```bash
 $ git commit -m "Update"
 [STARTED] Preparing...

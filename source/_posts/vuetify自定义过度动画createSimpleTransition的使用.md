@@ -10,9 +10,9 @@ cnblogs:
 hash: 062e5abd6e3b8b379dfd7bff63891d93590c44f91e9d6539e06605530526de51
 ---
 
-> 因为vuetify中dailog只有上下抽屉的效果，想要左右抽屉效果 于是自己写了一个左右抽屉的组件 其中比较难搞的还是样式 和过渡
+> 因为 vuetify 中 dailog 只有上下抽屉的效果，想要左右抽屉效果 于是自己写了一个左右抽屉的组件 其中比较难搞的还是样式 和过渡
 >
-> vuetify中创建过渡组件的方式：https://vuetifyjs.com/zh-Hans/styles/transitions/#todo-list
+> vuetify 中创建过渡组件的方式：https://vuetifyjs.com/zh-Hans/styles/transitions/#todo-list
 
 实现效果：
 
@@ -26,7 +26,7 @@ hash: 062e5abd6e3b8b379dfd7bff63891d93590c44f91e9d6539e06605530526de51
     class="slide-drawer"
     content-class="my-slide-drawer"
     :value="value"
-    @input="val => $emit('input', val)"
+    @input="(val) => $emit('input', val)"
     scrollable
     width="600px"
     v-bind="$attrs"
@@ -65,19 +65,19 @@ export default {
   props: {
     value: {
       type: Boolean,
-      defualt: false
+      defualt: false,
     },
     content: {
       type: String,
-      defualt: ""
-    }
-  }
+      defualt: "",
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .v-dialog__content {
-   // 改变dialog布局 靠右
+  // 改变dialog布局 靠右
   justify-content: start !important;
 }
 ::v-deep {
@@ -90,14 +90,14 @@ export default {
       border-radius: 0;
     }
   }
-    // 添加侧面抽屉效果
-    .my-transition {
-        // 进入和离开的状态
-        &-enter,
-        &-leave-to {
-        transform: translateX(-800px);
-        }
+  // 添加侧面抽屉效果
+  .my-transition {
+    // 进入和离开的状态
+    &-enter,
+    &-leave-to {
+      transform: translateX(-800px);
     }
+  }
 }
 </style>
 或者=================================
@@ -110,7 +110,6 @@ export default {
   }
 }
 </style>
-
 ```
 
 > 注意事项：样式不能在 scoped 中要不不会生效 或者放到 ::v-deep 中

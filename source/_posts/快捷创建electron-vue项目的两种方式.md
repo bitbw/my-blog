@@ -10,30 +10,27 @@ cnblogs:
 hash: a4c41addc61407a4d4de06bf92f61902a818aa16b0d3839216c4ab4766605877
 ---
 
-
-## 使用 vue-cli-plugin-electron-builder  生成项目(推荐)
+## 使用 vue-cli-plugin-electron-builder 生成项目(推荐)
 
 vue-cli-plugin-electron-builder 官方文档：https://nklayman.github.io/vue-cli-plugin-electron-builder/
 
-需要vue-cli 最新版
+需要 vue-cli 最新版
 
-使用 vue-cli  创建项目
+使用 vue-cli 创建项目
 
 ```bash
 vue create  项目名 #创建vue项目
 ```
 
-添加使用 vue-cli-plugin-electron-builder  生成项目
+添加使用 vue-cli-plugin-electron-builder 生成项目
 
 ```bash
 vue add electron-builder # 自动生成带electron的项目
 ```
 
-
-
 ## 使用 electron-vue 模板创建（不推荐）
 
-electron-vue  中文文档： https://simulatedgreg.gitbooks.io/electron-vue/content/cn/
+electron-vue 中文文档： https://simulatedgreg.gitbooks.io/electron-vue/content/cn/
 
 ```bash
 # 安装 vue-cli 和 脚手架样板代码
@@ -46,8 +43,6 @@ yarn # 或者 npm install
 yarn run dev # 或者 npm run dev
 ```
 
-
-
 ## 对比
 
-个人觉得使用 vue-cli-plugin-electron-builder  生成项目更好用 而且文档详细，快速上手 
+个人觉得使用 vue-cli-plugin-electron-builder 生成项目更好用 而且文档详细，快速上手

@@ -8,8 +8,8 @@ cnblogs:
 hash: a378e354952ae824a1212659fd8848559bf84f5e06b9bc8b6b626c09144eb772
 ---
 
+## w3school
 
-## w3school 
 https://www.w3school.com.cn/js/js_bitwise.asp
 
 ## JavaScript 位运算符
@@ -136,7 +136,6 @@ JavaScript 将数字存储为 64 位浮点数，但所有按位运算都以 32 �
 var x = 5 & 1;
 ```
 
-
 ## JavaScript 位运算 OR (|)
 
 如果数位之一是 1，则位运算 OR 返回 1：
@@ -152,7 +151,6 @@ var x = 5 & 1;
 ```
 var x = 5 | 1;
 ```
-
 
 ## JavaScript 位运算 XOR (^)
 
@@ -170,7 +168,6 @@ var x = 5 | 1;
 var x = 5 ^ 1;
 ```
 
-
 ## JavaScript 位运算 NOT (~)
 
 | 十进制 | 二进制                                |
@@ -183,7 +180,6 @@ var x = 5 ^ 1;
 ```
 var x = ~5;
 ```
-
 
 ## JavaScript（零填充）位运算左移（<<）
 
@@ -200,7 +196,6 @@ var x = ~5;
 var x = 5 << 1;
 ```
 
-
 ## JavaScript（有符号）位运算右移（>>）
 
 这是保留符号的右移。最左侧的数位被从左侧推入，最右侧的数位被移出：
@@ -216,7 +211,6 @@ var x = 5 << 1;
 var x = -5 >> 1;
 ```
 
-
 ## JavaScript（零填充）右移（>>>）
 
 这是零填充的右移。一个或多个零数位从左侧被推入，最右侧的数位被移出：
@@ -231,7 +225,6 @@ var x = -5 >> 1;
 ```
 var x = 5 >>> 1;
 ```
-
 
 ## 32-bit 有符号整数（二进制数）
 
@@ -276,7 +269,6 @@ function dec2bin(dec){
 }
 ```
 
-
 ## 把二进制转换为十进制
 
 ### 实例
@@ -287,27 +279,27 @@ function bin2dec(bin){
 }
 ```
 
-## parseInt+toString实现各个进制的转换
+## parseInt+toString 实现各个进制的转换
 
--  parseInt:将任意进制的数字转化为十进制
+- parseInt:将任意进制的数字转化为十进制
 
 - toString:将十进制的数字转化为任意进制
 
 ```js
-parseInt(num,8);   //八进制转十进制
-parseInt(num,16);   //十六进制转十进制
-parseInt(num).toString(8)  //十进制转八进制
-parseInt(num).toString(16)   //十进制转十六进制
-parseInt(num,2).toString(8)   //二进制转八进制
-parseInt(num,2).toString(16)  //二进制转十六进制
-parseInt(num,8).toString(2)   //八进制转二进制
-parseInt(num,8).toString(16)  //八进制转十六进制
-parseInt(num,16).toString(2)  //十六进制转二进制
-parseInt(num,16).toString(8)  //十六进制转八进制
+parseInt(num, 8); //八进制转十进制
+parseInt(num, 16); //十六进制转十进制
+parseInt(num).toString(8); //十进制转八进制
+parseInt(num).toString(16); //十进制转十六进制
+parseInt(num, 2).toString(8); //二进制转八进制
+parseInt(num, 2).toString(16); //二进制转十六进制
+parseInt(num, 8).toString(2); //八进制转二进制
+parseInt(num, 8).toString(16); //八进制转十六进制
+parseInt(num, 16).toString(2); //十六进制转二进制
+parseInt(num, 16).toString(8); //十六进制转八进制
 ```
 
->- 以 0X、0x 开头的表示为十六进制。 0xf //15
->- 以 0、0O、0o 开头的表示为八进制。0o12 //10
->- 以 0B、0b 开头的表示为二进制格式。 0b11//3
+> - 以 0X、0x 开头的表示为十六进制。 0xf //15
+> - 以 0、0O、0o 开头的表示为八进制。0o12 //10
+> - 以 0B、0b 开头的表示为二进制格式。 0b11//3
 
-以上在js中可直接使用，可自动转化为对应的10进制
+以上在 js 中可直接使用，可自动转化为对应的 10 进制

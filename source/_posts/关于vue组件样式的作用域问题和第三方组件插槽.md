@@ -18,7 +18,7 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 
 ```html
 <style>
- /* 全局样式 */
+  /* 全局样式 */
 </style>
 ```
 
@@ -26,13 +26,13 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 
 ```html
 <style scoped>
- .example {
-  color: red;
- }
+  .example {
+    color: red;
+  }
 </style>
 
 <template>
- <div class="example">hi</div>
+  <div class="example">hi</div>
 </template>
 ```
 
@@ -40,13 +40,13 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 
 ```html
 <style>
- .example[data-v-f3f3eg9] {
-  color: red;
- }
+  .example[data-v-f3f3eg9] {
+    color: red;
+  }
 </style>
 
 <template>
- <div class="example" data-v-f3f3eg9>hi</div>
+  <div class="example" data-v-f3f3eg9>hi</div>
 </template>
 ```
 
@@ -54,11 +54,11 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 
 ```html
 <style>
- /* 全局样式 */
+  /* 全局样式 */
 </style>
 
 <style scoped>
- /* 本地样式 */
+  /* 本地样式 */
 </style>
 ```
 
@@ -86,9 +86,9 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 
 ```html
 <style scoped>
- .a >>> .b {
-  /* ... */
- }
+  .a >>> .b {
+    /* ... */
+  }
 </style>
 ```
 
@@ -96,7 +96,7 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 
 ```css
 .a[data-v-f3f3eg9] .b {
- /* ... */
+  /* ... */
 }
 ```
 
@@ -131,13 +131,13 @@ hash: bd763922c72d897198cdd9b267460ea80fd39b70030f35f114196e7d08e8b25c
 <van-cell title="单元格" value="内容" label="hello" />
 
 <van-cell title="单元格" value="内容" label="hello">
- <button slot="title">hello</button>
+  <button slot="title">hello</button>
 
- <!-- 当你没有给元素插槽起名字的时候，这个组件提供了默认插槽 -->
- <span>默认内容</span>
- <span slot="default">默认内容</span>
+  <!-- 当你没有给元素插槽起名字的时候，这个组件提供了默认插槽 -->
+  <span>默认内容</span>
+  <span slot="default">默认内容</span>
 
- <!-- 同名插槽可以插入多次 -->
- <span slot="title">world</span>
+  <!-- 同名插槽可以插入多次 -->
+  <span slot="title">world</span>
 </van-cell>
 ```

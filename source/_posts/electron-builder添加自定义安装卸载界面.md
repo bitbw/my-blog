@@ -11,21 +11,19 @@ cnblogs:
 hash: 2c0e7265d5e7dd9c76122ec7459ccd59b168d279a2fcfc38ccb34de8359d6f3a
 ---
 
+electron-builder 官方文档 ：https://www.electron.build/configuration/nsis#NsisOptions-script
 
-
-electron-builder官方文档 ：https://www.electron.build/configuration/nsis#NsisOptions-script
-
-添加自定义安装卸载界面需要在 builderOptions 中添加  include 脚本 
+添加自定义安装卸载界面需要在 builderOptions 中添加 include 脚本
 
 ## 添加 include 脚本
 
->nsis 脚本 在 node_modules\app-builder-lib\templates\nsis 中被引入，所以这里写的脚本都会进到最终nsis的脚本中
+> nsis 脚本 在 node_modules\app-builder-lib\templates\nsis 中被引入，所以这里写的脚本都会进到最终 nsis 的脚本中
 >
->nsis脚本官方文档 ：https://nsis.sourceforge.io/Docs
+> nsis 脚本官方文档 ：https://nsis.sourceforge.io/Docs
 
-### 1.在build\nsis 添加 uninstaller.nsh 
+### 1.在 build\nsis 添加 uninstaller.nsh
 
-我在做用户卸载界面所以叫uninstaller ， 这个可以随意叫
+我在做用户卸载界面所以叫 uninstaller ， 这个可以随意叫
 
 ```nsis
 !include nsDialogs.nsh
@@ -42,7 +40,7 @@ Var /GLOBAL CheckBox_1
 Var /GLOBAL Checkbox_State
 
 # 创建自定义卸载页面
-UninstPage custom un.nsDialogsPage un.nsDialogsPageLeave  
+UninstPage custom un.nsDialogsPage un.nsDialogsPageLeave
 Function un.nsDialogsPage
 	nsDialogs::Create 1018
 	Pop $Dialog_1
@@ -87,7 +85,7 @@ SectionEnd
 !macroend
 ```
 
->关于自定义页面的官方文档：https://nsis.sourceforge.io/Docs/Modern%20UI%202/Readme.html
+> 关于自定义页面的官方文档：https://nsis.sourceforge.io/Docs/Modern%20UI%202/Readme.html
 
 参考这段
 
@@ -98,7 +96,7 @@ If you want add your custom pages to your installer, you can insert your own pag
 !insertmacro MUI_PAGE_WELCOME
 Page custom FunctionName ;Custom page
 !insertmacro MUI_PAGE_COMPONENTS
- 
+
 ;Uninstaller
 !insertmacro MUI_UNPAGE_CONFIRM
 UninstPage custom un.FunctionName ;Custom page
@@ -115,11 +113,11 @@ Function CustomPageFunction
 FunctionEnd
 ```
 
->使用 nsDialogs 创建自定义界面，  nsDialogs  的详细文档：https://nsis.sourceforge.io/Docs/nsDialogs/Readme.html
+> 使用 nsDialogs 创建自定义界面， nsDialogs 的详细文档：https://nsis.sourceforge.io/Docs/nsDialogs/Readme.html
 
-### 2.修改builderOptions  配置 
+### 2.修改 builderOptions 配置
 
-我用的vue-electron 所以在vue.config.js中配置
+我用的 vue-electron 所以在 vue.config.js 中配置
 
 ```js
  builderOptions: {
@@ -127,25 +125,25 @@ FunctionEnd
         nsis: {
           ...
           warningsAsErrors: false ,// nsis警告变错误（防止警告变成报错无法打包）
-          include: 'build/nsis/uninstaller.nsh', // NSIS包含定制安装程序脚本的路径 
-          
+          include: 'build/nsis/uninstaller.nsh', // NSIS包含定制安装程序脚本的路径
+
         }
       }
 ```
 
 ## 注意事项
 
-如果include像我一样添加的是卸载页面，会报错：warning 6020: Uninstaller script code found but WriteUninstaller never used - no uninstaller will be
+如果 include 像我一样添加的是卸载页面，会报错：warning 6020: Uninstaller script code found but WriteUninstaller never used - no uninstaller will be
 
 虽然只是警告 但是 编译时默认使用/WX (将警告视为错误 `warningsAsErrors`为`true`（默认） )，导致打包中断。
 
-因为一直没有找到对应 WriteUninstaller 应该写在哪，而且改node_modules中的源码也不太好,干脆不让警告视为错误，
+因为一直没有找到对应 WriteUninstaller 应该写在哪，而且改 node_modules 中的源码也不太好,干脆不让警告视为错误，
 
 修改 warningsAsErrors = false
 
 ## 预定义宏
 
-关于include脚本 还可以添加预定好的宏  ,下面是例子 可以自己在中添加需要执行的代码
+关于 include 脚本 还可以添加预定好的宏 ,下面是例子 可以自己在中添加需要执行的代码
 
 ```nsis
 ; include 脚本 用于在安装和卸载的各个阶段做一些事情
@@ -154,12 +152,12 @@ FunctionEnd
 ; !macro preInit
 ; ; 安装时最早执行0
 ;   ; This macro is inserted at the beginning of the NSIS .OnInit callback
-;   MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/preInit" IDOK 
+;   MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/preInit" IDOK
 ; !macroend
 ; ==============================================================================
 ; !macro customInit
 ; ; 安装时其次执行1
-;   MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customInit" IDOK 
+;   MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customInit" IDOK
 ; !macroend
 ; ==============================================================================
 ; # 卸载
@@ -170,7 +168,7 @@ FunctionEnd
 ; ==============================================================================
 ; !macro customInstall
 ; ; 安装时其次执行4
-;   MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customInstall" IDOK 
+;   MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customInstall" IDOK
 ; !macroend
 ; ==============================================================================
 ; !macro customUnInit
@@ -206,7 +204,7 @@ FunctionEnd
 ;   # set  $isForceMachineInstall (给机器的每个用户都安装) or $isForceCurrentInstall (给当前用户安装)
 ;   # to enforce one or the other modes.
 ;     ; StrCpy $isForceMachineInstall "1"
-;     MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customInstallMode" IDOK 
+;     MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customInstallMode" IDOK
 ; !macroend
 ; ==============================================================================
 ; !macro customRemoveFiles
@@ -214,12 +212,12 @@ FunctionEnd
 ;     ; Section  /o "是否删除用户数据"
 ;     ; MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/NSISDemo" IDOK
 ;     ; SectionEnd
-;     MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customRemoveFiles" IDOK 
-;   # set $isForceMachineInstall or $isForceCurrentInstall 
+;     MessageBox MB_OK  "${BUILD_RESOURCES_DIR}/customRemoveFiles" IDOK
+;   # set $isForceMachineInstall or $isForceCurrentInstall
 ;   # to enforce one or the other modes.
 ; !macroend
 ; ==============================================================================
 
 ```
 
-如果要做卸载后表单选项 也可以用以上界面 添加对应的表单控件在dialog中，和发送地址即可
+如果要做卸载后表单选项 也可以用以上界面 添加对应的表单控件在 dialog 中，和发送地址即可

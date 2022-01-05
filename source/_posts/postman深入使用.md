@@ -20,17 +20,13 @@ hash: 02f0aeca266c8f169c65a4cbc80f5009f6cbd815e26238701c8b769ca18df5ca
 
 ![1574932590726](https://gitee.com/bitbw/my-gallery/raw/master/img/1574932590726.png)
 
-
-
 ## 设置环境变量
 
 ### 小技巧
 
->可将不同环境的baseurl 统一设置成一个变量名，然后只需要切换环境就可以请求不同baseurl的接口，在配合接口调试阶段很好用
+> 可将不同环境的 baseurl 统一设置成一个变量名，然后只需要切换环境就可以请求不同 baseurl 的接口，在配合接口调试阶段很好用
 
 ![image-20210425165810147](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210425165810147.png)
-
-
 
 ## 拦截器：统一设置 token
 

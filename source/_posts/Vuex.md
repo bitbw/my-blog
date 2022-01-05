@@ -27,22 +27,22 @@ hash: 20773b35f11080479b7b72dc4cc9c6ef8d710fb68b61ff745f8b5eff5355181a
 
 ```js
 new Vue({
- // state
- data() {
-  return {
-   count: 0,
-  };
- },
- // view
- template: `
+  // state
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  // view
+  template: `
         <div>{{ count }}</div>
         `,
- // actions
- methods: {
-  increment() {
-   this.count++;
+  // actions
+  methods: {
+    increment() {
+      this.count++;
+    },
   },
- },
 });
 ```
 
@@ -73,8 +73,8 @@ new Vue({
 
 ```js
 Vue.component("blog-post", {
- props: ["title"],
- template: "<h3>{{ title }}</h3>",
+  props: ["title"],
+  template: "<h3>{{ title }}</h3>",
 });
 ```
 
@@ -83,9 +83,7 @@ Vue.component("blog-post", {
 在子组件中使用 \$emit 发布一个自定义事件：
 
 ```html
-<button v-on:click="$emit('enlarge-text')">
- Enlarge text
-</button>
+<button v-on:click="$emit('enlarge-text')">Enlarge text</button>
 ```
 
 在使用这个组件的时候，使用 v-on 监听这个自定义事件
@@ -125,11 +123,11 @@ export default new Vue();
 ```js
 // 没有参数
 bus.$on("自定义事件名称", () => {
- // 执行操作
+  // 执行操作
 });
 // 有参数
 bus.$on("自定义事件名称", (data) => {
- // 执行操作
+  // 执行操作
 });
 ```
 
@@ -241,12 +239,12 @@ Vue.use(Vuex);
  * 创建一个 Vuex 容器实例，用来在组件的外部管理共享的数据状态
  */
 const store = new Vuex.Store({
- /**
-  * 类似于组件中的 data
-  */
- state: {
-  count: 0,
- },
+  /**
+   * 类似于组件中的 data
+   */
+  state: {
+    count: 0,
+  },
 });
 export default store;
 ```
@@ -259,8 +257,8 @@ import App from "./App.vue";
 import store from "./store/";
 Vue.config.productionTip = false;
 new Vue({
- render: (h) => h(App),
- store,
+  render: (h) => h(App),
+  store,
 }).$mount("#app");
 ```
 
@@ -282,7 +280,7 @@ new Vue({
 
 ```html
 <div>
- <p>{{ $store.state.count }}</p>
+  <p>{{ $store.state.count }}</p>
 </div>
 ```
 
@@ -310,7 +308,7 @@ computed: {
 
 ```html
 <div>
- <p>{{ count }}</p>
+  <p>{{ count }}</p>
 </div>
 ```
 
@@ -334,15 +332,15 @@ computed: {
 
 ```js
 const store = new Vuex.Store({
- state: {
-  count: 1,
- },
- mutations: {
-  increment(state) {
-   // 变更状态
-   state.count++;
+  state: {
+    count: 1,
   },
- },
+  mutations: {
+    increment(state) {
+      // 变更状态
+      state.count++;
+    },
+  },
 });
 ```
 
@@ -350,12 +348,12 @@ const store = new Vuex.Store({
 
 ```html
 <template>
- <div class="com">
-  <h2>Bar 组件</h2>
-  <p>{{ $store.state.count }}</p>
-  <!-- 如果是在 JS 中，则 this.$store.commit('increment') -->
-  <button @click="$store.commit('increment')">-</button>
- </div>
+  <div class="com">
+    <h2>Bar 组件</h2>
+    <p>{{ $store.state.count }}</p>
+    <!-- 如果是在 JS 中，则 this.$store.commit('increment') -->
+    <button @click="$store.commit('increment')">-</button>
+  </div>
 </template>
 ```
 
@@ -391,8 +389,8 @@ mutations: {
 
 ```js
 store.commit("increment", {
- n: 10,
- m: 20,
+  n: 10,
+  m: 20,
 });
 ```
 
@@ -400,8 +398,8 @@ store.commit("increment", {
 
 ```js
 store.commit({
- type: "increment",
- amount: 10,
+  type: "increment",
+  amount: 10,
 });
 ```
 
@@ -441,23 +439,23 @@ Action 类似于 mutation，不同在于：
 
 ```js
 const store = new Vuex.Store({
- state: {
-  count: 0,
- },
- mutations: {
-  increment(state) {
-   state.count++;
+  state: {
+    count: 0,
   },
- },
- actions: {
-  increment(context) {
-   // 执行异步操作
-   setTimeout(() => {
-    // 提交 mutation 更新 state
-    context.commit("increment");
-   }, 1000);
+  mutations: {
+    increment(state) {
+      state.count++;
+    },
   },
- },
+  actions: {
+    increment(context) {
+      // 执行异步操作
+      setTimeout(() => {
+        // 提交 mutation 更新 state
+        context.commit("increment");
+      }, 1000);
+    },
+  },
 });
 ```
 
@@ -482,7 +480,7 @@ Actions 和 Mutation 一样，也支持自定义传参：
 <button @click="$store.dispatch('increment', 10)">分发 Action</button>
 <!-- 多个参数放到一个对象中 -->
 <button @click="$store.dispatch('increment', { n: 10, m: 20 })">
- 分发 Action
+  分发 Action
 </button>
 ```
 

@@ -4,7 +4,7 @@ date: 2021-10-11 14:44:08
 tags:
   - hexo
   - 博客园
-  - node
+  - Nodejs
 categories: Hexo
 hash: 5fb0308da7f794c617d752c4bb9a3ae69c3092da295ca115f10ee6ef71d0ceda
 cnblogs:
@@ -327,7 +327,7 @@ function genArticleDate(articleOrigin) {
   const datas = articleOrigin.split("---");
   const temp = datas[1].replace(/\t/g, "");
   const titleObj = YAML.parse(temp);
- // datas.length > 3 为边际情况特殊处理一下
+  // datas.length > 3 为边际情况特殊处理一下
   const contentData = datas.length > 3 ? datas.slice(2).join("---") : datas[2];
   return {
     titleObj,
@@ -368,7 +368,10 @@ async function handlePushPost(filePath) {
       postid: cnblogs.postid,
     });
     if (res.methodResponse.fault) {
-      console.log("[修改失败]", res.methodResponse.fault.value.struct.member[1].value.string);
+      console.log(
+        "[修改失败]",
+        res.methodResponse.fault.value.struct.member[1].value.string
+      );
       throw Error(res.methodResponse.fault.value.struct.member[1].value.string);
     }
     console.log("[修改成功]", res.methodResponse.params.param.value.boolean);
@@ -382,7 +385,10 @@ async function handlePushPost(filePath) {
     });
     res;
     if (res.methodResponse.fault) {
-      console.log("[上传失败]", res.methodResponse.fault.value.struct.member[1].value.string);
+      console.log(
+        "[上传失败]",
+        res.methodResponse.fault.value.struct.member[1].value.string
+      );
       throw Error(res.methodResponse.fault.value.struct.member[1].value.string);
     }
     console.log("[上传成功]", res.methodResponse.params.param.value.string);
@@ -433,8 +439,13 @@ axios.interceptors.response.use(
   },
   (error) => {
     // 对响应错误做点什么
-    let msg = error.response && error.response.data.message ? error.response.data.message : error;
-    console.error(error.response ? `${error.response.status} : ${msg}` : `网络不可用`);
+    let msg =
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error;
+    console.error(
+      error.response ? `${error.response.status} : ${msg}` : `网络不可用`
+    );
     return Promise.reject(error);
   }
 );
@@ -444,7 +455,9 @@ function pushPost({ type = "add", content, title, postid }) {
     "https://rpc.cnblogs.com/metaweblog/bitbw",
     `<?xml version="1.0"?>
     <methodCall>
-    <methodName>metaWeblog.${type === "add" ? "newPost" : "editPost"}</methodName>
+    <methodName>metaWeblog.${
+      type === "add" ? "newPost" : "editPost"
+    }</methodName>
     <params>
     <param>
         <value><string>${type === "add" ? "623687" : postid}</string></value>
@@ -504,14 +517,14 @@ function getPost({ postid }) {
   );
 }
 
-function XMLEscape(content){
-  let newContent =content
+function XMLEscape(content) {
+  let newContent = content;
   newContent = newContent.replace(/&/g, "&amp;");
   newContent = newContent.replace(/</g, "&lt;");
   newContent = newContent.replace(/>/g, "&gt;");
   newContent = newContent.replace(/"/g, "&quot;");
   newContent = newContent.replace(/'/g, "&apos;");
-  return newContent
+  return newContent;
 }
 
 module.exports = {

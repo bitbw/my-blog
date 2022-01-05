@@ -10,21 +10,19 @@ cnblogs:
 hash: dac2ad4de82cb1e64ae9d1174d6506dd189a5290b7e9c195c9dec02b8da105ed
 ---
 
+由于中文的 Windows 使用的是 GBK 编码，而 Linux 默认使用 UTF-8 编码的，如果在 Windows 打包带中文文件的 zip 包，则这个 zip 包在 Linux 下面使用默认的归档管理器打开这个 zip 包的时候，中文文件名会显示乱码。
 
+## 解决方法 1：
 
-由于中文的Windows使用的是GBK编码，而Linux默认使用UTF-8编码的，如果在Windows打包带中文文件的zip包，则这个zip包在Linux下面使用默认的归档管理器打开这个zip包的时候，中文文件名会显示乱码。
-
-## 解决方法1：
-
-使用GBK格式解压
+使用 GBK 格式解压
 
 ```bash
 unzip -O GBK *.zip
 ```
 
-## 解决方法2:
+## 解决方法 2:
 
-安装p7zip-rar
+安装 p7zip-rar
 
 ```bash
 sudo apt-get install p7zip-rar

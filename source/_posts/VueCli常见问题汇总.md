@@ -6,11 +6,9 @@ tags:
 categories: Vue
 ---
 
+### 去除 PWA 插件
 
-
-### 去除PWA插件
-
-去除package.json中的PWA依赖 从新npm install
+去除 package.json 中的 PWA 依赖 从新 npm install
 
 ```json
  "devDependencies": {
@@ -19,6 +17,3 @@ categories: Vue
      ...
  }
 ```
-
-
-

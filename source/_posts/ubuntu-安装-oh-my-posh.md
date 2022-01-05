@@ -12,23 +12,20 @@ cnblogs:
 hash: ccd7157cfd798b1900770682363335deb1191169bd7643bc8d997f39aaa7dacf
 ---
 
-
-
 ## 前言
 
-根据Windows Terminal 中powerline的教程发现 oh-my-posh 还可以安装到ubuntu系统下，于是尝试了一下
+根据 Windows Terminal 中 powerline 的教程发现 oh-my-posh 还可以安装到 ubuntu 系统下，于是尝试了一下
 
 ## 安装
 
-Windows Terminal中ubuntu安装oh-my-posh教程：https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
+Windows Terminal 中 ubuntu 安装 oh-my-posh 教程：https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup
 
 oh-my-posh 官网：https://ohmyposh.dev/docs/
- - linux安装教程：https://ohmyposh.dev/docs/linux
- - 字体安装教程：https://ohmyposh.dev/docs/fonts
 
+- linux 安装教程：https://ohmyposh.dev/docs/linux
+- 字体安装教程：https://ohmyposh.dev/docs/fonts
 
-
-### 安装oh-my-posh
+### 安装 oh-my-posh
 
 ```bash
 wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
@@ -45,21 +42,22 @@ chmod u+rw ~/.poshthemes/*.json
 rm ~/.poshthemes/themes.zip
 ```
 
-如果您使用的是Ubuntu 18.04或16.04，则需要先安装正确版本的golang：
+如果您使用的是 Ubuntu 18.04 或 16.04，则需要先安装正确版本的 golang：
 
 ```bash
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt update
 ```
 
-### 自定义您的Ubuntu提示
+### 自定义您的 Ubuntu 提示
 
 查看所有主题
+
 ```bash
 for file in ~/.poshthemes/*.omp.json; do echo "$file\n"; oh-my-posh --config $file --shell universal; echo "\n"; done;
 ```
 
-`~/.bashrc`使用`nano ~/.bashrc`或您选择的文本编辑器打开文件。这是一个bash脚本，每次bash启动时运行。添加以下内容（将主题更改为您喜欢的主题）：
+`~/.bashrc`使用`nano ~/.bashrc`或您选择的文本编辑器打开文件。这是一个 bash 脚本，每次 bash 启动时运行。添加以下内容（将主题更改为您喜欢的主题）：
 
 ```bash
 eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/jandedobbeleer.omp.json)"
@@ -96,8 +94,7 @@ cd Meslo
 
 ![image-01](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210415135918711.png)
 
-
-## 在vscode中字体设置
+## 在 vscode 中字体设置
 
 ```json
 "terminal.integrated.fontFamily": "MesloLGM NF"

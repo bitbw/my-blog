@@ -9,22 +9,23 @@ cnblogs:
 hash: 740b6594b9f93aec59f4a2860db30d9488b44e2e2954c8a1c12f92d38207388c
 ---
 
-
 ## 电脑不进系统之开机重复自动修复不进系统
-{% note primary %} 修复建议使用wepe {% endnote %}
+
+{% note primary %} 修复建议使用 wepe {% endnote %}
+
 ### 修复：
 
-b站视频：https://www.bilibili.com/video/BV1Gv41177gU?p=1&share_medium=android&share_plat=android&share_session_id=19331413-99af-4377-82ff-8b31a9cc451c&share_source=WEIXIN&share_tag=s_i&timestamp=1628169593&unique_k=IAUbQn
+b 站视频：https://www.bilibili.com/video/BV1Gv41177gU?p=1&share_medium=android&share_plat=android&share_session_id=19331413-99af-4377-82ff-8b31a9cc451c&share_source=WEIXIN&share_tag=s_i&timestamp=1628169593&unique_k=IAUbQn
 
-### wepe下载地址
+### wepe 下载地址
 
 http://www.wepe.com.cn/download.html
 
-#### 安装U盘卡在38%左右不动的问题
+#### 安装 U 盘卡在 38%左右不动的问题
 
-原因：应该是ui界面卡住了
+原因：应该是 ui 界面卡住了
 
-解决：打开任务管理器 找到wepe的任务 ，右键切换到，或双击 就可以了
+解决：打开任务管理器 找到 wepe 的任务 ，右键切换到，或双击 就可以了
 
 ### 各类型主机启动方式快捷键
 

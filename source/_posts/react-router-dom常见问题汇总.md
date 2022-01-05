@@ -12,47 +12,51 @@ categories:	React
 ### 基础用法
 
 ```js
-import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import '../styles/global.css'
+import "../styles/global.css";
 
-import Layout from '../containers/Layout'
-import Home from '../pages/Home'
-import Login from '../containers/Login'
-import RecoveryPassword from '../containers/RecoveryPassword'
-import NotFound from '../pages/NotFound'
+import Layout from "../containers/Layout";
+import Home from "../pages/Home";
+import Login from "../containers/Login";
+import RecoveryPassword from "../containers/RecoveryPassword";
+import NotFound from "../pages/NotFound";
 
 const App = () => {
   return (
     <Router>
       <Layout>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
-          <Route exact path="/login" element={<Login/>}/>
-          <Route exact path="/recovery-password" element={<RecoveryPassword/>}/>
-          <Route path="*" element={<NotFound/>}/>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route
+            exact
+            path="/recovery-password"
+            element={<RecoveryPassword />}
+          />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </Router>
   );
-}
+};
 
 export default App;
 ```
 
 ### 中类组件的用法
 
-自定义withRouter 包装类组件
+自定义 withRouter 包装类组件
 
 ```js
 // in hocs.js
 function withNavigation(Component) {
-  return props => <Component {...props} navigate={useNavigate()} />;
+  return (props) => <Component {...props} navigate={useNavigate()} />;
 }
 
 function withParams(Component) {
-  return props => <Component {...props} params={useParams()} />;
+  return (props) => <Component {...props} params={useParams()} />;
 }
 
 // in BlogPost.js
@@ -64,7 +68,6 @@ class BlogPost extends React.Component {
 }
 
 export default withParams(BlogPost);
-
 ```
 
 ### 嵌套路由
@@ -113,4 +116,3 @@ export default class Main extends Component {
   }
 }
 ```
-

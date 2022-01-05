@@ -12,7 +12,9 @@ hash: 3c333d3c7c83ea0dbdc6e841742988cbc8d61b7c0599dd98c77657a842aa7484
 ---
 
 最终实现效果：
+
 <!--more-->
+
 ![单表格托拽](https://gitee.com/bitbw/my-gallery/raw/master/img/单表格托拽.gif)
 
 js 部分实现
@@ -58,21 +60,21 @@ css 部分
 ```css
 //针对固定列的table需要处理hover的样式
 tr.hover-row {
- &,
- &.el-table__row--striped {
   &,
-  &.current-row {
-   > td {
-    background-color: transparent;
-   }
+  &.el-table__row--striped {
+    &,
+    &.current-row {
+      > td {
+        background-color: transparent;
+      }
+    }
   }
- }
 }
 //托拽时的样式
 .sortable-ghost {
- opacity: 0.8;
- color: #fff !important;
- background: #42b983 !important;
+  opacity: 0.8;
+  color: #fff !important;
+  background: #42b983 !important;
 }
 ```
 

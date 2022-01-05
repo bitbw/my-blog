@@ -29,12 +29,12 @@ hash: 89113d8647682fd0f20faf0e8ed2e8bfb2bc01c18200cec6945505aa0891ac84
 
 ```js
 function get(url, cd) {
- const xhr = new XMLHttpRequest();
- xhr.open("get", url);
- xhr.send();
- xhr.onload = function () {
-  cd(this.response);
- };
+  const xhr = new XMLHttpRequest();
+  xhr.open("get", url);
+  xhr.send();
+  xhr.onload = function () {
+    cd(this.response);
+  };
 }
 ```
 
@@ -45,10 +45,10 @@ function get(url, cd) {
 ```js
 const xhr = new XMLHttpRequest();
 xhr.addEventListener("load", function () {
- resolve(this.response);
+  resolve(this.response);
 });
 xhr.addEventListener("error", function (err) {
- reject(err);
+  reject(err);
 });
 xhr.open("get", url);
 xhr.send();
@@ -60,13 +60,13 @@ xhr.send();
 
 ```js
 get("http://jsonplaceholder.typicode.com/posts", function (res) {
- console.log(1);
+  console.log(1);
 });
 get("http://jsonplaceholder.typicode.com/comments", function (res) {
- console.log(2);
+  console.log(2);
 });
 get("http://jsonplaceholder.typicode.com/users", function (res) {
- console.log(3);
+  console.log(3);
 });
 ```
 
@@ -76,13 +76,13 @@ get("http://jsonplaceholder.typicode.com/users", function (res) {
 
 ```js
 get("http://jsonplaceholder.typicode.com/posts", function (res) {
- console.log(1);
- get("http://jsonplaceholder.typicode.com/comments", function (res) {
-  console.log(2);
-  get("http://jsonplaceholder.typicode.com/users", function (res) {
-   console.log(3);
+  console.log(1);
+  get("http://jsonplaceholder.typicode.com/comments", function (res) {
+    console.log(2);
+    get("http://jsonplaceholder.typicode.com/users", function (res) {
+      console.log(3);
+    });
   });
- });
 });
 ```
 
@@ -96,26 +96,26 @@ get("http://jsonplaceholder.typicode.com/posts", function (res) {
 
 ```js
 axios({
- method: "GET",
- url: "http://jsonplaceholder.typicode.com/posts",
+  method: "GET",
+  url: "http://jsonplaceholder.typicode.com/posts",
 })
- .then((res) => {
-  console.log("2 posts 的响应结果");
-  return axios({
-   method: "GET",
-   url: "http://jsonplaceholder.typicode.com/users",
+  .then((res) => {
+    console.log("2 posts 的响应结果");
+    return axios({
+      method: "GET",
+      url: "http://jsonplaceholder.typicode.com/users",
+    });
+  })
+  .then((res) => {
+    console.log("3 users 的响应结果");
+    return axios({
+      method: "GET",
+      url: "http://jsonplaceholder.typicode.com/comments",
+    });
+  })
+  .then((res) => {
+    console.log("4 comments 的响应结果");
   });
- })
- .then((res) => {
-  console.log("3 users 的响应结果");
-  return axios({
-   method: "GET",
-   url: "http://jsonplaceholder.typicode.com/comments",
-  });
- })
- .then((res) => {
-  console.log("4 comments 的响应结果");
- });
 ```
 
 ### 补充：setTimeout、setInterval 被遗忘的第三个参数
@@ -126,14 +126,14 @@ axios({
 
 ```js
 var sum = function (x, y, z) {
- console.log(x + y + z); // 打印6
+  console.log(x + y + z); // 打印6
 };
 setTimeout(sum, 1000, 1, 2, 3);
 ```
 
 ## Promise 对象
 
-> 
+>
 
 ### Promise 的含义
 
@@ -181,13 +181,13 @@ const promise = new Promise(function(resolve, reject) {
 
 ```js
 function timeout(ms) {
- return new Promise((resolve, reject) => {
-  setTimeout(resolve, ms, "done");
- });
+  return new Promise((resolve, reject) => {
+    setTimeout(resolve, ms, "done");
+  });
 }
 
 timeout(100).then((value) => {
- console.log(value);
+  console.log(value);
 });
 ```
 
@@ -201,27 +201,27 @@ timeout(100).then((value) => {
 
 ### Promise.all
 
- \* Promise.all()方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
+\* Promise.all()方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
 
- \* 所有参数的状态都变成fulfilled，res的状态才会变成fulfilled
+\* 所有参数的状态都变成 fulfilled，res 的状态才会变成 fulfilled
 
 ### Promise.race
 
- \* Promise.race()方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
+\* Promise.race()方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
 
- \* 参数之中有一个实例率先改变状态，res的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给p的回调函数
+\* 参数之中有一个实例率先改变状态，res 的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给 p 的回调函数
 
 ### Promise.allSettled
 
- \* Promise.allSettled()方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例。
+\* Promise.allSettled()方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例。
 
- \* 只有等到所有这些参数实例都返回结果，不管是fulfilled还是rejected，包装实例才会结束。
+\* 只有等到所有这些参数实例都返回结果，不管是 fulfilled 还是 rejected，包装实例才会结束。
 
 ### Promise.any
 
-​    \* Promise.any()方法。该方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例返回。
+​ \* Promise.any()方法。该方法接受一组 Promise 实例作为参数，包装成一个新的 Promise 实例返回。
 
-​    \* 只要参数实例有一个变成fulfilled状态，包装实例就会变成fulfilled状态；
+​ \* 只要参数实例有一个变成 fulfilled 状态，包装实例就会变成 fulfilled 状态；
 
 ## async 函数
 
@@ -257,10 +257,10 @@ await 代表等待的意思，就是等待后面的 promise 执行完返回后 �
 
 ```js
 async function ayrequest() {
- const res = await request("http://jsonplaceholder.typicode.com/users");
- console.log(1); //此代码会等待上面代码返回后再执行
- request("http://jsonplaceholder.typicode.com/users");
- console.log(2); // 此代码不会等待上面代码返回 ， 直接执行
+  const res = await request("http://jsonplaceholder.typicode.com/users");
+  console.log(1); //此代码会等待上面代码返回后再执行
+  request("http://jsonplaceholder.typicode.com/users");
+  console.log(2); // 此代码不会等待上面代码返回 ， 直接执行
 }
 ```
 
@@ -270,18 +270,18 @@ async function ayrequest() {
 
 ```js
 async function ayrequest() {
- const res = await request("http://jsonplaceholder.typicode.com/users");
- return request("http://jsonplaceholder.typicode.com/posts");
- // 异常处理
- try {
-  console.log(1);
-  const res = await request("sdf://dsfsdfsdf.sdf.com/dsf");
-  console.log(2);
-  console.log(res);
- } catch (error) {
-  console.log(3);
-  console.log("发送失败", error);
- }
+  const res = await request("http://jsonplaceholder.typicode.com/users");
+  return request("http://jsonplaceholder.typicode.com/posts");
+  // 异常处理
+  try {
+    console.log(1);
+    const res = await request("sdf://dsfsdfsdf.sdf.com/dsf");
+    console.log(2);
+    console.log(res);
+  } catch (error) {
+    console.log(3);
+    console.log("发送失败", error);
+  }
 }
 ```
 
@@ -298,22 +298,22 @@ async created () {
  }
 ```
 
-## 利用Promise + aysnc 实现对原生ajax的封装
+## 利用 Promise + aysnc 实现对原生 ajax 的封装
 
->这里利用 module 的 顶端可以直接使用 await 的特性
+> 这里利用 module 的 顶端可以直接使用 await 的特性
 
 ```html
 <script type="module">
   function get(url) {
-     // 返回一个封装的 Promise
+    // 返回一个封装的 Promise
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.addEventListener("load", res => {
+      xhr.addEventListener("load", (res) => {
         let reseult = JSON.parse(res.target.response || "{}");
         // 成功resolve返回结果 状态变为 fulfilled （已成功）
         resolve(reseult);
       });
-      xhr.addEventListener("error", err => {
+      xhr.addEventListener("error", (err) => {
         // 失败reject返回错误 状态变为 rejected （已失败）
         reject(err);
       });
@@ -321,23 +321,22 @@ async created () {
       xhr.send();
     });
   }
-   // 使用 await 等待 Promise的 返回值
-   let res = await get("http://localhost:8848/getSysDB");
+  // 使用 await 等待 Promise的 返回值
+  let res = await get("http://localhost:8848/getSysDB");
 </script>
 ```
 
-## 使用Promise的注意事项
+## 使用 Promise 的注意事项
 
-### 将多个Promise包装成一个Promise的方法 ，都是并行执行
+### 将多个 Promise 包装成一个 Promise 的方法 ，都是并行执行
 
 - Promise.all
 - Promise.race
 - Promise.allSettled
 - Promise.any
 
-这几个方法都用于将Promise 实例作为参数，包装成一个新的 Promise 实例返回
+这几个方法都用于将 Promise 实例作为参数，包装成一个新的 Promise 实例返回
 
-这几个方法在执行的 Promise 时候，都是并行执行 
+这几个方法在执行的 Promise 时候，都是并行执行
 
-**注意：如果有先执行完某个Promise 在执行某个 Promise 的时候不可以这几种方法，需要改串行执行（一个执行完再执行另一个）**
-
+**注意：如果有先执行完某个 Promise 在执行某个 Promise 的时候不可以这几种方法，需要改串行执行（一个执行完再执行另一个）**

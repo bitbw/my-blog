@@ -9,22 +9,20 @@ cnblogs:
 hash: 293dacce721466ffa40d338fb0f98019a7e99943ee8945e704b9d3c133518a31
 ---
 
-
-
-## 使用vscode直接调试js代码
+## 使用 vscode 直接调试 js 代码
 
 ### 步骤
 
-- 将当前标签页设置为需要调试的js
+- 将当前标签页设置为需要调试的 js
 - 将需要打断点的地方标上小红点
 - 左侧工具栏点击小虫子（Run and Debug）
 - 点击运行和调试
-- 选择nodejs作为调试工具
+- 选择 nodejs 作为调试工具
 - 开始调试
 
 ![image-20210309103224511](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103224511.png)
 
-如果只调试js代码的话，选择nodejs即可
+如果只调试 js 代码的话，选择 nodejs 即可
 
 ![image-20210309103344902](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103344902.png)
 
@@ -34,15 +32,15 @@ hash: 293dacce721466ffa40d338fb0f98019a7e99943ee8945e704b9d3c133518a31
 
 ### 总结
 
-使用vscode调试非常方便，比直接在浏览器中调式体验更好，可以边调试边改代码，很爽的体验；
+使用 vscode 调试非常方便，比直接在浏览器中调式体验更好，可以边调试边改代码，很爽的体验；
 
-## launch  和 tasks 的使用 
+## launch 和 tasks 的使用
 
-### launch  的使用
+### launch 的使用
 
 待完成
 
-### tasks（任务）的使用 
+### tasks（任务）的使用
 
 官网：https://code.visualstudio.com/docs/editor/tasks#_variable-substitution
 
@@ -54,7 +52,7 @@ hash: 293dacce721466ffa40d338fb0f98019a7e99943ee8945e704b9d3c133518a31
 
 ### tasks.json
 
->具体的配置文件
+> 具体的配置文件
 
 ```json
 {
@@ -74,7 +72,7 @@ hash: 293dacce721466ffa40d338fb0f98019a7e99943ee8945e704b9d3c133518a31
                     "relative",
                     "${fileDirname}"
                 ],
-                "pattern": {	
+                "pattern": {
                     // 提示文本进行分组 下面是具体的提示文本
                     // s920.rule:652:1: warning 规则Server,"软件预装","os"已在647行定义
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error)\\s+(.*)$",
@@ -102,13 +100,10 @@ hash: 293dacce721466ffa40d338fb0f98019a7e99943ee8945e704b9d3c133518a31
 }
 ```
 
-
-
 ## 注意事项
 
-使用launch  时.vscode目录一定要在所打开文件夹的根节点下
+使用 launch 时.vscode 目录一定要在所打开文件夹的根节点下
 
-否则点击运行启动调试则只能调试当天打开的tab标签页
+否则点击运行启动调试则只能调试当天打开的 tab 标签页
 
 ![image-20210723134611394](https://gitee.com/bitbw/my-gallery/raw/master/img/vscode%E8%B0%83%E8%AF%95%E6%B3%A8%E6%84%8F01.png)
-

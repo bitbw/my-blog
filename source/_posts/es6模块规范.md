@@ -56,11 +56,11 @@ const c = 3;
 
 // 语法就是这样，后面的成员也不是对象的简写方式， {} 中的成员必须当前模块能够访问的成员名称
 export {
- // 不是 a: a 的简写，必须 a
- // a 必须是当前模块中的某个成员
- a,
- b,
- c,
+  // 不是 a: a 的简写，必须 a
+  // a 必须是当前模块中的某个成员
+  a,
+  b,
+  c,
 };
 
 // 以上写法等价于
@@ -78,7 +78,7 @@ export const a = 1;
 export const b = 2;
 
 export default function (x, y) {
- return x + y;
+  return x + y;
 }
 ```
 
@@ -152,19 +152,19 @@ export const c = [1, 2, 3];
 
 ### 模块数据结构
 
-使用 import * as xx form "xxx" 可以获取 模块的结构
+使用 import \* as xx form "xxx" 可以获取 模块的结构
 
 ```js
 {
   default: {	  // export default 导出的数据
     name: "default"
   },
-  module1: {	// 单独 export 导出的数据 
+  module1: {	// 单独 export 导出的数据
     name: "module1"
-  }, 
+  },
   module2: {	// 多个 export 都再这一层
     name: "module2"
-  } 
+  }
 }
 ```
 
@@ -172,17 +172,17 @@ export const c = [1, 2, 3];
 
 #### 导入多个 导出多个
 
-<a name="project1">案例1.1</a>
+<a name="project1">案例 1.1</a>
 
 module1.js
 
 ```js
 const module1 = {
-  name: "module1"
+  name: "module1",
 };
-const module3= {    
-    name: "module3"
-}
+const module3 = {
+  name: "module3",
+};
 export default module1;
 export { module1 }; // 多个导出模块也可以这样写 export { module1 };
 export { module3 };
@@ -192,10 +192,10 @@ module2.js
 
 ```js
 const module2 = {
-    name: "module2"
-  };
-  export default module2;
-  export { module2 };
+  name: "module2",
+};
+export default module2;
+export { module2 };
 ```
 
 index.js
@@ -227,7 +227,7 @@ console.log("modules", modules)
 #### 导入默认模块 并导出为默认模块
 
 ```js
-export { default } from './dialog.vue'  // 将默认模块 导出为默认模块
+export { default } from "./dialog.vue"; // 将默认模块 导出为默认模块
 ```
 
 ### 常用写法
@@ -237,13 +237,11 @@ export { default } from './dialog.vue'  // 将默认模块 导出为默认模块
 index.js
 
 ```js
-import VBtn from './VBtn'   // 将index.js作为导出的中转将VBtn.vue导出
+import VBtn from "./VBtn"; // 将index.js作为导出的中转将VBtn.vue导出
 
-export { VBtn }
-export default VBtn
+export { VBtn };
+export default VBtn;
 ```
-
-
 
 ### 注意事项：
 
@@ -254,15 +252,15 @@ module1.js
 ```js
 const module1 = {
   name: "module1",
-  id: Date.now() + Math.random() * 100
+  id: Date.now() + Math.random() * 100,
 };
 export default module1;
-export { module1 }
+export { module1 };
 ```
 
-多个模块导入一起导入 
+多个模块导入一起导入
 
-> tip:本例中虽然是两个js但打包后会合并到一个页面中执行，如果路由发生跳转则相当于重新编译所以导入模块也将重置
+> tip:本例中虽然是两个 js 但打包后会合并到一个页面中执行，如果路由发生跳转则相当于重新编译所以导入模块也将重置
 
 index.js
 
@@ -277,29 +275,30 @@ import * as modules from './module1.js'
 main.js
 
 ```js
-import * as modules from './module1.js' 
+import * as modules from './module1.js'
 {
   "name": "module1",
   "id": 1615195779568.6755
 }
 ```
 
-下面的id都是 1615195779568.6755 
+下面的 id 都是 1615195779568.6755
 
 #### export 导出重名模块 只会存在一个
 
-将 [案例1.1](#project1) 修改一下 
+将 [案例 1.1](#project1) 修改一下
 
 ```js
 const module1 = {
-  name: "module1"
+  name: "module1",
 };
-const module2= {    //module2.js 导出 和 module1.js 的导出 都有 module2
-    name: "module3"
-}
+const module2 = {
+  //module2.js 导出 和 module1.js 的导出 都有 module2
+  name: "module3",
+};
 export default module1;
-export { module1 }; 
-export { module2};
+export { module1 };
+export { module2 };
 ```
 
 main.js
@@ -312,7 +311,7 @@ console.log("modules", modules)  // 有两个重名模块 只会留在上面那�
     "name": "module1"
   },
   "module2": {
-    "name": "module3" 
+    "name": "module3"
   }
 }
 ```
@@ -321,21 +320,21 @@ console.log("modules", modules)  // 有两个重名模块 只会留在上面那�
 
 ```js
 export * from "./module2";  // 最终导出的 module2 将是 module2.js 中的
-export * from "./module1";   
+export * from "./module1";
 {
   "module1": {
     "name": "module1"
   },
   "module2": {
-    "name": "module2" 
+    "name": "module2"
   }
 }
 
 ```
 
-#### 直接 import  某个js 相当于直接执行这个js文件
+#### 直接 import 某个 js 相当于直接执行这个 js 文件
 
->如果不需要模块导出, 直接执行这个js     可以 improt xx.js
+> 如果不需要模块导出, 直接执行这个 js 可以 improt xx.js
 
 module.js
 
@@ -353,12 +352,10 @@ add(123123, 2351235);
 index.js
 
 ```js
-import './module3.mjs' 
-// 模块执行了   
+import "./module3.mjs";
+// 模块执行了
 // sum 2474358
 ```
-
-
 
 ### ES6 模块与 CommonJS 模块的差异
 
@@ -372,7 +369,7 @@ import './module3.mjs'
 
 第二个差异是因为 CommonJS 加载的是一个对象（即`module.exports`属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。
 
-详细分析见阮一峰es6入门：https://es6.ruanyifeng.com/#docs/module-loader
+详细分析见阮一峰 es6 入门：https://es6.ruanyifeng.com/#docs/module-loader
 
 #### CommonJS 模块加载 ES6 模块
 
@@ -380,18 +377,17 @@ CommonJS 的`require()`命令不能加载 ES6 模块，会报错，只能使用`
 
 ```js
 (async () => {
-  await import('./my-app.mjs');
+  await import("./my-app.mjs");
 })();
 ```
 
-#### ES6 模块加载 CommonJS 模块 
+#### ES6 模块加载 CommonJS 模块
 
 ES6 模块的`import`命令可以加载 CommonJS 模块，但是只能整体加载，不能只加载单一的输出项
 
 ```js
 // 正确
-import packageMain from 'commonjs-package';
+import packageMain from "commonjs-package";
 // 报错
-import { method } from 'commonjs-package';
+import { method } from "commonjs-package";
 ```
-
