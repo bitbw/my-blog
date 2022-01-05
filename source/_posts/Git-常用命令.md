@@ -6,7 +6,7 @@ tags:
 categories: Git
 cnblogs:
   postid: "15392421"
-hash: 48972262e3a0cace86a57bf565a7089141da785a51d2331e787af7eb0b99dc34
+hash: 7199204ea65bec028b5f5b8fef266715b32ffddb256d46698a7fb1ed5df3d345
 ---
 
 ## remote
@@ -117,4 +117,28 @@ git push -u origin main
 git remote add origin https://github.com/bitbw/test111.git
 git branch -M main
 git push -u origin main
+```
+## git设置代理
+
+##### 设置局部代理
+
+```
+git config --local http.proxy 127.0.0.1:1080
+```
+
+###### 端口要设置为本地代理的端口
+
+##### 设置全局代理
+
+```
+git config --global http.proxy 127.0.0.1:1080
+```
+
+为全局的 git 项目都设置代理
+
+取消代理设置
+
+```
+git config --local --unset http.proxy
+git config --global --unset http.proxy
 ```
