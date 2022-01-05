@@ -8,7 +8,7 @@ tags:
 categories: Linux
 cnblogs:
   postid: "15393009"
-hash: ffff24c0248cf46a9749a1b5db8ca1c8d96a5813e4b0882a9f6997db1bc26754
+hash: de9854ea840a2437bd4da32b1465d79b2e45e858294d56a8aa5db9380bb60d11
 ---
 
 ## 安装 git

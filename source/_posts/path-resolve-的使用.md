@@ -8,7 +8,7 @@ tags:
 categories: Nodejs
 cnblogs:
   postid: "15392982"
-hash: 884f903343cd5bc487740f71264188010e73905ec13cd9a9dca1e500e3bc60fc
+hash: 9ff99a267e6386c1796d7355ff8dd341908d239525d89dd539eb438e31d51cc0
 ---
 
 ## 路径解析：path.resolve([from ...], to)

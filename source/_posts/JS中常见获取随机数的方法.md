@@ -6,7 +6,7 @@ tags:
 categories: js
 cnblogs:
   postid: "15392492"
-hash: 5bab5631ce34886997da7504571a3b3a94e981e80496d8eabd524aaff98d6035
+hash: b2438dd4644533a4c34c2df170d7ac638f73f79b6221efd416dc77912a7a554b
 ---
 
 ## JS 获取固定区间的随机数

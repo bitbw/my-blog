@@ -5,7 +5,7 @@ tags: vue
 categories: Vue
 cnblogs:
   postid: "15393043"
-hash: af7e4c163f21cbf560ddcf404c51a4a5bf89be20a9f2fa0311e1cbc02b102f6d
+hash: 03a62a50ad2b09040cae53ac3abb1ab41123f2222b3fd5ddd0c05c9bd4ebfba5
 ---
 
 ## MVVM 框架介绍

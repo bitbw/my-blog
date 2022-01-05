@@ -7,7 +7,7 @@ tags:
 categories: Linux
 cnblogs:
   postid: "15393006"
-hash: 66d6015139c572dfe96e356b5ad6460451a2f5393759d375cbd9484d5877265c
+hash: afd0692ab86ffdb113321d61af9f5ca54777f46eceb1025f59f4fd658437ded9
 ---
 
 ## **1、tar.gz 软件包的安装**

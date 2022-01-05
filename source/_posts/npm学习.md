@@ -5,6 +5,9 @@ tags:
   - npm
   - Nodejs
 categories: Nodejs
+hash: 88f8a0930cda4b0172abbccf36529c3e0660472e8f190c4d87f6b86bc1aff064
+cnblogs:
+  postid: "15765984"
 ---
 
 ## 创建一个 npm 账号
@@ -59,6 +62,27 @@ categories: Nodejs
 
 ```bash
 npm publish --access public
+```
+
+```log
+$ npm publish --access public
+npm notice
+npm notice 📦  @bitbw/my-test-package01@1.0.0
+npm notice === Tarball Contents ===
+npm notice 43B  README.md
+npm notice 241B index.js
+npm notice 238B package.json
+npm notice === Tarball Details ===
+npm notice name:          @bitbw/my-test-package01
+npm notice version:       1.0.0
+npm notice filename:      @bitbw/my-test-package01-1.0.0.tgz
+npm notice package size:  466 B
+npm notice unpacked size: 522 B
+npm notice shasum:        656cc61ee5de87d80dfc0a699b710e2163493f4f
+npm notice integrity:     sha512-bHtVFf7U3J+EL[...]AznC2Mfpz7Lvg==
+npm notice total files:   3
+npm notice
++ @bitbw/my-test-package01@1.0.0
 ```
 
 2.要查看您的公共包页面，请访问https://npmjs.com/package/*package-name ，将 package-name\*替换为您的包名称。公共包会 public 在 npm 网站上的包名称下方注明。

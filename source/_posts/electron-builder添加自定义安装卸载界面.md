@@ -8,7 +8,7 @@ tags:
 categories: Electron
 cnblogs:
   postid: "15392415"
-hash: 2c0e7265d5e7dd9c76122ec7459ccd59b168d279a2fcfc38ccb34de8359d6f3a
+hash: 7574148bdb9f1ddc93017a90745d1057411c415fc66d109680a09d32adf91115
 ---
 
 electron-builder 官方文档 ：https://www.electron.build/configuration/nsis#NsisOptions-script

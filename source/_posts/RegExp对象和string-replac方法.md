@@ -5,7 +5,7 @@ tags: js
 categories: js
 cnblogs:
   postid: "15392988"
-hash: cc0ae29aedf605236343d0a81a37e1914f1e9c06d76e341d21c936e1650079fd
+hash: 5ad4bd8eab7290004d0c9497deaa6cb9248270d12b6908da60ec8f60c31d3986
 ---
 
 ## RegExp 对象

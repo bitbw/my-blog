@@ -2,9 +2,12 @@
 title: 小程序vant组件库使用注意事项
 date: 2021-11-04 15:29:06
 tags:
-	- 小程序
-	- vant
+  - 小程序
+  - vant
 categories: 小程序
+hash: 124351decccfd281147bfa6be8b2f5046a949ec2f1476d070788bdca4a2b449d
+cnblogs:
+  postid: "15766376"
 ---
 
 ## 在 page 中修改组件内部样式

@@ -8,7 +8,7 @@ tags:
 categories: HTML
 cnblogs:
   postid: "15392411"
-hash: 3266c0ebe41135f532ebc72266760d8ed36d5285fd2e7b2e20aa9ed3ba8212f0
+hash: b14951f86df97ee11f0f90b384b5de86f10aaf7bc9f6bff3c95ef006670f938f
 ---
 
 最近学习 webpack 遇到了 Data URI 这种格式，觉得很有趣稍微学习一下，转载一篇别人写的比较好的文章；

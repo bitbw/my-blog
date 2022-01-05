@@ -7,7 +7,7 @@ tags:
 categories: Linux
 cnblogs:
   postid: "15392569"
-hash: 1eeb1540162b0016a08230795ed1f7c075578013a4d9965b7c594603fd080f8d
+hash: 54f6cf476829d0d1c85e202d04ff281e8190bc1ac5319093d66b3bf325940515
 ---
 
 ## 退出和进入 root 权限

@@ -7,7 +7,7 @@ tags:
 categories: Nodejs
 cnblogs:
   postid: "15392583"
-hash: 3513c7419642cea6cbc0341ee78adf248a63e632db688cb849c8e1a00ef9d871
+hash: cdef7604e659ce53fdb4bd8e6ffbc6547ff43891efbb79e6dbefddb4926396d5
 ---
 
 > 不推荐安装最新的 node 版本 好多包都没有对应的最新 node 版本的编译好的包

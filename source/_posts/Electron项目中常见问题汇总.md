@@ -7,7 +7,7 @@ tags:
 categories: Electron
 cnblogs:
   postid: "15392416"
-hash: aa6cf1fb713ead3e5a2e59d755b04f8c284e7641f2287699cabf8c8c4b08cd98
+hash: 3a49aeb0426e51d99b1465074c6c148ba3398a7ec88727b165b2e238783a8908
 ---
 
 ## electron 更新到 12 后提示 Require is not defined

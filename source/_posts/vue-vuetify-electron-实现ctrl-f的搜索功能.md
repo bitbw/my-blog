@@ -8,7 +8,7 @@ tags:
 categories: Vue
 cnblogs:
   postid: "15393013"
-hash: 196917a85c8214981abb9cc4bf16736fd56f8e66fa0ed83be80eee310264b9b7
+hash: 30bbd1197e9f933f4879faa612d83e484f1b911f30f7b8f037a286ede2bd589b
 ---
 
 > 因为在 electron 中没有找到 ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件

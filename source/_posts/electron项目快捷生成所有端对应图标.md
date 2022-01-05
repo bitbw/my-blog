@@ -6,7 +6,7 @@ tags:
 categories: Electron
 cnblogs:
   postid: "15392417"
-hash: 45aa2cfc22736971e882800fee3e6860510703e9af791dd44c67b89b07a62214
+hash: d0b29dd29b76600c5c2d6c6cf079a35b363893d46196f57c66ebd521e1eba585
 ---
 
 ## 使用 electron-icon-builder 可以一次性生成所有端对应的图标

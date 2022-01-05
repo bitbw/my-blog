@@ -7,7 +7,7 @@ tags:
 categories: Linux
 cnblogs:
   postid: "15393032"
-hash: f8333292473bf93bae82b6dc752b0e1cb4fe9223a138de15e1b2b5819977ee9b
+hash: ff4cb5899fa53d0ab5e7e85f1eba19a0f6d2ca19499b49de6a502c1815bc2c90
 ---
 
 ## Ubuntu 的安装
