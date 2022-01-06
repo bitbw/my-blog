@@ -199,3 +199,25 @@ Vue.config.devtools = true;
 MacOS 下打包 electron 项目需要 xcode ,同 windows 一样 （win 需要 visual studio），但是 xcode 太大了而且一般不需要整个 xcode ,这时可以使用[命令行工具 ](https://zhuanlan.zhihu.com/p/172365580)(Command Line Tools, CLT)，同样 win 也可以通过 node 进行配置命令命令行工具（在 node 安装时可以选择这些依赖）
 
 **但是**: MacOS 系统更新后 CLT 需要重新下载 ，不然下载依赖时会报找不到 xcode 的错误
+
+## MacOS 提示 Error: Cannot create BrowserWindow before app is ready at I.init
+
+### 原因
+
+应用还在加载中就点击了一下 触发了 `app.on("activate")` ，同时触发了 new BrowserWindow 此时 app 还没到 `ready`
+
+```js
+app.on("activate", () => {
+  // On macOS it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
+  if (BrowserWindow.getAllWindows().length === 0) createWindow();
+});
+```
+
+### 解决
+
+多加一个判断条件 `isReady` 开始为`false` 在 `ready` 时设置为 `true`
+
+```js
+if (BrowserWindow.getAllWindows().length === 0 && isReady) createWindow();
+```
