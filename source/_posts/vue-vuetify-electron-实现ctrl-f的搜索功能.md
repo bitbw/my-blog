@@ -8,12 +8,10 @@ tags:
 categories: Vue
 cnblogs:
   postid: "15393013"
-hash: 196917a85c8214981abb9cc4bf16736fd56f8e66fa0ed83be80eee310264b9b7
+hash: 30bbd1197e9f933f4879faa612d83e484f1b911f30f7b8f037a286ede2bd589b
 ---
 
-
-
-> 因为在electron 中没有找到ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件
+> 因为在 electron 中没有找到 ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件
 
 借鉴文章地址：https://www.jb51.net/article/181616.htm
 
@@ -26,7 +24,7 @@ hash: 196917a85c8214981abb9cc4bf16736fd56f8e66fa0ed83be80eee310264b9b7
 模板部分
 
 ```vue
-    <v-card class="history-info-drawer">
+<v-card class="history-info-drawer">
     <!-- 头部操作栏 -->
       <v-toolbar dense dark color="primary">
         <!-- input -->
@@ -68,8 +66,8 @@ export default {
     // 传入的内容字符串
     content: {
       type: String,
-      defualt: ""
-    }
+      defualt: "",
+    },
   },
   data() {
     return {
@@ -80,7 +78,7 @@ export default {
       // 经过转换的展示内容
       transitionContent: "",
       // 当前搜索字符串是否是首次定位
-      firstPosition: true
+      firstPosition: true,
     };
   },
   methods: {
@@ -147,11 +145,11 @@ export default {
         currentA.scrollIntoView({
           behavior: "smooth",
           block: "center",
-          inline: "nearest"
+          inline: "nearest",
         });
       }
       this.firstPosition = false;
-    }
+    },
   },
   watch: {
     searchStr(searchStr) {
@@ -161,13 +159,13 @@ export default {
       this.transitionContent = this.handleTransitionContent(searchStr);
       // 设置为首次定位
       this.firstPosition = true;
-    }
+    },
   },
   mounted() {
     // 首次先赋值
     this.transitionContent = this.handleTransitionContent("");
-  }
+  },
 };
 ```
 
-> 组件使用的是vuetify ，主要可以看逻辑部分  element 等组件的用法大同小异
+> 组件使用的是 vuetify ，主要可以看逻辑部分 element 等组件的用法大同小异

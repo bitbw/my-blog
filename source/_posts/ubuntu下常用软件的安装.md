@@ -8,18 +8,16 @@ tags:
 categories: Linux
 cnblogs:
   postid: "15393009"
-hash: ffff24c0248cf46a9749a1b5db8ca1c8d96a5813e4b0882a9f6997db1bc26754
+hash: de9854ea840a2437bd4da32b1465d79b2e45e858294d56a8aa5db9380bb60d11
 ---
 
-
-
-## 安装git
+## 安装 git
 
 官方：https://git-scm.com/download/linux
 
 ## 安装搜狗拼音
 
-官方：https://pinyin.sogou.com/linux/  ，https://pinyin.sogou.com/linux/help.php
+官方：https://pinyin.sogou.com/linux/ ，https://pinyin.sogou.com/linux/help.php
 
 ## qq
 
@@ -37,17 +35,17 @@ https://dcstore.spark-app.store/store/chat/wechat-linux-spark/
 
 安装
 
-``` bash
+```bash
 sudo apt-get install nginx
 ```
 
-查看nginx是否安装成功
+查看 nginx 是否安装成功
 
 ```bash
 nginx -v
 ```
 
-启动nginx
+启动 nginx
 
 ```bash
 service nginx start
@@ -71,7 +69,7 @@ service nginx stop
 wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
 ```
 
-> 这一步将apt的存储库重定向到Deeppin储存库
+> 这一步将 apt 的存储库重定向到 Deeppin 储存库
 
 成功将提示
 
@@ -93,4 +91,3 @@ sudo apt-get install ttf-wqy-microhei  #文泉驿-微米黑
 sudo apt-get install ttf-wqy-zenhei  #文泉驿-正黑
 sudo apt-get install xfonts-wqy #文泉驿-点阵宋体
 ```
-

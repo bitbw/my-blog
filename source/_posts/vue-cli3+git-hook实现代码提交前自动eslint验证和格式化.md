@@ -6,7 +6,7 @@ tags:
 categories: vue
 cnblogs:
   postid: "15393012"
-hash: 13cfabcccda9b2704e586e22b3af9000f64889e09240c71607a1fc88bb99872b
+hash: e7949838bbeb2a53fc38feb5582d8827448dfce9c23e6c8d47197785013d1c2b
 ---
 
 ## Git Hook
@@ -80,7 +80,9 @@ npx mrm@2 lint-staged
     "*.{js,vue}": ["vue-cli-service lint"]
   }
 ```
+
 再次 commit 时会看到这样的提示
+
 ```bash
 $ git commit -m "Update"
 [STARTED] Preparing...

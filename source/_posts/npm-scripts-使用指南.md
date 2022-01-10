@@ -9,10 +9,8 @@ tags:
 categories: Nodejs
 cnblogs:
   postid: "15392979"
-hash: 4e77ebcf4b997e5a02661057c9e03b5e0be9d6f1118ac262d87b302ddfed7244
+hash: 538c9f80f9a80ccbbcde4c0f691e2ef4b0ad592dc67093c7b674c0f36c36e90c
 ---
-
-
 
 > 本片文章转载于阮一峰老师的博客：http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html
 
@@ -187,16 +185,16 @@ npm 提供一个`npm_lifecycle_event`变量，返回当前正在运行的脚本�
 
 > ```javascript
 > const TARGET = process.env.npm_lifecycle_event;
-> 
-> if (TARGET === 'test') {
+>
+> if (TARGET === "test") {
 >   console.log(`Running the test task!`);
 > }
-> 
-> if (TARGET === 'pretest') {
+>
+> if (TARGET === "pretest") {
 >   console.log(`Running the pretest task!`);
 > }
-> 
-> if (TARGET === 'posttest') {
+>
+> if (TARGET === "posttest") {
 >   console.log(`Running the posttest task!`);
 > }
 > ```
@@ -232,7 +230,7 @@ npm 脚本有一个非常强大的功能，就是可以使用 npm 的内部变�
 
 > ```javascript
 > {
->   "name": "foo", 
+>   "name": "foo",
 >   "version": "1.2.5",
 >   "scripts": {
 >     "view": "node view.js"
@@ -283,7 +281,7 @@ npm 脚本有一个非常强大的功能，就是可以使用 npm 的内部变�
 注意，`package.json`里面的`config`对象，可以被环境变量覆盖。
 
 > ```javascript
-> { 
+> {
 >   "name" : "foo",
 >   "config" : { "port" : "8080" },
 >   "scripts" : { "start" : "node server.js" }
@@ -307,28 +305,28 @@ npm 脚本有一个非常强大的功能，就是可以使用 npm 的内部变�
 > ```javascript
 > // 删除目录
 > "clean": "rimraf dist/*",
-> 
+>
 > // 本地搭建一个 HTTP 服务
 > "serve": "http-server -p 9090 dist/",
-> 
+>
 > // 打开浏览器
 > "open:dev": "opener http://localhost:9090",
-> 
+>
 > // 实时刷新
 >  "livereload": "live-reload --port 9091 dist/",
-> 
+>
 > // 构建 HTML 文件
 > "build:html": "jade index.jade > dist/index.html",
-> 
+>
 > // 只要 CSS 文件有变动，就重新执行构建
 > "watch:css": "watch 'npm run build:css' assets/styles/",
-> 
+>
 > // 只要 HTML 文件有变动，就重新执行构建
 > "watch:html": "watch 'npm run build:html' assets/html",
-> 
+>
 > // 部署到 Amazon S3
 > "deploy:prod": "s3-cli sync ./dist/ s3://example-com/prod-site/",
-> 
+>
 > // 构建 favicon
 > "build:favicon": "node scripts/favicon.js",
 > ```

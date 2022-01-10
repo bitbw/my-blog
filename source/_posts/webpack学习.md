@@ -7,7 +7,7 @@ tags:
 categories: Webpack
 cnblogs:
   postid: "15393023"
-hash: 28aa894f17fd06a8237953c9c051ce434906affa87167de0969457ba50cb5339
+hash: 722e043b1119efbf5e82b51c0830f4390b51ca4effdc5d9d6965488c321349a9
 ---
 
 ## webpack 基础知识
@@ -66,7 +66,7 @@ module.exports = {
   //出口
   output: {
     filename: "bundle.js",
-    path: resolve(__dirname, "dist")
+    path: resolve(__dirname, "dist"),
   },
   //模式 development 、 production
   mode: "development",
@@ -76,12 +76,12 @@ module.exports = {
       {
         test: /\.css$/,
         // 执行顺序由右到左
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
   // plugins 插件 （数组）
-  plugins: []
+  plugins: [],
 };
 ```
 
@@ -138,20 +138,20 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: resolve(__dirname, "dist")
+    path: resolve(__dirname, "dist"),
   },
   mode: "development",
   module: {
-    rules: []
+    rules: [],
   },
   plugins: [
     // HtmlWebpackPlugin 会自动在output目录下生成index.html
     // 并自动引入打包好的 bundle.js
     new HtmlWebpackPlugin({
       // 以./src/index.html 为模板 生成最后打包好的html
-      template: "./src/index.html"
-    })
-  ]
+      template: "./src/index.html",
+    }),
+  ],
 };
 ```
 
@@ -174,14 +174,14 @@ module.exports = {
   output: {
     filename: "bunle.js",
     path: resolve(__dirname, "dist"),
-    publicPath: "" // webpack5 中html中导入image需要设置publicPath （升级html-webpack-plugin 到 5.xx可以不用）
+    publicPath: "", // webpack5 中html中导入image需要设置publicPath （升级html-webpack-plugin 到 5.xx可以不用）
   },
   mode: "development",
   module: {
     rules: [
       {
         test: /\.less$/,
-        use: ["style-loader", "css-loader", "less-loader"]
+        use: ["style-loader", "css-loader", "less-loader"],
       },
       // 解析图标 将小图标直接转base64 url-loader 依赖 file-loader 需要一起下载
       {
@@ -193,23 +193,23 @@ module.exports = {
               // 小于8kb的以base64位插入 data:image/jpeg;base64,/9j
               // 大于8kb的以改为hash值为名称的原文件插入
               limit: 8 * 1024,
-              esModule: false
-            }
-          }
-        ]
+              esModule: false,
+            },
+          },
+        ],
       },
       {
         // 处理html文件的img图片（负责引入img，从而能被url-loader进行处理）
         test: /\.html$/,
-        use: "html-loader"
-      }
-    ]
+        use: "html-loader",
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html"
-    })
-  ]
+      template: "./index.html",
+    }),
+  ],
 };
 ```
 
@@ -365,15 +365,15 @@ rules: [
                 "postcss-preset-env",
                 {
                   // Options
-                }
-              ]
+                },
+              ],
               // 或者 require("postcss-preset-env")()
-            ]
-          }
-        }
-      }
-    ]
-  }
+            ],
+          },
+        },
+      },
+    ],
+  },
 ];
 ```
 
@@ -483,7 +483,7 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   // ...
-  plugins: [new ESLintPlugin(options)]
+  plugins: [new ESLintPlugin(options)],
   // ...
 };
 ```
@@ -599,7 +599,7 @@ module.exports = {
         useBuiltIns: "usage",
         // 指定core-js版本
         corejs: {
-          version: 3
+          version: 3,
         },
         // 指定兼容性做到哪个版本浏览器
         targets: {
@@ -607,11 +607,11 @@ module.exports = {
           firefox: "60",
           ie: "9",
           safari: "10",
-          edge: "17"
-        }
-      }
-    ]
-  ]
+          edge: "17",
+        },
+      },
+    ],
+  ],
 };
 ```
 
@@ -638,9 +638,9 @@ plugins: [
       // 移除空格
       collapseWhitespace: true,
       // 移除注释
-      removeComments: true
-    }
-  })
+      removeComments: true,
+    },
+  }),
 ];
 ```
 
@@ -1031,12 +1031,12 @@ module.exports = {
           只有工作消耗时间比较长，才需要多进程打包
         */
         use: [
-          "thread-loader"
+          "thread-loader",
           // 耗时的 loader （例如 babel-loader）
-        ]
-      }
-    ]
-  }
+        ],
+      },
+    ],
+  },
 };
 ```
 
@@ -1050,8 +1050,14 @@ module.exports = {
 
 ```html
 <!-- index.html -->
-<script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react@17/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+></script>
 ```
 
 ### 修改配置
@@ -1064,8 +1070,8 @@ module.exports = {
     // key -> import react from "react" 中的 "react"
     // value -> react 的命名空间 namespace React
     react: "React",
-    "react-dom": "ReactDOM"
-  }
+    "react-dom": "ReactDOM",
+  },
 };
 ```
 
@@ -1097,24 +1103,24 @@ module.exports = {
   entry: {
     // 最终打包生成的 vendor --> MyDll.[name].js  name=vendor
     // ['react',''react-dom'] --> 要打包的库是react  跟包名一致react
-    vendor: ["react", "react-dom"]
+    vendor: ["react", "react-dom"],
   },
   output: {
     // 生成文件名
     filename: "[name].dll.js",
     path: resolve(__dirname, "dll"),
     // 打包的库里面向外暴露出去的内容叫什么名字（全局变量名） 需要和 webpack.DllPlugin 中的 name 抱持一致
-    library: "[name]_[fullhash]_library"
+    library: "[name]_[fullhash]_library",
   },
   plugins: [
     new CleanWebpackPlugin(),
     // 打包生成一个 manifest.json --> 提供和react映射 manifest.json中映射library名称
     new webpack.DllPlugin({
       name: "[name]_[fullhash]_library", // 映射库的暴露的内容名称 不用管叫什么 打包后的代码会使用 咱们构建前的代码还是该怎么使就怎么使
-      path: resolve(__dirname, "dll/manifest.json") // 生成的清单文件 包含了react 和 react-dom
-    })
+      path: resolve(__dirname, "dll/manifest.json"), // 生成的清单文件 包含了react 和 react-dom
+    }),
   ],
-  mode: "production"
+  mode: "production",
 };
 ```
 
@@ -1208,13 +1214,13 @@ module.exports = {
     // ...
     // 告诉webpack哪些库不参与打包
     new webpack.DllReferencePlugin({
-      manifest: resolve(__dirname, "dll/manifest.json")
+      manifest: resolve(__dirname, "dll/manifest.json"),
     }),
     // 将某个文件打包输出去，并在html中自动引入该资源
     new AddAssetHtmlWebpackPlugin({
-      filepath: resolve(__dirname, "dll/vendor.dll.js")
-    })
-  ]
+      filepath: resolve(__dirname, "dll/vendor.dll.js"),
+    }),
+  ],
 };
 ```
 
@@ -1244,7 +1250,7 @@ dist
 
 ### code split
 
-- 将项目中的进行模块代码分割成多个js文件
+- 将项目中的进行模块代码分割成多个 js 文件
 - 优点：优化项目本身加载速度，依靠代码分割可以实现模块的懒加载和预加载
 
 ## 官方文档

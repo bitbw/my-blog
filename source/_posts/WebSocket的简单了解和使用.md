@@ -6,7 +6,7 @@ tags:
 categories: 网络应用
 cnblogs:
   postid: "15393025"
-hash: 1022e0779577ed020fe0135b365115549a3b53aae44d8344bd81494a8b1ccad9
+hash: 71db1b891d0fed7869417977db91658e50b6415ac3d32d1d0616164498f1bd38
 ---
 
 ## WebSocket
@@ -73,8 +73,6 @@ ws://example.com:80/some/path
 
 ![img](https://gitee.com/bitbw/my-gallery/raw/master/img/bg2017051503.jpg)
 
-
-
 ## 使用原生 WebSocket（了解）
 
 > 参考文档：
@@ -92,44 +90,44 @@ ws://example.com:80/some/path
 ```html
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
- </head>
- <body>
-  <script>
-   // WebSocet 通信模型
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // WebSocet 通信模型
 
-   // 1. 拨打电话（建立连接）
-   // 注意：wss://echo.websocket.org 是一个在线的测试接口，仅用于 WebSocket 协议通信测试使用
-   var ws = new WebSocket("wss://echo.websocket.org");
+      // 1. 拨打电话（建立连接）
+      // 注意：wss://echo.websocket.org 是一个在线的测试接口，仅用于 WebSocket 协议通信测试使用
+      var ws = new WebSocket("wss://echo.websocket.org");
 
-   // 当连接建立成功，触发 open 事件
-   ws.onopen = function (evt) {
-    console.log("建立连接成功 ...");
+      // 当连接建立成功，触发 open 事件
+      ws.onopen = function (evt) {
+        console.log("建立连接成功 ...");
 
-    // 连接建立成功以后，就可以使用这个连接对象通信了
-    // send 方法发送数据
-    ws.send("Hello WebSockets!");
-   };
+        // 连接建立成功以后，就可以使用这个连接对象通信了
+        // send 方法发送数据
+        ws.send("Hello WebSockets!");
+      };
 
-   // 当接收到对方发送的消息的时候，触发 message 事件
-   // 我们可以通过回调函数的 evt.data 获取对方发送的数据内容
-   ws.onmessage = function (evt) {
-    console.log("接收到消息: " + evt.data);
+      // 当接收到对方发送的消息的时候，触发 message 事件
+      // 我们可以通过回调函数的 evt.data 获取对方发送的数据内容
+      ws.onmessage = function (evt) {
+        console.log("接收到消息: " + evt.data);
 
-    // 当不需要通信的时候，可以手动的关闭连接
-    // ws.close();
-   };
+        // 当不需要通信的时候，可以手动的关闭连接
+        // ws.close();
+      };
 
-   // 当连接断开的时候触发 close 事件
-   ws.onclose = function (evt) {
-    console.log("连接已关闭.");
-   };
-  </script>
- </body>
+      // 当连接断开的时候触发 close 事件
+      ws.onclose = function (evt) {
+        console.log("连接已关闭.");
+      };
+    </script>
+  </body>
 </html>
 ```
 
@@ -169,21 +167,21 @@ var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 
 app.get("/", function (req, res) {
- res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 io.on("connection", function (socket) {
- socket.on("disconnect", function () {
-  console.log("user disconnected");
- });
+  socket.on("disconnect", function () {
+    console.log("user disconnected");
+  });
 
- socket.on("chat message", function (msg) {
-  io.emit("chat message", msg);
- });
+  socket.on("chat message", function (msg) {
+    io.emit("chat message", msg);
+  });
 });
 
 http.listen(3000, "0.0.0.0", function () {
- console.log("listening on *:3000");
+  console.log("listening on *:3000");
 });
 ```
 
@@ -192,81 +190,81 @@ http.listen(3000, "0.0.0.0", function () {
 ```html
 <!DOCTYPE html>
 <html>
- <head>
-  <title>Socket.IO chat</title>
-  <style>
-   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   }
-   body {
-    font: 13px Helvetica, Arial;
-   }
-   form {
-    background: #000;
-    padding: 3px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-   }
-   form input {
-    border: 0;
-    padding: 10px;
-    width: 90%;
-    margin-right: 0.5%;
-   }
-   form button {
-    width: 9%;
-    background: rgb(130, 224, 255);
-    border: none;
-    padding: 10px;
-   }
-   #messages {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-   }
-   #messages li {
-    padding: 5px 10px;
-   }
-   #messages li:nth-child(odd) {
-    background: #eee;
-   }
-  </style>
- </head>
- <body>
-  <!-- 消息列表 -->
-  <ul id="messages"></ul>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font: 13px Helvetica, Arial;
+      }
+      form {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      form input {
+        border: 0;
+        padding: 10px;
+        width: 90%;
+        margin-right: 0.5%;
+      }
+      form button {
+        width: 9%;
+        background: rgb(130, 224, 255);
+        border: none;
+        padding: 10px;
+      }
+      #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      #messages li {
+        padding: 5px 10px;
+      }
+      #messages li:nth-child(odd) {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 消息列表 -->
+    <ul id="messages"></ul>
 
-  <!-- 发送消息的表单 -->
-  <form action="">
-   <input id="m" autocomplete="off" /><button>Send</button>
-  </form>
+    <!-- 发送消息的表单 -->
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
 
-  <!-- SocketIO 提供了一个客户端实现：socket.io.js -->
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-  <script>
-   // 建立连接，得到 socket 通信对象
-   var socket = io();
+    <!-- SocketIO 提供了一个客户端实现：socket.io.js -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      // 建立连接，得到 socket 通信对象
+      var socket = io();
 
-   socket.on("connect", () => {
-    console.log("建立连接成功了");
-   });
+      socket.on("connect", () => {
+        console.log("建立连接成功了");
+      });
 
-   $("form").submit(function (e) {
-    e.preventDefault(); // prevents page reloading
-    socket.emit("chat message", $("#m").val());
-    $("#m").val("");
-    return false;
-   });
+      $("form").submit(function (e) {
+        e.preventDefault(); // prevents page reloading
+        socket.emit("chat message", $("#m").val());
+        $("#m").val("");
+        return false;
+      });
 
-   socket.on("chat message", function (msg) {
-    $("#messages").append($("<li>").text(msg));
-   });
-  </script>
- </body>
+      socket.on("chat message", function (msg) {
+        $("#messages").append($("<li>").text(msg));
+      });
+    </script>
+  </body>
 </html>
 ```
 
@@ -298,7 +296,7 @@ socket.emit("消息类型", 数据);
 // 消息类型
 // 回调函数参数获取消息数据
 socket.on("消息类型", (data) => {
- console.log(data);
+  console.log(data);
 });
 ```
 
@@ -309,7 +307,7 @@ socket.on("消息类型", (data) => {
 ```js
 //服务器端
 io.on("connection", function (socket) {
- socket.broadcast.emit("有用户连接");
- //这条信息会发送给除了当前socket的其他用户
+  socket.broadcast.emit("有用户连接");
+  //这条信息会发送给除了当前socket的其他用户
 });
 ```

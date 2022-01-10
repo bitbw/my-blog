@@ -7,16 +7,14 @@ tags:
 categories: Webpack
 cnblogs:
   postid: "15393022"
-hash: dfbf1fea3a42bf83354067d26279487fc4d1245354ce541f13e5f4bdc78a9961
+hash: 07653e6f9b62dd51364a5d91336ee82ef4d7c0e558ee45ec2f488e4c3aebae22
 ---
-
-
 
 # webpack 入门
 
 ## 介绍
 
-webpack 是一个模块打包器，它本身主要打包 JavaScript 模块，结合它的生态中的一些 loader 可以实现对很多其他资源的打包，例如 less、sass、图片、es6转es5、.vue 等等文件资源都可以。
+webpack 是一个模块打包器，它本身主要打包 JavaScript 模块，结合它的生态中的一些 loader 可以实现对很多其他资源的打包，例如 less、sass、图片、es6 转 es5、.vue 等等文件资源都可以。
 
 使用 webpack，我们最终就能实现类似于 VueCLI 这个工具提供给我们的功能：
 
@@ -49,22 +47,18 @@ webpack 出来之前，还有一些别的构建工具：
 - Angular：angular-cli
 - 。。。。
 
-
-
 为什么要学习 webpack？
 
 如果你需要定制这些脚手架工具，那么最好了解一点儿 webpack 相关的内容，例如对项目进行打包优化，配置开发工具模式，。。。。一些更高级的使用方式。
 
-
-
 ![image-20191122114402722](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20191122114402722.png)
 
-打包 -> 打包结果 -> 浏览器就可以识别运行。 
+打包 -> 打包结果 -> 浏览器就可以识别运行。
 
 - 官网：https://webpack.js.org/
   - 官方教程：https://webpack.js.org/guides/
   - 官方 API 参考文档：https://webpack.js.org/api/
-  - 官方的中文文档链接： https://webpack.docschina.org/ 
+  - 官方的中文文档链接： https://webpack.docschina.org/
 - GitHub：https://github.com/webpack/webpack
 
 ## Hello World
@@ -82,8 +76,6 @@ webpack 出来之前，还有一些别的构建工具：
 3、创建 `foo.js`
 
 4、创建 `index.html`
-
-
 
 二、安装并配置 webpack 到项目中
 
@@ -164,13 +156,13 @@ webpack 打包的入口和出口具有默认规则，如果想要自定义，或
  * 注意：webpack 是基于 Node.js 开发运行的一个构件工具，它的打包运行的时候会来执行这个文件得到导出的配置对象
  * 所以你要知道：这里使用的都是 Node.js 中的代码相关语法
  */
-const path = require('path')
+const path = require("path");
 
 module.exports = {
   /**
    * 入口配置
    */
-  entry: './src/index.js',
+  entry: "./src/index.js",
 
   /**
    * 出口配置
@@ -179,14 +171,13 @@ module.exports = {
     // __dirname 可以动态的获取当前文件所属目录的绝对路径
     // path 是 Node 中一个专门处理路径的一个模块
     // 它的 join 方法转么用来拼接路径，
-    path: path.join(__dirname, './dist'),
+    path: path.join(__dirname, "./dist"),
 
     // path: 'C:\\Users\\LPZ\\Desktop\\FE88\\webpack-demos\\demo1\\dist', // 打包的结果目录，默认是 dist，必须是一个绝对路径
     // path: './dist/', // 打包的结果目录，默认是 dist，必须是一个绝对路径
-    filename: 'bundle.js' // 打包的结果文件名，默认叫 main.js
-  }
-}
-
+    filename: "bundle.js", // 打包的结果文件名，默认叫 main.js
+  },
+};
 ```
 
 2、然后修改 `package.json` 文件中的 `build` 配置项（非必须）
@@ -201,27 +192,23 @@ module.exports = {
 npm run build
 ```
 
-
-
 ## 关于 npm scripts
 
-推荐阅读：[阮一峰 - npm scripts 使用指南]( http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html )
+推荐阅读：[阮一峰 - npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
 
 我们安装到项目中的 webpack，手动的方式需要这样来使用：
 
-
-
 ## 打包模式 mode
 
-> 官方文档： https://webpack.js.org/configuration/mode/ 
+> 官方文档： https://webpack.js.org/configuration/mode/
 
 mode 用来配置打包模式，有两种模式可选：
 
--  development 开发模式
-   - 更快的编译速度
--  production 生产模式
-   - 相比开发模式构建速度慢，拥有更好的编译结果
-   - 例如代码压缩
+- development 开发模式
+  - 更快的编译速度
+- production 生产模式
+  - 相比开发模式构建速度慢，拥有更好的编译结果
+  - 例如代码压缩
 
 建议开发过程使用开发模式，发布上线使用生产模式。
 
@@ -265,8 +252,6 @@ npm install --save-dev file-loader
 npm install --save-dev html-webpack-plugin
 ```
 
-
-
 2、配置
 
 ```js
@@ -283,7 +268,7 @@ npm install --save-dev html-webpack-plugin
   };
 ```
 
-> 关于 HTMLwebpackplugin 更多内容，请参考： https://github.com/jantimon/html-webpack-plugin 
+> 关于 HTMLwebpackplugin 更多内容，请参考： https://github.com/jantimon/html-webpack-plugin
 
 3、打包测试
 
@@ -311,8 +296,6 @@ module.exports = {
   ]
 }
 ```
-
-
 
 ## 打包字体文件
 
@@ -349,8 +332,6 @@ Babel 是一个专门将 ES6 转 ES5 的编译工具。
 npm install -D babel-loader @babel/core @babel/preset-env webpack
 ```
 
-
-
 2、配置
 
 ![image-20191122165529066](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20191122165529066.png)
@@ -382,13 +363,9 @@ npm install -D babel-loader @babel/core @babel/preset-env webpack
 npm install --save @babel/polyfill
 ```
 
-
-
 2、配置
 
 ![image-20191124090523101](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20191124090523101.png)
-
-
 
 3、打包测试
 
@@ -400,7 +377,7 @@ npm install --save @babel/polyfill
 
 ## 增加 source maps
 
-> 建议阅读：[An Introduction to Source Maps]( https://blog.teamtreehouse.com/introduction-source-maps )
+> 建议阅读：[An Introduction to Source Maps](https://blog.teamtreehouse.com/introduction-source-maps)
 
 ![image-20191124093220937](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20191124093220937.png)
 
@@ -423,8 +400,6 @@ npm install --save @babel/polyfill
 npm install --save-dev webpack-dev-server
 ```
 
-
-
 2、配置
 
 ![image-20191124100620633](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20191124100620633.png)
@@ -434,8 +409,6 @@ npm install --save-dev webpack-dev-server
 ![image-20191124100646425](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20191124100646425.png)
 
 > 在 `package.json` 文件中新增 NPM Scripts 脚本
-
-
 
 3、打包测试
 
@@ -451,8 +424,6 @@ webpack-dev-server 默认是刷新整个页面实现更新。我们有一种更�
 
 > 在 webpack 配置文件中
 
-
-
 > 提示：如果修改了配置文件，必须重启打包才能生效。
 
 ## 打包 Vue
@@ -462,8 +433,6 @@ webpack-dev-server 默认是刷新整个页面实现更新。我们有一种更�
 ```bash
 npm install -D vue-loader vue-template-compiler
 ```
-
-
 
 2、配置
 
@@ -502,15 +471,11 @@ ESLint 专门用于 JavaScript 代码格式校验工具。
   - ESLint
   - 。。。
 
-
-
 1、安装
 
 ```bash
 npm install eslint eslint-loader --save-dev
 ```
-
-
 
 2、配置 webpack 配置文件
 
@@ -650,7 +615,7 @@ ESLint 附带有大量的规则。你可以使用注释或配置文件修改你�
 /* eslint eqeqeq: "off", curly: "error" */
 ```
 
- 在这个例子里，[`eqeqeq`](https://eslint.bootcss.com/docs/user-guide/rules/eqeqeq) 规则被关闭，[`curly`](https://eslint.bootcss.com/docs/user-guide/rules/curly) 规则被打开，定义为错误级别。你也可以使用对应的数字定义规则严重程度： 
+在这个例子里，[`eqeqeq`](https://eslint.bootcss.com/docs/user-guide/rules/eqeqeq) 规则被关闭，[`curly`](https://eslint.bootcss.com/docs/user-guide/rules/curly) 规则被打开，定义为错误级别。你也可以使用对应的数字定义规则严重程度：
 
 ```
 /* eslint eqeqeq: 0, curly: 2 */
@@ -658,9 +623,6 @@ ESLint 附带有大量的规则。你可以使用注释或配置文件修改你�
 
 更多配置，建议参考： https://eslint.bootcss.com/docs/user-guide/configuring/ 。
 
-
-
 ## 在 Vue CLI 创建的项目中配置 webpack
 
 优化。
-

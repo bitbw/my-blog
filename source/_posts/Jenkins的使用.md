@@ -7,10 +7,8 @@ tags:
 categories: 工具使用
 cnblogs:
   postid: "15392431"
-hash: 4894e95812415d0a643614335fcf2ee6b814aa37fcd02e6b6e32c5211eadb8d1
+hash: b3fe44b3564b8a67c258ae3302a4b231fb27e35f0a151da02b14fd0a7307e1a8
 ---
-
-
 
 ## 安装
 
@@ -18,7 +16,7 @@ hash: 4894e95812415d0a643614335fcf2ee6b814aa37fcd02e6b6e32c5211eadb8d1
 
 https://www.likecs.com/show-103109.html
 
-### war包
+### war 包
 
 > 前提：需要 java 环境
 
@@ -26,31 +24,29 @@ https://www.likecs.com/show-103109.html
 java -jar ./jenkins.war(jenkins.war文件的路径) --Port=8080（端口）
 ```
 
-## 基于node 环境构建 react 或 vue项目
+## 基于 node 环境构建 react 或 vue 项目
 
 官方教程：https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/
 
 ### 问题
 
-#### Docker在WSL，windows下出现:Cannot connect to the Docker daemon at unix:///var/run/docker.sock问题
+#### Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:///var/run/docker.sock 问题
 
 https://blog.csdn.net/weixin_48031922/article/details/116529198
 
-ps： 
+ps：
 
 -v /var/run/docker.sock:/var/run/docker.sock \
 
-上面这条命令是使容器内系统，可以直接使用当前运行容器的系统的docker
+上面这条命令是使容器内系统，可以直接使用当前运行容器的系统的 docker
 
 也就是说 在容器内使用 `docker ps -a `可以看到当前系统中所有运行的容器，包括当前容器本身
 
-> 最佳解决方案是直接在 ubutun 子系统中使用，docker run  ...
+> 最佳解决方案是直接在 ubutun 子系统中使用，docker run ...
 >
->  /var/run/docker.sock:/var/run/docker.sock  就不会出现错误 ，win上我实在不知道 /var/run/docker.sock 在哪
+> /var/run/docker.sock:/var/run/docker.sock 就不会出现错误 ，win 上我实在不知道 /var/run/docker.sock 在哪
 
-
-
-#### 出现WorkflowScript: 3: Invalid agent type "docker" specified
+#### 出现 WorkflowScript: 3: Invalid agent type "docker" specified
 
 下载 `Docker Pipeline` 插件 即可解决
 
@@ -58,7 +54,7 @@ ps：
 
 基于这篇文章：https://blog.csdn.net/wangzan18/article/details/105864373/
 
-### sshPublisher文档：
+### sshPublisher 文档：
 
 https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20send%20build%20artifacts%20over%20ssh
 
@@ -66,7 +62,7 @@ https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20sen
 
 #### **Publish over SSH** 插件 ，
 
-配置 **Publish over SSH** 
+配置 **Publish over SSH**
 
 系统管理->系统配置->Publish over SSH
 
@@ -74,9 +70,9 @@ https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20sen
 
 ps:
 
-这里配置的私钥就是使用ssh免密登录时生成的私钥 
+这里配置的私钥就是使用 ssh 免密登录时生成的私钥
 
-全部了解ssh见 我的文章 Linux命令入门 https://blog.bitbw.top/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/
+全部了解 ssh 见 我的文章 Linux 命令入门 https://blog.bitbw.top/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/
 
 #### 免密码登录
 
@@ -88,7 +84,7 @@ ps:
   - 执行 `ssh-copy-id -p port user@remote`，可以让远程服务器记住我们的公钥
   - 上传后的公钥在远端用户家目录下`.ssh`文件夹 `authorized_keys` 中
 
-执行`ssh-keygen`后会在当前用户家目录下生成`.ssh`文件夹 
+执行`ssh-keygen`后会在当前用户家目录下生成`.ssh`文件夹
 
 ```bash
  cd .ssh/
@@ -101,13 +97,13 @@ ps:
 #-rw-r--r--  1 bowen bowen  222 Aug  2 13:43 known_hosts
 ```
 
-id_rsa 就是私钥 
+id_rsa 就是私钥
 
 ```bash
 cat id_rsa
 ```
 
-全部复制放到key字段中
+全部复制放到 key 字段中
 
 #### 问题
 
@@ -115,35 +111,35 @@ cat id_rsa
 
 解决：http://www.wallcopper.com/linux/3689.htmljenkins
 
-无密码ssh时报错:jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key. Message [invalid privatekey: [B@6a581993]
-com.jcraft.jsch.JSchException: invalid privatekey, 部分库（如：JSch）不支持OPENSSH PRIVATE KEY格式的私钥
+无密码 ssh 时报错:jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key. Message [invalid privatekey: [B@6a581993]
+com.jcraft.jsch.JSchException: invalid privatekey, 部分库（如：JSch）不支持 OPENSSH PRIVATE KEY 格式的私钥
 
-1、jenkins使用 `ssh-keygen -m PEM -t rsa -b 4096` 来生成key就可以用了。
--m 参数指定密钥的格式，PEM（也就是RSA格式）是之前使用的旧格式
+1、jenkins 使用 `ssh-keygen -m PEM -t rsa -b 4096` 来生成 key 就可以用了。
+-m 参数指定密钥的格式，PEM（也就是 RSA 格式）是之前使用的旧格式
 
-##### ssh-copy-id上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+##### ssh-copy-id 上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 
 解决：https://blog.csdn.net/weixin_44545265/article/details/88362272
 
-文件传输不过去，只需要删除.ssh目录下的known_hosts文件就能传输了
+文件传输不过去，只需要删除.ssh 目录下的 known_hosts 文件就能传输了
 `[root@xx]# rm -rf ~/.ssh/known_hosts`
 
-#### 我的jenkinsfile
+#### 我的 jenkinsfile
 
 ```
 pipeline {
     agent {
         docker {
-            image 'node:12-alpine' 
-            args '-p 3000:3000' 
+            image 'node:12-alpine'
+            args '-p 3000:3000'
         }
     }
     stages {
-        stage('Build') { 
+        stage('Build') {
             steps {
                 sh 'npm install'
                 sh 'npm run buildtest'
-                sh 'ls -lha' 
+                sh 'ls -lha'
             }
         }
 	stage('Deploy') {
@@ -173,11 +169,11 @@ verbose：选择为 Jenkins 控制台启用大量信息 - 仅对帮助追踪问�
 
 ## 构建触发器
 
-### 使用轮询SCM 实现收到 git post-commit 即构建
+### 使用轮询 SCM 实现收到 git post-commit 即构建
 
 ![image-20210818150222789](https://gitee.com/bitbw/my-gallery/raw/master/img/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png)
 
- 日程表使用cron语法
+日程表使用 cron 语法
 
 ```
 #每15分钟(可能在:07,22,37,52):
@@ -192,7 +188,6 @@ H H(8-15)/2 * * 1-5
 H H 1,15 1-11 *
 ```
 
-规则有点难可以使用cron在线解析工具：http://cron.qqe2.com/
+规则有点难可以使用 cron 在线解析工具：http://cron.qqe2.com/
 
-使用轮询SCM检查到commit 更新 就会触发构建
-
+使用轮询 SCM 检查到 commit 更新 就会触发构建

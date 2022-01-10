@@ -7,9 +7,8 @@ tags:
 categories: Electron
 cnblogs:
   postid: "15392414"
-hash: 99d3c25447c24a5cdc0ed10455746e3182c6295e473a23782928a4ab046c8413
+hash: d1679c12fff664efedb82fc573a6751b8e4ca48fab18db7b4020d87d6414ce8d
 ---
-
 
 ## 修改 electron 下载源
 
@@ -17,7 +16,7 @@ hash: 99d3c25447c24a5cdc0ed10455746e3182c6295e473a23782928a4ab046c8413
 
 ### npm
 
-修改 `.npmrc`  
+修改 `.npmrc`
 
 ```
 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
@@ -33,7 +32,7 @@ ELECTRON_MIRROR "http://npm.taobao.org/mirrors/electron/"
 
 ## 打包时下载依赖报错
 
-下载不下来对应的包，比如我使用代理有时下载github上的对应包就会报错
+下载不下来对应的包，比如我使用代理有时下载 github 上的对应包就会报错
 
 ### 解决
 
@@ -49,7 +48,7 @@ ELECTRON_MIRROR "http://npm.taobao.org/mirrors/electron/"
 
 也可以解压后放到`C:\Users\WX03\AppData\Local\electron-builder\Cache`下
 
-这个是我的electron-builer的目录
+这个是我的 electron-builer 的目录
 
 ```
 ├── Cache
@@ -68,4 +67,3 @@ ELECTRON_MIRROR "http://npm.taobao.org/mirrors/electron/"
 ## 所有难下的包的对应淘宝镜像源解决方案
 
 官方地址：https://npm.taobao.org/mirrors
-

@@ -5,7 +5,7 @@ tags: vue
 categories: Vue
 cnblogs:
   postid: "15393018"
-hash: 71f10f931792554ea1599983edf5271e9b179bcece0c326bf8fd2225551e8e6e
+hash: 9adf23fd6d1f3aa4e4a1565541a227a3bebdb12b82f448b5905f9b0207eb9fff
 ---
 
 ## 对象变更检测注意事项
@@ -16,9 +16,9 @@ hash: 71f10f931792554ea1599983edf5271e9b179bcece0c326bf8fd2225551e8e6e
 
 ```js
 var vm = new Vue({
- data: {
-  a: 1,
- },
+  data: {
+    a: 1,
+  },
 });
 // `vm.a` 现在是响应式的
 
@@ -30,11 +30,11 @@ vm.b = 2;
 
 ```js
 var vm = new Vue({
- data: {
-  userProfile: {
-   name: "Anika",
+  data: {
+    userProfile: {
+      name: "Anika",
+    },
   },
- },
 });
 ```
 
@@ -64,9 +64,9 @@ vm.userProfile = userProfile;
 
 ```js
 Object.assign(vm.userProfile, {
- //不要仅仅直接添加属性的方式
- age: 27,
- favoriteColor: "Vue Green",
+  //不要仅仅直接添加属性的方式
+  age: 27,
+  favoriteColor: "Vue Green",
 });
 ```
 
@@ -74,9 +74,9 @@ Object.assign(vm.userProfile, {
 
 ```js
 vm.userProfile = Object.assign({}, vm.userProfile, {
- //建议新建一个对象合并和后在重新赋值
- age: 27,
- favoriteColor: "Vue Green",
+  //建议新建一个对象合并和后在重新赋值
+  age: 27,
+  favoriteColor: "Vue Green",
 });
 ```
 
@@ -117,7 +117,7 @@ Vue 将被侦听的数组的变异方法进行了包裹，所以它们也将会�
 
 ```js
 example1.items = example1.items.filter(function (item) {
- return item.message.match(/Foo/);
+  return item.message.match(/Foo/);
 });
 ```
 

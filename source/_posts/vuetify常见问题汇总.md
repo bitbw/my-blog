@@ -7,10 +7,10 @@ tags:
 categories: Vue
 cnblogs:
   postid: "15393015"
-hash: e3060e904249cd9b53444aec1edb6e569ea12f11787cfe4115d99968a6f64f61
+hash: 08bc8a52da53d0871bb68b564ee3ed250629bcb84766b998f0d41763c17e9942
 ---
 
-## vuetify 2.5.3版本提示DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+## vuetify 2.5.3 版本提示 DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
 
 ### github issues:
 
@@ -45,13 +45,13 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
 
 ### 解决
 
-用  sass < 1.33 作为解决方法
+用 sass < 1.33 作为解决方法
 
 官方的说明：我正在为此恢复修复，它完全破坏了注入自定义 sass 变量（[#13737](https://github.com/vuetifyjs/vuetify/issues/13737)）的项目。要使警告静音，请安装`sass@~1.32`
 
 步骤：
 
-修改package.json
+修改 package.json
 
 ```json
 "sass": "~1.32",
@@ -70,11 +70,11 @@ https://github.com/vuetifyjs/vuetify/issues/11969
 https://github.com/treardon17/vuetify/commit/9f8059112eabbd890f9f3efbc59459235a777996
 
 ```js
-//packages/vuetify/src/components/VSelect/VSelect.ts 
+//packages/vuetify/src/components/VSelect/VSelect.ts
 // 删除下面的代码
-this.setMenuIndex(-1)
+this.setMenuIndex(-1);
 ```
 
 ### 解决
 
-可以使用github issues 中的解决方案 ，或者等官方更新修复这个bug
+可以使用 github issues 中的解决方案 ，或者等官方更新修复这个 bug

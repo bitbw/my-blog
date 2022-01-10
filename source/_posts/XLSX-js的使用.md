@@ -7,7 +7,7 @@ tags:
 categories: XLSX
 cnblogs:
   postid: "15393029"
-hash: 5638004f925ef5de9d2278245af4251bd8b0d2522416b8eb2f289e0eff3553b1
+hash: 1f56db4dd551c87e477c7e20b0c77df9f7352d051d319a5096ef7f6780e6e260
 ---
 
 [SheetJS js-xlsx](http://sheetjs.com/) 中文文档： https://github.com/rockboom/SheetJS-docs-zh-CN
@@ -29,4 +29,3 @@ data["!merges"] = [{
 }];
 ........
 ```
-

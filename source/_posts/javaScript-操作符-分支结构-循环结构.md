@@ -5,7 +5,7 @@ tags: js
 categories: js
 cnblogs:
   postid: "15392428"
-hash: 3a81dd9906c7630e959d15956265261acce1fc2f0c92beaac9bc563f2bcad4e3
+hash: 448a8b64d367c45b118700ce9910afa857314974f356fe2be97ea7c9e80d133e
 ---
 
 ## 1 操作符
@@ -191,18 +191,18 @@ switch-case 结构主要用于多个固定值之间的判断
 //例如： 判断一下一个人的性别是不是男的,如果是男的，让他去男厕所，如果是女的，让他去女厕所 ，如果是人妖，去人妖专用厕所，如果都不是，打晕送走
 var gender = prompt("请输入性别");
 switch (gender) {
- case "男":
-  console.log("请去男厕所");
-  break;
- case "女":
-  console.log("请去女厕所");
-  break;
- case "人妖":
-  console.log("请去人妖专用厕所");
-  break;
- default:
-  console.log("净给我添乱，打晕送走");
-  break;
+  case "男":
+    console.log("请去男厕所");
+    break;
+  case "女":
+    console.log("请去女厕所");
+    break;
+  case "人妖":
+    console.log("请去人妖专用厕所");
+    break;
+  default:
+    console.log("净给我添乱，打晕送走");
+    break;
 }
 ```
 
@@ -239,7 +239,7 @@ console.log(max);
 
 ```js
 for (初始化表达式; 条件表达式; 自增表达式) {
- 循环体;
+  循环体;
 }
 //初始化表达式只是开始用到 后期反复执行。。。条件-->循环体-->自增-->条件。。。。。
 ```
@@ -257,7 +257,7 @@ for (初始化表达式; 条件表达式; 自增表达式) {
 
 ```js
 while (条件表达式) {
- 循环体;
+  循环体;
 }
 // 循环体就是重复执行的代码
 //可以做无限循环（true）就可以实现
@@ -276,7 +276,7 @@ while (条件表达式) {
 
 ```js
 do {
- 循环体;
+  循环体;
 } while (条件表达式);
 ```
 
