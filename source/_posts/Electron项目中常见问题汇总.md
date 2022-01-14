@@ -10,6 +10,21 @@ cnblogs:
 hash: 3a49aeb0426e51d99b1465074c6c148ba3398a7ec88727b165b2e238783a8908
 ---
 
+## 环境依赖
+
+### Windows 
+
+> Windows 环境依赖需要 Visual Studio 和 python 
+> Visual Studio 和 python 在安装 node 时会提示安装 window 对应的编译环境勾选安装即可， 或使用脚本安装编译环境，也可以使用 npm 全局安装 [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools)
+
+![image-20220113102005114](https://gitee.com/bitbw/my-gallery/raw/master/img/20220113140323.png)
+
+### MacOS
+
+>MacOS 环境依赖需要 CommandLineTools (Xcode命令行工具)和 python
+
+
+
 ## electron 更新到 12 后提示 Require is not defined
 
 ### 问题
@@ -194,11 +209,15 @@ Vue.config.devtools = true;
 
 然后相同的方法 构建 复制 粘贴就行
 
+
+
 ## MacOS 系统更新后 下载依赖报找不到 xcode
 
 MacOS 下打包 electron 项目需要 xcode ,同 windows 一样 （win 需要 visual studio），但是 xcode 太大了而且一般不需要整个 xcode ,这时可以使用[命令行工具 ](https://zhuanlan.zhihu.com/p/172365580)(Command Line Tools, CLT)，同样 win 也可以通过 node 进行配置命令命令行工具（在 node 安装时可以选择这些依赖）
 
 **但是**: MacOS 系统更新后 CLT 需要重新下载 ，不然下载依赖时会报找不到 xcode 的错误
+
+
 
 ## MacOS 提示 Error: Cannot create BrowserWindow before app is ready at I.init
 
@@ -221,3 +240,18 @@ app.on("activate", () => {
 ```js
 if (BrowserWindow.getAllWindows().length === 0 && isReady) createWindow();
 ```
+
+
+
+## 常用文档汇总
+
+electron https://www.electronjs.org/
+
+### 打包
+
+electron-builder https://www.electron.build/
+
+### 框架集成
+
+vue-cli-plugin-electron-builder https://nklayman.github.io/vue-cli-plugin-electron-builder/
+
