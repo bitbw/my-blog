@@ -10,12 +10,13 @@
     <form action="form_action.test" method="get" onSubmit="handle" target="_blank">
       <input name="test" value="i" type="text" />
     </form>
-    <button onclick="handleClick()" class="btn"></button>
+    <button onclick="handleClick()" class="btn">123123</button>
     <script>
       function handle(e) {
         console.log("Bowen: handle -> e", e);
       }
       function handleClick(e) {
+        debugger
         console.log("Bowen: click -> e", e);
       }
     //   document.querySelector(".btn").addEventListener("click",handleClick)

@@ -160,17 +160,56 @@ ESLint + Prettier
 下载插件
 
 ```bash
- npm install --save-dev @vue/eslint-config-prettier
+ npm install --save-dev @vue/eslint-config-prettier@6.0.0  eslint-plugin-prettier@3.3.1 prettier@2.2.1
 ```
 
 修改 eslintConfig
 
-```json
-"eslintConfig": {
-    ...
-    "extends": [
-      ...
-      "@vue/prettier"
-    ],
+```js
+module.exports = {
+  root: true,
+  env: {
+    node: true
   },
+  extends: ['plugin:vue/essential', 'eslint:recommended', '@vue/prettier'],
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
+  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    // 如果强烈要自定义规则，否则不需要添加下面代码 
+    'prettier/prettier': [
+      'warn',
+      {
+        printWidth: 80,
+        semi: true,
+        singleQuote: false,
+        trailingComma: 'es5',
+        jsxBracketSameLine: true,
+        arrowParens: 'avoid',
+        insertPragma: true,
+        tabWidth: 2,
+        useTabs: false,
+        bracketSpacing: true,
+        endOfLine: 'auto'
+      }
+    ]
+  }
+};
+
+```
+#### 关于vscode-prettier
+
+添加.prettierrc 和 修改vscode-prettier规则 会改变 prettier 的默认规则，可能会出现与eslint-config-prettier规则不一致问题 (注意：'prettier/prettier'选项将合并并覆盖任何带有`.prettierrc`文件的配置集)
+
+> 建议 ：不修改 eslintConfig 中的规则 ，  不添加.prettierrc ， 不修改 vscode-prettier 规则 ，保持统一风格
+
+如果非要自定义风格 需要保持 eslintConfig  规则和 .prettierrc 统一风格，或干脆排除 .prettierrc
+
+```
+"prettier/prettier": ["error", {}, {
+   // 排除  .prettierrc  防止规则合并
+  "usePrettierrc": false
+}]
 ```

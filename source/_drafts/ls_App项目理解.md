@@ -2887,3 +2887,13 @@ GetProductRule方法时使用eval(ruleStr),获取导出的这个server ，其他
 server内部实现数据的挂载，检查时调用server内部的 check方法进行检查
 
 http://192.168.1.104:8888/IConfig_TEST/iConfig_ADMIN_TEST Setup 1.6.0-local03.exe
+
+
+
+## 软件
+
+![image-20220118094653977](https://gitee.com/bitbw/my-gallery/raw/master/img/20220118094701.png)
+
+![image-20220118094737136](https://gitee.com/bitbw/my-gallery/raw/master/img/20220118094737.png)
+
+![image-20220118094751185](https://gitee.com/bitbw/my-gallery/raw/master/img/20220118094751.png)
