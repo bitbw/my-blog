@@ -3,7 +3,7 @@ title: vue-cli3+git-hook实现代码提交前自动eslint验证和格式化
 date: 2021-04-22 17:30:03
 tags:
   - vue-cli
-categories: vue
+categories: Vue
 cnblogs:
   postid: "15393012"
 hash: e7949838bbeb2a53fc38feb5582d8827448dfce9c23e6c8d47197785013d1c2b

@@ -8,7 +8,7 @@ categories: Git
 
 转载自：https://juejin.cn/post/7038550916106027044
 
-commit message 应该清晰明了，说明本次提交的目的，但是很多人在提交git信息的时候，为了图方便，大多都会简单的写一下，开发一时爽，维护火葬场。 清晰且统一的提交风格，有利于团队的协作和后期的维护，本文分享了我们如何通过限制代码提交的规范。
+commit message 应该清晰明了，说明本次提交的目的，但是很多人在提交 git 信息的时候，为了图方便，大多都会简单的写一下，开发一时爽，维护火葬场。 清晰且统一的提交风格，有利于团队的协作和后期的维护，本文分享了我们如何通过限制代码提交的规范。
 
 # 一、配置自己的提交规范
 
@@ -19,7 +19,6 @@ npm install -g commitizen
 // commitizen根据不同的`adapter`配置commit message
 npm install -g cz-conventional-changelog
 echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
-复制代码
 ```
 
 配置完成后，在你本地进入任何的 git repository， 使用 `git cz` 代替 `git commit` 都会出现选项，用来生成符合格式的 Commit message，如下图：
@@ -32,7 +31,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 自定义提交规范，我们需要用到 `cz-customizable`。
 
-> `cz-customizable` 和 `cz-conventional-changelog` 一样，都是 commitize n的 adapter，但是 `cz-customizable` 支持一定程度上的自定义
+> `cz-customizable` 和 `cz-conventional-changelog` 一样，都是 commitize n 的 adapter，但是 `cz-customizable` 支持一定程度上的自定义
 
 1. 安装 `npm i cz-customizable --save-dev`
 
@@ -44,7 +43,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
         "path":"node_modules/cz-customizable"
       }
     }
-   复制代码
+
    ```
 
 3. 项目根目录下创建 `.cz-config.js` 自定义提示文件
@@ -64,7 +63,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
        { value: 'revert',   name: 'revert:    回退'},
        { value: 'build',    name: 'build:     打包'}
      ],
-   
+
      // 步骤
      messages: {
        type: '请选择提交的类型；',
@@ -74,14 +73,14 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
        footer: '请选择要关闭的issue（可选）',
        confirmCommit: '确认要使用以上信息提交？（y/n）'
      },
-   
+
      // 跳过步骤
      skip: ['body', 'footer'],
-   
+
      // 默认长度
      subjectLimit: 72
    }
-   复制代码
+
    ```
 
 4. 此时，我们执行 `git cz` 的时候即可按照自己配置的规范，进行选项信息的填写，如下图
@@ -92,7 +91,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 1. Git Hooks
 
-> 整体的hooks非常多,但是我们用的比较多的其实只有两个
+> 整体的 hooks 非常多,但是我们用的比较多的其实只有两个
 >
 > 1. `commit-msg`
 >    - 由 `git commit` 和 `git merge` 调用
@@ -114,9 +113,9 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 >
 > 因此我们需要 husky + commit-msg + commitlint 校验我们的提交信息是否规范。
 
-#### 安装配置commitlint
+#### 安装配置 commitlint
 
-1. 安装依赖  `npm install --save-dev @commitlint/config-conventional @commitlint/cli`
+1. 安装依赖 `npm install --save-dev @commitlint/config-conventional @commitlint/cli`
 
 2. 创建 `commitlint.config.js` 文件
 
@@ -146,14 +145,14 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
        'subject-case': [0]
      }
    }
-   复制代码
+
    ```
 
-   > 注意：这里这个文件需要保存为utf-8的格式，否则可能出现错误
+   > 注意：这里这个文件需要保存为 utf-8 的格式，否则可能出现错误
    >
    > ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f66c138924240bf815b72ec1501dfa9~tplv-k3u1fbpfcp-watermark.awebp?)
 
-#### 安装配置husky
+#### 安装配置 husky
 
 1. 安装依赖 `npm install husky --save-dev`
 
@@ -161,7 +160,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
    ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10702def9941474795f38e713b964baa~tplv-k3u1fbpfcp-watermark.awebp?)
 
-3. 在 package.json 中生成 prepare指令 `npm set-script prepare "husky install"`
+3. 在 package.json 中生成 prepare 指令 `npm set-script prepare "husky install"`
 
    > 注意：这个需要 npm > 7.0 版本 可以使用 `npm install -g npm` 升版本
 
@@ -187,7 +186,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 #### pre-commit 检测
 
-1. 添加 commit 时的 hook，`pre-commit` 时运行  npx eslint --ext .js,.ts,.vue src
+1. 添加 commit 时的 hook，`pre-commit` 时运行 npx eslint --ext .js,.ts,.vue src
 
    `npx husky add .husky/pre-commit "npx eslint --ext .js,.ts,.vue src"`
 
@@ -199,7 +198,7 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
    ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5524af2ef569450aa04b933a35291bbf~tplv-k3u1fbpfcp-watermark.awebp?)
 
-#### lint-staged自动修复格式错误
+#### lint-staged 自动修复格式错误
 
 > `lint-staged` 可以让你当前的代码检查**只检查本次修改更新的代码，并在出现错误的时候，自动修复并推送**
 >
@@ -207,15 +206,15 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 1. 修改 `package.json` 配置
 
-   ```
-   "lint-staged": {
-    "src/**/*.{js,ts,vue}": [
-      "eslint --fix",
-      "git add ."
-    ]
-   }
-   复制代码
-   ```
+```json
+  "lint-staged": {
+  "src/**/*.{js,ts,vue}": [
+    "eslint --fix",
+    "git add ."
+  ]
+  }
+
+```
 
 2. 如上配置，每次它在你本地 commit 之前，校验你所提的内容是否符合你本地配置的 eslint 规则
 
@@ -227,11 +226,9 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
    ```shell
    #!/bin/sh
    . "$(dirname "$0")/_/husky.sh"
-   
+
    npx lint-staged
    ```
-
-
 
 ## 常见问题
 
@@ -239,24 +236,24 @@ echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 
 不是很完美的解决 可以借鉴下
 
- .cz-config.js
+.cz-config.js
 
 ```js
- types: [
-    { value: "✨feat", name: "feat:      新功能" },
-    { value: "🐛fix", name: "fix:       修复" },
-    { value: "📚docs", name: "docs:      文档变更" },
-    { value: "💎style", name: "style:     代码格式（不影响代码运行的变动）" },
-    {
-      value: "📦refactor",
-      name: "refactor:  重构（既不是增加feature）,也不是修复bug",
-    },
-    { value: "🚀pref", name: "pref:      性能优化" },
-    { value: "🚨test", name: "test:      增加测试" },
-    { value: "🛠chore", name: "chore:     构建过程或辅助工具的变动" },
-    { value: "⚙️revert", name: "revert:    回退" },
-    { value: "♻️build", name: "build:     打包" },
-  ]
+types: [
+  { value: "✨feat", name: "feat:      新功能" },
+  { value: "🐛fix", name: "fix:       修复" },
+  { value: "📚docs", name: "docs:      文档变更" },
+  { value: "💎style", name: "style:     代码格式（不影响代码运行的变动）" },
+  {
+    value: "📦refactor",
+    name: "refactor:  重构（既不是增加feature）,也不是修复bug",
+  },
+  { value: "🚀pref", name: "pref:      性能优化" },
+  { value: "🚨test", name: "test:      增加测试" },
+  { value: "🛠chore", name: "chore:     构建过程或辅助工具的变动" },
+  { value: "⚙️revert", name: "revert:    回退" },
+  { value: "♻️build", name: "build:     打包" },
+];
 ```
 
 commitlint.config.js
@@ -289,9 +286,9 @@ module.exports = {
 };
 ```
 
-### 使用 husky 在 git commit  时直接使用 commitizen
+### 使用 husky 在 git commit 时直接使用 commitizen
 
-1. 安装项目依赖commitizen
+1. 安装项目依赖 commitizen
 
 ```bash
     yarn add -D commitizen
@@ -303,5 +300,5 @@ module.exports = {
 npx husky add .husky/prepare-commit-msg "exec < /dev/tty &&  node_modules/.bin/cz --hook || true"
 ```
 
-效果不是很好  不如直接  `npx cz` 
+效果不是很好 不如直接 `npx cz`
 commitizen 官方： https://github.com/commitizen/cz-cli#optional-install-and-run-commitizen-locally
