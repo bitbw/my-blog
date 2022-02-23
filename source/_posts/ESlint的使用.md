@@ -6,23 +6,32 @@ tags:
 	- prettier
 categories: 前端工程化
 ---
+
 ## 官方网站
-[eslint官网](https://eslint.bootcss.com/docs/user-guide/getting-started)
-[eslint-plugin-prettier官网](https://github.com/prettier/eslint-plugin-prettier#eslint-plugin-prettier-)
-[lint-staged官网](https://www.npmjs.com/package/lint-staged)
+
+[eslint 官网](https://eslint.bootcss.com/docs/user-guide/getting-started)
+[eslint-plugin-prettier 官网](https://github.com/prettier/eslint-plugin-prettier#eslint-plugin-prettier-)
+[lint-staged 官网](https://www.npmjs.com/package/lint-staged)
 [prettier 官网](https://prettier.io/docs/en/cli.html#--write)
+
 ## 安装
+
 ```bash
 npm install eslint --save-dev
 ```
+
 ### 配合 prettier 安装
+
 ```bash
 npm install eslint eslint-config-prettier eslint-plugin-prettier prettier --save-dev
 ```
+
 ## 初始化配置
+
 ```bash
-./node_modules/.bin/eslint --init 
+./node_modules/.bin/eslint --init
 ```
+
 或者
 
 ```bash
@@ -31,10 +40,10 @@ npx eslint --init
 
 根据提示进行配置
 
-```
+```bash
 $ npx eslint --init
 You can also run this command directly using 'npm init @eslint/config'.
-√ How would you like to use ESLint? · style       
+√ How would you like to use ESLint? · style
 √ What type of modules does your project use? · none
 √ Which framework does your project use? · none
 √ Does your project use TypeScript? · No / Yes
@@ -77,7 +86,7 @@ module.exports = {
 
 ### .eslintignore
 
-项目目录添加`.eslintignore` 文件,添加需要eslint排除的文件  默认排除node_modules
+项目目录添加`.eslintignore` 文件,添加需要 eslint 排除的文件 默认排除 node_modules
 
 ```
 node_modules
@@ -85,13 +94,13 @@ node_modules
 
 ### .prettierignore
 
-项目目录添加`.prettierignore` 文件,添加需要prettier排除的文件  tip:prettier默认排除 node_modules
+项目目录添加`.prettierignore` 文件,添加需要 prettier 排除的文件 tip:prettier 默认排除 node_modules
 
 ```
 node_modules
 ```
 
-## 添加npm 脚本
+## 添加 npm 脚本
 
 package.json
 
@@ -104,16 +113,18 @@ package.json
 
 `prettier --write . ` 修复项目目录下所有文件,``.prettierignore` `会被排除
 
-`eslint --fix . ` 修复项目目录下所有js文件,``.eslintignore` `会被排除
+`eslint --fix . ` 修复项目目录下所有 js 文件,``.eslintignore` `会被排除
 
 ## 设置 commit 时自动 lint
 
-安装husky 和 lint-staged 并自动配置
+安装 husky 和 lint-staged 并自动配置
 
 ```bash
 npx mrm@2 lint-staged
 ```
+
 修改 package.json
+
 ```json
 "lint-staged": {
    - "*.js": "eslint --cache --fix",
