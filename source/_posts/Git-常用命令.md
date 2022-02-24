@@ -6,7 +6,7 @@ tags:
 categories: Git
 cnblogs:
   postid: "15392421"
-hash: 7199204ea65bec028b5f5b8fef266715b32ffddb256d46698a7fb1ed5df3d345
+hash: a2a8372925140432e7ee1bd3d64cca0321bc199aac7d656f8f854a9a576060a4
 ---
 
 ## remote
@@ -118,19 +118,20 @@ git remote add origin https://github.com/bitbw/test111.git
 git branch -M main
 git push -u origin main
 ```
+
 ## git设置代理
 
-##### 设置局部代理
+### 设置局部代理
 
-```
+```bash
 git config --local http.proxy 127.0.0.1:1080
 ```
 
-###### 端口要设置为本地代理的端口
+### 端口要设置为本地代理的端口
 
-##### 设置全局代理
+### 设置全局代理
 
-```
+```bash
 git config --global http.proxy 127.0.0.1:1080
 ```
 
@@ -138,7 +139,47 @@ git config --global http.proxy 127.0.0.1:1080
 
 取消代理设置
 
-```
+```bash
 git config --local --unset http.proxy
 git config --global --unset http.proxy
 ```
+
+## git 大小写问题
+
+问题复现:
+
+1. .新建一个 a.js 文件(大小写不敏感的状态下)，并提交
+2. .修改本地 a.js 变为 A.js，文件内容无变更，无法提交
+3. 执行git config core.ignorecase false，修改 大小写敏感 规则，然后提交，查看结果，此时会存在 大小写 同时存在的文件
+4. 此时某种机缘下，再次执行 git config core.ignorecase true，大小写不敏感，
+5. 此时执行 git push ， 即把最新的更新都更新到了 a.js 中
+6. 此时再修改 大小写敏感规则为敏感， 执行 git pull ，并不会拿到最新的更新。比如自己想要的是第一次修改后的 A.js ，但是服务器有一个没7. 有更新的 A.js 和 有更新的 a.js,而你只能拿到前者，所以就会遇到各种各样的坑……
+
+### 解决办法
+
+执行git config --global core.ignorecase false，全局设置 大小写敏感 。
+
+1. 文件变更比较少的情况
+直接使用以下命令重命名文件，在 git 中不要直接修改文件名，最好的办法是使用下面的方式，
+
+```bash
+git mv -f [你想要删掉的文件] [你想要留下的文件]
+git mv -f a.js A.js
+
+## 等同于：
+
+git rm a.js
+git add A.js
+```
+
+这个命令的目的就是删除不需要的大小写同名文件，修改后 git push 提交变更即可。
+
+2. 变更比较多，并且拥有分支较高权限
+
+- 在 github 删除该分支
+- 本地执行 git rm -r --cached . (注意后面‘点号’)
+- 然后重新 git push，就ok了
+此法不太好，有点暴力，容易出问题，但适用于 变更发生于近期的情况。
+
+总结：
+其实看解决办法的话，只是一个很小的问题，但是出现的 bug 确实是让人很头疼的，因为 mac windows 在不设置大小写敏感规则的时候默认大小写是不敏感，项目部署的机器是 Linux 的，而 Linux 是大小写敏感的。所以这样的问题平时不易发现，本地调试的时候大部分时候并不会出错误，只有在项目部署的时候问题才会显示出来。

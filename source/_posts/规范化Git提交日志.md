@@ -2,8 +2,11 @@
 title: 规范化Git提交日志（Commitizen + husky + Git hooks ）
 date: 2022-01-14 21:06:00
 tags:
-	- 前端工程化
+  - 前端工程化
 categories: Git
+hash: 5e7f98bf541a76a4163743035e4382ffafd5548d96ee0fd09edc55d4a2b40a0a
+cnblogs:
+  postid: "15931436"
 ---
 
 转载自：https://juejin.cn/post/7038550916106027044

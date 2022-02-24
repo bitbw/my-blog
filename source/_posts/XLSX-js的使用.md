@@ -7,12 +7,34 @@ tags:
 categories: XLSX
 cnblogs:
   postid: "15393029"
-hash: 1f56db4dd551c87e477c7e20b0c77df9f7352d051d319a5096ef7f6780e6e260
+hash: a8bd6f6276eefa8d084d8dd0032b8b90e07475492905c6333f5f1346551b2f13
 ---
 
-[SheetJS js-xlsx](http://sheetjs.com/) 中文文档： https://github.com/rockboom/SheetJS-docs-zh-CN
+[SheetJS js-xlsx](http://sheetjs.com/) 中文文档： <https://github.com/rockboom/SheetJS-docs-zh-CN>
 
-merges 的使用
+## 使用步骤
+
+```js
+  // 从头开始创建工作簿
+  var wb = XLSX.utils.book_new();
+  /**
+   * 创建工作表
+   * aoa_to_sheet    二维数组
+   * json_to_sheet   对象数组
+   * table_to_sheet  tableDOM
+   */
+  let ws= XLSX.utils.json_to_sheet(json);
+  // 把工作表添加到工作簿中
+  XLSX.utils.book_append_sheet(wb, ws, "sheet");
+  // 写入 （node）
+  XLSX.writeFile(wb, path.resolve(__dirname, "./test.xlsx"), {
+    type: "buffer",
+    Props: { Author: "author" },
+  });
+
+```
+
+## merges 的使用
 
 ```js
 ........
