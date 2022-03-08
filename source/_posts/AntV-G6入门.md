@@ -86,7 +86,7 @@ export default {
 </script>
 
 ```
-
+<!--more-->
 ## 元素及其配置
 
 ```vue

@@ -1,62 +1,85 @@
 ---
-title: express入门
+title: Nodejs常用方法
 date: 2022-03-07 17:09:09
 tags:
-    - express
+    - Nodejs
 categories: Nodejs
 ---
 
 
-## Express 应用程序生成器
-
-[官方地址](http://expressjs.com/zh-cn/starter/generator.html)
-
-```bash
-npx express-generator --git  -view=ejs  myapp
-
-cd myapp
-
-npm install
-
-npm start
-
-```
-
-## 项目完善
-
-### CORS
-
-app.js
+## 路径是否存在，不存在则创建
 
 ```js
-//设置CORS
-app.all('*',function (req, res, next) {
-  res.header('Access-Control-Allow-Origin','*'); //当允许携带cookies此处的白名单不能写’*’
-  res.header('Access-Control-Allow-Headers','Accept-Ranges, Content-Encoding,  Content-Range, content-type,Content-Length, Authorization,Origin,Accept,X-Requested-With'); //允许的请求头
-  res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT'); //允许的请求方法
-  res.header('Access-Control-Allow-Credentials',true);  //允许携带cookies
-  next();
-});
-```
-
-### 解析 formdata
-
-[使用 multiparty](https://www.npmjs.com/package/multiparty)
-
-```bash
-npm install multiparty
-```
-
-router
-
-```js
-const multiparty = require("multiparty");
-outer.post("/xxx", async function (req, res, next) {
-  // 获取form
-  var form = new multiparty.Form();
-  form.parse(req, async function (err, fields, files) {
-        // fields  files -> formdata
-      console.log(fields, files)
+const path = require("path");
+const fs = require("fs").promises;
+/**
+ * 路径是否存在，不存在则创建
+ * @param {string} dir 路径
+ */
+async function dirExists(dir) {
+  //如果该路径且不是文件，返回true
+  let isExists;
+  try {
+    isExists = await fs.stat(dir);
+  } catch (error) {
+    console.log("[log][dirExists] path is not exist");
+    // 创建目录
   }
-})
+  if (isExists) {
+    //如果该路径存在但是文件，返回false
+    if (isExists.isFile()) {
+      return false;
+    }
+    // 存在返回 true
+    if (isExists.isDirectory()) {
+      return true;
+    }
+  }
+
+  //如果该路径不存在
+  let pDir = path.parse(dir).dir; //拿到上级路径
+  //递归判断，如果上级目录也不存在，则会代码会在此处继续循环执行，直到目录存在
+  let status = await dirExists(pDir);
+  let mkdirStatus;
+  if (status) {
+    try {
+      mkdirStatus = await fs.mkdir(dir);
+    } catch (error) {
+      return false;
+    }
+  }
+  console.log(`[log] ${dir} created`);
+  return true;
+}
+
+```
+
+## 删除文件夹和内部所有文件
+
+```js
+var fs = require("fs"); //引入fs模块
+var path = require("path"); //引入path模块
+/**
+ * @description: 删除文件夹和内部所有文件
+ * @param {*} dir
+ * @return {*}
+ */
+function rmdirDeepSync(dir) {
+  var files = fs.readdirSync(dir); //同步读取文件夹内容
+
+  files.forEach(function (item, index) {
+    //forEach循环
+    let p = path.resolve(dir, item); //读取第二层的绝对路径
+    let pathstat = fs.statSync(p); //独读取第二层文件状态
+    if (!pathstat.isDirectory()) {
+      //判断是否是文件夹
+      fs.unlinkSync(p); //不是文件夹就删除
+    } else {
+      rmdirDeepSync(p); //是文件夹就递归
+    }
+  });
+  fs.rmdirSync(dir); //删除已经为空的文件夹
+}
+
+
 ```
