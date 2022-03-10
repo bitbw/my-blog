@@ -15,8 +15,50 @@ cnblogs:
 
 ```json
  "devDependencies": {
- 	 ...
+   ...
 -    "@vue/cli-plugin-pwa": "^4.4.0",
      ...
  }
+```
+
+## ESlint
+
+### ESlint 开启保存校验
+
+vue.config.js
+
+```js
+
+module.exports = {
+  ...
+  lintOnSave: true,
+  ...
+}
+```
+### 关闭部分校验规则
+
+.eslintrc.js
+
+```js
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+  },
+  extends: ["plugin:vue/essential", "eslint:recommended", "@vue/prettier"],
+  parserOptions: {
+    parser: "babel-eslint",
+  },
+  // 关闭规则
+  rules: {
+    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-unused-vars": process.env.NODE_ENV === "production" ? "warn" : "off",
+    // vue相关加 vue/
+    "vue/no-unused-components":
+      process.env.NODE_ENV === "production" ? "warn" : "off",
+  },
+};
+
+
 ```
