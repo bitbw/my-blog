@@ -8,7 +8,9 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "update": "git add -A && git commit -m 'updata' && git pull && git push",
+    "preupdate": "git add . ",
+    "update": "git commit -m",
+    "postupdate": "git pull && git push",
     "pushBaidu": "node ./script/pushBaidu.js"
   },
   "hexo": {

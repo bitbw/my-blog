@@ -12,7 +12,7 @@ cnblogs:
 hash: 538c9f80f9a80ccbbcde4c0f691e2ef4b0ad592dc67093c7b674c0f36c36e90c
 ---
 
-> 本片文章转载于阮一峰老师的博客：http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html
+> 本片文章转载于阮一峰老师的博客：<http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html>
 
 Node 开发离不开 npm，而脚本功能是 npm 最强大、最常用的功能之一。
 
@@ -302,34 +302,39 @@ npm 脚本有一个非常强大的功能，就是可以使用 npm 的内部变�
 
 ## 十、常用脚本示例
 
-> ```javascript
-> // 删除目录
-> "clean": "rimraf dist/*",
->
-> // 本地搭建一个 HTTP 服务
-> "serve": "http-server -p 9090 dist/",
->
-> // 打开浏览器
-> "open:dev": "opener http://localhost:9090",
->
-> // 实时刷新
->  "livereload": "live-reload --port 9091 dist/",
->
-> // 构建 HTML 文件
-> "build:html": "jade index.jade > dist/index.html",
->
-> // 只要 CSS 文件有变动，就重新执行构建
-> "watch:css": "watch 'npm run build:css' assets/styles/",
->
-> // 只要 HTML 文件有变动，就重新执行构建
-> "watch:html": "watch 'npm run build:html' assets/html",
->
-> // 部署到 Amazon S3
-> "deploy:prod": "s3-cli sync ./dist/ s3://example-com/prod-site/",
->
-> // 构建 favicon
-> "build:favicon": "node scripts/favicon.js",
-> ```
+ ```json
+ // 删除目录
+ "clean": "rimraf dist/*",
+
+ // 本地搭建一个 HTTP 服务
+ "serve": "http-server -p 9090 dist/",
+
+ // 打开浏览器
+ "open:dev": "opener http://localhost:9090",
+
+ // 实时刷新
+  "livereload": "live-reload --port 9091 dist/",
+
+ // 构建 HTML 文件
+ "build:html": "jade index.jade > dist/index.html",
+
+ // 只要 CSS 文件有变动，就重新执行构建
+ "watch:css": "watch 'npm run build:css' assets/styles/",
+
+ // 只要 HTML 文件有变动，就重新执行构建
+ "watch:html": "watch 'npm run build:html' assets/html",
+
+ // 部署到 Amazon S3
+ "deploy:prod": "s3-cli sync ./dist/ s3://example-com/prod-site/",
+
+ // 构建 favicon
+ "build:favicon": "node scripts/favicon.js",
+
+ // git 操作
+ "preupdate": "git add . ",
+ "update": "git commit -m",
+ "postupdate": "git pull && git push",
+ ```
 
 ## 十一、参考链接
 
