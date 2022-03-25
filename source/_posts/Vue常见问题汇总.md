@@ -198,7 +198,7 @@ this.items = this.items.map( item =>{
 
 > 在模板中绑定的名称不要用 class 作为命名 否则 eslint 会报'v-bind' directives require an attribute value.eslint
 
-$attrs 可以获取任何绑定在组件上的属性 但（ `porp`中的属性和 `class` 和 `style` 除外）
+> $attrs 可以获取任何绑定在组件上的属性 但（ `porp`中的属性和 `class` 和 `style` 除外）
 
 ### vue-property-decorator 注意事项（ts 项目中）
 
@@ -233,4 +233,87 @@ prop 中 default 默认值 返回对象或数组需要使用工厂函数 ，一�
   },
 ```
 
->
+### 使用 v-on="$listeners" 的注意事项
+
+#### 问题
+
+ 内部使用了 v-on="$listeners" 的组件事件被重复调用
+
+#### 案例
+
+这里有个 Father 组件
+
+```html
+ <Child v-on="$listeners" @click="$emit('click')" />
+```
+
+Child组件上用$listeners接收外部传入的所有事件 同时有独立 click 绑定
+
+``` html
+<Father @click="onClick" ></Father>
+```
+
+Father 组件上 绑定  onClick  
+
+##### 行为
+
+此时触发 Child组件的 click 事件
+
+##### 结果
+
+onClick事件被触发 2 次
+
+#### 原因
+
+$listeners 中 click 和  单独绑定的 click 都被掉用了
+我们在 Father 的 created中看一下 $listeners
+
+```js
+this.$listeners  // { click: ƒ, input: ƒ}
+```
+
+##### 过程
+
+Father.$listeners.click 直接被绑到了 Child 上  @click 也被绑定到到了 Child 上
+Child click 被触发
+1 调用 Father.$listeners.click  （也就是onClick）
+2 调用 @click -> 触发 $emit('click') -> 调用 onClick
+
+#### 解决
+
+v-on="$listeners" 同时又想自己绑定一些事件的情况 防止重复调用 可以使用合并事件的方式
+
+```html
+ <Child v-on="listeners" />
+```
+
+```js
+export default {
+  name: "Father",
+  components: {
+    Child,
+  },
+  computed: {
+    listeners() {
+      return {
+        ...this.$listeners,
+        // 用下面 click 覆盖  this.$listeners.click
+        click: () => this.$emit("click"),
+      };
+    },
+  },
+};
+```
+#### 注意点 $attrs 不会出现这种情况
+
+> $attrs 包含了父作用域中不作为 prop 被识别 (且获取) 的 attribute 绑定 (class 和 style 除外)
+
+意味着 prop中的属性 就不会出现在 $attrs 中 ，导致重复出现
+
+#### Vue3 去除了$listeners
+
+vue3 中去除了 $listeners 统一在 $attrs 中
+
+并且 添加了 emits ，同 props 用法类似， 是用于定义需要触发的事件的
+
+在 emits 和 props 定义的属性 都不会在 $attrs 中出现 ，这意味的不会出现多次调用的可能 ！ vue3是挺好！😏

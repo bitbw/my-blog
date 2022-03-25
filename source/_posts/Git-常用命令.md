@@ -144,6 +144,12 @@ git config --local --unset http.proxy
 git config --global --unset http.proxy
 ```
 
+### git clone 同时设置代理
+
+```bash
+git clone -c http.proxy=http://127.0.0.1:1080  https://github.com/xxx.git
+```
+
 ## git 大小写问题
 
 问题复现:
@@ -193,3 +199,12 @@ git add A.js
 在url = xxx下再加一行其他远程库的路径，例如，开源中国的：
 
 此后，你只需要git push origin master，即可同时推送到两个不同仓库的master。
+
+## git 别名配置
+
+```bash
+  git config --global alias.co checkout
+  git config --global alias.br branch
+  git config --global alias.ci commit
+  git config --global alias.st status
+```
