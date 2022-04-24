@@ -12,9 +12,9 @@ hash: 57b4a2acd9b0f0a650546a8fc0501f236c43757d0bb6bf76946f4de538b28b1e
 
 ## 环境依赖
 
-### Windows 
+### Windows
 
-> Windows 环境依赖需要 Visual Studio 和 python 
+> Windows 环境依赖需要 Visual Studio 和 python
 > Visual Studio 和 python 在安装 node 时会提示安装 window 对应的编译环境勾选安装即可， 或使用脚本安装编译环境，也可以使用 npm 全局安装 [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools)
 
 ![image-20220113102005114](https://gitee.com/bitbw/my-gallery/raw/master/img/20220113140323.png)
@@ -22,8 +22,6 @@ hash: 57b4a2acd9b0f0a650546a8fc0501f236c43757d0bb6bf76946f4de538b28b1e
 ### MacOS
 
 >MacOS 环境依赖需要 CommandLineTools (Xcode命令行工具)和 python
-
-
 
 ## electron 更新到 12 后提示 Require is not defined
 
@@ -35,7 +33,7 @@ hash: 57b4a2acd9b0f0a650546a8fc0501f236c43757d0bb6bf76946f4de538b28b1e
 
 项目使用 vue-cli-plugin-electron-builder 搭建，在 vue-cli-plugin-electron-builder 的 github 问题上找到对应答案
 
-问题地址：https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/1349
+问题地址：<https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/1349>
 
 在 new BrowserWindow 中添加 nodeIntegration 和 contextIsolation 的对应配置
 
@@ -54,7 +52,7 @@ const win = new BrowserWindow({
 
 同时修改 vue.config.js
 
-官方说明：https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration
+官方说明：<https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration>
 
 ```js
 module.exports = {
@@ -191,7 +189,7 @@ app.on("ready", async () => {
 
 ![img](https://gitee.com/bitbw/my-gallery/raw/master/img/electron20201111130214278.png)
 
-### 问题：
+### 问题
 
 #### 报 Cannot read property ‘**VUE_DEVTOOLS_UID**’ of undefined
 
@@ -203,21 +201,17 @@ Vue.config.devtools = true;
 
 #### 打包出来的 vue-devtools 可能是最新版的外观可能不太适应
 
-直接在 github 官方地址 https://github.com/vuejs/devtools/tags下载自己用的比较顺手的版本
+直接在 github 官方地址 <https://github.com/vuejs/devtools/tags>下载自己用的比较顺手的版本
 
 我比较喜欢 v5.3.3
 
 然后相同的方法 构建 复制 粘贴就行
 
-
-
 ## MacOS 系统更新后 下载依赖报找不到 xcode
 
-MacOS 下打包 electron 项目需要 xcode ,同 windows 一样 （win 需要 visual studio），但是 xcode 太大了而且一般不需要整个 xcode ,这时可以使用[命令行工具 ](https://zhuanlan.zhihu.com/p/172365580)(Command Line Tools, CLT)，同样 win 也可以通过 node 进行配置命令命令行工具（在 node 安装时可以选择这些依赖）
+MacOS 下打包 electron 项目需要 xcode ,同 windows 一样 （win 需要 visual studio），但是 xcode 太大了而且一般不需要整个 xcode ,这时可以使用[命令行工具](https://zhuanlan.zhihu.com/p/172365580)(Command Line Tools, CLT)，同样 win 也可以通过 node 进行配置命令命令行工具（在 node 安装时可以选择这些依赖）
 
 **但是**: MacOS 系统更新后 CLT 需要重新下载 ，不然下载依赖时会报找不到 xcode 的错误
-
-
 
 ## MacOS 提示 Error: Cannot create BrowserWindow before app is ready at I.init
 
@@ -241,17 +235,39 @@ app.on("activate", () => {
 if (BrowserWindow.getAllWindows().length === 0 && isReady) createWindow();
 ```
 
+## MacOS 12.3 打包报 Exit code: ENOENT. spawn /usr/bin/python ENOEN
 
+### 原因
+
+因为 macos monterey 12.3 删除了 python 2.7 <https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes>
+
+### 解决
+
+<https://github.com/electron-userland/electron-builder/pull/6789>
+
+将`electron-builder`升级到最新
+
+```bash
+npm i electron-builder@next
+```
+
+注意:如果项目中使用的是`vue-cli-plugin-electron-builder` 需要手动进入包内部更新
+
+```bash
+# 进入 node_modules
+ cd node_modules/vue-cli-plugin-electron-builder
+# 更新 electron-builder
+npm i electron-builder@next
+```
 
 ## 常用文档汇总
 
-electron https://www.electronjs.org/
+electron <https://www.electronjs.org/>
 
 ### 打包
 
-electron-builder https://www.electron.build/
+electron-builder <https://www.electron.build/>
 
 ### 框架集成
 
-vue-cli-plugin-electron-builder https://nklayman.github.io/vue-cli-plugin-electron-builder/
-
+vue-cli-plugin-electron-builder <https://nklayman.github.io/vue-cli-plugin-electron-builder/>
