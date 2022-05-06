@@ -91,7 +91,7 @@ button {
 
 ### 5.展示效果
 
-![image-20200801125315315](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801125315315.png)
+![image-20200801125315315](https://bitbw.top/public/img/my_gallery/image-20200801125315315.png)
 
 ## 设置阅读时长和本文字数
 
@@ -122,7 +122,7 @@ symbols_count_time:
 
 ### 3.展示效果
 
-![image-20200801130036785](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801130036785.png)
+![image-20200801130036785](https://bitbw.top/public/img/my_gallery/image-20200801130036785.png)
 
 ## 设置阅读次数和评论
 
@@ -132,7 +132,7 @@ symbols_count_time:
 
 ### 展示效果：
 
-![image-20200916135526251](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200916135526251.png)
+![image-20200916135526251](https://bitbw.top/public/img/my_gallery/image-20200916135526251.png)
 
 ### 显示阅读次数
 
@@ -151,7 +151,7 @@ busuanzi_count:
 
 ### 展示效果：
 
-![image-20200916135902653](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200916135902653.png)
+![image-20200916135902653](https://bitbw.top/public/img/my_gallery/image-20200916135902653.png)
 
 ## 添加背景动画效果
 
@@ -224,7 +224,7 @@ hexo s
 
 ### 3.展示效果
 
-![next背景彩带展示效果](https://gitee.com/bitbw/my-gallery/raw/master/img/next背景彩带展示效果.gif)
+![next背景彩带展示效果](https://bitbw.top/public/img/my_gallery/next背景彩带展示效果.gif)
 
 ## 阅读全文设置
 
@@ -250,7 +250,7 @@ npm install hexo-excerpt --save
 
 ### 3.展示效果
 
-![image-20200801163505378](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801163505378.png)
+![image-20200801163505378](https://bitbw.top/public/img/my_gallery/image-20200801163505378.png)
 
 ## 阅读全文 去掉自动定位 more
 
@@ -333,7 +333,7 @@ pre {
 
 ### 3.展示效果
 
-![image-20200801171206790](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801171206790.png)
+![image-20200801171206790](https://bitbw.top/public/img/my_gallery/image-20200801171206790.png)
 
 ## 代码块背景色缺失问题
 
@@ -341,17 +341,17 @@ pre {
 
 > 有时候编辑后的 md 文档会发生背景色缺失现象 如图
 
-![image-20200801172746730](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801172746730.png)
+![image-20200801172746730](https://bitbw.top/public/img/my_gallery/image-20200801172746730.png)
 
 ### 2.形成原因
 
 > 原因：编辑时回车 换行，会导致当前行渲染后元素高度无法达到正常高度，如图：
 
-![image-20200801175234139](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801175234139.png)
+![image-20200801175234139](https://bitbw.top/public/img/my_gallery/image-20200801175234139.png)
 
 > 正常的 pre 也就是当前行如图：
 
-![image-20200801175338090](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200801175338090.png)
+![image-20200801175338090](https://bitbw.top/public/img/my_gallery/image-20200801175338090.png)
 
 > 而每行 tr 都有自己的背景色 （一般是白色），一但 pre 没有高度 ,就会造成背景色的混乱
 

@@ -57,17 +57,17 @@ https://dev.dcloud.net.cn/
 
 文件->新建->项目
 
-![image-20211022101917225](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022101926.png)
+![image-20211022101917225](https://bitbw.top/public/img/my_gallery/20211022101926.png)
 
 ### 4.将 dist 目录和新建的项目合并
 
 删除 myApp 项目里面的 css、img、js 文件夹；将打包后的 vue 静态资源文件夹 dist 里面的文件拷贝进 app 项目里：
 
-![image-20211022102250128](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022102250.png)
+![image-20211022102250128](https://bitbw.top/public/img/my_gallery/20211022102250.png)
 
 ### 5.修改 app 的配置文件 mainfest.json
 
-![image-20211022102642627](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022102642.png)
+![image-20211022102642627](https://bitbw.top/public/img/my_gallery/20211022102642.png)
 
 #### 可选配置
 
@@ -87,15 +87,15 @@ app 需要用到的权限，会询问用户打开这些权限。勾选相应的�
 
 选中需要打包的项目名，点击工具栏的“发行”，选择”原生 App-云打包“.
 
-![image-20211022103310806](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022103310.png)
+![image-20211022103310806](https://bitbw.top/public/img/my_gallery/20211022103310.png)
 
 在弹出的框中，选择”使用 DCloud 公用证书“（也可以使用自有证书，需要查看官网说明），取消勾选 ”广告联盟“ 和 ”换量联盟“，点击最底部的”打包“按钮：
 
-![image-20211022103342804](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022103342.png)
+![image-20211022103342804](https://bitbw.top/public/img/my_gallery/20211022103342.png)
 
 打包完成后打开文件位置 就可以看到生成的 apk 安卓安装文件了
 
-![image-20211022105826098](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022105826.png)
+![image-20211022105826098](https://bitbw.top/public/img/my_gallery/20211022105826.png)
 
 #### 注意事项
 
@@ -107,4 +107,4 @@ app 需要用到的权限，会询问用户打开这些权限。勾选相应的�
 
 运行-》运行到手机或模拟器 -》调试控制台
 
-![image-20211022104005852](https://gitee.com/bitbw/my-gallery/raw/master/img/20211022104006.png)
+![image-20211022104005852](https://bitbw.top/public/img/my_gallery/20211022104006.png)

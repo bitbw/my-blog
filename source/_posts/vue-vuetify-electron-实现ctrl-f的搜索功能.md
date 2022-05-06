@@ -17,7 +17,7 @@ hash: 30bbd1197e9f933f4879faa612d83e484f1b911f30f7b8f037a286ede2bd589b
 
 ### 效果
 
-![实现ctrl+f的搜索功能](https://gitee.com/bitbw/my-gallery/raw/master/img/实现ctrl+f的搜索功能.gif)
+![实现ctrl+f的搜索功能](https://bitbw.top/public/img/my_gallery/实现ctrl+f的搜索功能.gif)
 
 <!--more-->
 

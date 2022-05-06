@@ -20,15 +20,15 @@ hash: 3669e949c7a4ddd32a5c4a24ba08edaadd669d080ff3569602d0342cded1a66f
 - 选择 nodejs 作为调试工具
 - 开始调试
 
-![image-20210309103224511](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103224511.png)
+![image-20210309103224511](https://bitbw.top/public/img/my_gallery/image-20210309103224511.png)
 
 如果只调试 js 代码的话，选择 nodejs 即可
 
-![image-20210309103344902](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103344902.png)
+![image-20210309103344902](https://bitbw.top/public/img/my_gallery/image-20210309103344902.png)
 
 ### 调试界面
 
-![image-20210309103733550](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210309103733550.png)
+![image-20210309103733550](https://bitbw.top/public/img/my_gallery/image-20210309103733550.png)
 
 ### 总结
 
@@ -106,4 +106,4 @@ hash: 3669e949c7a4ddd32a5c4a24ba08edaadd669d080ff3569602d0342cded1a66f
 
 否则点击运行启动调试则只能调试当天打开的 tab 标签页
 
-![image-20210723134611394](https://gitee.com/bitbw/my-gallery/raw/master/img/vscode%E8%B0%83%E8%AF%95%E6%B3%A8%E6%84%8F01.png)
+![image-20210723134611394](https://bitbw.top/public/img/my_gallery/vscode%E8%B0%83%E8%AF%95%E6%B3%A8%E6%84%8F01.png)

@@ -24,7 +24,7 @@ hash: 722e043b1119efbf5e82b51c0830f4390b51ca4effdc5d9d6965488c321349a9
 
 ### webpack 的打包过程
 
-![](https://gitee.com/bitbw/my-gallery/raw/master/img/web工作流程.png)
+![](https://bitbw.top/public/img/my_gallery/web工作流程.png)
 
 ### webpack 初体验
 
