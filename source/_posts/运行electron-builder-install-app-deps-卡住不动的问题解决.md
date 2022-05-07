@@ -9,7 +9,7 @@ categories: Electron
 date: 2020-12-13 11:15:36
 cnblogs:
   postid: "15393048"
-hash: 83347dfe2a87101c15bfe4cde47e174fea84c0c94d4b70ff5659e0cce20ddce5
+hash: 28b9620e0fbfb06fdff78fbcb4ff9ec1ba72b0181634f715e04c3f3349b26caf
 ---
 
 背景：使用 electron-builder 和 @journeyapps/sqlcipher 的项目 ，在新电脑上 clone 项目，npm 装包时遇到错误

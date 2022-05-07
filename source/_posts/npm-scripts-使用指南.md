@@ -9,7 +9,7 @@ tags:
 categories: Nodejs
 cnblogs:
   postid: "15392979"
-hash: 538c9f80f9a80ccbbcde4c0f691e2ef4b0ad592dc67093c7b674c0f36c36e90c
+hash: c44b48d2d66b78a955f745e37c0260a68d93f7b00f2cc792b5f539e648eab7f9
 ---
 
 > 本片文章转载于阮一峰老师的博客：<http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html>

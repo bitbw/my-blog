@@ -8,7 +8,7 @@ tags:
 categories: Hexo
 cnblogs:
   postid: "15392586"
-hash: ccdfa25603bd7c3d14c8113d1accf2b2abbd59ee34141f6eb5b818bc20067c5f
+hash: ca50e38108c66ee7d5e4ca8ca567aa9f19196fa25e8b4e4f71d0377ab9ec94c4
 ---
 
 # hexo 新版主题 next7.x 设置
