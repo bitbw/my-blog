@@ -135,3 +135,8 @@ npm install ./picgo-plugin-<your-plugin-name>
 ## Typora中配置Picgo-Core
 
 ![image-20220511163057062](https://bitbw.top/public/img/my_gallery/image-20220511163057062.png)
+
+## 发布插件
+
+[官方文档](https://picgo.github.io/PicGo-Core-Doc/zh/dev-guide/deploy.html#%E6%8F%92%E4%BB%B6%E5%8F%91%E5%B8%83)
+[如何在npm上发布自己的包](https://blog.bitbw.top/Nodejs/npm%E5%AD%A6%E4%B9%A0/)
