@@ -1,5 +1,5 @@
 ---
-title: elementUI的使用注意事项
+title: elementUI常见问题汇总
 tags:
   - elementUI
   - Vue
@@ -62,7 +62,7 @@ hash: 8fb94c5a4775f43be95464188e34678ce73f2d1ca771884cf22e7d3bd3ab565b
 
 在开发中 表头但是多级表头并且是动态遍历的 ，遍历的数据发生改变表头数据却没有更新
 
-#### 问题出现原因：
+#### 问题出现原因
 
 ```html
 <el-table-column v-for="item in columnData" :key="item.id">
@@ -271,3 +271,15 @@ srcList = [
 - 导航菜单选中项样式问题通过类名.is-active 设置
 - 顶部 logo 部分的顶部栏的高度，和子项宽度 都是通过 flex 属性设置，flex ：0 0 220px
 - elementui 的样式变量在 E:\project\hr-web-container\node_modules\element-ui\packages\theme-chalk\src\common\var.scss 内
+
+## date-picker
+
+### 问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码
+
+[github issues](https://github.com/ElemeFE/element/issues/21159)
+
+将datepicker组件的type属性设置为week，value-format属性设置为timestamp，此时无法回显选择的日期，通过打印v-model值可以得知此时的v-model正确值是乱码 `ti0e0tam0p`
+
+### 解决
+
+目前 github 上没有解决 elementUI 2 已经没有维护了 ， value-format尽量别设置为timestamp 就可以避免这个问题
