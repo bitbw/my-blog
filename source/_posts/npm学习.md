@@ -14,6 +14,25 @@ cnblogs:
 
 [创建一个 npm 账号](https://docs.npmjs.com/creating-a-new-npm-user-account)
 
+### 本地添加账号
+
+```bash
+$ npm adduser
+npm notice Log in on https://registry.npmjs.org/
+Username: username
+Password:xxx
+Email: (this IS public) xxx@xxx.com
+npm notice Please check your email for a one-time password (OTP)
+Enter one-time password from your authenticator app: xxxxx
+Logged in as bitbw on https://registry.npmjs.org/.
+```
+
+### 问题
+
+如果提示`[FORBIDDEN] Public registration is not allowed`
+问题的原因是你的NPM使用了镜像地址.
+解决方法：先不用镜像地址
+
 ## 创建和发布作用域公共包
 
 ### 创建作用域公共包
