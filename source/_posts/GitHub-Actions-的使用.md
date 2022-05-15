@@ -205,3 +205,8 @@ jobs:
             npm run deploy  
          
 ```
+
+#### 问题
+
+ 使用 appleboy/ssh-action@master 有可能会报 npm 或 node 命令找不到的情况
+ 最好在 usr/bin 建立一个[node相关命令的软连接](https://blog.bitbw.top/Nodejs/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Nodejs/)
