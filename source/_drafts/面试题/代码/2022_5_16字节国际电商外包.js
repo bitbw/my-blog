@@ -1,42 +1,8 @@
-# 1 月
-
-## 白马云行
-
-### 框架题
-
-- new Vue 过程 （看看面试题）
-- vue 中 数据劫持 使用了 什么
-- 观察者模式 和 发布者订阅者模式的区别
-- react 的 生命周期
-- 小程序中跳转页面传参 querystring || appdata
-- webview 通信
-
-### 代码题
-
-- 深拷贝 和 浅拷贝
-- 事件循环s
-- 节流防抖
-- promise 代码题 实现一个 promise
-
-### 工作题
-
-- git 版本回退 和 储藏提取
-- git reset --hard --hard 参数的意义 撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交
-
-# 5月
-
-## 字节国际电商外包
-
-### 代码题
-
-格式化时间
-
-```js
-函数式编程
+/* 函数式编程
 
 实现一个组件，传入时间戳，
 倒计时，格式化时间，1d 2h 3m 4s
-倒计时结束 自动提示用户 已结束
+倒计时结束 自动提示用户 已结束 */
 
 const ONE_M = 1000;
 const ONE_MINUTES = 60 * 1000;
@@ -86,31 +52,10 @@ function fromate(intervalDate = 1000) {
   }, intervalDate);
   return str;
 }
-fromate(ONE_DAY + ONE_HOURS + ONE_MINUTES +10000);
-```
-
-数组去除假值
-
-```js
-
+fromate(ONE_DAY + ONE_HOURS + ONE_MINUTES + 10000);
+// 去假值
 const arr = ['', false, 1, 21, 'bytedance', null, undefined];
 
 function filer(arr = []){
   return arr.filter(item=>!!item)
 } 
-```
-
-### 计算机基础
-
-- http 缓存
-
-- cache-ctrlon 的参数
-
-- tcp
-
-- 事件循环
-
-- vue原理
-- 发布者订阅者模式
-- react优化
-- react hooks
