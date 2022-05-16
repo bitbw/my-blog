@@ -6,7 +6,7 @@ tags:
 categories: Hexo
 cnblogs:
   postid: "15392424"
-hash: 8d3b9deca465034b65fd97205d5d5dd4302162aca0322dfe9960cfb9689f4e94
+hash: e65bafa6052157d5fc5fad5ce20736d5df4985f172363cbb7652bf0cbb42cf77
 ---
 
 ## hexo 上传 github 后图片不显示问题
@@ -29,7 +29,7 @@ hash: 8d3b9deca465034b65fd97205d5d5dd4302162aca0322dfe9960cfb9689f4e94
 
 - 使用 typroa 修改图片路径 下面这种方法 typroa 会自动保存到命名文件夹下，并自动 encode
 
-  ![image-20201215135603281](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20201215135603281.png)
+  ![image-20201215135603281](https://bitbw.top/public/img/my_gallery/image-20201215135603281.png)
 
 ## 注意事项
 
@@ -47,7 +47,7 @@ canvas_ribbon 和 tree 需要配合在 CDN 中添加 git 默认不上传 lib 下
 
 ## 关于报错
 
-![image-20200725160508488](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200725160508488.png)
+![image-20200725160508488](https://bitbw.top/public/img/my_gallery/image-20200725160508488.png)
 
 没有任何提示 哪个文件，挨个改动回退试试，原来是因为`_config.yml`这里直接写中文是不行的，中文需要引号包裹
 

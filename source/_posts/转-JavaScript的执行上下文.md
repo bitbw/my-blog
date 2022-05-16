@@ -6,7 +6,7 @@ tags:
 categories: js
 cnblogs:
   postid: "15393046"
-hash: 957c67c29be1fb9f77488b868cb2397fec82fe0a3cb6e00eebe5dc3e3609c598
+hash: ccc2bc9591b51010df5e2474411de287392556aeecf8f05d7fe72fb74149dbc5
 ---
 
 > 学习了一篇 js 偏底层基础 的文章：JavaScript 的执行上下文 Execution context
@@ -68,7 +68,7 @@ outerFunc()
 
 代码首先进入 Global Execution Context，然后依次进入 outerFunc，innerFunc 和 foo 的执行上下文，执行上下文栈就可以表示为：
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025201151427-127726802.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025201151427-127726802.png)
 
 当 JavaScript 代码执行的时候，第一个进入的总是默认的 Global Execution Context，所以说它总是在 ECS 的最底部。
 
@@ -76,7 +76,7 @@ outerFunc()
 
 当然，除了这三个属性之外，根据实现的需要，Execution Context 还可以有一些附加属性。
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025201152849-1821016303.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025201152849-1821016303.png)
 
 ## VO 和 AO
 
@@ -92,7 +92,7 @@ outerFunc()
 
 当 JavaScript 代码运行中，如果试图寻找一个变量的时候，就会首先查找 VO。对于前面例子中的代码，Global Execution Context 中的 VO 就可以表示如下：
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025201154239-918576092.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025201154239-918576092.png)
 
 **注意，**假如上面的例子代码中有下面两个语句，Global VO 仍将不变。
 
@@ -122,7 +122,7 @@ Arguments Objects 是函数上下文里的激活对象 AO 中的内部对象，�
 
 当上面的例子开始执行 outerFunc 的时候，就会有一个 outerFunc 的 AO 被创建：
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025201156317-195051519.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025201156317-195051519.png)
 
 通过上面的介绍，我们现在了解了 VO 和 AO 是什么，以及他们之间的关系了。下面就需要看看 JavaScript 解释器是怎么执行一段代码，以及设置 VO 和 AO 了。
 
@@ -231,7 +231,7 @@ fooExecutionContext = {
 
 代码解释：匿名函数会首先进入"创建结果"，JavaScript 解释器会创建一个"Function Execution Context"，然后创建 Scope chain，VO/AO 和 this。根据前面的介绍，解释器会扫描函数和变量声明，如下的 AO 会被创建：
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025201158208-1634029739.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025201158208-1634029739.png)
 
 所以，对于 bar，我们会得到"undefined"这个输出，表现的行为就是，我们在声明一个变量之前就访问了这个变量。这个就是 JavaScript 中"Hoisting"。
 
@@ -299,7 +299,7 @@ fooExecutionContext = {
 
 > 下面是自己理解的 函数内部上下文执行流程图
 
-![JavaScript的执行上下文（函数内部的执行流程Execution Context）](https://gitee.com/bitbw/my-gallery/raw/master/img/JavaScript的执行上下文（函数内部的执行流程Execution Context）.png)
+![JavaScript的执行上下文（函数内部的执行流程Execution Context）](https://bitbw.top/public/img/my_gallery/JavaScript的执行上下文（函数内部的执行流程Execution Context）.png)
 
 ## 总结
 
@@ -385,7 +385,7 @@ foo();
 
 上面代码的输出结果为"60"，函数 bar 可以直接访问"z"，然后通过作用域链访问上层的"x"和"y"。
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025202341552-94941711.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025202341552-94941711.png)
 
 - 绿色箭头指向 VO/AO
 - 蓝色箭头指向 scope chain（VO/AO + All Parent VO/AOs）
@@ -431,22 +431,22 @@ console.log(ctor.decrease());
 
 \1. 当代码进入 Global Context 后，会创建 Global VO
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025202343192-1736899039.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025202343192-1736899039.png)
 
 - 绿色箭头指向 VO/AO
 - 蓝色箭头指向 scope chain（VO/AO + All Parent VO/AOs）
 
 \2. 当代码执行到"var cter = counter();"语句的时候，进入 counter Execution Context；根据上一篇文章的介绍，这里会创建 counter AO，并设置 counter Execution Context 的 scope chain
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025202345224-1059314508.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025202345224-1059314508.png)
 
 \3. 当 counter 函数执行的最后，并退出的时候，Global VO 中的 ctor 就会被设置；这里需要注意的是，虽然 counter Execution Context 退出了执行上下文栈，但是因为 ctor 中的成员仍然引用 counter AO（因为 counter AO 是 increase 和 decrease 函数的 parent scope），所以 counter AO 依然在 Scope 中。
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025202347208-254025968.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025202347208-254025968.png)
 
 \4. 当执行"ctor.increase()"代码的时候，代码将进入 ctor.increase Execution Context，并为该执行上下文创建 VO/AO，scope chain 和设置 this；这时，ctor.increase AO 将指向 counter AO。
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025202349224-1554337822.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025202349224-1554337822.png)
 
 - 绿色箭头指向 VO/AO
 - 蓝色箭头指向 scope chain（VO/AO + All Parent VO/AOs）
@@ -484,7 +484,7 @@ baz()();
 
 对于这个例子，可以通过下图进行解释，代码首先通过作用域链（scope chain）查找"foo"，最终在 Global context 中找到；然后因为"foo"中没有找到属性"a"，将继续沿着原型链（prototype chain）查找属性"a"。
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/593627-20151025202351395-1888858218.png)
+![img](https://bitbw.top/public/img/my_gallery/593627-20151025202351395-1888858218.png)
 
 - 蓝色箭头表示作用域链查找
 - 橘色箭头表示原型链查找

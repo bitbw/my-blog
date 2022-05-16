@@ -13,13 +13,13 @@ hash: 24d86764c72165769991c506925929b4368bcc63fc28449f0961bb7210a78d68
 
 ## 自动部署：GitHub Actions
 
-阮一峰关于 GitHub Actions 的教程： http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html
+阮一峰关于 GitHub Actions 的教程： <http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html>
 
 > 注意：因为部署插件不断更新需要根据新的插件改相应配置
 
 ### 生成 **token** 秘钥
 
-> 官网：https://docs.github.com/en/actions/reference/encrypted-secrets
+> 官网：<https://docs.github.com/en/actions/reference/encrypted-secrets>
 >
 > 注意：github-pages-deploy-action V4 开始不需要添加 token
 
@@ -86,7 +86,7 @@ jobs:
 
 - github-pages-deploy-action V4 开始不需要添加 token ，如果添加会报 128 错误
 
-- github 关于 128 错误的解答：https://github.com/JamesIves/github-pages-deploy-action/issues/624
+- github 关于 128 错误的解答：<https://github.com/JamesIves/github-pages-deploy-action/issues/624>
 
 ##### github-pages-deploy-action@v2
 
@@ -143,4 +143,70 @@ jobs:
 
 ### 创建
 
-https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+<https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site>
+
+## 常用 GitHub-Actions 配置
+
+### 通过 ssh 命令 连接远程服务器并部署
+
+use :[appleboy/ssh-action@master](https://github.com/marketplace/actions/ssh-remote-commands)
+
+```yml
+# This is a basic workflow to help you get started with Actions
+name: CICD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  cicd_job:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      # ssh link remote server and executing script
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        env:
+          WELCOME: "executing remote ssh commands using password"
+          SERVER_HOME: "node-express-server" 
+        with:
+          host: ${{ secrets.DC_HOST }}
+          username: ${{ secrets.DC_USER }}
+          password: ${{ secrets.DC_PASS }}
+          port: 22
+          envs: WELCOME,SERVER_HOME
+          script: |
+            echo $WELCOME 
+            echo whoami 
+            whoami  
+            echo git version
+            git  --version 
+            echo node version
+            node -v
+            echo npm version
+            npm -v
+            cd ~ 
+            echo ~ ls
+            ls -la 
+            echo $SERVER_HOME ls
+            cd $SERVER_HOME
+            ls -la 
+            npm run deploy  
+         
+```
+
+#### 问题
+
+ 使用 appleboy/ssh-action@master 有可能会报 npm 或 node 命令找不到的情况
+ 最好在 usr/bin 建立一个[node相关命令的软连接](https://blog.bitbw.top/Nodejs/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Nodejs/)

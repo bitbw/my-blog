@@ -9,7 +9,7 @@ tags:
 categories: Linux
 cnblogs:
   postid: "15393007"
-hash: 7a89d37ceb0989d8ec803205163c745a916c9aadffffc44297cfaefc357deafb
+hash: e2d50f092b31e83b2f947e152b82f475b8f08fa5b2f36cdcebafcadd14264396
 ---
 
 ## 前言
@@ -92,7 +92,7 @@ cd Meslo
  sudo fc-cache -f -v
 ```
 
-![image-01](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210415135918711.png)
+![image-01](https://bitbw.top/public/img/my_gallery/image-20210415135918711.png)
 
 ## 在 vscode 中字体设置
 

@@ -1,5 +1,5 @@
 ---
-title: elementUI的使用注意事项
+title: elementUI常见问题汇总
 tags:
   - elementUI
   - Vue
@@ -7,7 +7,7 @@ categories: Vue
 date: 2020-09-16 11:17:23
 cnblogs:
   postid: "15392419"
-hash: de56ed4cbe85ed44024c7566f0711df61cccef06d904cf46f7534c5333d676e8
+hash: 8fb94c5a4775f43be95464188e34678ce73f2d1ca771884cf22e7d3bd3ab565b
 ---
 
 > 这篇文章是我在工作中使用 elementUi 遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助
@@ -36,7 +36,7 @@ hash: de56ed4cbe85ed44024c7566f0711df61cccef06d904cf46f7534c5333d676e8
 
 > elementUI 的 table 的每一项的 min-width 不要使用百分比 ,不然会出现这种情况
 
-![image-20200227163411930](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20200227163411930.png)
+![image-20200227163411930](https://bitbw.top/public/img/my_gallery/image-20200227163411930.png)
 
 > 固定的序号和 checkbox 会掉下来
 
@@ -62,7 +62,7 @@ hash: de56ed4cbe85ed44024c7566f0711df61cccef06d904cf46f7534c5333d676e8
 
 在开发中 表头但是多级表头并且是动态遍历的 ，遍历的数据发生改变表头数据却没有更新
 
-#### 问题出现原因：
+#### 问题出现原因
 
 ```html
 <el-table-column v-for="item in columnData" :key="item.id">
@@ -178,7 +178,7 @@ this.currentNode.loadData();
 
 > 正则一直不好 无法输入小数点 ， 是因为加了 number 修饰符无法输入小数点， 找了我一个多小时啊
 
-![正则不生效原因](https://gitee.com/bitbw/my-gallery/raw/master/img/正则不生效原因.jpg)
+![正则不生效原因](https://bitbw.top/public/img/my_gallery/正则不生效原因.jpg)
 
 ### 工作中出现的---表头带 input 搜索框 搜索后点击表格会刷新数据 bug
 
@@ -271,3 +271,15 @@ srcList = [
 - 导航菜单选中项样式问题通过类名.is-active 设置
 - 顶部 logo 部分的顶部栏的高度，和子项宽度 都是通过 flex 属性设置，flex ：0 0 220px
 - elementui 的样式变量在 E:\project\hr-web-container\node_modules\element-ui\packages\theme-chalk\src\common\var.scss 内
+
+## date-picker
+
+### 问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码
+
+[github issues](https://github.com/ElemeFE/element/issues/21159)
+
+将datepicker组件的type属性设置为week，value-format属性设置为timestamp，此时无法回显选择的日期，通过打印v-model值可以得知此时的v-model正确值是乱码 `ti0e0tam0p`
+
+### 解决
+
+目前 github 上没有解决 elementUI 2 已经没有维护了 ， value-format尽量别设置为timestamp 就可以避免这个问题

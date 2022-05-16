@@ -7,7 +7,7 @@ tags:
 categories: 工具使用
 cnblogs:
   postid: "15393005"
-hash: c4e10793fcb47029994c69ab46df1f1ce6efc7f30386ad1cc46345fa4170b1a7
+hash: e7b8ec965924727c875f20b0646b409f50050afb2d128ad8ffc896c1c1f71fad
 ---
 
 typora，postman，vscode 等都是使用 electron 构建而成的桌面应用
@@ -40,6 +40,6 @@ C:\app\Typora\bin
 （1）修改.md 的默认值
 （2）添加 ShellNew，添加 NullFile
 
-![image-20210427142049929](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210427142049929.png)
+![image-20210427142049929](https://bitbw.top/public/img/my_gallery/image-20210427142049929.png)
 
 > 原文：https://blog.csdn.net/m0_46588308/article/details/105919561

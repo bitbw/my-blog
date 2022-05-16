@@ -8,7 +8,7 @@ tags:
 categories: Vue
 cnblogs:
   postid: "15393013"
-hash: 30bbd1197e9f933f4879faa612d83e484f1b911f30f7b8f037a286ede2bd589b
+hash: 2006e8aba368f486eb0434be4f53e0d80ad9a0c1b9571a804aef24c537e34ba9
 ---
 
 > 因为在 electron 中没有找到 ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件
@@ -17,7 +17,7 @@ hash: 30bbd1197e9f933f4879faa612d83e484f1b911f30f7b8f037a286ede2bd589b
 
 ### 效果
 
-![实现ctrl+f的搜索功能](https://gitee.com/bitbw/my-gallery/raw/master/img/实现ctrl+f的搜索功能.gif)
+![实现ctrl+f的搜索功能](https://bitbw.top/public/img/my_gallery/实现ctrl+f的搜索功能.gif)
 
 <!--more-->
 

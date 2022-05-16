@@ -6,7 +6,7 @@ tags:
 categories: Vue
 cnblogs:
   postid: "15393019"
-hash: 9cf2657a3fa8e863f3f205f6d381aeb56a09db27dd74a2819ddc2c43ff808b06
+hash: 114bc7829e9db6fac604e03dd21b6f6b072c5091f28bec1d3d76c69623daed26
 ---
 
 Vue 常用自定义指令
@@ -77,7 +77,7 @@ Vue.directive("resize", resize);
 
 ### 效果：
 
-![拖拽指令 v-drag ](https://gitee.com/bitbw/my-gallery/raw/master/img/%E6%8B%96%E6%8B%BD%E6%8C%87%E4%BB%A4%20v-drag%20.gif)
+![拖拽指令 v-drag ](https://bitbw.top/public/img/my_gallery/%E6%8B%96%E6%8B%BD%E6%8C%87%E4%BB%A4%20v-drag%20.gif)
 
 拖拽指令 v-drag 绑定元素需要定位
 

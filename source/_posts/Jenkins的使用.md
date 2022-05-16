@@ -7,7 +7,7 @@ tags:
 categories: 工具使用
 cnblogs:
   postid: "15392431"
-hash: b3fe44b3564b8a67c258ae3302a4b231fb27e35f0a151da02b14fd0a7307e1a8
+hash: b21cba0387a97fd4433b0f1a75fe0f10a7d1a86807e8dbbcd6df862cec2b3f45
 ---
 
 ## 安装
@@ -66,7 +66,7 @@ https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20sen
 
 系统管理->系统配置->Publish over SSH
 
-![配置 **Publish over SSH** ](https://gitee.com/bitbw/my-gallery/raw/master/img/Publish%20over%20SSH%E9%85%8D%E7%BD%AE.png)
+![配置 **Publish over SSH** ](https://bitbw.top/public/img/my_gallery/Publish%20over%20SSH%E9%85%8D%E7%BD%AE.png)
 
 ps:
 
@@ -171,7 +171,7 @@ verbose：选择为 Jenkins 控制台启用大量信息 - 仅对帮助追踪问�
 
 ### 使用轮询 SCM 实现收到 git post-commit 即构建
 
-![image-20210818150222789](https://gitee.com/bitbw/my-gallery/raw/master/img/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png)
+![image-20210818150222789](https://bitbw.top/public/img/my_gallery/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png)
 
 日程表使用 cron 语法
 

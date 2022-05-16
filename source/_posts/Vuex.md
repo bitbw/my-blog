@@ -5,7 +5,7 @@ tags: vue
 categories: Vue
 cnblogs:
   postid: "15393017"
-hash: 03e2bcb9778dfaa712c63c3c7bed5742a02cc4d6c1e22464eeda340a1d251434
+hash: 994b543d84b59fd8fcf781a3c2d9741a9bac3cf76a8ab3343bedff092eba4563
 ---
 
 ## 1. 介绍
@@ -14,7 +14,7 @@ hash: 03e2bcb9778dfaa712c63c3c7bed5742a02cc4d6c1e22464eeda340a1d251434
 
 在现代 Web 开发复杂多变的需求驱动之下，组件化开发已然成为了事实上的标准。
 
-![components](https://gitee.com/bitbw/my-gallery/raw/master/img/components.png)
+![components](https://bitbw.top/public/img/my_gallery/components.png)
 
 组件化开发为我们带来了：
 
@@ -52,14 +52,14 @@ new Vue({
 
 以下是一个表示“单向数据流”理念的简单示意：
 
-![flow](https://gitee.com/bitbw/my-gallery/raw/master/img/flow.png)
+![flow](https://bitbw.top/public/img/my_gallery/flow.png)
 
 ### 1.3. 组件通信
 
 然而大多数场景下的组件都并不是独立存在的，而是相互协作共同构成了一个复杂的业务功能。在 Vue
 中为不同的组件关系提供了不同的通信规则。
 
-![1575007644430](https://gitee.com/bitbw/my-gallery/raw/master/img/1575007644430.png)
+![1575007644430](https://bitbw.top/public/img/my_gallery/1575007644430.png)
 
 - 父子关系
 - 非父子
@@ -159,7 +159,7 @@ bus.$emit("自定义事件名称", 数据);
 因此，我们为什么不把组件的共享状态抽取出来，以一个全局单例模式管理呢？在这种模式下，我们的
 组件树构成了一个巨大的“视图”，不管在树的哪个位置，任何组件都能获取状态或者触发行为！
 
-![1575009217911](https://gitee.com/bitbw/my-gallery/raw/master/img/1575009217911.png)
+![1575009217911](https://bitbw.top/public/img/my_gallery/1575009217911.png)
 
 通过定义和隔离状态管理中的各种概念并通过强制规则维持视图和状态间的独立性，我们的代码将会变
 得更结构化且易维护。
@@ -200,7 +200,7 @@ bus.$emit("自定义事件名称", 数据);
 
 实现一个类似于购物车的组件案例
 
-![1575009753493](https://gitee.com/bitbw/my-gallery/raw/master/img/1575009753493.png)
+![1575009753493](https://bitbw.top/public/img/my_gallery/1575009753493.png)
 
 1、使用 VueCLI 创建一个练习项目：
 
@@ -316,7 +316,7 @@ computed: {
 
 也可以通过调试工具查看 Vuex 容器中的数据：
 
-![1575011046982](https://gitee.com/bitbw/my-gallery/raw/master/img/1575011046982.png)
+![1575011046982](https://bitbw.top/public/img/my_gallery/1575011046982.png)
 
 ## 7. Mutation
 
@@ -495,7 +495,7 @@ Actions 和 Mutation 一样，也支持自定义传参：
 
 ### 10.1. 同步操作
 
-![vuex同步](https://gitee.com/bitbw/my-gallery/raw/master/img/vuex同步.png)
+![vuex同步](https://bitbw.top/public/img/my_gallery/vuex同步.png)
 
 - 组件通过 Commit 调用 Mutations 中的方法
 - Mutations 执行内部逻辑修改 State 数据 ，同时在调试工具 Devtools 上显示对应变化内容
@@ -503,7 +503,7 @@ Actions 和 Mutation 一样，也支持自定义传参：
 
 ### 10.2 异步操作
 
-![](https://gitee.com/bitbw/my-gallery/raw/master/img/vuex.png)
+![](https://bitbw.top/public/img/my_gallery/vuex.png)
 
 - 组件通过 Dispatch 调用 Actions 中的方法
 - Actions 中的方法通过 Commit 调用 Mutations 中的方法

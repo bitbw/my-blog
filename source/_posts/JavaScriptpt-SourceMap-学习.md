@@ -3,6 +3,9 @@ title: JavaScriptpt SourceMap 学习
 date: 2020-08-18 16:26:11
 tags: js
 categories: js
+hash: 17a4dfc616b9092e286a2dc92d081b250b75cca0d5e7ecd474d1b57e28b60e84
+cnblogs:
+  postid: "16228019"
 ---
 
 
@@ -133,7 +136,7 @@ source map
 
 VLQ编码是变长的。如果（整）数值在-15到+15之间（含两个端点），用一个字符表示；超出这个范围，就需要用多个字符表示。它规定，每个字符使用6个两进制位，正好可以借用[Base 64](https://en.wikipedia.org/wiki/Base_64)编码的字符表。
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/20220318142001.png)
+![img](https://bitbw.top/public/img/my_gallery/20220318142001.png)
 
 在这6个位中，左边的第一位（最高位）表示是否"连续"（continuation）。如果是1，代表这６个位后面的6个位也属于同一个数；如果是0，表示该数值到这6个位结束。
 

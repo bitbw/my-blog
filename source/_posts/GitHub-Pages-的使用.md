@@ -7,7 +7,7 @@ tags:
 categories: Github
 cnblogs:
   postid: "15392423"
-hash: c86c7db2e64374cf1265a5c4d8237452819b5b34d74157e55ca0eb6060d7bd9c
+hash: dd8cf64fb3c91d965cfe9d4cd17ea601c7ca6a57c62dce231ecb05717ca64f91
 ---
 
 ## 创建
@@ -24,11 +24,11 @@ https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-gi
 
 - 进入控制台->进入 DNS 云解析->域名解析->解析设置
 
-![image-20210426174435458](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210426174435458.png)
+![image-20210426174435458](https://bitbw.top/public/img/my_gallery/image-20210426174435458.png)
 
 - 首次设置点击添加记录
 
-![image-20210426174712072](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210426174712072.png)
+![image-20210426174712072](https://bitbw.top/public/img/my_gallery/image-20210426174712072.png)
 
 - 记录类型：选择 CNAME
 - 主机记录：自己设置一个二级域名，我给我的博客用，所以以 blog 开头

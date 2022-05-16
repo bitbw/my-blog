@@ -6,7 +6,7 @@ tags:
 categories: 工具使用
 cnblogs:
   postid: "15393026"
-hash: 6f9443729935c3ba7f0bba3ea7bcfe1372a06797a64626b34f347b268f501933
+hash: c234eac4645de115f002a3e02ab6be70b63a26d7321a01ef02f4fd564a5eb6cf
 ---
 
 # Windows Termial
@@ -331,11 +331,11 @@ https://github.com/microsoft/terminal/issues/9806
 
 powershell.exe 中的普通空格
 
-![image-20210414173814189](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210414173814189.png)
+![image-20210414173814189](https://bitbw.top/public/img/my_gallery/image-20210414173814189.png)
 
 在 Windows terminal 中空格变成 
 
-![image-20210414172703793](https://gitee.com/bitbw/my-gallery/raw/master/img/image-20210414172703793.png)
+![image-20210414172703793](https://bitbw.top/public/img/my_gallery/image-20210414172703793.png)
 
 ### 解决
 

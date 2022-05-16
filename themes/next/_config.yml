@@ -176,7 +176,7 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   # 等等
-  GitHub: https://github.com || fab fa-github
+  GitHub: https://github.com/bitbw || fab fa-github
   "微博": http://weibo.com || fab fa-weibo
   "知乎": http://www.zhihu.com || fab fa-zhihu
   E-Mail: https://mail.163.com/ || fa fa-envelope
@@ -396,7 +396,7 @@ bookmark:
 # `Follow me on ` banner in the top-right corner. GitHub
 github_banner:
   enable: true
-  permalink: https://github.com
+  permalink: https://github.com/bitbw
   title: Follow me on GitHub
 
 # ---------------------------------------------------------------

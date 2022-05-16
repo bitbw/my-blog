@@ -6,7 +6,7 @@ tags:
 categories: Windows
 cnblogs:
   postid: "15393028"
-hash: 87dcd5b0b41526a0b1b615d7543ca5a2e1ee373ff81b4d821f4142095e84db50
+hash: 5c94ae6f426dec5cd0afdcacad6a9ad44609d98b46ce7dd0ed04857f2dd704e9
 ---
 
 ## 电脑不进系统之开机重复自动修复不进系统
@@ -29,4 +29,4 @@ http://www.wepe.com.cn/download.html
 
 ### 各类型主机启动方式快捷键
 
-![微PE工具箱bootice引导修复如何用？Windows系统引导修复教程](https://gitee.com/bitbw/my-gallery/raw/master/img/%E7%94%B5%E8%84%91%E5%93%81%E7%89%8C%E7%9A%84%E5%BC%80%E6%9C%BA%E7%83%AD%E9%94%AE1-200P31H100463.jpg)
+![微PE工具箱bootice引导修复如何用？Windows系统引导修复教程](https://bitbw.top/public/img/my_gallery/%E7%94%B5%E8%84%91%E5%93%81%E7%89%8C%E7%9A%84%E5%BC%80%E6%9C%BA%E7%83%AD%E9%94%AE1-200P31H100463.jpg)

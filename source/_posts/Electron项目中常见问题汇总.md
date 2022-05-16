@@ -7,7 +7,7 @@ tags:
 categories: Electron
 cnblogs:
   postid: "15392416"
-hash: 57b4a2acd9b0f0a650546a8fc0501f236c43757d0bb6bf76946f4de538b28b1e
+hash: 4f775c67d222518efd1e238ad257720754de1538eb42a1a3142bb835ff47d4db
 ---
 
 ## 环境依赖
@@ -17,7 +17,7 @@ hash: 57b4a2acd9b0f0a650546a8fc0501f236c43757d0bb6bf76946f4de538b28b1e
 > Windows 环境依赖需要 Visual Studio 和 python
 > Visual Studio 和 python 在安装 node 时会提示安装 window 对应的编译环境勾选安装即可， 或使用脚本安装编译环境，也可以使用 npm 全局安装 [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools)
 
-![image-20220113102005114](https://gitee.com/bitbw/my-gallery/raw/master/img/20220113140323.png)
+![image-20220113102005114](https://bitbw.top/public/img/my_gallery/20220113140323.png)
 
 ### MacOS
 
@@ -187,7 +187,7 @@ app.on("ready", async () => {
 解决：
 在 vue-devtools/chrome/manifest.json 删掉相应的字段
 
-![img](https://gitee.com/bitbw/my-gallery/raw/master/img/electron20201111130214278.png)
+![img](https://bitbw.top/public/img/my_gallery/electron20201111130214278.png)
 
 ### 问题
 

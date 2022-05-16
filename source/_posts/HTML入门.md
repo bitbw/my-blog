@@ -5,10 +5,10 @@ tags: HTML
 categories: HTML
 cnblogs:
   postid: "15392425"
-hash: 3ed4889950ee504eb369870ffb5d95d71d04b51e40f7726b10e9116ac5be2f25
+hash: ca16ae039e5e6c5ff1b7436bef90b9ed6e69de01b62a3da33a8b02e46d0a7bb0
 ---
 
-![下载](https://gitee.com/bitbw/my-gallery/raw/master/img/下载.jpg)
+![下载](https://bitbw.top/public/img/my_gallery/下载.jpg)
 
 ## 开发工具
 
@@ -62,7 +62,7 @@ hash: 3ed4889950ee504eb369870ffb5d95d71d04b51e40f7726b10e9116ac5be2f25
 
 ## sublime 一些常用快捷键
 
-![1574421790594](https://gitee.com/bitbw/my-gallery/raw/master/img/1574421790594.png)
+![1574421790594](https://bitbw.top/public/img/my_gallery/1574421790594.png)
 
 ## 字符集
 
@@ -136,7 +136,7 @@ vk control control 1.使用相应的 id 名标注跳转目标的位置。
 
 ## 特殊字符标签 （理解）
 
-![1574422894085](https://gitee.com/bitbw/my-gallery/raw/master/img/1574422894085.png)
+![1574422894085](https://bitbw.top/public/img/my_gallery/1574422894085.png)
 
 ## 路径(重点、难点)
 

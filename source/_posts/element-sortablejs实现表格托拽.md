@@ -8,14 +8,14 @@ tags:
 categories: Vue
 cnblogs:
   postid: "15392418"
-hash: 7bc1fe46870251d721e8bbc59cc0b675f7fe7f09d0077e2a5cd00b873fa5fe7e
+hash: 1e9d0ed939df5e1001ab582ac099592eb0bef78137bc7b43ffa6008cf62c8869
 ---
 
 最终实现效果：
 
 <!--more-->
 
-![单表格托拽](https://gitee.com/bitbw/my-gallery/raw/master/img/单表格托拽.gif)
+![单表格托拽](https://bitbw.top/public/img/my_gallery/单表格托拽.gif)
 
 js 部分实现
 
@@ -84,7 +84,7 @@ tr.hover-row {
 
 最终实现效果：
 
-![双表格表格托拽](https://gitee.com/bitbw/my-gallery/raw/master/img/双表格表格托拽.gif)
+![双表格表格托拽](https://bitbw.top/public/img/my_gallery/双表格表格托拽.gif)
 
 ```js
 // 初始化拖拽

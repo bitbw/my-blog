@@ -5,7 +5,7 @@ tags: vue
 categories: Vue
 cnblogs:
   postid: "15393043"
-hash: 03a62a50ad2b09040cae53ac3abb1ab41123f2222b3fd5ddd0c05c9bd4ebfba5
+hash: e0b8a67a624086824ce51c119a5f32605a3d976a2cf76048c8d4c0f2c687c52e
 ---
 
 ## MVVM 框架介绍
@@ -18,7 +18,7 @@ MVVM 框架实现了数据双向绑定
 当 M 层数据进行修改时，VM 层会监测到变化，并且通知 V 层进行相应的修改
 修改 V 层则会通知 M 层数据进行修改
 MVVM 框架实现了视图与模型层的相互解耦
-![Vue双向绑定原理MVVM](https://gitee.com/bitbw/my-gallery/raw/master/img/Vue双向绑定原理MVVM.png)
+![Vue双向绑定原理MVVM](https://bitbw.top/public/img/my_gallery/Vue双向绑定原理MVVM.png)
 
 <!--more-->
 
@@ -37,7 +37,7 @@ MVVM 框架实现了视图与模型层的相互解耦
   - Vue.js 则是采用数据劫持结合发布者-订阅者模式的方式。通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
     注意：vuejs 不兼容 IE8 以以下的版本
 
-![1576331348832](https://gitee.com/bitbw/my-gallery/raw/master/img/1576331348832.png)
+![1576331348832](https://bitbw.top/public/img/my_gallery/1576331348832.png)
 
 ## Vue 实现思路
 
@@ -46,7 +46,7 @@ MVVM 框架实现了视图与模型层的相互解耦
 - 实现一个 Watcher 观察者，将 Compile 的解析结果，与 Observer 所观察的对象连接起来，建立关系，在 Observer 观察到对象数据变化时，接收通知，同时更新 DOM
 - 创建一个公共的入口对象，接收初始化的配置并且协调上面三个模块，也就是 vue
 
-![1576329836998](https://gitee.com/bitbw/my-gallery/raw/master/img/1576329836998.png)
+![1576329836998](https://bitbw.top/public/img/my_gallery/1576329836998.png)
 
 ## Complier
 
@@ -533,4 +533,4 @@ class Vue {
 
 3.Observer set 方法一但被调用就会触发 dep.notify 方法 发布，notify 方法依次调用 subs（Watcher）的 update 方法 ，更新视图
 
-![image-20211019130049831](https://gitee.com/bitbw/my-gallery/raw/master/img/20211019130057.png)
+![image-20211019130049831](https://bitbw.top/public/img/my_gallery/20211019130057.png)
