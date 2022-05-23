@@ -8,6 +8,10 @@ cnblogs:
   postid: "15392421"
 hash: b4eea134b465738224dbab20ba7e153b2b23c67b493612e3ad15dbf874795f56
 ---
+## config
+
+ git 全局配置文件在 ~ 目录下 .gitconfig 文件
+ git 项目配置文件在 项目目录下 .git 文件夹下 config 文件
 
 ## remote
 
@@ -148,6 +152,12 @@ git config --global --unset http.proxy
 
 ```bash
 git clone -c http.proxy=http://127.0.0.1:1080  https://github.com/xxx.git
+```
+
+设置快捷别名
+
+```bash
+git config --global alias.cloneProxy = clone -c http.proxy=http://127.0.0.1:1080
 ```
 
 ## git 大小写问题
