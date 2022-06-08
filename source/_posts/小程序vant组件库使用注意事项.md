@@ -12,7 +12,7 @@ cnblogs:
 
 ## 在 page 中修改组件内部样式
 
-wxml ` custom-class="van-search-custom-class"`
+wxml `custom-class="van-search-custom-class"`
 
 ```html
 <van-search
@@ -43,3 +43,27 @@ wxss
 ### 解决
 
 将组件放在单独 page 中通过 nav 跳转
+
+## tab 标签页
+
+### 组件从隐藏状态切换到显示状态时，底部条位置错误？
+
+Tabs 组件在挂载时，会获取自身的宽度，并计算出底部条的位置。如果组件一开始处于隐藏状态，则获取到的宽度永远为 0，因此无法展示底部条位置
+
+### 解决方法
+
+方法一，使用 wx:if 来控制组件展示，使组件重新初始化。
+
+```html
+<van-tabs wx:if="show" />
+```
+
+方法二，调用组件的 resize 方法来主动触发重绘。
+
+```html
+<van-tabs id="tabs" />
+```
+
+```js
+this.selectComponent('#tabs').resize();
+```
