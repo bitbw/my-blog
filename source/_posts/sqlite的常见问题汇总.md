@@ -1,5 +1,5 @@
 ---
-title: sqlite的使用注意事项
+title: sqlite的常见问题汇总
 date: 2021-04-22 17:30:03
 tags:
   - SQL
@@ -39,7 +39,7 @@ INSERT INTO 't_def_component_independentService'       (PNCode, FCCode, nameCHN,
 
 1. In 22 cities including Beijing, Shanghai, Guangzhou, Shenyang, Harbin, Xi'an, ....;'`
 
-因为是英文 所以内容中出现了`' `单引号 导致语句被截断，造成 sql 语句错误
+因为是英文 所以内容中出现了`'`单引号 导致语句被截断，造成 sql 语句错误
 
 ### 解决
 
@@ -50,3 +50,17 @@ INSERT INTO 't_def_component_independentService'       (PNCode, FCCode, nameCHN,
 //修改为
 "${descriptionENG}";
 ```
+
+## sqlite 数据库读取不正确问题
+
+### 问题
+
+直接替换数据库文件后发生数据库读取不正确的问题
+
+### 原因
+
+db连接对象( new sqlite3.Database(dbPath)) 读取一个表后， 当这个表结构改变 （直接替换文件），再读取这个表就会导致数据库读取不正确
+
+### 解决
+
+替换数据库文件后，需要重新创建db连接对象 new sqlite3.Database(dbPath);
