@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://blog.bitbw.top/sitemap.xml
+# Sitemap: https://blog.bitbw.top/baidusitemap.xml
+
