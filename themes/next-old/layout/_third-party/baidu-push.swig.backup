@@ -1,0 +1,44 @@
+{%- if theme.baidu_push %}
+  <script{{ pjax }}>
+    (function(){
+	console.log("baidu_push")
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+        console.log("Bowen: curProtocol", curProtocol)
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+{%- endif %}
+{%- if theme.baidu_test %}
+  <script>
+  /** var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'http://data.zz.baidu.com/urls?site=https://blog.bitbw.top&token=SQqfOYyQKNbs0xaf');
+	// 相比GET方式，POST方式多下面一行代码
+	// xhr.setRequestHeader('User-Agent', 'curl/7.12.1');
+	// xhr.setRequestHeader('Host', 'data.zz.baidu.com');
+	xhr.setRequestHeader('Content-Type', 'text/plain');
+	// xhr.setRequestHeader('Content-Length', '83');
+	xhr.send('https://blog.bitbw.top/baidusitemap.xml');
+	xhr.onload = function () {
+		console.log('baidu_test', xhr.response);
+	} **/
+  </script>
+{%- endif %}
