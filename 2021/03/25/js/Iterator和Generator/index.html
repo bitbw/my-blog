@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Bowen_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="g2sghe_aG2NDGFETaIqaIGhfZNoeS9wGBnugQAQXHMI">
+  <meta name="baidu-site-verification" content="code-YK9weY9Iav">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="Iterator 和 Generator Iterator（迭代器）详细文档：ECMAScript 6 入门-Iterator 和 for…of 循环 Iterator（迭代器）的概念Iterator 即遍历器对象 Generator 函数调用后可以返回一个遍历器对象 Iterator 所有可以使用 for of 遍历的对象内部都实现时了 Iterator 接口 比如： 通过Arrary.prot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Iterator和Generator">
+<meta property="og:url" content="https://blog.bitbw.top/2021/03/25/js/Iterator%E5%92%8CGenerator/">
+<meta property="og:site_name" content="张博文的个人博客">
+<meta property="og:description" content="Iterator 和 Generator Iterator（迭代器）详细文档：ECMAScript 6 入门-Iterator 和 for…of 循环 Iterator（迭代器）的概念Iterator 即遍历器对象 Generator 函数调用后可以返回一个遍历器对象 Iterator 所有可以使用 for of 遍历的对象内部都实现时了 Iterator 接口 比如： 通过Arrary.prot">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-25T16:27:30.000Z">
+<meta property="article:modified_time" content="2022-06-22T02:29:07.333Z">
+<meta property="article:author" content="Bowen">
+<meta property="article:tag" content="js">
+<meta property="article:tag" content="es6">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.bitbw.top/2021/03/25/js/Iterator%E5%92%8CGenerator/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.bitbw.top/2021/03/25/js/Iterator%E5%92%8CGenerator/","path":"2021/03/25/js/Iterator和Generator/","title":"Iterator和Generator"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Iterator和Generator | 张博文的个人博客</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?aed4bbe397960f5436bd1a9633262fa1"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张博文的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bowen's personal blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">83</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">123</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Iterator%EF%BC%88%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Iterator（迭代器）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Iterator%EF%BC%88%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%89%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">Iterator（迭代器）的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8-Iterator-%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%9C%BA%E5%90%88"><span class="nav-number">1.2.</span> <span class="nav-text">调用 Iterator 接口的场合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generator%EF%BC%88%E7%94%9F%E6%88%90%E5%99%A8%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">Generator（生成器）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%86%85%E9%83%A8%E6%89%A7%E8%A1%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.2.</span> <span class="nav-text">控制内部执行步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E5%B8%B8%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.2.1.</span> <span class="nav-text">正常执行顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#next-%E4%BC%A0%E5%8F%82"><span class="nav-number">2.2.2.</span> <span class="nav-text">next 传参</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6-return-%E7%9A%84"><span class="nav-number">2.2.3.</span> <span class="nav-text">带 return 的</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bowen"
+      src="/images/logo-header.jpg">
+  <p class="site-author-name" itemprop="name">Bowen</p>
+  <div class="site-description" itemprop="description">vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bitbw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bitbw" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/" title="微博 → http:&#x2F;&#x2F;weibo.com" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.163.com/" title="E-Mail → https:&#x2F;&#x2F;mail.163.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/" title="Twitter → https:&#x2F;&#x2F;twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/" title="YouTube → https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.org/" title="https:&#x2F;&#x2F;theme-next.org&#x2F;" rel="noopener" target="_blank">Next主题</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/hanzeng1993/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanzeng1993&#x2F;" rel="noopener" target="_blank">Python学习</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/03/25/js/Iterator%E5%92%8CGenerator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Iterator和Generator | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Iterator和Generator
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-25 16:27:30" itemprop="dateCreated datePublished" datetime="2021-03-25T16:27:30+00:00">2021-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Iterator 和 Generator</p>
+<h2 id="Iterator（迭代器）"><a href="#Iterator（迭代器）" class="headerlink" title="Iterator（迭代器）"></a>Iterator（迭代器）</h2><p>详细文档：<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/iterator">ECMAScript 6 入门-Iterator 和 for…of 循环</a></p>
+<h3 id="Iterator（迭代器）的概念"><a href="#Iterator（迭代器）的概念" class="headerlink" title="Iterator（迭代器）的概念"></a>Iterator（迭代器）的概念</h3><p>Iterator 即遍历器对象</p>
+<p>Generator 函数调用后可以返回一个遍历器对象 Iterator</p>
+<p>所有可以使用 for of 遍历的对象内部都实现时了 Iterator 接口 比如：</p>
+<p>通过<code>Arrary.prototype[Symbol.iterator]()</code>可以返回 Iterator</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">// Arrary 内部的遍历器对象</span></span><br><span class="line">    <span class="attr">__proto__</span>: <span class="title class_">Array</span> <span class="title class_">Iterator</span>&#123;</span><br><span class="line">        <span class="attr">next</span>: ƒ <span class="title function_">next</span>()			<span class="comment">// 调用 next 方法将 指针指向下一个元素</span></span><br><span class="line">        <span class="title class_">Symbol</span>(<span class="title class_">Symbol</span>.<span class="property">toStringTag</span>): <span class="string">&quot;Array Iterator&quot;</span></span><br><span class="line">        <span class="attr">__proto__</span>: <span class="title class_">Object</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然也可直接实现一个遍历器对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> it = <span class="title function_">makeIterator</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>]);</span><br><span class="line"></span><br><span class="line">it.<span class="title function_">next</span>(); <span class="comment">// &#123; value: &quot;a&quot;, done: false &#125;</span></span><br><span class="line">it.<span class="title function_">next</span>(); <span class="comment">// &#123; value: &quot;b&quot;, done: false &#125;</span></span><br><span class="line">it.<span class="title function_">next</span>(); <span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">makeIterator</span>(<span class="params">array</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> nextIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">next</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> nextIndex &lt; array.<span class="property">length</span></span><br><span class="line">        ? &#123; <span class="attr">value</span>: array[nextIndex++], <span class="attr">done</span>: <span class="literal">false</span> &#125;</span><br><span class="line">        : &#123; <span class="attr">value</span>: <span class="literal">undefined</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用 next 方法， 返回<code>&#123; value: xxx, done: boolean &#125;</code>,通过判断 done 是否为 true，来判断遍历是否结束</p>
+<h3 id="调用-Iterator-接口的场合"><a href="#调用-Iterator-接口的场合" class="headerlink" title="调用 Iterator 接口的场合"></a>调用 Iterator 接口的场合</h3><p>有一些场合会默认调用 Iterator 接口（即<code>Symbol.iterator</code>方法），除了下文会介绍的<code>for...of</code>循环，还有几个别的场合。</p>
+<p><strong>（1）解构赋值</strong></p>
+<p>对数组和 Set 结构进行解构赋值时，会默认调用<code>Symbol.iterator</code>方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>().<span class="title function_">add</span>(<span class="string">&quot;a&quot;</span>).<span class="title function_">add</span>(<span class="string">&quot;b&quot;</span>).<span class="title function_">add</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, y] = set;</span><br><span class="line"><span class="comment">// x=&#x27;a&#x27;; y=&#x27;b&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [first, ...rest] = set;</span><br><span class="line"><span class="comment">// first=&#x27;a&#x27;; rest=[&#x27;b&#x27;,&#x27;c&#x27;];</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（2）扩展运算符</strong></p>
+<p>扩展运算符（…）也会调用默认的 Iterator 接口。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例一</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">[...str]; <span class="comment">//  [&#x27;h&#x27;,&#x27;e&#x27;,&#x27;l&#x27;,&#x27;l&#x27;,&#x27;o&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 例二</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">[<span class="string">&quot;a&quot;</span>, ...arr, <span class="string">&quot;d&quot;</span>];</span><br><span class="line"><span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>上面代码的扩展运算符内部就调用 Iterator 接口。</p>
+<p>实际上，这提供了一种简便机制，可以将任何部署了 Iterator 接口的数据结构，转为数组。也就是说，只要某个数据结构部署了 Iterator 接口，就可以对它使用扩展运算符，将其转为数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [...iterable];</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）yield*</strong></p>
+<p><code>yield*</code>后面跟的是一个可遍历的结构，它会调用该结构的遍历器接口。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> generator = <span class="keyword">function</span>* () &#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span>* [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">5</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> iterator = <span class="title function_">generator</span>();</span><br><span class="line"></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 1, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 2, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 3, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 4, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 5, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（4）其他场合</strong></p>
+<p>由于数组的遍历会调用遍历器接口，所以任何接受数组作为参数的场合，其实都调用了遍历器接口。下面是一些例子。</p>
+<ul>
+<li>for…of</li>
+<li>Array.from()</li>
+<li>Map(), Set(), WeakMap(), WeakSet()（比如<code>new Map([[&#39;a&#39;,1],[&#39;b&#39;,2]])</code>）</li>
+<li>Promise.all()</li>
+<li>Promise.race()</li>
+</ul>
+<h2 id="Generator（生成器）"><a href="#Generator（生成器）" class="headerlink" title="Generator（生成器）"></a>Generator（生成器）</h2><p>详细文档：<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/generator">ECMAScript 6 入门-Generator 函数的语法</a></p>
+<p>建议看：JavaScript 高级程序设计（第 4 版）中关于生成器的描述</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>Generator 函数 是生成器函数，Generator 函数 返回 Generator（生成器）</p>
+<p>Generator 是一个状态机，封装了多个内部状态（本人的理解：是一个可以控制内部执行步骤的 函数）</p>
+<p>Generator 生成器 内部实现了 Iterator （迭代器）接口，因此具有 next() 方法。调用这个方法会让生</p>
+<p>成器开始或恢复执行</p>
+<h3 id="控制内部执行步骤"><a href="#控制内部执行步骤" class="headerlink" title="控制内部执行步骤"></a>控制内部执行步骤</h3><ul>
+<li><p>调用 generatorFn 生成器函数的时候并不会执行内部代码</p>
+</li>
+<li><p>generator 调用 next 方法， 开始执行 generatorFn 内部代码</p>
+</li>
+<li><p>遇到 yield 关键字将停止执行代码，并将 yield 后面的值返回</p>
+</li>
+<li><p>再次调用 next 方法 将从上一个 yield 所在行开始执行</p>
+</li>
+<li><p>如果 next 中有参数将传递给开始执行所在行的 yield，如果是首次调用 next 将没有 yield 可以供其赋值</p>
+</li>
+<li><p>遇到 return 关键字将返回 { value: return 后面的值, done: true }</p>
+</li>
+<li><p>如果函数内没有 return 也没有 yield 的了 将返回 { value: undefined, done: true }</p>
+</li>
+</ul>
+<h4 id="正常执行顺序"><a href="#正常执行顺序" class="headerlink" title="正常执行顺序"></a>正常执行顺序</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">generatorFn</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;0-&gt;yield1&quot;</span>);</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;yield1&quot;</span>; <span class="comment">// 停止 返回 yield1</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield1-&gt;yield2&quot;</span>);</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;yield2&quot;</span>; <span class="comment">// 停止 返回 yield2</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield2-&gt;end&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> generator = <span class="title function_">generatorFn</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next1&quot;</span>, generator.<span class="title function_">next</span>());</span><br><span class="line"><span class="comment">// 0-&gt;yield1</span></span><br><span class="line"><span class="comment">// next1 &#123; value: &#x27;yield1&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next2&quot;</span>, generator.<span class="title function_">next</span>());</span><br><span class="line"><span class="comment">// yield1-&gt;yield2</span></span><br><span class="line"><span class="comment">// next2 &#123; value: &#x27;yield2&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next3&quot;</span>, generator.<span class="title function_">next</span>());</span><br><span class="line"><span class="comment">// yield2-&gt;end</span></span><br><span class="line"><span class="comment">// next3 &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="next-传参"><a href="#next-传参" class="headerlink" title="next 传参"></a>next 传参</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">generatorFn</span>(<span class="params">params</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(params);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield1&quot;</span>, <span class="keyword">yield</span> <span class="string">&quot;yield1&quot;</span>); <span class="comment">// 遇到 yield ，yield所在行的代码都不会执行，但是 yield 后边的参数会返回</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield2&quot;</span>, <span class="keyword">yield</span> <span class="string">&quot;yield2&quot;</span>); <span class="comment">// 不会执行console.log，下次调用next时才会执行console.log以及后面的代码</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> generator = <span class="title function_">generatorFn</span>(<span class="string">&quot;foo&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ***第一次的bar并不会赋值给yield1关键字 因为这一次调用是为了开始执行生成器函数，第二次调用yield1的值变成baz***</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next1&quot;</span>, generator.<span class="title function_">next</span>(<span class="string">&quot;bar&quot;</span>));</span><br><span class="line"><span class="comment">// foo</span></span><br><span class="line"><span class="comment">// next1 &#123; value: &#x27;yield1&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next2&quot;</span>, generator.<span class="title function_">next</span>(<span class="string">&quot;baz&quot;</span>));</span><br><span class="line"><span class="comment">// yield1 baz</span></span><br><span class="line"><span class="comment">// next2 &#123; value: &#x27;yield2&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next3&quot;</span>, generator.<span class="title function_">next</span>(<span class="string">&quot;qux&quot;</span>));</span><br><span class="line"><span class="comment">// yield2 qux</span></span><br><span class="line"><span class="comment">// end</span></span><br><span class="line"><span class="comment">// next3 &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="带-return-的"><a href="#带-return-的" class="headerlink" title="带 return 的"></a>带 return 的</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">helloWorldGenerator</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;world&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;ending&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hw = <span class="title function_">helloWorldGenerator</span>();</span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: &#x27;hello&#x27;, done: false &#125;</span></span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: &#x27;world&#x27;, done: false &#125;</span></span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: &#x27;ending&#x27;, done: true &#125;</span></span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Bowen 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Bowen 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/js/" rel="tag"># js</a>
+              <a href="/tags/es6/" rel="tag"># es6</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/25/Vue/Vue+HbuilderX%E6%89%93%E5%8C%85App%E5%BA%94%E7%94%A8/" rel="prev" title="Vue-cli4+HbuilderX打包android+ios应用">
+                  <i class="fa fa-chevron-left"></i> Vue-cli4+HbuilderX打包android+ios应用
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/12/Electron/electron-builder%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E5%8D%B8%E8%BD%BD%E7%95%8C%E9%9D%A2/" rel="next" title="electron-builder添加自定义安装卸载界面">
+                  electron-builder添加自定义安装卸载界面 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">415k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:17</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f6fb66d80cff47b61442c9785ec0f1d4"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
+
+</body>
+</html>

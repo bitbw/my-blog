@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Bowen_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="g2sghe_aG2NDGFETaIqaIGhfZNoeS9wGBnugQAQXHMI">
+  <meta name="baidu-site-verification" content="code-YK9weY9Iav">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="Windows Termial安装 Windows Termialhttps:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;terminal 在 PowerShell 中设置 Powerlinehttps:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;terminal&#x2F;tutorials&#x2F;powerline-setup 安装 Cascadia Mono PL 字体https">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows Termial设置">
+<meta property="og:url" content="https://blog.bitbw.top/2021/04/13/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Windows-Termial%E8%AE%BE%E7%BD%AE/">
+<meta property="og:site_name" content="张博文的个人博客">
+<meta property="og:description" content="Windows Termial安装 Windows Termialhttps:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;terminal 在 PowerShell 中设置 Powerlinehttps:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;terminal&#x2F;tutorials&#x2F;powerline-setup 安装 Cascadia Mono PL 字体https">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bitbw.top/public/img/my_gallery/image-20210414173814189.png">
+<meta property="og:image" content="https://bitbw.top/public/img/my_gallery/image-20210414172703793.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/55389796/114845441-56ec7580-9e0e-11eb-8c6c-d2512fdc7bf8.png">
+<meta property="article:published_time" content="2021-04-13T17:47:54.000Z">
+<meta property="article:modified_time" content="2022-06-22T02:29:07.337Z">
+<meta property="article:author" content="Bowen">
+<meta property="article:tag" content="windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bitbw.top/public/img/my_gallery/image-20210414173814189.png">
+
+
+<link rel="canonical" href="https://blog.bitbw.top/2021/04/13/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Windows-Termial%E8%AE%BE%E7%BD%AE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.bitbw.top/2021/04/13/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Windows-Termial%E8%AE%BE%E7%BD%AE/","path":"2021/04/13/工具使用/Windows-Termial设置/","title":"Windows Termial设置"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows Termial设置 | 张博文的个人博客</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?aed4bbe397960f5436bd1a9633262fa1"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张博文的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bowen's personal blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">83</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">123</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-Termial"><span class="nav-number">1.</span> <span class="nav-text">Windows Termial</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Windows-Termial"><span class="nav-number">1.1.</span> <span class="nav-text">安装 Windows Termial</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8-PowerShell-%E4%B8%AD%E8%AE%BE%E7%BD%AE-Powerline"><span class="nav-number">1.2.</span> <span class="nav-text">在 PowerShell 中设置 Powerline</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Cascadia-Mono-PL-%E5%AD%97%E4%BD%93"><span class="nav-number">1.2.1.</span> <span class="nav-text">安装 Cascadia Mono PL 字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">1.2.2.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E5%B1%8F%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.</span> <span class="nav-text">分屏操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#settting-json"><span class="nav-number">1.4.1.</span> <span class="nav-text">settting.json</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%B3%A8%E5%86%8C%E5%88%97%E8%A1%A8-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95"><span class="nav-number">1.5.</span> <span class="nav-text">添加注册列表(右键菜单)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%88%AB%E4%BA%BA%E5%86%99%E5%A5%BD%E7%9A%84-bat-%E7%A8%8B%E5%BA%8F"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">使用别人写好的 bat 程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">手动配置右键打开</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%B8%A6%E7%9A%84%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95"><span class="nav-number">1.5.1.</span> <span class="nav-text">删除程序自带的右键菜单</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">1.6.</span> <span class="nav-text">问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3"><span class="nav-number">1.6.1.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#setting-json"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">setting.json</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-vscode-%E7%BB%88%E7%AB%AF%E5%AD%97%E4%BD%93"><span class="nav-number">1.7.</span> <span class="nav-text">修改 vscode 终端字体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#setting-json-1"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">setting.json</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-bash-%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="nav-number">1.8.</span> <span class="nav-text">Git bash 乱码问题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bowen"
+      src="/images/logo-header.jpg">
+  <p class="site-author-name" itemprop="name">Bowen</p>
+  <div class="site-description" itemprop="description">vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bitbw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bitbw" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/" title="微博 → http:&#x2F;&#x2F;weibo.com" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.163.com/" title="E-Mail → https:&#x2F;&#x2F;mail.163.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/" title="Twitter → https:&#x2F;&#x2F;twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/" title="YouTube → https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.org/" title="https:&#x2F;&#x2F;theme-next.org&#x2F;" rel="noopener" target="_blank">Next主题</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/hanzeng1993/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanzeng1993&#x2F;" rel="noopener" target="_blank">Python学习</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/04/13/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Windows-Termial%E8%AE%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Windows Termial设置 | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows Termial设置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-13 17:47:54" itemprop="dateCreated datePublished" datetime="2021-04-13T17:47:54+00:00">2021-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">工具使用</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>11k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>10 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Windows-Termial"><a href="#Windows-Termial" class="headerlink" title="Windows Termial"></a>Windows Termial</h1><h2 id="安装-Windows-Termial"><a href="#安装-Windows-Termial" class="headerlink" title="安装 Windows Termial"></a>安装 Windows Termial</h2><p><a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal">https://github.com/microsoft/terminal</a></p>
+<h2 id="在-PowerShell-中设置-Powerline"><a href="#在-PowerShell-中设置-Powerline" class="headerlink" title="在 PowerShell 中设置 Powerline"></a>在 PowerShell 中设置 Powerline</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup">https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup</a></p>
+<h3 id="安装-Cascadia-Mono-PL-字体"><a href="#安装-Cascadia-Mono-PL-字体" class="headerlink" title="安装 Cascadia Mono PL 字体"></a>安装 Cascadia Mono PL 字体</h3><p><a target="_blank" rel="noopener" href="https://github.com/microsoft/cascadia-code/releases">https://github.com/microsoft/cascadia-code/releases</a></p>
+<p>使用<code>notepad $PROFILE</code>打开编辑文本</p>
+<p>设置启动后导入 posh-git， oh-my-posh ，</p>
+<p>设置主题 powerline：Set-PoshPrompt paradox</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-PoshPrompt paradox</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>使用 Set-Theme 会报错：Set-Theme : 无法将“Set-Theme”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次。</p>
+<blockquote>
+<p>原因：oh-my-posh v3 不支持 Set-Theme 命令 ，需要使用 Set-PoshPrompt -Theme xxx</p>
+</blockquote>
+<p>解决方案：<a target="_blank" rel="noopener" href="https://www.icode9.com/content-4-866063.html">https://www.icode9.com/content-4-866063.html</a></p>
+<p>官网介绍：<a target="_blank" rel="noopener" href="https://ohmyposh.dev/docs/upgrading/">https://ohmyposh.dev/docs/upgrading/</a></p>
+<p>官方是使用 <strong>Get-PoshThemes</strong> 查看支持主题；</p>
+<h2 id="分屏操作"><a href="#分屏操作" class="headerlink" title="分屏操作"></a>分屏操作</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/terminal/panes">https://docs.microsoft.com/zh-cn/windows/terminal/panes</a></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="settting-json"><a href="#settting-json" class="headerlink" title="settting.json"></a>settting.json</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This file was initially generated by Windows Terminal 1.6.10571.0</span></span><br><span class="line"><span class="comment">// It should still be usable in newer versions, but newer versions might have additional</span></span><br><span class="line"><span class="comment">// settings, help text, or changes that you will not see unless you clear this file</span></span><br><span class="line"><span class="comment">// and let us generate a new one for you.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// To view the default settings, hold &quot;alt&quot; while clicking on the &quot;Settings&quot; button.</span></span><br><span class="line"><span class="comment">// For documentation on these settings, see: https://aka.ms/terminal-documentation</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://aka.ms/terminal-profiles-schema&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">&quot;defaultProfile&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// You can add more global application settings here.</span></span><br><span class="line">  <span class="comment">// To learn more about global settings, visit https://aka.ms/terminal-global-settings</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// If enabled, selections are automatically copied to your clipboard.</span></span><br><span class="line">  <span class="attr">&quot;copyOnSelect&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// If enabled, formatted data is also copied to your clipboard</span></span><br><span class="line">  <span class="attr">&quot;copyFormatting&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// A profile specifies a command to execute paired with information about how it should look and feel.</span></span><br><span class="line">  <span class="comment">// Each one of them will appear in the &#x27;New Tab&#x27; dropdown,</span></span><br><span class="line">  <span class="comment">//   and can be invoked from the commandline with `wt.exe -p xxx`</span></span><br><span class="line">  <span class="comment">// To learn more about profiles, visit https://aka.ms/terminal-profile-settings</span></span><br><span class="line">  <span class="attr">&quot;profiles&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;defaults&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="comment">// Put settings here that you want to apply to all profiles.</span></span><br><span class="line">      <span class="attr">&quot;startingDirectory&quot;</span><span class="punctuation">:</span> <span class="keyword">null</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;fontFace&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MesloLGM Nerd Font&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;fontSize&quot;</span><span class="punctuation">:</span> <span class="number">12</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;list&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="comment">// Make changes here to the powershell.exe profile.</span></span><br><span class="line">        <span class="attr">&quot;guid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Windows PowerShell&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;commandline&quot;</span><span class="punctuation">:</span> <span class="string">&quot;powershell.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">        <span class="comment">// 浅色主题</span></span><br><span class="line">        <span class="comment">// &quot;acrylicOpacity&quot;: 0.7,</span></span><br><span class="line">        <span class="comment">// &quot;colorScheme&quot; : &quot;Frost&quot;,</span></span><br><span class="line">        <span class="comment">// &quot;cursorColor&quot; : &quot;#000000&quot;,</span></span><br><span class="line">        <span class="comment">// &quot;fontFace&quot; : &quot;Cascadia Code PL&quot;,</span></span><br><span class="line">        <span class="comment">// &quot;useAcrylic&quot;: true</span></span><br><span class="line">        <span class="comment">// 深色主题</span></span><br><span class="line">        <span class="attr">&quot;acrylicOpacity&quot;</span><span class="punctuation">:</span> <span class="number">0.7</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Vintage&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFD&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fontFace&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MesloLGM Nerd Font&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;useAcrylic&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;guid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;3ef3d962-7a99-4b13-93b6-b92a4d42a2e0&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bash&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;commandline&quot;</span><span class="punctuation">:</span> <span class="string">&quot;C:\\Program Files\\Git\\bin\\bash.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Raspberry&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFF&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="comment">// &quot;fontFace&quot; : &quot;Cascadia Code PL&quot;,</span></span><br><span class="line">        <span class="attr">&quot;padding&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5, 5, 5, 5&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;suppressApplicationTitle&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;tabTitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;bash&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="comment">// Make changes here to the cmd.exe profile.</span></span><br><span class="line">        <span class="attr">&quot;guid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;命令提示符&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;commandline&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cmd.exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;closeOnExit&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Retro&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFF&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cursorShape&quot;</span><span class="punctuation">:</span> <span class="string">&quot;filledBox&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fontSize&quot;</span><span class="punctuation">:</span> <span class="number">16</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;padding&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5, 5, 5, 5&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;tabTitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Command Prompt&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fontFace&quot;</span><span class="punctuation">:</span> <span class="string">&quot;PxPlus IBM VGA8&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;experimental.retroTerminalEffect&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;guid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;2c4de342-38b7-51cf-b940-2309a097f518&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Ubuntu&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="comment">// &quot;source&quot;: &quot;Windows.Terminal.Wsl&quot;,</span></span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Raspberry&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFF&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fontFace&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MesloLGM Nerd Font&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;padding&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5, 5, 5, 5&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;suppressApplicationTitle&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;tabTitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Ubuntu&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;guid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;574e775e-4f2a-5b96-ac1e-a2962a402336&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;PowerShell&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;source&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Windows.Terminal.PowershellCore&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;acrylicOpacity&quot;</span><span class="punctuation">:</span> <span class="number">0.7</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Vintage&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFD&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;fontFace&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MesloLGM Nerd Font&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;useAcrylic&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;guid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&#123;b453ae62-4e3d-5e58-b989-0a998ec441b8&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;hidden&quot;</span><span class="punctuation">:</span> <span class="keyword">true</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Azure Cloud Shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;source&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Windows.Terminal.Azure&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Add custom color schemes to this array.</span></span><br><span class="line">  <span class="comment">// To learn more about color schemes, visit https://aka.ms/terminal-color-schemes</span></span><br><span class="line">  <span class="attr">&quot;schemes&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="comment">// 毛玻璃</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Frost&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;background&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFF&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#3C5712&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;blue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#17b2ff&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightBlack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#749B36&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightBlue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#27B2F6&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightCyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#13A8C0&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightGreen&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#89AF50&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightPurple&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#F2A20A&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightRed&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#F49B36&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightWhite&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#741274&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightYellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#991070&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;cyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#3C96A6&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;foreground&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#000000&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;green&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#6AAE08&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;purple&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#991070&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;red&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#8D0C0C&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;white&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#6E386E&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;yellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#991070&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 复古</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Retro&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;background&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#000000&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;blue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightBlack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightBlue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightCyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightGreen&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightPurple&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightRed&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightWhite&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightYellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;cyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;foreground&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;green&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;purple&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;red&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;white&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;yellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#00ff00&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// ubuntu</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Raspberry&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;background&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#3C0315&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#282A2E&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;blue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#0170C5&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightBlack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#676E7A&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightBlue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#80c8ff&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightCyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#8ABEB7&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightGreen&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#B5D680&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightPurple&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#AC79BB&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightRed&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#BD6D85&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightWhite&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFD&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;brightYellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFD76&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;cyan&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#3F8D83&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;foreground&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFD&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;green&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#76AB23&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;purple&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#7D498F&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;red&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#BD0940&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;white&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#FFFFFD&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;yellow&quot;</span><span class="punctuation">:</span> <span class="string">&quot;#E0DE48&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Add custom actions and keybindings to this array.</span></span><br><span class="line">  <span class="comment">// To unbind a key combination from your defaults.json, set the command to &quot;unbound&quot;.</span></span><br><span class="line">  <span class="comment">// To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings</span></span><br><span class="line">  <span class="attr">&quot;actions&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="comment">// Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.</span></span><br><span class="line">    <span class="comment">// These two lines additionally bind them to Ctrl+C and Ctrl+V.</span></span><br><span class="line">    <span class="comment">// To learn more about selection, visit https://aka.ms/terminal-selection</span></span><br><span class="line">    <span class="punctuation">&#123;</span> <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;action&quot;</span><span class="punctuation">:</span> <span class="string">&quot;copy&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;singleLine&quot;</span><span class="punctuation">:</span> <span class="keyword">false</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ctrl+c&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span> <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;paste&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ctrl+v&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Press Ctrl+Shift+F to open the search box</span></span><br><span class="line">    <span class="punctuation">&#123;</span> <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;find&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ctrl+f&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span> <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;duplicateTab&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ctrl+shift+d&quot;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// Press Alt+Shift+D to open a new pane.</span></span><br><span class="line">    <span class="comment">// - &quot;split&quot;: &quot;auto&quot; makes this pane open in the direction that provides the most surface area.</span></span><br><span class="line">    <span class="comment">// - &quot;splitMode&quot;: &quot;duplicate&quot; makes the new pane use the focused pane&#x27;s profile.</span></span><br><span class="line">    <span class="comment">// To learn more about panes, visit https://aka.ms/terminal-panes</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;action&quot;</span><span class="punctuation">:</span> <span class="string">&quot;splitPane&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;split&quot;</span><span class="punctuation">:</span> <span class="string">&quot;vertical&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;splitMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;duplicate&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+tab&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;action&quot;</span><span class="punctuation">:</span> <span class="string">&quot;splitPane&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;split&quot;</span><span class="punctuation">:</span> <span class="string">&quot;horizontal&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;splitMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;duplicate&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;alt+shift+-&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;action&quot;</span><span class="punctuation">:</span> <span class="string">&quot;splitPane&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;split&quot;</span><span class="punctuation">:</span> <span class="string">&quot;auto&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;splitMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;duplicate&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;alt+shift+d&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#123;</span> <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;closePane&quot;</span><span class="punctuation">,</span> <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shift+w&quot;</span> <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加注册列表-右键菜单"><a href="#添加注册列表-右键菜单" class="headerlink" title="添加注册列表(右键菜单)"></a>添加注册列表(右键菜单)</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u011532601/article/details/106305373/">https://blog.csdn.net/u011532601/article/details/106305373/</a></p>
+<h4 id="使用别人写好的-bat-程序"><a href="#使用别人写好的-bat-程序" class="headerlink" title="使用别人写好的 bat 程序"></a>使用别人写好的 bat 程序</h4><p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/BroJenuel/Explorer-Context-Menu-Integration-for-windows-terminal">https://github.com/BroJenuel/Explorer-Context-Menu-Integration-for-windows-terminal</a></p>
+<h4 id="手动配置右键打开"><a href="#手动配置右键打开" class="headerlink" title="手动配置右键打开"></a>手动配置右键打开</h4><ul>
+<li>Win+R 输入 regedit 进入注册表目录 HKEY_CLASSES_ROOT\Directory\Background\shell</li>
+</ul>
+<p>在这里新建一个项命名为 WT 并设置(默认)值为你想要的名称，比如 Windows Terminal Here</p>
+<ul>
+<li><p>再新建字符串值 Icon 即显示图标，并将值设设置 C:\ProgramFiles\WindowsApps\Microsoft.WindowsTerminal_<version>\WindowsTerminal.exe</p>
+<blockquote>
+<p>Win10 系统下 WindowsApps 文件夹拒绝访问如何获取权限：</p>
+<p><a target="_blank" rel="noopener" href="http://www.xitongcheng.com/jiaocheng/win10_article_45151.html">http://www.xitongcheng.com/jiaocheng/win10_article_45151.html</a></p>
+</blockquote>
+</li>
+<li><p>注意：<version>值看你安装的具体版本，可通过 Everything 搜索查证，或者设置为 cmd 的图标 C:\Windows\System32\cmd.exe 免去更新的麻烦，再或者设置你自己的图标，这个不影响使用</p>
+</li>
+<li><p>如有需要的话可以将这个命令置顶，则添加新字符串值 Position，值为 Top</p>
+</li>
+<li><p>然后再新建一个项 command，默认值%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\wt.exe</p>
+</li>
+<li><p>注意：如失效，可将%USERPROFILE%改为指定用户目录如 C:\Users&lt;username&gt;，并注销重启，<username>记得改成自己的用户名</p>
+</li>
+</ul>
+<p>一般出现 explorer.exe 错误多是没有用管理员权限写入导致的</p>
+<blockquote>
+<p>注意：自动添加的右键菜单会出现复制窗口但工作目录变的情况</p>
+</blockquote>
+<h3 id="删除程序自带的右键菜单"><a href="#删除程序自带的右键菜单" class="headerlink" title="删除程序自带的右键菜单"></a>删除程序自带的右键菜单</h3><p>github 上有对应的 issues:<a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal/issues/8105">https://github.com/microsoft/terminal/issues/8105</a></p>
+<p>😓 看来大家都不喜欢程序自动添加的右键菜单</p>
+<p>完成后记得<a target="_blank" rel="noopener" href="https://www.howtogeek.com/198815/use-this-secret-trick-to-close-and-restart-explorer.exe-in-windows/">重新启动资源管理器</a></p>
+<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p><a target="_blank" rel="noopener" href="https://github.com/microsoft/terminal/issues/9806">https://github.com/microsoft/terminal/issues/9806</a></p>
+<p>powershell.exe 中的普通空格</p>
+<p><img src="https://bitbw.top/public/img/my_gallery/image-20210414173814189.png" alt="image-20210414173814189"></p>
+<p>在 Windows terminal 中空格变成 </p>
+<p><img src="https://bitbw.top/public/img/my_gallery/image-20210414172703793.png" alt="image-20210414172703793"></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>更换<a target="_blank" rel="noopener" href="https://ohmyposh.dev/"><strong>Oh my Posh</strong></a>官方推荐字体：<a target="_blank" rel="noopener" href="https://ohmyposh.dev/docs/fonts/">https://ohmyposh.dev/docs/fonts/</a></p>
+<p>使用<a target="_blank" rel="noopener" href="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip">Meslo LGM NF</a></p>
+<p><img src="https://user-images.githubusercontent.com/55389796/114845441-56ec7580-9e0e-11eb-8c6c-d2512fdc7bf8.png" alt="image03"></p>
+<h4 id="setting-json"><a href="#setting-json" class="headerlink" title="setting.json"></a>setting.json</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;fontFace&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;MesloLGM Nerd Font&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="修改-vscode-终端字体"><a href="#修改-vscode-终端字体" class="headerlink" title="修改 vscode 终端字体"></a>修改 vscode 终端字体</h2><h4 id="setting-json-1"><a href="#setting-json-1" class="headerlink" title="setting.json"></a>setting.json</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;terminal.integrated.fontFamily&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MesloLGSDZ Nerd Font&quot;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：vscode 只能使用等宽字体 所以得单独设置</p>
+</blockquote>
+<h2 id="Git-bash-乱码问题"><a href="#Git-bash-乱码问题" class="headerlink" title="Git bash 乱码问题"></a>Git bash 乱码问题</h2><p>解决：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/ssrs-wanghao/articles/9216955.html">https://www.cnblogs.com/ssrs-wanghao/articles/9216955.html</a></p>
+<p>我就用下面命令一下解决</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.quotepath <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Bowen 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Bowen 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/windows/" rel="tag"># windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/12/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/vscode%E4%B8%ADjsconfig-json%E5%92%8Ctsconfig-json%E7%9A%84%E9%85%8D%E7%BD%AE/" rel="prev" title="vscode中jsconfig.json和tsconfig.json的配置">
+                  <i class="fa fa-chevron-left"></i> vscode中jsconfig.json和tsconfig.json的配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/14/%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/" rel="next" title="算法学习">
+                  算法学习 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">415k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:17</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"cf64422749060dee5323e70ee8d09287"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
+
+</body>
+</html>

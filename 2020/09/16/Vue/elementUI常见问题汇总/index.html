@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Bowen_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="g2sghe_aG2NDGFETaIqaIGhfZNoeS9wGBnugQAQXHMI">
+  <meta name="baidu-site-verification" content="code-YK9weY9Iav">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="这篇文章是我在工作中使用 elementUi 遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助  el-table如何修改 el-table 展开树的三角图标只需要给定 before 的 content 即可 123456789 &#x2F;&#x2F; 隐藏展开箭头  .el-table__expand-icon &amp;#123;    &#x2F;&#x2F; 修改展开箭头的样式    .el-icon-arrow-right">
+<meta property="og:type" content="article">
+<meta property="og:title" content="elementUI常见问题汇总">
+<meta property="og:url" content="https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+<meta property="og:site_name" content="张博文的个人博客">
+<meta property="og:description" content="这篇文章是我在工作中使用 elementUi 遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助  el-table如何修改 el-table 展开树的三角图标只需要给定 before 的 content 即可 123456789 &#x2F;&#x2F; 隐藏展开箭头  .el-table__expand-icon &amp;#123;    &#x2F;&#x2F; 修改展开箭头的样式    .el-icon-arrow-right">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bitbw.top/public/img/my_gallery/image-20200227163411930.png">
+<meta property="og:image" content="https://bitbw.top/public/img/my_gallery/%E6%AD%A3%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E5%8E%9F%E5%9B%A0.jpg">
+<meta property="article:published_time" content="2020-09-16T11:17:23.000Z">
+<meta property="article:modified_time" content="2022-06-22T02:29:07.337Z">
+<meta property="article:author" content="Bowen">
+<meta property="article:tag" content="Vue">
+<meta property="article:tag" content="elementUI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bitbw.top/public/img/my_gallery/image-20200227163411930.png">
+
+
+<link rel="canonical" href="https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/","path":"2020/09/16/Vue/elementUI常见问题汇总/","title":"elementUI常见问题汇总"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>elementUI常见问题汇总 | 张博文的个人博客</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?aed4bbe397960f5436bd1a9633262fa1"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张博文的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bowen's personal blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">83</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">123</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#el-table"><span class="nav-number">1.</span> <span class="nav-text">el-table</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9-el-table-%E5%B1%95%E5%BC%80%E6%A0%91%E7%9A%84%E4%B8%89%E8%A7%92%E5%9B%BE%E6%A0%87"><span class="nav-number">1.1.</span> <span class="nav-text">如何修改 el-table 展开树的三角图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#elementUI-%E7%9A%84-table-%E7%9A%84%E6%AF%8F%E4%B8%80%E9%A1%B9%E7%9A%84-min-width-%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E7%99%BE%E5%88%86%E6%AF%94"><span class="nav-number">1.2.</span> <span class="nav-text">elementUI 的 table 的每一项的 min-width 不要使用百分比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-el-table-%E8%A1%A8%E5%A4%B4%E9%AB%98%E5%BA%A6%E7%9A%84%E5%9D%91"><span class="nav-number">1.3.</span> <span class="nav-text">修改 el-table 表头高度的坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-dialog-%E4%B8%AD%E4%BD%BF%E7%94%A8-table-%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.</span> <span class="nav-text">在 dialog 中使用 table 的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#el-table-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%A8%E6%80%81%E8%A1%A8%E5%A4%B4%EF%BC%9A%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E4%B9%8B%E5%90%8E%E8%A1%A8%E5%A4%B4%E4%B8%8D%E6%9B%B4%E6%96%B0"><span class="nav-number">1.5.</span> <span class="nav-text">el-table 自定义动态表头：更新数据之后表头不更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%87%BA%E7%8E%B0%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.5.1.</span> <span class="nav-text">问题出现原因</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#el-form"><span class="nav-number">2.</span> <span class="nav-text">el-form</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#elementUI-%E7%9A%84-form-%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE-resetFields-%E9%87%8D%E7%BD%AE%E6%96%B9%E6%B3%95%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">2.1.</span> <span class="nav-text">elementUI 的 form 表单数据 resetFields 重置方法注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#form-%E7%9A%84%E5%9D%91-element-ui-form-%E8%A1%A8%E5%8D%95%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E8%BE%93%E5%85%A5%E6%A1%86%E8%8E%B7%E5%8F%96%E7%84%A6%E7%82%B9%E7%9A%84%E6%97%B6%E5%80%99%E5%9B%9E%E8%BD%A6%E4%BC%9A%E8%A7%A6%E5%8F%91%E8%A1%A8%E5%8D%95%E7%9A%84-submit-%E4%BA%8B%E4%BB%B6%EF%BC%8C%E5%AF%BC%E8%87%B4%E9%A1%B5%E9%9D%A2%E5%88%B7%E6%96%B0"><span class="nav-number">2.2.</span> <span class="nav-text">form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tree"><span class="nav-number">3.</span> <span class="nav-text">tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#elementUI-%E7%9A%84-tree-%E7%9A%84-loadData-%E4%BB%8E%E6%96%B0%E5%8A%A0%E8%BD%BD%E8%8A%82%E7%82%B9%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text">elementUI 的 tree 的 loadData()从新加载节点方法使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#elementUI-tree-%E6%9C%AA%E5%B1%95%E5%BC%80%E7%9A%84%E5%AD%90%E8%8A%82%E7%82%B9%E6%95%B0%E6%8D%AE%E6%94%B9%E5%8F%98%E5%8D%B4%E4%B8%8D%E6%9B%B4%E6%96%B0%E7%9A%84-bug"><span class="nav-number">3.2.</span> <span class="nav-text">elementUI tree 未展开的子节点数据改变却不更新的 bug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element-%E7%9A%84-tree-%E7%9A%84%E6%87%92%E5%8A%A0%E8%BD%BD%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">element 的 tree 的懒加载使用方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#load-%E5%B1%9E%E6%80%A7"><span class="nav-number">3.3.1.</span> <span class="nav-text">load 属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#props-%E5%B1%9E%E6%80%A7"><span class="nav-number">3.3.2.</span> <span class="nav-text">props 属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#el-input"><span class="nav-number">4.</span> <span class="nav-text">el-input</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#el-input-%E5%90%8C%E8%BF%87%E6%AD%A3%E5%88%99%E9%99%90%E5%88%B6%E5%8F%AA%E8%83%BD%E8%BE%93%E5%85%A5%E6%AD%A3%E6%95%B0%E5%8F%AF%E4%BB%A5%E5%B8%A6%E5%B0%8F%E6%95%B0%E7%82%B9-%E4%BD%86%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98"><span class="nav-number">4.1.</span> <span class="nav-text">el-input 同过正则限制只能输入正数可以带小数点 但不生效问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E2%80%94%E8%A1%A8%E5%A4%B4%E5%B8%A6-input-%E6%90%9C%E7%B4%A2%E6%A1%86-%E6%90%9C%E7%B4%A2%E5%90%8E%E7%82%B9%E5%87%BB%E8%A1%A8%E6%A0%BC%E4%BC%9A%E5%88%B7%E6%96%B0%E6%95%B0%E6%8D%AE-bug"><span class="nav-number">4.2.</span> <span class="nav-text">工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#el-image"><span class="nav-number">6.</span> <span class="nav-text">el-image</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#elementUI-%E7%9A%84-image-%E7%9A%84-src-%E5%8A%A0%E8%BD%BD-vue-%E7%B3%BB%E7%BB%9F%E6%88%96%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">6.1.</span> <span class="nav-text">elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B7%E5%BC%8F%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">样式问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#date-picker"><span class="nav-number">8.</span> <span class="nav-text">date-picker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-datepicker-%E6%98%9F%E6%9C%9F%E6%97%A5%E6%9C%9F%E9%80%89%E6%8B%A9%E7%BB%84%E4%BB%B6%E3%80%82%E7%BB%91%E5%AE%9A%E5%80%BC%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%B8%BA%E6%97%B6%E9%97%B4%E6%88%B3%E6%97%B6%E4%BC%9A%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81"><span class="nav-number">8.1.</span> <span class="nav-text">问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3"><span class="nav-number">8.2.</span> <span class="nav-text">解决</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bowen"
+      src="/images/logo-header.jpg">
+  <p class="site-author-name" itemprop="name">Bowen</p>
+  <div class="site-description" itemprop="description">vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bitbw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bitbw" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/" title="微博 → http:&#x2F;&#x2F;weibo.com" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.163.com/" title="E-Mail → https:&#x2F;&#x2F;mail.163.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/" title="Twitter → https:&#x2F;&#x2F;twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/" title="YouTube → https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.org/" title="https:&#x2F;&#x2F;theme-next.org&#x2F;" rel="noopener" target="_blank">Next主题</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/hanzeng1993/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanzeng1993&#x2F;" rel="noopener" target="_blank">Python学习</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="elementUI常见问题汇总 | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          elementUI常见问题汇总
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-16 11:17:23" itemprop="dateCreated datePublished" datetime="2020-09-16T11:17:23+00:00">2020-09-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>这篇文章是我在工作中使用 elementUi 遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助</p>
+</blockquote>
+<h2 id="el-table"><a href="#el-table" class="headerlink" title="el-table"></a>el-table</h2><h3 id="如何修改-el-table-展开树的三角图标"><a href="#如何修改-el-table-展开树的三角图标" class="headerlink" title="如何修改 el-table 展开树的三角图标"></a>如何修改 el-table 展开树的三角图标</h3><p>只需要给定 before 的 content 即可</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> // 隐藏展开箭头</span><br><span class="line">  <span class="selector-class">.el-table__expand-icon</span> &#123;</span><br><span class="line">    // 修改展开箭头的样式</span><br><span class="line">    <span class="selector-class">.el-icon-arrow-right</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&quot;\e791&quot;</span>;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参考网址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37378152/article/details/102628860">https://blog.csdn.net/m0_37378152/article/details/102628860</a></p>
+<h3 id="elementUI-的-table-的每一项的-min-width-不要使用百分比"><a href="#elementUI-的-table-的每一项的-min-width-不要使用百分比" class="headerlink" title="elementUI 的 table 的每一项的 min-width 不要使用百分比"></a>elementUI 的 table 的每一项的 min-width 不要使用百分比</h3><blockquote>
+<p>elementUI 的 table 的每一项的 min-width 不要使用百分比 ,不然会出现这种情况</p>
+</blockquote>
+<p><img src="https://bitbw.top/public/img/my_gallery/image-20200227163411930.png" alt="image-20200227163411930"></p>
+<blockquote>
+<p>固定的序号和 checkbox 会掉下来</p>
+</blockquote>
+<h3 id="修改-el-table-表头高度的坑"><a href="#修改-el-table-表头高度的坑" class="headerlink" title="修改 el-table 表头高度的坑"></a>修改 el-table 表头高度的坑</h3><blockquote>
+<p>el-table 固定列的 table，在 dom 上是有两个 thead 的所以要修改表头高度就一定要两个都修改 ，不然会导致固定列表头高度与正常表头高度不一致现象 ，在薪酬项目的代码示例</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//处理表头高度</span></span><br><span class="line"><span class="selector-class">.el-table__header-wrapper</span> <span class="selector-tag">th</span> <span class="selector-class">.cell</span> <span class="selector-class">.edit-table-header</span> &gt; <span class="selector-tag">p</span> &gt; <span class="selector-tag">span</span>,</span><br><span class="line"><span class="selector-class">.el-table__fixed-header-wrapper</span> <span class="selector-tag">th</span> <span class="selector-class">.cell</span> <span class="selector-class">.edit-table-header</span> &gt; <span class="selector-tag">p</span> &gt; <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在-dialog-中使用-table-的问题"><a href="#在-dialog-中使用-table-的问题" class="headerlink" title="在 dialog 中使用 table 的问题"></a>在 dialog 中使用 table 的问题</h3><blockquote>
+<p>在 dialog 中使用 table 发现无论怎样设置表头都会出现表头高度不正常现象 和数据不正常现象</p>
+<p>这时可以使用 dialog 的 destroy-on-close 属性 （关闭时销毁 Dialog 中的元素）</p>
+</blockquote>
+<h3 id="el-table-自定义动态表头：更新数据之后表头不更新"><a href="#el-table-自定义动态表头：更新数据之后表头不更新" class="headerlink" title="el-table 自定义动态表头：更新数据之后表头不更新"></a>el-table 自定义动态表头：更新数据之后表头不更新</h3><p>在开发中 表头但是多级表头并且是动态遍历的 ，遍历的数据发生改变表头数据却没有更新</p>
+<h4 id="问题出现原因"><a href="#问题出现原因" class="headerlink" title="问题出现原因"></a>问题出现原因</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">v-for</span>=<span class="string">&quot;item in columnData&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--一级表头文字--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">&quot;header&quot;</span> <span class="attr">slot-scope</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-head&quot;</span>&gt;</span>&#123;&#123;item.name &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--.........战略性省略业务代码.........--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>排查了很久，后发现：在自定义表头的时候，由于是用的 v-for 循环生成的，因此会给每个循环体一个固定的 key，导致数据频繁更新时，因为这个 key 没有变，所以 el-table 觉得表头数据是没有变化的，因此就只更新了整体表格数据、key 值有变化的列的表头。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--表头的v-for中的key 使用 id + index 组合的形式使key变成动态的--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in tableData&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id + index&quot;</span>&gt;</span></span><br><span class="line">  .....</span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="el-form"><a href="#el-form" class="headerlink" title="el-form"></a>el-form</h2><h3 id="elementUI-的-form-表单数据-resetFields-重置方法注意事项"><a href="#elementUI-的-form-表单数据-resetFields-重置方法注意事项" class="headerlink" title="elementUI 的 form 表单数据 resetFields 重置方法注意事项"></a>elementUI 的 form 表单数据 resetFields 重置方法注意事项</h3><p>this.$refs.form<a href="">“resetFields”</a>;</p>
+<p>form 无法重置表单项的原因有以下四点：</p>
+<ol>
+<li>el-form-item 的 prop 属性缺失或属性值 不等于 字段名称</li>
+<li>表单项本身就有默认值</li>
+<li>表单数据绑定时未使用$nextTick 函数（resetFields 重置到挂载前的数据）</li>
+<li>未显示的表单项无法重置</li>
+</ol>
+<h3 id="form-的坑-element-ui-form-表单只有一个输入框获取焦点的时候回车会触发表单的-submit-事件，导致页面刷新"><a href="#form-的坑-element-ui-form-表单只有一个输入框获取焦点的时候回车会触发表单的-submit-事件，导致页面刷新" class="headerlink" title="form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新"></a>form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新</h3><p><strong>解决方法：</strong></p>
+<blockquote>
+<p>当一个 form 元素中只有一个输入框时，在该输入框中按下回车应提交该表单。如果希望阻止这一默认行为，可以在 标签上添加 @submit.native.prevent。</p>
+</blockquote>
+<h2 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h2><h3 id="elementUI-的-tree-的-loadData-从新加载节点方法使用"><a href="#elementUI-的-tree-的-loadData-从新加载节点方法使用" class="headerlink" title="elementUI 的 tree 的 loadData()从新加载节点方法使用"></a>elementUI 的 tree 的 loadData()从新加载节点方法使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 更新节点数据</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">currentNode</span>.<span class="property">loaded</span> = <span class="literal">false</span>; <span class="comment">//需要配合node.loaded = false 使用</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">currentNode</span>.<span class="title function_">loadData</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="elementUI-tree-未展开的子节点数据改变却不更新的-bug"><a href="#elementUI-tree-未展开的子节点数据改变却不更新的-bug" class="headerlink" title="elementUI tree 未展开的子节点数据改变却不更新的 bug"></a>elementUI tree 未展开的子节点数据改变却不更新的 bug</h3><p>不采用懒加载方式直接改变 tree 的 data 数据发现为展开的子节点数据改变，展开后展示的数据却未变，</p>
+<p>查看文档发现有个属性<code>render-after-expand</code>是否在第一次展开某个树节点后才渲染其子节点,</p>
+<p>设置为<code>false</code>就可以解决了</p>
+<h3 id="element-的-tree-的懒加载使用方法"><a href="#element-的-tree-的懒加载使用方法" class="headerlink" title="element 的 tree 的懒加载使用方法"></a>element 的 tree 的懒加载使用方法</h3><h4 id="load-属性"><a href="#load-属性" class="headerlink" title="load 属性"></a>load 属性</h4><p>懒加载子树数据的方法，需要配合 lazy 属性为 true 时生效，点开当前节点时就会触发； 类型：function(node, resolve)</p>
+<p><strong>node：</strong></p>
+<ul>
+<li>id: 26</li>
+<li>text: null</li>
+<li>checked: false</li>
+<li>indeterminate: false</li>
+<li>data: Object 当前绑定的 data</li>
+<li>expanded: true</li>
+<li>parent: Node 父节点</li>
+<li>visible: true</li>
+<li>isCurrent: false</li>
+<li>store: TreeStore</li>
+<li>level: 4 当前在第几级</li>
+<li>loaded: true</li>
+<li>childNodes: Array(5) 子节点</li>
+<li>loading: false</li>
+<li>isLeaf: false</li>
+<li>label: “中非莱基” 绑定显示的文字</li>
+<li>key: undefined</li>
+<li>disabled: “”</li>
+<li>nextSibling: Node</li>
+<li>previousSibling: Node</li>
+</ul>
+<p>**resolve:**接收子节点的 data 自动绑定到树上</p>
+<h4 id="props-属性"><a href="#props-属性" class="headerlink" title="props 属性"></a>props 属性</h4><p>定义 data 中的绑定项的 key</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">类型</th>
+<th align="left">可选值</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">label</td>
+<td align="left">指定节点标签为节点对象的某个属性值</td>
+<td align="left">string, function(data, node)</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">children</td>
+<td align="left">指定子树为节点对象的某个属性值</td>
+<td align="left">string</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">disabled</td>
+<td align="left">指定节点选择框是否禁用为节点对象的某个属性值</td>
+<td align="left">boolean, function(data, node)</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">isLeaf</td>
+<td align="left">指定节点是否为叶子节点，仅在指定了 lazy 属性的情况下生效</td>
+<td align="left">boolean, function(data, node)</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+</tbody></table>
+<h2 id="el-input"><a href="#el-input" class="headerlink" title="el-input"></a>el-input</h2><h3 id="el-input-同过正则限制只能输入正数可以带小数点-但不生效问题"><a href="#el-input-同过正则限制只能输入正数可以带小数点-但不生效问题" class="headerlink" title="el-input 同过正则限制只能输入正数可以带小数点 但不生效问题"></a>el-input 同过正则限制只能输入正数可以带小数点 但不生效问题</h3><p>代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">    type=<span class="string">&quot;text&quot;</span></span><br><span class="line">    v-model.<span class="property">number</span>=<span class="string">&quot;editingFormData.salary&quot;</span></span><br><span class="line">    oninput=<span class="string">&quot;value=value.replace(/^\D*(\d*(?:\.\d&#123;0,2&#125;)?).*$/g, &#x27;$1&#x27;)&quot;</span></span><br><span class="line">&gt;&lt;/el-input&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>正则一直不好 无法输入小数点 ， 是因为加了 number 修饰符无法输入小数点， 找了我一个多小时啊</p>
+</blockquote>
+<p><img src="https://bitbw.top/public/img/my_gallery/%E6%AD%A3%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E5%8E%9F%E5%9B%A0.jpg" alt="正则不生效原因"></p>
+<h3 id="工作中出现的—表头带-input-搜索框-搜索后点击表格会刷新数据-bug"><a href="#工作中出现的—表头带-input-搜索框-搜索后点击表格会刷新数据-bug" class="headerlink" title="工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug"></a>工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug</h3><blockquote>
+<p>表格带表头 input 搜索的结构 搜索需要回车， 发现每次搜索回车后 点击表格或其他地方， 表格会刷新一下，经同事指点打开 Network 发现 ，点击其他地方会发次请求，打开 table 组件的源码发现 被别的同事添加了@blur 失去焦点事件，并且与回车事件调用同一个函数，因为回车不会使 input 框失去焦点，点击表格其他地方时 input 失去焦点导致再次触发搜索，所有好像自己刷新了一下的样子。 下面是表格内 input 的代码</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-if</span>=<span class="string">&quot;[undefined, &#x27;&#x27;, &#x27;input&#x27;, &#x27;button&#x27;, &#x27;string&#x27;].includes(field.fieldType)&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;field.headerSearchAttrs&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model.trim</span>=<span class="string">&quot;field.inputValue&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">clearable</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:placeholder</span>=<span class="string">&quot;field.label&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">keyup.enter.native</span>=<span class="string">&quot;handleBlur(field.prop, field.inputValue)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">blur</span>=<span class="string">&quot;handleBlur(field.prop, field.inputValue)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">clear</span>=<span class="string">&quot;clearQueryInput&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- @keyup.enter 和@blur调用同一函数产生的bug --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="el-image"><a href="#el-image" class="headerlink" title="el-image"></a>el-image</h2><h3 id="elementUI-的-image-的-src-加载-vue-系统或本地图片的方法（重要）"><a href="#elementUI-的-image-的-src-加载-vue-系统或本地图片的方法（重要）" class="headerlink" title="elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）"></a>elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）</h3><blockquote>
+<p>正常情况以下情形是不生效的， 会提示找不到图片 所以需要用到，原生的 require 方法</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;message-item&quot; v-for=&quot;(item, index) in uploadMessage&quot; :key=&quot;index&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;item-txt&quot;&gt;&#123;&#123;item.txt&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;el-image :src=&quot;item.img&quot; :preview-src-list=&quot;srcList&quot;&gt;&lt;/el-image&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//js部分</span></span><br><span class="line">uploadMessage = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">]; <span class="comment">//提示</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图片会显示加载失败 ， 修改后 的代码结构 如下</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">uploadMessage = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"><span class="comment">//大图地址也需要加require</span></span><br><span class="line">srcList = [</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>),</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<h2 id="样式问题"><a href="#样式问题" class="headerlink" title="样式问题"></a>样式问题</h2><ul>
+<li>table 通过 th display: table-cell !important; 控制在谷歌浏览器下边框不对齐问题</li>
+<li>导航菜单选中项样式问题通过类名.is-active 设置</li>
+<li>顶部 logo 部分的顶部栏的高度，和子项宽度 都是通过 flex 属性设置，flex ：0 0 220px</li>
+<li>elementui 的样式变量在 E:\project\hr-web-container\node_modules\element-ui\packages\theme-chalk\src\common\var.scss 内</li>
+</ul>
+<h2 id="date-picker"><a href="#date-picker" class="headerlink" title="date-picker"></a>date-picker</h2><h3 id="问题-datepicker-星期日期选择组件。绑定值格式化为时间戳时会出现乱码"><a href="#问题-datepicker-星期日期选择组件。绑定值格式化为时间戳时会出现乱码" class="headerlink" title="问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码"></a>问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码</h3><p><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/element/issues/21159">github issues</a></p>
+<p>将datepicker组件的type属性设置为week，value-format属性设置为timestamp，此时无法回显选择的日期，通过打印v-model值可以得知此时的v-model正确值是乱码 <code>ti0e0tam0p</code></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>目前 github 上没有解决 elementUI 2 已经没有维护了 ， value-format尽量别设置为timestamp 就可以避免这个问题</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Bowen 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Bowen 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Vue/" rel="tag"># Vue</a>
+              <a href="/tags/elementUI/" rel="tag"># elementUI</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/" rel="prev" title="js中的微观任务和宏观任务">
+                  <i class="fa fa-chevron-left"></i> js中的微观任务和宏观任务
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/09/16/Vue/Vue%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" rel="next" title="Vue常见问题汇总">
+                  Vue常见问题汇总 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">415k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:17</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"a012a07cbadd43b41b44a18b7457ed3c"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
+
+</body>
+</html>

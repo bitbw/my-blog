@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Bowen_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="g2sghe_aG2NDGFETaIqaIGhfZNoeS9wGBnugQAQXHMI">
+  <meta name="baidu-site-verification" content="code-YK9weY9Iav">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="因为在 electron 中没有找到 ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件  借鉴文章地址：https:&#x2F;&#x2F;www.jb51.net&#x2F;article&#x2F;181616.htm 效果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue + vuetify + electron 实现ctrl+f的搜索功能">
+<meta property="og:url" content="https://blog.bitbw.top/2021/01/12/Vue/vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+<meta property="og:site_name" content="张博文的个人博客">
+<meta property="og:description" content="因为在 electron 中没有找到 ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件  借鉴文章地址：https:&#x2F;&#x2F;www.jb51.net&#x2F;article&#x2F;181616.htm 效果">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bitbw.top/public/img/my_gallery/%E5%AE%9E%E7%8E%B0ctrl+f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.gif">
+<meta property="article:published_time" content="2021-01-12T15:02:05.000Z">
+<meta property="article:modified_time" content="2022-06-22T02:29:07.337Z">
+<meta property="article:author" content="Bowen">
+<meta property="article:tag" content="Vuetify">
+<meta property="article:tag" content="Electron">
+<meta property="article:tag" content="Vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bitbw.top/public/img/my_gallery/%E5%AE%9E%E7%8E%B0ctrl+f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.gif">
+
+
+<link rel="canonical" href="https://blog.bitbw.top/2021/01/12/Vue/vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.bitbw.top/2021/01/12/Vue/vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/","path":"2021/01/12/Vue/vue-vuetify-electron-实现ctrl-f的搜索功能/","title":"vue + vuetify + electron 实现ctrl+f的搜索功能"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>vue + vuetify + electron 实现ctrl+f的搜索功能 | 张博文的个人博客</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?aed4bbe397960f5436bd1a9633262fa1"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张博文的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bowen's personal blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">83</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">123</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text">效果</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bowen"
+      src="/images/logo-header.jpg">
+  <p class="site-author-name" itemprop="name">Bowen</p>
+  <div class="site-description" itemprop="description">vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bitbw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bitbw" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/" title="微博 → http:&#x2F;&#x2F;weibo.com" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.163.com/" title="E-Mail → https:&#x2F;&#x2F;mail.163.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/" title="Twitter → https:&#x2F;&#x2F;twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/" title="YouTube → https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.org/" title="https:&#x2F;&#x2F;theme-next.org&#x2F;" rel="noopener" target="_blank">Next主题</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/hanzeng1993/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanzeng1993&#x2F;" rel="noopener" target="_blank">Python学习</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/01/12/Vue/vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="vue + vuetify + electron 实现ctrl+f的搜索功能 | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vue + vuetify + electron 实现ctrl+f的搜索功能
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-12 15:02:05" itemprop="dateCreated datePublished" datetime="2021-01-12T15:02:05+00:00">2021-01-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>因为在 electron 中没有找到 ctrl+f 调用浏览器搜索的方法 于是借鉴文章自己撸了一个搜索组件</p>
+</blockquote>
+<p>借鉴文章地址：<a target="_blank" rel="noopener" href="https://www.jb51.net/article/181616.htm">https://www.jb51.net/article/181616.htm</a></p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://bitbw.top/public/img/my_gallery/%E5%AE%9E%E7%8E%B0ctrl+f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.gif" alt="实现ctrl+f的搜索功能"></p>
+<span id="more"></span>
+
+<p>模板部分</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;v-card class=&quot;history-info-drawer&quot;&gt;</span><br><span class="line">    &lt;!-- 头部操作栏 --&gt;</span><br><span class="line">      &lt;v-toolbar dense dark color=&quot;primary&quot;&gt;</span><br><span class="line">        &lt;!-- input --&gt;</span><br><span class="line">        &lt;v-text-field</span><br><span class="line">          type=&quot;text&quot;</span><br><span class="line">          hide-details</span><br><span class="line">          prepend-icon=&quot;mdi-magnify&quot;</span><br><span class="line">          single-line</span><br><span class="line">          clearable</span><br><span class="line">          placeholder=&quot;请输入要搜索的字符串 回车进行定位&quot;</span><br><span class="line">          v-model=&quot;searchStr&quot;</span><br><span class="line">          @keyup.enter=&quot;e =&gt; submit()&quot;</span><br><span class="line">        &gt;&lt;/v-text-field&gt;</span><br><span class="line">        &lt;!-- 上下按钮 --&gt;</span><br><span class="line">        &lt;v-btn icon @click=&quot;submit(&#x27;up&#x27;)&quot;&gt;</span><br><span class="line">          &lt;v-icon&gt;mdi-chevron-up&lt;/v-icon&gt;</span><br><span class="line">        &lt;/v-btn&gt;</span><br><span class="line">        &lt;v-btn icon @click=&quot;submit(&#x27;down&#x27;)&quot;&gt;</span><br><span class="line">          &lt;v-icon&gt;mdi-chevron-down&lt;/v-icon&gt;</span><br><span class="line">        &lt;/v-btn&gt;</span><br><span class="line">        &lt;!-- 关闭按钮 --&gt;</span><br><span class="line">        &lt;v-btn icon @click=&quot;$emit(&#x27;input&#x27;, false)&quot;&gt;</span><br><span class="line">          &lt;v-icon&gt;mdi-close&lt;/v-icon&gt;</span><br><span class="line">        &lt;/v-btn&gt;</span><br><span class="line">      &lt;/v-toolbar&gt;</span><br><span class="line">      &lt;!-- 内容显示区域 --&gt;</span><br><span class="line">      &lt;v-card-text&gt;</span><br><span class="line">        &lt;div v-html=&quot;transitionContent&quot; class=&quot;history-info-content&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;/v-card-text&gt;</span><br><span class="line">    &lt;/v-card&gt;</span><br></pre></td></tr></table></figure>
+
+<p>逻辑部分</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;HistoryInfoDrawer&quot;</span>,</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="comment">// 传入的内容字符串</span></span><br><span class="line">    <span class="attr">content</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="title class_">String</span>,</span><br><span class="line">      <span class="attr">defualt</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="comment">//搜索内容</span></span><br><span class="line">      <span class="attr">searchStr</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="comment">// 搜索定位</span></span><br><span class="line">      <span class="attr">currentPosition</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="comment">// 经过转换的展示内容</span></span><br><span class="line">      <span class="attr">transitionContent</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="comment">// 当前搜索字符串是否是首次定位</span></span><br><span class="line">      <span class="attr">firstPosition</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="title function_">handleTransitionContent</span>(<span class="params">searchStr</span>) &#123;</span><br><span class="line">      <span class="comment">//获取动态变化的搜索词</span></span><br><span class="line">      <span class="keyword">if</span> (searchStr !== <span class="string">&quot;&quot;</span> &amp;&amp; searchStr) &#123;</span><br><span class="line">        <span class="comment">// 将特殊符号转义</span></span><br><span class="line">        <span class="keyword">let</span> searchRegExp = searchStr.<span class="title function_">replace</span>(<span class="regexp">/(\.|\+|\?|\*)/g</span>, <span class="string">&quot;\\$1&quot;</span>);</span><br><span class="line">        <span class="comment">//若搜索词不为空，对搜索词进行替换 背景颜色变黄色</span></span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">content</span></span><br><span class="line">          .<span class="title function_">replace</span>(</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">RegExp</span>(searchRegExp, <span class="string">&quot;g&quot;</span>),</span><br><span class="line">            <span class="string">&#x27;&lt;a style=&quot;background-color: yellow;&quot;  &gt;&#x27;</span> + searchStr + <span class="string">&quot;&lt;/a&gt;&quot;</span></span><br><span class="line">          )</span><br><span class="line">          .<span class="title function_">replace</span>(<span class="regexp">/\n/g</span>, <span class="string">&quot;&lt;/br&gt;&quot;</span>);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">content</span>.<span class="title function_">replace</span>(<span class="regexp">/\n/g</span>, <span class="string">&quot;&lt;/br&gt;&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 定位</span></span><br><span class="line">    <span class="title function_">handlePosition</span>(<span class="params">flag = <span class="string">&quot;down&quot;</span></span>) &#123;</span><br><span class="line">      <span class="comment">// 容器</span></span><br><span class="line">      <span class="keyword">const</span> container = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.history-info-content&quot;</span>);</span><br><span class="line">      <span class="comment">// 获取所有a</span></span><br><span class="line">      <span class="keyword">let</span> alist = container.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">      <span class="keyword">let</span> aListLength = alist.<span class="property">length</span>;</span><br><span class="line">      <span class="comment">// 首次搜索不执行定位的增减</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">firstPosition</span>) &#123;</span><br><span class="line">        flag = <span class="string">&quot;&quot;</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">switch</span> (flag) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;down&quot;</span>: &#123;</span><br><span class="line">          <span class="comment">//定位+1，走满一圈归0</span></span><br><span class="line">          <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">currentPosition</span> &lt; aListLength - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">currentPosition</span> += <span class="number">1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">currentPosition</span> == aListLength - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">currentPosition</span> = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//定位-1，走满一圈归最后一位</span></span><br><span class="line">        <span class="keyword">case</span> <span class="string">&quot;up&quot;</span>: &#123;</span><br><span class="line">          <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">currentPosition</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">currentPosition</span> -= <span class="number">1</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">currentPosition</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">currentPosition</span> = aListLength - <span class="number">1</span>;</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="attr">default</span>:</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Bowen: change &quot;</span>, <span class="variable language_">this</span>.<span class="property">currentPosition</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (aListLength != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 当前的定位元素的背景颜色变红</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> a <span class="keyword">of</span> alist) &#123;</span><br><span class="line">          a.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&quot;yellow&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> currentA = alist[<span class="variable language_">this</span>.<span class="property">currentPosition</span>];</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Bowen: handlePosition -&gt; currentA&quot;</span>, currentA);</span><br><span class="line">        currentA &amp;&amp; (currentA.<span class="property">style</span>.<span class="property">backgroundColor</span> = <span class="string">&quot;red&quot;</span>);</span><br><span class="line">        <span class="comment">// 滚动到当前元素</span></span><br><span class="line">        currentA.<span class="title function_">scrollIntoView</span>(&#123;</span><br><span class="line">          <span class="attr">behavior</span>: <span class="string">&quot;smooth&quot;</span>,</span><br><span class="line">          <span class="attr">block</span>: <span class="string">&quot;center&quot;</span>,</span><br><span class="line">          <span class="attr">inline</span>: <span class="string">&quot;nearest&quot;</span>,</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">firstPosition</span> = <span class="literal">false</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">watch</span>: &#123;</span><br><span class="line">    <span class="title function_">searchStr</span>(<span class="params">searchStr</span>) &#123;</span><br><span class="line">      <span class="comment">// 输入改变定位清零</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">currentPosition</span> = <span class="number">0</span>;</span><br><span class="line">      <span class="comment">// 赋值转化后的字符串</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">transitionContent</span> = <span class="variable language_">this</span>.<span class="title function_">handleTransitionContent</span>(searchStr);</span><br><span class="line">      <span class="comment">// 设置为首次定位</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">firstPosition</span> = <span class="literal">true</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 首次先赋值</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">transitionContent</span> = <span class="variable language_">this</span>.<span class="title function_">handleTransitionContent</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>组件使用的是 vuetify ，主要可以看逻辑部分 element 等组件的用法大同小异</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Bowen 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Bowen 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Vuetify/" rel="tag"># Vuetify</a>
+              <a href="/tags/Electron/" rel="tag"># Electron</a>
+              <a href="/tags/Vue/" rel="tag"># Vue</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/11/Vue/vuetify%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E5%BA%A6%E5%8A%A8%E7%94%BBcreateSimpleTransition%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="vuetify自定义过度动画createSimpleTransition的使用实现左右抽屉效果">
+                  <i class="fa fa-chevron-left"></i> vuetify自定义过度动画createSimpleTransition的使用实现左右抽屉效果
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/02/06/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/" rel="next" title="Linux命令入门">
+                  Linux命令入门 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">415k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:17</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"0bb320a1f877c2514f46872f5c5d96b9"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
+
+</body>
+</html>

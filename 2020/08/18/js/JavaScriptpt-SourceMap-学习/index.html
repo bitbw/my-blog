@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Bowen_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="g2sghe_aG2NDGFETaIqaIGhfZNoeS9wGBnugQAQXHMI">
+  <meta name="baidu-site-verification" content="code-YK9weY9Iav">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+
+    <meta name="description" content="学习资料阮一峰 JavaScript Source Map 详解 Source map的格式看一下项目中由 vue-cli 生成的 source map 源文件 123&#x2F;&#x2F; 下面代码是在一行显示(window[&quot;webpackJsonp&quot;]&#x3D;window[&quot;webpackJsonp&quot;]||[]).push([[&quot;404&quot;],&amp;#123;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptpt SourceMap 学习">
+<meta property="og:url" content="https://blog.bitbw.top/2020/08/18/js/JavaScriptpt-SourceMap-%E5%AD%A6%E4%B9%A0/">
+<meta property="og:site_name" content="张博文的个人博客">
+<meta property="og:description" content="学习资料阮一峰 JavaScript Source Map 详解 Source map的格式看一下项目中由 vue-cli 生成的 source map 源文件 123&#x2F;&#x2F; 下面代码是在一行显示(window[&quot;webpackJsonp&quot;]&#x3D;window[&quot;webpackJsonp&quot;]||[]).push([[&quot;404&quot;],&amp;#123;&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bitbw.top/public/img/my_gallery/20220318142001.png">
+<meta property="article:published_time" content="2020-08-18T16:26:11.000Z">
+<meta property="article:modified_time" content="2022-06-22T02:29:07.333Z">
+<meta property="article:author" content="Bowen">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bitbw.top/public/img/my_gallery/20220318142001.png">
+
+
+<link rel="canonical" href="https://blog.bitbw.top/2020/08/18/js/JavaScriptpt-SourceMap-%E5%AD%A6%E4%B9%A0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.bitbw.top/2020/08/18/js/JavaScriptpt-SourceMap-%E5%AD%A6%E4%B9%A0/","path":"2020/08/18/js/JavaScriptpt-SourceMap-学习/","title":"JavaScriptpt SourceMap 学习"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScriptpt SourceMap 学习 | 张博文的个人博客</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?aed4bbe397960f5436bd1a9633262fa1"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张博文的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bowen's personal blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">83</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">123</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Source-map%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">Source map的格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mappings%E5%B1%9E%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">mappings属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%8D%E7%BD%AE%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">位置对应的原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VLQ%E7%BC%96%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">VLQ编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VLQ%E7%BC%96%E7%A0%81%EF%BC%9A%E5%AE%9E%E4%BE%8B"><span class="nav-number">6.</span> <span class="nav-text">VLQ编码：实例</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bowen"
+      src="/images/logo-header.jpg">
+  <p class="site-author-name" itemprop="name">Bowen</p>
+  <div class="site-description" itemprop="description">vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">123</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">83</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bitbw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bitbw" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/" title="微博 → http:&#x2F;&#x2F;weibo.com" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.163.com/" title="E-Mail → https:&#x2F;&#x2F;mail.163.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/" title="Twitter → https:&#x2F;&#x2F;twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/" title="YouTube → https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.org/" title="https:&#x2F;&#x2F;theme-next.org&#x2F;" rel="noopener" target="_blank">Next主题</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/hanzeng1993/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanzeng1993&#x2F;" rel="noopener" target="_blank">Python学习</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/08/18/js/JavaScriptpt-SourceMap-%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScriptpt SourceMap 学习 | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScriptpt SourceMap 学习
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-18 16:26:11" itemprop="dateCreated datePublished" datetime="2020-08-18T16:26:11+00:00">2020-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h2><p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html">阮一峰 JavaScript Source Map 详解</a></p>
+<h2 id="Source-map的格式"><a href="#Source-map的格式" class="headerlink" title="Source map的格式"></a>Source map的格式</h2><p>看一下项目中由 vue-cli 生成的 source map</p>
+<p>源文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 下面代码是在一行显示</span></span><br><span class="line">(<span class="variable language_">window</span>[<span class="string">&quot;webpackJsonp&quot;</span>]=<span class="variable language_">window</span>[<span class="string">&quot;webpackJsonp&quot;</span>]||[]).<span class="title function_">push</span>([[<span class="string">&quot;404&quot;</span>],&#123;<span class="string">&quot;077b&quot;</span>:<span class="keyword">function</span>(<span class="params">n,c,t</span>)&#123;<span class="string">&quot;use strict&quot;</span>;<span class="title function_">t</span>(<span class="string">&quot;cfb7&quot;</span>)&#125;,<span class="string">&quot;8cdb&quot;</span>:<span class="keyword">function</span>(<span class="params">n,c,t</span>)&#123;<span class="string">&quot;use strict&quot;</span>;t.<span class="title function_">r</span>(c);<span class="keyword">var</span> e=<span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> n=<span class="variable language_">this</span>,c=n.<span class="property">$createElement</span>,t=n.<span class="property">_self</span>.<span class="property">_c</span>||c;<span class="keyword">return</span> <span class="title function_">t</span>(<span class="string">&quot;div&quot;</span>,&#123;<span class="attr">staticClass</span>:<span class="string">&quot;container&quot;</span>&#125;,[n.<span class="title function_">_v</span>(<span class="string">&quot;404&quot;</span>)])&#125;,s=[],i=&#123;&#125;,u=i,a=(<span class="title function_">t</span>(<span class="string">&quot;077b&quot;</span>),<span class="title function_">t</span>(<span class="string">&quot;0c7c&quot;</span>)),l=<span class="title class_">Object</span>(a[<span class="string">&quot;a&quot;</span>])(u,e,s,!<span class="number">1</span>,<span class="literal">null</span>,<span class="literal">null</span>,<span class="literal">null</span>);c[<span class="string">&quot;default&quot;</span>]=l.<span class="property">exports</span>&#125;,<span class="attr">cfb7</span>:<span class="keyword">function</span>(<span class="params">n,c,t</span>)&#123;&#125;&#125;]);</span><br><span class="line"><span class="comment">//# sourceMappingURL=404.f6b2607e.js.map</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> render = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> _vm = <span class="variable language_">this</span></span><br><span class="line">  <span class="keyword">var</span> _h = _vm.<span class="property">$createElement</span></span><br><span class="line">  <span class="keyword">var</span> _c = _vm.<span class="property">_self</span>.<span class="property">_c</span> || _h</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">_c</span>(</span><br><span class="line">    <span class="string">&quot;div&quot;</span>,</span><br><span class="line">    _vm.<span class="title function_">_b</span>(&#123; <span class="attr">staticClass</span>: <span class="string">&quot;container&quot;</span> &#125;, <span class="string">&quot;div&quot;</span>, <span class="literal">false</span>),</span><br><span class="line">    [_vm.<span class="title function_">_v</span>(<span class="string">&quot;404&quot;</span>)]</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> staticRenderFns = []</span><br><span class="line">render.<span class="property">_withStripped</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; render, staticRenderFns &#125;</span><br></pre></td></tr></table></figure>
+
+<p>source map</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sources&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue?1c47&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue?abb9&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///src/views/404.vue&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue?ead0&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;names&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;render&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_vm&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;this&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_h&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;$createElement&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_c&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_self&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;staticClass&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_v&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;staticRenderFns&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;component&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 压缩后的代码只有一行所以没有; 号</span></span><br><span class="line">    <span class="attr">&quot;mappings&quot;</span><span class="punctuation">:</span> <span class="string">&quot;uGAAA,W,2CCAA,IAAIA,EAAS,WAAa,IAAIC,EAAIC,KAASC,EAAGF,EAAIG,eAAmBC,EAAGJ,EAAIK,MAAMD,IAAIF,EAAG,OAAOE,EAAG,MAAM,CAACE,YAAY,aAAa,CAACN,EAAIO,GAAG,UACvIC,EAAkB,GCGP,KCJ4V,I,wBCQvWC,EAAY,eACd,EACAV,EACAS,GACA,EACA,KACA,KACA,MAIa,aAAAC,E&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;js/404.f6b2607e.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sourcesContent&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;export * f..... &quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sourceRoot&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="bullet">-</span> <span class="string">version：Source map的版本，目前为3。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">file：转换后的文件名。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">sourceRoot：转换前的文件所在的目录。如果与转换前的文件在同一目录，该项为空。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">sources：转换前的文件。该项是一个数组，表示可能存在多个文件合并。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">names：转换前的所有变量名和属性名。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">mappings：记录位置信息的字符串，下文详细介绍。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="mappings属性"><a href="#mappings属性" class="headerlink" title="mappings属性"></a>mappings属性</h2><p>下面才是真正有趣的部分：两个文件的各个位置是如何一一对应的。</p>
+<p>关键就是map文件的mappings属性。这是一个很长的字符串，它分成三层。</p>
+<blockquote>
+<p>　第一层是<strong>行对应</strong>，以分号（;）表示，每个分号对应转换后源码的一行。所以，第一个分号前的内容，就对应源码的第一行，以此类推。</p>
+<p>　第二层是<strong>位置对应</strong>，以逗号（,）表示，每个逗号对应转换后源码的一个位置。所以，第一个逗号前的内容，就对应该行源码的第一个位置，以此类推。</p>
+<p>　第三层是<strong>位置转换</strong>，以<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable-length_quantity">VLQ编码</a>表示，代表该位置对应的转换前的源码位置。</p>
+</blockquote>
+<p>举例来说，假定mappings属性的内容如下：</p>
+<blockquote>
+<p>　mappings:”AAAAA,BBBBB;CCCCC”</p>
+</blockquote>
+<p>就表示，转换后的源码分成两行，第一行有两个位置，第二行有一个位置。</p>
+<h2 id="位置对应的原理"><a href="#位置对应的原理" class="headerlink" title="位置对应的原理"></a>位置对应的原理</h2><p>每个位置使用五位，表示五个字段。</p>
+<p>从左边算起，</p>
+<blockquote>
+<p>　- 第一位，表示这个位置在（转换后的代码的）的第几列。</p>
+<p>　- 第二位，表示这个位置属于sources属性中的哪一个文件。</p>
+<p>　- 第三位，表示这个位置属于转换前代码的第几行。</p>
+<p>　- 第四位，表示这个位置属于转换前代码的第几列。</p>
+<p>　- 第五位，表示这个位置属于names属性中的哪一个变量。</p>
+</blockquote>
+<p>有几点需要说明。首先，所有的值都是以0作为基数的。其次，第五位不是必需的，如果该位置没有对应names属性中的变量，可以省略第五位。再次，每一位都采用VLQ编码表示；由于VLQ编码是变长的，所以每一位可以由多个字符构成。</p>
+<p>如果某个位置是AAAAA，由于A在VLQ编码中表示0，因此这个位置的五个位实际上都是0。它的意思是，该位置在转换后代码的第0列，对应sources属性中第0个文件，属于转换前代码的第0行第0列，对应names属性中的第0个变量。</p>
+<h2 id="VLQ编码"><a href="#VLQ编码" class="headerlink" title="VLQ编码"></a>VLQ编码</h2><p>最后，谈谈如何用<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable-length_quantity">VLQ编码</a>表示数值。</p>
+<p>这种编码最早用于MIDI文件，后来被多种格式采用。它的特点就是可以非常精简地表示很大的数值。</p>
+<p>VLQ编码是变长的。如果（整）数值在-15到+15之间（含两个端点），用一个字符表示；超出这个范围，就需要用多个字符表示。它规定，每个字符使用6个两进制位，正好可以借用<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Base_64">Base 64</a>编码的字符表。</p>
+<p><img src="https://bitbw.top/public/img/my_gallery/20220318142001.png" alt="img"></p>
+<p>在这6个位中，左边的第一位（最高位）表示是否”连续”（continuation）。如果是1，代表这６个位后面的6个位也属于同一个数；如果是0，表示该数值到这6个位结束。</p>
+<blockquote>
+<p>　Continuation<br>　|　　　　　Sign<br>　|　　　　　|<br>　V　　　　　V<br>　１０１０１１</p>
+</blockquote>
+<p>这6个位中的右边最后一位（最低位）的含义，取决于这6个位是否是某个数值的VLQ编码的第一个字符。如果是的，这个位代表”符号”（sign），0为正，1为负（Source map的符号固定为0）；如果不是，这个位没有特殊含义，被算作数值的一部分。</p>
+<h2 id="VLQ编码：实例"><a href="#VLQ编码：实例" class="headerlink" title="VLQ编码：实例"></a>VLQ编码：实例</h2><p>下面看一个例子，如何对数值16进行VLQ编码。</p>
+<blockquote>
+<p>　第一步，将16改写成二进制形式10000。</p>
+<p>　第二步，在最右边补充符号位。因为16大于0，所以符号位为0，整个数变成100000。</p>
+<p>　第三步，从右边的最低位开始，将整个数每隔5位，进行分段，即变成1和00000两段。如果最高位所在的段不足5位，则前面补0，因此两段变成00001和00000。</p>
+<p>　第四步，将两段的顺序倒过来，即00000和00001。</p>
+<p>　第五步，在每一段的最前面添加一个”连续位”，除了最后一段为0，其他都为1，即变成100000和000001。</p>
+<p>　第六步，将每一段转成Base 64编码。</p>
+</blockquote>
+<p>查表可知，100000为g，000001为B。因此，数值16的VLQ编码为gB。上面的过程，看上去好像很复杂，做起来其实很简单，具体的实现请看官方的<a target="_blank" rel="noopener" href="https://github.com/mozilla/source-map/blob/master/lib/source-map/base64-vlq.js">base64-vlq.js</a>文件，里面有详细的注释。</p>
+<p>转换VLQ编码 <a target="_blank" rel="noopener" href="https://www.murzwin.com/base64vlq.html">https://www.murzwin.com/base64vlq.html</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Bowen 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Bowen 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/js/" rel="tag"># js</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/08/18/js/JavaScript%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="prev" title="JavaScript位运算符">
+                  <i class="fa fa-chevron-left"></i> JavaScript位运算符
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/" rel="next" title="js中的微观任务和宏观任务">
+                  js中的微观任务和宏观任务 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-utterances">utterances</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments gitalk-container"></div>
+            </div>
+            <div class="tab-pane utterances" id="comment-utterances">
+              <div class="comments utterances-container"></div>
+            </div>
+        </div>
+      </div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">415k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:17</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f331381f7278af37d1137799fb8b5995"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
+
+</body>
+</html>
