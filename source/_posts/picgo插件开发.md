@@ -19,7 +19,7 @@ categories: 工具使用
 觉得图片还是放到自己的服务器上安全
 使用过`web-uploader`插件但是有问题调不通我的接口，于是自己写个上传插件方便一些
 我的自定义上传插件 :[picgo-plugin-bitbw-upload 插件地址](https://www.npmjs.com/package/picgo-plugin-bitbw-upload)
-
+<!-- more -->
 ## 插件开发
 
 ### 使用模板

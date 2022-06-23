@@ -128,9 +128,9 @@ symbols_count_time:
 
 ### 建议添加 gitalk 评论系统
 
-参考文章：https://www.jianshu.com/p/02fc71f3633f
+参考文章：<https://www.jianshu.com/p/02fc71f3633f>
 
-### 展示效果：
+### 展示效果
 
 ![image-20200916135526251](https://bitbw.top/public/img/my_gallery/image-20200916135526251.png)
 
@@ -149,7 +149,7 @@ busuanzi_count:
   post_views_icon: fa fa-eye
 ```
 
-### 展示效果：
+### 展示效果
 
 ![image-20200916135902653](https://bitbw.top/public/img/my_gallery/image-20200916135902653.png)
 
@@ -411,8 +411,26 @@ td {
 
 ## Hexo + Next 主题博客提交百度谷歌收录
 
-原文地址：https://www.luanzhuxian.com/post/82d92ad4.html
+原文地址：<https://www.luanzhuxian.com/post/82d92ad4.html>
 
 建议使用自动推送
 
 也可以调用百度 api
+
+## Next 主题文章老是自动滚到底部评论区的问题
+
+原因 :
+设置了 utterances
+
+```yml
+utterances:
+  enable: true
+```
+
+解决：
+取消 utterances
+
+```yml
+utterances:
+  enable: false
+```
