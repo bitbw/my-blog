@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
 <meta property="og:type" content="website">
@@ -227,7 +228,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -333,14 +333,17 @@
 <li>阻止 JavaScript 点击动作触发的事件</li>
 </ul>
 <p>一个 CSS 属性能做所有的这么多事情！</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/30/CSS/CSS%E9%87%8C%E7%9A%84pointer-events%E5%B1%9E%E6%80%A7/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h3 id="The-CSS"><a href="#The-CSS" class="headerlink" title="The CSS"></a>The CSS</h3><p>这个<code>pointer-events</code>属性有很多可以使用的属性值，但大部分都是针对 SVG 的：<code>auto</code>, <code>none</code>, <code>visiblePainted*</code>, <code>visibleFill*</code>, <code>visibleStroke*</code>, <code>visible*</code>, <code>painted*</code>, <code>fill*</code>, <code>stroke*</code>, <code>all*</code>, 以及 <code>inherit</code>。其中<code>none</code>值能阻止点击、状态变化和鼠标指针变化：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.disabled</span> &#123;</span><br><span class="line">  <span class="attribute">pointer-events</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一些需要注意的关于<code>pointer-events</code>的事项：</p>
+<ul>
+<li>子元素可以声明<code>pointer-events</code>来解禁父元素的阻止鼠标事件限制。</li>
+<li>如果你对一个元素设置了 click 事件监听器，然后你移除了<code>pointer-events</code>样式声明，或把它的值改变为<code>auto</code>，监听器会重新生效。基本上，监听器会遵守<code>pointer-events</code>的设定。</li>
+</ul>
+<h2 id="处理问题"><a href="#处理问题" class="headerlink" title="处理问题"></a>处理问题</h2><p>为了只让 tooltip 显示，而 input 的本身的禁用还在，可以直接在 tooltip 中的显示文字上添加 pointer-events: auto; 即可</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 内容部分</span></span><br><span class="line"><span class="selector-class">.tooltip-default-text</span> &#123;</span><br><span class="line">  <span class="attribute">pointer-events</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -402,7 +405,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -452,14 +455,8 @@
 <li>如果让用户自行输入数据值，而无需对变化做处理 ，可以使用<strong>非受控组件</strong></li>
 </ul>
 <h3 id="react-router-dom"><a href="#react-router-dom" class="headerlink" title="react-router-dom"></a>react-router-dom</h3><p>Route 放入 children 和 component 中的区别</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// children 中 home 通过 props 获取不到路由数据</span></span><br><span class="line">&lt;<span class="title class_">Route</span> path=<span class="string">&quot;/home&quot;</span>&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Home</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Route</span>&gt;</span><br><span class="line"><span class="comment">// component 中 home 通过 props 可以获取到路由数据</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/home&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -521,7 +518,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -574,14 +571,177 @@
 <li>reactive 只能用于创建对象数据类型的相应式数据 不需要.value 就直接可以访问 深度响应</li>
 <li>toRefs 用于给 prop 添加响应数据，需要.value 访问</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/24/Vue/Vue3%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h3 id="基础-api"><a href="#基础-api" class="headerlink" title="基础 api"></a>基础 api</h3><h4 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h4><p>返回对象的响应式副本</p>
+<p>使用:</p>
+<blockquote>
+<p>可以直接给对象添加任何属性都是响应式的 ，但不能直接赋值对象</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;zhangshan&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 有效</span></span><br><span class="line">person.<span class="property">sex</span> = <span class="string">&quot;男&quot;</span>;</span><br><span class="line"><span class="comment">// 无效</span></span><br><span class="line">person = &#123; ...person, ...&#123; <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span> &#125; &#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="isReactive"><a href="#isReactive" class="headerlink" title="isReactive"></a>isReactive</h4><p>检查对象是否是 reactive 创建的响应式 proxy。</p>
+<h4 id="readonly"><a href="#readonly" class="headerlink" title="readonly"></a>readonly</h4><p>除了只读以外跟 reactive 一样，但只读也代表了响应式没有意义了</p>
+<h4 id="isReadonly"><a href="#isReadonly" class="headerlink" title="isReadonly"></a>isReadonly</h4><p>检查对象是否是由 readonly 创建的只读 prox</p>
+<h4 id="shallowReactive-和-shallowReadonly"><a href="#shallowReactive-和-shallowReadonly" class="headerlink" title="shallowReactive 和 shallowReadonly"></a>shallowReactive 和 shallowReadonly</h4><p>与上面的差别就是指对第一层属性响应，再深度的则不响应</p>
+<h4 id="isProxy"><a href="#isProxy" class="headerlink" title="isProxy"></a>isProxy</h4><p>检查对象是否是由 reactive 或 readonly 创建的 proxy。</p>
+<h3 id="Refs"><a href="#Refs" class="headerlink" title="Refs"></a>Refs</h3><h4 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h4><blockquote>
+<p>接受一个内部值并返回一个响应式且可变的 ref 对象。ref 对象具有指向内部值的单个 property <code>.value</code>。</p>
+<p>也就是相当于解决了 reactive 只能作用对象类型，和只能添加属性不能直接修改对象的不足</p>
+<p>对象类型数据配合 reactive 使用</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> count = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(count.<span class="property">value</span>); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line">count.<span class="property">value</span>++;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(count.<span class="property">value</span>); <span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 对象类型</span></span><br><span class="line"><span class="keyword">let</span> person = <span class="title function_">ref</span>(</span><br><span class="line">  <span class="title function_">reactive</span>(&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;zhangshan&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line">person.<span class="property">value</span> = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;lisi&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">28</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="unref"><a href="#unref" class="headerlink" title="unref"></a>unref</h4><p>返回使用 ref 响应数据的 value （不是原始数据）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> flag = <span class="title function_">ref</span>(</span><br><span class="line">  <span class="title function_">reactive</span>(&#123;</span><br><span class="line">    <span class="attr">number</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;flag&quot;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line">flag.<span class="property">value</span>.<span class="property">number</span>++;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">  <span class="title function_">unref</span>(flag),</span><br><span class="line">  <span class="string">&quot;unref(flag) === flag.value&quot;</span>,</span><br><span class="line">  <span class="title function_">unref</span>(flag) === flag.<span class="property">value</span></span><br><span class="line">); <span class="comment">// 1 true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="setup（组合式的核心）"><a href="#setup（组合式的核心）" class="headerlink" title="setup（组合式的核心）"></a>setup（组合式的核心）</h3><h4 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h4><blockquote>
+<p>个人理解 :setup 相当于一个盒子 （组合式的核心） ，将<code>methods</code>、<code>watch</code>、<code>computed</code>、<code>data</code>的数据都在这里进行组合</p>
+<p>而<code>methods</code>、<code>watch</code>、<code>computed</code>、<code>data</code> 的数据，可以分别用不同的 js 文件生成，再导入到 vue 当文件组件中，或 setup 所在文件中</p>
+</blockquote>
+<blockquote>
+<p>在 Vue3 中，定义 <code>methods</code>、<code>watch</code>、<code>computed</code>、<code>data</code>数据 等都放在了 <code>setup()</code> 函数中 ，(实现了逻辑的拆分)</p>
+<p><a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/composition-api-introduction.html#setup-%E7%BB%84%E4%BB%B6%E9%80%89%E9%A1%B9">官网地址</a></p>
+</blockquote>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>setup 方法接收两个参数 ：</p>
+<ul>
+<li>prop</li>
+<li>context 上下文对象也就是 this （当前 vue 实例）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref, onMounted, watch, toRefs, computed &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">components</span>: &#123; <span class="title class_">RepositoriesFilters</span>, <span class="title class_">RepositoriesSortBy</span>, <span class="title class_">RepositoriesList</span> &#125;,</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">user</span>: &#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="title class_">String</span>,</span><br><span class="line">      <span class="attr">required</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title function_">setup</span>(<span class="params">props</span>) &#123;</span><br><span class="line">    <span class="comment">// 使用 `toRefs` 创建对 props 中的 `user` property 的响应式引用</span></span><br><span class="line">    <span class="keyword">const</span> &#123; user &#125; = <span class="title function_">toRefs</span>(props);</span><br><span class="line">    <span class="keyword">const</span> repositories = <span class="title function_">ref</span>([]);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(props); <span class="comment">// &#123; user: &#x27;&#x27; &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;; <span class="comment">// 这里返回的任何内容都可以用于组件的其余部分</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 组件的“其余部分”</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>更多用法详见：<a href="###setup.ts">setup.ts</a></p>
+<h3 id="setup-语法糖-lt-scritp-setup-gt"><a href="#setup-语法糖-lt-scritp-setup-gt" class="headerlink" title="setup 语法糖 &lt;scritp setup&gt;"></a>setup 语法糖<code> &lt;scritp setup&gt;</code></h3><p>可以使用<code>&lt;script setup&gt;</code> 标签 代替 setup（）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> count = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">const</span> <span class="title function_">inc</span> = (<span class="params"></span>) =&gt; count.<span class="property">value</span>++;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      count,</span><br><span class="line">      inc,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码可以写成下面的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;button @click=&quot;inc&quot;&gt;&#123;&#123; count &#125;&#125;&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from &quot;vue&quot;;</span><br><span class="line"></span><br><span class="line">export const count = ref(0);</span><br><span class="line">export const inc = () =&gt; count.value++;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用限制："><a href="#使用限制：" class="headerlink" title="使用限制："></a>使用限制：</h4><blockquote>
+<p>由于模块执行语义的不同，内部代码<code>&lt;script setup&gt;</code>依赖于 SFC 的上下文。当移至外部<code>.js</code>或<code>.ts</code>文件中时，可能会给开发人员和工具带来混乱。因此，**<code>&lt;script setup&gt;</code>**不能与该<code>src</code>属性一起使用。</p>
+</blockquote>
+<p><strong>个人感觉比较麻烦 还不如正常的使用 setup</strong></p>
+<h2 id="Global-API-全局-API"><a href="#Global-API-全局-API" class="headerlink" title="Global API 全局 API"></a>Global API 全局 API</h2><h3 id="createApp-创建整个应用的实例"><a href="#createApp-创建整个应用的实例" class="headerlink" title="createApp 创建整个应用的实例"></a><code>createApp</code> 创建整个应用的实例</h3><blockquote>
+<p>3.x 添加<code>createApp</code> 方法用来创建应用的根 防止数据间的相互污染 <a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/global-api.html#%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E5%85%A8%E5%B1%80-api-createapp">官方文档地址</a></p>
+</blockquote>
+<p>应用实例暴露当前全局 API 的子集，经验法则是，任何全局改变 Vue 行为的 API 现在都会移动到应用实例上，以下是当前全局 API 及其相应实例 API 的表：</p>
+<table>
+<thead>
+<tr>
+<th>2.x 全局 API</th>
+<th>3.x 实例 API (<code>app</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Vue.config</td>
+<td>app.config</td>
+</tr>
+<tr>
+<td>Vue.config.productionTip</td>
+<td><em>removed</em> (<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-removed">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.config.ignoredElements</td>
+<td>app.config.isCustomElement (<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/global-api.html#config-ignoredelements-is-now-config-iscustomelement">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.component</td>
+<td>app.component</td>
+</tr>
+<tr>
+<td>Vue.directive</td>
+<td>app.directive</td>
+</tr>
+<tr>
+<td>Vue.mixin</td>
+<td>app.mixin</td>
+</tr>
+<tr>
+<td>Vue.use</td>
+<td>app.use (<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/global-api.html#a-note-for-plugin-authors">见下方</a>)</td>
+</tr>
+<tr>
+<td>Vue.prototype</td>
+<td>app.config.globalProperties (<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/global-api.html#vue-prototype-replaced-by-config-globalproperties">见下方</a>)</td>
+</tr>
+</tbody></table>
+<p>所有其他不全局改变行为的全局 API 现在被命名为 exports，文档见<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/global-api-treeshaking.html">全局 API Treeshaking</a>。</p>
+<h3 id="全局-API-Treeshaking-将一部分-xxx-和-指令-按需导入使用"><a href="#全局-API-Treeshaking-将一部分-xxx-和-指令-按需导入使用" class="headerlink" title="全局 API Treeshaking 将一部分$xxx 和 指令 按需导入使用"></a>全局 API Treeshaking 将一部分$xxx 和 指令 按需导入使用</h3><blockquote>
+<p>Vue.nextTick() 将废弃 使用 导入方式如下</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; nextTick &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="title function_">nextTick</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 一些和DOM有关的东西</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>使用 render 语法中 可以使用如下 api 按需导入</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; h, <span class="title class_">Transition</span>, withDirectives, vShow &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">h</span>(<span class="title class_">Transition</span>, [<span class="title function_">withDirectives</span>(<span class="title function_">h</span>(<span class="string">&quot;div&quot;</span>, <span class="string">&quot;hello&quot;</span>), [[vShow, <span class="variable language_">this</span>.<span class="property">ok</span>]])]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="teleport-指定标签父节点"><a href="#teleport-指定标签父节点" class="headerlink" title="teleport 指定标签父节点"></a>teleport 指定标签父节点</h2><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><blockquote>
+<p>teleport 可以将组件生成的 dom 节点 ，转移到其他 dom 下作为其子节点</p>
+<p>让我们修改 <code>modal-button</code> 以使用 <code>&lt;teleport&gt;</code>，并告诉 Vue “<strong>Teleport</strong> 这个 HTML <strong>到</strong>该‘<strong>body</strong>’标签”。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">app.component(&#x27;modal-button&#x27;, &#123; template: `</span><br><span class="line">&lt;button @click=&quot;modalOpen = true&quot;&gt;</span><br><span class="line">        Open full screen modal! (With teleport!)</span><br><span class="line">    &lt;/button&gt;</span><br><span class="line"></span><br><span class="line">&lt;teleport to=&quot;body&quot;&gt;								// teleport 的 to属性就是作为哪个dom的字节的</span><br><span class="line">      &lt;div v-if=&quot;modalOpen&quot; class=&quot;modal&quot;&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">          I&#x27;m a teleported modal! </span><br><span class="line">          (My parent is &quot;body&quot;)</span><br><span class="line">          &lt;button @click=&quot;modalOpen = false&quot;&gt;</span><br><span class="line">            Close</span><br><span class="line">          &lt;/button&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/teleport&gt;</span><br><span class="line">`, data() &#123; return &#123; modalOpen: false &#125; &#125; &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="Props："><a href="#Props：" class="headerlink" title="Props："></a>Props：</h4><ul>
+<li><code>to</code> - <code>string</code>。需要 prop，必须是有效的查询选择器（独一无二的类名或 id 或属性）或 <code>HTMLElement</code> (如果在浏览器环境中使用)。指定将在其中移动 <code>&lt;teleport&gt;</code> 内容的目标元素</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 正确 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;#some-id&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;.some-class&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;[data-teleport]&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 错误 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;h1&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;some-string&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>disabled</code> - <code>boolean</code>。此可选属性可用于禁用 <code>&lt;teleport&gt;</code> 的功能，这意味着其插槽内容将不会移动到任何位置，而是在您在周围父组件中指定了 <code>&lt;teleport&gt;</code> 的位置渲染。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;#popup&quot;</span> <span class="attr">:disabled</span>=<span class="string">&quot;displayVideoInline&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">&quot;./my-movie.mp4&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">teleport</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>请注意，这将移动实际的 DOM 节点，而不是被销毁和重新创建，并且它还将保持任何组件实例的活动状态。所有有状态的 HTML 元素 (即播放的视频) 都将保持其状态。</p>
+<h2 id="片段（支持多根节点）"><a href="#片段（支持多根节点）" class="headerlink" title="片段（支持多根节点）"></a>片段（支持多根节点）</h2><p>Vue 3 现在正式支持了多根节点的组件，也就是片段！</p>
+<p>在 3.x 中，组件可以包含多个根节点！但是，这要求开发者显式定义 attribute 应该分布在哪里。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Layout.vue --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span>...<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">main</span> <span class="attr">v-bind</span>=<span class="string">&quot;$attrs&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span>...<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>因为 2.x 只有一个根节点 $attrs 就会绑定到根节点上，现在3.x会有多个根节点，所以需要定义$attrs 需要绑定到到哪个节点上</p>
+</blockquote>
+<h2 id="v-model-的改变"><a href="#v-model-的改变" class="headerlink" title="v-model 的改变"></a><code>v-model</code> 的改变</h2><p>2.x 使用 input + value 实现 v-model , 3.x 里使用使用 <code>modelValue</code>（ 自己定义字段名与 update:后面的字段一致即可 ，默认值是<code>modelValue</code>） 作为 prop 和 <code>update:modelValue</code> 作为事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">component</span>(<span class="string">&quot;my-component&quot;</span>, &#123;</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="title class_">String</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">emits</span>: [<span class="string">&quot;update:title&quot;</span>],</span><br><span class="line">  <span class="attr">template</span>: <span class="string">`  &lt;input </span></span><br><span class="line"><span class="string">      type=&quot;text&quot;</span></span><br><span class="line"><span class="string">      :value=&quot;title&quot;</span></span><br><span class="line"><span class="string">      @input=&quot;$emit(&#x27;update:title&#x27;, $event.target.value)&quot;&gt;</span></span><br><span class="line"><span class="string">  `</span>,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">my-component</span> <span class="attr">v-model:title</span>=<span class="string">&quot;bookTitle&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">my-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意点：v-model 后面需要加对应的 update 后的的字段名 习惯于 2.x 语法后 前几次会忘记加</p>
+</blockquote>
+<p>并且可以使用多个 v-model 只需要在 v-model 后面加上对应的 prop 字段名即可</p>
+<h3 id="v-model-修饰符"><a href="#v-model-修饰符" class="headerlink" title="v-model 修饰符"></a><code>v-model</code> 修饰符</h3><p>在 2.x 中 v-model 的修饰符有.trim<code>、</code>.number<code>和</code>.lazy，</p>
+<p>在 3.x 中我们可以自定义修饰符，比如 <code>v-model:title.capitalize=&quot;bar&quot;</code></p>
+<p>在子组件中 prop 中 <code>titleModifiers</code>中可以接收到 <code>capitalize：ture </code> 再做对应处理后</p>
+<p>prop 中修饰符的属性名为 ： <code>arg + &quot;Modifiers&quot;</code>：（绑定 value 字段名 + “Modifiers”）</p>
+<p>父组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">HelloWorld</span> <span class="attr">v-model:title.capitalize</span>=<span class="string">&quot;inputValue&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>子组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">:value</span>=<span class="string">&quot;title&quot;</span> @<span class="attr">input</span>=<span class="string">&quot;handleCapitalize&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//prop</span></span><br><span class="line"> <span class="attr">props</span>: &#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="title class_">String</span>,</span><br><span class="line">    <span class="attr">titleModifiers</span>: &#123; <span class="comment">//使用title + Modifiers 获取修饰符对象 &#123; capitalize:ture &#125;</span></span><br><span class="line">      <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">      <span class="attr">default</span>: <span class="function">() =&gt;</span> (&#123;&#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"><span class="comment">// mothods</span></span><br><span class="line"><span class="title function_">handleCapitalize</span>(<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> value = event.<span class="property">target</span>.<span class="property">value</span>;</span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">titleModifiers</span>.<span class="property">capitalize</span>) &#123; <span class="comment">// capitalize:ture</span></span><br><span class="line">    value = value.<span class="title function_">toLocaleUpperCase</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">this</span>.$emit(<span class="string">&quot;update:title&quot;</span>, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果<code>v-modle </code>使用默认值 <code>modelValue</code> 时，prop 修饰符对象使用 <code>modelModifiers</code> 作为属性名</p>
+</blockquote>
+<h2 id="单文件组件-style-中使用-script-中变量-实验性"><a href="#单文件组件-style-中使用-script-中变量-实验性" class="headerlink" title="单文件组件 style 中使用 script 中变量(实验性)"></a>单文件组件 style 中使用 script 中变量(实验性)</h2><blockquote>
+<p><code>3.x</code> 单文件组件中 style 中可是使用当前<code>vue</code>实例的 data 数据</p>
+<p>最新提议 <a target="_blank" rel="noopener" href="https://github.com/vuejs/rfcs/pull/231">https://github.com/vuejs/rfcs/pull/231</a></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;text&quot;&gt;hello&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      color: &#x27;red&#x27;,						  // data中的变量在style中都可以使用 使用v-bind （11月10日最新提议）</span><br><span class="line">      font: &#123;								  // 之前的提议是 var(--变量名)</span><br><span class="line">        size: &#x27;2em&#x27;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">.text &#123;</span><br><span class="line">  color: v-bind(color);</span><br><span class="line">  /* 使用对象.属性 包在&#x27;&#x27;引号中 */</span><br><span class="line">  font-size: v-bind(&quot;font.size&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单文件组件样式作用域的变化"><a href="#单文件组件样式作用域的变化" class="headerlink" title="单文件组件样式作用域的变化"></a>单文件组件样式作用域的变化</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">/* deep (css选择器)  */</span><br><span class="line">::v-deep(.foo) &#123;&#125;</span><br><span class="line">/*可以在（）里写,  在sass less scss 等预编译器中可以写在 &#123;&#125; 中*/</span><br><span class="line">::v-deep() &#123;</span><br><span class="line">    .foo&#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">/* 简写 */</span><br><span class="line">:deep(.foo) &#123;&#125;</span><br><span class="line"></span><br><span class="line">/* 作用于插槽  给 slot 加对应 class=&quot;foo&quot; 就可以作用到插槽上*/</span><br><span class="line">::v-slotted(.foo) &#123;&#125;</span><br><span class="line">/* 简写 */</span><br><span class="line">:slotted(.foo) &#123;&#125;</span><br><span class="line"></span><br><span class="line">/* 在 scoped 中作用全局的样式 功能就 跟不加scoped一样 感觉有点脱裤子放屁的感觉 */</span><br><span class="line">::v-global(.foo) &#123;&#125;</span><br><span class="line">/* 简写 */</span><br><span class="line">:global(.foo) &#123;&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="tip-名词含义"><a href="#tip-名词含义" class="headerlink" title="tip 名词含义"></a>tip 名词含义</h2><ul>
+<li><code>SFC</code> - 单文件组件</li>
+</ul>
+<h1 id="demo-Vue3-TypeScript"><a href="#demo-Vue3-TypeScript" class="headerlink" title="demo ( Vue3 + TypeScript )"></a>demo ( Vue3 + TypeScript )</h1><blockquote>
+<p>直接使用 vue-cil 初始化 vue3 项目</p>
+</blockquote>
+<h3 id="Home-vue"><a href="#Home-vue" class="headerlink" title="Home.vue"></a>Home.vue</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;home&quot;&gt;</span><br><span class="line">    &lt;img alt=&quot;Vue logo&quot; src=&quot;../assets/logo.png&quot; /&gt;</span><br><span class="line">    &lt;HelloWorld v-model:title.capitalize=&quot;inputValue&quot;&gt;</span><br><span class="line">      &lt;p class=&quot;default-solt&quot;&gt;这里是默认插槽&lt;/p&gt;</span><br><span class="line">    &lt;/HelloWorld&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; ref, defineComponent &#125; from &quot;vue&quot;; // 使用defineComponent创建vue实例</span><br><span class="line">import HelloWorld from &quot;@/components/HelloWorld.vue&quot;; // @ is an alias to /src</span><br><span class="line"></span><br><span class="line">export default defineComponent(&#123;</span><br><span class="line">  name: &quot;Home&quot;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    HelloWorld,</span><br><span class="line">  &#125;,</span><br><span class="line">  created() &#123;</span><br><span class="line">    console.log(&quot;created&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeCreate() &#123;</span><br><span class="line">    console.log(&quot;beforeCreate&quot;);</span><br><span class="line">  &#125;,</span><br><span class="line">  setup() &#123;</span><br><span class="line">    console.log(&quot;setup 在 created 之前&quot;);</span><br><span class="line">    const inputValue = ref(&quot;&quot;);</span><br><span class="line">    return &#123;</span><br><span class="line">      inputValue,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">// 等价于下面</span><br><span class="line">:deep(.skill) &#123;</span><br><span class="line">  color: skyblue;</span><br><span class="line">&#125;</span><br><span class="line">:deep() &#123;</span><br><span class="line">  .skill &#123;</span><br><span class="line">    color: skyblue;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 等价于不加 scoped</span><br><span class="line">:global(.modal) &#123;</span><br><span class="line">  &amp; &gt; div &#123;</span><br><span class="line">    color: skyblue !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HelloWorld-vue"><a href="#HelloWorld-vue" class="headerlink" title="HelloWorld.vue"></a>HelloWorld.vue</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;hello&quot;&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;!-- 展示数据 --&gt;</span><br><span class="line">      &lt;div&gt;鼠标x轴:&#123;&#123; x &#125;&#125;&lt;/div&gt;</span><br><span class="line">      &lt;div&gt;鼠标y轴:&#123;&#123; y &#125;&#125;&lt;/div&gt;</span><br><span class="line">      &lt;span&gt;&#123;&#123; count &#125;&#125;&lt;/span&gt;</span><br><span class="line">      &lt;span&gt;双倍：&#123;&#123; doubelCount &#125;&#125;&lt;/span&gt;</span><br><span class="line">      &lt;button @click=&quot;count++&quot;&gt;Increment count&lt;/button&gt;</span><br><span class="line">      &lt;p&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; :value=&quot;title&quot; @input=&quot;handleCapitalize&quot; /&gt;</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">      &lt;p class=&quot;person&quot;&gt;</span><br><span class="line">        &lt;span&gt;姓名：&#123;&#123; person.name &#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;年龄：&#123;&#123; person.age &#125;&#125;&lt;/span&gt;</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">      &lt;p class=&quot;skill&quot;&gt;技能：敲代码&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">      &lt;!-- 打开dialog按钮 --&gt;</span><br><span class="line">      &lt;button @click=&quot;modalOpen = true&quot;&gt;</span><br><span class="line">        Open full screen modal! (With teleport!)</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">      &lt;!-- dialog --&gt;</span><br><span class="line">      &lt;teleport to=&quot;body&quot;&gt;</span><br><span class="line">        &lt;div v-show=&quot;modalOpen&quot; class=&quot;modal&quot;&gt;</span><br><span class="line">          &lt;div&gt;</span><br><span class="line">            I&#x27;m a teleported modal! (My parent is &quot;body&quot;)</span><br><span class="line">            &lt;button @click=&quot;modalOpen = false&quot;&gt;Close&lt;/button&gt;</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/teleport&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!-- 默认插槽 --&gt;</span><br><span class="line">    &lt;slot class=&quot;default-solt&quot;&gt;&lt;/slot&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script lang=&quot;ts&quot;&gt;</span><br><span class="line">import &#123; setup &#125; from &quot;@/components/setup&quot;; // 直接导入 setup</span><br><span class="line">import &#123; defineComponent &#125; from &quot;vue&quot;;</span><br><span class="line"></span><br><span class="line">export default defineComponent(&#123;</span><br><span class="line">  name: &quot;HelloWorld&quot;,</span><br><span class="line">  emits: [&quot;update:title&quot;], // 显式的定义使用了哪些emits</span><br><span class="line">  props: &#123;</span><br><span class="line">    title: String, // v-model绑定值</span><br><span class="line">    titleModifiers: &#123;</span><br><span class="line">      // v-model绑定值对应的修饰符对象</span><br><span class="line">      type: Object,</span><br><span class="line">      default: () =&gt; (&#123;&#125;),</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  setup,</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped lang=&quot;scss&quot;&gt;</span><br><span class="line">// 使用script中的变量 color</span><br><span class="line">.person &#123;</span><br><span class="line">  color: v-bind(color);</span><br><span class="line">&#125;</span><br><span class="line">// 默认插槽加样式：无效</span><br><span class="line">.default-solt &#123;</span><br><span class="line">  color: slateblue !important;</span><br><span class="line">&#125;</span><br><span class="line">// 默认插槽加样式：有效</span><br><span class="line">:slotted(.default-solt) &#123;</span><br><span class="line">  color: slateblue !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// dialog的样式</span><br><span class="line">.modal &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  bottom: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  background-color: rgba(0, 0, 0, 0.5);</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  align-items: center;</span><br><span class="line">  justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line">.modal div &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  align-items: center;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  background-color: white;</span><br><span class="line">  width: 300px;</span><br><span class="line">  height: 300px;</span><br><span class="line">  padding: 5px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="setup-ts"><a href="#setup-ts" class="headerlink" title="setup.ts"></a>setup.ts</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;</span><br><span class="line">  ref, <span class="comment">// 用于简单数据类型  需要.value 访问</span></span><br><span class="line">  reactive, <span class="comment">// 用于复杂数据类型 不需要.value 就直接可以方法</span></span><br><span class="line">  toRefs, <span class="comment">// 用于给prop添加响应数据，需要.value 访问</span></span><br><span class="line">  watch,</span><br><span class="line">  computed,</span><br><span class="line">  onMounted,</span><br><span class="line">  onUnmounted,</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title function_">setup</span> = (<span class="params">props: <span class="built_in">any</span>, context: <span class="built_in">any</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Bowen: setup -&gt; props, context&quot;</span>, props, context);</span><br><span class="line">  <span class="comment">//============================================================================</span></span><br><span class="line">  <span class="comment">// prop</span></span><br><span class="line">  <span class="keyword">const</span> &#123; titleModifiers &#125; = <span class="title function_">toRefs</span>(props);</span><br><span class="line">  <span class="comment">//============================================================================</span></span><br><span class="line">  <span class="comment">// data</span></span><br><span class="line">  <span class="keyword">const</span> x = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> y = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> modalOpen = <span class="title function_">ref</span>(<span class="literal">false</span>);</span><br><span class="line">  <span class="keyword">const</span> count = <span class="title function_">ref</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">const</span> color = <span class="title function_">ref</span>(<span class="string">&quot;red&quot;</span>);</span><br><span class="line">  <span class="keyword">const</span> person = <span class="title function_">reactive</span>(&#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;Bowen&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">//============================================================================</span></span><br><span class="line">  <span class="comment">// computed</span></span><br><span class="line">  <span class="keyword">const</span> doubelCount = <span class="title function_">computed</span>(<span class="function">() =&gt;</span> count.<span class="property">value</span> * <span class="number">2</span>);</span><br><span class="line">  <span class="comment">//============================================================================</span></span><br><span class="line">  <span class="comment">// watch</span></span><br><span class="line">  <span class="title function_">watch</span>(count, <span class="function">(<span class="params">val</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Bowen: setup -&gt; val&quot;</span>, val);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">//============================================================================</span></span><br><span class="line">  <span class="comment">// methods</span></span><br><span class="line">  <span class="comment">// 判断 v-model 是否有 capitalize 标识符  转换大写</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleCapitalize</span> = (<span class="params">event: InputEvent</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> value = (event.<span class="property">target</span> <span class="keyword">as</span> <span class="title class_">HTMLInputElement</span>).<span class="property">value</span>;</span><br><span class="line">    <span class="keyword">if</span> (titleModifiers.<span class="property">value</span>.<span class="property">capitalize</span>) &#123;</span><br><span class="line">      value = value.<span class="title function_">toLocaleUpperCase</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    context.<span class="title function_">emit</span>(<span class="string">&quot;update:title&quot;</span>, value);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// 获取鼠标定位</span></span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">getMousePosition</span> = (<span class="params">e: MouseEvent</span>) =&gt; &#123;</span><br><span class="line">    x.<span class="property">value</span> = e.<span class="property">pageX</span>;</span><br><span class="line">    y.<span class="property">value</span> = e.<span class="property">pageY</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">//============================================================================</span></span><br><span class="line">  <span class="comment">// 生命周期</span></span><br><span class="line">  <span class="title function_">onMounted</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;mousemove&quot;</span>, getMousePosition);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="title function_">onUnmounted</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">removeEventListener</span>(<span class="string">&quot;mousemove&quot;</span>, getMousePosition);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    x,</span><br><span class="line">    y,</span><br><span class="line">    modalOpen,</span><br><span class="line">    count,</span><br><span class="line">    color,</span><br><span class="line">    person,</span><br><span class="line">    doubelCount,</span><br><span class="line">    handleCapitalize,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> setup;</span><br></pre></td></tr></table></figure>
+
+<h1 id="vue3-组件库"><a href="#vue3-组件库" class="headerlink" title="vue3 组件库"></a>vue3 组件库</h1><h2 id="element-puls"><a href="#element-puls" class="headerlink" title="element-puls"></a>element-puls</h2><p>elementUI 官方 bata 版 <a target="_blank" rel="noopener" href="https://github.com/element-plus/element-plus">https://github.com/element-plus/element-plus</a></p>
+
       
     </div>
 
@@ -643,7 +803,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -684,20 +844,13 @@
 <p>在实际工作中有时需要用到只定义文件后缀 ， 我最近遇到的项目需要定义.rule 文件 ，但语法类似 javascript，文件编辑起来很费劲，因为不带高亮和语法提示，每次修改文件后缀也麻烦 ，我需要的是.rule 文件，以 jjavascript 的方式让 vscode 解析提示和高亮；</p>
 </blockquote>
 <h2 id="修改设置"><a href="#修改设置" class="headerlink" title="修改设置"></a>修改设置</h2><p>首选项 -&gt; 设置 -&gt;文本编辑器 -&gt;文件</p>
-<p><img src="https://bitbw.top/public/img/my_gallery/image-20201224095242258.png" alt="image-20201224095242258"></p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20201224095242258.png" alt="image-20201224095242258"></p>
 <p>修改保存即可 ，语言要写全名 像<code>javascript </code>不要写成<code>js</code></p>
 <p>也可以直接编辑 setting</p>
-<h2 id="setting-修改"><a href="#setting-修改" class="headerlink" title="setting 修改"></a>setting 修改</h2><p><img src="https://bitbw.top/public/img/my_gallery/image-20201224095505868.png" alt="image-20201224095505868"></p>
+<h2 id="setting-修改"><a href="#setting-修改" class="headerlink" title="setting 修改"></a>setting 修改</h2><p><img data-src="https://bitbw.top/public/img/my_gallery/image-20201224095505868.png" alt="image-20201224095505868"></p>
 <p>json 中添加</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;files.associations&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;*.rule&quot;</span><span class="punctuation">:</span> <span class="string">&quot;javascript&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/24/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/vscode%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%A5%E4%BD%95%E7%A7%8D%E6%96%B9%E5%BC%8F%E9%AB%98%E4%BA%AE%E8%A7%A3%E6%9E%90/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
       
     </div>
 
@@ -759,7 +912,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -825,14 +978,20 @@
 
 <p>非 Excel 格式不支持”Very Hidden”状态。测试一个数据比哦啊是否可见的最好方式是检查是否<code>Hidden</code>属性为逻辑 truth：</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; wb<span class="selector-class">.Workbook</span><span class="selector-class">.Sheets</span><span class="selector-class">.map</span>(<span class="built_in">function</span>(x) &#123; return <span class="selector-attr">[x.name, !x.Hidden]</span> &#125;)</span><br><span class="line"><span class="selector-attr">[ [ <span class="string">&#x27;Visible&#x27;</span>, true ]</span>, <span class="selector-attr">[ <span class="string">&#x27;Hidden&#x27;</span>, false ]</span>, <span class="selector-attr">[ <span class="string">&#x27;VeryHidden&#x27;</span>, false ]</span> ]</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/13/XLSX/%E4%BD%BF%E7%94%A8xlsx-js-%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%B7%A5%E4%BD%9C%E7%B0%BF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<p>文档上对工作簿隐藏有说明，但是没有具体的隐藏方法，尝试直接修改工作簿的<code>Hidden</code>属性，没有任何效果， 但是皇天不负有心人， 通过查看 <a target="_blank" rel="noopener" href="https://github.com/SheetJS/sheetjs/blob/master/xlsx.js">源码</a> 发现了实现工作簿隐藏的方法</p>
+<h2 id="XLSX-utils-book-set-sheet-visibility-方法"><a href="#XLSX-utils-book-set-sheet-visibility-方法" class="headerlink" title="XLSX.utils.book_set_sheet_visibility 方法"></a>XLSX.utils.book_set_sheet_visibility 方法</h2><p>下面是源码中方法的定义</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* set sheet visibility (visible/hidden/very hidden) */</span></span><br><span class="line">utils.<span class="property">book_set_sheet_visibility</span> = <span class="keyword">function</span> (<span class="params">wb, sh, vis</span>) &#123;</span><br><span class="line">  <span class="title function_">get_default</span>(wb, <span class="string">&quot;Workbook&quot;</span>, &#123;&#125;);</span><br><span class="line">  <span class="title function_">get_default</span>(wb.<span class="property">Workbook</span>, <span class="string">&quot;Sheets&quot;</span>, []);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> idx = <span class="title function_">wb_sheet_idx</span>(wb, sh);</span><br><span class="line">  <span class="comment">// $FlowIgnore</span></span><br><span class="line">  <span class="title function_">get_default</span>(wb.<span class="property">Workbook</span>.<span class="property">Sheets</span>, idx, &#123;&#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">switch</span> (vis) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="attr">default</span>:</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;Bad sheet visibility setting &quot;</span> + vis);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// $FlowIgnore</span></span><br><span class="line">  wb.<span class="property">Workbook</span>.<span class="property">Sheets</span>[idx].<span class="property">Hidden</span> = vis;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>方法分别传入三个参数：</p>
+<ul>
+<li>工作表对象，</li>
+<li>工作簿在工作簿数组中的下标，</li>
+<li>需要设置的<code>Hidden</code>属性的值 （0，1，2）</li>
+</ul>
+<p>工作表对象生成方法见文档,下面用<code>workbook</code>表示，工作簿在工作簿数组中的下标，可以通过 workbook.SheetNames 找到对应的下标</p>
+<h2 id="具体实现："><a href="#具体实现：" class="headerlink" title="具体实现："></a>具体实现：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 隐藏采购员表   因为整个xlsx的使用是以class实现的这里截取隐藏工作表的方法</span></span><br><span class="line"><span class="title function_">hideBuyerSheet</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">let</span> indexs = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> [i,name] <span class="keyword">of</span> <span class="variable language_">this</span>.<span class="property">workbook</span>.<span class="property">SheetNames</span>.<span class="title function_">entries</span>()) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/采购员/</span>.<span class="title function_">test</span>(name))&#123; <span class="comment">//找到所有带采购员名称的表的下标</span></span><br><span class="line">      indexs.<span class="title function_">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> i <span class="keyword">of</span> indexs) &#123;</span><br><span class="line">     <span class="comment">// 将对应下标的工作簿隐藏</span></span><br><span class="line">    <span class="variable constant_">XLSX</span>.<span class="property">utils</span>.<span class="title function_">book_set_sheet_visibility</span>(<span class="variable language_">this</span>.<span class="property">workbook</span>, i, <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -894,7 +1053,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -940,14 +1099,125 @@
 
 <p>完成命令执行后，你会看到命令行界面出现了如下的几行<strong>重要</strong>的输出：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&gt; sqlite3@5.0.0 install D:\Projects\sqlite3-install-demo\node_modules\sqlite3</span><br><span class="line">&gt; node-pre-gyp install --fallback-to-build</span><br><span class="line"></span><br><span class="line">node-pre-gyp WARN Using request for node-pre-gyp https download</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/13/Nodejs/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<p>啪一下，很快啊！我们就迎来了第一个东西<code>node-pre-gyp</code>，但是提到了<code>node-pre-gyp</code>，我们不得不提及<code>node-gyp</code>，然后又不得不提及<code>gyp</code>。</p>
+<h2 id="gyp-与-node-gyp-与-node-pre-gyp"><a href="#gyp-与-node-gyp-与-node-pre-gyp" class="headerlink" title="gyp 与 node-gyp 与 node-pre-gyp"></a>gyp 与 node-gyp 与 node-pre-gyp</h2><h2 id="什么是-gyp？"><a href="#什么是-gyp？" class="headerlink" title="什么是 gyp？"></a>什么是 gyp？</h2><p>gyp 全称<code>Generate Your Projects</code>（构建你的项目）。wiki 的解释如下，自行翻译：</p>
+<blockquote>
+<p>GYP (generate your projects) is a build automation tool. GYP was created by Google to generate native IDE project files (such as Visual Studio Code and Xcode) for building the Chromium web browser and is licensed as open source software using the BSD software license.</p>
+</blockquote>
+<p>重点在于，它是一套用于生成原生 IDE 项目文件的自动化构建工具，处理 C&#x2F;C++项目，同类型的有 CMake、ninja 等自动构建工具。</p>
+<h2 id="什么是-node-gyp？"><a href="#什么是-node-gyp？" class="headerlink" title="什么是 node-gyp？"></a>什么是 node-gyp？</h2><p>直接给出<code>stackoverflow</code>高票回答：</p>
+<blockquote>
+<p><code>node-gyp</code> is a tool which compiles Node.js Addons. Node.js Addons are native Node.js Modules, written in C or C++, which therefore need to be compiled on your machine. After they are compiled with tools like node-gyp, their functionality can be accessed via <code>require()</code>, just as any other Node.js Module.</p>
+</blockquote>
+<p>简单来说，node 是跨平台的，那么对于任何的 node 模块理论也是应该是跨平台的。然而，有些 node 模块直接或间接使用原生 C&#x2F;C++代码，这些东西要跨平台，就需要使用源码根据实际的操作平台环境进行原生模块编译。那么我们需要下载源码文件，通过 node-gyp 生成一定结构的代码项目让我们能够<code>require</code>引入（譬如，Windows 下会生成<code>vcxproj</code>，再调用<code>MSBuild</code>进行编译，以生成 Windows 下的动态链接库，最后打包为一个原生 node 模块）。这个知乎回答的每一条可以看看：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/36291768">传送门</a>。</p>
+<h2 id="什么是-node-pre-gyp？"><a href="#什么是-node-pre-gyp？" class="headerlink" title="什么是 node-pre-gyp？"></a>什么是 node-pre-gyp？</h2><p>上面<code>node-gyp</code>固然相当方便了，但是每一次安装 node 原生模块的时候，都需要根据平台（Windows、Linux、macOS 以及对应的 x86、x64、arm64 等等）进行源码编译，这样做费时费力。为什么不一开始就针对这些平台编译好了做成二进制制品发布呢？反正一般来说主流的平台架构就那么一些（Windows、Linux、macOS）。所以<code>node-pre--gyp</code>就帮我们做了这件事。原生模块开发者将代码编译生成各个平台架构的二进制包直接发布到<code>node-pre-gyp</code>上，当我们的 node 项目安装原生模块时候。处理流程就是首先去<code>node-pre-gyp</code>上找有没有当前平台的组件包，有的话直接拉取使用，如果没有则进行原生编译。</p>
+<p><code>node-pre-gyp</code>一些<strong>重要参数</strong>（不全）：</p>
+<ul>
+<li><code>-C/--directory</code>: run the command in this directory</li>
+<li><code>--build-from-source</code>: build from source instead of using pre-built binary</li>
+<li><code>--fallback-to-build</code>: fallback to building from source if pre-built binary is not available</li>
+<li><code>--target=0.4.0</code>: Pass the target node or node-webkit version to compile against</li>
+<li><code>--target_arch=ia32</code>: Pass the target arch and override the host <code>arch</code>. Valid values are ‘ia32’,’x64’, or <code>arm</code>.</li>
+<li><code>--target_platform=win32</code>: Pass the target platform and override the host <code>platform</code>. Valid values are <code>linux</code>, <code>darwin</code>, <code>win32</code>, <code>sunos</code>, <code>freebsd</code>, <code>openbsd</code>, and <code>aix</code>.</li>
+</ul>
+<p>对于<code>--fallback-to-build</code>这个参数：如果二进制不可获取则直接从源码编译，即从<code>node-pre-gyp</code>又回到<code>node-gyp</code>。所以你才会在上文看到安装 sqlite3 的时候，会有<code>--fallback-to-build</code>。</p>
+<p>于是乎，当我们进行 node 原生模块安装的时候，一般会有如下的流程：</p>
+<ol>
+<li>针对当前平台架构优先考虑<code>node-pre-gyp</code>方式进行安装，但是为了防止无法获取针对对应平台编译好的二进制包（网络原因、暂时没有对应平台的二进制包），进入第 2 步；</li>
+<li>下载原生模块源码，然后使用<code>node-gyp</code>进行项目构建，得到与平台相关的源码项目文件（Windows 则生成<code>vcxproj</code>项目，Linux 下是<code>Makefile</code>）；在这个过程，<code>node-gyp</code>会使用<code>Python</code>进行自动化构建操作，这也是为什么有些朋友安装 node 原生模块的时候，会报错找不到<code>Python</code>。</li>
+<li>调用平台对应的编译工具进行编译。在 Windows 的环境下，<code>node-gyp</code>会查找本地的<code>MSBuild/CL</code>等编译工具，而这些编译工具又一般在<code>Visual Studio</code>安装的时候，也一并安装在了机器上。这就是为什么有些朋友没有安装<code>Visual Studio</code>的时候，会报错。</li>
+</ol>
+<h2 id="探索-SQLite3-的安装流程"><a href="#探索-SQLite3-的安装流程" class="headerlink" title="探索 SQLite3 的安装流程"></a>探索 SQLite3 的安装流程</h2><h2 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a><code>npm install</code></h2><p>为什么我们安装<code>sqlite3</code>的时候，会调用<code>node-pre-gyp</code>命令呢？进入<code>项目目录/node_modules/sqlite3/</code>文件夹，让我们查看一下<code>package.json</code>中的<code>scripts</code>部分：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;repository&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;git://github.com/mapbox/node-sqlite3.git&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;install&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node-pre-gyp install --fallback-to-build&quot;</span><span class="punctuation">,</span> <span class="comment">// install</span></span><br><span class="line">    <span class="attr">&quot;pack&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node-pre-gyp package&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;pretest&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node test/support/createdb.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;mocha -R spec --timeout 480000&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;5.0.0&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>答案显而易见了，<code>install</code>脚本中执行了<code>node-pre-gyp install --fallback-to-build</code>命令。</p>
+<p>这就不得不提到<code>npm</code>的安装流程是。当我们进行<code>npm install xxx</code>的时候，<code>npm</code>首先下载<code>xxx</code>的包。下载完成后，若<code>package.json</code>中的 scripts 中存在<code>install</code>属性，则会立刻调用。至于<code>scripts</code>中的其他固定脚本：<code>test</code>、<code>preinstall</code>、<code>postinstall</code>等等作用以及<code>scripts</code>的高级用法，请直接查阅<a href="https://link.zhihu.com/?target=https://docs.npmjs.com/cli/v6/using-npm/scripts">scripts | npm Docs (npmjs.com)</a>。</p>
+<p>所以本此<code>sqlite3</code><strong>前期</strong>安装的过程为：</p>
+<ol>
+<li><code>npm</code>下载在仓库中的<code>sqlite3</code>npm 包；</li>
+<li>执行<code>$&#123;your_projects&#125;/node_modules/sqlite3/package.json</code>中的<code>install</code>脚本，即<code>node-pre-gyp install --fallback-to-build</code></li>
+</ol>
+<p>于是乎，安装进入到了一个新的环节：<code>node-pre-gyp install</code>。当然，若你没有全局安装<code>node-pre-gyp</code>，它会由<code>npm</code>帮你安装到<code>$&#123;your_projects&#125;/node_modules/</code>中，并且通过<code>node-pre-gyp/package.json</code>中的<code>bin</code>元素，建立软连接到<code>$&#123;your_projects&#125;/node_modules/.bin</code>中。这样，<code>node\npm</code>环境中就有了<code>node-pre-gyp</code>命令可以使用。至于<code>package.json#bin</code>的作用，详细参考官方文档<a href="https://link.zhihu.com/?target=https://docs.npmjs.com/cli/v6/configuring-npm/package-json%23bin">package.json | npm Docs (npmjs.com)</a>。</p>
+<h2 id="node-pre-gyp-install"><a href="#node-pre-gyp-install" class="headerlink" title="node-pre-gyp install"></a><code>node-pre-gyp install</code></h2><p><code>node-pre-gyp</code>在上述的安装流程中，已经能够被我们在 CLI 中所使用。查看<code>node_modules/node-pre-gyp/bin/node-pre-gyp</code>文件（下文都将省略<code>$&#123;your_projects&#125;/</code>），用文本的形式打开。就是<code>node-pre-gyp</code>CLI 的执行过程，脚本中的主要内容为最后一行：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// start running the given commands!</span><br><span class="line">run();</span><br></pre></td></tr></table></figure>
+
+<p>检查该函数的定义：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">run</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> command = prog.<span class="property">todo</span>.<span class="title function_">shift</span>();</span><br><span class="line">  <span class="keyword">if</span> (!command) &#123;</span><br><span class="line">    <span class="comment">// done!</span></span><br><span class="line">    completed = <span class="literal">true</span>;</span><br><span class="line">    log.<span class="title function_">info</span>(<span class="string">&quot;ok&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  prog.<span class="property">commands</span>[command.<span class="property">name</span>](command.<span class="property">args</span>, <span class="keyword">function</span> (<span class="params">err</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      log.<span class="title function_">error</span>(command.<span class="property">name</span> + <span class="string">&quot; error&quot;</span>);</span><br><span class="line">      log.<span class="title function_">error</span>(<span class="string">&quot;stack&quot;</span>, err.<span class="property">stack</span>);</span><br><span class="line">      <span class="title function_">errorMessage</span>();</span><br><span class="line">      log.<span class="title function_">error</span>(<span class="string">&quot;not ok&quot;</span>);</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(err.<span class="property">message</span>);</span><br><span class="line">      <span class="keyword">return</span> process.<span class="title function_">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> args_array = [].<span class="property">slice</span>.<span class="title function_">call</span>(<span class="variable language_">arguments</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (args_array.<span class="property">length</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="property">log</span>.<span class="title function_">apply</span>(<span class="variable language_">console</span>, args_array);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// now run the next command in the queue</span></span><br><span class="line">    process.<span class="title function_">nextTick</span>(run);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>prog</code>是什么？该文件往上查看定义，原来是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> node_pre_gyp = <span class="built_in">require</span>(<span class="string">&quot;../&quot;</span>); <span class="comment">// 上一个目录作为模块引入</span></span><br><span class="line"><span class="keyword">var</span> log = <span class="built_in">require</span>(<span class="string">&quot;npmlog&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Process and execute the selected commands.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> prog = <span class="keyword">new</span> node_pre_gyp.<span class="title class_">Run</span>(); <span class="comment">// 来自于node_pre_gyp中的Run，而node_pre_gyp在上方</span></span><br></pre></td></tr></table></figure>
+
+<p>继续检查上一个目录，发现并没又<code>indes.js</code>文件，熟悉<code>npm</code>的朋友应该知道要去看<code>package.json</code>中的<code>main</code>元素了：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">    <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;BSD-3-Clause&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;./lib/node-pre-gyp.js&quot;</span><span class="punctuation">,</span> <span class="comment">// 模块是这个文件</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node-pre-gyp&quot;</span><span class="punctuation">,</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>查阅<code>lib/node-pre-gyp.js</code>代码中的 Run：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Run</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> self = <span class="variable language_">this</span>;</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">commands</span> = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  commands.<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">command</span>) &#123;</span><br><span class="line">    self.<span class="property">commands</span>[command] = <span class="keyword">function</span> (<span class="params">argv, callback</span>) &#123;</span><br><span class="line">      log.<span class="title function_">verbose</span>(<span class="string">&quot;command&quot;</span>, command, argv);</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">require</span>(<span class="string">&quot;./&quot;</span> + command)(self, argv, callback); <span class="comment">// 这里是核心</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>核心功能就是引入当前所在目录下的模块进行执行。例如，本次调用的是<code>node-pre-gyp install</code>，则会<code>require(./install)</code>，检查一下<code>node-pre-gyp.js</code>目录下，果然存在该<code>js</code>文件。继续阅读<code>install.js</code>源码。里面有几个函数的定义。咱们先不看内容，把函数名列举出来，猜测一下作用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 去下载平台编译好的二进制？</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">download</span>(<span class="params">uri,opts,callback</span>) &#123;...&#125;</span><br><span class="line"><span class="comment">// 把下载好的二进制放到对应目录？</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">place_binary</span>(<span class="params"><span class="keyword">from</span>,to,opts,callback</span>) &#123;...&#125;</span><br><span class="line"><span class="comment">// 进行构建。难道是没有下载，就调用node-gyp源码编译？</span></span><br><span class="line"><span class="comment">// 还有，node-pre-gyp又--fallback-to-build参数，也会调用这个？</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">do_build</span>(<span class="params">gyp,argv,callback</span>) &#123;...&#125;</span><br><span class="line"><span class="comment">// 打印回退出现的异常</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">print_fallback_error</span>(<span class="params">err,opts,package_json</span>) &#123;...&#125;</span><br><span class="line"><span class="comment">// 安装，核心没跑了</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">install</span>(<span class="params">gyp, argv, callback</span>) &#123;...&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先看<code>download</code>的调用点是在<code>place_binary</code>中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">place_binary</span>(<span class="params"><span class="keyword">from</span>,to,opts,callback</span>) &#123; <span class="comment">// place_binary函数</span></span><br><span class="line">    <span class="title function_">download</span>(<span class="keyword">from</span>,opts,<span class="keyword">function</span>(<span class="params">err,req</span>) &#123; <span class="comment">// 调用了download</span></span><br><span class="line">        <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="title function_">callback</span>(err);</span><br><span class="line">        <span class="keyword">if</span> (!req) <span class="keyword">return</span> <span class="title function_">callback</span>(<span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;empty req&quot;</span>));</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">        ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再看<code>place_binary</code>调用点是在<code>install</code>中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">install</span>(<span class="params">gyp, argv, callback</span>) &#123;</span><br><span class="line">  <span class="comment">// 省略部分...</span></span><br><span class="line">  <span class="keyword">var</span> should_do_source_build =</span><br><span class="line">    source_build === package_json.<span class="property">name</span> ||</span><br><span class="line">    source_build === <span class="literal">true</span> ||</span><br><span class="line">    source_build === <span class="string">&quot;true&quot;</span>;</span><br><span class="line">  <span class="keyword">if</span> (should_do_source_build) &#123;</span><br><span class="line">    <span class="comment">// 源码编译</span></span><br><span class="line">    log.<span class="title function_">info</span>(<span class="string">&quot;build&quot;</span>, <span class="string">&quot;requesting source compile&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">do_build</span>(gyp, argv, callback);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 省略部分...</span></span><br><span class="line">    <span class="title function_">mkdirp</span>(to, <span class="keyword">function</span> (<span class="params">err</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="title function_">after_place</span>(err);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="title function_">place_binary</span>(<span class="keyword">from</span>, to, opts, after_place); <span class="comment">// 调用点</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 省略部分...</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 省略部分...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过上述分析，整个大的处理流程如下：</p>
+<ol>
+<li>进入<code>install</code>函数</li>
+<li>检查是否需要<code>build-from-source</code>。是则进，入<code>do_build</code>分支，进行源码编译；否则进入步骤 3。</li>
+<li>检查是否启用<code>--fallback-to-build</code>参数，设定是否启用标志位。</li>
+<li>解析编译好的二进制文件的选项配置，譬如二进制文件存放地址，也就是通过请求下载对应二进制包的地址，以及各种各样参数。所以说，为什么下载很慢，我们后文会重点关注下载地址。</li>
+</ol>
+<h3 id="下载二进制包"><a href="#下载二进制包" class="headerlink" title="下载二进制包"></a>下载二进制包</h3><p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-42de3994e7c42468d24506ef1dbdbe49_720w-1607839552207.jpg" alt="img"></p>
+<p>根据流程，接下来我们进一步检查<code>versioning.js</code>文件，找到其中的<code>evaluate</code>函数，分析最后的<code>hosted_tarball</code>路径：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-1e4a760a3783229810e2a437e1330f37_720w-1607839554321.png" alt="img"></p>
+<p><code>hosted_tarball</code>路径主要分为两个部分：1、<code>hosted_path</code>；2、<code>package_name</code>。</p>
+<h3 id="hosted-path"><a href="#hosted-path" class="headerlink" title="hosted_path"></a>hosted_path</h3><p>经过源码分析来源路径为：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-9e93a984b0f0aeac5d8154f0aa1b387c_720w-1607839785926.jpg" alt="img"></p>
+<p>我们自底向上分析。</p>
+<p><code>host</code>变量取决于从环境变量中检查名称为<code>&#39;npm_config_&#39; + opts.module_name + &#39;_binary_host_mirror&#39;</code>的环境变量。如果不存在，则使用<code>package_json.binary.host</code>。正常使用的时候，我们并不会设定环境变量，所以这里就进入<code>package_json.binary</code>进行获取。这个<code>package_json</code>是<code>evaluate</code>函数被调用时候传入的，在<code>node-pre-gyp/install.js</code>中能够看到：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-2f28af0a80578001c17e86077832bc52_720w-1607839556588.jpg" alt="img"></p>
+<p>一开始分析的时候，看到这里，本人以为<code>package_json</code>就是<code>node-pre-gyp/package.json</code>，于是本人去检查该<code>json</code>发现很奇怪，并没有 binary 属性，更别提 host 了。一番思考才明白，<code>node-pre-gyp install</code>的运行时调用者是谁呀？不是应该是<code>sqlite3</code>吗？所以这个地方的<code>require(&#39;./package.json&#39;)</code>实际上是指代的是<code>sqlite3/package.json</code>。查看<code>sqlite3/package.json</code>，果然发现了对应的元素：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-9123803894e4e7ba0df2b7eebc3be8f9_720w-1607839558202.jpg" alt="img"></p>
+<p>在<code>binary</code>属性中，我们还能看到<code>remote_path</code>也在其中。</p>
+<p>至此，<code>hosted_path</code>我们完成了简单的分析，我们可以得出一个结论：</p>
+<p><strong><code>node-pre-gyp</code>下载二进制文件的路径，优先来源于对应模块的镜像地址，该镜像地址通过配置<code>&#39;npm_config_&#39; + 模块名 + &#39;_binary_host_mirror&#39;</code>来实现自定义；在没有定义镜像地址的情况下，读取模块<code>package.json</code>中的 binary 属性信息。</strong></p>
+<p>当然，读者可以根据具体情况再进一步分析源码。</p>
+<h3 id="package-name"><a href="#package-name" class="headerlink" title="package_name"></a>package_name</h3><p>其实，对于<code>hosted_path</code>的分析，我们也容易分析<code>package_name</code>了。</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-66d92db546da24a98f6459e09d28611a_720w-1607839560356.jpg" alt="img"></p>
+<p>自底向上分析，来自于<code>sqlite3/package.json</code>中<code>binary</code>属性中的<code>package_name</code>，内容见上图分析<code>host</code>。</p>
+<h3 id="失败处理"><a href="#失败处理" class="headerlink" title="失败处理"></a>失败处理</h3><p><code>--fallback-to-build</code>参数表明了是否进行失败后下载源码进行编译，源码不再分析。</p>
+<h3 id="从源码构建"><a href="#从源码构建" class="headerlink" title="从源码构建"></a>从源码构建</h3><h3 id="build-js"><a href="#build-js" class="headerlink" title="build.js"></a>build.js</h3><p>当我们提供了参数<code>--build-from-source</code>或是在下载编译好的二进制到本地出错的时提供了参数<code>--fallback-to-build</code>。node-pre-gyp 将进入<code>do_build</code>模块，进行源码编译。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function do_build(gyp,argv,callback) &#123;</span><br><span class="line">  var args = [&#x27;rebuild&#x27;].concat(argv);</span><br><span class="line">  gyp.todo.push( &#123; name: &#x27;build&#x27;, args: args &#125; );</span><br><span class="line">  process.nextTick(callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码中，<code>gyp</code>由调用 install 的时候，传入：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-62190c9f9976e3b3a7d7633d33129e85_720w-1607839562977.jpg" alt="img"></p>
+<p>那么我们又将回到调用 install 的地方。实际上，gyp 就是 node-pre-gyp.js 导出的模块：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-e940f9f30e0b68edeb98aa34709263e0_720w-1607839564901.jpg" alt="img"></p>
+<p>也就是说在<code>do_build</code>中进行操作就是，放置了一个<code>build</code>任务在队列中。所以我们按照先前的分析，直接去看<code>build.js</code></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-c60cc43b95c212ee80dff2bb461597a2_720w-1607839566493.jpg" alt="img"></p>
+<p>看源码调用了当前模块中的<code>do_build</code>，且其中最核心的就是<code>compile</code>模块：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-2f5857952a2e181a620ca9183fd5e76d_720w-1607839567958.jpg" alt="img"></p>
+<h3 id="util-x2F-compile-js"><a href="#util-x2F-compile-js" class="headerlink" title="util&#x2F;compile.js"></a>util&#x2F;compile.js</h3><p>进入 compile 模块，直接找到对应的<code>run_gyp</code>函数，代码很短，不难看出进行构建调用了<code>node-gyp</code></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-97c9d95fdb3ea2d7c9e55a7311377fc3_720w-1607839569753.jpg" alt="img"></p>
+<p>上述代码，会先考略<code>node-webkit</code>构建。但是我们核心的还是使用<code>node-gyp</code>，所以 else 中，会进行<code>node-gyp</code>的工具的检查工作。最后调用命令行执行<code>node-gyp</code>。于是，node 原生模块的安装工作，进入了新的阶段：<code>node-gyp</code>。</p>
+<h2 id="node-gyp-build"><a href="#node-gyp-build" class="headerlink" title="node-gyp build"></a><code>node-gyp build</code></h2><p>上文提到我们已经进入了<code>node-gyp</code>的范畴，会调用<code>node-gyp build</code>操作。当然，这个命令同样是在安装<code>node-gyp</code>依赖的时候已经完成了安装，并且进行<code>node_modules/.bin/</code>软连接操作。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">  <span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;node-gyp&quot;</span>: <span class="string">&quot;bin/node-gyp.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<p>我们进入该<code>js</code>进行分析</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-8b31e792c069648f4518bd2bf4de384c_720w-1607839571435.jpg" alt="img"></p>
+<p>实际上，<code>node-gyp</code>这段的命令行代码，和<code>node-pre-gyp</code>非常相似！所以我们也不去深入分析调用命令行了。直接在 lib 文件夹下面的<code>build.js</code>。在该<code>js</code>中，核心的方法为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">build</span> (gyp, argv, callback) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在该方法中，还编写了几个<strong>内部函数</strong>，作为了功能的划分：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// function build (gyp, argv, callback) 内部函数</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Load the &quot;config.gypi&quot; file that was generated during &quot;configure&quot;.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">loadConfigGypi</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * On Windows, find the first build/*.sln file.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">findSolutionFile</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Uses node-which to locate the msbuild / make executable.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">doWhich</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Search for the location of &quot;msbuild.exe&quot; file on Windows.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">findMsbuild</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Actually spawn the process and compile the module.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">doBuild</span> () &#123;...&#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Invoked after the make/msbuild command exits.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">onExit</span> (code, signal) &#123;...&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不得不说，<code>build</code>写的真心不错，看起来很舒服。这里为了方便读者快速阅读，我整理这些函数的调用图：</p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-bf94b9960c86eaf29b542f860b3d4ab1_720w-1607839573628.jpg" alt="img"></p>
+<p>整个调用流程图个人认为足够进行安装的时候的一场分析了。至于每个内部函数的功能，有空继续更新本文吧。</p>
+
       
     </div>
 
@@ -1009,7 +1279,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1048,22 +1318,17 @@
     <div class="post-body" itemprop="articleBody">
           <p>背景：使用 electron-builder 和 @journeyapps&#x2F;sqlcipher 的项目 ，在新电脑上 clone 项目，npm 装包时遇到错误</p>
 <p>一般 electron-builder 的项目下完包的最后，会调用 electron-builder install-app-deps 命令重新构建本地依赖</p>
-<p><img src="https://bitbw.top/public/img/my_gallery/image-20201213113529472-1607837076092-1607839721753.png" alt="image-20201213112431054"></p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20201213113529472-1607837076092-1607839721753.png" alt="image-20201213112431054"></p>
 <p>换了电脑后就是在这里卡住，卡住几个小时都不动，也不报错，无奈尝试遍各种方法都不行，比如卸载 node 重新安装，卸载 python 和 visual studio,修改 npm 配置改为淘宝镜像地址，使用 yarn，cnpm 安装，都是不行，百度上也没有对应的案例，就差祈祷了，感觉每次 npm 下包都是看运气，哎，还是经验少啊。</p>
 <p>最后因为是卡在@journeyapps&#x2F;sqlcipher 这个 sqlite 加密版插件上，于是 package.json 中提高了@journeyapps&#x2F;sqlcipher 的版本改成 5.0.0 最新版本，并改用 cnpm 正经淘宝镜像来安装， 发现可以正常编译 ，最后的 electron-builder install-app-deps 也过去了，但是运行项目的时候却 报错说缺编译@journeyapps&#x2F;sqlcipher 的 builder 模块，说明 electron-builder install-app-deps 没成功啊，继续找原因，灵光一闪看到：</p>
-<p><img src="https://bitbw.top/public/img/my_gallery/image-20201213112431054-1607837073833-1607839720074.png" alt="image-20201213113529472"></p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20201213112431054-1607837073833-1607839720074.png" alt="image-20201213113529472"></p>
 <p>node-pre-gyp，可以将存在网络上的作者根据不同平台预编译好的二进制文件下载下来</p>
 <p>关于 gyp 与 node-gyp 与 node-pre-gyp 可以看这篇文章<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/330468774">https://zhuanlan.zhihu.com/p/330468774</a></p>
 <p>原来 这个包的时候先去·<code> https://journeyapps-node-binary.s3.amazonaws.com/@journeyapps/sqlcipher/v4.1.0/node-v83-win32-x64.tar.gz</code> 找对应系统的对应 node 版本的二进制文件， 如果没有就会下载源码进行编译，之前在 linux 上下载这个包就出现过这个问题，</p>
 <p>node-v83 表示当前 node 的 NODE_MODULE_VERSION <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/releases/">官网</a>可以查到,因为是新电脑所以下的是 node 的最新版本 14，还是太年轻啊，以为最新的就是最好的，不知道好多插件都没有最新 node 版本的二进制文件，通过 <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors?spm=a2c6h.14029880.0.0.735975d7WMqyIm">淘宝镜像</a> （一般淘宝镜像上有的就一定是有了）看到最新的包是<code>node-v72-win32-x64.tar.gz </code>,也就是 node 的 12 版本，果断卸载 14 安装 12 。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/13/Electron/%E8%BF%90%E8%A1%8Celectron-builder-install-app-deps-%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20201213115738432-1607837078098-1607839723068.png" alt="image-20201213115738432"></p>
+<p>最后试了几次之后终于重新构建本地依赖成功</p>
+
       
     </div>
 
@@ -1125,7 +1390,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1178,14 +1443,49 @@
 <p>解压文件的 bin 目录底下包含了 node、npm 等命令（npm 全局安装的包），我们可以修改 linux 系统的环境变量（profile）来设置直接运行命令：</p>
 <p><strong>老规矩先备份，养成修改重要文件之前先备份的好习惯。</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /etc/profile /etc/profile.bak</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/13/Nodejs/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Nodejs/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<blockquote>
+<p>&#x2F;etc&#x2F;profile 文件介绍： <a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaoshuxiaoshu/p/4689447.html">https://www.cnblogs.com/xiaoshuxiaoshu/p/4689447.html</a></p>
+</blockquote>
+<p>然后 vim &#x2F;etc&#x2F;profile，在最下面添加 export PATH&#x3D;$PATH: 后面跟上 node 下 bin 目录的路径</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export NODE_HOME=/root/node-v12.18.1-linux-x64 export PATH=NODE_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<p>如果 profile 不可修改 添加可写权</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">chmod</span>  a=rw  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>立即生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>检查是否生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">env</span></span><br></pre></td></tr></table></figure>
+
+<p>建立软连接 （报已经存在错误： 先删除目标目录下的文件在操作）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /root/node-v12.18.1-linux-x64/bin/node /usr/local/bin/node</span><br><span class="line"><span class="built_in">ln</span> -s /root/node-v12.18.1-linux-x64/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
+
+<p>添加 sudo （报已经存在错误： 先删除目标目录下的文件在操作）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">ln</span> -s /root/node-v12.18.1-linux-x64/bin/node  /usr/bin/node</span><br><span class="line">sudo <span class="built_in">ln</span> -s /root/node-v12.18.1-linux-x64/lib/node  /usr/lib/node</span><br><span class="line">sudo <span class="built_in">ln</span> -s /root/node-v12.18.1-linux-x64/bin/npm  /usr/bin/npm</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># node -v</span></span><br><span class="line">v12.18.1</span><br></pre></td></tr></table></figure>
+
+<p>OK！安装成功！</p>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>用上面步骤安装后可以直接删除 node-v12.18.1-linux-x64 文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /root/node-v12.18.1-linux-x64</span><br></pre></td></tr></table></figure>
+
+<p>进入 &#x2F;usr&#x2F;local&#x2F;lib 删除所有 node 和 node_modules 文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /usr/lib/node  /usr/lib/node_modules</span><br></pre></td></tr></table></figure>
+
+<p>进入 &#x2F;usr&#x2F;local&#x2F;include 删除所有 node 和 node_modules 文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /usr/local/include/node  /usr/local/include/node_modules</span><br></pre></td></tr></table></figure>
+
+<p>进入 &#x2F;usr&#x2F;local&#x2F;bin 删除 node 的可执行文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /usr/local/bin/node</span><br></pre></td></tr></table></figure>
+
+<p>接着找到上面建立的软连接 依次删除即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /usr/bin/npm</span><br></pre></td></tr></table></figure>
+
+<p>卸载完成！</p>
+<p>现在如果需要其他版本的 node ，就可以按上面的步骤从新安装一个其他版本的 node 了</p>
+
       
     </div>
 
@@ -1247,7 +1547,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1298,14 +1598,7 @@
 <p>ps: 使用 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/48185ef12fbf">nvm</a> 可以自如的切换 node 版本</p>
 <h3 id="设置国内镜像源"><a href="#设置国内镜像源" class="headerlink" title="设置国内镜像源"></a>设置国内镜像源</h3><p>cnpm 安装：<a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/NPM?from=tnpm">https://developer.aliyun.com/mirror/NPM?from=tnpm</a></p>
 <p>设置 npm 下包地址 ： <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40920953/article/details/86547291">https://blog.csdn.net/weixin_40920953/article/details/86547291</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/12/Nodejs/npm-%E4%B8%8B%E5%8C%85%E9%97%AE%E9%A2%98/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
       
     </div>
 
@@ -1367,7 +1660,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1412,14 +1705,204 @@
 <p>ASCII 码一共规定了 128 个字符的编码，比如空格<code>SPACE</code>是 32（二进制<code>00100000</code>），大写的字母<code>A</code>是 65（二进制<code>01000001</code>）。这 128 个符号（包括 32 个不能打印出来的控制符号），只占用了一个字节的后面 7 位，最前面的一位统一规定为<code>0</code>。</p>
 <h2 id="二、非-ASCII-编码"><a href="#二、非-ASCII-编码" class="headerlink" title="二、非 ASCII 编码"></a><strong>二、非 ASCII 编码</strong></h2><p>英语用 128 个符号编码就够了，但是用来表示其他语言，128 个符号是不够的。比如，在法语中，字母上方有注音符号，它就无法用 ASCII 码表示。于是，一些欧洲国家就决定，利用字节中闲置的最高位编入新的符号。比如，法语中的<code>é</code>的编码为 130（二进制<code>10000010</code>）。这样一来，这些欧洲国家使用的编码体系，可以表示最多 256 个符号。</p>
 <p>但是，这里又出现了新的问题。不同的国家有不同的字母，因此，哪怕它们都使用 256 个符号的编码方式，代表的字母却不一样。比如，130 在法语编码中代表了<code>é</code>，在希伯来语编码中却代表了字母<code>Gimel</code> (<code>ג</code>)，在俄语编码中又会代表另一个符号。但是不管怎样，所有这些编码方式中，0–127 表示的符号是一样的，不一样的只是 128–255 的这一段。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p>至于亚洲国家的文字，使用的符号就更多了，汉字就多达 10 万左右。一个字节只能表示 256 种符号，肯定是不够的，就必须使用多个字节表达一个符号。比如，简体中文常见的编码方式是 GB2312，使用两个字节表示一个汉字，所以理论上最多可以表示 256 x 256 &#x3D; 65536 个符号。</p>
+<p>中文编码的问题需要专文讨论，这篇笔记不涉及。这里只指出，虽然都是用多个字节表示一个符号，但是 GB 类的汉字编码与后文的 Unicode 和 UTF-8 是毫无关系的。</p>
+<h2 id="三-Unicode"><a href="#三-Unicode" class="headerlink" title="三. Unicode"></a><strong>三. Unicode</strong></h2><p>正如上一节所说，世界上存在着多种编码方式，同一个二进制数字可以被解释成不同的符号。因此，要想打开一个文本文件，就必须知道它的编码方式，否则用错误的编码方式解读，就会出现乱码。为什么电子邮件常常出现乱码？就是因为发信人和收信人使用的编码方式不一样。</p>
+<p>可以想象，如果有一种编码，将世界上所有的符号都纳入其中。每一个符号都给予一个独一无二的编码，那么乱码问题就会消失。这就是 Unicode，就像它的名字都表示的，这是一种所有符号的编码。</p>
+<p>Unicode 当然是一个很大的集合，现在的规模可以容纳 100 多万个符号。每个符号的编码都不一样，比如，<code>U+0639</code>表示阿拉伯字母<code>Ain</code>，<code>U+0041</code>表示英语的大写字母<code>A</code>，<code>U+4E25</code>表示汉字<code>严</code>。具体的符号对应表，可以查询<a target="_blank" rel="noopener" href="http://www.unicode.org/">unicode.org</a>，或者专门的<a target="_blank" rel="noopener" href="http://www.chi2ko.com/tool/CJK.htm">汉字对应表</a>。</p>
+<h2 id="四、Unicode-的问题"><a href="#四、Unicode-的问题" class="headerlink" title="四、Unicode 的问题"></a><strong>四、Unicode 的问题</strong></h2><p>需要注意的是，Unicode 只是一个符号集，它只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储。</p>
+<p>比如，汉字<code>严</code>的 Unicode 是十六进制数<code>4E25</code>，转换成二进制数足足有 15 位（<code>100111000100101</code>），也就是说，这个符号的表示至少需要 2 个字节。表示其他更大的符号，可能需要 3 个字节或者 4 个字节，甚至更多。</p>
+<p>这里就有两个严重的问题，第一个问题是，如何才能区别 Unicode 和 ASCII ？计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢？第二个问题是，我们已经知道，英文字母只用一个字节表示就够了，如果 Unicode 统一规定，每个符号用三个或四个字节表示，那么每个英文字母前都必然有二到三个字节是<code>0</code>，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍，这是无法接受的。</p>
+<p>它们造成的结果是：1）出现了 Unicode 的多种存储方式，也就是说有许多种不同的二进制格式，可以用来表示 Unicode。2）Unicode 在很长一段时间内无法推广，直到互联网的出现。</p>
+<h2 id="五、UTF-8"><a href="#五、UTF-8" class="headerlink" title="五、UTF-8"></a><strong>五、UTF-8</strong></h2><p>互联网的普及，强烈要求出现一种统一的编码方式。UTF-8 就是在互联网上使用最广的一种 Unicode 的实现方式。其他实现方式还包括 UTF-16（字符用两个字节或四个字节表示）和 UTF-32（字符用四个字节表示），不过在互联网上基本不用。<strong>重复一遍，这里的关系是，UTF-8 是 Unicode 的实现方式之一。</strong></p>
+<p>UTF-8 最大的一个特点，就是它是一种变长的编码方式。它可以使用 1~4 个字节表示一个符号，根据不同的符号而变化字节长度。</p>
+<p>UTF-8 的编码规则很简单，只有二条：</p>
+<p>1）对于单字节的符号，字节的第一位设为<code>0</code>，后面 7 位为这个符号的 Unicode 码。因此对于英语字母，UTF-8 编码和 ASCII 码是相同的。</p>
+<p>2）对于<code>n</code>字节的符号（<code>n &gt; 1</code>），第一个字节的前<code>n</code>位都设为<code>1</code>，第<code>n + 1</code>位设为<code>0</code>，后面字节的前两位一律设为<code>10</code>。剩下的没有提及的二进制位，全部为这个符号的 Unicode 码。</p>
+<p>下表总结了编码规则，字母<code>x</code>表示可用编码的位。</p>
+<blockquote>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Unicode符号范围     |        UTF-8编码方式</span><br><span class="line"><span class="section">(十六进制)        |              （二进制）</span></span><br><span class="line"><span class="section">----------------------+---------------------------------------------</span></span><br><span class="line">0000 0000-0000 007F | 0xxxxxxx</span><br><span class="line">0000 0080-0000 07FF | 110xxxxx 10xxxxxx</span><br><span class="line">0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx</span><br><span class="line">0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>跟据上表，解读 UTF-8 编码非常简单。如果一个字节的第一位是<code>0</code>，则这个字节单独就是一个字符；如果第一位是<code>1</code>，则连续有多少个<code>1</code>，就表示当前字符占用多少个字节。</p>
+<p>下面，还是以汉字<code>严</code>为例，演示如何实现 UTF-8 编码。</p>
+<p><code>严</code>的 Unicode 是<code>4E25</code>（<code>100111000100101</code>），根据上表，可以发现<code>4E25</code>处在第三行的范围内（<code>0000 0800 - 0000 FFFF</code>），因此<code>严</code>的 UTF-8 编码需要三个字节，即格式是<code>1110xxxx 10xxxxxx 10xxxxxx</code>。然后，从<code>严</code>的最后一个二进制位开始，依次从后向前填入格式中的<code>x</code>，多出的位补<code>0</code>。这样就得到了，<code>严</code>的 UTF-8 编码是<code>11100100 10111000 10100101</code>，转换成十六进制就是<code>E4B8A5</code>。</p>
+<h2 id="六、Unicode-与-UTF-8-之间的转换"><a href="#六、Unicode-与-UTF-8-之间的转换" class="headerlink" title="六、Unicode 与 UTF-8 之间的转换"></a><strong>六、Unicode 与 UTF-8 之间的转换</strong></h2><p>通过上一节的例子，可以看到<code>严</code>的 Unicode 码 是<code>4E25</code>，UTF-8 编码是<code>E4B8A5</code>，两者是不一样的。它们之间的转换可以通过程序实现。</p>
+<p>Windows 平台，有一个最简单的转化方法，就是使用内置的记事本小程序<code>notepad.exe</code>。打开文件后，点击<code>文件</code>菜单中的<code>另存为</code>命令，会跳出一个对话框，在最底部有一个<code>编码</code>的下拉条。</p>
+<p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2007/10/bg2007102801.jpg"><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2007102801-thumb-1607839331264.jpg" alt="bg2007102801.jpg"></a></p>
+<p>里面有四个选项：<code>ANSI</code>，<code>Unicode</code>，<code>Unicode big endian</code>和<code>UTF-8</code>。</p>
+<p>1）<code>ANSI</code>是默认的编码方式。对于英文文件是<code>ASCII</code>编码，对于简体中文文件是<code>GB2312</code>编码（只针对 Windows 简体中文版，如果是繁体中文版会采用 Big5 码）。</p>
+<p>2）<code>Unicode</code>编码这里指的是<code>notepad.exe</code>使用的 UCS-2 编码方式，即直接用两个字节存入字符的 Unicode 码，这个选项用的 little endian 格式。</p>
+<p>3）<code>Unicode big endian</code>编码与上一个选项相对应。我在下一节会解释 little endian 和 big endian 的涵义。</p>
+<p>4）<code>UTF-8</code>编码，也就是上一节谈到的编码方法。</p>
+<p>选择完”编码方式”后，点击”保存”按钮，文件的编码方式就立刻转换好了。</p>
+<h2 id="七、Little-endian-和-Big-endian"><a href="#七、Little-endian-和-Big-endian" class="headerlink" title="七、Little endian 和 Big endian"></a><strong>七、Little endian 和 Big endian</strong></h2><p>上一节已经提到，UCS-2 格式可以存储 Unicode 码（码点不超过<code>0xFFFF</code>）。以汉字<code>严</code>为例，Unicode 码是<code>4E25</code>，需要用两个字节存储，一个字节是<code>4E</code>，另一个字节是<code>25</code>。存储的时候，<code>4E</code>在前，<code>25</code>在后，这就是 Big endian 方式；<code>25</code>在前，<code>4E</code>在后，这是 Little endian 方式。</p>
+<p>这两个古怪的名称来自英国作家斯威夫特的《格列佛游记》。在该书中，小人国里爆发了内战，战争起因是人们争论，吃鸡蛋时究竟是从大头(Big-endian)敲开还是从小头(Little-endian)敲开。为了这件事情，前后爆发了六次战争，一个皇帝送了命，另一个皇帝丢了王位。</p>
+<p>第一个字节在前，就是”大头方式”（Big endian），第二个字节在前就是”小头方式”（Little endian）。</p>
+<p>那么很自然的，就会出现一个问题：计算机怎么知道某一个文件到底采用哪一种方式编码？</p>
+<p>Unicode 规范定义，每一个文件的最前面分别加入一个表示编码顺序的字符，这个字符的名字叫做”零宽度非换行空格”（zero width no-break space），用<code>FEFF</code>表示。这正好是两个字节，而且<code>FF</code>比<code>FE</code>大<code>1</code>。</p>
+<p>如果一个文本文件的头两个字节是<code>FE FF</code>，就表示该文件采用大头方式；如果头两个字节是<code>FF FE</code>，就表示该文件采用小头方式。</p>
+<h2 id="八、实例"><a href="#八、实例" class="headerlink" title="八、实例"></a><strong>八、实例</strong></h2><p>下面，举一个实例。</p>
+<p>打开”记事本”程序<code>notepad.exe</code>，新建一个文本文件，内容就是一个<code>严</code>字，依次采用<code>ANSI</code>，<code>Unicode</code>，<code>Unicode big endian</code>和<code>UTF-8</code>编码方式保存。</p>
+<p>然后，用文本编辑软件<a target="_blank" rel="noopener" href="http://www.google.cn/search?aq=t&oq=UltraEdit&complete=1&hl=zh-CN&newwindow=1&rlz=1B3GGGL_zh-CNCN216CN216&q=ultraedit+%E4%B8%8B%E8%BD%BD&btnG=Google+%E6%90%9C%E7%B4%A2&meta=">UltraEdit 中</a>的”十六进制功能”，观察该文件的内部编码方式。</p>
+<p>1）ANSI：文件的编码就是两个字节<code>D1 CF</code>，这正是<code>严</code>的 GB2312 编码，这也暗示 GB2312 是采用大头方式存储的。</p>
+<p>2）Unicode：编码是四个字节<code>FF FE 25 4E</code>，其中<code>FF FE</code>表明是小头方式存储，真正的编码是<code>4E25</code>。</p>
+<p>3）Unicode big endian：编码是四个字节<code>FE FF 4E 25</code>，其中<code>FE FF</code>表明是大头方式存储。</p>
+<p>4）UTF-8：编码是六个字节<code>EF BB BF E4 B8 A5</code>，前三个字节<code>EF BB BF</code>表示这是 UTF-8 编码，后三个<code>E4B8A5</code>就是<code>严</code>的具体编码，它的存储顺序与编码顺序是一致的。</p>
+<h1 id="Unicode-与-JavaScript-详解"><a href="#Unicode-与-JavaScript-详解" class="headerlink" title="Unicode 与 JavaScript 详解"></a>Unicode 与 JavaScript 详解</h1><h2 id="一、Unicode-是什么？"><a href="#一、Unicode-是什么？" class="headerlink" title="一、Unicode 是什么？"></a>一、Unicode 是什么？</h2><p>Unicode 源于一个很简单的想法：将全世界所有的字符包含在一个集合里，计算机只要支持这一个字符集，就能显示所有的字符，再也不会有乱码了。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121103-1607839343682.jpg" alt="img"></p>
+<p><strong>它从 0 开始，为每个符号指定一个编号，这叫做”码点”（code point）。</strong>比如，码点 0 的符号就是 null（表示所有二进制位都是 0）。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">U+<span class="number">0000</span> = <span class="literal">null</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>上式中，U+表示紧跟在后面的十六进制数是 Unicode 的码点。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121115-1607839347082.png" alt="img"></p>
+<p>目前，Unicode 的最新版本是 7.0 版，一共收入了 109449 个符号，其中的中日韩文字为 74500 个。可以近似认为，全世界现有的符号当中，三分之二以上来自东亚文字。比如，中文”好”的码点是十六进制的 597D。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">U+597D = 好</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这么多符号，Unicode 不是一次性定义的，而是分区定义。每个区可以存放 65536 个（216）字符，称为一个平面（plane）。目前，一共有 17 个（25）平面，也就是说，整个 Unicode 字符集的大小现在是 221。</p>
+<p>最前面的 65536 个字符位，称为基本平面（缩写 BMP），它的码点范围是从 0 一直到 216-1，写成 16 进制就是从 U+0000 到 U+FFFF。所有最常见的字符都放在这个平面，这是 Unicode 最先定义和公布的一个平面。</p>
+<p>剩下的字符都放在辅助平面（缩写 SMP），码点范围从 U+010000 一直到 U+10FFFF。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121104-1607839349198.png" alt="img"></p>
+<h2 id="二、UTF-32-与-UTF-8"><a href="#二、UTF-32-与-UTF-8" class="headerlink" title="二、UTF-32 与 UTF-8"></a>二、UTF-32 与 UTF-8</h2><p>Unicode 只规定了每个字符的码点，到底用什么样的字节序表示这个码点，就涉及到编码方法。</p>
+<p><strong>最直观的编码方法是，每个码点使用四个字节表示，字节内容一一对应码点。这种编码方法就叫做 UTF-32。</strong>比如，码点 0 就用四个字节的 0 表示，码点 597D 就在前面加两个字节的 0。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">U+<span class="number">0000</span> = <span class="number">0x0000</span> <span class="number">0000</span></span><br><span class="line"></span><br><span class="line">U+597D = <span class="number">0x0000</span> 597D</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121116-1607839351292.png" alt="img"></p>
+<p>UTF-32 的优点在于，转换规则简单直观，查找效率高。缺点在于浪费空间，同样内容的英语文本，它会比 ASCII 编码大四倍。这个缺点很致命，导致实际上没有人使用这种编码方法，HTML 5 标准就明文规定，网页不得编码成 UTF-32。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121105-1607839353048.png" alt="img"></p>
+<p>人们真正需要的是一种节省空间的编码方法，这导致了 UTF-8 的诞生。<strong>UTF-8 是一种变长的编码方法，字符长度从 1 个字节到 4 个字节不等。</strong>越是常用的字符，字节越短，最前面的 128 个字符，只使用 1 个字节表示，与 ASCII 码完全相同。</p>
+<table>
+<thead>
+<tr>
+<th>编号范围</th>
+<th>字节</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0x0000 - 0x007F</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0x0080 - 0x07FF</td>
+<td>2</td>
+</tr>
+<tr>
+<td>0x0800 - 0xFFFF</td>
+<td>3</td>
+</tr>
+<tr>
+<td>0x010000 - 0x10FFFF</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p>由于 UTF-8 这种节省空间的特性，导致它成为互联网上最常见的网页编码。不过，它跟今天的主题关系不大，我就不深入了，具体的转码方法，可以参考我多年前写的<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html">《字符编码笔记》</a>。</p>
+<h2 id="三、UTF-16-简介"><a href="#三、UTF-16-简介" class="headerlink" title="三、UTF-16 简介"></a>三、UTF-16 简介</h2><p>UTF-16 编码介于 UTF-32 与 UTF-8 之间，同时结合了定长和变长两种编码方法的特点。</p>
+<p>它的编码规则很简单：基本平面的字符占用 2 个字节，辅助平面的字符占用 4 个字节。<strong>也就是说，UTF-16 的编码长度要么是 2 个字节（U+0000 到 U+FFFF），要么是 4 个字节（U+010000 到 U+10FFFF）。</strong></p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121106-1607839355304.png" alt="img"></p>
+<p>于是就有一个问题，当我们遇到两个字节，怎么看出它本身是一个字符，还是需要跟其他两个字节放在一起解读？</p>
+<p>说来很巧妙，我也不知道是不是故意的设计，在基本平面内，从 U+D800 到 U+DFFF 是一个空段，即这些码点不对应任何字符。因此，这个空段可以用来映射辅助平面的字符。</p>
+<p>具体来说，辅助平面的字符位共有 220 个，也就是说，对应这些字符至少需要 20 个二进制位。UTF-16 将这 20 位拆成两半，前 10 位映射在 U+D800 到 U+DBFF（空间大小 210），称为高位（H），后 10 位映射在 U+DC00 到 U+DFFF（空间大小 210），称为低位（L）。这意味着，一个辅助平面的字符，被拆成两个基本平面的字符表示。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121117-1607839357568.png" alt="img"></p>
+<p><strong>所以，当我们遇到两个字节，发现它的码点在 U+D800 到 U+DBFF 之间，就可以断定，紧跟在后面的两个字节的码点，应该在 U+DC00 到 U+DFFF 之间，这四个字节必须放在一起解读。</strong></p>
+<h2 id="四、UTF-16-的转码公式"><a href="#四、UTF-16-的转码公式" class="headerlink" title="四、UTF-16 的转码公式"></a>四、UTF-16 的转码公式</h2><p>Unicode 码点转成 UTF-16 的时候，首先区分这是基本平面字符，还是辅助平面字符。如果是前者，直接将码点转为对应的十六进制形式，长度为两字节。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">U+597D = <span class="number">0x597D</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>如果是辅助平面字符，Unicode 3.0 版给出了转码公式。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">H = <span class="title class_">Math</span>.<span class="title function_">floor</span>((c - <span class="number">0x10000</span>) / <span class="number">0x400</span>) + <span class="number">0xd800</span>;</span><br><span class="line"></span><br><span class="line">L = ((c - <span class="number">0x10000</span>) % <span class="number">0x400</span>) + <span class="number">0xdc00</span>;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121107-1607839359685.png" alt="img"></p>
+<p>以字符![img](C:\Users\WX03\Desktop\张博文记录\字符编码笔记：ASCII，Unicode 和 UTF-8\bg2014121121-1.png)为例，它是一个辅助平面字符，码点为 U+1D306，将其转为 UTF-16 的计算过程如下。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">H = <span class="title class_">Math</span>.<span class="title function_">floor</span>((<span class="number">0x1D306</span>-<span class="number">0x10000</span>)/<span class="number">0x400</span>)+<span class="number">0xD800</span> = <span class="number">0xD834</span></span><br><span class="line"></span><br><span class="line">L = (<span class="number">0x1D306</span>-<span class="number">0x10000</span>) % <span class="number">0x400</span>+<span class="number">0xDC00</span> = <span class="number">0xDF06</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>所以，字符![img](C:\Users\WX03\Desktop\张博文记录\字符编码笔记：ASCII，Unicode 和 UTF-8\bg2014121121-1.png)的 UTF-16 编码就是 0xD834 DF06，长度为四个字节。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121118-1607839361287.png" alt="img"></p>
+<h2 id="五、JavaScript-使用哪一种编码？"><a href="#五、JavaScript-使用哪一种编码？" class="headerlink" title="五、JavaScript 使用哪一种编码？"></a>五、JavaScript 使用哪一种编码？</h2><p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121108-1607839362726.png" alt="img"></p>
+<p>JavaScript 语言采用 Unicode 字符集，但是只支持一种编码方法。</p>
+<p>这种编码既不是 UTF-16，也不是 UTF-8，更不是 UTF-32。上面那些编码方法，JavaScript 都不用。</p>
+<p><strong>JavaScript 用的是 UCS-2！</strong></p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121109-1607839364889.png" alt="img"></p>
+<h2 id="六、UCS-2-编码"><a href="#六、UCS-2-编码" class="headerlink" title="六、UCS-2 编码"></a>六、UCS-2 编码</h2><p>怎么突然杀出一个 UCS-2？这就需要讲一点历史。</p>
+<p>互联网还没出现的年代，曾经有两个团队，不约而同想搞统一字符集。一个是 1988 年成立的 Unicode 团队，另一个是 1989 年成立的 UCS 团队。等到他们发现了对方的存在，很快就达成一致：世界上不需要两套统一字符集。</p>
+<p>1991 年 10 月，两个团队决定合并字符集。也就是说，从今以后只发布一套字符集，就是 Unicode，并且修订此前发布的字符集，UCS 的码点将与 Unicode 完全一致。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121119-1607839366617.jpg" alt="img"></p>
+<p>UCS 的开发进度快于 Unicode，1990 年就公布了第一套编码方法 UCS-2，使用 2 个字节表示已经有码点的字符。（那个时候只有一个平面，就是基本平面，所以 2 个字节就够用了。）UTF-16 编码迟至 1996 年 7 月才公布，明确宣布是 UCS-2 的超集，即基本平面字符沿用 UCS-2 编码，辅助平面字符定义了 4 个字节的表示方法。</p>
+<p><strong>两者的关系简单说，就是 UTF-16 取代了 UCS-2，或者说 UCS-2 整合进了 UTF-16。</strong>所以，现在只有 UTF-16，没有 UCS-2。</p>
+<h2 id="七、JavaScript-的诞生背景"><a href="#七、JavaScript-的诞生背景" class="headerlink" title="七、JavaScript 的诞生背景"></a>七、JavaScript 的诞生背景</h2><p>那么，为什么 JavaScript 不选择更高级的 UTF-16，而用了已经被淘汰的 UCS-2 呢？</p>
+<p>答案很简单：非不想也，是不能也。<strong>因为在 JavaScript 语言出现的时候，还没有 UTF-16 编码。</strong></p>
+<p>1995 年 5 月，Brendan Eich 用了 10 天设计了 JavaScript 语言；10 月，第一个解释引擎问世；次年 11 月，Netscape 正式向 ECMA 提交语言标准（整个过程详见<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html">《JavaScript 诞生记》</a>）。对比 UTF-16 的发布时间（1996 年 7 月），就会明白 Netscape 公司那时没有其他选择，只有 UCS-2 一种编码方法可用！</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121120-1607839368619.png" alt="img"></p>
+<h2 id="八、JavaScript-字符函数的局限"><a href="#八、JavaScript-字符函数的局限" class="headerlink" title="八、JavaScript 字符函数的局限"></a>八、JavaScript 字符函数的局限</h2><p><strong>由于 JavaScript 只能处理 UCS-2 编码，造成所有字符在这门语言中都是 2 个字节，如果是 4 个字节的字符，会当作两个双字节的字符处理。</strong>JavaScript 的字符函数都受到这一点的影响，无法返回正确结果。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121110-1607839370495.png" alt="img"></p>
+<p>还是以字符![img](C:\Users\WX03\Desktop\张博文记录\字符编码笔记：ASCII，Unicode 和 UTF-8\bg2014121121-1.png)为例，它的 UTF-16 编码是 4 个字节的 0xD834 DF06。问题就来了，4 个字节的编码不属于 UCS-2，JavaScript 不认识，只会把它看作单独的两个字符 U+D834 和 U+DF06。前面说过，这两个码点是空的，所以 JavaScript 会认为<img data-src="http://www.ruanyifeng.com/blogimg/asset/2014/bg2014121121-1.png" alt="img">是两个空字符组成的字符串！</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121122-1607839372478.png" alt="img"></p>
+<p>上面代码表示，JavaScript 认为字符<img data-src="http://www.ruanyifeng.com/blogimg/asset/2014/bg2014121121-1.png" alt="img">的长度是 2，取到的第一个字符是空字符，取到的第一个字符的码点是 0xDB34。这些结果都不正确！</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121111-1607839471993.png" alt="img"></p>
+<p>解决这个问题，必须对码点做一个判断，然后手动调整。下面是正确的遍历字符串的写法。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (++index &lt; length) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="keyword">if</span> (charCode &gt;= <span class="number">0xd800</span> &amp;&amp; charCode &lt;= <span class="number">0xdbff</span>) &#123;</span><br><span class="line">    output.<span class="title function_">push</span>(character + string.<span class="title function_">charAt</span>(++index));</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    output.<span class="title function_">push</span>(character);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>上面代码表示，遍历字符串的时候，必须对码点做一个判断，只要落在 0xD800 到 0xDBFF 的区间，就要连同后面 2 个字节一起读取。</p>
+<p>类似的问题存在于所有的 JavaScript 字符操作函数。</p>
+<blockquote>
+<ul>
+<li>String.prototype.replace()</li>
+<li>String.prototype.substring()</li>
+<li>String.prototype.slice()</li>
+<li>…</li>
+</ul>
+</blockquote>
+<p>上面的函数都只对 2 字节的码点有效。要正确处理 4 字节的码点，就必须逐一部署自己的版本，判断一下当前字符的码点范围。</p>
+<h2 id="九、ECMAScript-6"><a href="#九、ECMAScript-6" class="headerlink" title="九、ECMAScript 6"></a>九、ECMAScript 6</h2><p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121112-1607839311267.png" alt="img"></p>
+<p>JavaScript 的下一个版本 ECMAScript 6（简称 ES6），大幅增强了 Unicode 支持，基本上解决了这个问题。</p>
+<p><strong>（1）正确识别字符</strong></p>
+<p>ES6 可以自动识别 4 字节的码点。因此，遍历字符串就简单多了。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> s <span class="keyword">of</span> string) &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但是，为了保持兼容，length 属性还是原来的行为方式。为了得到字符串的正确长度，可以用下面的方式。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="title function_">from</span>(string).<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>（2）码点表示法</strong></p>
+<p>JavaScript 允许直接用码点表示 Unicode 字符，写法是”反斜杠+u+码点”。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;好&quot;</span> === <span class="string">&quot;\u597D&quot;</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>但是，这种表示法对 4 字节的码点无效。ES6 修正了这个问题，只要将码点放在大括号内，就能正确识别。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121123-1607839063327-1607839074632-1607839299600.png" alt="img"></p>
+<p><strong>（3）字符串处理函数</strong></p>
+<p>ES6 新增了几个专门处理 4 字节码点的函数。</p>
+<blockquote>
+<ul>
+<li>**String.fromCodePoint()**：从 Unicode 码点返回对应字符</li>
+<li>**String.prototype.codePointAt()**：从字符返回对应的码点</li>
+<li>**String.prototype.at()**：返回字符串给定位置的字符</li>
+</ul>
+</blockquote>
+<p><strong>（4）正则表达式</strong></p>
+<p>ES6 提供了 u 修饰符，对正则表达式添加 4 字节码点的支持。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121124-1607839303650.png" alt="img"></p>
+<p><strong>（5）Unicode 正规化</strong></p>
+<p>有些字符除了字母以外，还有<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/%E9%99%84%E5%8A%A0%E7%AC%A6%E5%8F%B7">附加符号</a>。比如，汉语拼音的 Ǒ，字母上面的声调就是附加符号。对于许多欧洲语言来说，声调符号是非常重要的。</p>
+<p><img data-src="/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/bg2014121113-1607839306035.png" alt="img"></p>
+<p>Unicode 提供了两种表示方法。一种是带附加符号的单个字符，即一个码点表示一个字符，比如 Ǒ 的码点是 U+01D1；另一种是将附加符号单独作为一个码点，与主体字符复合显示，即两个码点表示一个字符，比如 Ǒ 可以写成 O（U+004F） + ˇ（U+030C）。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="string">&quot;\u01D1&quot;</span>;</span><br><span class="line"><span class="comment">// &#x27;Ǒ&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二</span></span><br><span class="line"><span class="string">&quot;\u004F\u030C&quot;</span>;</span><br><span class="line"><span class="comment">// &#x27;Ǒ&#x27;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这两种表示方法，视觉和语义都完全一样，理应作为等同情况处理。但是，JavaScript 无法辨别。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;\u01D1&quot;</span> === <span class="string">&quot;\u004F\u030C&quot;</span>;</span><br><span class="line"><span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>ES6 提供了 normalize 方法，允许<a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/Unicode%E6%AD%A3%E8%A6%8F%E5%8C%96">“Unicode 正规化”</a>，即将两种方法转为同样的序列。</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;\u01D1&quot;</span>.<span class="title function_">normalize</span>() === <span class="string">&quot;\u004F\u030C&quot;</span>.<span class="title function_">normalize</span>();</span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+
       
     </div>
 
@@ -1461,13 +1944,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -1495,9 +1978,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -1505,14 +1992,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/page/9/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -1537,8 +2028,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"823cd2c5daa018d5e8843493c15fc938"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

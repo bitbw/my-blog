@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
 <meta property="og:type" content="website">
@@ -227,7 +228,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -345,14 +345,87 @@
 <li>把 <code>数组[索引]</code>格式当成一个变量使用就行，</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化赋值完成后，也可以再次改变值，把前面的值覆盖掉；</span></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2016/06/25/js/javaScript-%E6%95%B0%E7%BB%84/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<ul>
+<li>如果一开始就知道数组了，可以直接使用一个简单的语法存储数据</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">91</span>, <span class="number">88</span>, <span class="number">72</span>, <span class="number">45</span>, <span class="number">63</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出的结果是一样的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上面每个位置上存的都是数字类型，可以为其他类型；</li>
+</ul>
+<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><ul>
+<li>把数据取出来，得知道你要取哪个位置上的数据把。</li>
+<li>数据取值同样使用<strong>索引</strong>取。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 拿到索引为0，顺序上第一个位置上的数据；</span></span><br><span class="line"><span class="comment">// 把 数组[索引] 格式当成一个变量使用就行；</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组求和：班里的成绩总和</span></span><br><span class="line"><span class="keyword">var</span> sum = arr[<span class="number">0</span>] + arr[<span class="number">1</span>] + arr[<span class="number">2</span>] + arr[<span class="number">3</span>] + arr[<span class="number">4</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum); <span class="comment">// 输出370</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><ul>
+<li>求成绩总和：一个一个地把数组里面的数组取出来了，从索引 0 到最后一个索引，</li>
+<li>索引从 0 开始到结束的过程，<strong>有重复的思想，需要用到循环；</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最初的写法</span></span><br><span class="line"><span class="keyword">var</span> sum = arr[<span class="number">0</span>] + arr[<span class="number">1</span>] + arr[<span class="number">2</span>] + arr[<span class="number">3</span>] + arr[<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环 这个从0~最后一个索引，有重复的思想在里面，使用循环。</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">4</span>; i++) &#123;</span><br><span class="line">  sum += arr[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum); <span class="comment">// 输出 370，和我们一个一个相加是一样的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用<strong>循环来遍历</strong>数组，当数组中的数据比较多的时候，会比较方便。<strong>一般是使用 for 循环；</strong></li>
+</ul>
+<h2 id="数组长度"><a href="#数组长度" class="headerlink" title="数组长度"></a>数组长度</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
+<li>存取数据：涉及到就是数组的<strong>顺序</strong>问题，通过索引去存取；</li>
+<li>数组长度：数组中一共存放了多少个数据；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="property">length</span>); <span class="comment">// 数组.length 就是数组的长度</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果数组的长度是 5，最后一个元素的<strong>索引</strong>就是 4；</li>
+<li><strong>我们发现最大索引总是比长度少 1 ，所以遍历还可以这么写</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 简化一下</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例：求数组中所有数字的总和的平均值"><a href="#案例：求数组中所有数字的总和的平均值" class="headerlink" title="案例：求数组中所有数字的总和的平均值"></a>案例：求数组中所有数字的总和的平均值</h3><ul>
+<li>分析：<ul>
+<li>总和：循环遍历，加在一个变量上得到；</li>
+<li>均值：总和 &#x2F; 个数；（arr.length）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 还可以更简单</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  sum += arr[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 求平均分</span></span><br><span class="line"><span class="comment">// 平均分= 总分 / 数组的长度</span></span><br><span class="line"><span class="keyword">var</span> avg = sum / arr.<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例：求数组中的最大值"><a href="#案例：求数组中的最大值" class="headerlink" title="案例：求数组中的最大值"></a>案例：求数组中的最大值</h3><ul>
+<li>分析：生活中，一堆人最高的（人很多，多到你一下看不出来）；<ul>
+<li>最大值：最起码得两个数比较下，得到最大值；</li>
+<li>假设：其中随便一个是最大值 MAX，每个元素和 max 比较，<ul>
+<li>若有比 MAX 大的，那该元素代替 MAX；</li>
+<li>若都没有 MAX 大，恭喜，你一开始就猜对了；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> max = arr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (max &lt; arr[i]) &#123;</span><br><span class="line">    max = arr[i];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>需求：求数组中的最大值的索引</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分析：找打最大值的时候，记录下最大值的下标就行了。</span></span><br><span class="line"><span class="keyword">var</span> max_index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> max = arr[max_index];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (max &lt; arr[i]) &#123;</span><br><span class="line">    max = arr[i];</span><br><span class="line">    max_index = i;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="清空数组"><a href="#清空数组" class="headerlink" title="清空数组"></a>清空数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="property">length</span> = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组的构造函数"><a href="#数组的构造函数" class="headerlink" title="数组的构造函数"></a>数组的构造函数</h2><ul>
+<li>数组在 JS 中还可以使用另一种方式创建，这个方式我们称为 ： 构造函数</li>
+<li>构造函数：能构造一个你需要的东西（对象）；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 构造函数 创建数组</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line"><span class="comment">// 存储数据</span></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">20</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>, <span class="number">20</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意：一个数据，不要使用这个方式存储数据；它会认为你想要设置数组的长度，而不是要把数据存储在数组中。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出 [empty × 10]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JS-实现数组去重（重复的元素只保留一个）"><a href="#JS-实现数组去重（重复的元素只保留一个）" class="headerlink" title="JS 实现数组去重（重复的元素只保留一个）"></a>JS 实现数组去重（重复的元素只保留一个）</h2><p><strong>优化遍历数组法（推荐）</strong></p>
+<p>实现思路：双层循环，外循环表示从 0 到 arr.length，内循环表示从 i+1 到 arr.length</p>
+<p>将没重复的右边值放入新数组。（检测到有重复值时终止当前循环同时进入外层循环的下一轮判断）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">unique4</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> hash = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] === arr[j]) &#123;</span><br><span class="line">        ++i;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    hash.<span class="title function_">push</span>(arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> hash;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -414,7 +487,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -529,7 +602,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -566,7 +639,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img src="https://bitbw.top/public/img/my_gallery/%E4%B8%8B%E8%BD%BD.jpg" alt="下载"></p>
+          <p><img data-src="https://bitbw.top/public/img/my_gallery/%E4%B8%8B%E8%BD%BD.jpg" alt="下载"></p>
 <h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><ul>
 <li>chrome</li>
 <li>sublime</li>
@@ -600,15 +673,54 @@
 <p>body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等。）</p>
 </li>
 </ul>
-<h2 id="HTML-标签分类"><a href="#HTML-标签分类" class="headerlink" title="HTML 标签分类"></a>HTML 标签分类</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2016/05/21/HTML/HTML%E5%85%A5%E9%97%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h2 id="HTML-标签分类"><a href="#HTML-标签分类" class="headerlink" title="HTML 标签分类"></a>HTML 标签分类</h2><ul>
+<li>1.双标签 &lt;标签名&gt; 内容 &lt;&#x2F;标签名&gt; 比如 <code>&lt;body&gt;</code>我是文字 <code>&lt;/body&gt;</code></li>
+<li>1.嵌套(包含)关系 <code>&lt;head&gt; &lt;title&gt; &lt;/title&gt; &lt;/head&gt;</code></li>
+</ul>
+<h2 id="HTML-标签关系"><a href="#HTML-标签关系" class="headerlink" title="HTML 标签关系"></a>HTML 标签关系</h2><ul>
+<li>1.嵌套(包含)关系 <code>&lt;head&gt; &lt;title&gt; &lt;/title&gt; &lt;/head&gt;</code></li>
+<li>2.并列关系 <code>&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;</code></li>
+</ul>
+<h2 id="sublime-一些常用快捷键"><a href="#sublime-一些常用快捷键" class="headerlink" title="sublime 一些常用快捷键"></a>sublime 一些常用快捷键</h2><p><img data-src="https://bitbw.top/public/img/my_gallery/1574421790594.png" alt="1574421790594"></p>
+<h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><ul>
+<li>utf-8 是目前最常用的字符集编码方式，常用的字符集编码方式还有 gbk 和 gb2312。</li>
+<li>gb2312 简单中文 包括 6763 个汉字</li>
+<li>BIG5 繁体中文 港澳台等用</li>
+<li>GBK 包含全部中文字符 是 GB2312 的扩展，加入对繁体字的支持，兼容 GB2312</li>
+<li>UTF-8 则包含全世界所有国家需要用到的字符</li>
+<li>记住一点，以后我们统统使用 UTF-8 字符集, 这样就避免出现字符集不统一而引起乱码的情况了。</li>
+</ul>
+<h2 id="HTML-常用标签"><a href="#HTML-常用标签" class="headerlink" title="HTML 常用标签"></a>HTML 常用标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">标题标签 (熟记) head 头部. 标题 title 文档标题 HTML提供了6个等级的标题</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h4</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h5</span>&gt;</span></span><br><span class="line">          和</span><br><span class="line">          <span class="tag">&lt;<span class="name">h6</span>&gt;</span></span><br><span class="line">            段落标签( 熟记)</span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>文本内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            水平线标签(认识)</span><br><span class="line">            <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">            是单标签 换行标签(熟记) <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文本格式化标签-熟记"><a href="#文本格式化标签-熟记" class="headerlink" title="文本格式化标签(熟记)"></a>文本格式化标签(熟记)</h2><p><img data-src="/./html1/1574422211138.png" alt="1574422211138"></p>
+<h2 id="img-标记属性"><a href="#img-标记属性" class="headerlink" title="img 标记属性"></a>img 标记属性</h2><ul>
+<li>src 图像的路径</li>
+<li>alt 图像不能显示时的替换文本</li>
+<li>title 鼠标悬停时显示的内容</li>
+<li>width 设置图像的宽度</li>
+<li>height 设置图像的高度</li>
+<li>border 设置图像边框的宽度</li>
+</ul>
+<h2 id="链接标签-重点"><a href="#链接标签-重点" class="headerlink" title="链接标签(重点)"></a>链接标签(重点)</h2><p><code>&lt;a href=&quot;跳转目标&quot; target=&quot;目标窗口的弹出方式&quot;&gt;文本或图像&lt;/a&gt;</code></p>
+<p>target：用于指定链接页面的打开方式，其取值有 self 和_blank 两种，其中 self 为默认值，blank 为在新窗口中打开方式。</p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><blockquote>
+<p>1.外部链接 需要添加 http:&#x2F;&#x2F; <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 2.内部链接 直接链接内部页面名称即可 比如<code>&lt; a href=&quot;index.html&quot;&gt; 首页 &lt;/a &gt;</code> 3.如果当时没有确定链接目标时，通常将链接标签的 href 属性值定义为“#”(即 href&#x3D;”#”)，表示该链接暂时为一个空链接。 4.不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。</p>
+</blockquote>
+<h2 id="锚点定位-（难点）"><a href="#锚点定位-（难点）" class="headerlink" title="锚点定位 （难点）"></a>锚点定位 （难点）</h2><p>vk control control 1.使用相应的 id 名标注跳转目标的位置。</p>
+<p><code>&lt;h3 id=&quot;two&quot;&gt;第2集&lt;/h3&gt;</code></p>
+<p>2.使用“a href&#x3D;”#id 名&gt;“链接文本”<code>&lt;/a&gt;</code>创建链接文本（被点击的）<code>&lt;a href=&quot;#two&quot;&gt;</code></p>
+<h2 id="base-标签-基本的"><a href="#base-标签-基本的" class="headerlink" title="base 标签 基本的"></a>base 标签 基本的</h2><ul>
+<li>base 可以设置整体链接的打开状态</li>
+<li>base 写到 <code>&lt;head&gt; &lt;/head&gt;</code> 之间</li>
+<li>把所有的连接 都默认添加 target&#x3D;”_blank”</li>
+</ul>
+<h2 id="特殊字符标签-（理解）"><a href="#特殊字符标签-（理解）" class="headerlink" title="特殊字符标签 （理解）"></a>特殊字符标签 （理解）</h2><p><img data-src="https://bitbw.top/public/img/my_gallery/1574422894085.png" alt="1574422894085"></p>
+<h2 id="路径-重点、难点"><a href="#路径-重点、难点" class="headerlink" title="路径(重点、难点)"></a>路径(重点、难点)</h2><h3 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h3><p>1.图像文件和 HTML 文件位于同一文件夹：只需输入图像文件的名称即可，如<code>&lt;img src=&quot;logo.gif&quot; /&gt;</code>。</p>
+<p>2.图像文件位于 HTML 文件的下一级文件夹：输入文件夹名和文件名，之间用“&#x2F;”隔开，如<code>&lt;img src=&quot;img/img01/logo.gif&quot; /&gt;</code>。</p>
+<p>3.图像文件位于 HTML 文件的上一级文件夹：在文件名之前加入“..&#x2F;” ，如果是上两级，则需要使用 “..&#x2F; ..&#x2F;”，以此类推，如<code>&lt;img src=&quot;../logo.gif&quot; /&gt;</code>。</p>
+<h3 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h3><p>绝对路径以 Web 站点根目录为参考基础的目录路径。之所以称为绝对，意指当所有网页引用同一个文件时，所使用的路径都是一样的</p>
+<p>“D:\web\img\logo.gif”，或完整的网络地址，例如“<a target="_blank" rel="noopener" href="http://www.itcast.cn/image/logo.gif">http://www.itcast.cn/image/logo.gif</a>”。</p>
+
       
     </div>
 
@@ -650,13 +762,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -684,9 +796,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -694,14 +810,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/page/13/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -726,8 +846,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"fc1212e4c6ef0ea216824014023be545"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

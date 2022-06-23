@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="转载自：https:&#x2F;&#x2F;juejin.cn&#x2F;post&#x2F;7038550916106027044 commit message 应该清晰明了，说明本次提交的目的，但是很多人在提交 git 信息的时候，为了图方便，大多都会简单的写一下，开发一时爽，维护火葬场。 清晰且统一的提交风格，有利于团队的协作和后期的维护，本文分享了我们如何通过限制代码提交的规范。 一、配置自己的提交规范123456&#x2F;&#x2F; 安装co">
 <meta property="og:type" content="article">
@@ -40,7 +41,7 @@
 <meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15d3db83d48344d79a847f8f5ebe4818~tplv-k3u1fbpfcp-watermark.awebp">
 <meta property="og:image" content="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5524af2ef569450aa04b933a35291bbf~tplv-k3u1fbpfcp-watermark.awebp">
 <meta property="article:published_time" content="2022-01-14T21:06:00.000Z">
-<meta property="article:modified_time" content="2022-06-22T02:29:07.345Z">
+<meta property="article:modified_time" content="2022-06-23T01:20:34.670Z">
 <meta property="article:author" content="Bowen">
 <meta property="article:tag" content="前端工程化">
 <meta name="twitter:card" content="summary">
@@ -241,7 +242,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -297,7 +297,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -346,7 +346,7 @@
 <h1 id="一、配置自己的提交规范"><a href="#一、配置自己的提交规范" class="headerlink" title="一、配置自己的提交规范"></a>一、配置自己的提交规范</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装commitizen</span></span><br><span class="line">npm install -g commitizen</span><br><span class="line"></span><br><span class="line"><span class="comment">// commitizen根据不同的`adapter`配置commit message</span></span><br><span class="line">npm install -g cz-conventional-changelog</span><br><span class="line">echo <span class="string">&#x27;&#123; &quot;path&quot;: &quot;cz-conventional-changelog&quot; &#125;&#x27;</span> &gt; ~/.<span class="property">czrc</span></span><br></pre></td></tr></table></figure>
 
 <p>配置完成后，在你本地进入任何的 git repository， 使用 <code>git cz</code> 代替 <code>git commit</code> 都会出现选项，用来生成符合格式的 Commit message，如下图：</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88224b4fdeee491faf7beeb3a60a079b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88224b4fdeee491faf7beeb3a60a079b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 <h1 id="二、自定义提交规范"><a href="#二、自定义提交规范" class="headerlink" title="二、自定义提交规范"></a>二、自定义提交规范</h1><blockquote>
 <p>以下讲的式项目中的自定义提交规范，全局配置参考<a href="https://link.juejin.cn/?target=https://blog.csdn.net/weixin_34249367/article/details/88817593">：这篇大佬的文章</a></p>
 </blockquote>
@@ -364,7 +364,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 可选类型</span></span><br><span class="line">  <span class="attr">types</span>:[</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;feat&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;feat:      新功能&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;fix&#x27;</span>,      <span class="attr">name</span>: <span class="string">&#x27;fix:       修复&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;docs&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;docs:      文档变更&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;style&#x27;</span>,    <span class="attr">name</span>: <span class="string">&#x27;style:     代码格式（不影响代码运行的变动）&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;refactor&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;refactor:  重构（既不是增加feature）,也不是修复bug&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;pref&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;pref:      性能优化&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;test&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;test:      增加测试&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;chore&#x27;</span>,    <span class="attr">name</span>: <span class="string">&#x27;chore:     构建过程或辅助工具的变动&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;revert&#x27;</span>,   <span class="attr">name</span>: <span class="string">&#x27;revert:    回退&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;build&#x27;</span>,    <span class="attr">name</span>: <span class="string">&#x27;build:     打包&#x27;</span>&#125;</span><br><span class="line">  ],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 步骤</span></span><br><span class="line">  <span class="attr">messages</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;请选择提交的类型；&#x27;</span>,</span><br><span class="line">    <span class="attr">customScope</span>: <span class="string">&#x27;请输入修改的范围（可选）&#x27;</span>,</span><br><span class="line">    <span class="attr">subject</span>: <span class="string">&#x27;请简要描述提交（必填）&#x27;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;请输入详细描述（可选）&#x27;</span>,</span><br><span class="line">    <span class="attr">footer</span>: <span class="string">&#x27;请选择要关闭的issue（可选）&#x27;</span>,</span><br><span class="line">    <span class="attr">confirmCommit</span>: <span class="string">&#x27;确认要使用以上信息提交？（y/n）&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 跳过步骤</span></span><br><span class="line">  <span class="attr">skip</span>: [<span class="string">&#x27;body&#x27;</span>, <span class="string">&#x27;footer&#x27;</span>],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 默认长度</span></span><br><span class="line">  <span class="attr">subjectLimit</span>: <span class="number">72</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>此时，我们执行 <code>git cz</code> 的时候即可按照自己配置的规范，进行选项信息的填写，如下图</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6295ba68b744044b6f25df980c1fc2b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6295ba68b744044b6f25df980c1fc2b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 </ol>
 <h1 id="三、husky-Git-hooks-配置提交校验"><a href="#三、husky-Git-hooks-配置提交校验" class="headerlink" title="三、husky + Git hooks 配置提交校验"></a>三、husky + Git hooks 配置提交校验</h1><ol>
@@ -405,7 +405,7 @@
 
 <blockquote>
 <p>注意：这里这个文件需要保存为 utf-8 的格式，否则可能出现错误</p>
-<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f66c138924240bf815b72ec1501dfa9~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f66c138924240bf815b72ec1501dfa9~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </blockquote>
 </li>
 </ol>
@@ -413,23 +413,23 @@
 <li><p>安装依赖 <code>npm install husky --save-dev</code></p>
 </li>
 <li><p>启动 hooks, 生成 .husky 文件夹 <code>npx husky install</code></p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10702def9941474795f38e713b964baa~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10702def9941474795f38e713b964baa~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 <li><p>在 package.json 中生成 prepare 指令 <code>npm set-script prepare &quot;husky install&quot;</code></p>
 <blockquote>
 <p>注意：这个需要 npm &gt; 7.0 版本 可以使用 <code>npm install -g npm</code> 升版本</p>
 </blockquote>
-<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e558cf1d6dbb4fd294dc6c8339a75723~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e558cf1d6dbb4fd294dc6c8339a75723~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 <li><p>执行 prepare 指令 <code>npm run prepare</code></p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cad34a2c7ec4b35b584389b2c28bde3~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cad34a2c7ec4b35b584389b2c28bde3~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 <li><p>添加 commitlint 的 hook 到 husky 中，<code>commit-msg</code> 时进行校验</p>
 <p><code>npx husky add .husky/commit-msg &#39;npx --no-install commitlint --edit &quot;$1&quot;&#39;</code></p>
-<p>添加完成后： <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d97921ab22b44f3b17f112ea54a5ae6~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p>添加完成后： <img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d97921ab22b44f3b17f112ea54a5ae6~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 <li><p>此时，不符合规范的 commit 将不会被允许提交，我们的任务也完成啦！测试如下图：</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9202f5299b1f44ca8f2df2d1a3f9a09c~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9202f5299b1f44ca8f2df2d1a3f9a09c~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 </ol>
 <h2 id="2、pre-commit-检验当前代码是否有-ESLint-错误"><a href="#2、pre-commit-检验当前代码是否有-ESLint-错误" class="headerlink" title="2、pre-commit 检验当前代码是否有 ESLint 错误"></a>2、pre-commit 检验当前代码是否有 ESLint 错误</h2><p>我们期望在代码被提交之前，可以执行 <code>npx eslint --ext .js,.ts,.vue src</code> 指令来检测代码是否规范</p>
@@ -437,10 +437,10 @@
 <li><p>添加 commit 时的 hook，<code>pre-commit</code> 时运行 npx eslint –ext .js,.ts,.vue src</p>
 <p><code>npx husky add .husky/pre-commit &quot;npx eslint --ext .js,.ts,.vue src&quot;</code></p>
 <p>结果如下图：</p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15d3db83d48344d79a847f8f5ebe4818~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15d3db83d48344d79a847f8f5ebe4818~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 <li><p>此时提交代码，如果项目中有错误，无法提交，想要提交代码，必须解决所有的错误信息</p>
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5524af2ef569450aa04b933a35291bbf~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5524af2ef569450aa04b933a35291bbf~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 </li>
 </ol>
 <h4 id="lint-staged-自动修复格式错误"><a href="#lint-staged-自动修复格式错误" class="headerlink" title="lint-staged 自动修复格式错误"></a>lint-staged 自动修复格式错误</h4><blockquote>
@@ -486,6 +486,8 @@
     
     
     
+      
+
 
     <footer class="post-footer">
           <div class="reward-container">
@@ -533,20 +535,7 @@
 
 
 
-      <div class="tabs tabs-comment">
-        <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
-            <li class="tab"><a href="#comment-utterances">utterances</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments gitalk-container"></div>
-            </div>
-            <div class="tab-pane utterances" id="comment-utterances">
-              <div class="comments utterances-container"></div>
-            </div>
-        </div>
-      </div>
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -567,13 +556,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -601,9 +590,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -611,14 +604,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/2022/01/14/Git/%E8%A7%84%E8%8C%83%E5%8C%96Git%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -643,8 +640,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"2f227f1565d2e124bf34a39fe34a538a"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

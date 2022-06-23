@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
 <meta property="og:type" content="website">
@@ -227,7 +228,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -327,14 +327,84 @@
 <h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vm.$set(obj,<span class="string">&quot;key&quot;</span>,value)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">obj</span> = &#123;...vm.<span class="property">obj</span>,<span class="attr">key</span>:value&#125;</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">obj</span> = <span class="title class_">Object</span>.<span class="title function_">assgin</span>(&#123;&#125;,vm.<span class="property">obj</span>,&#123;<span class="attr">key</span>:value&#125;)</span><br></pre></td></tr></table></figure>
 
 <h4 id="对于数组"><a href="#对于数组" class="headerlink" title="对于数组"></a>对于数组</h4><p>Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/16/Vue/Vue%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p>push()<br>pop()<br>shift()<br>unshift()<br>splice()<br>sort()<br>reverse()</p>
+<p>Vue 不能检测以下数组的变动：</p>
+<p>当你利用索引直接设置一个数组项时，例如：vm.items[indexOfItem] &#x3D; newValue<br>当你修改数组的长度时，例如：vm.items.length &#x3D; newLength</p>
+<h5 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h5><p>修改数组某一项</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vm.$set(vm.<span class="property">items</span>, indexOfItem, newValue)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">items</span>.<span class="title function_">splice</span>(indexOfItem, <span class="number">1</span>, newValue)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>修改数组长度</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vm.<span class="property">items</span>.<span class="title function_">splice</span>(newLength)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">items</span> = vm.<span class="property">items</span>.<span class="title function_">slice</span>(<span class="number">0</span>,newLength)</span><br></pre></td></tr></table></figure>
+
+<h4 id="vue-中给数组中的对象-添加新属性属性"><a href="#vue-中给数组中的对象-添加新属性属性" class="headerlink" title="vue 中给数组中的对象,添加新属性属性"></a>vue 中给数组中的对象,添加新属性属性</h4><p>不能使用直接遍历设置的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">  item.<span class="property">key</span> = value;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="解决-2"><a href="#解决-2" class="headerlink" title="解决"></a>解决</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">this</span>.$set(<span class="variable language_">this</span>.<span class="property">items</span>, index, &#123; ...item, ...&#123; <span class="attr">key</span>:value &#125; &#125;);</span><br><span class="line">  <span class="comment">//或者</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">splice</span>(index, <span class="number">1</span>, &#123; ...item, ...&#123; <span class="attr">key</span>:value &#125; &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">items</span> = <span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">map</span>( <span class="function"><span class="params">item</span> =&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123; ...item, ...&#123; <span class="attr">key</span>:value &#125; &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>tip 修改数组中的属性 直接修改即可 数组中的对象同外层对象的响应方式</p>
+</blockquote>
+<h3 id="v-if-使用时注意-vue-会将一样的元素复用-需要加-key-解决"><a href="#v-if-使用时注意-vue-会将一样的元素复用-需要加-key-解决" class="headerlink" title="v-if 使用时注意 vue 会将一样的元素复用 需要加 key 解决"></a>v-if 使用时注意 vue 会将一样的元素复用 需要加 key 解决</h3><blockquote>
+<p>在下面的案例中 即使渲染出返回按钮 因为下面的每个 else 元素都一样 但是返回依然不现实 因为复用了下面的元素样式 display: none; 需要在不需要复用的元素上加 key 解决</p>
+</blockquote>
+<p><a href="%5Bhttps://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0%5D(https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0)">vue 原文链接</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;top-button&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;isView&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;isView = false&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-back&quot;</span>&gt;</span>返回<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;top-button&quot;</span> <span class="attr">v-else-if</span>=<span class="string">&quot;isEdit === false&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onNewPayment&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-add&quot;</span> <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>新建&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">   <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-xinchou-fabu&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">plain</span></span></span><br><span class="line"><span class="tag">   @<span class="attr">click</span>=<span class="string">&quot;onPublish(true)&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>发布&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">   <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-xinchou-quxiaofabu&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">plain</span></span></span><br><span class="line"><span class="tag">   @<span class="attr">click</span>=<span class="string">&quot;onPublish(false)&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>取消发布&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onClickCancelPublish&quot;</span> <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span>&gt;</span>设置启动时间<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">   <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">plain</span></span></span><br><span class="line"><span class="tag">   @<span class="attr">click</span>=<span class="string">&quot;$refs.changeLogDialog.open(currentNode.data.id, false)&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">v-btn:view</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>查看变更记录&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;top-button&quot;</span> <span class="attr">v-else-if</span>=<span class="string">&quot;isEdit&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onEditSave&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-save&quot;</span>&gt;</span>保存<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onEditCancel&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-delete&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="vue-样式：scoped-使用"><a href="#vue-样式：scoped-使用" class="headerlink" title="vue 样式：scoped 使用"></a>vue 样式：scoped 使用</h3><h4 id="深度作用选择器"><a href="#深度作用选择器" class="headerlink" title="深度作用选择器"></a>深度作用选择器</h4><p>如果你希望 <code>scoped</code> 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 <code>&gt;&gt;&gt;</code> 操作符：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.a</span> &gt;&gt;&gt; <span class="selector-class">.b</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/* ... */</span></span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上述代码将会编译成：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span><span class="selector-attr">[data-v-f3f3eg9]</span> <span class="selector-class">.b</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><blockquote>
+<p>注意点：如果子组件dom不在父组件内部 例如：dialog组件, 通过深度作用选择器也不会生效<br>这时需要通过 全局样式即去除 scoped  + 子组件calss  + 选择器 来实现</p>
+</blockquote>
+<p>有些像 Sass 之类的预处理器无法正确解析 <code>&gt;&gt;&gt;</code>。这种情况下你可以使用 <code>/deep/</code> 或 <code>::v-deep</code> 操作符取而代之——两者都是 <code>&gt;&gt;&gt;</code> 的别名，同样可以正常工作。</p>
+<p>参考： <a href="%5Bhttps://vue-loader.vuejs.org/zh/guide/scoped-css.html#%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8%5D(https://vue-loader.vuejs.org/zh/guide/scoped-css.html#%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8)">vue-loader 官方文档-深度作用选择器</a></p>
+<h3 id="Vue-中的-v-bind-使用问题"><a href="#Vue-中的-v-bind-使用问题" class="headerlink" title="Vue 中的 v-bind 使用问题"></a>Vue 中的 v-bind 使用问题</h3><blockquote>
+<p>在 vue 中使用 v-bind 绑定对象时 需要注意 ：v-bind 绑定值不会覆盖之前的属性</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;test&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:disabled</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;&#123; disabled: true, class: &#x27;test3&#x27; &#125;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 上面的代码disabled显示的还是false 但是class可以进行合并 显示：class=&quot;test test3&quot; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;test&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:class</span>=<span class="string">&quot;&#x27;test2&#x27;&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:disabled</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;&#123; disabled: true, class: &#x27;test3&#x27; &#125;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--注意： class 只能合并一次  最后显示 class=&quot;test test2&quot;--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="模板-v-bind-绑定值的变量名为-class-报-‘v-bind’-directives-require-an-attribute-value-eslint"><a href="#模板-v-bind-绑定值的变量名为-class-报-‘v-bind’-directives-require-an-attribute-value-eslint" class="headerlink" title="模板 v-bind 绑定值的变量名为 class 报 ‘v-bind’ directives require an attribute value.eslint"></a>模板 v-bind 绑定值的变量名为 class 报 ‘v-bind’ directives require an attribute value.eslint</h4><blockquote>
+<p>在模板中绑定的名称不要用 class 作为命名 否则 eslint 会报’v-bind’ directives require an attribute value.eslint</p>
+</blockquote>
+<blockquote>
+<p>$attrs 可以获取任何绑定在组件上的属性 但（ <code>porp</code>中的属性和 <code>class</code> 和 <code>style</code> 除外）</p>
+</blockquote>
+<h3 id="vue-property-decorator-注意事项（ts-项目中）"><a href="#vue-property-decorator-注意事项（ts-项目中）" class="headerlink" title="vue-property-decorator 注意事项（ts 项目中）"></a>vue-property-decorator 注意事项（ts 项目中）</h3><p>介绍链接[<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000019906321]">https://segmentfault.com/a/1190000019906321]</a></p>
+<h4 id="1-新建组件必须加-Component-否则组件会怎样都不现实"><a href="#1-新建组件必须加-Component-否则组件会怎样都不现实" class="headerlink" title="1.新建组件必须加@Component 否则组件会怎样都不现实"></a>1.新建组件必须加@Component 否则组件会怎样都不现实</h4><h3 id="router-传参-注意事项"><a href="#router-传参-注意事项" class="headerlink" title="router 传参 注意事项"></a>router 传参 注意事项</h3><blockquote>
+<p>路由传参 query 和 params 显示到地址栏形式的 注意 不要超长 ，否则浏览器会报 413 错误 ， 传参需要按需传送</p>
+</blockquote>
+<h3 id="prop-中默认值返回空对象"><a href="#prop-中默认值返回空对象" class="headerlink" title="prop 中默认值返回空对象"></a>prop 中默认值返回空对象</h3><p>prop 中 default 默认值 返回对象或数组需要使用工厂函数 ，一般我们都会用箭头函数简写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">props</span>: &#123;</span><br><span class="line">  <span class="attr">defaultText</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">Array</span>,</span><br><span class="line">    <span class="attr">default</span>: <span class="function">()=&gt;</span> []    <span class="comment">// 工厂函数返回空数组</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 错误写法</span></span><br><span class="line">  <span class="attr">defaultAttrs</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">    <span class="attr">default</span>: <span class="function">()=&gt;</span> &#123;&#125;    <span class="comment">// 但是返回空对象就不能直接=&gt;&#123;&#125; 这样就代表函数的块级作用域了 会报错</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 正确写法</span></span><br><span class="line">   <span class="attr">defaultAttrs</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">    <span class="attr">default</span>: <span class="function">()=&gt;</span> (&#123;&#125;)    <span class="comment">// 在&#123;&#125;外面包一层()即可</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-v-on-x3D-”-listeners”-的注意事项"><a href="#使用-v-on-x3D-”-listeners”-的注意事项" class="headerlink" title="使用 v-on&#x3D;”$listeners” 的注意事项"></a>使用 v-on&#x3D;”$listeners” 的注意事项</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p> 内部使用了 v-on&#x3D;”$listeners” 的组件事件被重复调用</p>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>这里有个 Father 组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">v-on</span>=<span class="string">&quot;$listeners&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;$emit(&#x27;click&#x27;)&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Child组件上用$listeners接收外部传入的所有事件 同时有独立 click 绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Father</span> @<span class="attr">click</span>=<span class="string">&quot;onClick&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">Father</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Father 组件上 绑定  onClick  </p>
+<h5 id="行为"><a href="#行为" class="headerlink" title="行为"></a>行为</h5><p>此时触发 Child组件的 click 事件</p>
+<h5 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h5><p>onClick事件被触发 2 次</p>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>$listeners 中 click 和  单独绑定的 click 都被掉用了<br>我们在 Father 的 created中看一下 $listeners</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$listeners</span>  <span class="comment">// &#123; click: ƒ, input: ƒ&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h5><p>Father.$listeners.click 直接被绑到了 Child 上  @click 也被绑定到到了 Child 上<br>Child click 被触发<br>1 调用 Father.$listeners.click  （也就是onClick）<br>2 调用 @click -&gt; 触发 $emit(‘click’) -&gt; 调用 onClick</p>
+<h4 id="解决-3"><a href="#解决-3" class="headerlink" title="解决"></a>解决</h4><p>v-on&#x3D;”$listeners” 同时又想自己绑定一些事件的情况 防止重复调用 可以使用合并事件的方式</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">v-on</span>=<span class="string">&quot;listeners&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Father&quot;</span>,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">Child</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    <span class="title function_">listeners</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...<span class="variable language_">this</span>.<span class="property">$listeners</span>,</span><br><span class="line">        <span class="comment">// 用下面 click 覆盖  this.$listeners.click</span></span><br><span class="line">        <span class="attr">click</span>: <span class="function">() =&gt;</span> <span class="variable language_">this</span>.$emit(<span class="string">&quot;click&quot;</span>),</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="注意点-attrs-不会出现这种情况"><a href="#注意点-attrs-不会出现这种情况" class="headerlink" title="注意点 $attrs 不会出现这种情况"></a>注意点 $attrs 不会出现这种情况</h4><blockquote>
+<p>$attrs 包含了父作用域中不作为 prop 被识别 (且获取) 的 attribute 绑定 (class 和 style 除外)</p>
+</blockquote>
+<p>意味着 prop中的属性 就不会出现在 $attrs 中 ，导致重复出现</p>
+<h4 id="Vue3-去除了-listeners"><a href="#Vue3-去除了-listeners" class="headerlink" title="Vue3 去除了$listeners"></a>Vue3 去除了$listeners</h4><p>vue3 中去除了 $listeners 统一在 $attrs 中</p>
+<p>并且 添加了 emits ，同 props 用法类似， 是用于定义需要触发的事件的</p>
+<p>在 emits 和 props 定义的属性 都不会在 $attrs 中出现 ，这意味的不会出现多次调用的可能 ！ vue3是挺好！😏</p>
+
       
     </div>
 
@@ -396,7 +466,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -443,18 +513,141 @@
 <h3 id="elementUI-的-table-的每一项的-min-width-不要使用百分比"><a href="#elementUI-的-table-的每一项的-min-width-不要使用百分比" class="headerlink" title="elementUI 的 table 的每一项的 min-width 不要使用百分比"></a>elementUI 的 table 的每一项的 min-width 不要使用百分比</h3><blockquote>
 <p>elementUI 的 table 的每一项的 min-width 不要使用百分比 ,不然会出现这种情况</p>
 </blockquote>
-<p><img src="https://bitbw.top/public/img/my_gallery/image-20200227163411930.png" alt="image-20200227163411930"></p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20200227163411930.png" alt="image-20200227163411930"></p>
 <blockquote>
 <p>固定的序号和 checkbox 会掉下来</p>
 </blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h3 id="修改-el-table-表头高度的坑"><a href="#修改-el-table-表头高度的坑" class="headerlink" title="修改 el-table 表头高度的坑"></a>修改 el-table 表头高度的坑</h3><blockquote>
+<p>el-table 固定列的 table，在 dom 上是有两个 thead 的所以要修改表头高度就一定要两个都修改 ，不然会导致固定列表头高度与正常表头高度不一致现象 ，在薪酬项目的代码示例</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//处理表头高度</span></span><br><span class="line"><span class="selector-class">.el-table__header-wrapper</span> <span class="selector-tag">th</span> <span class="selector-class">.cell</span> <span class="selector-class">.edit-table-header</span> &gt; <span class="selector-tag">p</span> &gt; <span class="selector-tag">span</span>,</span><br><span class="line"><span class="selector-class">.el-table__fixed-header-wrapper</span> <span class="selector-tag">th</span> <span class="selector-class">.cell</span> <span class="selector-class">.edit-table-header</span> &gt; <span class="selector-tag">p</span> &gt; <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在-dialog-中使用-table-的问题"><a href="#在-dialog-中使用-table-的问题" class="headerlink" title="在 dialog 中使用 table 的问题"></a>在 dialog 中使用 table 的问题</h3><blockquote>
+<p>在 dialog 中使用 table 发现无论怎样设置表头都会出现表头高度不正常现象 和数据不正常现象</p>
+<p>这时可以使用 dialog 的 destroy-on-close 属性 （关闭时销毁 Dialog 中的元素）</p>
+</blockquote>
+<h3 id="el-table-自定义动态表头：更新数据之后表头不更新"><a href="#el-table-自定义动态表头：更新数据之后表头不更新" class="headerlink" title="el-table 自定义动态表头：更新数据之后表头不更新"></a>el-table 自定义动态表头：更新数据之后表头不更新</h3><p>在开发中 表头但是多级表头并且是动态遍历的 ，遍历的数据发生改变表头数据却没有更新</p>
+<h4 id="问题出现原因"><a href="#问题出现原因" class="headerlink" title="问题出现原因"></a>问题出现原因</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">v-for</span>=<span class="string">&quot;item in columnData&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--一级表头文字--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">&quot;header&quot;</span> <span class="attr">slot-scope</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-head&quot;</span>&gt;</span>&#123;&#123;item.name &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--.........战略性省略业务代码.........--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>排查了很久，后发现：在自定义表头的时候，由于是用的 v-for 循环生成的，因此会给每个循环体一个固定的 key，导致数据频繁更新时，因为这个 key 没有变，所以 el-table 觉得表头数据是没有变化的，因此就只更新了整体表格数据、key 值有变化的列的表头。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--表头的v-for中的key 使用 id + index 组合的形式使key变成动态的--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in tableData&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id + index&quot;</span>&gt;</span></span><br><span class="line">  .....</span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="el-form"><a href="#el-form" class="headerlink" title="el-form"></a>el-form</h2><h3 id="elementUI-的-form-表单数据-resetFields-重置方法注意事项"><a href="#elementUI-的-form-表单数据-resetFields-重置方法注意事项" class="headerlink" title="elementUI 的 form 表单数据 resetFields 重置方法注意事项"></a>elementUI 的 form 表单数据 resetFields 重置方法注意事项</h3><p>this.$refs.form<a href="">“resetFields”</a>;</p>
+<p>form 无法重置表单项的原因有以下四点：</p>
+<ol>
+<li>el-form-item 的 prop 属性缺失或属性值 不等于 字段名称</li>
+<li>表单项本身就有默认值</li>
+<li>表单数据绑定时未使用$nextTick 函数（resetFields 重置到挂载前的数据）</li>
+<li>未显示的表单项无法重置</li>
+</ol>
+<h3 id="form-的坑-element-ui-form-表单只有一个输入框获取焦点的时候回车会触发表单的-submit-事件，导致页面刷新"><a href="#form-的坑-element-ui-form-表单只有一个输入框获取焦点的时候回车会触发表单的-submit-事件，导致页面刷新" class="headerlink" title="form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新"></a>form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新</h3><p><strong>解决方法：</strong></p>
+<blockquote>
+<p>当一个 form 元素中只有一个输入框时，在该输入框中按下回车应提交该表单。如果希望阻止这一默认行为，可以在 标签上添加 @submit.native.prevent。</p>
+</blockquote>
+<h2 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h2><h3 id="elementUI-的-tree-的-loadData-从新加载节点方法使用"><a href="#elementUI-的-tree-的-loadData-从新加载节点方法使用" class="headerlink" title="elementUI 的 tree 的 loadData()从新加载节点方法使用"></a>elementUI 的 tree 的 loadData()从新加载节点方法使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 更新节点数据</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">currentNode</span>.<span class="property">loaded</span> = <span class="literal">false</span>; <span class="comment">//需要配合node.loaded = false 使用</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">currentNode</span>.<span class="title function_">loadData</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="elementUI-tree-未展开的子节点数据改变却不更新的-bug"><a href="#elementUI-tree-未展开的子节点数据改变却不更新的-bug" class="headerlink" title="elementUI tree 未展开的子节点数据改变却不更新的 bug"></a>elementUI tree 未展开的子节点数据改变却不更新的 bug</h3><p>不采用懒加载方式直接改变 tree 的 data 数据发现为展开的子节点数据改变，展开后展示的数据却未变，</p>
+<p>查看文档发现有个属性<code>render-after-expand</code>是否在第一次展开某个树节点后才渲染其子节点,</p>
+<p>设置为<code>false</code>就可以解决了</p>
+<h3 id="element-的-tree-的懒加载使用方法"><a href="#element-的-tree-的懒加载使用方法" class="headerlink" title="element 的 tree 的懒加载使用方法"></a>element 的 tree 的懒加载使用方法</h3><h4 id="load-属性"><a href="#load-属性" class="headerlink" title="load 属性"></a>load 属性</h4><p>懒加载子树数据的方法，需要配合 lazy 属性为 true 时生效，点开当前节点时就会触发； 类型：function(node, resolve)</p>
+<p><strong>node：</strong></p>
+<ul>
+<li>id: 26</li>
+<li>text: null</li>
+<li>checked: false</li>
+<li>indeterminate: false</li>
+<li>data: Object 当前绑定的 data</li>
+<li>expanded: true</li>
+<li>parent: Node 父节点</li>
+<li>visible: true</li>
+<li>isCurrent: false</li>
+<li>store: TreeStore</li>
+<li>level: 4 当前在第几级</li>
+<li>loaded: true</li>
+<li>childNodes: Array(5) 子节点</li>
+<li>loading: false</li>
+<li>isLeaf: false</li>
+<li>label: “中非莱基” 绑定显示的文字</li>
+<li>key: undefined</li>
+<li>disabled: “”</li>
+<li>nextSibling: Node</li>
+<li>previousSibling: Node</li>
+</ul>
+<p>**resolve:**接收子节点的 data 自动绑定到树上</p>
+<h4 id="props-属性"><a href="#props-属性" class="headerlink" title="props 属性"></a>props 属性</h4><p>定义 data 中的绑定项的 key</p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">类型</th>
+<th align="left">可选值</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">label</td>
+<td align="left">指定节点标签为节点对象的某个属性值</td>
+<td align="left">string, function(data, node)</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">children</td>
+<td align="left">指定子树为节点对象的某个属性值</td>
+<td align="left">string</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">disabled</td>
+<td align="left">指定节点选择框是否禁用为节点对象的某个属性值</td>
+<td align="left">boolean, function(data, node)</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left">isLeaf</td>
+<td align="left">指定节点是否为叶子节点，仅在指定了 lazy 属性的情况下生效</td>
+<td align="left">boolean, function(data, node)</td>
+<td align="left">—</td>
+<td align="left">—</td>
+</tr>
+</tbody></table>
+<h2 id="el-input"><a href="#el-input" class="headerlink" title="el-input"></a>el-input</h2><h3 id="el-input-同过正则限制只能输入正数可以带小数点-但不生效问题"><a href="#el-input-同过正则限制只能输入正数可以带小数点-但不生效问题" class="headerlink" title="el-input 同过正则限制只能输入正数可以带小数点 但不生效问题"></a>el-input 同过正则限制只能输入正数可以带小数点 但不生效问题</h3><p>代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">    type=<span class="string">&quot;text&quot;</span></span><br><span class="line">    v-model.<span class="property">number</span>=<span class="string">&quot;editingFormData.salary&quot;</span></span><br><span class="line">    oninput=<span class="string">&quot;value=value.replace(/^\D*(\d*(?:\.\d&#123;0,2&#125;)?).*$/g, &#x27;$1&#x27;)&quot;</span></span><br><span class="line">&gt;&lt;/el-input&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>正则一直不好 无法输入小数点 ， 是因为加了 number 修饰符无法输入小数点， 找了我一个多小时啊</p>
+</blockquote>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/%E6%AD%A3%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E5%8E%9F%E5%9B%A0.jpg" alt="正则不生效原因"></p>
+<h3 id="工作中出现的—表头带-input-搜索框-搜索后点击表格会刷新数据-bug"><a href="#工作中出现的—表头带-input-搜索框-搜索后点击表格会刷新数据-bug" class="headerlink" title="工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug"></a>工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug</h3><blockquote>
+<p>表格带表头 input 搜索的结构 搜索需要回车， 发现每次搜索回车后 点击表格或其他地方， 表格会刷新一下，经同事指点打开 Network 发现 ，点击其他地方会发次请求，打开 table 组件的源码发现 被别的同事添加了@blur 失去焦点事件，并且与回车事件调用同一个函数，因为回车不会使 input 框失去焦点，点击表格其他地方时 input 失去焦点导致再次触发搜索，所有好像自己刷新了一下的样子。 下面是表格内 input 的代码</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-if</span>=<span class="string">&quot;[undefined, &#x27;&#x27;, &#x27;input&#x27;, &#x27;button&#x27;, &#x27;string&#x27;].includes(field.fieldType)&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;field.headerSearchAttrs&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model.trim</span>=<span class="string">&quot;field.inputValue&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">clearable</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:placeholder</span>=<span class="string">&quot;field.label&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">keyup.enter.native</span>=<span class="string">&quot;handleBlur(field.prop, field.inputValue)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">blur</span>=<span class="string">&quot;handleBlur(field.prop, field.inputValue)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">clear</span>=<span class="string">&quot;clearQueryInput&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- @keyup.enter 和@blur调用同一函数产生的bug --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="el-image"><a href="#el-image" class="headerlink" title="el-image"></a>el-image</h2><h3 id="elementUI-的-image-的-src-加载-vue-系统或本地图片的方法（重要）"><a href="#elementUI-的-image-的-src-加载-vue-系统或本地图片的方法（重要）" class="headerlink" title="elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）"></a>elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）</h3><blockquote>
+<p>正常情况以下情形是不生效的， 会提示找不到图片 所以需要用到，原生的 require 方法</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;message-item&quot; v-for=&quot;(item, index) in uploadMessage&quot; :key=&quot;index&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;item-txt&quot;&gt;&#123;&#123;item.txt&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;el-image :src=&quot;item.img&quot; :preview-src-list=&quot;srcList&quot;&gt;&lt;/el-image&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//js部分</span></span><br><span class="line">uploadMessage = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">]; <span class="comment">//提示</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图片会显示加载失败 ， 修改后 的代码结构 如下</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">uploadMessage = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"><span class="comment">//大图地址也需要加require</span></span><br><span class="line">srcList = [</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>),</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<h2 id="样式问题"><a href="#样式问题" class="headerlink" title="样式问题"></a>样式问题</h2><ul>
+<li>table 通过 th display: table-cell !important; 控制在谷歌浏览器下边框不对齐问题</li>
+<li>导航菜单选中项样式问题通过类名.is-active 设置</li>
+<li>顶部 logo 部分的顶部栏的高度，和子项宽度 都是通过 flex 属性设置，flex ：0 0 220px</li>
+<li>elementui 的样式变量在 E:\project\hr-web-container\node_modules\element-ui\packages\theme-chalk\src\common\var.scss 内</li>
+</ul>
+<h2 id="date-picker"><a href="#date-picker" class="headerlink" title="date-picker"></a>date-picker</h2><h3 id="问题-datepicker-星期日期选择组件。绑定值格式化为时间戳时会出现乱码"><a href="#问题-datepicker-星期日期选择组件。绑定值格式化为时间戳时会出现乱码" class="headerlink" title="问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码"></a>问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码</h3><p><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/element/issues/21159">github issues</a></p>
+<p>将datepicker组件的type属性设置为week，value-format属性设置为timestamp，此时无法回显选择的日期，通过打印v-model值可以得知此时的v-model正确值是乱码 <code>ti0e0tam0p</code></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>目前 github 上没有解决 elementUI 2 已经没有维护了 ， value-format尽量别设置为timestamp 就可以避免这个问题</p>
+
       
     </div>
 
@@ -516,7 +709,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -625,7 +818,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -672,14 +865,51 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sources&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue?1c47&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue?abb9&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///src/views/404.vue&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue?ead0&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;webpack:///./src/views/404.vue&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;names&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;render&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_vm&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;this&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_h&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;$createElement&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_c&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_self&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;staticClass&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;_v&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;staticRenderFns&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;component&quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="comment">// 压缩后的代码只有一行所以没有; 号</span></span><br><span class="line">    <span class="attr">&quot;mappings&quot;</span><span class="punctuation">:</span> <span class="string">&quot;uGAAA,W,2CCAA,IAAIA,EAAS,WAAa,IAAIC,EAAIC,KAASC,EAAGF,EAAIG,eAAmBC,EAAGJ,EAAIK,MAAMD,IAAIF,EAAG,OAAOE,EAAG,MAAM,CAACE,YAAY,aAAa,CAACN,EAAIO,GAAG,UACvIC,EAAkB,GCGP,KCJ4V,I,wBCQvWC,EAAY,eACd,EACAV,EACAS,GACA,EACA,KACA,KACA,MAIa,aAAAC,E&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;file&quot;</span><span class="punctuation">:</span> <span class="string">&quot;js/404.f6b2607e.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sourcesContent&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;export * f..... &quot;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;sourceRoot&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="bullet">-</span> <span class="string">version：Source map的版本，目前为3。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">file：转换后的文件名。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">sourceRoot：转换前的文件所在的目录。如果与转换前的文件在同一目录，该项为空。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">sources：转换前的文件。该项是一个数组，表示可能存在多个文件合并。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">names：转换前的所有变量名和属性名。</span></span><br><span class="line"></span><br><span class="line">　　<span class="bullet">-</span> <span class="string">mappings：记录位置信息的字符串，下文详细介绍。</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/18/js/JavaScriptpt-SourceMap-%E5%AD%A6%E4%B9%A0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<h2 id="mappings属性"><a href="#mappings属性" class="headerlink" title="mappings属性"></a>mappings属性</h2><p>下面才是真正有趣的部分：两个文件的各个位置是如何一一对应的。</p>
+<p>关键就是map文件的mappings属性。这是一个很长的字符串，它分成三层。</p>
+<blockquote>
+<p>　第一层是<strong>行对应</strong>，以分号（;）表示，每个分号对应转换后源码的一行。所以，第一个分号前的内容，就对应源码的第一行，以此类推。</p>
+<p>　第二层是<strong>位置对应</strong>，以逗号（,）表示，每个逗号对应转换后源码的一个位置。所以，第一个逗号前的内容，就对应该行源码的第一个位置，以此类推。</p>
+<p>　第三层是<strong>位置转换</strong>，以<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable-length_quantity">VLQ编码</a>表示，代表该位置对应的转换前的源码位置。</p>
+</blockquote>
+<p>举例来说，假定mappings属性的内容如下：</p>
+<blockquote>
+<p>　mappings:”AAAAA,BBBBB;CCCCC”</p>
+</blockquote>
+<p>就表示，转换后的源码分成两行，第一行有两个位置，第二行有一个位置。</p>
+<h2 id="位置对应的原理"><a href="#位置对应的原理" class="headerlink" title="位置对应的原理"></a>位置对应的原理</h2><p>每个位置使用五位，表示五个字段。</p>
+<p>从左边算起，</p>
+<blockquote>
+<p>　- 第一位，表示这个位置在（转换后的代码的）的第几列。</p>
+<p>　- 第二位，表示这个位置属于sources属性中的哪一个文件。</p>
+<p>　- 第三位，表示这个位置属于转换前代码的第几行。</p>
+<p>　- 第四位，表示这个位置属于转换前代码的第几列。</p>
+<p>　- 第五位，表示这个位置属于names属性中的哪一个变量。</p>
+</blockquote>
+<p>有几点需要说明。首先，所有的值都是以0作为基数的。其次，第五位不是必需的，如果该位置没有对应names属性中的变量，可以省略第五位。再次，每一位都采用VLQ编码表示；由于VLQ编码是变长的，所以每一位可以由多个字符构成。</p>
+<p>如果某个位置是AAAAA，由于A在VLQ编码中表示0，因此这个位置的五个位实际上都是0。它的意思是，该位置在转换后代码的第0列，对应sources属性中第0个文件，属于转换前代码的第0行第0列，对应names属性中的第0个变量。</p>
+<h2 id="VLQ编码"><a href="#VLQ编码" class="headerlink" title="VLQ编码"></a>VLQ编码</h2><p>最后，谈谈如何用<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable-length_quantity">VLQ编码</a>表示数值。</p>
+<p>这种编码最早用于MIDI文件，后来被多种格式采用。它的特点就是可以非常精简地表示很大的数值。</p>
+<p>VLQ编码是变长的。如果（整）数值在-15到+15之间（含两个端点），用一个字符表示；超出这个范围，就需要用多个字符表示。它规定，每个字符使用6个两进制位，正好可以借用<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Base_64">Base 64</a>编码的字符表。</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20220318142001.png" alt="img"></p>
+<p>在这6个位中，左边的第一位（最高位）表示是否”连续”（continuation）。如果是1，代表这６个位后面的6个位也属于同一个数；如果是0，表示该数值到这6个位结束。</p>
+<blockquote>
+<p>　Continuation<br>　|　　　　　Sign<br>　|　　　　　|<br>　V　　　　　V<br>　１０１０１１</p>
+</blockquote>
+<p>这6个位中的右边最后一位（最低位）的含义，取决于这6个位是否是某个数值的VLQ编码的第一个字符。如果是的，这个位代表”符号”（sign），0为正，1为负（Source map的符号固定为0）；如果不是，这个位没有特殊含义，被算作数值的一部分。</p>
+<h2 id="VLQ编码：实例"><a href="#VLQ编码：实例" class="headerlink" title="VLQ编码：实例"></a>VLQ编码：实例</h2><p>下面看一个例子，如何对数值16进行VLQ编码。</p>
+<blockquote>
+<p>　第一步，将16改写成二进制形式10000。</p>
+<p>　第二步，在最右边补充符号位。因为16大于0，所以符号位为0，整个数变成100000。</p>
+<p>　第三步，从右边的最低位开始，将整个数每隔5位，进行分段，即变成1和00000两段。如果最高位所在的段不足5位，则前面补0，因此两段变成00001和00000。</p>
+<p>　第四步，将两段的顺序倒过来，即00000和00001。</p>
+<p>　第五步，在每一段的最前面添加一个”连续位”，除了最后一段为0，其他都为1，即变成100000和000001。</p>
+<p>　第六步，将每一段转成Base 64编码。</p>
+</blockquote>
+<p>查表可知，100000为g，000001为B。因此，数值16的VLQ编码为gB。上面的过程，看上去好像很复杂，做起来其实很简单，具体的实现请看官方的<a target="_blank" rel="noopener" href="https://github.com/mozilla/source-map/blob/master/lib/source-map/base64-vlq.js">base64-vlq.js</a>文件，里面有详细的注释。</p>
+<p>转换VLQ编码 <a target="_blank" rel="noopener" href="https://www.murzwin.com/base64vlq.html">https://www.murzwin.com/base64vlq.html</a></p>
+
       
     </div>
 
@@ -741,7 +971,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -878,14 +1108,410 @@
 <h2 id="JavaScript-使用-32-位按位运算数"><a href="#JavaScript-使用-32-位按位运算数" class="headerlink" title="JavaScript 使用 32 位按位运算数"></a>JavaScript 使用 32 位按位运算数</h2><p>JavaScript 将数字存储为 64 位浮点数，但所有按位运算都以 32 位二进制数执行。</p>
 <p>在执行位运算之前，JavaScript 将数字转换为 32 位有符号整数。</p>
 <p>执行按位操作后，结果将转换回 64 位 JavaScript 数。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/08/18/js/JavaScript%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p>上面的例子使用 4 位无符号二进制数。所以 ~ 5 返回 10。</p>
+<p>由于 JavaScript 使用 32 位有符号整数，JavaScript 将返回 -6。</p>
+<p>00000000000000000000000000000101 (5)</p>
+<p>11111111111111111111111111111010 (~5 &#x3D; -6)</p>
+<p>有符号整数使用最左边的位作为减号。</p>
+<h2 id="位运算-AND"><a href="#位运算-AND" class="headerlink" title="位运算 AND"></a>位运算 AND</h2><p>当对一对数位执行位运算 AND 时，如果数位均为 1 则返回 1。</p>
+<h3 id="单位示例："><a href="#单位示例：" class="headerlink" title="单位示例："></a>单位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0 &amp; 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0 &amp; 1</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">1 &amp; 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">1 &amp; 1</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<h3 id="四位示例："><a href="#四位示例：" class="headerlink" title="四位示例："></a>四位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1111 &amp; 0000</td>
+<td align="left">0000</td>
+</tr>
+<tr>
+<td align="left">1111 &amp; 0001</td>
+<td align="left">0001</td>
+</tr>
+<tr>
+<td align="left">1111 &amp; 0010</td>
+<td align="left">0010</td>
+</tr>
+<tr>
+<td align="left">1111 &amp; 0100</td>
+<td align="left">0100</td>
+</tr>
+</tbody></table>
+<h2 id="位运算-OR"><a href="#位运算-OR" class="headerlink" title="位运算 OR"></a>位运算 OR</h2><p>当对一对数位执行位运算 OR 时，如果其中一位是 1 则返回 1：</p>
+<h3 id="单位示例"><a href="#单位示例" class="headerlink" title="单位示例"></a>单位示例</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0 | 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0 | 1</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 | 0</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 | 1</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<h3 id="四位运算："><a href="#四位运算：" class="headerlink" title="四位运算："></a>四位运算：</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1111 | 0000</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 | 0001</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 | 0010</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 | 0100</td>
+<td align="left">1111</td>
+</tr>
+</tbody></table>
+<h2 id="位运算-XOR"><a href="#位运算-XOR" class="headerlink" title="位运算 XOR"></a>位运算 XOR</h2><p>当对一对数位进行位运算 XOR 时，如果数位是不同的则返回 1：</p>
+<h3 id="单位示例：-1"><a href="#单位示例：-1" class="headerlink" title="单位示例："></a>单位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0 ^ 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0 ^ 1</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 ^ 0</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 ^ 1</td>
+<td align="left">0</td>
+</tr>
+</tbody></table>
+<h3 id="四位示例：-1"><a href="#四位示例：-1" class="headerlink" title="四位示例："></a>四位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1111 ^ 0000</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 ^ 0001</td>
+<td align="left">1110</td>
+</tr>
+<tr>
+<td align="left">1111 ^ 0010</td>
+<td align="left">1101</td>
+</tr>
+<tr>
+<td align="left">1111 ^ 0100</td>
+<td align="left">1011</td>
+</tr>
+</tbody></table>
+<h2 id="JavaScript-位运算-AND-amp"><a href="#JavaScript-位运算-AND-amp" class="headerlink" title="JavaScript 位运算 AND (&amp;)"></a>JavaScript 位运算 AND (&amp;)</h2><p>如果位数都是 1，则位运算 AND 返回 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">00000000000000000000000000000001</td>
+</tr>
+<tr>
+<td align="left">5 &amp; 1</td>
+<td align="left">00000000000000000000000000000001 (1)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var</span> x = <span class="number">5</span> &amp; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-位运算-OR"><a href="#JavaScript-位运算-OR" class="headerlink" title="JavaScript 位运算 OR (|)"></a>JavaScript 位运算 OR (|)</h2><p>如果数位之一是 1，则位运算 OR 返回 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">00000000000000000000000000000001</td>
+</tr>
+<tr>
+<td align="left">5 | 1</td>
+<td align="left">00000000000000000000000000000101 (5)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var</span> x = <span class="number">5</span> | <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-位运算-XOR"><a href="#JavaScript-位运算-XOR" class="headerlink" title="JavaScript 位运算 XOR (^)"></a>JavaScript 位运算 XOR (^)</h2><p>如果数位是不同的，则 XOR 返回 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">00000000000000000000000000000001</td>
+</tr>
+<tr>
+<td align="left">5 ^ 1</td>
+<td align="left">00000000000000000000000000000100 (4)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var</span> x = <span class="number">5</span> ^ <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-位运算-NOT"><a href="#JavaScript-位运算-NOT" class="headerlink" title="JavaScript 位运算 NOT (~)"></a>JavaScript 位运算 NOT (~)</h2><table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">~5</td>
+<td align="left">11111111111111111111111111111010 (-6)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-4"><a href="#实例-4" class="headerlink" title="实例"></a>实例</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var x</span> = ~5;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript（零填充）位运算左移（-lt-lt-）"><a href="#JavaScript（零填充）位运算左移（-lt-lt-）" class="headerlink" title="JavaScript（零填充）位运算左移（&lt;&lt;）"></a>JavaScript（零填充）位运算左移（&lt;&lt;）</h2><p>这是零填充的左移。一个或多个零数位从右被推入，最左侧的数位被移除：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">5 &lt;&lt; 1</td>
+<td align="left">00000000000000000000000000001010 (10)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-5"><a href="#实例-5" class="headerlink" title="实例"></a>实例</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x <span class="operator">=</span> <span class="number">5</span> &lt;&lt; <span class="number">1</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript（有符号）位运算右移（-gt-gt-）"><a href="#JavaScript（有符号）位运算右移（-gt-gt-）" class="headerlink" title="JavaScript（有符号）位运算右移（&gt;&gt;）"></a>JavaScript（有符号）位运算右移（&gt;&gt;）</h2><p>这是保留符号的右移。最左侧的数位被从左侧推入，最右侧的数位被移出：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-5</td>
+<td align="left">11111111111111111111111111111011</td>
+</tr>
+<tr>
+<td align="left">-5 &gt;&gt; 1</td>
+<td align="left">11111111111111111111111111111101 (-3)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-6"><a href="#实例-6" class="headerlink" title="实例"></a>实例</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x <span class="operator">=</span> -<span class="number">5</span> &gt;&gt; <span class="number">1</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript（零填充）右移（-gt-gt-gt-）"><a href="#JavaScript（零填充）右移（-gt-gt-gt-）" class="headerlink" title="JavaScript（零填充）右移（&gt;&gt;&gt;）"></a>JavaScript（零填充）右移（&gt;&gt;&gt;）</h2><p>这是零填充的右移。一个或多个零数位从左侧被推入，最右侧的数位被移出：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">5 &gt;&gt;&gt; 1</td>
+<td align="left">00000000000000000000000000000010 (2)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-7"><a href="#实例-7" class="headerlink" title="实例"></a>实例</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x <span class="operator">=</span> <span class="number">5</span> &gt;&gt;&gt; <span class="number">1</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="32-bit-有符号整数（二进制数）"><a href="#32-bit-有符号整数（二进制数）" class="headerlink" title="32-bit 有符号整数（二进制数）"></a>32-bit 有符号整数（二进制数）</h2><p>仅设置一位的 32 位整数很好理解：</p>
+<table>
+<thead>
+<tr>
+<th align="left">二进制表示</th>
+<th align="left">十进制值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00000000000000000000000000000001</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000000010</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000000100</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000001000</td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000010000</td>
+<td align="left">16</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000100000</td>
+<td align="left">32</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000001000000</td>
+<td align="left">64</td>
+</tr>
+</tbody></table>
+<p>多设置一些数位揭示了二进制的模式：</p>
+<table>
+<thead>
+<tr>
+<th align="left">二进制表示</th>
+<th align="left">十进制值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00000000000000000000000000000101</td>
+<td align="left">5 (4 + 1)</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000101000</td>
+<td align="left">40 (32 + 8)</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000101101</td>
+<td align="left">45 (32 + 8 + 4 + 1)</td>
+</tr>
+</tbody></table>
+<p>负数是正数的二进制补码加 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">二进制表示</th>
+<th align="left">十进制值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00000000000000000000000000000101</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">11111111111111111111111111111011</td>
+<td align="left">-5</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000101000</td>
+<td align="left">40</td>
+</tr>
+<tr>
+<td align="left">11111111111111111111111111011000</td>
+<td align="left">-40</td>
+</tr>
+<tr>
+<td align="left">11111111111111111111111111011001</td>
+<td align="left">-41</td>
+</tr>
+</tbody></table>
+<h2 id="把十进制转换为二进制"><a href="#把十进制转换为二进制" class="headerlink" title="把十进制转换为二进制"></a>把十进制转换为二进制</h2><h3 id="实例-8"><a href="#实例-8" class="headerlink" title="实例"></a>实例</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">dec2bin</span>(dec)&#123;</span><br><span class="line">	// 字符串数字转化为数字</span><br><span class="line">    <span class="keyword">return</span> <span class="type">(dec</span> &gt;&gt;&gt; <span class="number">0</span>).toString(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="把二进制转换为十进制"><a href="#把二进制转换为十进制" class="headerlink" title="把二进制转换为十进制"></a>把二进制转换为十进制</h2><h3 id="实例-9"><a href="#实例-9" class="headerlink" title="实例"></a>实例</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">bin2dec</span>(bin)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">parseInt(bin,</span> <span class="number">2</span>).toString(<span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="parseInt-toString-实现各个进制的转换"><a href="#parseInt-toString-实现各个进制的转换" class="headerlink" title="parseInt+toString 实现各个进制的转换"></a>parseInt+toString 实现各个进制的转换</h2><ul>
+<li><p>parseInt:将任意进制的数字转化为十进制</p>
+</li>
+<li><p>toString:将十进制的数字转化为任意进制</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>); <span class="comment">//八进制转十进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">16</span>); <span class="comment">//十六进制转十进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num).<span class="title function_">toString</span>(<span class="number">8</span>); <span class="comment">//十进制转八进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num).<span class="title function_">toString</span>(<span class="number">16</span>); <span class="comment">//十进制转十六进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">8</span>); <span class="comment">//二进制转八进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">16</span>); <span class="comment">//二进制转十六进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>).<span class="title function_">toString</span>(<span class="number">2</span>); <span class="comment">//八进制转二进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>).<span class="title function_">toString</span>(<span class="number">16</span>); <span class="comment">//八进制转十六进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">16</span>).<span class="title function_">toString</span>(<span class="number">2</span>); <span class="comment">//十六进制转二进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">16</span>).<span class="title function_">toString</span>(<span class="number">8</span>); <span class="comment">//十六进制转八进制</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>以 0X、0x 开头的表示为十六进制。 0xf &#x2F;&#x2F;15</li>
+<li>以 0、0O、0o 开头的表示为八进制。0o12 &#x2F;&#x2F;10</li>
+<li>以 0B、0b 开头的表示为二进制格式。 0b11&#x2F;&#x2F;3</li>
+</ul>
+</blockquote>
+<p>以上在 js 中可直接使用，可自动转化为对应的 10 进制</p>
+
       
     </div>
 
@@ -947,7 +1573,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -966,7 +1592,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>6.1k</span>
+      <span>6.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1072,7 +1698,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1179,7 +1805,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1221,14 +1847,6 @@
 
 <h2 id="merges-的使用"><a href="#merges-的使用" class="headerlink" title="merges 的使用"></a>merges 的使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">........</span><br><span class="line"><span class="comment">// 设置单元格合并</span></span><br><span class="line">data[<span class="string">&quot;!merges&quot;</span>] = [&#123;</span><br><span class="line">    <span class="attr">s</span>: &#123;<span class="comment">//s为开始</span></span><br><span class="line">        <span class="attr">c</span>: <span class="number">1</span>,<span class="comment">//开始列</span></span><br><span class="line">        <span class="attr">r</span>: <span class="number">0</span><span class="comment">//可以看成开始行,实际是取值范围</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">e</span>: &#123;<span class="comment">//e结束</span></span><br><span class="line">        <span class="attr">c</span>: <span class="number">4</span>,<span class="comment">//结束列</span></span><br><span class="line">        <span class="attr">r</span>: <span class="number">0</span><span class="comment">//结束行</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;];</span><br><span class="line">........</span><br></pre></td></tr></table></figure>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/07/30/%E6%8F%92%E4%BB%B6/XLSX-js%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -1290,7 +1908,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1332,14 +1950,6 @@
 <p>child1 设置高度无效</p>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.child1</span>&#123;</span><br><span class="line">  <span class="comment">/* 生效 */</span></span><br><span class="line">  <span class="attribute">flex</span>:<span class="number">0</span> <span class="number">0</span> <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/08/CSS/CSS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -1401,7 +2011,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1448,14 +2058,12 @@
 
 <h3 id="具体示例"><a href="#具体示例" class="headerlink" title="具体示例"></a>具体示例</h3><p>输出到 tree.md</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">treer -i <span class="string">&quot;/node_modules|dist_electron|devtools|nouse|.git|.vscode/&quot;</span> -e <span class="string">&quot;tree.md&quot;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/22/js/treer%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E7%9B%AE%E5%BD%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<h2 id="使用-git-bash-tree-命令"><a href="#使用-git-bash-tree-命令" class="headerlink" title="使用 git bash tree 命令"></a>使用 git bash tree 命令</h2><p>git 中默认不带 tree 命令 需要下载 <code>tree.exe</code> 并将其复制到 <code>/git/usr/bin</code> 目录下,这样 <code>git bash</code> 本身就支持 <code>tree</code> 命令了.</p>
+<p>下载地址： <a target="_blank" rel="noopener" href="https://github.com/zruibin/tree/blob/master/tree.exe">https://github.com/zruibin/tree/blob/master/tree.exe</a></p>
+<h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><p>输出到 tree.md</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree -I  <span class="string">&quot;node_modules|devtools|dist_electron|public|nouse&quot;</span>  &gt; tree.md</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -1497,13 +2105,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -1531,9 +2139,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -1541,14 +2153,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/page/10/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -1573,8 +2189,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"4065e8cbb1e607e1dc8e81e55bc43eb9"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

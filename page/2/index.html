@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
 <meta property="og:type" content="website">
@@ -227,7 +228,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -328,14 +328,30 @@
 
 <p>或者</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx eslint --init</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/27/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/ESlint%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<p>根据提示进行配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ npx eslint --init</span><br><span class="line">You can also run this <span class="built_in">command</span> directly using <span class="string">&#x27;npm init @eslint/config&#x27;</span>.</span><br><span class="line">√ How would you like to use ESLint? · style</span><br><span class="line">√ What <span class="built_in">type</span> of modules does your project use? · none</span><br><span class="line">√ Which framework does your project use? · none</span><br><span class="line">√ Does your project use TypeScript? · No / Yes</span><br><span class="line">√ Where does your code run? · browser</span><br><span class="line">√ How would you like to define a style <span class="keyword">for</span> your project? · prompt</span><br><span class="line">√ What format <span class="keyword">do</span> you want your config file to be <span class="keyword">in</span>? · JavaScript</span><br><span class="line">√ What style of indentation <span class="keyword">do</span> you use? · tab</span><br><span class="line">√ What quotes <span class="keyword">do</span> you use <span class="keyword">for</span> strings? · double</span><br><span class="line">√ What line endings <span class="keyword">do</span> you use? · unix</span><br><span class="line">√ Do you require semicolons? · No / Yes</span><br><span class="line">A config file was generated, but the config file itself may not follow your linting rules.</span><br><span class="line">Successfully created .eslintrc.js file <span class="keyword">in</span> C:\ls-project03\miniprogr</span><br></pre></td></tr></table></figure>
+
+<p>运行 <code>eslint --init</code> 之后，<code>.eslintrc</code> 文件会在你的文件夹中自动创建</p>
+<h3 id="配合-prettier-的配置"><a href="#配合-prettier-的配置" class="headerlink" title="配合 prettier 的配置"></a>配合 prettier 的配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">env</span>: &#123;</span><br><span class="line">    <span class="attr">browser</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">es2021</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 添加 prettier 预设配置</span></span><br><span class="line"> + <span class="attr">extends</span>: [<span class="string">&quot;plugin:prettier/recommended&quot;</span>],</span><br><span class="line">  <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">ecmaVersion</span>: <span class="string">&quot;latest&quot;</span>,</span><br><span class="line">    <span class="attr">sourceType</span>: <span class="string">&quot;module&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">  <span class="comment">// prettier 错误变为警告</span></span><br><span class="line">  +  <span class="string">&quot;prettier/prettier&quot;</span>: [<span class="string">&quot;warn&quot;</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="设置排除文件"><a href="#设置排除文件" class="headerlink" title="设置排除文件"></a>设置排除文件</h2><h3 id="eslintignore"><a href="#eslintignore" class="headerlink" title=".eslintignore"></a>.eslintignore</h3><p>项目目录添加<code>.eslintignore</code> 文件,添加需要 eslint 排除的文件 默认排除 node_modules</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">node_modules</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="prettierignore"><a href="#prettierignore" class="headerlink" title=".prettierignore"></a>.prettierignore</h3><p>项目目录添加<code>.prettierignore</code> 文件,添加需要 prettier 排除的文件 tip:prettier 默认排除 node_modules</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">node_modules</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-npm-脚本"><a href="#添加-npm-脚本" class="headerlink" title="添加 npm 脚本"></a>添加 npm 脚本</h2><p>package.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"> + <span class="attr">&quot;lint&quot;</span><span class="punctuation">:</span> <span class="string">&quot;prettier --write .&quot;</span><span class="punctuation">,</span></span><br><span class="line"> + <span class="attr">&quot;lint:js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;eslint --fix .&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p><code>prettier --write . </code> 修复项目目录下所有文件,&#96;&#96;.prettierignore<code> </code>会被排除</p>
+<p><code>eslint --fix . </code> 修复项目目录下所有 js 文件,&#96;&#96;.eslintignore<code> </code>会被排除</p>
+<h2 id="设置-commit-时自动-lint"><a href="#设置-commit-时自动-lint" class="headerlink" title="设置 commit 时自动 lint"></a>设置 commit 时自动 lint</h2><p>安装 husky 和 lint-staged 并自动配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx mrm@2 lint-staged</span><br></pre></td></tr></table></figure>
+
+<p>修改 package.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   - <span class="attr">&quot;*.js&quot;</span><span class="punctuation">:</span> <span class="string">&quot;eslint --cache --fix&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="comment">// 使用 prettier 进行 lint</span></span><br><span class="line">   +<span class="attr">&quot;*&quot;</span><span class="punctuation">:</span> <span class="string">&quot;prettier --ignore-unknown --write&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -397,7 +413,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -438,14 +454,6 @@
 
 <p>注意：端口号映射， 防止端口占用 –publish 8443:443 –publish 8081:80 –publish 10022:22 \</p>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/19/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/gitlab%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -507,7 +515,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -549,7 +557,7 @@
 <h1 id="一、配置自己的提交规范"><a href="#一、配置自己的提交规范" class="headerlink" title="一、配置自己的提交规范"></a>一、配置自己的提交规范</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 安装commitizen</span></span><br><span class="line">npm install -g commitizen</span><br><span class="line"></span><br><span class="line"><span class="comment">// commitizen根据不同的`adapter`配置commit message</span></span><br><span class="line">npm install -g cz-conventional-changelog</span><br><span class="line">echo <span class="string">&#x27;&#123; &quot;path&quot;: &quot;cz-conventional-changelog&quot; &#125;&#x27;</span> &gt; ~/.<span class="property">czrc</span></span><br></pre></td></tr></table></figure>
 
 <p>配置完成后，在你本地进入任何的 git repository， 使用 <code>git cz</code> 代替 <code>git commit</code> 都会出现选项，用来生成符合格式的 Commit message，如下图：</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88224b4fdeee491faf7beeb3a60a079b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+<p><img data-src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88224b4fdeee491faf7beeb3a60a079b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
 <h1 id="二、自定义提交规范"><a href="#二、自定义提交规范" class="headerlink" title="二、自定义提交规范"></a>二、自定义提交规范</h1><blockquote>
 <p>以下讲的式项目中的自定义提交规范，全局配置参考<a href="https://link.juejin.cn/?target=https://blog.csdn.net/weixin_34249367/article/details/88817593">：这篇大佬的文章</a></p>
 </blockquote>
@@ -557,14 +565,133 @@
 <blockquote>
 <p><code>cz-customizable</code> 和 <code>cz-conventional-changelog</code> 一样，都是 commitize n 的 adapter，但是 <code>cz-customizable</code> 支持一定程度上的自定义</p>
 </blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/14/Git/%E8%A7%84%E8%8C%83%E5%8C%96Git%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<ol>
+<li><p>安装 <code>npm i cz-customizable --save-dev</code></p>
+</li>
+<li><p>将以下配置添加到 <code>package.json</code>中</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;commitizen&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">     <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span><span class="string">&quot;node_modules/cz-customizable&quot;</span></span><br><span class="line">   <span class="punctuation">&#125;</span></span><br><span class="line"> <span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>项目根目录下创建 <code>.cz-config.js</code> 自定义提示文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 可选类型</span></span><br><span class="line">  <span class="attr">types</span>:[</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;feat&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;feat:      新功能&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;fix&#x27;</span>,      <span class="attr">name</span>: <span class="string">&#x27;fix:       修复&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;docs&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;docs:      文档变更&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;style&#x27;</span>,    <span class="attr">name</span>: <span class="string">&#x27;style:     代码格式（不影响代码运行的变动）&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;refactor&#x27;</span>, <span class="attr">name</span>: <span class="string">&#x27;refactor:  重构（既不是增加feature）,也不是修复bug&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;pref&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;pref:      性能优化&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;test&#x27;</span>,     <span class="attr">name</span>: <span class="string">&#x27;test:      增加测试&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;chore&#x27;</span>,    <span class="attr">name</span>: <span class="string">&#x27;chore:     构建过程或辅助工具的变动&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;revert&#x27;</span>,   <span class="attr">name</span>: <span class="string">&#x27;revert:    回退&#x27;</span>&#125;,</span><br><span class="line">    &#123; <span class="attr">value</span>: <span class="string">&#x27;build&#x27;</span>,    <span class="attr">name</span>: <span class="string">&#x27;build:     打包&#x27;</span>&#125;</span><br><span class="line">  ],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 步骤</span></span><br><span class="line">  <span class="attr">messages</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;请选择提交的类型；&#x27;</span>,</span><br><span class="line">    <span class="attr">customScope</span>: <span class="string">&#x27;请输入修改的范围（可选）&#x27;</span>,</span><br><span class="line">    <span class="attr">subject</span>: <span class="string">&#x27;请简要描述提交（必填）&#x27;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;请输入详细描述（可选）&#x27;</span>,</span><br><span class="line">    <span class="attr">footer</span>: <span class="string">&#x27;请选择要关闭的issue（可选）&#x27;</span>,</span><br><span class="line">    <span class="attr">confirmCommit</span>: <span class="string">&#x27;确认要使用以上信息提交？（y/n）&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 跳过步骤</span></span><br><span class="line">  <span class="attr">skip</span>: [<span class="string">&#x27;body&#x27;</span>, <span class="string">&#x27;footer&#x27;</span>],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 默认长度</span></span><br><span class="line">  <span class="attr">subjectLimit</span>: <span class="number">72</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时，我们执行 <code>git cz</code> 的时候即可按照自己配置的规范，进行选项信息的填写，如下图</p>
+<p><img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6295ba68b744044b6f25df980c1fc2b~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+</ol>
+<h1 id="三、husky-Git-hooks-配置提交校验"><a href="#三、husky-Git-hooks-配置提交校验" class="headerlink" title="三、husky + Git hooks 配置提交校验"></a>三、husky + Git hooks 配置提交校验</h1><ol>
+<li>Git Hooks</li>
+</ol>
+<blockquote>
+<p>整体的 hooks 非常多,但是我们用的比较多的其实只有两个</p>
+<ol>
+<li><code>commit-msg</code><ul>
+<li>由 <code>git commit</code> 和 <code>git merge</code> 调用</li>
+<li>可以使用 <code>git commit --no-verify</code> 绕过</li>
+</ul>
+</li>
+<li><code>pre-commit</code><ul>
+<li>由 <code>git commit</code> 调用</li>
+<li>可以使用 <code>git commit --no-verify</code> 绕过</li>
+<li>在获取建议的提交日志消息和进行提交之前被调用</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li>husky</li>
+</ol>
+<blockquote>
+<p>husky 是一个 Git Hook 工具 husky 的具体使用可以参考<a href="https://link.juejin.cn/?target=https://zhuanlan.zhihu.com/p/366786798">：这篇大佬文章</a></p>
+</blockquote>
+<h2 id="1、使用-husky-commitlint-检查提交-message-是否符合规范"><a href="#1、使用-husky-commitlint-检查提交-message-是否符合规范" class="headerlink" title="1、使用 husky + commitlint 检查提交 message 是否符合规范"></a>1、使用 <code>husky + commitlint</code> 检查提交 message 是否符合规范</h2><blockquote>
+<p>在前面的配置中，我们已经可以实现使用 <code>git cz</code> 调出规范选项，进行规范的 message 的编辑；</p>
+<p>但是如果我们忘记使用 <code>git cz</code>, 直接使用了 <code>git commit -m &quot;my commit&quot;</code>, message 信息依然会被提交上去，项目中会出现不规范的提交 message</p>
+<p>因此我们需要 husky + commit-msg + commitlint 校验我们的提交信息是否规范。</p>
+</blockquote>
+<h4 id="安装配置-commitlint"><a href="#安装配置-commitlint" class="headerlink" title="安装配置 commitlint"></a>安装配置 commitlint</h4><ol>
+<li><p>安装依赖 <code>npm install --save-dev @commitlint/config-conventional @commitlint/cli</code></p>
+</li>
+<li><p>创建 <code>commitlint.config.js</code> 文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&#x27;@commitlint/config-conventional&#x27;</span>],</span><br><span class="line">  <span class="comment">// 定义规则类型</span></span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="comment">// type 类型定义，表示 git 提交的 type 必须在以下类型范围内</span></span><br><span class="line">    <span class="string">&#x27;type-enum&#x27;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&#x27;always&#x27;</span>,</span><br><span class="line">      [</span><br><span class="line">        <span class="string">&#x27;feat&#x27;</span>, <span class="comment">// 新功能</span></span><br><span class="line">        <span class="string">&#x27;fix&#x27;</span>, <span class="comment">//  修复</span></span><br><span class="line">        <span class="string">&#x27;docs&#x27;</span>, <span class="comment">// 文档变更</span></span><br><span class="line">        <span class="string">&#x27;style&#x27;</span>, <span class="comment">// 代码格式（不影响代码运行的变动）</span></span><br><span class="line">        <span class="string">&#x27;refactor&#x27;</span>, <span class="comment">// 重构（既不是增加feature）,也不是修复bug</span></span><br><span class="line">        <span class="string">&#x27;pref&#x27;</span>, <span class="comment">// 性能优化</span></span><br><span class="line">        <span class="string">&#x27;test&#x27;</span>, <span class="comment">// 增加测试</span></span><br><span class="line">        <span class="string">&#x27;chore&#x27;</span>, <span class="comment">// 构建过程或辅助工具的变动</span></span><br><span class="line">        <span class="string">&#x27;revert&#x27;</span>, <span class="comment">// 回退</span></span><br><span class="line">        <span class="string">&#x27;build&#x27;</span> <span class="comment">// 打包</span></span><br><span class="line">      ]</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">// subject 大小写不做校验</span></span><br><span class="line">    <span class="string">&#x27;subject-case&#x27;</span>: [<span class="number">0</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：这里这个文件需要保存为 utf-8 的格式，否则可能出现错误</p>
+<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f66c138924240bf815b72ec1501dfa9~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</blockquote>
+</li>
+</ol>
+<h4 id="安装配置-husky"><a href="#安装配置-husky" class="headerlink" title="安装配置 husky"></a>安装配置 husky</h4><ol>
+<li><p>安装依赖 <code>npm install husky --save-dev</code></p>
+</li>
+<li><p>启动 hooks, 生成 .husky 文件夹 <code>npx husky install</code></p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10702def9941474795f38e713b964baa~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+<li><p>在 package.json 中生成 prepare 指令 <code>npm set-script prepare &quot;husky install&quot;</code></p>
+<blockquote>
+<p>注意：这个需要 npm &gt; 7.0 版本 可以使用 <code>npm install -g npm</code> 升版本</p>
+</blockquote>
+<p><img data-src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e558cf1d6dbb4fd294dc6c8339a75723~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+<li><p>执行 prepare 指令 <code>npm run prepare</code></p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cad34a2c7ec4b35b584389b2c28bde3~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+<li><p>添加 commitlint 的 hook 到 husky 中，<code>commit-msg</code> 时进行校验</p>
+<p><code>npx husky add .husky/commit-msg &#39;npx --no-install commitlint --edit &quot;$1&quot;&#39;</code></p>
+<p>添加完成后： <img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d97921ab22b44f3b17f112ea54a5ae6~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+<li><p>此时，不符合规范的 commit 将不会被允许提交，我们的任务也完成啦！测试如下图：</p>
+<p><img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9202f5299b1f44ca8f2df2d1a3f9a09c~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+</ol>
+<h2 id="2、pre-commit-检验当前代码是否有-ESLint-错误"><a href="#2、pre-commit-检验当前代码是否有-ESLint-错误" class="headerlink" title="2、pre-commit 检验当前代码是否有 ESLint 错误"></a>2、pre-commit 检验当前代码是否有 ESLint 错误</h2><p>我们期望在代码被提交之前，可以执行 <code>npx eslint --ext .js,.ts,.vue src</code> 指令来检测代码是否规范</p>
+<h4 id="pre-commit-检测"><a href="#pre-commit-检测" class="headerlink" title="pre-commit 检测"></a>pre-commit 检测</h4><ol>
+<li><p>添加 commit 时的 hook，<code>pre-commit</code> 时运行 npx eslint –ext .js,.ts,.vue src</p>
+<p><code>npx husky add .husky/pre-commit &quot;npx eslint --ext .js,.ts,.vue src&quot;</code></p>
+<p>结果如下图：</p>
+<p><img data-src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15d3db83d48344d79a847f8f5ebe4818~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+<li><p>此时提交代码，如果项目中有错误，无法提交，想要提交代码，必须解决所有的错误信息</p>
+<p><img data-src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5524af2ef569450aa04b933a35291bbf~tplv-k3u1fbpfcp-watermark.awebp" alt="image.png"></p>
+</li>
+</ol>
+<h4 id="lint-staged-自动修复格式错误"><a href="#lint-staged-自动修复格式错误" class="headerlink" title="lint-staged 自动修复格式错误"></a>lint-staged 自动修复格式错误</h4><blockquote>
+<p><code>lint-staged</code> 可以让你当前的代码检查<strong>只检查本次修改更新的代码，并在出现错误的时候，自动修复并推送</strong></p>
+<p><code>lint-staged</code> 无需安装，生成项目时，vue-cli 已经帮我们安装了</p>
+</blockquote>
+<ol>
+<li>修改 <code>package.json</code> 配置</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;lint-staged&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;src/**/*.&#123;js,ts,vue&#125;&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">  <span class="string">&quot;eslint --fix&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="string">&quot;git add .&quot;</span></span><br><span class="line"><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>如上配置，每次它在你本地 commit 之前，校验你所提的内容是否符合你本地配置的 eslint 规则</p>
+<ol>
+<li>符合规则，提交成功</li>
+<li>不符合规则，他会自动执行 <code>eslint --fix</code> 尝试帮你自动修复 2.1 修复成功，则会自动帮你把修复好的代码提交； 2.2 修复失败，提示你错误，让你修复好才可以提交代码；</li>
+</ol>
+</li>
+<li><p>配置 <code>.husky/pre-commit</code> 文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line">. &quot;$(dirname &quot;$0&quot;)/_/husky.sh&quot;</span><br><span class="line"></span><br><span class="line">npx lint-staged</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="commitlint-不支持-emoji-表情怎么办"><a href="#commitlint-不支持-emoji-表情怎么办" class="headerlink" title="commitlint 不支持 emoji 表情怎么办"></a>commitlint 不支持 emoji 表情怎么办</h3><p>不是很完美的解决 可以借鉴下</p>
+<p>.cz-config.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">types</span>: [</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;✨feat&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;feat:      新功能&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;🐛fix&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;fix:       修复&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;📚docs&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;docs:      文档变更&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;💎style&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;style:     代码格式（不影响代码运行的变动）&quot;</span> &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">value</span>: <span class="string">&quot;📦refactor&quot;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;refactor:  重构（既不是增加feature）,也不是修复bug&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;🚀pref&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;pref:      性能优化&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;🚨test&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;test:      增加测试&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;🛠chore&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;chore:     构建过程或辅助工具的变动&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;⚙️revert&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;revert:    回退&quot;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">value</span>: <span class="string">&quot;♻️build&quot;</span>, <span class="attr">name</span>: <span class="string">&quot;build:     打包&quot;</span> &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<p>commitlint.config.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// extends: [&quot;@commitlint/config-conventional&quot;], 去除基本设置</span></span><br><span class="line">  <span class="comment">// 定义规则类型</span></span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="comment">// type 类型定义，表示 git 提交的 type 必须在以下类型范围内</span></span><br><span class="line">    <span class="string">&quot;type-enum&quot;</span>: [</span><br><span class="line">      <span class="number">2</span>,</span><br><span class="line">      <span class="string">&quot;always&quot;</span>,</span><br><span class="line">      [</span><br><span class="line">        <span class="string">&quot;✨feat&quot;</span>, <span class="comment">// 新功能</span></span><br><span class="line">        <span class="string">&quot;🐛fix&quot;</span>, <span class="comment">//  修复</span></span><br><span class="line">        <span class="string">&quot;📚docs&quot;</span>, <span class="comment">// 文档变更</span></span><br><span class="line">        <span class="string">&quot;💎style&quot;</span>, <span class="comment">// 代码格式（不影响代码运行的变动）</span></span><br><span class="line">        <span class="string">&quot;📦refactor&quot;</span>, <span class="comment">// 重构（既不是增加feature）,也不是修复bug</span></span><br><span class="line">        <span class="string">&quot;🚀pref&quot;</span>, <span class="comment">// 性能优化</span></span><br><span class="line">        <span class="string">&quot;🚨test&quot;</span>, <span class="comment">// 增加测试</span></span><br><span class="line">        <span class="string">&quot;🛠chore&quot;</span>, <span class="comment">// 构建过程或辅助工具的变动</span></span><br><span class="line">        <span class="string">&quot;⚙️revert&quot;</span>, <span class="comment">// 回退</span></span><br><span class="line">        <span class="string">&quot;♻️build&quot;</span>, <span class="comment">// 打包</span></span><br><span class="line">      ],</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">// subject 大小写不做校验</span></span><br><span class="line">    <span class="string">&quot;subject-case&quot;</span>: [<span class="number">0</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-husky-在-git-commit-时直接使用-commitizen"><a href="#使用-husky-在-git-commit-时直接使用-commitizen" class="headerlink" title="使用 husky 在 git commit 时直接使用 commitizen"></a>使用 husky 在 git commit 时直接使用 commitizen</h3><ol>
+<li>安装项目依赖 commitizen</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add -D commitizen</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>添加 githook</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/prepare-commit-msg <span class="string">&quot;exec &lt; /dev/tty &amp;&amp;  node_modules/.bin/cz --hook || true&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>效果不是很好 不如直接 <code>npx cz</code><br>commitizen 官方： <a target="_blank" rel="noopener" href="https://github.com/commitizen/cz-cli#optional-install-and-run-commitizen-locally">https://github.com/commitizen/cz-cli#optional-install-and-run-commitizen-locally</a></p>
+
       
     </div>
 
@@ -626,7 +753,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -671,14 +798,27 @@
 <p>注意：在发布用户范围的 npm 包之前，您必须注册一个 npm 用户帐户。<br>此外，要发布组织范围的包，您必须创建一个 npm 用户帐户，然后创建一个 npm 组织</p>
 </blockquote>
 <p>1.为您的包创建一个目录：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/01/05/Nodejs/npm%E5%AD%A6%E4%B9%A0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> my-test-package</span><br></pre></td></tr></table></figure>
+
+<p>2.在包根目录中，运行 npm init 命令并将范围传递给 scope 标志：<br>对于组织范围的包，替换 my-org 为您组织的名称：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init --scope=@my-org</span><br></pre></td></tr></table></figure>
+
+<p>对于用户范围的包，替换 my-username 为您的用户名：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init --scope=@my-username</span><br></pre></td></tr></table></figure>
+
+<p>3.提示以生成 package.json 文件。</p>
+<h3 id="查看包裹内容以获取敏感或不必要的信息"><a href="#查看包裹内容以获取敏感或不必要的信息" class="headerlink" title="查看包裹内容以获取敏感或不必要的信息"></a>查看包裹内容以获取敏感或不必要的信息</h3><p>将敏感信息发布到注册表可能会损害您的用户、损害您的开发基础设施、修复成本高昂，并使您面临法律诉讼的风险。我们强烈建议在将包发布到注册表之前删除敏感信息，例如私钥、密码、个人身份信息(PII) 和信用卡数据。</p>
+<p>对于不太敏感的信息，例如测试数据，请使用<code>.npmignore</code> 或<code>.gitignore</code> 文件来防止发布到注册表</p>
+<h3 id="测试你的包裹"><a href="#测试你的包裹" class="headerlink" title="测试你的包裹"></a>测试你的包裹</h3><p>为了减少发布错误的机会，我们建议在将包发布到 npm 注册表之前对其进行测试。要测试您的包，<code>npm install</code> 请使用包目录的完整路径运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="发布范围内的公共包"><a href="#发布范围内的公共包" class="headerlink" title="发布范围内的公共包"></a>发布范围内的公共包</h3><p>默认情况下，范围包以私有可见性发布。要发布具有公共可见性的范围包，请使用<code>npm publish --access public</code>. 1.要将范围内的公共包发布到 npm 注册表，请运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --access public</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ npm publish --access public</span><br><span class="line">npm notice</span><br><span class="line">npm notice 📦  @bitbw/my-test-package01@1.0.0</span><br><span class="line">npm notice === Tarball Contents ===</span><br><span class="line">npm notice 43B  README.md</span><br><span class="line">npm notice 241B index.js</span><br><span class="line">npm notice 238B package.json</span><br><span class="line">npm notice === Tarball Details ===</span><br><span class="line">npm notice name:          @bitbw/my-test-package01</span><br><span class="line">npm notice version:       1.0.0</span><br><span class="line">npm notice filename:      @bitbw/my-test-package01-1.0.0.tgz</span><br><span class="line">npm notice package size:  466 B</span><br><span class="line">npm notice unpacked size: 522 B</span><br><span class="line">npm notice shasum:        656cc61ee5de87d80dfc0a699b710e2163493f4f</span><br><span class="line">npm notice integrity:     sha512-bHtVFf7U3J+EL[...]AznC2Mfpz7Lvg==</span><br><span class="line">npm notice total files:   3</span><br><span class="line">npm notice</span><br><span class="line">+ @bitbw/my-test-package01@1.0.0</span><br></pre></td></tr></table></figure>
+
+<p>2.要查看您的公共包页面，请访问<a target="_blank" rel="noopener" href="https://npmjs.com/package/*package-name">https://npmjs.com/package/*package-name</a> ，将 package-name*替换为您的包名称。公共包会 public 在 npm 网站上的包名称下方注明。</p>
+
       
     </div>
 
@@ -740,7 +880,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -782,14 +922,6 @@
 <p>PS: HTTPS 的证书通过域名绑定 就只能通过域名访问不要通过 IP 地址来访问</p>
 </blockquote>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/28/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/HTTPS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -851,7 +983,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -899,14 +1031,11 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | grep :443 | awk <span class="string">&#x27;&#123;print $7&#125;&#x27;</span> | awk -F<span class="string">&#x27;[/]&#x27;</span> <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | grep -v <span class="string">&quot;-&quot;</span> | xargs -I % <span class="built_in">kill</span> -9 %</span><br><span class="line">netstat -anp | grep :23 | awk <span class="string">&#x27;&#123;print $7&#125;&#x27;</span> | awk -F<span class="string">&#x27;[/]&#x27;</span> <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | grep -v <span class="string">&quot;-&quot;</span> | xargs -I % <span class="built_in">kill</span> -9 %</span><br><span class="line">netstat -anp | grep :443 | awk <span class="string">&#x27;&#123;print $7&#125;&#x27;</span> | awk -F<span class="string">&#x27;[/]&#x27;</span> <span class="string">&#x27;&#123;print $1&#125;&#x27;</span> | grep -v <span class="string">&quot;-&quot;</span> | xargs -I % <span class="built_in">kill</span> -9 %</span><br></pre></td></tr></table></figure>
 
 <p>居然 把我 443 端口对应的进程 kill 掉了 ，我*** !!!!💢</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/07/Linux/%E9%98%BF%E9%87%8C%E4%BA%91%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p>解决：一定要把脚本干掉 rm -rf &#x2F;etc&#x2F;newinit.sh 同时去除&#x2F;etc&#x2F;crontab 的定时任务<br>再次 netstat -tnlp ，世界清净了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span><br><span class="line">tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      396237/nginx: worke</span><br><span class="line">tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      423/systemd-resolve</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      545/sshd: /usr/sbin</span><br><span class="line">tcp        0      0 127.0.0.1:33305         0.0.0.0:*               LISTEN      665587/node</span><br><span class="line">tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      396237/nginx: worke</span><br><span class="line">tcp6       0      0 :::3000                 :::*                    LISTEN      2300247/node /root/</span><br><span class="line">tcp6       0      0 :::3001                 :::*                    LISTEN      2365081/node /root/</span><br></pre></td></tr></table></figure>
+
+<p>找了 我好长时间！！！一定要记录一下</p>
+
       
     </div>
 
@@ -968,7 +1097,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1011,16 +1140,20 @@
 
 <h3 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add -D babel-plugin-import react-app-rewired customize-cra less less-loader@5.0.0</span><br></pre></td></tr></table></figure>
 
-<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p><a href="mailto:&#108;&#101;&#x73;&#x73;&#x2d;&#108;&#111;&#x61;&#x64;&#x65;&#x72;&#64;&#53;&#x2e;&#x30;&#x2e;&#x30;">&#108;&#101;&#x73;&#x73;&#x2d;&#108;&#111;&#x61;&#x64;&#x65;&#x72;&#64;&#53;&#x2e;&#x30;&#x2e;&#x30;</a> 下载 5.0.0 防止报错 TypeError: this.getOptions is not a function</p>
+<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p><a href="mailto:&#108;&#101;&#115;&#115;&#x2d;&#x6c;&#x6f;&#x61;&#100;&#x65;&#114;&#x40;&#x35;&#46;&#x30;&#x2e;&#48;">&#108;&#101;&#115;&#115;&#x2d;&#x6c;&#x6f;&#x61;&#100;&#x65;&#114;&#x40;&#x35;&#46;&#x30;&#x2e;&#48;</a> 下载 5.0.0 防止报错 TypeError: this.getOptions is not a function</p>
 <h4 id="修改-peckage-json"><a href="#修改-peckage-json" class="headerlink" title="修改 peckage.json"></a>修改 peckage.json</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired start&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired build&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired test&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;eject&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts eject&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/21/React/React%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<h4 id="新建-config-overrides-js-文件"><a href="#新建-config-overrides-js-文件" class="headerlink" title="新建 config-overrides.js 文件"></a>新建 config-overrides.js 文件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; override, fixBabelImports, addLessLoader &#125; = <span class="built_in">require</span>(<span class="string">&quot;customize-cra&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">override</span>(</span><br><span class="line">  <span class="title function_">fixBabelImports</span>(<span class="string">&quot;import&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">libraryName</span>: <span class="string">&quot;antd&quot;</span>,</span><br><span class="line">    <span class="attr">libraryDirectory</span>: <span class="string">&quot;es&quot;</span>,</span><br><span class="line">    <span class="attr">style</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="title function_">addLessLoader</span>(&#123;</span><br><span class="line">    <span class="attr">javascriptEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 主题</span></span><br><span class="line">    <span class="attr">modifyVars</span>: &#123; <span class="string">&quot;@primary-color&quot;</span>: <span class="string">&quot;#3acea0&quot;</span> &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="router"><a href="#router" class="headerlink" title="router"></a>router</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add react-router-dom</span><br></pre></td></tr></table></figure>
+
+<h2 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add redux react-redux redux-thunk</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add -D redux-devtools-extension</span><br></pre></td></tr></table></figure>
+
+<h2 id="redux-router-代码"><a href="#redux-router-代码" class="headerlink" title="redux + router 代码"></a>redux + router 代码</h2><p>App.jsx</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&quot;react&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">BrowserRouter</span> <span class="keyword">as</span> <span class="title class_">Router</span>, <span class="title class_">Route</span>, <span class="title class_">Routes</span> &#125; <span class="keyword">from</span> <span class="string">&quot;react-router-dom&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Main</span> <span class="keyword">from</span> <span class="string">&quot;./pages/Main&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Login</span> <span class="keyword">from</span> <span class="string">&quot;./pages/Login&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">NotFound</span> <span class="keyword">from</span> <span class="string">&quot;./pages/NotFound&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&quot;./redux/store&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Provider</span> &#125; <span class="keyword">from</span> <span class="string">&quot;react-redux&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">App</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Provider</span> <span class="attr">store</span>=<span class="string">&#123;store&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&quot;/&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Main</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">&quot;/login&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">Login</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;*&quot;</span> <span class="attr">element</span>=<span class="string">&#123;</span>&lt;<span class="attr">NotFound</span> /&gt;</span>&#125; /&gt;</span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;/<span class="name">Routes</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Router</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Provider</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -1082,7 +1215,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1126,14 +1259,7 @@
 <p>（3）重新加载命令</p>
 <p>在&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin 目录下执行 .&#x2F;nginx -s reload</p>
 <h3 id="nginx-conf"><a href="#nginx-conf" class="headerlink" title="nginx.conf"></a>nginx.conf</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#============== Nginx 默认配置文件nginx.conf中文详解==============</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#定义Nginx运行的用户和用户组</span></span><br><span class="line"><span class="comment">#user  nobody;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#nginx进程数，建议设置为等于CPU总核心数。</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">#全局错误日志定义类型，[ debug | info | notice | warn | error | crit ]</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  notice;</span></span><br><span class="line"><span class="comment">#error_log  logs/error.log  info;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#进程pid文件</span></span><br><span class="line"><span class="comment">#pid        logs/nginx.pid;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#配置影响nginx服务器或与用户的网络连接。有每个进程的最大连接数，选取哪种事件驱动模型处理连接请求，是否允许同时接受多个网路连接，开启多个网络连接序列化等。（菜鸟教程解释）</span></span><br><span class="line"><span class="comment">#工作模式及连接数上限</span></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#设定http服务器，利用它的反向代理功能提供负载均衡支持</span></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#文件扩展名与文件类型映射表</span></span><br><span class="line">    <span class="attribute">include</span>       mime.types;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#默认文件类型</span></span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span></span><br><span class="line">    <span class="comment">#                  &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">    <span class="comment">#                  &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#access_log  logs/access.log  main;</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">sendfile</span>        <span class="literal">on</span>;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">　　<span class="comment">#设定负载均衡的服务器列表【没有用过】    upstream mysvr &#123;    　　#weigth参数表示权值，权值越高被分配到的几率越大    　　server 192.168.8.1x:3128 weight=5;#本机上的Squid开启3128端口    　　server 192.168.8.2x:80  weight=1;    　　server 192.168.8.3x:80  weight=6;    &#125;</span></span><br><span class="line">　<span class="comment">#【没有用过】</span></span><br><span class="line">    <span class="section">upstream</span> mysvr2 &#123;    <span class="comment">#weigth参数表示权值，权值越高被分配到的几率越大</span></span><br><span class="line">    　　<span class="attribute">server</span> <span class="number">192</span>.<span class="number">168</span>.<span class="number">8</span>.x:<span class="number">80</span>  weight=<span class="number">1</span>;    　　<span class="attribute">server</span> <span class="number">192</span>.<span class="number">168</span>.<span class="number">8</span>.x:<span class="number">80</span>  weight=<span class="number">6</span>;    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#配置虚拟主机的相关参数，一个http中可以有多个server。</span></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>; <span class="comment">#监听端口</span></span><br><span class="line">        <span class="attribute">server_name</span>  <span class="number">127.0.0.1</span>; <span class="comment">#监听地址</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#charset koi8-r;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">        <span class="section">location</span> / &#123;</span><br><span class="line">            <span class="attribute">root</span>   html; <span class="comment">#根路径</span></span><br><span class="line">            <span class="attribute">index</span>  index.html index.htm; <span class="comment">#设置默认页面</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#自己添加</span></span><br><span class="line">        <span class="section">location</span> /ooaa/ &#123;</span><br><span class="line">            <span class="comment">#请求转向mysvr 定义的服务器列表</span></span><br><span class="line">            <span class="attribute">proxy_pass</span> http://127.0.0.1:8384/;  <span class="comment">#注意：使用代理地址时末尾记得加上斜杠&quot;/&quot;。</span></span><br><span class="line">            <span class="comment">#deny 127.0.0.1;  #拒绝的ip【目前没有用过】</span></span><br><span class="line">            <span class="comment">#allow 172.18.5.54; #允许的ip【目前没有用过】</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="attribute">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  /50x.html;</span><br><span class="line">        <span class="section">location</span> = /50x.html &#123;</span><br><span class="line">            <span class="attribute">root</span>   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># proxy the PHP scripts to Apache listening on 127.0.0.1:80</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location ~ \.php$ &#123;</span></span><br><span class="line">        <span class="comment">#    proxy_pass   http://127.0.0.1;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location ~ \.php$ &#123;</span></span><br><span class="line">        <span class="comment">#    root           html;</span></span><br><span class="line">        <span class="comment">#    fastcgi_pass   127.0.0.1:9000;</span></span><br><span class="line">        <span class="comment">#    fastcgi_index  index.php;</span></span><br><span class="line">        <span class="comment">#    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span></span><br><span class="line">        <span class="comment">#    include        fastcgi_params;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># deny access to .htaccess files, if Apache&#x27;s document root</span></span><br><span class="line">        <span class="comment"># concurs with nginx&#x27;s one</span></span><br><span class="line">        <span class="comment">#</span></span><br><span class="line">        <span class="comment">#location ~ /\.ht &#123;</span></span><br><span class="line">        <span class="comment">#    deny  all;</span></span><br><span class="line">        <span class="comment">#&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># another virtual host using mix of IP-, name-, and port-based configuration</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server &#123;</span></span><br><span class="line">    <span class="comment">#    listen       8000;</span></span><br><span class="line">    <span class="comment">#    listen       somename:8080;</span></span><br><span class="line">    <span class="comment">#    server_name  somename  alias  another.alias;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location / &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># HTTPS server</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment">#server &#123;</span></span><br><span class="line">    <span class="comment">#    listen       443 ssl;</span></span><br><span class="line">    <span class="comment">#    server_name  localhost;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_certificate      cert.pem;</span></span><br><span class="line">    <span class="comment">#    ssl_certificate_key  cert.key;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_session_cache    shared:SSL:1m;</span></span><br><span class="line">    <span class="comment">#    ssl_session_timeout  5m;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    ssl_ciphers  HIGH:!aNULL:!MD5;</span></span><br><span class="line">    <span class="comment">#    ssl_prefer_server_ciphers  on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#    location / &#123;</span></span><br><span class="line">    <span class="comment">#        root   html;</span></span><br><span class="line">    <span class="comment">#        index  index.html index.htm;</span></span><br><span class="line">    <span class="comment">#    &#125;</span></span><br><span class="line">    <span class="comment">#&#125;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/19/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Nginx%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
       
     </div>
 
@@ -1195,7 +1321,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1237,14 +1363,6 @@
 <p>你的Linux服务器的ssh配置有问题，通过修改配置测试是否解决问题。<br>删除在服务器上创建的“ .vscode-server”目录。这是在主目录中创建的隐藏目录（您可以使用“ ls -la”显示我相信的所有文件）。可能是一些不正确的数据被缓存在那里，因此删除目录将使您的情况更加整洁。删除后，可以尝试通过vscode上的remote-ssh重新连接。<br>如果还是不行，可以尝试重新使用ftp将本地公钥上传到Linux上，然后将其复制到authorized_keys文件中，设置权限，重启SSH服务器，重新连接</p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>在使用公钥第一次连接到Linux时候，可能会让你输入密码，连接完成后，会在你的用户.ssh目录中中生成一个文件known_hosts，这个目录中还有公钥和私钥id-rsa.pub和id-rsa，然后将公钥上传到服务器上，重新重复上面的复制到.ssh&#x2F;authorized_keys，并且重新设置权限，再重新尝试连接到Linux，就不需要再输入密码了</p>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/18/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/VScode%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -1306,7 +1424,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1344,16 +1462,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>暂时引用一下别人总结的 回头自己整理下</p>
-<p><img src="https://bitbw.top/public/img/my_gallery/20211115160328.png" alt="image-20211115160328337"></p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211115160328.png" alt="image-20211115160328337"></p>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/15/%E6%A1%86%E6%9E%B6/%E7%9B%98%E7%82%B9%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%A1%86%E6%9E%B6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -1395,13 +1505,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -1429,9 +1539,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -1439,14 +1553,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/page/2/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -1471,8 +1589,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"b81b473420adbda2e0168f6fb5b92b6c"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

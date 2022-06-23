@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
 <meta property="og:type" content="website">
@@ -227,7 +228,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -326,15 +326,58 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar ./jenkins.war(jenkins.war文件的路径) --Port=8080（端口）</span><br></pre></td></tr></table></figure>
 
 <h2 id="基于-node-环境构建-react-或-vue-项目"><a href="#基于-node-环境构建-react-或-vue-项目" class="headerlink" title="基于 node 环境构建 react 或 vue 项目"></a>基于 node 环境构建 react 或 vue 项目</h2><p>官方教程：<a target="_blank" rel="noopener" href="https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/">https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/</a></p>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="Docker-在-WSL，windows-下出现-Cannot-connect-to-the-Docker-daemon-at-unix-x2F-x2F-x2F-var-x2F-run-x2F-docker-sock-问题"><a href="#Docker-在-WSL，windows-下出现-Cannot-connect-to-the-Docker-daemon-at-unix-x2F-x2F-x2F-var-x2F-run-x2F-docker-sock-问题" class="headerlink" title="Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock 问题"></a>Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock 问题</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Jenkins%E7%9A%84%E4%BD%BF%E7%94%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="Docker-在-WSL，windows-下出现-Cannot-connect-to-the-Docker-daemon-at-unix-x2F-x2F-x2F-var-x2F-run-x2F-docker-sock-问题"><a href="#Docker-在-WSL，windows-下出现-Cannot-connect-to-the-Docker-daemon-at-unix-x2F-x2F-x2F-var-x2F-run-x2F-docker-sock-问题" class="headerlink" title="Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock 问题"></a>Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock 问题</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48031922/article/details/116529198">https://blog.csdn.net/weixin_48031922/article/details/116529198</a></p>
+<p>ps：</p>
+<p>-v &#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock \</p>
+<p>上面这条命令是使容器内系统，可以直接使用当前运行容器的系统的 docker</p>
+<p>也就是说 在容器内使用 <code>docker ps -a </code>可以看到当前系统中所有运行的容器，包括当前容器本身</p>
+<blockquote>
+<p>最佳解决方案是直接在 ubutun 子系统中使用，docker run …</p>
+<p>&#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock 就不会出现错误 ，win 上我实在不知道 &#x2F;var&#x2F;run&#x2F;docker.sock 在哪</p>
+</blockquote>
+<h4 id="出现-WorkflowScript-3-Invalid-agent-type-“docker”-specified"><a href="#出现-WorkflowScript-3-Invalid-agent-type-“docker”-specified" class="headerlink" title="出现 WorkflowScript: 3: Invalid agent type “docker” specified"></a>出现 WorkflowScript: 3: Invalid agent type “docker” specified</h4><p>下载 <code>Docker Pipeline</code> 插件 即可解决</p>
+<h2 id="使用流水线语法实现构建后上传服务器"><a href="#使用流水线语法实现构建后上传服务器" class="headerlink" title="使用流水线语法实现构建后上传服务器"></a>使用流水线语法实现构建后上传服务器</h2><p>基于这篇文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wangzan18/article/details/105864373/">https://blog.csdn.net/wangzan18/article/details/105864373/</a></p>
+<h3 id="sshPublisher-文档："><a href="#sshPublisher-文档：" class="headerlink" title="sshPublisher 文档："></a>sshPublisher 文档：</h3><p><a target="_blank" rel="noopener" href="https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20send%20build%20artifacts%20over%20ssh">https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20send%20build%20artifacts%20over%20ssh</a></p>
+<h3 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h3><h4 id="Publish-over-SSH-插件-，"><a href="#Publish-over-SSH-插件-，" class="headerlink" title="Publish over SSH 插件 ，"></a><strong>Publish over SSH</strong> 插件 ，</h4><p>配置 <strong>Publish over SSH</strong></p>
+<p>系统管理-&gt;系统配置-&gt;Publish over SSH</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/Publish%20over%20SSH%E9%85%8D%E7%BD%AE.png" alt="配置 **Publish over SSH** "></p>
+<p>ps:</p>
+<p>这里配置的私钥就是使用 ssh 免密登录时生成的私钥</p>
+<p>全部了解 ssh 见 我的文章 Linux 命令入门 <a href="https://blog.bitbw.top/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/">https://blog.bitbw.top/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/</a></p>
+<h4 id="免密码登录"><a href="#免密码登录" class="headerlink" title="免密码登录"></a>免密码登录</h4><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><ul>
+<li>配置公钥<ul>
+<li>执行 <code>ssh-keygen</code> 即可生成 SSH 钥匙，一路回车即可</li>
+</ul>
+</li>
+<li>上传公钥到服务器<ul>
+<li>执行 <code>ssh-copy-id -p port user@remote</code>，可以让远程服务器记住我们的公钥</li>
+<li>上传后的公钥在远端用户家目录下<code>.ssh</code>文件夹 <code>authorized_keys</code> 中</li>
+</ul>
+</li>
+</ul>
+<p>执行<code>ssh-keygen</code>后会在当前用户家目录下生成<code>.ssh</code>文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">cd</span> .ssh/</span><br><span class="line"> ll</span><br><span class="line"><span class="comment">#total 20</span></span><br><span class="line"><span class="comment">#drwx------  2 bowen bowen 4096 Aug  2 14:34 ./</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 13 bowen bowen 4096 Aug  4 09:24 ../</span></span><br><span class="line"><span class="comment">#-rw-------  1 bowen bowen 3243 Aug  2 14:32 id_rsa</span></span><br><span class="line"><span class="comment">#-rw-r--r--  1 bowen bowen  747 Aug  2 14:32 id_rsa.pub</span></span><br><span class="line"><span class="comment">#-rw-r--r--  1 bowen bowen  222 Aug  2 13:43 known_hosts</span></span><br></pre></td></tr></table></figure>
+
+<p>id_rsa 就是私钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>全部复制放到 key 字段中</p>
+<h4 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h4><h5 id="测试连接报错：jenkins-plugins-publish-over-BapPublisherException-Failed-to-add-SSH-key"><a href="#测试连接报错：jenkins-plugins-publish-over-BapPublisherException-Failed-to-add-SSH-key" class="headerlink" title="测试连接报错：jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key"></a>测试连接报错：jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key</h5><p>解决：<a target="_blank" rel="noopener" href="http://www.wallcopper.com/linux/3689.htmljenkins">http://www.wallcopper.com/linux/3689.htmljenkins</a></p>
+<p>无密码 ssh 时报错:jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key. Message [invalid privatekey: [B@6a581993]<br>com.jcraft.jsch.JSchException: invalid privatekey, 部分库（如：JSch）不支持 OPENSSH PRIVATE KEY 格式的私钥</p>
+<p>1、jenkins 使用 <code>ssh-keygen -m PEM -t rsa -b 4096</code> 来生成 key 就可以用了。<br>-m 参数指定密钥的格式，PEM（也就是 RSA 格式）是之前使用的旧格式</p>
+<h5 id="ssh-copy-id-上传时报：IT-IS-POSSIBLE-THAT-SOMEONE-IS-DOING-SOMETHING-NASTY"><a href="#ssh-copy-id-上传时报：IT-IS-POSSIBLE-THAT-SOMEONE-IS-DOING-SOMETHING-NASTY" class="headerlink" title="ssh-copy-id 上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!"></a>ssh-copy-id 上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!</h5><p>解决：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44545265/article/details/88362272">https://blog.csdn.net/weixin_44545265/article/details/88362272</a></p>
+<p>文件传输不过去，只需要删除.ssh 目录下的 known_hosts 文件就能传输了<br><code>[root@xx]# rm -rf ~/.ssh/known_hosts</code></p>
+<h4 id="我的-jenkinsfile"><a href="#我的-jenkinsfile" class="headerlink" title="我的 jenkinsfile"></a>我的 jenkinsfile</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">    agent &#123;</span><br><span class="line">        docker &#123;</span><br><span class="line">            image <span class="string">&#x27;node:12-alpine&#x27;</span></span><br><span class="line">            args <span class="string">&#x27;-p 3000:3000&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stages &#123;</span><br><span class="line">        <span class="title function_ invoke__">stage</span>(<span class="string">&#x27;Build&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                sh <span class="string">&#x27;npm install&#x27;</span></span><br><span class="line">                sh <span class="string">&#x27;npm run buildtest&#x27;</span></span><br><span class="line">                sh <span class="string">&#x27;ls -lha&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	<span class="title function_ invoke__">stage</span>(<span class="string">&#x27;Deploy&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                <span class="title function_ invoke__">sshPublisher</span>(<span class="attr">publishers</span>: [<span class="title function_ invoke__">sshPublisherDesc</span>(<span class="attr">configName</span>: <span class="string">&#x27;IPSServer&#x27;</span>, <span class="attr">transfers</span>: [<span class="title function_ invoke__">sshTransfer</span>(<span class="attr">cleanRemote</span>: <span class="literal">false</span>, <span class="attr">excludes</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">execCommand</span>: <span class="string">&#x27;&#x27;</span><span class="string">&#x27;</span></span><br><span class="line"><span class="string">                echo &quot;dist_temp/ ls&quot;</span></span><br><span class="line"><span class="string">                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/</span></span><br><span class="line"><span class="string">                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                mkdir /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                cp -r /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/.   /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                echo &quot;dist/ ls&quot;</span></span><br><span class="line"><span class="string">                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/</span></span><br><span class="line"><span class="string">                docker restart product-nginx-test</span></span><br><span class="line"><span class="string">                &#x27;</span><span class="string">&#x27;&#x27;</span>, <span class="attr">execTimeout</span>: <span class="number">120000</span>, <span class="attr">flatten</span>: <span class="literal">false</span>, <span class="attr">makeEmptyDirs</span>: <span class="literal">false</span>, <span class="attr">noDefaultExcludes</span>: <span class="literal">false</span>, <span class="attr">patternSeparator</span>: <span class="string">&#x27;[, ]+&#x27;</span>, <span class="attr">remoteDirectory</span>: <span class="string">&#x27;/home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/&#x27;</span>, <span class="attr">remoteDirectorySDF</span>: <span class="literal">false</span>, <span class="attr">removePrefix</span>: <span class="string">&#x27;dist&#x27;</span>, <span class="attr">sourceFiles</span>: <span class="string">&#x27;dist/**&#x27;</span>)], <span class="attr">usePromotionTimestamp</span>: <span class="literal">false</span>, <span class="attr">useWorkspaceInPromotion</span>: <span class="literal">false</span>, <span class="attr">verbose</span>: <span class="literal">true</span>)])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="sshPublisher-显示操作日志"><a href="#sshPublisher-显示操作日志" class="headerlink" title="sshPublisher 显示操作日志"></a>sshPublisher 显示操作日志</h4><p>sshPublisher(publishers: [sshPublisherDesc()])内添加 verbose: true</p>
+<p>verbose：选择为 Jenkins 控制台启用大量信息 - 仅对帮助追踪问题非常有用。</p>
+<h2 id="构建触发器"><a href="#构建触发器" class="headerlink" title="构建触发器"></a>构建触发器</h2><h3 id="使用轮询-SCM-实现收到-git-post-commit-即构建"><a href="#使用轮询-SCM-实现收到-git-post-commit-即构建" class="headerlink" title="使用轮询 SCM 实现收到 git post-commit 即构建"></a>使用轮询 SCM 实现收到 git post-commit 即构建</h3><p><img data-src="https://bitbw.top/public/img/my_gallery/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png" alt="image-20210818150222789"></p>
+<p>日程表使用 cron 语法</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#每15分钟(可能在:07,22,37,52):</span></span><br><span class="line">H/15 <span class="emphasis">* *</span> <span class="emphasis">* *</span></span><br><span class="line">每小时前半小时每十分钟一次(三次，可能在:04,14,24)</span><br><span class="line">H(0-29)/10 <span class="emphasis">* *</span> <span class="emphasis">* *</span></span><br><span class="line"><span class="section">#每两个小时，在每小时后45分钟，从早上9:45开始，下午3:45结束，每周一次:</span></span><br><span class="line">45 9-16/2 <span class="emphasis">* *</span> 1-5</span><br><span class="line"><span class="section">#在工作日早上8点到下午4点之间每两个小时一次(可能在上午9:38，上午11:38，下午1:38，下午3:38):</span></span><br><span class="line">H H(8-15)/2 <span class="emphasis">* *</span> 1-5</span><br><span class="line">每月1号和15号每天一次，12月除外:</span><br><span class="line">H H 1,15 1-11 <span class="emphasis">*</span></span><br></pre></td></tr></table></figure>
+
+<p>规则有点难可以使用 cron 在线解析工具：<a target="_blank" rel="noopener" href="http://cron.qqe2.com/">http://cron.qqe2.com/</a></p>
+<p>使用轮询 SCM 检查到 commit 更新 就会触发构建</p>
+
       
     </div>
 
@@ -396,7 +439,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -444,14 +487,16 @@
 <p>创建并启动 Jenkins 容器</p>
 <p><strong>-d 后台运行镜像</strong></p>
 <p><strong>-p 10240:8080 将镜像的 8080 端口映射到服务器的 10240 端口。</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Docker%E5%85%A5%E9%97%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p><strong>-p 10241:50000 将镜像的 50000 端口映射到服务器的 10241 端口</strong></p>
+<p><strong>-v &#x2F;var&#x2F;jenkins_**mount**:&#x2F;var&#x2F;jenkins_mount &#x2F;var&#x2F;jenkins_home 目录为容器 jenkins 工作目录，我们将硬盘上的一个目录挂载到这个位置，方便后续更新镜像后继续使用原来的工作目录。这里我们设置的就是上面我们创建的 &#x2F;var&#x2F;jenkins_mount 目录</strong></p>
+<p><strong>-v &#x2F;etc&#x2F;localtime:&#x2F;etc&#x2F;localtime 让容器使用和服务器同样的时间设置。</strong></p>
+<p><strong>–name myjenkins 给容器起一个别名</strong></p>
+<p>查看 jenkins 是否启动成功，如下图出现端口号，就为启动成功了</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker ps -l</span></span><br></pre></td></tr></table></figure>
+
+<p>查看 docker 容器日志</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker logs myjenkins</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -513,7 +558,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -557,15 +602,72 @@
 
 <h3 id="修改远程仓库地址"><a href="#修改远程仓库地址" class="headerlink" title="修改远程仓库地址"></a>修改远程仓库地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git remote set-url origin（远程仓库名） https://github.com/xxx/my-blog1.git （远程仓库地址）</span></span><br><span class="line">git remote set-url origin https://github.com/xxx/my-blog1.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="查看-GIT-未推送的提交记录"><a href="#查看-GIT-未推送的提交记录" class="headerlink" title="查看 GIT 未推送的提交记录"></a>查看 GIT 未推送的提交记录</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/24/Git/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h2 id="查看-GIT-未推送的提交记录"><a href="#查看-GIT-未推送的提交记录" class="headerlink" title="查看 GIT 未推送的提交记录"></a>查看 GIT 未推送的提交记录</h2><h4 id="1-查看到未传送到远程代码库的提交次数"><a href="#1-查看到未传送到远程代码库的提交次数" class="headerlink" title="1 查看到未传送到远程代码库的提交次数"></a>1 查看到未传送到远程代码库的提交次数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<p>显示结果类似于这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is ahead of <span class="string">&#x27;origin/master&#x27;</span> by 2 commits.</span><br><span class="line">  (use <span class="string">&quot;git push&quot;</span> to publish your <span class="built_in">local</span> commits)</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-查看到未传送到远程代码库的提交描述-x2F-说明"><a href="#2-查看到未传送到远程代码库的提交描述-x2F-说明" class="headerlink" title="2 查看到未传送到远程代码库的提交描述&#x2F;说明"></a>2 查看到未传送到远程代码库的提交描述&#x2F;说明</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry -v</span><br></pre></td></tr></table></figure>
+
+<p>显示结果类似于这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ afd5134be3bee5285d6c2ee2c82fc323012d74bb Update commit 1</span><br><span class="line">+ 37a165ec0586f4af745bf538bc139fda6f1df672 Update commit 2</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-查看到未传送到远程代码库的提交详情"><a href="#3-查看到未传送到远程代码库的提交详情" class="headerlink" title="3 查看到未传送到远程代码库的提交详情"></a>3 查看到未传送到远程代码库的提交详情</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> master ^origin/master</span><br></pre></td></tr></table></figure>
+
+<p>这是一个 git log 命令的过滤，^origin&#x2F;master 可改成其它分支。<br>显示结果类似于这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">commit 37a165ec0586f4af745bf538bc139fda6f1df672 (HEAD -&gt; master)</span><br><span class="line">Author: xxxx &lt;xxxxx@163.com&gt;</span><br><span class="line">Date:   Mon Jul 26 17:46:34 2021 +0800</span><br><span class="line"></span><br><span class="line">    Update commit 1</span><br><span class="line"></span><br><span class="line">commit afd5134be3bee5285d6c2ee2c82fc323012d74bb</span><br><span class="line">Author: xxx &lt;xxxx@163.com&gt;</span><br><span class="line">Date:   Mon Jul 26 09:54:24 2021 +0800</span><br><span class="line"></span><br><span class="line">    Update commit 2</span><br></pre></td></tr></table></figure>
+
+<p>总结<br>git status 只能查看未传送提交的次数<br>git cherry -v 只能查看未传送提交的描述&#x2F;说明<br>git log master ^origin&#x2F;master 则可以查看未传送提交的详细信息</p>
+<h2 id="Github-相关"><a href="#Github-相关" class="headerlink" title="Github 相关"></a>Github 相关</h2><p>新建仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# test111&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/bitbw/test111.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>已有仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/bitbw/test111.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<h2 id="git设置代理"><a href="#git设置代理" class="headerlink" title="git设置代理"></a>git设置代理</h2><h3 id="设置局部代理"><a href="#设置局部代理" class="headerlink" title="设置局部代理"></a>设置局部代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> http.proxy 127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h3 id="端口要设置为本地代理的端口"><a href="#端口要设置为本地代理的端口" class="headerlink" title="端口要设置为本地代理的端口"></a>端口要设置为本地代理的端口</h3><h3 id="设置全局代理"><a href="#设置全局代理" class="headerlink" title="设置全局代理"></a>设置全局代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<p>为全局的 git 项目都设置代理</p>
+<p>取消代理设置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="git-clone-同时设置代理"><a href="#git-clone-同时设置代理" class="headerlink" title="git clone 同时设置代理"></a>git clone 同时设置代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -c http.proxy=http://127.0.0.1:1080  https://github.com/xxx.git</span><br></pre></td></tr></table></figure>
+
+<p>设置快捷别名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.cloneProxy = <span class="built_in">clone</span> -c http.proxy=http://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h2 id="git-大小写问题"><a href="#git-大小写问题" class="headerlink" title="git 大小写问题"></a>git 大小写问题</h2><p>问题复现:</p>
+<ol>
+<li>.新建一个 a.js 文件(大小写不敏感的状态下)，并提交</li>
+<li>.修改本地 a.js 变为 A.js，文件内容无变更，无法提交</li>
+<li>执行git config core.ignorecase false，修改 大小写敏感 规则，然后提交，查看结果，此时会存在 大小写 同时存在的文件</li>
+<li>此时某种机缘下，再次执行 git config core.ignorecase true，大小写不敏感，</li>
+<li>此时执行 git push ， 即把最新的更新都更新到了 a.js 中</li>
+<li>此时再修改 大小写敏感规则为敏感， 执行 git pull ，并不会拿到最新的更新。比如自己想要的是第一次修改后的 A.js ，但是服务器有一个没7. 有更新的 A.js 和 有更新的 a.js,而你只能拿到前者，所以就会遇到各种各样的坑……</li>
+</ol>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>执行git config –global core.ignorecase false，全局设置 大小写敏感 。</p>
+<ol>
+<li>文件变更比较少的情况<br>直接使用以下命令重命名文件，在 git 中不要直接修改文件名，最好的办法是使用下面的方式，</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">mv</span> -f [你想要删掉的文件] [你想要留下的文件]</span><br><span class="line">git <span class="built_in">mv</span> -f a.js A.js</span><br><span class="line"></span><br><span class="line"><span class="comment">## 等同于：</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">rm</span> a.js</span><br><span class="line">git add A.js</span><br></pre></td></tr></table></figure>
+
+<p>这个命令的目的就是删除不需要的大小写同名文件，修改后 git push 提交变更即可。</p>
+<ol start="2">
+<li>变更比较多，并且拥有分支较高权限</li>
+</ol>
+<ul>
+<li>在 github 删除该分支</li>
+<li>本地执行 git rm -r –cached . (注意后面‘点号’)</li>
+<li>然后重新 git push，就ok了<br>此法不太好，有点暴力，容易出问题，但适用于 变更发生于近期的情况。</li>
+</ul>
+<p>总结：<br>其实看解决办法的话，只是一个很小的问题，但是出现的 bug 确实是让人很头疼的，因为 mac windows 在不设置大小写敏感规则的时候默认大小写是不敏感，项目部署的机器是 Linux 的，而 Linux 是大小写敏感的。所以这样的问题平时不易发现，本地调试的时候大部分时候并不会出错误，只有在项目部署的时候问题才会显示出来。</p>
+<h2 id="git-push同时推送到两个远程仓库"><a href="#git-push同时推送到两个远程仓库" class="headerlink" title="git push同时推送到两个远程仓库"></a>git push同时推送到两个远程仓库</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/edc85a20ada9">原文地址</a></p>
+<p>进入你的项目目录，打开.git&#x2F;config文件(.git是隐藏目录，需要打开显示隐藏文件…)</p>
+<p>在url &#x3D; xxx下再加一行其他远程库的路径，例如，开源中国的：</p>
+<p>此后，你只需要git push origin master，即可同时推送到两个不同仓库的master。</p>
+<h2 id="git-别名配置"><a href="#git-别名配置" class="headerlink" title="git 别名配置"></a>git 别名配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.co checkout</span><br><span class="line">git config --global alias.br branch</span><br><span class="line">git config --global alias.ci commit</span><br><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -627,7 +729,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -674,14 +776,46 @@
 <p><strong>version</strong></p>
 <p>必须匹配某个版本</p>
 <p>如：1.1.2，表示必须依赖 1.1.2 版</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/16/Nodejs/package-json%E4%B8%AD-npm%E4%BE%9D%E8%B5%96%E5%8C%85%E7%89%88%E6%9C%AC%E5%89%8D%E7%9A%84%E7%AC%A6%E5%8F%B7%E7%9A%84%E6%84%8F%E4%B9%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p><strong>&gt;version</strong></p>
+<p>必须大于某个版本</p>
+<p>如：&gt;1.1.2，表示必须大于 1.1.2 版</p>
+<p><strong>&gt;&#x3D;version</strong></p>
+<p>可大于或等于某个版本</p>
+<p>如：&gt;&#x3D;1.1.2，表示可以等于 1.1.2，也可以大于 1.1.2 版本</p>
+<p><strong>&lt;version</strong></p>
+<p>必须小于某个版本</p>
+<p>如：&lt;1.1.2，表示必须小于 1.1.2 版本</p>
+<p><strong>&lt;&#x3D;version</strong></p>
+<p>可以小于或等于某个版本</p>
+<p>如：&lt;&#x3D;1.1.2，表示可以等于 1.1.2，也可以小于 1.1.2 版本</p>
+<p><strong>~version</strong></p>
+<p>大概匹配某个版本</p>
+<p>如果 minor 版本号指定了，那么 minor 版本号不变，而 patch 版本号任意</p>
+<p>如果 minor 和 patch 版本号未指定，那么 minor 和 patch 版本号任意</p>
+<p>如：~1.1.2，表示&gt;&#x3D;1.1.2 &lt;1.2.0，可以是 1.1.2，1.1.3，1.1.4，…..，1.1.n</p>
+<p>如：~1.1，表示&gt;&#x3D;1.1.0 &lt;1.2.0，可以是同上</p>
+<p>如：~1，表示&gt;&#x3D;1.0.0 &lt;2.0.0，可以是 1.0.0，1.0.1，1.0.2，…..，1.0.n，1.1.n，1.2.n，…..，1.n.n</p>
+<p><strong>^version</strong></p>
+<p>兼容某个版本</p>
+<p>版本号中最左边的非 0 数字的右侧可以任意</p>
+<p>如果缺少某个版本号，则这个版本号的位置可以任意</p>
+<p>如：^1.1.2 ，表示&gt;&#x3D;1.1.2 &lt;2.0.0，可以是 1.1.2，1.1.3，…..，1.1.n，1.2.n，…..，1.n.n</p>
+<p>如：^0.2.3 ，表示&gt;&#x3D;0.2.3 &lt;0.3.0，可以是 0.2.3，0.2.4，…..，0.2.n</p>
+<p>如：^0.0，表示 &gt;&#x3D;0.0.0 &lt;0.1.0，可以是 0.0.0，0.0.1，…..，0.0.n</p>
+<p><strong>x-range</strong></p>
+<p>x 的位置表示任意版本</p>
+<p>如：1.2.x，表示可以 1.2.0，1.2.1，…..，1.2.n</p>
+<p><strong>*-range</strong></p>
+<p>任意版本，””也表示任意版本</p>
+<p>如：*，表示&gt;&#x3D;0.0.0 的任意版本</p>
+<p><strong>version1 - version2</strong></p>
+<p>大于等于 version1，小于等于 version2</p>
+<p>如：1.1.2 - 1.3.1，表示包括 1.1.2 和 1.3.1 以及他们件的任意版本</p>
+<p><strong>range1 || range2</strong></p>
+<p>满足 range1 或者满足 range2，可以多个范围</p>
+<p>如：&lt;1.0.0 || &gt;&#x3D;2.3.1 &lt;2.4.5 || &gt;&#x3D;2.5.2 &lt;3.0.0，表示满足这 3 个范围的版本都可以</p>
+<p>原文连接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wshiqtb/p/6395029.html">https://www.cnblogs.com/wshiqtb/p/6395029.html</a></p>
+
       
     </div>
 
@@ -743,7 +877,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -787,14 +921,15 @@
 <p>官方的说明：我正在为此恢复修复，它完全破坏了注入自定义 sass 变量（<a target="_blank" rel="noopener" href="https://github.com/vuetifyjs/vuetify/issues/13737">#13737</a>）的项目。要使警告静音，请安装<code>sass@~1.32</code></p>
 <p>步骤：</p>
 <p>修改 package.json</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/09/Vue/vuetify%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;sass&quot;</span><span class="punctuation">:</span> <span class="string">&quot;~1.32&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<p>然后 npm install</p>
+<h1 id="v-autocomplete-多选-不保留滚动位置"><a href="#v-autocomplete-多选-不保留滚动位置" class="headerlink" title="v-autocomplete 多选 不保留滚动位置"></a>v-autocomplete 多选 不保留滚动位置</h1><h3 id="github-issues-1"><a href="#github-issues-1" class="headerlink" title="github issues:"></a>github issues:</h3><p><a target="_blank" rel="noopener" href="https://github.com/vuetifyjs/vuetify/issues/11969">https://github.com/vuetifyjs/vuetify/issues/11969</a></p>
+<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p><a target="_blank" rel="noopener" href="https://github.com/treardon17/vuetify/commit/9f8059112eabbd890f9f3efbc59459235a777996">https://github.com/treardon17/vuetify/commit/9f8059112eabbd890f9f3efbc59459235a777996</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//packages/vuetify/src/components/VSelect/VSelect.ts</span></span><br><span class="line"><span class="comment">// 删除下面的代码</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="title function_">setMenuIndex</span>(-<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h3><p>可以使用 github issues 中的解决方案 ，或者等官方更新修复这个 bug</p>
+
       
     </div>
 
@@ -856,7 +991,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -902,14 +1037,6 @@
 <p>–output 为输入文件夹</p>
 <p>还可以在项目中安装使用</p>
 
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/09/Electron/electron%E9%A1%B9%E7%9B%AE%E5%BF%AB%E6%8D%B7%E7%94%9F%E6%88%90%E6%89%80%E6%9C%89%E7%AB%AF%E5%AF%B9%E5%BA%94%E5%9B%BE%E6%A0%87/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -971,7 +1098,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1011,20 +1138,79 @@
           <h2 id="环境依赖"><a href="#环境依赖" class="headerlink" title="环境依赖"></a>环境依赖</h2><h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><blockquote>
 <p>Windows 环境依赖需要 Visual Studio 和 python<br>Visual Studio 和 python 在安装 node 时会提示安装 window 对应的编译环境勾选安装即可， 或使用脚本安装编译环境，也可以使用 npm 全局安装 <a target="_blank" rel="noopener" href="https://github.com/felixrieseberg/windows-build-tools">windows-build-tools</a></p>
 </blockquote>
-<p><img src="https://bitbw.top/public/img/my_gallery/20220113140323.png" alt="image-20220113102005114"></p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20220113140323.png" alt="image-20220113102005114"></p>
 <h3 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h3><blockquote>
 <p>MacOS 环境依赖需要 CommandLineTools (Xcode命令行工具)和 python</p>
 </blockquote>
 <h2 id="electron-更新到-12-后提示-Require-is-not-defined"><a href="#electron-更新到-12-后提示-Require-is-not-defined" class="headerlink" title="electron 更新到 12 后提示 Require is not defined"></a>electron 更新到 12 后提示 Require is not defined</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>将项目从 electron 6 升级到 electron 12 后，启动项目渲染进程控制台提示：Require is not defined</p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/07/Electron/Electron%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>项目使用 vue-cli-plugin-electron-builder 搭建，在 vue-cli-plugin-electron-builder 的 github 问题上找到对应答案</p>
+<p>问题地址：<a target="_blank" rel="noopener" href="https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/1349">https://github.com/nklayman/vue-cli-plugin-electron-builder/issues/1349</a></p>
+<p>在 new BrowserWindow 中添加 nodeIntegration 和 contextIsolation 的对应配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> win = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="attr">webPreferences</span>: &#123;</span><br><span class="line">    <span class="comment">// Use pluginOptions.nodeIntegration, leave this alone</span></span><br><span class="line">    <span class="comment">// See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info</span></span><br><span class="line">    <span class="attr">nodeIntegration</span>: process.<span class="property">env</span>.<span class="property">ELECTRON_NODE_INTEGRATION</span>,</span><br><span class="line">    <span class="attr">contextIsolation</span>: !process.<span class="property">env</span>.<span class="property">ELECTRON_NODE_INTEGRATION</span>,</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>同时修改 vue.config.js</p>
+<p>官方说明：<a target="_blank" rel="noopener" href="https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration">https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="attr">pluginOptions</span>: &#123;</span><br><span class="line">    <span class="attr">electronBuilder</span>: &#123;</span><br><span class="line">      <span class="attr">nodeIntegration</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="comment">//...</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>fs.existsSync is not a function</p>
+<h2 id="使用-vue-cli-plugin-electron-builder-的项目修改主进程和渲染进程入口文件"><a href="#使用-vue-cli-plugin-electron-builder-的项目修改主进程和渲染进程入口文件" class="headerlink" title="使用 vue-cli-plugin-electron-builder 的项目修改主进程和渲染进程入口文件"></a>使用 vue-cli-plugin-electron-builder 的项目修改主进程和渲染进程入口文件</h2><p>修改 vue.config.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="attr">pluginOptions</span>: &#123;</span><br><span class="line">    <span class="attr">electronBuilder</span>: &#123;</span><br><span class="line">      <span class="attr">mainProcessFile</span>: <span class="string">&quot;src/main/index.js&quot;</span>,</span><br><span class="line">      <span class="attr">rendererProcessFile</span>: <span class="string">&quot;src/renderer/index.js&quot;</span>,</span><br><span class="line">      <span class="attr">mainProcessWatch</span>: [<span class="string">&quot;src/main&quot;</span>],</span><br><span class="line">      <span class="comment">//...</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-ipcRenderer-sendSync-后程序卡住（阻塞）问题"><a href="#使用-ipcRenderer-sendSync-后程序卡住（阻塞）问题" class="headerlink" title="使用 ipcRenderer.sendSync 后程序卡住（阻塞）问题"></a>使用 ipcRenderer.sendSync 后程序卡住（阻塞）问题</h2><p>使用 ipcRenderer.sendSync 方法进行通信 ,对应的 ipcMain.on 中必须使用 event.returnValue 返回结果</p>
+<p>否则 sendSync 会将阻塞整个渲染进程 ，导致程序卡住</p>
+<p>官方文档中的警告</p>
+<blockquote>
+<p>⚠️<strong>警告</strong>：发送同步消息会阻塞整个渲染器进程，直到收到回复，所以只能作为最后的手段使用此方法。使用异步版本要好得多，<a target="_blank" rel="noopener" href="https://www.electronjs.org/docs/api/ipc-renderer#ipcrendererinvokechannel-args"><code>invoke()</code></a>.</p>
+</blockquote>
+<p>所以尽量使用 ipcRenderer. send 而非 sendSync 方法，或者再每个 ipcMain.on 中都添加返回值 event.returnValue</p>
+<h2 id="electron-vue-项目添加-vue-devTools-Unrecognized-manifest-key-‘browser-action‘-Permission-‘contextMenus‘"><a href="#electron-vue-项目添加-vue-devTools-Unrecognized-manifest-key-‘browser-action‘-Permission-‘contextMenus‘" class="headerlink" title="electron+vue 项目添加 vue-devTools Unrecognized manifest key ‘browser_action‘. Permission ‘contextMenus‘"></a>electron+vue 项目添加 vue-devTools Unrecognized manifest key ‘browser_action‘. Permission ‘contextMenus‘</h2><h3 id="构建-vue-devtools"><a href="#构建-vue-devtools" class="headerlink" title="构建 vue-devtools"></a>构建 vue-devtools</h3><p>手动 clone 项目<code>vue-devtools</code><br><code>git clone https://github.com/vuejs/vue-devtools.git</code><br>然后切换到<code>add-remote-devtools</code>分支，默认的是<code>main</code>分支：<br><code>git checkout add-remote-devtools</code><br>进入<code>vue-devtools</code>根目录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn</span><br><span class="line"><span class="comment"># ...</span></span><br><span class="line">yarn run build</span><br></pre></td></tr></table></figure>
+
+<p>run build</p>
+<p><em>这一步会出现一个特别恶心的 webpack,webpack-cli 互相依赖缺失的问题，提示没有 webpack 模块，然后全局安装 webpack 模块，npm install -g webpack，这时候运行 webpack 指令，会发现缺失 webpack-cli，再次全局安装 webpack-cli，npm install -g webpack-cli，这时候运行 webpack-cli 指令，又莫名其妙的提示缺失 webpack 模块。</em></p>
+<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#x77;&#x65;&#x62;&#112;&#x61;&#99;&#x6b;&#64;&#x33;&#46;&#54;&#46;&#x30;">&#x77;&#x65;&#x62;&#112;&#x61;&#99;&#x6b;&#64;&#x33;&#46;&#54;&#46;&#x30;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
+<p><em>但是有的系统如果以前全局安装过 webpack，还是会报这些相互依赖的问题，或者是环境变量导致的 webpack,webpack-cli 安装进了 node 目录，而以前有的 webpack 安装进了 C:\Users\Administrator\AppData\Roaming\npm 这个目录。解决办法就是删除 C:\Users\Administrator\AppData\Roaming\npm 目录下的 webpack。</em></p>
+<h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>然后将 build 生成的 shells 目录中的 chrome 目录拷贝出来，这个就是 build 生成的 vue-devtools 插件<br>浏览器安装容易，直接打开插件管理，切换开发模式，加载已解压插件，选择刚刚的 chrome 目录就行了。但是 electron 项目中安装会有点麻烦：</p>
+<p>找到 background.js 文件 (如果没有 background.js 找到 main&#x2F;index.js)，找到这段代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">on</span>(<span class="string">&quot;ready&quot;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (isDevelopment &amp;&amp; !process.<span class="property">env</span>.<span class="property">IS_TEST</span>) &#123;</span><br><span class="line">    <span class="comment">// Install Vue Devtools</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="keyword">await</span> <span class="title function_">installExtension</span>(<span class="variable constant_">VUEJS_DEVTOOLS</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;Vue Devtools failed to install:&quot;</span>, e.<span class="title function_">toString</span>());</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">createWindow</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这个是默认安装<code>vue-devtools</code>部分，不过因为网络(墙)问题，安装不上：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Failed to fetch extension, trying 4 more times</span><br><span class="line">Failed to fetch extension, trying 3 more times</span><br><span class="line">Failed to fetch extension, trying 2 more times</span><br><span class="line">Failed to fetch extension, trying 1 more times</span><br><span class="line">Failed to fetch extension, trying 0 more times</span><br><span class="line">Vue Devtools failed to install: Error: net::ERR_CONNECTION_TIMED_OUT</span><br></pre></td></tr></table></figure>
+
+<p>所以要修改一下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">on</span>(<span class="string">&quot;ready&quot;</span>, <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (isDevelopment &amp;&amp; !process.<span class="property">env</span>.<span class="property">IS_TEST</span>) &#123;</span><br><span class="line">    <span class="comment">// Install Vue Devtools</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="comment">// await installExtension(VUEJS_DEVTOOLS);</span></span><br><span class="line">      <span class="comment">// 新增的：安装vue-devtools</span></span><br><span class="line">      <span class="keyword">const</span> &#123; session &#125; = <span class="built_in">require</span>(<span class="string">&quot;electron&quot;</span>);</span><br><span class="line">      <span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line">      session.<span class="property">defaultSession</span>.<span class="title function_">loadExtension</span>(</span><br><span class="line">        path.<span class="title function_">resolve</span>(__dirname, <span class="string">&quot;../../vue-devtools/chrome&quot;</span>) <span class="comment">//这个是刚刚build好的插件目录</span></span><br><span class="line">      );</span><br><span class="line">      <span class="comment">//这个是刚开始找的方法不行，换上边的方法</span></span><br><span class="line">      <span class="comment">// BrowserWindow.addDevToolsExtension(path.resolve(__dirname, &quot;../../vue-devtools/chrome&quot;)  );</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;Vue Devtools failed to install:&quot;</span>, e.<span class="title function_">toString</span>());</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">createWindow</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>提示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(node:9068) ExtensionLoadWarning: Warnings loading extension at ...\vue-devtools\chrome: Unrecognized manifest key &#x27;browser_action&#x27;. Permission &#x27;contextMenus&#x27; is unknown or URL pattern is malformed.</span><br></pre></td></tr></table></figure>
+
+<p>解决：<br>在 vue-devtools&#x2F;chrome&#x2F;manifest.json 删掉相应的字段</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/electron20201111130214278.png" alt="img"></p>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><h4 id="报-Cannot-read-property-‘VUE-DEVTOOLS-UID’-of-undefined"><a href="#报-Cannot-read-property-‘VUE-DEVTOOLS-UID’-of-undefined" class="headerlink" title="报 Cannot read property ‘VUE_DEVTOOLS_UID’ of undefined"></a>报 Cannot read property ‘<strong>VUE_DEVTOOLS_UID</strong>’ of undefined</h4><p>在 main.js 中加入如下代码即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.config.devtools = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="打包出来的-vue-devtools-可能是最新版的外观可能不太适应"><a href="#打包出来的-vue-devtools-可能是最新版的外观可能不太适应" class="headerlink" title="打包出来的 vue-devtools 可能是最新版的外观可能不太适应"></a>打包出来的 vue-devtools 可能是最新版的外观可能不太适应</h4><p>直接在 github 官方地址 <a target="_blank" rel="noopener" href="https://github.com/vuejs/devtools/tags">https://github.com/vuejs/devtools/tags</a>下载自己用的比较顺手的版本</p>
+<p>我比较喜欢 v5.3.3</p>
+<p>然后相同的方法 构建 复制 粘贴就行</p>
+<h2 id="MacOS-系统更新后-下载依赖报找不到-xcode"><a href="#MacOS-系统更新后-下载依赖报找不到-xcode" class="headerlink" title="MacOS 系统更新后 下载依赖报找不到 xcode"></a>MacOS 系统更新后 下载依赖报找不到 xcode</h2><p>MacOS 下打包 electron 项目需要 xcode ,同 windows 一样 （win 需要 visual studio），但是 xcode 太大了而且一般不需要整个 xcode ,这时可以使用<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/172365580">命令行工具</a>(Command Line Tools, CLT)，同样 win 也可以通过 node 进行配置命令命令行工具（在 node 安装时可以选择这些依赖）</p>
+<p><strong>但是</strong>: MacOS 系统更新后 CLT 需要重新下载 ，不然下载依赖时会报找不到 xcode 的错误</p>
+<h2 id="MacOS-提示-Error-Cannot-create-BrowserWindow-before-app-is-ready-at-I-init"><a href="#MacOS-提示-Error-Cannot-create-BrowserWindow-before-app-is-ready-at-I-init" class="headerlink" title="MacOS 提示 Error: Cannot create BrowserWindow before app is ready at I.init"></a>MacOS 提示 Error: Cannot create BrowserWindow before app is ready at I.init</h2><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>应用还在加载中就点击了一下 触发了 <code>app.on(&quot;activate&quot;)</code> ，同时触发了 new BrowserWindow 此时 app 还没到 <code>ready</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">on</span>(<span class="string">&quot;activate&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// On macOS it&#x27;s common to re-create a window in the app when the</span></span><br><span class="line">  <span class="comment">// dock icon is clicked and there are no other windows open.</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="title class_">BrowserWindow</span>.<span class="title function_">getAllWindows</span>().<span class="property">length</span> === <span class="number">0</span>) <span class="title function_">createWindow</span>();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h3><p>多加一个判断条件 <code>isReady</code> 开始为<code>false</code> 在 <code>ready</code> 时设置为 <code>true</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="title class_">BrowserWindow</span>.<span class="title function_">getAllWindows</span>().<span class="property">length</span> === <span class="number">0</span> &amp;&amp; isReady) <span class="title function_">createWindow</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="MacOS-12-3-打包报-Exit-code-ENOENT-spawn-x2F-usr-x2F-bin-x2F-python-ENOEN"><a href="#MacOS-12-3-打包报-Exit-code-ENOENT-spawn-x2F-usr-x2F-bin-x2F-python-ENOEN" class="headerlink" title="MacOS 12.3 打包报 Exit code: ENOENT. spawn &#x2F;usr&#x2F;bin&#x2F;python ENOEN"></a>MacOS 12.3 打包报 Exit code: ENOENT. spawn &#x2F;usr&#x2F;bin&#x2F;python ENOEN</h2><h3 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h3><p>因为 macos monterey 12.3 删除了 python 2.7 <a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes">https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes</a></p>
+<h3 id="解决-2"><a href="#解决-2" class="headerlink" title="解决"></a>解决</h3><p><a target="_blank" rel="noopener" href="https://github.com/electron-userland/electron-builder/pull/6789">https://github.com/electron-userland/electron-builder/pull/6789</a></p>
+<p>将<code>electron-builder</code>升级到最新</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i electron-builder@next</span><br></pre></td></tr></table></figure>
+
+<p>注意:如果项目中使用的是<code>vue-cli-plugin-electron-builder</code> 需要手动进入包内部更新</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入 node_modules</span></span><br><span class="line"> <span class="built_in">cd</span> node_modules/vue-cli-plugin-electron-builder</span><br><span class="line"><span class="comment"># 更新 electron-builder</span></span><br><span class="line">npm i electron-builder@next</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用文档汇总"><a href="#常用文档汇总" class="headerlink" title="常用文档汇总"></a>常用文档汇总</h2><p>electron <a target="_blank" rel="noopener" href="https://www.electronjs.org/">https://www.electronjs.org/</a></p>
+<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><p>electron-builder <a target="_blank" rel="noopener" href="https://www.electron.build/">https://www.electron.build/</a></p>
+<h3 id="框架集成"><a href="#框架集成" class="headerlink" title="框架集成"></a>框架集成</h3><p>vue-cli-plugin-electron-builder <a target="_blank" rel="noopener" href="https://nklayman.github.io/vue-cli-plugin-electron-builder/">https://nklayman.github.io/vue-cli-plugin-electron-builder/</a></p>
+
       
     </div>
 
@@ -1086,7 +1272,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1131,14 +1317,16 @@
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ELECTRON_MIRROR</span> <span class="string">&quot;http://npm.taobao.org/mirrors/electron/&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="打包时下载依赖报错"><a href="#打包时下载依赖报错" class="headerlink" title="打包时下载依赖报错"></a>打包时下载依赖报错</h2><p>下载不下来对应的包，比如我使用代理有时下载 github 上的对应包就会报错</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/07/Electron/electron-builder-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8C%85%E5%90%AB%E6%89%93%E5%8C%85%E6%97%B6%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>手动下载对应地址的包</p>
+<p>下载放到<code>C:\Users\Administrator\AppData\Local\electron\Cache</code>下</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>一般需要三个包 wincodesign，nsis，nsis-resources，</p>
+<p>这个三个包分别创建<code>包名-版本号</code>的文件夹，然后将下载下了的压缩文件放<code>C:\Users\Administrator\AppData\Local\electron\Cache</code>下</p>
+<p>也可以解压后放到<code>C:\Users\WX03\AppData\Local\electron-builder\Cache</code>下</p>
+<p>这个是我的 electron-builer 的目录</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">├── Cache</span><br><span class="line">│   ├── nsis</span><br><span class="line">│   │   ├── nsis<span class="string">-3</span>.0.3.2</span><br><span class="line">│   │   ├── nsis<span class="string">-3</span>.0.4.1</span><br><span class="line">│   │   └── nsis-resources<span class="string">-3</span>.4.1</span><br><span class="line">│   └── winCodeSign</span><br><span class="line">│       └── winCodeSign<span class="string">-2</span>.6.0</span><br><span class="line">├── nsis</span><br><span class="line">│   ├── nsis<span class="string">-3</span>.0.3.2</span><br><span class="line">│   ├── nsis<span class="string">-3</span>.0.4.1</span><br><span class="line">└── winCodeSign</span><br></pre></td></tr></table></figure>
+
+<h2 id="所有难下的包的对应淘宝镜像源解决方案"><a href="#所有难下的包的对应淘宝镜像源解决方案" class="headerlink" title="所有难下的包的对应淘宝镜像源解决方案"></a>所有难下的包的对应淘宝镜像源解决方案</h2><p>官方地址：<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors">https://npm.taobao.org/mirrors</a></p>
+
       
     </div>
 
@@ -1200,7 +1388,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1247,14 +1435,9 @@
 
 <h2 id="使用-electron-vue-模板创建（不推荐）"><a href="#使用-electron-vue-模板创建（不推荐）" class="headerlink" title="使用 electron-vue 模板创建（不推荐）"></a>使用 electron-vue 模板创建（不推荐）</h2><p>electron-vue 中文文档： <a target="_blank" rel="noopener" href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/">https://simulatedgreg.gitbooks.io/electron-vue/content/cn/</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 vue-cli 和 脚手架样板代码</span></span><br><span class="line">npm install -g vue-cli</span><br><span class="line">vue init simulatedgreg/electron-vue my-project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖并运行你的程序</span></span><br><span class="line"><span class="built_in">cd</span> my-project</span><br><span class="line">yarn <span class="comment"># 或者 npm install</span></span><br><span class="line">yarn run dev <span class="comment"># 或者 npm run dev</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/04/Electron/%E5%BF%AB%E6%8D%B7%E5%88%9B%E5%BB%BAelectron-vue%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+
+<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p>个人觉得使用 vue-cli-plugin-electron-builder 生成项目更好用 而且文档详细，快速上手</p>
+
       
     </div>
 
@@ -1316,7 +1499,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1360,14 +1543,82 @@
 <p><strong>*apt-get install openssh-client（安装 ssh 客户端程序）*</strong></p>
 <p><strong>*apt-get install openssh-server（安装 ssh 服务端程序）*</strong></p>
 <p><strong>*service ssh start 或者 &#x2F;etc&#x2F;init.d&#x2F;ssh start（开启 ssh 服务）*</strong></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/06/03/Linux/%E4%BD%BF%E7%94%A8-ubuntu-%E6%89%93%E9%80%A0-NAS/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p><strong>*service ssh stop 或者 &#x2F;etc&#x2F;init.d&#x2F;ssh stop（关闭 ssh 服务）*</strong></p>
+<p><strong>*指令 1：ps -e | grep ssh（ 查看 ssh 服务是否开启）*</strong></p>
+<p>运行**<em>ps -e | grep ssh</em>**得出如图一的两行结果。ssh-agent 指的是 ubuntu 的 ssh 服务的客户端，用于该 ubuntu 远程连接其它 Linux 主机。sshd 指的是 ubuntu 的 ssh 服务的服务端，用于其它主机通过 ssh 服务连接该主机。</p>
+<p>换句话说，如果没有 sshd 进程的话，别的系统是不能连接该 ubuntu 主机的，若是没有 ssh-agent 的话，该 ubuntu 主机也无法通过 ssh 连接其它主机。</p>
+<p><strong>*指令 2：apt-get install openssh-client（安装 ssh 客户端程序）*</strong></p>
+<p>若是运行***ps -e | grep ssh*<strong>没有查出 ssh-agent 服务，但是你又想通过 ssh 服务连接别的系统。那么就执行</strong>*apt-get install openssh-client*<strong>安装 ssh 客户端。接着执行</strong><em>ssh 目标用户@目标 ip</em>**即可连接目标主机。正常情况 Ubuntu 默认开启 ssh-agent 服务。所以一般用不打指令 2。</p>
+<p><strong>*指令 3：apt-get install openssh-server（安装 ssh 服务端程序）*</strong></p>
+<p>默认 ssh 的服务端是没有安装的，可用***ps -e | grep ssh*<strong>查看。若是没有 sshd 的进程，则运行</strong><em>apt-get install openssh-server</em>**安装 ssh 服务端。接着重新执行 ps -e | grep ssh 便可发现 sshd 已启动。至此，其它主机便可通过 ssh 连接该主机。</p>
+<p>sshd 和 ssh-agent 都已经启动。其它主机便可通过 ssh 连接该主机</p>
+<p><strong>*指令 4：service ssh start 或者 &#x2F;etc&#x2F;init.d&#x2F;ssh start（开启 ssh 服务）*</strong></p>
+<p><strong>*指令 5：service ssh stop 或者 &#x2F;etc&#x2F;init.d&#x2F;ssh stop（关闭 ssh 服务）*</strong></p>
+<p>指令 4 和指令 5 便是开启和关闭 sshd 服务进程的。</p>
+<p>以上便是 Ubuntu18 下安装开启 ssh 进程的所有流程。<br>来源：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/4b50b55ebb4d">https://www.jianshu.com/p/4b50b55ebb4d</a></p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="SSH连服务器提示“Permission-denied-publickey-…-”的原因与解决办法"><a href="#SSH连服务器提示“Permission-denied-publickey-…-”的原因与解决办法" class="headerlink" title="SSH连服务器提示“Permission denied(publickey,…).”的原因与解决办法"></a>SSH连服务器提示“Permission denied(publickey,…).”的原因与解决办法</h4><p><strong>原因分析：</strong></p>
+<p>错误提示的大意是拒绝许可，括号中的各种验证失败或未能验证</p>
+<p><strong>解决办法：</strong></p>
+<p>（1）编辑&#x2F;etc&#x2F;ssh&#x2F;sshd_config配置文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config </span><br></pre></td></tr></table></figure>
+
+<p>（2）将  第34行左右的  PermitRootLogin 设置为 yes  第58行左右的 PasswordAuthentication 设置为yes，如下图</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20220527213951303.png" alt="image-20220527213951303"></p>
+<p>（3）重启sshd服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Samba-共享文件服务"><a href="#Samba-共享文件服务" class="headerlink" title="Samba 共享文件服务"></a>Samba 共享文件服务</h2><p>参考：<a target="_blank" rel="noopener" href="https://www.linuxidc.com/Linux/2018-11/155466.htm">https://www.linuxidc.com/Linux/2018-11/155466.htm</a></p>
+<h2 id="FTP-文件传输服务"><a href="#FTP-文件传输服务" class="headerlink" title="FTP 文件传输服务"></a>FTP 文件传输服务</h2><p>安装完 ssh 就可以使用 sftp ，也可以再装一个 vsftpd </p>
+<p>运行：sudo apt-get install vsftpd 命令，安装 VSFTP 工具</p>
+<p>安装好了之后，使用如下命令启动 FTP 服务：</p>
+<p>sudo systemctl start vsftpd<br>sudo systemctl enable vsftpd</p>
+<p>查看是否开启</p>
+<p>sudo ss -tunlp | grep -i ftp</p>
+<h2 id="Gitlab"><a href="#Gitlab" class="headerlink" title="Gitlab"></a>Gitlab</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>gitlab 企业版 –&gt; ee</p>
+<p>gitlab 社区版 –&gt; ce</p>
+<blockquote>
+<p>tip 官方文档很详细 建议查看官方文档</p>
+</blockquote>
+<p>官方社区版安装教程：<a target="_blank" rel="noopener" href="https://docs.gitlab.com/ce/install/">https://docs.gitlab.com/ce/install/</a></p>
+<p>推荐使用 docker 容器方式：</p>
+<p><a target="_blank" rel="noopener" href="https://docs.gitlab.com/omnibus/docker/">docker容器方式安装教程</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run --detach \</span><br><span class="line">  --hostname gitlab.example.com \</span><br><span class="line">  --publish 9443:443 --publish 9080:80 --publish 9022:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line">  --volume <span class="variable">$GITLAB_HOME</span>/config:/etc/gitlab \</span><br><span class="line">  --volume <span class="variable">$GITLAB_HOME</span>/logs:/var/log/gitlab \</span><br><span class="line">  --volume <span class="variable">$GITLAB_HOME</span>/data:/var/opt/gitlab \</span><br><span class="line">  --shm-size 256m \</span><br><span class="line">  gitlab/gitlab-ce:latest</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://docs.gitlab.com/ee/install/docker.html#configuration">docker容器方式配置教程</a></p>
+<h1 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h1><h2 id="ZeroTier-One"><a href="#ZeroTier-One" class="headerlink" title="ZeroTier One"></a>ZeroTier One</h2><h3 id="安装-ZeroTier-One-内网穿透"><a href="#安装-ZeroTier-One-内网穿透" class="headerlink" title="安装 ZeroTier One 内网穿透"></a>安装 ZeroTier One 内网穿透</h3><p>官网：<a target="_blank" rel="noopener" href="https://www.zerotier.com/">https://www.zerotier.com/</a></p>
+<p>使用这行命令安装 ZeroTier One</p>
+<p>curl -s <a target="_blank" rel="noopener" href="https://install.zerotier.com/">https://install.zerotier.com/</a> | sudo bash</p>
+<p>复制下面代码，将 NetWork ID 从 zerotier 官方网站中复制到下面代码中</p>
+<p>sudo zerotier-cli join （NetWork ID）</p>
+<p>若出现”200 join OK”则添加成功</p>
+<h2 id="frp"><a href="#frp" class="headerlink" title="frp"></a>frp</h2><h3 id="安装-frp-内网穿透"><a href="#安装-frp-内网穿透" class="headerlink" title="安装 frp 内网穿透"></a>安装 frp 内网穿透</h3><p><a target="_blank" rel="noopener" href="https://gofrp.org/docs/setup/">官方文档</a></p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>目前可以在 Github 的 <a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases">Release</a> 页面中下载到最新版本的客户端和服务端二进制文件，所有文件被打包在一个压缩包中。</p>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>解压缩下载的压缩包，将其中的 frpc 拷贝到内网服务所在的机器上，将 frps 拷贝到具有公网 IP 的机器上，放置在任意目录。</p>
+<h4 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h4><p>编写配置文件，先通过 <code>./frps -c ./frps.ini</code> 启动服务端，再通过 <code>./frpc -c ./frpc.ini</code> 启动客户端。如果需要在后台长期运行，建议结合其他工具使用，例如 <code>systemd</code> 和 <code>supervisor</code>。 </p>
+<p>如果是 Windows 用户，需要在 cmd 终端中执行命令。</p>
+<p>配置文件如何编写可以参考 <a target="_blank" rel="noopener" href="https://gofrp.org/docs/examples/">示例</a> 中的内容。</p>
+<p>这个示例通过简单配置 TCP 类型的代理让用户访问到内网的服务器。</p>
+<h3 id="阿里云配置"><a href="#阿里云配置" class="headerlink" title="阿里云配置"></a>阿里云配置</h3><p>需要开启防火墙 中的对应端口  <code>7000</code> <code>6000</code> …</p>
+<h3 id="通过-SSH-访问内网机器"><a href="#通过-SSH-访问内网机器" class="headerlink" title="通过 SSH 访问内网机器"></a>通过 SSH 访问内网机器</h3><ol>
+<li><p>在具有公网 IP 的机器上部署 frps，修改 frps.ini 文件，这里使用了最简化的配置，设置了 frp 服务器用户接收客户端连接的端口：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">bind_port</span> = <span class="number">7000</span> <span class="comment"># 用于与 frpc 连接</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在需要被访问的内网机器上（SSH 服务通常监听在 22 端口）部署 frpc，修改 frpc.ini 文件，假设 frps 所在服务器的公网 IP 为 x.x.x.x：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = test.com</span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span>  <span class="comment"># 用于与 frps 连接</span></span><br><span class="line"></span><br><span class="line"><span class="section">[ssh]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">6000</span>  <span class="comment"># 代理 访问 test.com:6000 相当于访问 127.0.0.1:22</span></span><br></pre></td></tr></table></figure>
+
+<p><code>local_ip</code> 和 <code>local_port</code> 配置为本地需要暴露到公网的服务地址和端口。<code>remote_port</code> 表示在 frp 服务端监听的端口，访问此端口的流量将会被转发到本地服务对应的端口。</p>
+</li>
+<li><p>分别启动 frps 和 frpc。</p>
+</li>
+<li><p>通过 SSH 访问内网机器，假设用户名为 test：</p>
+<p><code>ssh -oPort=6000 test@x.x.x.x</code></p>
+<p>frp 会将请求 <code>x.x.x.x:6000</code> 的流量转发到内网机器的 22 端口。</p>
+<p>MEIFGMOCJGAGTQFR</p>
+</li>
+</ol>
+
       
     </div>
 
@@ -1409,13 +1660,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -1443,9 +1694,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -1453,14 +1708,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/page/4/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -1485,8 +1744,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"9e114c435bb4b681f9619ff3e7b3bbf6"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>

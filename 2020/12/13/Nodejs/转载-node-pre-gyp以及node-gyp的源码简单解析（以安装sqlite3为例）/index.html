@@ -19,8 +19,9 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":false,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/config.min.js"></script>
 
     <meta name="description" content="文章原地址 前言简单来说，node 是跨平台的，那么对于任何的 node 模块理论也是应该是跨平台的。然而，有些 node 模块直接或间接使用原生 C&#x2F;C++代码，这些东西要跨平台，就需要使用源码根据实际的操作平台环境进行原生模块编译。SQLite3 就是一个经典的原生模块，让我们以安装该模块为例，探索一下安装原生模块的流程。 项目建立建立一个简单的 node 项目，我们开始安装SQLi">
 <meta property="og:type" content="article">
@@ -43,7 +44,7 @@
 <meta property="og:image" content="https://blog.bitbw.top/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-8b31e792c069648f4518bd2bf4de384c_720w-1607839571435.jpg">
 <meta property="og:image" content="https://blog.bitbw.top/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-bf94b9960c86eaf29b542f860b3d4ab1_720w-1607839573628.jpg">
 <meta property="article:published_time" content="2020-12-13T13:05:13.000Z">
-<meta property="article:modified_time" content="2022-06-22T02:29:07.345Z">
+<meta property="article:modified_time" content="2022-06-23T01:20:34.670Z">
 <meta property="article:author" content="Bowen">
 <meta property="article:tag" content="Nodejs">
 <meta name="twitter:card" content="summary">
@@ -244,7 +245,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -300,7 +300,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-06-22 02:29:07" itemprop="dateModified" datetime="2022-06-22T02:29:07+00:00">2022-06-22</time>
+      <time title="修改时间：2022-06-23 01:20:34" itemprop="dateModified" datetime="2022-06-23T01:20:34+00:00">2022-06-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -424,44 +424,44 @@
 <li>检查是否启用<code>--fallback-to-build</code>参数，设定是否启用标志位。</li>
 <li>解析编译好的二进制文件的选项配置，譬如二进制文件存放地址，也就是通过请求下载对应二进制包的地址，以及各种各样参数。所以说，为什么下载很慢，我们后文会重点关注下载地址。</li>
 </ol>
-<h3 id="下载二进制包"><a href="#下载二进制包" class="headerlink" title="下载二进制包"></a>下载二进制包</h3><p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-42de3994e7c42468d24506ef1dbdbe49_720w-1607839552207.jpg" alt="img"></p>
+<h3 id="下载二进制包"><a href="#下载二进制包" class="headerlink" title="下载二进制包"></a>下载二进制包</h3><p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-42de3994e7c42468d24506ef1dbdbe49_720w-1607839552207.jpg" alt="img"></p>
 <p>根据流程，接下来我们进一步检查<code>versioning.js</code>文件，找到其中的<code>evaluate</code>函数，分析最后的<code>hosted_tarball</code>路径：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-1e4a760a3783229810e2a437e1330f37_720w-1607839554321.png" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-1e4a760a3783229810e2a437e1330f37_720w-1607839554321.png" alt="img"></p>
 <p><code>hosted_tarball</code>路径主要分为两个部分：1、<code>hosted_path</code>；2、<code>package_name</code>。</p>
 <h3 id="hosted-path"><a href="#hosted-path" class="headerlink" title="hosted_path"></a>hosted_path</h3><p>经过源码分析来源路径为：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-9e93a984b0f0aeac5d8154f0aa1b387c_720w-1607839785926.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-9e93a984b0f0aeac5d8154f0aa1b387c_720w-1607839785926.jpg" alt="img"></p>
 <p>我们自底向上分析。</p>
 <p><code>host</code>变量取决于从环境变量中检查名称为<code>&#39;npm_config_&#39; + opts.module_name + &#39;_binary_host_mirror&#39;</code>的环境变量。如果不存在，则使用<code>package_json.binary.host</code>。正常使用的时候，我们并不会设定环境变量，所以这里就进入<code>package_json.binary</code>进行获取。这个<code>package_json</code>是<code>evaluate</code>函数被调用时候传入的，在<code>node-pre-gyp/install.js</code>中能够看到：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-2f28af0a80578001c17e86077832bc52_720w-1607839556588.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-2f28af0a80578001c17e86077832bc52_720w-1607839556588.jpg" alt="img"></p>
 <p>一开始分析的时候，看到这里，本人以为<code>package_json</code>就是<code>node-pre-gyp/package.json</code>，于是本人去检查该<code>json</code>发现很奇怪，并没有 binary 属性，更别提 host 了。一番思考才明白，<code>node-pre-gyp install</code>的运行时调用者是谁呀？不是应该是<code>sqlite3</code>吗？所以这个地方的<code>require(&#39;./package.json&#39;)</code>实际上是指代的是<code>sqlite3/package.json</code>。查看<code>sqlite3/package.json</code>，果然发现了对应的元素：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-9123803894e4e7ba0df2b7eebc3be8f9_720w-1607839558202.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-9123803894e4e7ba0df2b7eebc3be8f9_720w-1607839558202.jpg" alt="img"></p>
 <p>在<code>binary</code>属性中，我们还能看到<code>remote_path</code>也在其中。</p>
 <p>至此，<code>hosted_path</code>我们完成了简单的分析，我们可以得出一个结论：</p>
 <p><strong><code>node-pre-gyp</code>下载二进制文件的路径，优先来源于对应模块的镜像地址，该镜像地址通过配置<code>&#39;npm_config_&#39; + 模块名 + &#39;_binary_host_mirror&#39;</code>来实现自定义；在没有定义镜像地址的情况下，读取模块<code>package.json</code>中的 binary 属性信息。</strong></p>
 <p>当然，读者可以根据具体情况再进一步分析源码。</p>
 <h3 id="package-name"><a href="#package-name" class="headerlink" title="package_name"></a>package_name</h3><p>其实，对于<code>hosted_path</code>的分析，我们也容易分析<code>package_name</code>了。</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-66d92db546da24a98f6459e09d28611a_720w-1607839560356.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-66d92db546da24a98f6459e09d28611a_720w-1607839560356.jpg" alt="img"></p>
 <p>自底向上分析，来自于<code>sqlite3/package.json</code>中<code>binary</code>属性中的<code>package_name</code>，内容见上图分析<code>host</code>。</p>
 <h3 id="失败处理"><a href="#失败处理" class="headerlink" title="失败处理"></a>失败处理</h3><p><code>--fallback-to-build</code>参数表明了是否进行失败后下载源码进行编译，源码不再分析。</p>
 <h3 id="从源码构建"><a href="#从源码构建" class="headerlink" title="从源码构建"></a>从源码构建</h3><h3 id="build-js"><a href="#build-js" class="headerlink" title="build.js"></a>build.js</h3><p>当我们提供了参数<code>--build-from-source</code>或是在下载编译好的二进制到本地出错的时提供了参数<code>--fallback-to-build</code>。node-pre-gyp 将进入<code>do_build</code>模块，进行源码编译。</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function do_build(gyp,argv,callback) &#123;</span><br><span class="line">  var args = [&#x27;rebuild&#x27;].concat(argv);</span><br><span class="line">  gyp.todo.push( &#123; name: &#x27;build&#x27;, args: args &#125; );</span><br><span class="line">  process.nextTick(callback);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>代码中，<code>gyp</code>由调用 install 的时候，传入：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-62190c9f9976e3b3a7d7633d33129e85_720w-1607839562977.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-62190c9f9976e3b3a7d7633d33129e85_720w-1607839562977.jpg" alt="img"></p>
 <p>那么我们又将回到调用 install 的地方。实际上，gyp 就是 node-pre-gyp.js 导出的模块：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-e940f9f30e0b68edeb98aa34709263e0_720w-1607839564901.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-e940f9f30e0b68edeb98aa34709263e0_720w-1607839564901.jpg" alt="img"></p>
 <p>也就是说在<code>do_build</code>中进行操作就是，放置了一个<code>build</code>任务在队列中。所以我们按照先前的分析，直接去看<code>build.js</code></p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-c60cc43b95c212ee80dff2bb461597a2_720w-1607839566493.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-c60cc43b95c212ee80dff2bb461597a2_720w-1607839566493.jpg" alt="img"></p>
 <p>看源码调用了当前模块中的<code>do_build</code>，且其中最核心的就是<code>compile</code>模块：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-2f5857952a2e181a620ca9183fd5e76d_720w-1607839567958.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-2f5857952a2e181a620ca9183fd5e76d_720w-1607839567958.jpg" alt="img"></p>
 <h3 id="util-x2F-compile-js"><a href="#util-x2F-compile-js" class="headerlink" title="util&#x2F;compile.js"></a>util&#x2F;compile.js</h3><p>进入 compile 模块，直接找到对应的<code>run_gyp</code>函数，代码很短，不难看出进行构建调用了<code>node-gyp</code></p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-97c9d95fdb3ea2d7c9e55a7311377fc3_720w-1607839569753.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-97c9d95fdb3ea2d7c9e55a7311377fc3_720w-1607839569753.jpg" alt="img"></p>
 <p>上述代码，会先考略<code>node-webkit</code>构建。但是我们核心的还是使用<code>node-gyp</code>，所以 else 中，会进行<code>node-gyp</code>的工具的检查工作。最后调用命令行执行<code>node-gyp</code>。于是，node 原生模块的安装工作，进入了新的阶段：<code>node-gyp</code>。</p>
 <h2 id="node-gyp-build"><a href="#node-gyp-build" class="headerlink" title="node-gyp build"></a><code>node-gyp build</code></h2><p>上文提到我们已经进入了<code>node-gyp</code>的范畴，会调用<code>node-gyp build</code>操作。当然，这个命令同样是在安装<code>node-gyp</code>依赖的时候已经完成了安装，并且进行<code>node_modules/.bin/</code>软连接操作。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">  <span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;node-gyp&quot;</span>: <span class="string">&quot;bin/node-gyp.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
 
 <p>我们进入该<code>js</code>进行分析</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-8b31e792c069648f4518bd2bf4de384c_720w-1607839571435.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-8b31e792c069648f4518bd2bf4de384c_720w-1607839571435.jpg" alt="img"></p>
 <p>实际上，<code>node-gyp</code>这段的命令行代码，和<code>node-pre-gyp</code>非常相似！所以我们也不去深入分析调用命令行了。直接在 lib 文件夹下面的<code>build.js</code>。在该<code>js</code>中，核心的方法为：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">build</span> (gyp, argv, callback) &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -469,7 +469,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// function build (gyp, argv, callback) 内部函数</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Load the &quot;config.gypi&quot; file that was generated during &quot;configure&quot;.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">loadConfigGypi</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * On Windows, find the first build/*.sln file.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">findSolutionFile</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Uses node-which to locate the msbuild / make executable.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">doWhich</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Search for the location of &quot;msbuild.exe&quot; file on Windows.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">findMsbuild</span> () &#123;...&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Actually spawn the process and compile the module.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">doBuild</span> () &#123;...&#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Invoked after the make/msbuild command exits.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">onExit</span> (code, signal) &#123;...&#125;</span><br></pre></td></tr></table></figure>
 
 <p>不得不说，<code>build</code>写的真心不错，看起来很舒服。这里为了方便读者快速阅读，我整理这些函数的调用图：</p>
-<p><img src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-bf94b9960c86eaf29b542f860b3d4ab1_720w-1607839573628.jpg" alt="img"></p>
+<p><img data-src="/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/v2-bf94b9960c86eaf29b542f860b3d4ab1_720w-1607839573628.jpg" alt="img"></p>
 <p>整个调用流程图个人认为足够进行安装的时候的一场分析了。至于每个内部函数的功能，有空继续更新本文吧。</p>
 
     </div>
@@ -477,6 +477,8 @@
     
     
     
+      
+
 
     <footer class="post-footer">
           <div class="reward-container">
@@ -524,20 +526,7 @@
 
 
 
-      <div class="tabs tabs-comment">
-        <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
-            <li class="tab"><a href="#comment-utterances">utterances</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane gitalk" id="comment-gitalk">
-              <div class="comments gitalk-container"></div>
-            </div>
-            <div class="tab-pane utterances" id="comment-utterances">
-              <div class="comments utterances-container"></div>
-            </div>
-        </div>
-      </div>
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -558,13 +547,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">415k</span>
+    <span title="站点总字数">416k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:17</span>
+    <span title="站点阅读时长">6:18</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -592,9 +581,13 @@
   </footer>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/bookmark.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/pjax.min.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
@@ -602,14 +595,18 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/fancybox.min.js"></script>
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/2020/12/13/Nodejs/%E8%BD%AC%E8%BD%BD-node-pre-gyp%E4%BB%A5%E5%8F%8Anode-gyp%E7%9A%84%E6%BA%90%E7%A0%81%E7%AE%80%E5%8D%95%E8%A7%A3%E6%9E%90%EF%BC%88%E4%BB%A5%E5%AE%89%E8%A3%85sqlite3%E4%B8%BA%E4%BE%8B%EF%BC%89/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/quicklink.min.js"></script>
 <script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
 <script>
@@ -634,8 +631,6 @@ darkmode.showWidget();
 
 <script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"e010b3e6eae4881d5c887912bd82136c"}</script>
 <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/gitalk.min.js"></script>
-<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"bitbw/gitalk-store","issue_term":"pathname","theme":"github-light"}</script>
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.1/source/js/third-party/comments/utterances.min.js"></script>
 
 </body>
 </html>
