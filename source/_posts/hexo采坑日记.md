@@ -1,5 +1,5 @@
 ---
-title: hexo采坑日记
+title: hexo常见问题汇总
 date: 2019-11-28 17:25:06
 tags:
   - hexo
@@ -56,4 +56,22 @@ social:
   # 微博: http://weibo.com/your-user-name  这里不能使用中文  确使用方式如下  地址后是图标
   "微博": http://weibo.com/your-user-name || fab fa-weibo
   "知乎": http://www.zhihu.com/people/your-user-name || fab fa-zhihu
+```
+
+## Next 主题文章老是自动滚到底部评论区的问题
+
+原因 :
+设置了 utterances
+
+```yml
+utterances:
+  enable: true
+```
+
+解决：
+取消 utterances
+
+```yml
+utterances:
+  enable: false
 ```

@@ -34,7 +34,7 @@
 #           branch: gh-pages # The branch the action should deploy to.
 #           folder: public # The folder the action should deploy.
 
-# name: GitHub Actions Build and Deploy Demo
+# name: GitHub Actions Build and Deploy Demo V1.0
 # on:
 #   push:
 #     branches:
@@ -56,12 +56,10 @@
 #       BUILD_SCRIPT:  npm install && npm run build
 
 name: Pages
-
 on:
   push:
     branches:
       - master # default branch
-
 jobs:
   pages:
     runs-on: ubuntu-latest

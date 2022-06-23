@@ -416,21 +416,3 @@ td {
 建议使用自动推送
 
 也可以调用百度 api
-
-## Next 主题文章老是自动滚到底部评论区的问题
-
-原因 :
-设置了 utterances
-
-```yml
-utterances:
-  enable: true
-```
-
-解决：
-取消 utterances
-
-```yml
-utterances:
-  enable: false
-```
