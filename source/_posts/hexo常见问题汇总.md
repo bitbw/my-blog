@@ -4,14 +4,18 @@ date: 2019-11-28 17:25:06
 tags:
   - hexo
 categories: Hexo
+description: "hexo 上传 github 后图片不显示问题 , Next主题文章老是自动滚到底部评论区的问题"
 cnblogs:
   postid: "15392424"
 hash: e65bafa6052157d5fc5fad5ce20736d5df4985f172363cbb7652bf0cbb42cf77
+
 ---
 
-## hexo 上传 github 后图片不显示问题
 
-<!--more-->
+[hexo官方文档](https://hexo.io/docs/)
+
+
+## hexo 上传 github 后图片不显示问题
 
 - 在文件夹下找到\_config.yml 文件 将`post_asset_folder:`修改为 true
 
@@ -75,3 +79,40 @@ utterances:
 utterances:
   enable: false
 ```
+
+## hexo 4.2.1 升级至 6.2.0  Next 7.8.0 升级至 8.12.1
+
+### hexo 升级
+
+```sh
+npm i -g npm-check # 检查之前安装的插件，都有哪些是可以升级的 
+
+# cd hexo 目录
+npm-check         # 检查那些依赖能够升级 并把 package.json 版本号升级到最新
+npm update        # 安装升级
+
+```
+
+### Next 升级
+
+[升级官方文档](https://theme-next.js.org/docs/getting-started/upgrade.html)
+
+#### 安装
+
+```sh
+# cd hexo 目录
+npm i hexo-theme-next
+
+```
+
+#### 修改配置文件位置
+
+将`themes/next/_config.yml` 复制到 `hexo目录/_config.next.yml`
+
+#### 备份原主题
+
+将 `themes/next` 改为  `themes/next-old`
+
+#### 运行
+
+运行`hexo clean`并`hexo s`检查站点是否正常工作

@@ -5,7 +5,7 @@ date: 2018-03-11 16:18:54
 comments: false
 ---
 
-![雪山.](index/雪山.jpg)
+![雪山.](https://bitbw.top/public/img/my_gallery/%E9%9B%AA%E5%B1%B1.jpg)
 
 ## 关于我
 
