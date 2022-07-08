@@ -58,7 +58,31 @@ outer.post("/xxx", async function (req, res, next) {
   // 获取form
   var form = new multiparty.Form();
   form.parse(req, async function (err, fields, files) {
-        // fields  files -> formdata
+    /* 
+      例子：  客户端发送如下 formData
+      
+      formData :{
+        image : new File([1,2,3],"xx.png"),
+        userID:"S12SADXXA"
+      }
+
+      files 接收 formData 中的文件 
+
+      files.image[0] = {
+        fieldName: "image",
+        originalFilename: "xx.png",
+        path: "XXX/XXX/XXX/xx.png",
+        headers: {
+          "content-disposition": "form-data; name=\"image\"; filename=\"xx.png\"",
+          "content-type": "application/json",
+        },
+        size: 26,
+      }
+
+      fields 接收非文件字段
+
+      fields.userID[0] = "S12SADXXA"
+      */ 
       console.log(fields, files)
   }
 })
