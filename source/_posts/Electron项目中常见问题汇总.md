@@ -86,17 +86,24 @@ module.exports = {
 };
 ```
 
-## 使用 ipcRenderer.sendSync 后程序卡住（阻塞）问题
+## 使用 ipcRenderer.sendSync 进程通信后程序卡住（阻塞）问题
 
 使用 ipcRenderer.sendSync 方法进行通信 ,对应的 ipcMain.on 中必须使用 event.returnValue 返回结果
 
 否则 sendSync 会将阻塞整个渲染进程 ，导致程序卡住
 
-官方文档中的警告
+### 官方文档中的警告
 
 > ⚠️**警告**：发送同步消息会阻塞整个渲染器进程，直到收到回复，所以只能作为最后的手段使用此方法。使用异步版本要好得多，[`invoke()`](https://www.electronjs.org/docs/api/ipc-renderer#ipcrendererinvokechannel-args).
 
-所以尽量使用 ipcRenderer. send 而非 sendSync 方法，或者再每个 ipcMain.on 中都添加返回值 event.returnValue
+所以尽量使用 ipcRenderer. send 而非 sendSync 方法，
+或者再每个 ipcMain.on 中都添加返回值 event.returnValue ，但是如果操作中报错可能还会导致卡死（阻塞）
+
+### 建议
+
+ 如果只需要让主进程执要返行一些操作不需要返回值 就使用 `ipcRenderer.send` 和 `ipcMain.on` 组合
+ 如果需要主进程返回值 就使用 `ipcRenderer.invoke` 和 `ipcMain.handle` 组合
+ `ipcRenderer.sendSync` 在任何情况下都不使用
 
 ## electron+vue 项目添加 vue-devTools Unrecognized manifest key ‘browser_action‘. Permission ‘contextMenus‘
 
