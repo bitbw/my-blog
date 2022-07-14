@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">84</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">126</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">127</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">126</span>
+          <span class="site-state-item-count">127</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -172,7 +172,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">84</span>
+        <span class="site-state-item-count">85</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -246,6 +246,170 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/03/25/js/Iterator%E5%92%8CGenerator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/25/js/Iterator%E5%92%8CGenerator/" class="post-title-link" itemprop="url">Iterator和Generator</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-25 16:27:30" itemprop="dateCreated datePublished" datetime="2021-03-25T16:27:30+00:00">2021-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Iterator 和 Generator</p>
+<h2 id="Iterator（迭代器）"><a href="#Iterator（迭代器）" class="headerlink" title="Iterator（迭代器）"></a>Iterator（迭代器）</h2><p>详细文档：<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/iterator">ECMAScript 6 入门-Iterator 和 for…of 循环</a></p>
+<h3 id="Iterator（迭代器）的概念"><a href="#Iterator（迭代器）的概念" class="headerlink" title="Iterator（迭代器）的概念"></a>Iterator（迭代器）的概念</h3><p>Iterator 即遍历器对象</p>
+<p>Generator 函数调用后可以返回一个遍历器对象 Iterator</p>
+<p>所有可以使用 for of 遍历的对象内部都实现时了 Iterator 接口 比如：</p>
+<p>通过<code>Arrary.prototype[Symbol.iterator]()</code>可以返回 Iterator</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">// Arrary 内部的遍历器对象</span></span><br><span class="line">    <span class="attr">__proto__</span>: <span class="title class_">Array</span> <span class="title class_">Iterator</span>&#123;</span><br><span class="line">        <span class="attr">next</span>: ƒ <span class="title function_">next</span>()			<span class="comment">// 调用 next 方法将 指针指向下一个元素</span></span><br><span class="line">        <span class="title class_">Symbol</span>(<span class="title class_">Symbol</span>.<span class="property">toStringTag</span>): <span class="string">&quot;Array Iterator&quot;</span></span><br><span class="line">        <span class="attr">__proto__</span>: <span class="title class_">Object</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然也可直接实现一个遍历器对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> it = <span class="title function_">makeIterator</span>([<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>]);</span><br><span class="line"></span><br><span class="line">it.<span class="title function_">next</span>(); <span class="comment">// &#123; value: &quot;a&quot;, done: false &#125;</span></span><br><span class="line">it.<span class="title function_">next</span>(); <span class="comment">// &#123; value: &quot;b&quot;, done: false &#125;</span></span><br><span class="line">it.<span class="title function_">next</span>(); <span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">makeIterator</span>(<span class="params">array</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> nextIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">next</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> nextIndex &lt; array.<span class="property">length</span></span><br><span class="line">        ? &#123; <span class="attr">value</span>: array[nextIndex++], <span class="attr">done</span>: <span class="literal">false</span> &#125;</span><br><span class="line">        : &#123; <span class="attr">value</span>: <span class="literal">undefined</span>, <span class="attr">done</span>: <span class="literal">true</span> &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用 next 方法， 返回<code>&#123; value: xxx, done: boolean &#125;</code>,通过判断 done 是否为 true，来判断遍历是否结束</p>
+<h3 id="调用-Iterator-接口的场合"><a href="#调用-Iterator-接口的场合" class="headerlink" title="调用 Iterator 接口的场合"></a>调用 Iterator 接口的场合</h3><p>有一些场合会默认调用 Iterator 接口（即<code>Symbol.iterator</code>方法），除了下文会介绍的<code>for...of</code>循环，还有几个别的场合。</p>
+<p><strong>（1）解构赋值</strong></p>
+<p>对数组和 Set 结构进行解构赋值时，会默认调用<code>Symbol.iterator</code>方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> set = <span class="keyword">new</span> <span class="title class_">Set</span>().<span class="title function_">add</span>(<span class="string">&quot;a&quot;</span>).<span class="title function_">add</span>(<span class="string">&quot;b&quot;</span>).<span class="title function_">add</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, y] = set;</span><br><span class="line"><span class="comment">// x=&#x27;a&#x27;; y=&#x27;b&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [first, ...rest] = set;</span><br><span class="line"><span class="comment">// first=&#x27;a&#x27;; rest=[&#x27;b&#x27;,&#x27;c&#x27;];</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（2）扩展运算符</strong></p>
+<p>扩展运算符（…）也会调用默认的 Iterator 接口。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例一</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">[...str]; <span class="comment">//  [&#x27;h&#x27;,&#x27;e&#x27;,&#x27;l&#x27;,&#x27;l&#x27;,&#x27;o&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 例二</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>];</span><br><span class="line">[<span class="string">&quot;a&quot;</span>, ...arr, <span class="string">&quot;d&quot;</span>];</span><br><span class="line"><span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>上面代码的扩展运算符内部就调用 Iterator 接口。</p>
+<p>实际上，这提供了一种简便机制，可以将任何部署了 Iterator 接口的数据结构，转为数组。也就是说，只要某个数据结构部署了 Iterator 接口，就可以对它使用扩展运算符，将其转为数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [...iterable];</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）yield*</strong></p>
+<p><code>yield*</code>后面跟的是一个可遍历的结构，它会调用该结构的遍历器接口。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> generator = <span class="keyword">function</span>* () &#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span>* [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">5</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> iterator = <span class="title function_">generator</span>();</span><br><span class="line"></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 1, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 2, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 3, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 4, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: 5, done: false &#125;</span></span><br><span class="line">iterator.<span class="title function_">next</span>(); <span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>（4）其他场合</strong></p>
+<p>由于数组的遍历会调用遍历器接口，所以任何接受数组作为参数的场合，其实都调用了遍历器接口。下面是一些例子。</p>
+<ul>
+<li>for…of</li>
+<li>Array.from()</li>
+<li>Map(), Set(), WeakMap(), WeakSet()（比如<code>new Map([[&#39;a&#39;,1],[&#39;b&#39;,2]])</code>）</li>
+<li>Promise.all()</li>
+<li>Promise.race()</li>
+</ul>
+<h2 id="Generator（生成器）"><a href="#Generator（生成器）" class="headerlink" title="Generator（生成器）"></a>Generator（生成器）</h2><p>详细文档：<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/generator">ECMAScript 6 入门-Generator 函数的语法</a></p>
+<p>建议看：JavaScript 高级程序设计（第 4 版）中关于生成器的描述</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>Generator 函数 是生成器函数，Generator 函数 返回 Generator（生成器）</p>
+<p>Generator 是一个状态机，封装了多个内部状态（本人的理解：是一个可以控制内部执行步骤的 函数）</p>
+<p>Generator 生成器 内部实现了 Iterator （迭代器）接口，因此具有 next() 方法。调用这个方法会让生</p>
+<p>成器开始或恢复执行</p>
+<h3 id="控制内部执行步骤"><a href="#控制内部执行步骤" class="headerlink" title="控制内部执行步骤"></a>控制内部执行步骤</h3><ul>
+<li><p>调用 generatorFn 生成器函数的时候并不会执行内部代码</p>
+</li>
+<li><p>generator 调用 next 方法， 开始执行 generatorFn 内部代码</p>
+</li>
+<li><p>遇到 yield 关键字将停止执行代码，并将 yield 后面的值返回</p>
+</li>
+<li><p>再次调用 next 方法 将从上一个 yield 所在行开始执行</p>
+</li>
+<li><p>如果 next 中有参数将传递给开始执行所在行的 yield，如果是首次调用 next 将没有 yield 可以供其赋值</p>
+</li>
+<li><p>遇到 return 关键字将返回 { value: return 后面的值, done: true }</p>
+</li>
+<li><p>如果函数内没有 return 也没有 yield 的了 将返回 { value: undefined, done: true }</p>
+</li>
+</ul>
+<h4 id="正常执行顺序"><a href="#正常执行顺序" class="headerlink" title="正常执行顺序"></a>正常执行顺序</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">generatorFn</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;0-&gt;yield1&quot;</span>);</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;yield1&quot;</span>; <span class="comment">// 停止 返回 yield1</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield1-&gt;yield2&quot;</span>);</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;yield2&quot;</span>; <span class="comment">// 停止 返回 yield2</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield2-&gt;end&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> generator = <span class="title function_">generatorFn</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next1&quot;</span>, generator.<span class="title function_">next</span>());</span><br><span class="line"><span class="comment">// 0-&gt;yield1</span></span><br><span class="line"><span class="comment">// next1 &#123; value: &#x27;yield1&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next2&quot;</span>, generator.<span class="title function_">next</span>());</span><br><span class="line"><span class="comment">// yield1-&gt;yield2</span></span><br><span class="line"><span class="comment">// next2 &#123; value: &#x27;yield2&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next3&quot;</span>, generator.<span class="title function_">next</span>());</span><br><span class="line"><span class="comment">// yield2-&gt;end</span></span><br><span class="line"><span class="comment">// next3 &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="next-传参"><a href="#next-传参" class="headerlink" title="next 传参"></a>next 传参</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">generatorFn</span>(<span class="params">params</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(params);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield1&quot;</span>, <span class="keyword">yield</span> <span class="string">&quot;yield1&quot;</span>); <span class="comment">// 遇到 yield ，yield所在行的代码都不会执行，但是 yield 后边的参数会返回</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yield2&quot;</span>, <span class="keyword">yield</span> <span class="string">&quot;yield2&quot;</span>); <span class="comment">// 不会执行console.log，下次调用next时才会执行console.log以及后面的代码</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;end&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> generator = <span class="title function_">generatorFn</span>(<span class="string">&quot;foo&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ***第一次的bar并不会赋值给yield1关键字 因为这一次调用是为了开始执行生成器函数，第二次调用yield1的值变成baz***</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next1&quot;</span>, generator.<span class="title function_">next</span>(<span class="string">&quot;bar&quot;</span>));</span><br><span class="line"><span class="comment">// foo</span></span><br><span class="line"><span class="comment">// next1 &#123; value: &#x27;yield1&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next2&quot;</span>, generator.<span class="title function_">next</span>(<span class="string">&quot;baz&quot;</span>));</span><br><span class="line"><span class="comment">// yield1 baz</span></span><br><span class="line"><span class="comment">// next2 &#123; value: &#x27;yield2&#x27;, done: false &#125;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;next3&quot;</span>, generator.<span class="title function_">next</span>(<span class="string">&quot;qux&quot;</span>));</span><br><span class="line"><span class="comment">// yield2 qux</span></span><br><span class="line"><span class="comment">// end</span></span><br><span class="line"><span class="comment">// next3 &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="带-return-的"><a href="#带-return-的" class="headerlink" title="带 return 的"></a>带 return 的</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">helloWorldGenerator</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="string">&quot;world&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;ending&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hw = <span class="title function_">helloWorldGenerator</span>();</span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: &#x27;hello&#x27;, done: false &#125;</span></span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: &#x27;world&#x27;, done: false &#125;</span></span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: &#x27;ending&#x27;, done: true &#125;</span></span><br><span class="line"></span><br><span class="line">hw.<span class="title function_">next</span>();</span><br><span class="line"><span class="comment">// &#123; value: undefined, done: true &#125;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/03/25/Vue/Vue+HbuilderX%E6%89%93%E5%8C%85App%E5%BA%94%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +446,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -410,7 +574,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -516,7 +680,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -625,7 +789,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -733,7 +897,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -857,7 +1021,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -968,7 +1132,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1088,7 +1252,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1219,7 +1383,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
+      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1277,141 +1441,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/02/16/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%88%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/02/16/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%88%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%EF%BC%89/" class="post-title-link" itemprop="url">内网穿透（为什么需要内网穿透）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-02-16 18:59:26" itemprop="dateCreated datePublished" datetime="2021-02-16T18:59:26+00:00">2021-02-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-13 09:26:10" itemprop="dateModified" datetime="2022-07-13T09:26:10+00:00">2022-07-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">网络应用</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>796</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>想要了解什么是内网穿透 ， 首先要知道为什么需要内网穿透</p>
-</blockquote>
-<h2 id="为什么需要内网穿透"><a href="#为什么需要内网穿透" class="headerlink" title="为什么需要内网穿透"></a>为什么需要内网穿透</h2><p>首先我们日常上网是通过 ip 地址来进行访问的（域名通过 DNS 解析成 ip）</p>
-<p>而 ip 地址分为 内网 ip （路由器分配）和 外网 ip （公网）</p>
-<p>我们（普通人）想本地开发一个 web 服务 或者 一个文件共享服务 （内网） ，想其他地方的人（外网）也能来访问这个服务是办不到的</p>
-<p>为什么？因为下面这张图</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20210216193832.png" alt="内网外网图示"></p>
-<ul>
-<li>小内网内的设备可以通过 IP 地址相互访问 ，但是无法访问大内网中设备的 ip</li>
-<li>小内网 和 大内网 都可以访问公网的 ip ，但是公网 ip 无法访问 访问内网 ip</li>
-<li>公网 IP 间可以直接相互访问 不过多数人是没有公网 ip 的</li>
-</ul>
-<h3 id="如何判断自己是否有公网-ip"><a href="#如何判断自己是否有公网-ip" class="headerlink" title="如何判断自己是否有公网 ip"></a>如何判断自己是否有公网 ip</h3><p>通过 百度 搜索 IP 和 登入路由管理界面查看的 IP 如果一致 就是公网 IP , 如果不一致 那路由管理界面显示的 IP 就是大内网 或 小内网 IP</p>
-<p>如果 我们只有内网 ip 但是想要外网可以访问怎么办 ？ 这时就需要用到内网穿透技术</p>
-<h2 id="内网穿透工具"><a href="#内网穿透工具" class="headerlink" title="内网穿透工具"></a>内网穿透工具</h2><p>这里先介绍一个简单的工具</p>
-<h3 id="ngrok"><a href="#ngrok" class="headerlink" title="ngrok"></a>ngrok</h3><p>tip:需要管理员权限打开命令行工具</p>
-<p>1.首先到 ngrok 官网<a target="_blank" rel="noopener" href="https://ngrok.com/download">下载</a>相应软件</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20220531114107408.png" alt="image-20220531114107408"></p>
-<p>2.注册并登录</p>
-<p><a target="_blank" rel="noopener" href="https://dashboard.ngrok.com/signup">注册</a></p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20220531114142796.png" alt="image-20220531114142796"></p>
-<p>3.添加authtoken</p>
-<p>登录后按照提示获取到 authtoken</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ngrok config add-authtoken 1t9eD80uIGZ1sewAY8NZYaI4PFJ_7QBsY7YpSeG8hRaerveDd</span><br></pre></td></tr></table></figure>
-
-<p>3.设置需要代理到公网的端口</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ngrok http 80</span><br></pre></td></tr></table></figure>
-
-
-
-<p>注意：这里的 80 得根据实际你 tomcat 的端口改写，假设你的 tomcat 端口用的是 81 端口，这里就要改成 81 ！！！</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20210216195455.png" alt="img"></p>
-<p>4.接着我们就可以用 <a target="_blank" rel="noopener" href="https://d2988052.ngrok.io/">https://d2988052.ngrok.io</a>+项目名 来访问我们的网站啦!</p>
-<h3 id="所有工具的集合"><a href="#所有工具的集合" class="headerlink" title="所有工具的集合"></a>所有工具的集合</h3><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaozi/p/13589138.html">https://www.cnblogs.com/xiaozi/p/13589138.html</a></p>
-<h2 id="使用云服务-FRP-实现内网穿透"><a href="#使用云服务-FRP-实现内网穿透" class="headerlink" title="使用云服务 + FRP 实现内网穿透"></a>使用云服务 + FRP 实现内网穿透</h2><p>全教程视频 ：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1J74117714">https://www.bilibili.com/video/BV1J74117714</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1436,13 +1465,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">419k</span>
+    <span title="站点总字数">421k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:21</span>
+    <span title="站点阅读时长">6:22</span>
   </span>
 </div>
 <div class="busuanzi-count">
