@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">127</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">129</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">127</span>
+          <span class="site-state-item-count">129</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,733 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/08/18/js/JavaScript%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/08/18/js/JavaScript%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/" class="post-title-link" itemprop="url">JavaScript位运算符</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-18 16:26:11" itemprop="dateCreated datePublished" datetime="2020-08-18T16:26:11+00:00">2020-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="w3school"><a href="#w3school" class="headerlink" title="w3school"></a>w3school</h2><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_bitwise.asp">https://www.w3school.com.cn/js/js_bitwise.asp</a></p>
+<h2 id="JavaScript-位运算符"><a href="#JavaScript-位运算符" class="headerlink" title="JavaScript 位运算符"></a>JavaScript 位运算符</h2><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&amp;</td>
+<td align="left">AND</td>
+<td align="left">如果两位都是 1 则设置每位为 1</td>
+</tr>
+<tr>
+<td align="left">|</td>
+<td align="left">OR</td>
+<td align="left">如果两位之一为 1 则设置每位为 1</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">XOR</td>
+<td align="left">如果两位只有一位为 1 则设置每位为 1</td>
+</tr>
+<tr>
+<td align="left">~</td>
+<td align="left">NOT</td>
+<td align="left">反转所有位</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">零填充左位移</td>
+<td align="left">通过从右推入零向左位移，并使最左边的位脱落。</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">有符号右位移</td>
+<td align="left">通过从左推入最左位的拷贝来向右位移，并使最右边的位脱落。</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;&gt;</td>
+<td align="left">零填充右位移</td>
+<td align="left">通过从左推入零来向右位移，并使最右边的位脱落。</td>
+</tr>
+</tbody></table>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">结果</th>
+<th align="left">等同于</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5 &amp; 1</td>
+<td align="left">1</td>
+<td align="left">0101 &amp; 0001</td>
+<td align="left">0001</td>
+</tr>
+<tr>
+<td align="left">5 | 1</td>
+<td align="left">5</td>
+<td align="left">0101 | 0001</td>
+<td align="left">0101</td>
+</tr>
+<tr>
+<td align="left">5 ^ 1</td>
+<td align="left">4</td>
+<td align="left">0101 ^ 0001</td>
+<td align="left">0100</td>
+</tr>
+<tr>
+<td align="left">~ 5</td>
+<td align="left">10</td>
+<td align="left">~0101</td>
+<td align="left">1010</td>
+</tr>
+<tr>
+<td align="left">5 &lt;&lt; 1</td>
+<td align="left">10</td>
+<td align="left">0101 &lt;&lt; 1</td>
+<td align="left">1010</td>
+</tr>
+<tr>
+<td align="left">5 &gt;&gt; 1</td>
+<td align="left">2</td>
+<td align="left">0101 &gt;&gt; 1</td>
+<td align="left">0010</td>
+</tr>
+<tr>
+<td align="left">5 &gt;&gt;&gt; 1</td>
+<td align="left">2</td>
+<td align="left">0101 &gt;&gt;&gt; 1</td>
+<td align="left">0010</td>
+</tr>
+</tbody></table>
+<h2 id="JavaScript-使用-32-位按位运算数"><a href="#JavaScript-使用-32-位按位运算数" class="headerlink" title="JavaScript 使用 32 位按位运算数"></a>JavaScript 使用 32 位按位运算数</h2><p>JavaScript 将数字存储为 64 位浮点数，但所有按位运算都以 32 位二进制数执行。</p>
+<p>在执行位运算之前，JavaScript 将数字转换为 32 位有符号整数。</p>
+<p>执行按位操作后，结果将转换回 64 位 JavaScript 数。</p>
+<p>上面的例子使用 4 位无符号二进制数。所以 ~ 5 返回 10。</p>
+<p>由于 JavaScript 使用 32 位有符号整数，JavaScript 将返回 -6。</p>
+<p>00000000000000000000000000000101 (5)</p>
+<p>11111111111111111111111111111010 (~5 &#x3D; -6)</p>
+<p>有符号整数使用最左边的位作为减号。</p>
+<h2 id="位运算-AND"><a href="#位运算-AND" class="headerlink" title="位运算 AND"></a>位运算 AND</h2><p>当对一对数位执行位运算 AND 时，如果数位均为 1 则返回 1。</p>
+<h3 id="单位示例："><a href="#单位示例：" class="headerlink" title="单位示例："></a>单位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0 &amp; 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0 &amp; 1</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">1 &amp; 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">1 &amp; 1</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<h3 id="四位示例："><a href="#四位示例：" class="headerlink" title="四位示例："></a>四位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1111 &amp; 0000</td>
+<td align="left">0000</td>
+</tr>
+<tr>
+<td align="left">1111 &amp; 0001</td>
+<td align="left">0001</td>
+</tr>
+<tr>
+<td align="left">1111 &amp; 0010</td>
+<td align="left">0010</td>
+</tr>
+<tr>
+<td align="left">1111 &amp; 0100</td>
+<td align="left">0100</td>
+</tr>
+</tbody></table>
+<h2 id="位运算-OR"><a href="#位运算-OR" class="headerlink" title="位运算 OR"></a>位运算 OR</h2><p>当对一对数位执行位运算 OR 时，如果其中一位是 1 则返回 1：</p>
+<h3 id="单位示例"><a href="#单位示例" class="headerlink" title="单位示例"></a>单位示例</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0 | 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0 | 1</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 | 0</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 | 1</td>
+<td align="left">1</td>
+</tr>
+</tbody></table>
+<h3 id="四位运算："><a href="#四位运算：" class="headerlink" title="四位运算："></a>四位运算：</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1111 | 0000</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 | 0001</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 | 0010</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 | 0100</td>
+<td align="left">1111</td>
+</tr>
+</tbody></table>
+<h2 id="位运算-XOR"><a href="#位运算-XOR" class="headerlink" title="位运算 XOR"></a>位运算 XOR</h2><p>当对一对数位进行位运算 XOR 时，如果数位是不同的则返回 1：</p>
+<h3 id="单位示例：-1"><a href="#单位示例：-1" class="headerlink" title="单位示例："></a>单位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0 ^ 0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0 ^ 1</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 ^ 0</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1 ^ 1</td>
+<td align="left">0</td>
+</tr>
+</tbody></table>
+<h3 id="四位示例：-1"><a href="#四位示例：-1" class="headerlink" title="四位示例："></a>四位示例：</h3><table>
+<thead>
+<tr>
+<th align="left">运算</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1111 ^ 0000</td>
+<td align="left">1111</td>
+</tr>
+<tr>
+<td align="left">1111 ^ 0001</td>
+<td align="left">1110</td>
+</tr>
+<tr>
+<td align="left">1111 ^ 0010</td>
+<td align="left">1101</td>
+</tr>
+<tr>
+<td align="left">1111 ^ 0100</td>
+<td align="left">1011</td>
+</tr>
+</tbody></table>
+<h2 id="JavaScript-位运算-AND-amp"><a href="#JavaScript-位运算-AND-amp" class="headerlink" title="JavaScript 位运算 AND (&amp;)"></a>JavaScript 位运算 AND (&amp;)</h2><p>如果位数都是 1，则位运算 AND 返回 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">00000000000000000000000000000001</td>
+</tr>
+<tr>
+<td align="left">5 &amp; 1</td>
+<td align="left">00000000000000000000000000000001 (1)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var</span> x = <span class="number">5</span> &amp; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-位运算-OR"><a href="#JavaScript-位运算-OR" class="headerlink" title="JavaScript 位运算 OR (|)"></a>JavaScript 位运算 OR (|)</h2><p>如果数位之一是 1，则位运算 OR 返回 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">00000000000000000000000000000001</td>
+</tr>
+<tr>
+<td align="left">5 | 1</td>
+<td align="left">00000000000000000000000000000101 (5)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var</span> x = <span class="number">5</span> | <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-位运算-XOR"><a href="#JavaScript-位运算-XOR" class="headerlink" title="JavaScript 位运算 XOR (^)"></a>JavaScript 位运算 XOR (^)</h2><p>如果数位是不同的，则 XOR 返回 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">00000000000000000000000000000001</td>
+</tr>
+<tr>
+<td align="left">5 ^ 1</td>
+<td align="left">00000000000000000000000000000100 (4)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-3"><a href="#实例-3" class="headerlink" title="实例"></a>实例</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var</span> x = <span class="number">5</span> ^ <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript-位运算-NOT"><a href="#JavaScript-位运算-NOT" class="headerlink" title="JavaScript 位运算 NOT (~)"></a>JavaScript 位运算 NOT (~)</h2><table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">~5</td>
+<td align="left">11111111111111111111111111111010 (-6)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-4"><a href="#实例-4" class="headerlink" title="实例"></a>实例</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">var x</span> = ~5;</span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript（零填充）位运算左移（-lt-lt-）"><a href="#JavaScript（零填充）位运算左移（-lt-lt-）" class="headerlink" title="JavaScript（零填充）位运算左移（&lt;&lt;）"></a>JavaScript（零填充）位运算左移（&lt;&lt;）</h2><p>这是零填充的左移。一个或多个零数位从右被推入，最左侧的数位被移除：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">5 &lt;&lt; 1</td>
+<td align="left">00000000000000000000000000001010 (10)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-5"><a href="#实例-5" class="headerlink" title="实例"></a>实例</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x <span class="operator">=</span> <span class="number">5</span> &lt;&lt; <span class="number">1</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript（有符号）位运算右移（-gt-gt-）"><a href="#JavaScript（有符号）位运算右移（-gt-gt-）" class="headerlink" title="JavaScript（有符号）位运算右移（&gt;&gt;）"></a>JavaScript（有符号）位运算右移（&gt;&gt;）</h2><p>这是保留符号的右移。最左侧的数位被从左侧推入，最右侧的数位被移出：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">-5</td>
+<td align="left">11111111111111111111111111111011</td>
+</tr>
+<tr>
+<td align="left">-5 &gt;&gt; 1</td>
+<td align="left">11111111111111111111111111111101 (-3)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-6"><a href="#实例-6" class="headerlink" title="实例"></a>实例</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x <span class="operator">=</span> -<span class="number">5</span> &gt;&gt; <span class="number">1</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JavaScript（零填充）右移（-gt-gt-gt-）"><a href="#JavaScript（零填充）右移（-gt-gt-gt-）" class="headerlink" title="JavaScript（零填充）右移（&gt;&gt;&gt;）"></a>JavaScript（零填充）右移（&gt;&gt;&gt;）</h2><p>这是零填充的右移。一个或多个零数位从左侧被推入，最右侧的数位被移出：</p>
+<table>
+<thead>
+<tr>
+<th align="left">十进制</th>
+<th align="left">二进制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">5</td>
+<td align="left">00000000000000000000000000000101</td>
+</tr>
+<tr>
+<td align="left">5 &gt;&gt;&gt; 1</td>
+<td align="left">00000000000000000000000000000010 (2)</td>
+</tr>
+</tbody></table>
+<h3 id="实例-7"><a href="#实例-7" class="headerlink" title="实例"></a>实例</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x <span class="operator">=</span> <span class="number">5</span> &gt;&gt;&gt; <span class="number">1</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="32-bit-有符号整数（二进制数）"><a href="#32-bit-有符号整数（二进制数）" class="headerlink" title="32-bit 有符号整数（二进制数）"></a>32-bit 有符号整数（二进制数）</h2><p>仅设置一位的 32 位整数很好理解：</p>
+<table>
+<thead>
+<tr>
+<th align="left">二进制表示</th>
+<th align="left">十进制值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00000000000000000000000000000001</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000000010</td>
+<td align="left">2</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000000100</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000001000</td>
+<td align="left">8</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000010000</td>
+<td align="left">16</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000100000</td>
+<td align="left">32</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000001000000</td>
+<td align="left">64</td>
+</tr>
+</tbody></table>
+<p>多设置一些数位揭示了二进制的模式：</p>
+<table>
+<thead>
+<tr>
+<th align="left">二进制表示</th>
+<th align="left">十进制值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00000000000000000000000000000101</td>
+<td align="left">5 (4 + 1)</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000101000</td>
+<td align="left">40 (32 + 8)</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000101101</td>
+<td align="left">45 (32 + 8 + 4 + 1)</td>
+</tr>
+</tbody></table>
+<p>负数是正数的二进制补码加 1：</p>
+<table>
+<thead>
+<tr>
+<th align="left">二进制表示</th>
+<th align="left">十进制值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00000000000000000000000000000101</td>
+<td align="left">5</td>
+</tr>
+<tr>
+<td align="left">11111111111111111111111111111011</td>
+<td align="left">-5</td>
+</tr>
+<tr>
+<td align="left">00000000000000000000000000101000</td>
+<td align="left">40</td>
+</tr>
+<tr>
+<td align="left">11111111111111111111111111011000</td>
+<td align="left">-40</td>
+</tr>
+<tr>
+<td align="left">11111111111111111111111111011001</td>
+<td align="left">-41</td>
+</tr>
+</tbody></table>
+<h2 id="把十进制转换为二进制"><a href="#把十进制转换为二进制" class="headerlink" title="把十进制转换为二进制"></a>把十进制转换为二进制</h2><h3 id="实例-8"><a href="#实例-8" class="headerlink" title="实例"></a>实例</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">dec2bin</span>(dec)&#123;</span><br><span class="line">	// 字符串数字转化为数字</span><br><span class="line">    <span class="keyword">return</span> <span class="type">(dec</span> &gt;&gt;&gt; <span class="number">0</span>).toString(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="把二进制转换为十进制"><a href="#把二进制转换为十进制" class="headerlink" title="把二进制转换为十进制"></a>把二进制转换为十进制</h2><h3 id="实例-9"><a href="#实例-9" class="headerlink" title="实例"></a>实例</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">bin2dec</span>(bin)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">parseInt(bin,</span> <span class="number">2</span>).toString(<span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="parseInt-toString-实现各个进制的转换"><a href="#parseInt-toString-实现各个进制的转换" class="headerlink" title="parseInt+toString 实现各个进制的转换"></a>parseInt+toString 实现各个进制的转换</h2><ul>
+<li><p>parseInt:将任意进制的数字转化为十进制</p>
+</li>
+<li><p>toString:将十进制的数字转化为任意进制</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>); <span class="comment">//八进制转十进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">16</span>); <span class="comment">//十六进制转十进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num).<span class="title function_">toString</span>(<span class="number">8</span>); <span class="comment">//十进制转八进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num).<span class="title function_">toString</span>(<span class="number">16</span>); <span class="comment">//十进制转十六进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">8</span>); <span class="comment">//二进制转八进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">16</span>); <span class="comment">//二进制转十六进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>).<span class="title function_">toString</span>(<span class="number">2</span>); <span class="comment">//八进制转二进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">8</span>).<span class="title function_">toString</span>(<span class="number">16</span>); <span class="comment">//八进制转十六进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">16</span>).<span class="title function_">toString</span>(<span class="number">2</span>); <span class="comment">//十六进制转二进制</span></span><br><span class="line"><span class="built_in">parseInt</span>(num, <span class="number">16</span>).<span class="title function_">toString</span>(<span class="number">8</span>); <span class="comment">//十六进制转八进制</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>以 0X、0x 开头的表示为十六进制。 0xf &#x2F;&#x2F;15</li>
+<li>以 0、0O、0o 开头的表示为八进制。0o12 &#x2F;&#x2F;10</li>
+<li>以 0B、0b 开头的表示为二进制格式。 0b11&#x2F;&#x2F;3</li>
+</ul>
+</blockquote>
+<p>以上在 js 中可直接使用，可自动转化为对应的 10 进制</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/08/01/Hexo/next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/08/01/Hexo/next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">NexT主题的设置 - hexo新版主题next7.x设置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-01 12:46:20" itemprop="dateCreated datePublished" datetime="2020-08-01T12:46:20+00:00">2020-08-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="hexo-新版主题-next7-x-设置"><a href="#hexo-新版主题-next7-x-设置" class="headerlink" title="hexo 新版主题 next7.x 设置"></a>hexo 新版主题 next7.x 设置</h1><p>内容提要</p>
+<ul>
+<li><p>开启赞赏打赏码</p>
+</li>
+<li><p>设置阅读时长和本文字数</p>
+</li>
+<li><p>添加背景动画效果</p>
+</li>
+<li><p>阅读全文设置</p>
+</li>
+<li><p>阅读全文 去掉自动定位 more</p>
+</li>
+<li><p>修改文章及主题样式</p>
+</li>
+<li><p>代码段调整上下行距及样式</p>
+</li>
+<li><p>代码块背景色缺失问题</p>
+</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/01/Hexo/next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/07/31/Vue/element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +1009,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,7 +1116,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -492,7 +1219,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -595,7 +1322,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -709,7 +1436,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -826,7 +1553,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -939,7 +1666,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1359,7 +2086,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
+      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1431,262 +2158,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2019/12/14/Vue/%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AAMVVM%E6%A1%86%E6%9E%B6-Vue%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/12/14/Vue/%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AAMVVM%E6%A1%86%E6%9E%B6-Vue%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/" class="post-title-link" itemprop="url">模拟一个MVVM框架-Vue实现思路</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-12-14 21:18:01" itemprop="dateCreated datePublished" datetime="2019-12-14T21:18:01+00:00">2019-12-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>12k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>11 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="MVVM-框架介绍"><a href="#MVVM-框架介绍" class="headerlink" title="MVVM 框架介绍"></a>MVVM 框架介绍</h2><p>M（Model，模型层 ），<br>V（View，视图层），<br>VM（ViewModel，视图模型，V 与 M 连接的桥梁）</p>
-<p>MVVM 框架实现了数据双向绑定<br>当 M 层数据进行修改时，VM 层会监测到变化，并且通知 V 层进行相应的修改<br>修改 V 层则会通知 M 层数据进行修改<br>MVVM 框架实现了视图与模型层的相互解耦<br><img data-src="https://bitbw.top/public/img/my_gallery/Vue%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86MVVM.png" alt="Vue双向绑定原理MVVM"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/12/14/Vue/%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AAMVVM%E6%A1%86%E6%9E%B6-Vue%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2019/12/03/Vue/%E5%85%B3%E4%BA%8Evue%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E5%92%8C%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BB%84%E4%BB%B6%E6%8F%92%E6%A7%BD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/12/03/Vue/%E5%85%B3%E4%BA%8Evue%E7%BB%84%E4%BB%B6%E6%A0%B7%E5%BC%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AE%E9%A2%98%E5%92%8C%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BB%84%E4%BB%B6%E6%8F%92%E6%A7%BD/" class="post-title-link" itemprop="url">关于vue组件样式的作用域问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-12-03 22:15:57" itemprop="dateCreated datePublished" datetime="2019-12-03T22:15:57+00:00">2019-12-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-14 09:53:13" itemprop="dateModified" datetime="2022-07-14T09:53:13+00:00">2022-07-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>参考文档：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://vue-loader.vuejs.org/zh/guide/scoped-css.html">https://vue-loader.vuejs.org/zh/guide/scoped-css.html</a></li>
-</ul>
-</blockquote>
-<h2 id="关于组件的作用域样式"><a href="#关于组件的作用域样式" class="headerlink" title="关于组件的作用域样式"></a>关于组件的作用域样式</h2><p>影响全局：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/* 全局样式 */</span></span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>作用域样式，只对当前组件内部生效：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.example</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;example&quot;</span>&gt;</span>hi<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>所谓的作用域，其实就是在转换的时候为其添加了一个唯一的属性名原理：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.example</span><span class="selector-attr">[data-v-f3f3eg9]</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;example&quot;</span> <span class="attr">data-v-f3f3eg9</span>&gt;</span>hi<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>你可以在一个组件中同时使用有 scoped 和非 scoped 样式：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/* 全局样式 */</span></span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="comment">/* 本地样式 */</span></span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="子组件的根元素"><a href="#子组件的根元素" class="headerlink" title="子组件的根元素"></a>子组件的根元素</h2><p>使用 <code>scoped</code> 后，父组件的样式将不会渗透到子组件中。不过一个子组件的根节点会同时受其父组件的 scoped CSS 和子组件的 scoped CSS 的影响。这样设计是为了让父组件可以从布局的角度出发，调整其子组件根元素的样式。</p>
-<p>注意：只能是根元素。</p>
-<h2 id="如何设置子组件根元素的样式"><a href="#如何设置子组件根元素的样式" class="headerlink" title="如何设置子组件根元素的样式"></a>如何设置子组件根元素的样式</h2><p>方式一：审查元素，观察该组件根节点的 class 类名</p>
-<p>方式二：手动给组件添加 class，该类名会自动作用到组件的根元素</p>
-<p>以上两种方式也只能作用到子组件的根节点 ，想要作用子组件内部的节点有两种方法</p>
-<p>方法一：为当前样式单独包一个 style 标签，去掉 scoped 作用全局即可，但不是很推荐</p>
-<p>方法二：使用 vue 提供的深度作用选择器， 强烈推荐！</p>
-<h2 id="深度作用选择器"><a href="#深度作用选择器" class="headerlink" title="深度作用选择器"></a>深度作用选择器</h2><p>如果你希望 <code>scoped</code> 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 <code>&gt;&gt;&gt;</code> 操作符：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.a</span> &gt;&gt;&gt; <span class="selector-class">.b</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/* ... */</span></span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>上述代码将会编译成：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span><span class="selector-attr">[data-v-f3f3eg9]</span> <span class="selector-class">.b</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>有些像 Sass 之类的预处理器无法正确解析 <code>&gt;&gt;&gt;</code>。这种情况下你可以使用 <code>/deep/</code> 或 <code>::v-deep</code> 操作符取而代之——两者都是 <code>&gt;&gt;&gt;</code> 的别名，同样可以正常工作。</p>
-<p>建议使用 <code>/deep/</code> 或者 <code>::v-deep</code>，因为 <code>&gt;&gt;&gt;</code> 可能在预处理器中报错。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style scoped&gt;</span><br><span class="line"><span class="selector-class">.a</span> /deep/ <span class="selector-class">.b</span> &#123; <span class="comment">/* ... */</span> &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果想要在父组件中影响子组件样式：</p>
-<ul>
-<li>要嘛不要有作用域，那就是全局，影响任何组件</li>
-<li>有作用域<ul>
-<li>默认只能影响根节点<ul>
-<li>审查元素找到子组件根节点类名使用</li>
-<li>或者手动给子组件添加一个 class，它会自动添加到子组件根节点的 class 中</li>
-</ul>
-</li>
-<li>如果需要影响的更深，则使用深度选择器：<code>&gt;&gt;&gt;</code>、<code>/deep/</code>、<code>::v-deep</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="关于如何自定义第三方组件的内容"><a href="#关于如何自定义第三方组件的内容" class="headerlink" title="关于如何自定义第三方组件的内容"></a>关于如何自定义第三方组件的内容</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">  一般在使用第三方组件的时候，它们默认给出的是最常用的功能</span></span><br><span class="line"><span class="comment">  如果需要自定义内容展示，那就看文档，看看人家是否支持自定义插槽</span></span><br><span class="line"><span class="comment">  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-cell</span> <span class="attr">title</span>=<span class="string">&quot;单元格&quot;</span> <span class="attr">value</span>=<span class="string">&quot;内容&quot;</span> <span class="attr">label</span>=<span class="string">&quot;hello&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">van-cell</span> <span class="attr">title</span>=<span class="string">&quot;单元格&quot;</span> <span class="attr">value</span>=<span class="string">&quot;内容&quot;</span> <span class="attr">label</span>=<span class="string">&quot;hello&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">slot</span>=<span class="string">&quot;title&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 当你没有给元素插槽起名字的时候，这个组件提供了默认插槽 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>默认内容<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&quot;default&quot;</span>&gt;</span>默认内容<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- 同名插槽可以插入多次 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">&quot;title&quot;</span>&gt;</span>world<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-cell</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1717,7 +2188,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:22</span>
+    <span title="站点阅读时长">6:23</span>
   </span>
 </div>
 <div class="busuanzi-count">
