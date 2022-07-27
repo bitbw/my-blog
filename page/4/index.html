@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">129</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">130</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,113 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/11/12/Vue/VueRouter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/12/Vue/VueRouter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">VueRouter常见问题汇总</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-12 12:07:26" itemprop="dateCreated datePublished" datetime="2021-11-12T12:07:26+00:00">2021-11-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>652</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="路由可选参数"><a href="#路由可选参数" class="headerlink" title="路由可选参数"></a>路由可选参数</h2><p>routerConfig</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">    <span class="attr">path</span>: <span class="string">&quot;/home/mission/:type/:courseid/:missionid&quot;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;Mission&quot;</span>,</span><br><span class="line">    <span class="attr">props</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="function">() =&gt;</span></span><br><span class="line">        <span class="title function_">import</span>(</span><br><span class="line">        <span class="comment">/* webpackChunkName:&#x27;Mission&#x27; */</span></span><br><span class="line">        <span class="string">&quot;@/views/course/mission.vue&quot;</span></span><br><span class="line">        ),</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p> 传参时如果少传一个参数 那路由地址将无法正常显示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">     <span class="attr">name</span>: <span class="string">&quot;Mission&quot;</span>,</span><br><span class="line">     <span class="attr">params</span>: &#123; <span class="attr">type</span>: <span class="string">&quot;add&quot;</span>, <span class="attr">courseid</span>: item.<span class="property">uuid</span> &#125;,</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>修改 routerConfig</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">    <span class="comment">//  :parmas?  =&gt; ? 就是代表参数可选</span></span><br><span class="line">    <span class="attr">path</span>: <span class="string">&quot;/home/mission/:type?/:courseid?/:missionid?&quot;</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;Mission&quot;</span>,</span><br><span class="line">    <span class="attr">props</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">component</span>: <span class="function">() =&gt;</span></span><br><span class="line">        <span class="title function_">import</span>(</span><br><span class="line">        <span class="comment">/* webpackChunkName:&#x27;Mission&#x27; */</span></span><br><span class="line">        <span class="string">&quot;@/views/course/mission.vue&quot;</span></span><br><span class="line">        ),</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/11/04/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%B0%8F%E7%A8%8B%E5%BA%8Fvant%E7%BB%84%E4%BB%B6%E5%BA%93%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +389,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -397,7 +504,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -578,7 +685,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -685,7 +792,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -853,7 +960,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -952,7 +1059,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1054,7 +1161,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1211,7 +1318,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1330,7 +1437,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1457,154 +1564,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/06/16/Nodejs/package-json%E4%B8%AD-npm%E4%BE%9D%E8%B5%96%E5%8C%85%E7%89%88%E6%9C%AC%E5%89%8D%E7%9A%84%E7%AC%A6%E5%8F%B7%E7%9A%84%E6%84%8F%E4%B9%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/16/Nodejs/package-json%E4%B8%AD-npm%E4%BE%9D%E8%B5%96%E5%8C%85%E7%89%88%E6%9C%AC%E5%89%8D%E7%9A%84%E7%AC%A6%E5%8F%B7%E7%9A%84%E6%84%8F%E4%B9%89/" class="post-title-link" itemprop="url">package.json中 npm依赖包版本前的符号的意义</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-06-16 14:38:23" itemprop="dateCreated datePublished" datetime="2021-06-16T14:38:23+00:00">2021-06-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Nodejs/" itemprop="url" rel="index"><span itemprop="name">Nodejs</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>版本的格式</strong></p>
-<p>major.minor.patch</p>
-<p>主版本号.次版本号.修补版本号</p>
-<p>————————————————————</p>
-<p>patch：修复 bug，兼容老版本</p>
-<p>minor：新增功能，兼容老版本</p>
-<p>major：新的架构调整，不兼容老版本</p>
-<p><strong>version</strong></p>
-<p>必须匹配某个版本</p>
-<p>如：1.1.2，表示必须依赖 1.1.2 版</p>
-<p><strong>&gt;version</strong></p>
-<p>必须大于某个版本</p>
-<p>如：&gt;1.1.2，表示必须大于 1.1.2 版</p>
-<p><strong>&gt;&#x3D;version</strong></p>
-<p>可大于或等于某个版本</p>
-<p>如：&gt;&#x3D;1.1.2，表示可以等于 1.1.2，也可以大于 1.1.2 版本</p>
-<p><strong>&lt;version</strong></p>
-<p>必须小于某个版本</p>
-<p>如：&lt;1.1.2，表示必须小于 1.1.2 版本</p>
-<p><strong>&lt;&#x3D;version</strong></p>
-<p>可以小于或等于某个版本</p>
-<p>如：&lt;&#x3D;1.1.2，表示可以等于 1.1.2，也可以小于 1.1.2 版本</p>
-<p><strong>~version</strong></p>
-<p>大概匹配某个版本</p>
-<p>如果 minor 版本号指定了，那么 minor 版本号不变，而 patch 版本号任意</p>
-<p>如果 minor 和 patch 版本号未指定，那么 minor 和 patch 版本号任意</p>
-<p>如：~1.1.2，表示&gt;&#x3D;1.1.2 &lt;1.2.0，可以是 1.1.2，1.1.3，1.1.4，…..，1.1.n</p>
-<p>如：~1.1，表示&gt;&#x3D;1.1.0 &lt;1.2.0，可以是同上</p>
-<p>如：~1，表示&gt;&#x3D;1.0.0 &lt;2.0.0，可以是 1.0.0，1.0.1，1.0.2，…..，1.0.n，1.1.n，1.2.n，…..，1.n.n</p>
-<p><strong>^version</strong></p>
-<p>兼容某个版本</p>
-<p>版本号中最左边的非 0 数字的右侧可以任意</p>
-<p>如果缺少某个版本号，则这个版本号的位置可以任意</p>
-<p>如：^1.1.2 ，表示&gt;&#x3D;1.1.2 &lt;2.0.0，可以是 1.1.2，1.1.3，…..，1.1.n，1.2.n，…..，1.n.n</p>
-<p>如：^0.2.3 ，表示&gt;&#x3D;0.2.3 &lt;0.3.0，可以是 0.2.3，0.2.4，…..，0.2.n</p>
-<p>如：^0.0，表示 &gt;&#x3D;0.0.0 &lt;0.1.0，可以是 0.0.0，0.0.1，…..，0.0.n</p>
-<p><strong>x-range</strong></p>
-<p>x 的位置表示任意版本</p>
-<p>如：1.2.x，表示可以 1.2.0，1.2.1，…..，1.2.n</p>
-<p><strong>*-range</strong></p>
-<p>任意版本，””也表示任意版本</p>
-<p>如：*，表示&gt;&#x3D;0.0.0 的任意版本</p>
-<p><strong>version1 - version2</strong></p>
-<p>大于等于 version1，小于等于 version2</p>
-<p>如：1.1.2 - 1.3.1，表示包括 1.1.2 和 1.3.1 以及他们件的任意版本</p>
-<p><strong>range1 || range2</strong></p>
-<p>满足 range1 或者满足 range2，可以多个范围</p>
-<p>如：&lt;1.0.0 || &gt;&#x3D;2.3.1 &lt;2.4.5 || &gt;&#x3D;2.5.2 &lt;3.0.0，表示满足这 3 个范围的版本都可以</p>
-<p>原文连接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wshiqtb/p/6395029.html">https://www.cnblogs.com/wshiqtb/p/6395029.html</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1629,13 +1588,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">421k</span>
+    <span title="站点总字数">422k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:23</span>
+    <span title="站点阅读时长">6:24</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">129</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">130</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,210 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2018/12/04/js/RegExp%E5%AF%B9%E8%B1%A1%E5%92%8Cstring-replac%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2018/12/04/js/RegExp%E5%AF%B9%E8%B1%A1%E5%92%8Cstring-replac%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">RegExp对象和string.replac方法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-12-04 17:19:26" itemprop="dateCreated datePublished" datetime="2018-12-04T17:19:26+00:00">2018-12-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="RegExp-对象"><a href="#RegExp-对象" class="headerlink" title="RegExp 对象"></a>RegExp 对象</h2><p>RegExp 对象表示正则表达式，它是对字符串执行模式匹配的强大工具。</p>
+<h3 id="创建-RegExp-对象的语法"><a href="#创建-RegExp-对象的语法" class="headerlink" title="创建 RegExp 对象的语法"></a>创建 RegExp 对象的语法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">RegExp</span>(pattern, attributes);</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>参数 <em>pattern</em> 是一个字符串，指定了正则表达式的模式或其他正则表达式。</p>
+<p>参数 <em>attributes</em> 是一个可选的字符串，包含属性 “g”、”i” 和 “m”，分别用于指定全局匹配、区分大小写的匹配和多行匹配。ECMAScript 标准化之前，不支持 m 属性。如果 <em>pattern</em> 是正则表达式，而不是字符串，则必须省略该参数。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;ig&quot;</span>); <span class="comment">//全局匹配不区分大小写的hello字符串</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>一个新的 RegExp 对象，具有指定的模式和标志。如果参数 <em>pattern</em> 是正则表达式而不是字符串，那么 RegExp() 构造函数将用与指定的 RegExp 相同的模式和标志创建一个新的 RegExp 对象。</p>
+<p>如果不用 new 运算符，而将 RegExp() 作为函数调用，那么它的行为与用 new 运算符调用时一样，只是当 <em>pattern</em> 是正则表达式时，它只返回 _pattern_，而不再创建一个新的 RegExp 对象。</p>
+<h3 id="抛出"><a href="#抛出" class="headerlink" title="抛出"></a>抛出</h3><p>SyntaxError - 如果 <em>pattern</em> 不是合法的正则表达式，或 <em>attributes</em> 含有 “g”、”i” 和 “m” 之外的字符，抛出该异常。</p>
+<p>TypeError - 如果 <em>pattern</em> 是 RegExp 对象，但没有省略 <em>attributes</em> 参数，抛出该异常。</p>
+<h3 id="支持正则表达式的-String-对象的方法"><a href="#支持正则表达式的-String-对象的方法" class="headerlink" title="支持正则表达式的 String 对象的方法"></a>支持正则表达式的 String 对象的方法</h3><table>
+<thead>
+<tr>
+<th align="center"><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jsref/jsref_search.asp">search</a></th>
+<th align="center">检索与正则表达式相匹配的值。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jsref/jsref_match.asp">match</a></td>
+<td align="center">找到一个或多个正则表达式的匹配。</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jsref/jsref_replace.asp">replace</a></td>
+<td align="center">替换与正则表达式匹配的子串。</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/jsref/jsref_split.asp">split</a></td>
+<td align="center">把字符串分割为字符串数组。</td>
+</tr>
+</tbody></table>
+<h2 id="String-replace-方法"><a href="#String-replace-方法" class="headerlink" title="String.replace() 方法"></a>String.replace() 方法</h2><h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stringObject.<span class="title function_">replace</span>(regexp / substr, replacement);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">regexp&#x2F;substr</td>
+<td align="left">必需。规定子字符串或要替换的模式的 RegExp 对象。请注意，如果该值是一个字符串，则将它作为要检索的直接量文本模式，而不是首先被转换为 RegExp 对象。</td>
+</tr>
+<tr>
+<td align="left">replacement</td>
+<td align="left">必需。一个字符串值。规定了替换文本或生成替换文本的函数。</td>
+</tr>
+</tbody></table>
+<h3 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h3><p>一个新的字符串，是用 <em>replacement</em> 替换了 regexp 的第一次匹配或所有匹配之后得到的。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>字符串 stringObject 的 replace() 方法执行的是查找并替换的操作。它将在 stringObject 中查找与 regexp 相匹配的子字符串，然后用 <em>replacement</em> 来替换这些子串。如果 regexp 具有全局标志 g，那么 replace() 方法将替换所有匹配的子串。否则，它只替换第一个匹配子串。</p>
+<p><em>replacement</em> 可以是字符串，也可以是函数。如果它是字符串，那么每个匹配都将由字符串替换。但是 replacement 中的 $ 字符具有特定的含义。如下表所示，它说明从模式匹配得到的字符串将用于替换。</p>
+<p><strong>注意：</strong>ECMAScript v3 规定，replace() 方法的参数 replacement 可以是函数而不是字符串。在这种情况下，每个匹配都调用该函数，它返回的字符串将作为替换文本使用。该函数的第一个参数是匹配模式的字符串。接下来的参数是与模式中的子表达式匹配的字符串，可以有 0 个或多个这样的参数。接下来的参数是一个整数，声明了匹配在 stringObject 中出现的位置。最后一个参数是 stringObject 本身。</p>
+<table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">替换文本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>$1</code>、 <code>$2</code>、…、$99</td>
+<td align="left">与 regexp 中的第 1 到第 99 个子表达式相匹配的文本。</td>
+</tr>
+<tr>
+<td align="left">$&amp;</td>
+<td align="left">与 regexp 相匹配的子串。</td>
+</tr>
+<tr>
+<td align="left">$&#96;</td>
+<td align="left">位于匹配子串左侧的文本。</td>
+</tr>
+<tr>
+<td align="left">$‘</td>
+<td align="left">位于匹配子串右侧的文本。</td>
+</tr>
+<tr>
+<td align="left">$$</td>
+<td align="left">直接量符号。</td>
+</tr>
+</tbody></table>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子 1"></a>例子 1</h4><p>在本例中，我们将使用 “W3School” 替换字符串中的 “Microsoft”：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">var</span> str=<span class="string">&quot;Visit Microsoft!&quot;</span> <span class="variable language_">document</span>.<span class="title function_">write</span>(str.<span class="title function_">replace</span>(<span class="regexp">/Microsoft/</span>,</span><br><span class="line">  <span class="string">&quot;W3School&quot;</span>))</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Visit</span> W3School!</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子-2"><a href="#例子-2" class="headerlink" title="例子 2"></a>例子 2</h4><p>在本例中，我们将执行一次全局替换，每当 “Microsoft” 被找到，它就被替换为 “W3School”：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">  <span class="keyword">var</span> str=<span class="string">&quot;Welcome to Microsoft! &quot;</span> str=str + <span class="string">&quot;We are proud to announce that</span></span><br><span class="line"><span class="string">  Microsoft has &quot;</span> str=str + <span class="string">&quot;one of the largest Web Developers sites in the</span></span><br><span class="line"><span class="string">  world.&quot;</span> <span class="variable language_">document</span>.<span class="title function_">write</span>(str.<span class="title function_">replace</span>(<span class="regexp">/Microsoft/g</span>, <span class="string">&quot;W3School&quot;</span>))</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Welcome</span> to W3School! <span class="title class_">We</span> are proud to announce that W3School</span><br><span class="line">has one <span class="keyword">of</span> the largest <span class="title class_">Web</span> <span class="title class_">Developers</span> sites <span class="keyword">in</span> the world.</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子-3"><a href="#例子-3" class="headerlink" title="例子 3"></a>例子 3</h4><p>您可以使用本例提供的代码来确保匹配字符串大写字符的正确：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">text = <span class="string">&quot;javascript Tutorial&quot;</span>;</span><br><span class="line">text.<span class="title function_">replace</span>(<span class="regexp">/javascript/i</span>, <span class="string">&quot;JavaScript&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子-4"><a href="#例子-4" class="headerlink" title="例子 4"></a>例子 4</h4><p>在本例中，我们将把 “Doe, John” 转换为 “John Doe” 的形式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;Doe, John&quot;</span>;</span><br><span class="line">name.<span class="title function_">replace</span>(<span class="regexp">/(\w+)\s*, \s*(\w+)/</span>, <span class="string">&quot;$2 $1&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子-5"><a href="#例子-5" class="headerlink" title="例子 5"></a>例子 5</h4><p>在本例中，我们将把所有的花引号替换为直引号：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;&quot;a&quot;, &quot;b&quot;&#x27;</span>;</span><br><span class="line">name.<span class="title function_">replace</span>(<span class="regexp">/&quot;([^&quot;]*)&quot;/g</span>, <span class="string">&quot;&#x27;$1&#x27;&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子-6"><a href="#例子-6" class="headerlink" title="例子 6"></a>例子 6</h4><p>在本例中，我们将把字符串中所有单词的首字母都转换为大写：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;aaa bbb ccc&quot;</span>;</span><br><span class="line">uw = name.<span class="title function_">replace</span>(<span class="regexp">/\b\w+\b/g</span>, <span class="keyword">function</span> (<span class="params">word</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> word.<span class="title function_">substring</span>(<span class="number">0</span>, <span class="number">1</span>).<span class="title function_">toUpperCase</span>() + word.<span class="title function_">substring</span>(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2018/12/04/Vue/Vue%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93%E4%B8%AD%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +486,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -440,7 +644,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -750,7 +954,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -859,7 +1063,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1057,7 +1261,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1167,7 +1371,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1283,7 +1487,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1488,7 +1692,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1603,7 +1807,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-18 07:12:34" itemprop="dateModified" datetime="2022-07-18T07:12:34+00:00">2022-07-18</time>
+      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1763,13 +1967,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">421k</span>
+    <span title="站点总字数">422k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:23</span>
+    <span title="站点阅读时长">6:24</span>
   </span>
 </div>
 <div class="busuanzi-count">
