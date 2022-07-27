@@ -1,5 +1,5 @@
 ---
-title: 快捷创建electron+vue项目的两种方式
+title: electron+vue项目快捷创建的两种方式
 date: 2021-06-04 17:16:27
 tags:
   - Vue
