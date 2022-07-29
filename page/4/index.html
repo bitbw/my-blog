@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">130</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,112 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/11/12/Vue/VueCli%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/12/Vue/VueCli%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">VueCli常见问题汇总</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-12 12:07:26" itemprop="dateCreated datePublished" datetime="2021-11-12T12:07:26+00:00">2021-11-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>970</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="去除-PWA-插件"><a href="#去除-PWA-插件" class="headerlink" title="去除 PWA 插件"></a>去除 PWA 插件</h3><p>去除 package.json 中的 PWA 依赖 从新 npm install</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   ...</span><br><span class="line">-    <span class="attr">&quot;@vue/cli-plugin-pwa&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.4.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">     ...</span><br><span class="line"> <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ESlint"><a href="#ESlint" class="headerlink" title="ESlint"></a>ESlint</h2><h3 id="ESlint-开启保存校验"><a href="#ESlint-开启保存校验" class="headerlink" title="ESlint 开启保存校验"></a>ESlint 开启保存校验</h3><p>vue.config.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">lintOnSave</span>: <span class="literal">true</span>,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="关闭部分校验规则"><a href="#关闭部分校验规则" class="headerlink" title="关闭部分校验规则"></a>关闭部分校验规则</h3><p>.eslintrc.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">root</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">env</span>: &#123;</span><br><span class="line">    <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">extends</span>: [<span class="string">&quot;plugin:vue/essential&quot;</span>, <span class="string">&quot;eslint:recommended&quot;</span>, <span class="string">&quot;@vue/prettier&quot;</span>],</span><br><span class="line">  <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">    <span class="attr">parser</span>: <span class="string">&quot;babel-eslint&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 关闭规则</span></span><br><span class="line">  <span class="attr">rules</span>: &#123;</span><br><span class="line">    <span class="string">&quot;no-console&quot;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;warn&quot;</span> : <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;no-debugger&quot;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;warn&quot;</span> : <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="string">&quot;no-unused-vars&quot;</span>: process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;warn&quot;</span> : <span class="string">&quot;off&quot;</span>,</span><br><span class="line">    <span class="comment">// vue相关加 vue/</span></span><br><span class="line">    <span class="string">&quot;vue/no-unused-components&quot;</span>:</span><br><span class="line">      process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> ? <span class="string">&quot;warn&quot;</span> : <span class="string">&quot;off&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/11/12/Vue/VueRouter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +388,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,7 +495,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -504,7 +610,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -685,7 +791,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -792,7 +898,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -960,7 +1066,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1059,7 +1165,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1161,7 +1267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1318,7 +1424,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1393,179 +1499,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/06/24/Git/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/24/Git/Git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Git 常用命令</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-06-24 09:50:14" itemprop="dateCreated datePublished" datetime="2021-06-24T09:50:14+00:00">2021-06-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><p> git 全局配置文件在 ~ 目录下 .gitconfig 文件<br> git 项目配置文件在 项目目录下 .git 文件夹下 config 文件</p>
-<h2 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h2><h3 id="查看本地关联的远程仓库"><a href="#查看本地关联的远程仓库" class="headerlink" title="查看本地关联的远程仓库"></a>查看本地关联的远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line"><span class="comment"># 远程仓库名  远程仓库地址</span></span><br><span class="line"><span class="comment"># origin  https://github.com/xxx/my-blog.git (fetch)</span></span><br><span class="line"><span class="comment"># origin  https://github.com/xxx/my-blog.git (push)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="本地设置远程仓库"><a href="#本地设置远程仓库" class="headerlink" title="本地设置远程仓库"></a>本地设置远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  git remote add （添加远程仓库） origin（远程仓库名随便起） https://github.com/xxx/my-blog.git （远程仓库地址）</span></span><br><span class="line">git remote add origin https://github.com/xxx/my-blog.git</span><br><span class="line"><span class="comment">#  git push 推送代码 -u 同时为当前推送设置上游分支  origin master （origin 就是上面起的远程仓库名 master 分支名）</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改远程仓库地址"><a href="#修改远程仓库地址" class="headerlink" title="修改远程仓库地址"></a>修改远程仓库地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git remote set-url origin（远程仓库名） https://github.com/xxx/my-blog1.git （远程仓库地址）</span></span><br><span class="line">git remote set-url origin https://github.com/xxx/my-blog1.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="查看-GIT-未推送的提交记录"><a href="#查看-GIT-未推送的提交记录" class="headerlink" title="查看 GIT 未推送的提交记录"></a>查看 GIT 未推送的提交记录</h2><h4 id="1-查看到未传送到远程代码库的提交次数"><a href="#1-查看到未传送到远程代码库的提交次数" class="headerlink" title="1 查看到未传送到远程代码库的提交次数"></a>1 查看到未传送到远程代码库的提交次数</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-<p>显示结果类似于这样：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Your branch is ahead of <span class="string">&#x27;origin/master&#x27;</span> by 2 commits.</span><br><span class="line">  (use <span class="string">&quot;git push&quot;</span> to publish your <span class="built_in">local</span> commits)</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-查看到未传送到远程代码库的提交描述-x2F-说明"><a href="#2-查看到未传送到远程代码库的提交描述-x2F-说明" class="headerlink" title="2 查看到未传送到远程代码库的提交描述&#x2F;说明"></a>2 查看到未传送到远程代码库的提交描述&#x2F;说明</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry -v</span><br></pre></td></tr></table></figure>
-
-<p>显示结果类似于这样：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ afd5134be3bee5285d6c2ee2c82fc323012d74bb Update commit 1</span><br><span class="line">+ 37a165ec0586f4af745bf538bc139fda6f1df672 Update commit 2</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-查看到未传送到远程代码库的提交详情"><a href="#3-查看到未传送到远程代码库的提交详情" class="headerlink" title="3 查看到未传送到远程代码库的提交详情"></a>3 查看到未传送到远程代码库的提交详情</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> master ^origin/master</span><br></pre></td></tr></table></figure>
-
-<p>这是一个 git log 命令的过滤，^origin&#x2F;master 可改成其它分支。<br>显示结果类似于这样：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">commit 37a165ec0586f4af745bf538bc139fda6f1df672 (HEAD -&gt; master)</span><br><span class="line">Author: xxxx &lt;xxxxx@163.com&gt;</span><br><span class="line">Date:   Mon Jul 26 17:46:34 2021 +0800</span><br><span class="line"></span><br><span class="line">    Update commit 1</span><br><span class="line"></span><br><span class="line">commit afd5134be3bee5285d6c2ee2c82fc323012d74bb</span><br><span class="line">Author: xxx &lt;xxxx@163.com&gt;</span><br><span class="line">Date:   Mon Jul 26 09:54:24 2021 +0800</span><br><span class="line"></span><br><span class="line">    Update commit 2</span><br></pre></td></tr></table></figure>
-
-<p>总结<br>git status 只能查看未传送提交的次数<br>git cherry -v 只能查看未传送提交的描述&#x2F;说明<br>git log master ^origin&#x2F;master 则可以查看未传送提交的详细信息</p>
-<h2 id="Github-相关"><a href="#Github-相关" class="headerlink" title="Github 相关"></a>Github 相关</h2><p>新建仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# test111&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/bitbw/test111.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-
-<p>已有仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/bitbw/test111.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-
-<h2 id="git设置代理"><a href="#git设置代理" class="headerlink" title="git设置代理"></a>git设置代理</h2><h3 id="设置局部代理"><a href="#设置局部代理" class="headerlink" title="设置局部代理"></a>设置局部代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> http.proxy 127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<h3 id="端口要设置为本地代理的端口"><a href="#端口要设置为本地代理的端口" class="headerlink" title="端口要设置为本地代理的端口"></a>端口要设置为本地代理的端口</h3><h3 id="设置全局代理"><a href="#设置全局代理" class="headerlink" title="设置全局代理"></a>设置全局代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<p>为全局的 git 项目都设置代理</p>
-<p>取消代理设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="built_in">local</span> --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br></pre></td></tr></table></figure>
-
-<h3 id="git-clone-同时设置代理"><a href="#git-clone-同时设置代理" class="headerlink" title="git clone 同时设置代理"></a>git clone 同时设置代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -c http.proxy=http://127.0.0.1:1080  https://github.com/xxx.git</span><br></pre></td></tr></table></figure>
-
-<p>设置快捷别名</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.cloneProxy = <span class="built_in">clone</span> -c http.proxy=http://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<h2 id="git-大小写问题"><a href="#git-大小写问题" class="headerlink" title="git 大小写问题"></a>git 大小写问题</h2><p>问题复现:</p>
-<ol>
-<li>.新建一个 a.js 文件(大小写不敏感的状态下)，并提交</li>
-<li>.修改本地 a.js 变为 A.js，文件内容无变更，无法提交</li>
-<li>执行git config core.ignorecase false，修改 大小写敏感 规则，然后提交，查看结果，此时会存在 大小写 同时存在的文件</li>
-<li>此时某种机缘下，再次执行 git config core.ignorecase true，大小写不敏感，</li>
-<li>此时执行 git push ， 即把最新的更新都更新到了 a.js 中</li>
-<li>此时再修改 大小写敏感规则为敏感， 执行 git pull ，并不会拿到最新的更新。比如自己想要的是第一次修改后的 A.js ，但是服务器有一个没7. 有更新的 A.js 和 有更新的 a.js,而你只能拿到前者，所以就会遇到各种各样的坑……</li>
-</ol>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>执行git config –global core.ignorecase false，全局设置 大小写敏感 。</p>
-<ol>
-<li>文件变更比较少的情况<br>直接使用以下命令重命名文件，在 git 中不要直接修改文件名，最好的办法是使用下面的方式，</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">mv</span> -f [你想要删掉的文件] [你想要留下的文件]</span><br><span class="line">git <span class="built_in">mv</span> -f a.js A.js</span><br><span class="line"></span><br><span class="line"><span class="comment">## 等同于：</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">rm</span> a.js</span><br><span class="line">git add A.js</span><br></pre></td></tr></table></figure>
-
-<p>这个命令的目的就是删除不需要的大小写同名文件，修改后 git push 提交变更即可。</p>
-<ol start="2">
-<li>变更比较多，并且拥有分支较高权限</li>
-</ol>
-<ul>
-<li>在 github 删除该分支</li>
-<li>本地执行 git rm -r –cached . (注意后面‘点号’)</li>
-<li>然后重新 git push，就ok了<br>此法不太好，有点暴力，容易出问题，但适用于 变更发生于近期的情况。</li>
-</ul>
-<p>总结：<br>其实看解决办法的话，只是一个很小的问题，但是出现的 bug 确实是让人很头疼的，因为 mac windows 在不设置大小写敏感规则的时候默认大小写是不敏感，项目部署的机器是 Linux 的，而 Linux 是大小写敏感的。所以这样的问题平时不易发现，本地调试的时候大部分时候并不会出错误，只有在项目部署的时候问题才会显示出来。</p>
-<h2 id="git-push同时推送到两个远程仓库"><a href="#git-push同时推送到两个远程仓库" class="headerlink" title="git push同时推送到两个远程仓库"></a>git push同时推送到两个远程仓库</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/edc85a20ada9">原文地址</a></p>
-<p>进入你的项目目录，打开.git&#x2F;config文件(.git是隐藏目录，需要打开显示隐藏文件…)</p>
-<p>在url &#x3D; xxx下再加一行其他远程库的路径，例如，开源中国的：</p>
-<p>此后，你只需要git push origin master，即可同时推送到两个不同仓库的master。</p>
-<h2 id="git-别名配置"><a href="#git-别名配置" class="headerlink" title="git 别名配置"></a>git 别名配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.co checkout</span><br><span class="line">git config --global alias.br branch</span><br><span class="line">git config --global alias.ci commit</span><br><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1588,7 +1523,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">422k</span>
+    <span title="站点总字数">423k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">

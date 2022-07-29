@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">130</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,115 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/" class="post-title-link" itemprop="url">js中的微观任务和宏观任务</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-14 10:35:43" itemprop="dateCreated datePublished" datetime="2020-09-14T10:35:43+00:00">2020-09-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>355</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="js-中的微观任务和宏观任务"><a href="#js-中的微观任务和宏观任务" class="headerlink" title="js 中的微观任务和宏观任务"></a>js 中的微观任务和宏观任务</h1><blockquote>
+<p>首先 js 是单线程的,代码执行都在执行栈中，io 接口事件和 dom 事件都放在任务队列中，等到执行栈执行完毕再去任务队列中看有没有可执行的任务，这称之为事件循环</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/08/18/js/JavaScriptpt-SourceMap-%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +391,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -435,7 +544,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1037,7 +1146,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1162,7 +1271,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1269,7 +1378,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1372,7 +1481,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1475,7 +1584,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1589,7 +1698,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1706,7 +1815,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1775,428 +1884,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/01/15/js/%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/01/15/js/%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" class="post-title-link" itemprop="url">JavaScript的执行上下文，理解JavaScript的作用域链，JavaScript中的this</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-01-15 10:00:59" itemprop="dateCreated datePublished" datetime="2020-01-15T10:00:59+00:00">2020-01-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>15k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>14 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>学习了一篇 js 偏底层基础 的文章：JavaScript 的执行上下文 Execution context</p>
-<p>我将三篇文章放在一起 最后加了一些自己的总结 和 函数表达式的理解</p>
-<p>原文地址：</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wilber2013/p/4909430.html#_nav_0">JavaScript 的执行上下文</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wilber2013/p/4909459.html">理解 JavaScript 的作用域链</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wilber2013/p/4909505.html#_nav_3">JavaScript 中的 this</a></p>
-</blockquote>
-<h1 id="JavaScript-的执行上下文"><a href="#JavaScript-的执行上下文" class="headerlink" title="JavaScript 的执行上下文"></a>JavaScript 的执行上下文</h1><p>在 JavaScript 的运行过程中，经常会遇到一些”奇怪”的行为，不理解为什么 JavaScript 会这么工作。</p>
-<p>这时候可能就需要了解一下 JavaScript 执行过程中的相关内容了。</p>
-<h2 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h2><p>在 JavaScript 中有三种代码运行环境：</p>
-<ul>
-<li>Global Code<ul>
-<li>JavaScript 代码开始运行的默认环境</li>
-</ul>
-</li>
-<li>Function Code<ul>
-<li>代码进入一个 JavaScript 函数</li>
-</ul>
-</li>
-<li>Eval Code<ul>
-<li>使用 eval()执行代码</li>
-</ul>
-</li>
-</ul>
-<p>为了表示不同的运行环境，JavaScript 中有一个<strong>执行上下文（Execution context，EC）</strong>的概念。也就是说，当 JavaScript 代码执行的时候，会进入不同的执行上下文，这些执行上下文就构成了一个<strong>执行上下文栈（Execution context stack，ECS）</strong>。</p>
-<p>例如对如下面的 JavaScript 代码：</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&quot;global var&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">outerFunc</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="string">&quot;var in outerFunc&quot;</span>;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(b);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">innerFunc</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">var</span> c = <span class="string">&quot;var in innerFunc&quot;</span>;</span><br><span class="line">        <span class="built_in">console</span>.<span class="built_in">log</span>(c);</span><br><span class="line">        foo();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    innerFunc();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">outerFunc()</span><br></pre></td></tr></table></figure>
-
-<p>代码首先进入 Global Execution Context，然后依次进入 outerFunc，innerFunc 和 foo 的执行上下文，执行上下文栈就可以表示为：</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025201151427-127726802.png" alt="img"></p>
-<p>当 JavaScript 代码执行的时候，第一个进入的总是默认的 Global Execution Context，所以说它总是在 ECS 的最底部。</p>
-<p>对于每个 Execution Context 都有三个重要的属性，变量对象（Variable object，VO），作用域链（Scope chain）和 this。这三个属性跟代码运行的行为有很重要的关系，下面会一一介绍。</p>
-<p>当然，除了这三个属性之外，根据实现的需要，Execution Context 还可以有一些附加属性。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025201152849-1821016303.png" alt="img"></p>
-<h2 id="VO-和-AO"><a href="#VO-和-AO" class="headerlink" title="VO 和 AO"></a>VO 和 AO</h2><p>从上面看到，在 Execution Context 中，会保存变量对象（Variable object，VO），下面就看看变量对象是什么。</p>
-<h3 id="变量对象（Variable-object）"><a href="#变量对象（Variable-object）" class="headerlink" title="变量对象（Variable object）"></a>变量对象（Variable object）</h3><p>变量对象是与执行上下文相关的数据作用域。它是一个与上下文相关的特殊对象，其中存储了在上下文中定义的变量和函数声明。也就是说，一般 VO 中会包含以下信息：</p>
-<ul>
-<li>变量 (var, Variable Declaration);</li>
-<li>函数声明 (Function Declaration, FD);</li>
-<li>函数的形参</li>
-</ul>
-<p>当 JavaScript 代码运行中，如果试图寻找一个变量的时候，就会首先查找 VO。对于前面例子中的代码，Global Execution Context 中的 VO 就可以表示如下：</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025201154239-918576092.png" alt="img"></p>
-<p><strong>注意，</strong>假如上面的例子代码中有下面两个语句，Global VO 仍将不变。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span> bar()&#123;&#125;) <span class="regexp">//</span> <span class="keyword">function</span> expression, FE</span><br><span class="line">baz = <span class="string">&quot;property of global object&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>也就是说，对于 VO，是有下面两种特殊情况的：</p>
-<ul>
-<li>函数表达式（与函数声明相对）不包含在 VO 之中</li>
-<li>没有使用 var 声明的变量（这种变量是，”全局”的声明方式，只是给 Global 添加了一个属性，并不在 VO 中）</li>
-</ul>
-<h3 id="活动对象（Activation-object）"><a href="#活动对象（Activation-object）" class="headerlink" title="活动对象（Activation object）"></a>活动对象（Activation object）</h3><p>只有全局上下文的变量对象允许通过 VO 的属性名称间接访问；在函数执行上下文中，VO 是不能直接访问的，此时由激活对象(Activation Object,缩写为 AO)扮演 VO 的角色。激活对象 是在进入函数上下文时刻被创建的，它通过函数的 arguments 属性初始化。</p>
-<p>Arguments Objects 是函数上下文里的激活对象 AO 中的内部对象，它包括下列属性：</p>
-<ol>
-<li>callee：指向当前函数的引用</li>
-<li>length： 真正传递的参数的个数</li>
-<li>properties-indexes：就是函数的参数值(按参数列表从左到右排列)</li>
-</ol>
-<p>对于 VO 和 AO 的关系可以理解为，VO 在不同的 Execution Context 中会有不同的表现：当在 Global Execution Context 中，可以直接使用 VO；但是，在函数 Execution Context 中，AO 就会被创建。</p>
-<p><img data-src="https://images2015.cnblogs.com/blog/593627/201510/593627-20151025201155177-724394618.png" alt="img"></p>
-<p>当上面的例子开始执行 outerFunc 的时候，就会有一个 outerFunc 的 AO 被创建：</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025201156317-195051519.png" alt="img"></p>
-<p>通过上面的介绍，我们现在了解了 VO 和 AO 是什么，以及他们之间的关系了。下面就需要看看 JavaScript 解释器是怎么执行一段代码，以及设置 VO 和 AO 了。</p>
-<h2 id="细看-Execution-Context"><a href="#细看-Execution-Context" class="headerlink" title="细看 Execution Context"></a>细看 Execution Context</h2><p>当一段 JavaScript 代码执行的时候，JavaScript 解释器会创建 Execution Context，其实这里会有两个阶段：</p>
-<ul>
-<li>创建阶段（当函数被调用，但是开始执行函数内部代码之前）<ul>
-<li>创建 Scope chain</li>
-<li>创建 VO&#x2F;AO（variables, functions and arguments）</li>
-<li>设置 this 的值</li>
-</ul>
-</li>
-<li>激活&#x2F;代码执行阶段<ul>
-<li>设置变量的值、函数的引用，然后解释&#x2F;执行代码</li>
-</ul>
-</li>
-</ul>
-<p>这里想要详细介绍一下”创建 VO&#x2F;AO”中的一些细节，因为这些内容将直接影响代码运行的行为。</p>
-<p>对于”创建 VO&#x2F;AO”这一步，JavaScript 解释器主要做了下面的事情：</p>
-<ul>
-<li>根据函数的参数，创建并初始化 arguments object</li>
-<li>扫描函数内部代码，查找函数声明（Function declaration）<ul>
-<li>对于所有找到的函数声明，将函数名和函数引用存入 VO&#x2F;AO 中</li>
-<li><strong>如果 VO&#x2F;AO 中已经有同名的函数，那么就进行覆盖</strong></li>
-</ul>
-</li>
-<li>扫描函数内部代码，查找变量声明（Variable declaration）<ul>
-<li>对于所有找到的变量声明，将变量名存入 VO&#x2F;AO 中，并初始化为”undefined”</li>
-<li>如果变量名称跟已经声明的形式参数或函数相同，则变量声明不会干扰已经存在的这类属性</li>
-</ul>
-</li>
-</ul>
-<p>看下面的例子：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span><span class="params">(i)</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="keyword">function</span> <span class="title function_">privateB</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">c</span><span class="params">()</span> &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(<span class="number">22</span>);</span><br></pre></td></tr></table></figure>
-
-<p>对于上面的代码，在”创建阶段”，可以得到下面的 Execution Context object：</p>
-<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">fooExecutionContext = &#123;</span></span><br><span class="line"><span class="attribute">    scopeChain</span><span class="punctuation">:</span> <span class="string">&#123; ... &#125;,</span></span><br><span class="line">    <span class="attribute">variableObject</span><span class="punctuation">:</span> <span class="string">&#123;</span></span><br><span class="line">        <span class="attribute">arguments</span><span class="punctuation">:</span> <span class="string">&#123;</span></span><br><span class="line">            <span class="attribute">0</span><span class="punctuation">:</span> <span class="string">22,</span></span><br><span class="line">            <span class="attribute">length</span><span class="punctuation">:</span> <span class="string">1</span></span><br><span class="line">        <span class="attribute">&#125;,</span></span><br><span class="line"><span class="attribute">        i</span><span class="punctuation">:</span> <span class="string">22,</span></span><br><span class="line">        <span class="attribute">c</span><span class="punctuation">:</span> <span class="string">pointer to function c()</span></span><br><span class="line">        <span class="attribute">a</span><span class="punctuation">:</span> <span class="string">undefined,</span></span><br><span class="line">        <span class="attribute">b</span><span class="punctuation">:</span> <span class="string">undefined</span></span><br><span class="line">    <span class="attribute">&#125;,</span></span><br><span class="line"><span class="attribute">    this</span><span class="punctuation">:</span> <span class="string">&#123; ... &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在”激活&#x2F;代码执行阶段”，Execution Context object 就被更新为：</p>
-<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">fooExecutionContext = &#123;</span></span><br><span class="line"><span class="attribute">    scopeChain</span><span class="punctuation">:</span> <span class="string">&#123; ... &#125;,</span></span><br><span class="line">    <span class="attribute">variableObject</span><span class="punctuation">:</span> <span class="string">&#123;</span></span><br><span class="line">        <span class="attribute">arguments</span><span class="punctuation">:</span> <span class="string">&#123;</span></span><br><span class="line">            <span class="attribute">0</span><span class="punctuation">:</span> <span class="string">22,</span></span><br><span class="line">            <span class="attribute">length</span><span class="punctuation">:</span> <span class="string">1</span></span><br><span class="line">        <span class="attribute">&#125;,</span></span><br><span class="line"><span class="attribute">        i</span><span class="punctuation">:</span> <span class="string">22,</span></span><br><span class="line">        <span class="attribute">c</span><span class="punctuation">:</span> <span class="string">pointer to function c()</span></span><br><span class="line">        <span class="attribute">a</span><span class="punctuation">:</span> <span class="string">&#x27;hello&#x27;,</span></span><br><span class="line">        <span class="attribute">b</span><span class="punctuation">:</span> <span class="string">pointer to function privateB()</span></span><br><span class="line">    <span class="attribute">&#125;,</span></span><br><span class="line"><span class="attribute">    this</span><span class="punctuation">:</span> <span class="string">&#123; ... &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="例子分析"><a href="#例子分析" class="headerlink" title="例子分析"></a>例子分析</h2><p>前面介绍了 Execution Context，VO&#x2F;AO 等这么多的理论知识，当然是为了方便我们去分析代码中的一些行为。这里，就通过几个简单的例子，结合上面的概念来分析结果。</p>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><p>首先看第一个例子：</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(bar);</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(baz);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> bar = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">baz</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.<span class="built_in">log</span>(<span class="string">&quot;baz&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-
-<p>在 Chrome 中运行代码运行后将输出：</p>
-<p><img data-src="https://images2015.cnblogs.com/blog/593627/201510/593627-20151025201157161-1227329780.png" alt="img"></p>
-<p>代码解释：匿名函数会首先进入”创建结果”，JavaScript 解释器会创建一个”Function Execution Context”，然后创建 Scope chain，VO&#x2F;AO 和 this。根据前面的介绍，解释器会扫描函数和变量声明，如下的 AO 会被创建：</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025201158208-1634029739.png" alt="img"></p>
-<p>所以，对于 bar，我们会得到”undefined”这个输出，表现的行为就是，我们在声明一个变量之前就访问了这个变量。这个就是 JavaScript 中”Hoisting”。</p>
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><p>接着上面的例子，进行一些修改：</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(bar);</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(baz);</span><br><span class="line"></span><br><span class="line">    bar = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(window.bar);</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(bar);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">baz</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.<span class="built_in">log</span>(<span class="string">&quot;baz&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-
-<p>运行这段代码会得到”bar is not defined(…)”错误。当代码执行到”console.log(bar);”的时候，会去 AO 中查找”bar”。但是，根据前面的解释，函数中的”bar”并没有通过 var 关键字声明，所有不会被存放在 AO 中，也就有了这个错误。</p>
-<p>注释掉”console.log(bar);”，再次运行代码，可以得到下面结果。”bar”在”激活&#x2F;代码执行阶段”被创建。</p>
-<p><img data-src="https://images2015.cnblogs.com/blog/593627/201510/593627-20151025201158911-154792588.png" alt="img"></p>
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><p>现在来看最后一个例子：</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(foo);</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(bar);</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(baz);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> foo = <span class="keyword">function</span>(<span class="params"></span>)&#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">bar</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.<span class="built_in">log</span>(<span class="string">&quot;bar&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> bar = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(bar);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">baz</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.<span class="built_in">log</span>(<span class="string">&quot;baz&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-
-<p>代码的运行结果为：</p>
-<p><img data-src="/%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/593627-20151025201159786-722939845.png" alt="img"></p>
-<p>代码中，最”奇怪”的地方应该就是”bar”的输出了，第一次是一个函数，第二次是”20”。</p>
-<p>其实也很好解释，回到前面对”创建 VO&#x2F;AO”的介绍，在创建 VO&#x2F;AO 过程中，解释器会先扫描函数声明，然后”foo: <function>“就被保存在了 AO 中；但解释器扫描变量声明的时候，虽然发现”var bar &#x3D; 20;”，但是因为”foo”在 AO 中已经存在，所以就没有任何操作了。</p>
-<p>但是，当代码执行到第二句”console.log(bar);”的时候，”激活&#x2F;代码执行阶段”已经把 AO 中的”bar”重新设置了。</p>
-<blockquote>
-<p>下面是自己理解的 函数内部上下文执行流程图</p>
-</blockquote>
-<p>![JavaScript的执行上下文（函数内部的执行流程Execution Context）](<a target="_blank" rel="noopener" href="https://bitbw.top/public/img/my_gallery/JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%EF%BC%88%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E7%9A%84%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8BExecution">https://bitbw.top/public/img/my_gallery/JavaScript的执行上下文（函数内部的执行流程Execution</a> Context）.png)</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文介绍了 JavaScript 中的执行上下文（Execution Context），以及 VO&#x2F;AO 等概念，最后通过几个例子展示了这几个概念对我们了解 JavaScript 代码运行的重要性。</p>
-<p>通过对 VO&#x2F;AO 在”创建阶段”的具体细节，如何扫描函数声明和变量声明，就可以对 JavaScript 中的”Hoisting”有清晰的认识。所以说，了解 JavaScript 解释器的行为，以及相关的概念，对理解 JavaScript 代码的行为是很有帮助的。</p>
-<p>后面会对 Execution Context 中的 Scope chain 和 this 进行介绍。</p>
-<h1 id="理解-JavaScript-的作用域链"><a href="#理解-JavaScript-的作用域链" class="headerlink" title="理解 JavaScript 的作用域链"></a>理解 JavaScript 的作用域链</h1><p>上一篇文章中介绍了 Execution Context 中的三个重要部分：VO&#x2F;AO，scope chain 和 this，并详细的介绍了 VO&#x2F;AO 在 JavaScript 代码执行中的表现。</p>
-<p>本文就看看 Execution Context 中的 scope chain。</p>
-<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>开始介绍作用域链之前，先看看 JavaScript 中的作用域（scope）。在很多语言中（C++，C#，Java），作用域都是通过代码块（由{}包起来的代码）来决定的，<strong>但是，在 JavaScript 作用域是跟函数相关的，也可以说成是 function-based。</strong></p>
-<p>例如，当 for 循环这个代码块结束后，依然可以访问变量”i”。</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.<span class="built_in">log</span>(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.<span class="built_in">log</span>(i); <span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-
-<p>对于作用域，又可以分为全局作用域（Global scope）和局部作用域（Local scpoe）。</p>
-<p><strong>全局作用域</strong>中的对象可以在代码的任何地方访问，一般来说，下面情况的对象会在全局作用域中：</p>
-<ul>
-<li>最外层函数和在最外层函数外面定义的变量</li>
-<li>没有通过关键字”var”声明的变量</li>
-<li>浏览器中，window 对象的属性</li>
-</ul>
-<p><strong>局部作用域</strong>又被称为函数作用域（Function scope），所有的变量和函数只能在作用域内部使用。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="variable language_">window</span>.<span class="property">bar</span> = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">baz</span>(<span class="params"></span>)&#123;</span><br><span class="line">    a = <span class="number">3</span>;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Global scope: foo, bar, baz, a</span></span><br><span class="line"><span class="comment">// Local scope: b</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>通过前面一篇文章了解到，每一个 Execution Context 中都有一个 VO，用来存放变量，函数和参数等信息。</p>
-<p>在 JavaScript 代码运行中，所有用到的变量都需要去当前 AO&#x2F;VO 中查找，当找不到的时候，就会继续查找上层 Execution Context 中的 AO&#x2F;VO。这样一级级向上查找的过程，就是所有 Execution Context 中的 AO&#x2F;VO 组成了一个作用域链。</p>
-<p>所以说，<strong>作用域链</strong>与一个执行上下文相关，是内部上下文所有变量对象（包括父变量对象）的列表，用于变量查询。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Scope = VO<span class="regexp">/AO + All Parent VO/</span>AOs</span><br></pre></td></tr></table></figure>
-
-<p>看一个例子：</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> y = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">bar</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> z = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">console</span>.<span class="built_in">log</span>(x + y + z);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    bar()</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
-
-<p>上面代码的输出结果为”60”，函数 bar 可以直接访问”z”，然后通过作用域链访问上层的”x”和”y”。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025202341552-94941711.png" alt="img"></p>
-<ul>
-<li>绿色箭头指向 VO&#x2F;AO</li>
-<li>蓝色箭头指向 scope chain（VO&#x2F;AO + All Parent VO&#x2F;AOs）</li>
-</ul>
-<p>再看一个比较典型的例子：</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">var</span> <span class="class"><span class="keyword">data</span> = [];</span></span><br><span class="line"><span class="title">for</span>(var i = <span class="number">0</span> ; i &lt; <span class="number">3</span>; i++)&#123;</span><br><span class="line">    <span class="class"><span class="keyword">data</span>[i]=function() &#123;</span></span><br><span class="line"><span class="class">        <span class="title">console</span>.<span class="title">log</span>(<span class="title">i</span>);</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">data</span>[0]();// 3</span></span><br><span class="line"><span class="class"><span class="keyword">data</span>[1]();// 3</span></span><br><span class="line"><span class="class"><span class="keyword">data</span>[2]();// 3</span></span><br></pre></td></tr></table></figure>
-
-<p>第一感觉（错觉）这段代码会输出”0，1，2”。但是根据前面的介绍，变量”i”是存放在”Global VO”中的变量，循环结束后”i”的值就被设置为 3，所以代码最后的三次函数调用访问的是相同的”Global VO”中已经被更新的”i”。</p>
-<h2 id="结合作用域链看闭包"><a href="#结合作用域链看闭包" class="headerlink" title="结合作用域链看闭包"></a>结合作用域链看闭包</h2><p>在 JavaScript 中，闭包跟作用域链有紧密的关系。相信大家对下面的闭包例子一定非常熟悉，代码中通过闭包实现了一个简单的计数器。</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">counter</span>() &#123;</span><br><span class="line">    var x = 0;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="type">&#123;</span></span><br><span class="line">        increase: <span class="keyword">function</span> <span class="title">increase</span>() &#123; <span class="keyword">return</span> <span class="type">++x</span>; &#125;,</span><br><span class="line">        decrease: <span class="keyword">function</span> <span class="title">decrease</span>() &#123; <span class="keyword">return</span> <span class="type">--x</span>; &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var ctor = counter();</span><br><span class="line"></span><br><span class="line">console.log(ctor.increase());</span><br><span class="line">console.log(ctor.decrease());</span><br></pre></td></tr></table></figure>
-
-<p>下面我们就通过 Execution Context 和 scope chain 来看看在上面闭包代码执行中到底做了哪些事情。</p>
-<p>\1. 当代码进入 Global Context 后，会创建 Global VO</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025202343192-1736899039.png" alt="img"></p>
-<ul>
-<li>绿色箭头指向 VO&#x2F;AO</li>
-<li>蓝色箭头指向 scope chain（VO&#x2F;AO + All Parent VO&#x2F;AOs）</li>
-</ul>
-<p>\2. 当代码执行到”var cter &#x3D; counter();”语句的时候，进入 counter Execution Context；根据上一篇文章的介绍，这里会创建 counter AO，并设置 counter Execution Context 的 scope chain</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025202345224-1059314508.png" alt="img"></p>
-<p>\3. 当 counter 函数执行的最后，并退出的时候，Global VO 中的 ctor 就会被设置；这里需要注意的是，虽然 counter Execution Context 退出了执行上下文栈，但是因为 ctor 中的成员仍然引用 counter AO（因为 counter AO 是 increase 和 decrease 函数的 parent scope），所以 counter AO 依然在 Scope 中。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025202347208-254025968.png" alt="img"></p>
-<p>\4. 当执行”ctor.increase()”代码的时候，代码将进入 ctor.increase Execution Context，并为该执行上下文创建 VO&#x2F;AO，scope chain 和设置 this；这时，ctor.increase AO 将指向 counter AO。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025202349224-1554337822.png" alt="img"></p>
-<ul>
-<li>绿色箭头指向 VO&#x2F;AO</li>
-<li>蓝色箭头指向 scope chain（VO&#x2F;AO + All Parent VO&#x2F;AOs）</li>
-<li>红色箭头指向 this</li>
-<li>黑色箭头指向 parent VO&#x2F;AO</li>
-</ul>
-<p>相信看到这些，一定会对 JavaScript 闭包有了比较清晰的认识，也了解为什么 counter Execution Context 退出了执行上下文栈，但是 counter AO 没有销毁，可以继续访问。</p>
-<h2 id="二维作用域链查找"><a href="#二维作用域链查找" class="headerlink" title="二维作用域链查找"></a>二维作用域链查找</h2><p>通过上面了解到，作用域链（scope chain）的主要作用就是用来进行变量查找。但是，在 JavaScript 中还有原型链（prototype chain）的概念。</p>
-<p>由于作用域链和原型链的相互作用，这样就形成了一个二维的查找。</p>
-<p>对于这个二维查找可以总结为：<strong>当代码需要查找一个属性（property）或者描述符（identifier）的时候，首先会通过作用域链（scope chain）来查找相关的对象；一旦对象被找到，就会根据对象的原型链（prototype chain）来查找属性（property）</strong>。</p>
-<p>下面通过一个例子来看看这个二维查找：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">baz</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&#x27;Set foo.a from prototype&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">inner</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(foo.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">baz</span>()();</span><br><span class="line"><span class="comment">// Set bar.a from prototype</span></span><br></pre></td></tr></table></figure>
-
-<p>对于这个例子，可以通过下图进行解释，代码首先通过作用域链（scope chain）查找”foo”，最终在 Global context 中找到；然后因为”foo”中没有找到属性”a”，将继续沿着原型链（prototype chain）查找属性”a”。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/593627-20151025202351395-1888858218.png" alt="img"></p>
-<ul>
-<li>蓝色箭头表示作用域链查找</li>
-<li>橘色箭头表示原型链查找</li>
-</ul>
-<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>本文介绍了 JavaScript 中的作用域以及作用域链，通过作用域链分析了闭包的执行过程，进一步认识了 JavaScript 的闭包。</p>
-<p>同时，结合原型链，演示了 JavaScript 中的描述符和属性的查找。</p>
-<p>下一篇我们就看看 Execution Context 中的 this 属性。</p>
-<h1 id="JavaScript-中的-this"><a href="#JavaScript-中的-this" class="headerlink" title="JavaScript 中的 this"></a>JavaScript 中的 this</h1><p>前面两篇文章介绍了 JavaScript 执行上下文中两个重要属性：VO&#x2F;AO 和 scope chain。本文就来看看执行上下文中的 this。</p>
-<p>首先看看下面两个对 this 的概括：</p>
-<ul>
-<li><strong>this 是执行上下文（Execution Context）的一个重要属性</strong>，是一个与执行上下文相关的特殊对象。因此，它可以叫作上下文对象（也就是用来指明执行上下文是在哪个上下文中被触发的对象）。</li>
-<li><strong>this 不是变量对象（Variable Object）的一个属性</strong>，所以跟变量不同，this 从不会参与到标识符解析过程。也就是说，在代码中当访问 this 的时候，它的值是直接从执行上下文中获取的，并不需要任何作用域链查找。this 的值只在进入上下文的时候进行一次确定。</li>
-</ul>
-<p>关于 this 最困惑的应该是，同一个函数，当在不同的上下文进行调用的时候，this 的值就可能会不同。也就是说，this 的值是通过函数调用表达式（也就是函数被调用的方式）的 caller 所提供的。</p>
-<p>下面就看看在不同场景中，this 的值。</p>
-<h2 id="全局上下文"><a href="#全局上下文" class="headerlink" title="全局上下文"></a>全局上下文</h2><p>在全局上下文（Global Context）中，this 总是 global object，在浏览器中就是 window 对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> === <span class="variable language_">window</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;Will&quot;</span>;</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">age</span> = <span class="number">28</span>;</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">getInfo</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span> + <span class="string">&quot; is &quot;</span> + <span class="variable language_">this</span>.<span class="property">age</span> + <span class="string">&quot; years old&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">getInfo</span>();</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"><span class="comment">// Will is 28 years old</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="函数上下文"><a href="#函数上下文" class="headerlink" title="函数上下文"></a>函数上下文</h2><p>在一个函数中，this 的情况就比较多了，this 的值直接受函数调用方式的影响。</p>
-<h3 id="Invoke-function-as-Function"><a href="#Invoke-function-as-Function" class="headerlink" title="Invoke function as Function"></a>Invoke function as Function</h3><p>当通过正常的方式调用一个函数的时候，this 的值就会被设置为 global object（浏览器中的 window 对象）。</p>
-<p>但是，当使用”strict mode”执行下面代码的时候，this 就会被设置为”undefined”。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">gFunc</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">gFunc</span>());</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> === <span class="variable language_">window</span>.<span class="title function_">gFunc</span>());</span><br><span class="line"><span class="comment">// window</span></span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Invoke-function-as-Method"><a href="#Invoke-function-as-Method" class="headerlink" title="Invoke function as Method"></a>Invoke function as Method</h3><p>当函数作为一个对象方法来执行的时候，this 的值就是该方法所属的对象。</p>
-<p>在下面的例子中，创建了一个 obj 对象，并设置 name 属性的值为”obj”。所以但调用该对象的 func 方法的时候，方法中的 this 就表示 obj 这个对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;obj&quot;</span>,</span><br><span class="line">    <span class="attr">func</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.<span class="title function_">func</span>();</span><br><span class="line"><span class="comment">// [object Object]:obj</span></span><br></pre></td></tr></table></figure>
-
-<p>为了验证”方法中的 this 代表方法所属的对象”这句话，再看下面一个例子。</p>
-<p>在对象 obj 中，创建了一个内嵌对象 nestedObj，当调用内嵌对象的方法的时候，方法中的 this 就代表 nestedObj。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;obj&quot;</span>,</span><br><span class="line">    <span class="attr">nestedObj</span>: &#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&quot;nestedObj&quot;</span>,</span><br><span class="line">        <span class="attr">func</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.<span class="property">nestedObj</span>.<span class="title function_">func</span>();</span><br><span class="line"><span class="comment">// [object Object]:nestedObj</span></span><br></pre></td></tr></table></figure>
-
-<p>对于上面例子中的方法，通常称为绑定方法，也就是说这些方法都是个特定的对象关联的。</p>
-<p>但是，当我们进行下面操作的时候，temp 将是一个全局作用里面的函数，并没有绑定到 obj 对象上。所以，temp 中的 this 表示的是 window 对象。</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var <span class="type">name</span> = &quot;Will&quot;;</span><br><span class="line">var obj = &#123;</span><br><span class="line">    <span class="type">name</span>: &quot;obj&quot;,</span><br><span class="line">    func: <span class="keyword">function</span> () &#123;</span><br><span class="line">        console.log(this + &quot;:&quot; + this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">temp</span> = obj.func;</span><br><span class="line"><span class="keyword">temp</span>();</span><br><span class="line">//  [<span class="keyword">object</span> <span class="keyword">Window</span>]:Will</span><br></pre></td></tr></table></figure>
-
-<h3 id="Invoke-function-as-Constructor"><a href="#Invoke-function-as-Constructor" class="headerlink" title="Invoke function as Constructor"></a>Invoke function as Constructor</h3><p>在 JavaScript 中，函数可以作为构造器来直接创建对象，在这种情况下，this 就代表了新建的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Staff</span>(<span class="params">name, age</span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">getInfo</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span> + <span class="string">&quot; is &quot;</span> + <span class="variable language_">this</span>.<span class="property">age</span> + <span class="string">&quot; years old&quot;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> will = <span class="keyword">new</span> <span class="title class_">Staff</span>(<span class="string">&quot;Will&quot;</span>, <span class="number">28</span>);</span><br><span class="line">will.<span class="title function_">getInfo</span>();</span><br><span class="line"><span class="comment">// Will is 28 years old</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Invoke-context-less-function"><a href="#Invoke-context-less-function" class="headerlink" title="Invoke context-less function"></a>Invoke context-less function</h3><p>对于有些没有上下文的函数，也就是说这些函数没有绑定到特定的对象上，那么这些上下文无关的函数将会被默认的绑定到 global object 上。</p>
-<p>在这个例子中，函数 f 和匿名函数表达式在被调用的过程中并没有被关联到任何对象，所以他们的 this 都代表 global object。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> context = <span class="string">&quot;global&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">context</span>: <span class="string">&quot;object&quot;</span>,</span><br><span class="line">    <span class="attr">method</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> +<span class="variable language_">this</span>.<span class="property">context</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> context = <span class="string">&quot;function&quot;</span>;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> +<span class="variable language_">this</span>.<span class="property">context</span>);</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="title function_">f</span>();</span><br><span class="line"></span><br><span class="line">        (<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> context = <span class="string">&quot;function&quot;</span>;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> +<span class="variable language_">this</span>.<span class="property">context</span>);</span><br><span class="line">        &#125;)();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.<span class="title function_">method</span>();</span><br><span class="line"><span class="comment">// [object Object]:object</span></span><br><span class="line"><span class="comment">// [object Window]:global</span></span><br><span class="line"><span class="comment">// [object Window]:global</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="call-x2F-apply-x2F-bind-改变-this"><a href="#call-x2F-apply-x2F-bind-改变-this" class="headerlink" title="call&#x2F;apply&#x2F;bind 改变 this"></a>call&#x2F;apply&#x2F;bind 改变 this</h2><p>this 本身是不可变的，但是 JavaScript 中提供了 call&#x2F;apply&#x2F;bind 三个函数来在函数调用时设置 this 的值。</p>
-<p>这三个函数的原型如下：</p>
-<ul>
-<li>fun.apply(obj1 [, argsArray])<ul>
-<li>Sets obj1 as the value of this inside fun() and calls fun() passing elements of argsArray as its arguments.</li>
-</ul>
-</li>
-<li>fun.call(obj1 [, arg1 [, arg2 [,arg3 [, …]]]])<ul>
-<li>Sets obj1 as the value of this inside fun() and calls fun() passing arg1, arg2, arg3, … as its arguments.</li>
-</ul>
-</li>
-<li>fun.bind(obj1 [, arg1 [, arg2 [,arg3 [, …]]]])<ul>
-<li>Returns the reference to the function fun with this inside fun() bound to obj1 and parameters of fun bound to the parameters specified arg1, arg2, arg3, ….</li>
-</ul>
-</li>
-</ul>
-<p>下面看一个简单的例子：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">add</span>(<span class="params">numA, numB</span>)</span>&#123;</span><br><span class="line">    console.log( <span class="keyword">this</span>.original + numA + numB);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">add</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;original: <span class="number">10</span>&#125;;</span><br><span class="line"><span class="keyword">add</span>.apply(obj, [<span class="number">1</span>, <span class="number">2</span>]);</span><br><span class="line"><span class="keyword">add</span>.call(obj, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f1 = <span class="keyword">add</span>.bind(obj);</span><br><span class="line">f1(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f2 = <span class="keyword">add</span>.bind(obj, <span class="number">2</span>);</span><br><span class="line">f2(<span class="number">3</span>);</span><br><span class="line"><span class="comment">// NaN</span></span><br><span class="line"><span class="comment">// 13</span></span><br><span class="line"><span class="comment">// 13</span></span><br><span class="line"><span class="comment">// 15</span></span><br><span class="line"><span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
-
-<p>当直接调用 add 函数的时候，this 将代表 window，当执行”this.original”的时候，由于 window 对象并没有”original”属性，所以会得到”undefined”。</p>
-<p>通过 call&#x2F;apply&#x2F;bind，达到的效果就是把 add 函数绑定到了 obj 对象上，当调用 add 的时候，this 就代表了 obj 这个对象。</p>
-<h2 id="DOM-event-handler"><a href="#DOM-event-handler" class="headerlink" title="DOM event handler"></a>DOM event handler</h2><p>当一个函数被当作 event handler 的时候，this 会被设置为触发事件的页面元素（element）。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> body = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;body&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">body.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// &lt;body&gt;…&lt;/body&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="In-line-event-handler"><a href="#In-line-event-handler" class="headerlink" title="In-line event handler"></a>In-line event handler</h3><p>当代码通过 in-line handler 执行的时候，this 同样指向拥有该 handler 的页面元素。</p>
-<p>看下面的代码：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">document.write(<span class="string">&#x27;&lt;button onclick=&quot;</span>console.<span class="built_in">log</span>(this)<span class="string">&quot;&gt;Show this&lt;/button&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">// &lt;button onclick=&quot;console.log(this)&quot;&gt;Show this&lt;/button&gt;</span></span><br><span class="line">document.write(<span class="string">&#x27;&lt;button onclick=&quot;</span>(<span class="function"><span class="keyword">function</span><span class="params">()</span>&#123;<span class="title">console</span>.<span class="title">log</span><span class="params">(this)</span>;&#125;)<span class="params">()</span>&quot;&gt;<span class="title">Show</span> <span class="title">this</span>&lt;/<span class="title">button</span>&gt;&#x27;);</span></span><br><span class="line"><span class="comment">// window</span></span><br></pre></td></tr></table></figure>
-
-<p>在第一行代码中，正如上面 in-line handler 所描述的，this 将指向”button”这个 element。但是，对于第二行代码中的匿名函数，是一个上下文无关（context-less）的函数，所以 this 会被默认的设置为 window。</p>
-<p>前面我们已经介绍过了 bind 函数，所以，通过下面的修改就能改变上面例子中第二行代码的行为：</p>
-<figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.write(<span class="string">&#x27;&lt;button onclick=&quot;</span>((<span class="function"><span class="keyword">function</span><span class="params">()</span>&#123;<span class="title">console</span>.<span class="title">log</span><span class="params">(this)</span>;&#125;).<span class="title">bind</span><span class="params">(this)</span>)<span class="params">()</span>&quot;&gt;<span class="title">Show</span> <span class="title">this</span>&lt;/<span class="title">button</span>&gt;&#x27;);</span></span><br><span class="line"><span class="comment">// &lt;button onclick=&quot;((function()&#123;console.log(this);&#125;).bind(this))()&quot;&gt;Show this&lt;/button&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="保存-this"><a href="#保存-this" class="headerlink" title="保存 this"></a>保存 this</h2><p>在 JavaScript 代码中，同一个上下文中可能会出现多个 this，为了使用外层的 this，就需要对 this 进行暂存了。</p>
-<p>看下面的例子，根据前面的介绍，在 body 元素的 click handler 中，this 肯定是指向 body 这个元素，所以为了使用”greeting”这个方法，就是要对指向 bar 对象的 this 进行暂存，这里用了一个 self 变量。</p>
-<p>有了 self，我们就可以在 click handler 中使用 bar 对象的”greeting”方法了。</p>
-<p>当阅读一些 JavaScript 库代码的时候，如果遇到类似 self，me，that 的时候，他们可能就是对 this 的暂存。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bar = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;bar&quot;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;body&quot;</span>)[<span class="number">0</span>],</span><br><span class="line"></span><br><span class="line">    <span class="attr">greeting</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hi there, I&#x27;m &quot;</span> + <span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="attr">anotherMethod</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> self = <span class="variable language_">this</span>;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">body</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            self.<span class="title function_">greeting</span>();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">bar.<span class="title function_">anotherMethod</span>();</span><br><span class="line"><span class="comment">// Hi there, I&#x27;m [object Object]:bar</span></span><br></pre></td></tr></table></figure>
-
-<p>同样，对于上面的例子，也可以使用 bind 来设置 this 达到相同的效果。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bar = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;bar&quot;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;body&quot;</span>)[<span class="number">0</span>],</span><br><span class="line"></span><br><span class="line">    <span class="attr">greeting</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hi there, I&#x27;m &quot;</span> + <span class="variable language_">this</span> + <span class="string">&quot;:&quot;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="attr">anotherMethod</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">body</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;click&quot;</span>, (<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="title function_">greeting</span>();</span><br><span class="line">        &#125;).<span class="title function_">bind</span>(<span class="variable language_">this</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">bar.<span class="title function_">anotherMethod</span>();</span><br><span class="line"><span class="comment">// Hi there, I&#x27;m [object Object]:bar</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><p>本文介绍了执行上下文中的 this 属性，this 的值直接影响着代码的运行结果。</p>
-<p>在函数调用中，this 是由激活上下文代码的调用者（caller）来提供的，即调用函数的父上下文(parent context )，也就是说 this 取决于调用函数的方式，指向调用时所在函数所绑定的对象。</p>
-<p>通过上面的介绍，相信对 this 有了一定的认识。</p>
-<h2 id="自己的话总体总结"><a href="#自己的话总体总结" class="headerlink" title="自己的话总体总结"></a>自己的话总体总结</h2><ul>
-<li><p>执行上下文 Execution context 自己的理解就是作用域对象 ：全局作用域 和 局部作用域</p>
-<ul>
-<li>包含的重要属性：<ul>
-<li>变量对象（Variable object，VO）</li>
-<li>作用域链（Scope chain）</li>
-<li>this</li>
-</ul>
-</li>
-<li>创建阶段（当函数被调用，但是开始执行函数内部代码之前）<ul>
-<li>创建 Scope chain</li>
-<li>创建 VO&#x2F;AO（variables, functions and arguments）<ul>
-<li>扫描函数内部代码，查找函数声明（Function declaration）</li>
-<li>扫描函数内部代码，查找变量声明（Variable declaration）包含 函数的形参</li>
-</ul>
-</li>
-<li>设置 this 的值</li>
-</ul>
-</li>
-<li>激活&#x2F;代码执行阶段<ul>
-<li>设置变量的值、函数的引用，然后解释&#x2F;执行代码</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>作用域链 scope chain 就是当前作用域的 VO&#x2F;AO 没有的变量，就向上查找 VO&#x2F;AO 一直到全局作用域 Global scope 的 VO</p>
-</li>
-<li><p>闭包 是作用域链的应用 ：当有下级作用域使用当前作用域内的变量 ，当前作用域执行结束后变量不会被销毁</p>
-</li>
-<li><p>this 是 当前执行上下文被哪个执行上下文调用 谁调用就指向谁</p>
-<ul>
-<li>函数直接调用 fn() 指向 全局对象 global 浏览器中是 window</li>
-<li>对象调用 obj.fn() 哪个对象调用指向就指向谁</li>
-<li>dom 事件 onclick &#x3D; fn 指向对应的 dom</li>
-<li>构造函数 new Fn() 指向实例对象</li>
-<li>call,bind,apply, fn.call(obj) 第一个参数是谁就指向谁</li>
-</ul>
-</li>
-</ul>
-<h1 id="JavaScript-中的函数表达式"><a href="#JavaScript-中的函数表达式" class="headerlink" title="JavaScript 中的函数表达式"></a>JavaScript 中的函数表达式</h1>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -2219,7 +1908,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">422k</span>
+    <span title="站点总字数">423k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">

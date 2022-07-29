@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">130</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,106 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/07/29/Electron/electron-builder%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/07/29/Electron/electron-builder%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">electron-builder常见问题汇总</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-07-29 16:38:07 / 修改时间：09:29:59" itemprop="dateCreated datePublished" datetime="2022-07-29T16:38:07+00:00">2022-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Electron/" itemprop="url" rel="index"><span itemprop="name">Electron</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>516</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="electron-updater-下载无进度问题"><a href="#electron-updater-下载无进度问题" class="headerlink" title="electron-updater 下载无进度问题"></a>electron-updater 下载无进度问题</h2><p>突然某一次更新 download-progress 事件不触发了<br>下载进度显示了，直到下载结束 触发<code>update-downloaded</code>事件<br>开始以为是 electron-builder 和 electron-updater 版本问题，因为最近更新过<code>node_modules</code><br>尝试将 electron-builder 和 electron-updater 更到最新， 还是不行 😖</p>
+<p>开始将问题点转到 请求上，因为之前给 nginx 加了 gzip，考虑是不是 gzip 压缩后无法读取进度了</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>nginx.conf</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">gzip</span> <span class="string">on;</span> <span class="comment"># 开启 gzip 压缩输出 </span></span><br><span class="line"><span class="string">gzip_min_length</span> <span class="string">1k;</span> <span class="comment"># 1k 以上开启 gzip</span></span><br><span class="line"><span class="string">gzip_types</span></span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    <span class="comment"># application/octet-stream 这里注释防止大文件（.exe）下载时读取不到进度</span></span><br></pre></td></tr></table></figure>
+
+<p>去除 nginx.conf 中<code>application/octet-stream</code> 二进制流类型的压缩，发现<code>update-downloaded</code>事件正常了</p>
+<p>其实通过浏览器下载这个 exe 文件时也不显示进度, 估计 是压缩后是直接下载 .gz 文件（下载好以后直接写入文件）， 而未压缩使用流式下载（边下边写入文件）</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/07/27/Electron/electron-builder%E5%8F%8C%E5%87%BB%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E5%85%B3%E8%81%94%E5%BA%94%E7%94%A8-%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -274,9 +374,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-07-27 17:28:24 / 修改时间：09:43:43" itemprop="dateCreated datePublished" datetime="2022-07-27T17:28:24+00:00">2022-07-27</time>
+      <time title="创建时间：2022-07-27 17:28:24" itemprop="dateCreated datePublished" datetime="2022-07-27T17:28:24+00:00">2022-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -382,7 +488,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -484,7 +590,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -586,7 +692,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -688,7 +794,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -795,7 +901,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -919,7 +1025,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1028,7 +1134,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1141,7 +1247,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
+      <time title="修改时间：2022-07-29 09:29:59" itemprop="dateModified" datetime="2022-07-29T09:29:59+00:00">2022-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1207,109 +1313,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/04/15/es6/%E4%BD%BF%E7%94%A8class%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/15/es6/%E4%BD%BF%E7%94%A8class%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">使用class创建函数对象</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-15 16:14:27" itemprop="dateCreated datePublished" datetime="2022-04-15T16:14:27+00:00">2022-04-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-07-27 09:43:43" itemprop="dateModified" datetime="2022-07-27T09:43:43+00:00">2022-07-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/es6/" itemprop="url" rel="index"><span itemprop="name">es6</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>690</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>使用class创建函数对象 ,可以在 constructor 中返回一个函数 并设置其原型 &#x3D;&#x3D;&#x3D; this</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Logger</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">tags</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">tags</span> = [].<span class="title function_">concat</span>(tags);</span><br><span class="line">    <span class="keyword">let</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">tags</span>) &#123;</span><br><span class="line">      _this.<span class="property">tags</span> = _this.<span class="property">tags</span>.<span class="title function_">concat</span>(tags);</span><br><span class="line">      <span class="keyword">return</span> fn;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title class_">Object</span>.<span class="title function_">setPrototypeOf</span>(<span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(fn), <span class="variable language_">this</span>);</span><br><span class="line">    <span class="keyword">return</span> fn;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">info</span>(<span class="params">info</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">tags</span>.<span class="title function_">map</span>(<span class="function"><span class="params">tag</span>=&gt;</span><span class="string">`[<span class="subst">$&#123;tag&#125;</span>]`</span>).<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>), info);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 日志 支持链式调用例如 logger(&quot;tag1&quot;)(&quot;tag2&quot;)(&quot;tag3&quot;).info(&quot;info&quot;) 和 logger([&quot;tag1&quot;,&quot;tag2&quot;]).info(&quot;info&quot;)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; tag  [tag1][tag2]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">*</span>&#125; 返回 函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> <span class="keyword">let</span> logger = <span class="keyword">new</span> <span class="title class_">Logger</span>()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -1332,7 +1337,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">422k</span>
+    <span title="站点总字数">423k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
