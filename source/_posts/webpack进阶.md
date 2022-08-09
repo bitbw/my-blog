@@ -204,3 +204,112 @@ const test = new HookTest();
 test.tap();
 test.call();
 ```
+
+### Compilation
+
+[Compilation](https://webpack.docschina.org/api/compilation-hooks/)
+compilation 由 Compiler 创建, 包含所有模块和对应依赖 , 同样也有各个生命周期的 hook 同 compiler.hooks
+
+### 手写一个 CopyWebpackPlugin
+
+CopyWebpackPlugin.js
+
+```js
+const { validate } = require('schema-utils');
+const schema = require('./schema').CopyWebpackPlugin;
+const globby = require('globby');
+const path = require('path');
+const { readFile } = require('fs').promises;
+const { RawSource } = require('webpack').sources;
+
+class CopyWebpackPlugin {
+  constructor(options) {
+    this.options = options;
+    validate(schema, options);
+    this.compiler = null;
+    this.compilation = null;
+  }
+
+  apply(compiler) {
+    // compiler  初始化 compilation
+    this.compiler = compiler;
+    compiler.hooks.thisCompilation.tap('CopyWebpackPlugin', (compilation) => {
+      this.compilation = compilation;
+      // 为 compilation 创建额外 asset
+      compilation.hooks.additionalAssets.tapPromise(
+        'CopyWebpackPlugin',
+        this.hanleCopy.bind(this),
+      );
+    });
+  }
+  async hanleCopy() {
+    let { from, ignore, to = '.' } = this.options;
+    const context = this.compiler.options.context; // process.cwd()
+    // 判断是 from 否为绝对路径
+    from = path.isAbsolute(from) ? from : path.resolve(process.cwd(), from);
+    // window 下有路径问题
+    from = from.replace(/\\/g, '/');
+    // 1. 获取 from 文件列表
+    let files = await globby(from, {
+      ignore,
+    });
+    for (const file of files) {
+      // 2. 读取文件
+      let filename = path.join(to, path.basename(file));
+      let buf = await readFile(file);
+      // 3. 写入文件
+      let source = new RawSource(buf);
+      this.compilation.emitAsset(filename, source);
+    }
+  }
+}
+
+module.exports = CopyWebpackPlugin;
+
+```
+
+webpack.config.js
+
+```js
+const CopyWebpackPlugin = require('../plugins/CopyWebpackPlugin');
+module.exports = {
+  mode: 'development', // production
+  plugins: [
+    new CopyWebpackPlugin({
+      to: '.',
+      from: 'public',
+      ignore: ['*/index.html'],
+    }),
+  ],
+};
+
+```
+
+schema
+
+```js
+module.exports = {
+  CopyWebpackPlugin: {
+    type: 'object', // options 类型
+    properties: {
+      to: {
+        type: 'string',
+      },
+      from: {
+        type: 'string',
+      },
+      ignore: {
+        type: 'array',
+      },
+    },
+    additionalProperties: false, // 可以添加更多key
+  },
+};
+
+```
+
+## 手写简易版 webpack
+
+### 参考
+
+- [mini webpack](https://github.com/ronami/minipack) 将多个文件打包到一个文件中
