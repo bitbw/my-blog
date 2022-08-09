@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -393,7 +393,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -412,7 +412,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.2k</span>
+      <span>2.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -451,6 +451,9 @@
 <p>此时，可以使用 Component 构造器来构造页面。 Component 构造器的主要区别是：方法需要放在 methods: { } 里面。</p>
 <p>page 的生命周期都放到 methods: { } 里面</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Component</span>(&#123;</span><br><span class="line"> </span><br><span class="line">  <span class="attr">behaviors</span>: [],</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// 属性定义 </span></span><br><span class="line">  <span class="attr">properties</span>: &#123;</span><br><span class="line">    <span class="attr">myProperty</span>: &#123; <span class="comment">// 属性名</span></span><br><span class="line">      <span class="attr">type</span>: <span class="title class_">String</span>,</span><br><span class="line">      <span class="attr">value</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">myProperty2</span>: <span class="title class_">String</span> <span class="comment">// 简化的定义方式</span></span><br><span class="line">  &#125;,</span><br><span class="line"> </span><br><span class="line">  <span class="attr">data</span>: &#123;&#125;, <span class="comment">// 私有数据，可用于模板渲染</span></span><br><span class="line"> </span><br><span class="line">  <span class="attr">lifetimes</span>: &#123;</span><br><span class="line">    <span class="comment">// 生命周期函数，可以为函数，或一个在methods段中定义的方法名</span></span><br><span class="line">    <span class="attr">attached</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;,</span><br><span class="line">    <span class="attr">moved</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;,</span><br><span class="line">    <span class="attr">detached</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// 生命周期函数，可以为函数，或一个在methods段中定义的方法名</span></span><br><span class="line">  <span class="attr">attached</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;, <span class="comment">// 此处attached的声明会被lifetimes字段中的声明覆盖</span></span><br><span class="line">  <span class="attr">ready</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123; &#125;,</span><br><span class="line"> </span><br><span class="line">  <span class="attr">pageLifetimes</span>: &#123;</span><br><span class="line">    <span class="comment">// 组件所在页面的生命周期函数</span></span><br><span class="line">    <span class="attr">show</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;,</span><br><span class="line">    <span class="attr">hide</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;,</span><br><span class="line">    <span class="attr">resize</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123; &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"> </span><br><span class="line">  <span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="attr">onLoad</span>: <span class="keyword">function</span>(<span class="params">options</span>) &#123;</span><br><span class="line">      <span class="comment">// 页面创建时执行</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onPullDownRefresh</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">// 下拉刷新时执行</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 事件响应函数</span></span><br><span class="line">    <span class="attr">viewTap</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">onMyButtonTap</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">        <span class="comment">// 更新属性和数据的方法与更新页面数据的方法类似</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 内部方法建议以下划线开头</span></span><br><span class="line">    <span class="attr">_myPrivateMethod</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">      <span class="comment">// 这里将 data.A[0].B 设为 &#x27;myPrivateData&#x27;</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">setData</span>(&#123;</span><br><span class="line">        <span class="string">&#x27;A[0].B&#x27;</span>: <span class="string">&#x27;myPrivateData&#x27;</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">_propertyChange</span>: <span class="keyword">function</span>(<span class="params">newVal, oldVal</span>) &#123;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="常见网络错误提示"><a href="#常见网络错误提示" class="headerlink" title="常见网络错误提示"></a>常见网络错误提示</h2><p>请求超时</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;errno&quot;</span><span class="punctuation">:</span><span class="number">5</span><span class="punctuation">,</span><span class="attr">&quot;errMsg&quot;</span><span class="punctuation">:</span><span class="string">&quot;request:fail timeout&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;errno&quot;</span><span class="punctuation">:</span><span class="number">600001</span><span class="punctuation">,</span><span class="attr">&quot;errMsg&quot;</span><span class="punctuation">:</span><span class="string">&quot;request:fail errcode:-118 cronet_error_code:-118 error_msg:net::ERR_CONNECTION_TIMED_OUT&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -513,7 +516,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -644,7 +647,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -746,7 +749,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -881,7 +884,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -995,7 +998,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -3253,7 +3256,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -3364,7 +3367,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -3475,7 +3478,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 07:00:05" itemprop="dateModified" datetime="2022-08-09T07:00:05+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
