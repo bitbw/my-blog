@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">131</span>
+          <span class="site-state-item-count">132</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,119 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">React学习理解</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-24 14:35:01" itemprop="dateCreated datePublished" datetime="2020-12-24T14:35:01+00:00">2020-12-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>688</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><h3 id="受控组件"><a href="#受控组件" class="headerlink" title="受控组件"></a>受控组件</h3><p>官方定义</p>
+<blockquote>
+<p>在 HTML 中，表单元素（如<code>&lt;input&gt;</code>、 <code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code>）通常自己维护 state，并根据用户输入进行更新。而在 React 中，可变&gt; 状态（mutable state）通常保存在组件的 state 属性中，并且只能通过使用 setState()来更新。</p>
+<p>我们可以把两者结合起来，使 React 的 state 成为“唯一数据源”。渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。被 React 以这种方式控制取值的表单输入元素就叫做“受控组件”。</p>
+</blockquote>
+<p>总结： 受控组件就相当与 Vue 中的 v-model</p>
+<p>注意点：在受控组件上指定 value 的 prop 会阻止用户更改输入 ，value 设置为 undefined 或 null 了 用户可以自行输入</p>
+<p>正确的方式是：</p>
+<ul>
+<li>有 value 的绑定，就得有对应的 onChange 或者 onInupt 通过 setState 修改 value</li>
+<li>如果让用户自行输入数据值，而无需对变化做处理 ，可以使用<strong>非受控组件</strong></li>
+</ul>
+<h3 id="react-router-dom"><a href="#react-router-dom" class="headerlink" title="react-router-dom"></a>react-router-dom</h3><p>Route 放入 children 和 component 中的区别</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// children 中 home 通过 props 获取不到路由数据</span></span><br><span class="line">&lt;<span class="title class_">Route</span> path=<span class="string">&quot;/home&quot;</span>&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Home</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Route</span>&gt;</span><br><span class="line"><span class="comment">// component 中 home 通过 props 可以获取到路由数据</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/home&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/24/Vue/Vue3%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +395,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -567,7 +680,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -676,7 +789,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -817,7 +930,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1043,7 +1156,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1154,7 +1267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1311,7 +1424,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1424,7 +1537,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1728,7 +1841,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1868,249 +1981,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">elementUI常见问题汇总</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-09-16 11:17:23" itemprop="dateCreated datePublished" datetime="2020-09-16T11:17:23+00:00">2020-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>这篇文章是我在工作中使用 elementUi 遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助</p>
-</blockquote>
-<h2 id="el-table"><a href="#el-table" class="headerlink" title="el-table"></a>el-table</h2><h3 id="如何修改-el-table-展开树的三角图标"><a href="#如何修改-el-table-展开树的三角图标" class="headerlink" title="如何修改 el-table 展开树的三角图标"></a>如何修改 el-table 展开树的三角图标</h3><p>只需要给定 before 的 content 即可</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> // 隐藏展开箭头</span><br><span class="line">  <span class="selector-class">.el-table__expand-icon</span> &#123;</span><br><span class="line">    // 修改展开箭头的样式</span><br><span class="line">    <span class="selector-class">.el-icon-arrow-right</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&quot;\e791&quot;</span>;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>参考网址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37378152/article/details/102628860">https://blog.csdn.net/m0_37378152/article/details/102628860</a></p>
-<h3 id="elementUI-的-table-的每一项的-min-width-不要使用百分比"><a href="#elementUI-的-table-的每一项的-min-width-不要使用百分比" class="headerlink" title="elementUI 的 table 的每一项的 min-width 不要使用百分比"></a>elementUI 的 table 的每一项的 min-width 不要使用百分比</h3><blockquote>
-<p>elementUI 的 table 的每一项的 min-width 不要使用百分比 ,不然会出现这种情况</p>
-</blockquote>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/image-20200227163411930.png" alt="image-20200227163411930"></p>
-<blockquote>
-<p>固定的序号和 checkbox 会掉下来</p>
-</blockquote>
-<h3 id="修改-el-table-表头高度的坑"><a href="#修改-el-table-表头高度的坑" class="headerlink" title="修改 el-table 表头高度的坑"></a>修改 el-table 表头高度的坑</h3><blockquote>
-<p>el-table 固定列的 table，在 dom 上是有两个 thead 的所以要修改表头高度就一定要两个都修改 ，不然会导致固定列表头高度与正常表头高度不一致现象 ，在薪酬项目的代码示例</p>
-</blockquote>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//处理表头高度</span></span><br><span class="line"><span class="selector-class">.el-table__header-wrapper</span> <span class="selector-tag">th</span> <span class="selector-class">.cell</span> <span class="selector-class">.edit-table-header</span> &gt; <span class="selector-tag">p</span> &gt; <span class="selector-tag">span</span>,</span><br><span class="line"><span class="selector-class">.el-table__fixed-header-wrapper</span> <span class="selector-tag">th</span> <span class="selector-class">.cell</span> <span class="selector-class">.edit-table-header</span> &gt; <span class="selector-tag">p</span> &gt; <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="在-dialog-中使用-table-的问题"><a href="#在-dialog-中使用-table-的问题" class="headerlink" title="在 dialog 中使用 table 的问题"></a>在 dialog 中使用 table 的问题</h3><blockquote>
-<p>在 dialog 中使用 table 发现无论怎样设置表头都会出现表头高度不正常现象 和数据不正常现象</p>
-<p>这时可以使用 dialog 的 destroy-on-close 属性 （关闭时销毁 Dialog 中的元素）</p>
-</blockquote>
-<h3 id="el-table-自定义动态表头：更新数据之后表头不更新"><a href="#el-table-自定义动态表头：更新数据之后表头不更新" class="headerlink" title="el-table 自定义动态表头：更新数据之后表头不更新"></a>el-table 自定义动态表头：更新数据之后表头不更新</h3><p>在开发中 表头但是多级表头并且是动态遍历的 ，遍历的数据发生改变表头数据却没有更新</p>
-<h4 id="问题出现原因"><a href="#问题出现原因" class="headerlink" title="问题出现原因"></a>问题出现原因</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">v-for</span>=<span class="string">&quot;item in columnData&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--一级表头文字--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot</span>=<span class="string">&quot;header&quot;</span> <span class="attr">slot-scope</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-head&quot;</span>&gt;</span>&#123;&#123;item.name &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--.........战略性省略业务代码.........--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>排查了很久，后发现：在自定义表头的时候，由于是用的 v-for 循环生成的，因此会给每个循环体一个固定的 key，导致数据频繁更新时，因为这个 key 没有变，所以 el-table 觉得表头数据是没有变化的，因此就只更新了整体表格数据、key 值有变化的列的表头。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--表头的v-for中的key 使用 id + index 组合的形式使key变成动态的--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in tableData&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item.id + index&quot;</span>&gt;</span></span><br><span class="line">  .....</span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="el-form"><a href="#el-form" class="headerlink" title="el-form"></a>el-form</h2><h3 id="elementUI-的-form-表单数据-resetFields-重置方法注意事项"><a href="#elementUI-的-form-表单数据-resetFields-重置方法注意事项" class="headerlink" title="elementUI 的 form 表单数据 resetFields 重置方法注意事项"></a>elementUI 的 form 表单数据 resetFields 重置方法注意事项</h3><p>this.$refs.form<a href="">“resetFields”</a>;</p>
-<p>form 无法重置表单项的原因有以下四点：</p>
-<ol>
-<li>el-form-item 的 prop 属性缺失或属性值 不等于 字段名称</li>
-<li>表单项本身就有默认值</li>
-<li>表单数据绑定时未使用$nextTick 函数（resetFields 重置到挂载前的数据）</li>
-<li>未显示的表单项无法重置</li>
-</ol>
-<h3 id="form-的坑-element-ui-form-表单只有一个输入框获取焦点的时候回车会触发表单的-submit-事件，导致页面刷新"><a href="#form-的坑-element-ui-form-表单只有一个输入框获取焦点的时候回车会触发表单的-submit-事件，导致页面刷新" class="headerlink" title="form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新"></a>form 的坑 element ui form 表单只有一个输入框获取焦点的时候回车会触发表单的 submit 事件，导致页面刷新</h3><p><strong>解决方法：</strong></p>
-<blockquote>
-<p>当一个 form 元素中只有一个输入框时，在该输入框中按下回车应提交该表单。如果希望阻止这一默认行为，可以在 标签上添加 @submit.native.prevent。</p>
-</blockquote>
-<h2 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h2><h3 id="elementUI-的-tree-的-loadData-从新加载节点方法使用"><a href="#elementUI-的-tree-的-loadData-从新加载节点方法使用" class="headerlink" title="elementUI 的 tree 的 loadData()从新加载节点方法使用"></a>elementUI 的 tree 的 loadData()从新加载节点方法使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 更新节点数据</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">currentNode</span>.<span class="property">loaded</span> = <span class="literal">false</span>; <span class="comment">//需要配合node.loaded = false 使用</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">currentNode</span>.<span class="title function_">loadData</span>();</span><br></pre></td></tr></table></figure>
-
-<h3 id="elementUI-tree-未展开的子节点数据改变却不更新的-bug"><a href="#elementUI-tree-未展开的子节点数据改变却不更新的-bug" class="headerlink" title="elementUI tree 未展开的子节点数据改变却不更新的 bug"></a>elementUI tree 未展开的子节点数据改变却不更新的 bug</h3><p>不采用懒加载方式直接改变 tree 的 data 数据发现为展开的子节点数据改变，展开后展示的数据却未变，</p>
-<p>查看文档发现有个属性<code>render-after-expand</code>是否在第一次展开某个树节点后才渲染其子节点,</p>
-<p>设置为<code>false</code>就可以解决了</p>
-<h3 id="element-的-tree-的懒加载使用方法"><a href="#element-的-tree-的懒加载使用方法" class="headerlink" title="element 的 tree 的懒加载使用方法"></a>element 的 tree 的懒加载使用方法</h3><h4 id="load-属性"><a href="#load-属性" class="headerlink" title="load 属性"></a>load 属性</h4><p>懒加载子树数据的方法，需要配合 lazy 属性为 true 时生效，点开当前节点时就会触发； 类型：function(node, resolve)</p>
-<p><strong>node：</strong></p>
-<ul>
-<li>id: 26</li>
-<li>text: null</li>
-<li>checked: false</li>
-<li>indeterminate: false</li>
-<li>data: Object 当前绑定的 data</li>
-<li>expanded: true</li>
-<li>parent: Node 父节点</li>
-<li>visible: true</li>
-<li>isCurrent: false</li>
-<li>store: TreeStore</li>
-<li>level: 4 当前在第几级</li>
-<li>loaded: true</li>
-<li>childNodes: Array(5) 子节点</li>
-<li>loading: false</li>
-<li>isLeaf: false</li>
-<li>label: “中非莱基” 绑定显示的文字</li>
-<li>key: undefined</li>
-<li>disabled: “”</li>
-<li>nextSibling: Node</li>
-<li>previousSibling: Node</li>
-</ul>
-<p>**resolve:**接收子节点的 data 自动绑定到树上</p>
-<h4 id="props-属性"><a href="#props-属性" class="headerlink" title="props 属性"></a>props 属性</h4><p>定义 data 中的绑定项的 key</p>
-<table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">说明</th>
-<th align="left">类型</th>
-<th align="left">可选值</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">label</td>
-<td align="left">指定节点标签为节点对象的某个属性值</td>
-<td align="left">string, function(data, node)</td>
-<td align="left">—</td>
-<td align="left">—</td>
-</tr>
-<tr>
-<td align="left">children</td>
-<td align="left">指定子树为节点对象的某个属性值</td>
-<td align="left">string</td>
-<td align="left">—</td>
-<td align="left">—</td>
-</tr>
-<tr>
-<td align="left">disabled</td>
-<td align="left">指定节点选择框是否禁用为节点对象的某个属性值</td>
-<td align="left">boolean, function(data, node)</td>
-<td align="left">—</td>
-<td align="left">—</td>
-</tr>
-<tr>
-<td align="left">isLeaf</td>
-<td align="left">指定节点是否为叶子节点，仅在指定了 lazy 属性的情况下生效</td>
-<td align="left">boolean, function(data, node)</td>
-<td align="left">—</td>
-<td align="left">—</td>
-</tr>
-</tbody></table>
-<h2 id="el-input"><a href="#el-input" class="headerlink" title="el-input"></a>el-input</h2><h3 id="el-input-同过正则限制只能输入正数可以带小数点-但不生效问题"><a href="#el-input-同过正则限制只能输入正数可以带小数点-但不生效问题" class="headerlink" title="el-input 同过正则限制只能输入正数可以带小数点 但不生效问题"></a>el-input 同过正则限制只能输入正数可以带小数点 但不生效问题</h3><p>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">    type=<span class="string">&quot;text&quot;</span></span><br><span class="line">    v-model.<span class="property">number</span>=<span class="string">&quot;editingFormData.salary&quot;</span></span><br><span class="line">    oninput=<span class="string">&quot;value=value.replace(/^\D*(\d*(?:\.\d&#123;0,2&#125;)?).*$/g, &#x27;$1&#x27;)&quot;</span></span><br><span class="line">&gt;&lt;/el-input&gt;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>正则一直不好 无法输入小数点 ， 是因为加了 number 修饰符无法输入小数点， 找了我一个多小时啊</p>
-</blockquote>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/%E6%AD%A3%E5%88%99%E4%B8%8D%E7%94%9F%E6%95%88%E5%8E%9F%E5%9B%A0.jpg" alt="正则不生效原因"></p>
-<h3 id="工作中出现的—表头带-input-搜索框-搜索后点击表格会刷新数据-bug"><a href="#工作中出现的—表头带-input-搜索框-搜索后点击表格会刷新数据-bug" class="headerlink" title="工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug"></a>工作中出现的—表头带 input 搜索框 搜索后点击表格会刷新数据 bug</h3><blockquote>
-<p>表格带表头 input 搜索的结构 搜索需要回车， 发现每次搜索回车后 点击表格或其他地方， 表格会刷新一下，经同事指点打开 Network 发现 ，点击其他地方会发次请求，打开 table 组件的源码发现 被别的同事添加了@blur 失去焦点事件，并且与回车事件调用同一个函数，因为回车不会使 input 框失去焦点，点击表格其他地方时 input 失去焦点导致再次触发搜索，所有好像自己刷新了一下的样子。 下面是表格内 input 的代码</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-if</span>=<span class="string">&quot;[undefined, &#x27;&#x27;, &#x27;input&#x27;, &#x27;button&#x27;, &#x27;string&#x27;].includes(field.fieldType)&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;field.headerSearchAttrs&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model.trim</span>=<span class="string">&quot;field.inputValue&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">clearable</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:placeholder</span>=<span class="string">&quot;field.label&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">keyup.enter.native</span>=<span class="string">&quot;handleBlur(field.prop, field.inputValue)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">blur</span>=<span class="string">&quot;handleBlur(field.prop, field.inputValue)&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">clear</span>=<span class="string">&quot;clearQueryInput&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- @keyup.enter 和@blur调用同一函数产生的bug --&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="el-image"><a href="#el-image" class="headerlink" title="el-image"></a>el-image</h2><h3 id="elementUI-的-image-的-src-加载-vue-系统或本地图片的方法（重要）"><a href="#elementUI-的-image-的-src-加载-vue-系统或本地图片的方法（重要）" class="headerlink" title="elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）"></a>elementUI 的 image 的 src 加载 vue 系统或本地图片的方法（重要）</h3><blockquote>
-<p>正常情况以下情形是不生效的， 会提示找不到图片 所以需要用到，原生的 require 方法</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;message-item&quot; v-for=&quot;(item, index) in uploadMessage&quot; :key=&quot;index&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;item-txt&quot;&gt;&#123;&#123;item.txt&#125;&#125;&lt;/span&gt;</span><br><span class="line">    &lt;el-image :src=&quot;item.img&quot; :preview-src-list=&quot;srcList&quot;&gt;&lt;/el-image&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//js部分</span></span><br><span class="line">uploadMessage = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">]; <span class="comment">//提示</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>图片会显示加载失败 ， 修改后 的代码结构 如下</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">uploadMessage = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">txt</span>: <span class="string">&quot;1.进入税务系统&quot;</span>,</span><br><span class="line">    <span class="attr">img</span>: <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>),</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"><span class="comment">//大图地址也需要加require</span></span><br><span class="line">srcList = [</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset1.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset2.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset3.png&quot;</span>),</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">&quot;@/hrwa/assets/taxset-information-management/taxset4.png&quot;</span>),</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-
-<h2 id="样式问题"><a href="#样式问题" class="headerlink" title="样式问题"></a>样式问题</h2><ul>
-<li>table 通过 th display: table-cell !important; 控制在谷歌浏览器下边框不对齐问题</li>
-<li>导航菜单选中项样式问题通过类名.is-active 设置</li>
-<li>顶部 logo 部分的顶部栏的高度，和子项宽度 都是通过 flex 属性设置，flex ：0 0 220px</li>
-<li>elementui 的样式变量在 E:\project\hr-web-container\node_modules\element-ui\packages\theme-chalk\src\common\var.scss 内</li>
-</ul>
-<h2 id="date-picker"><a href="#date-picker" class="headerlink" title="date-picker"></a>date-picker</h2><h3 id="问题-datepicker-星期日期选择组件。绑定值格式化为时间戳时会出现乱码"><a href="#问题-datepicker-星期日期选择组件。绑定值格式化为时间戳时会出现乱码" class="headerlink" title="问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码"></a>问题 datepicker 星期日期选择组件。绑定值格式化为时间戳时会出现乱码</h3><p><a target="_blank" rel="noopener" href="https://github.com/ElemeFE/element/issues/21159">github issues</a></p>
-<p>将datepicker组件的type属性设置为week，value-format属性设置为timestamp，此时无法回显选择的日期，通过打印v-model值可以得知此时的v-model正确值是乱码 <code>ti0e0tam0p</code></p>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>目前 github 上没有解决 elementUI 2 已经没有维护了 ， value-format尽量别设置为timestamp 就可以避免这个问题</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2135,13 +2005,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">426k</span>
+    <span title="站点总字数">430k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:27</span>
+    <span title="站点阅读时长">6:31</span>
   </span>
 </div>
 <div class="busuanzi-count">

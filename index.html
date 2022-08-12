@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">131</span>
+          <span class="site-state-item-count">132</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,160 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">Next.js入门</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-10 16:56:34" itemprop="dateCreated datePublished" datetime="2022-08-10T16:56:34+00:00">2022-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Next-特点"><a href="#Next-特点" class="headerlink" title="Next 特点"></a>Next 特点</h2><p>next 适合用于公司官网、文章类、电商类等对于 SEO 需求高的网站。<br>中后台管理系统无需SEO 所以也不需要使用 Next</p>
+<h2 id="创建-Next-js-应用"><a href="#创建-Next-js-应用" class="headerlink" title="创建 Next.js 应用"></a>创建 Next.js 应用</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npx create-next-app nextjs-blog --use-npm --example <span class="string">&quot;https://github.com/vercel/next-learn/tree/master/basics/learn-starter&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> nextjs-blog</span><br><span class="line"></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>Next 中路由就是对应的文件路径</p>
+<p>例如，在开发中：</p>
+<p>pages&#x2F;index.js与&#x2F;路线相关联。<br>pages&#x2F;posts&#x2F;first-post.js与&#x2F;posts&#x2F;first-post路线相关联。</p>
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><p><code>&lt;Link&gt;</code> 用于在页面中导航</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">&#x27;next/link&#x27;</span>;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  Read <span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/posts/first-post&quot;</span>&gt;</span>this page!<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在 Next.js 的生产版本中，每当Link组件出现在浏览器的视口中时，Next.js 都会在后台自动预取链接页面的代码。当您单击链接时，目标页面的代码已经在后台加载，页面转换几乎是即时的！</p>
+</blockquote>
+<h2 id="资源-css-等"><a href="#资源-css-等" class="headerlink" title="资源 css 等"></a>资源 css 等</h2><h3 id="静态文件服务"><a href="#静态文件服务" class="headerlink" title="静态文件服务"></a>静态文件服务</h3><p>Next 可以以 <code>public</code> 为基础,在根目录中的一个文件夹下提供静态文件服务，从基本 <code>baseURL</code>&#x2F; 开始引用 <code>public</code> 其中的文件<br>例如：public&#x2F;me.png 对应 <code>http://localhost:3000/me.png</code><br>这点跟 <code>vue-cli</code> 和 <code>rca</code> 类似</p>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>Next 支持 <a target="_blank" rel="noopener" href="https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css">CSS Modules</a></p>
+<blockquote>
+<p>重要提示：要使用CSS 模块，CSS 文件名必须以.module.css</p>
+</blockquote>
+<h4 id="使用-Sass"><a href="#使用-Sass" class="headerlink" title="使用 Sass"></a>使用 Sass</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D sass</span><br></pre></td></tr></table></figure>
+
+<h2 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h2><p>要加载全局 CSS文件，请创建一个名为的文件pages&#x2F;_app.js，其内容如下</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// `pages/_app.js`</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../styles/global.css&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params">&#123; Component, pageProps &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...pageProps</span>&#125; /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该App组件是所有不同页面通用的顶级组件。例如，您可以使用此App组件在页面之间导航时保​​持状态</p>
+<h3 id="添加-layout-组件"><a href="#添加-layout-组件" class="headerlink" title="添加 layout 组件"></a>添加 layout 组件</h3><p><a target="_blank" rel="noopener" href="https://nextjs.org/learn/basics/assets-metadata-css/polishing-layout">layout 组件</a></p>
+<p>。</p>
+<h2 id="预渲染"><a href="#预渲染" class="headerlink" title="预渲染"></a>预渲染</h2><h3 id="两种形式的预渲染"><a href="#两种形式的预渲染" class="headerlink" title="两种形式的预渲染"></a>两种形式的预渲染</h3><p>Next.js 有两种预渲染形式：静态生成和服务器端渲染。不同之处在于它何时为页面生成 HTML</p>
+<ul>
+<li>静态生成是在构建时生成 HTML 的预渲染方法。然后在每个请求上重用预呈现的 HTML</li>
+<li>服务器端渲染是在每个请求上生成 HTML 的预渲染方法。</li>
+</ul>
+<h3 id="静态生成"><a href="#静态生成" class="headerlink" title="静态生成"></a>静态生成</h3><h4 id="getStaticProps"><a href="#getStaticProps" class="headerlink" title="getStaticProps"></a>getStaticProps</h4><p>getStaticProps 仅在服务器端运行</p>
+<p>开发与生产</p>
+<ul>
+<li>在开发（npm run dev或yarn dev）中，getStaticProps在每个请求上运行。</li>
+<li>在生产中，getStaticProps 在构建时运行。但是，可以使用返回的fallback键来增强此行为 getStaticPaths</li>
+</ul>
+<p>我们建议尽可能使用静态生成（有数据和无数据），因为您的页面可以构建一次并由 CDN 提供服务，这比让服务器在每次请求时呈现页面要快得多。</p>
+<p>您可以将静态生成用于多种类型的页面，包括：</p>
+<ul>
+<li>营销页面</li>
+<li>博客文章</li>
+<li>电子商务产品列表</li>
+<li>帮助和文档</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 服务端</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getStaticProps</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> allPostsData = <span class="title function_">getSortedPostsData</span>();</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      allPostsData,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 客户端</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params">&#123; allPostsData &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [state, setState] = <span class="title function_">useState</span>(<span class="literal">false</span>);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Layout</span> <span class="attr">home</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">section</span> <span class="attr">className</span>=<span class="string">&#123;</span>`$&#123;<span class="attr">utilStyles.headingMd</span>&#125; $&#123;<span class="attr">utilStyles.padding1px</span>&#125;`&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.headingLg&#125;</span>&gt;</span>Blog<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.list&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;allPostsData.map((&#123; id, date, title &#125;) =&gt; (</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.listItem&#125;</span> <span class="attr">key</span>=<span class="string">&#123;id&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              &#123;title&#125;</span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">              &#123;id&#125;</span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">              &#123;date&#125;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          ))&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意事项</strong></p>
+<ul>
+<li>因为它仅在构建时运行，所以您将无法使用仅在请求期间可用的数据，例如查询参数或 HTTP 标头。</li>
+<li>仅允许在页面中, getStaticProps只能从页面导出。您不能从非页面文件中导出它。这种限制的原因之一是 React 需要在呈现页面之前拥有所有必需的数据</li>
+<li>因为它仅在构建时运行 所以无法获取实时数据（仅适用于类似 静态博客 这种案例）</li>
+</ul>
+<h3 id="服务器端渲染"><a href="#服务器端渲染" class="headerlink" title="服务器端渲染"></a>服务器端渲染</h3><p>如果您需要在请求时而不是在构建时获取数据，您可以尝试服务器端渲染：</p>
+<p>getServerSideProps</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getServerSideProps</span>(<span class="params">context</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      <span class="comment">// props for your component</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>与 SEO 无关的私人、用户特定页面使用服务器端渲染</p>
+<h3 id="预渲染-总结"><a href="#预渲染-总结" class="headerlink" title="预渲染 总结"></a>预渲染 总结</h3><p>优先使用<code>静态生成</code> 实在不能使用<code>静态生成</code>的地方再使用<code>服务器端渲染</code>或<code>客户端渲染</code></p>
+<h4 id="静态生成原理"><a href="#静态生成原理" class="headerlink" title="静态生成原理"></a>静态生成原理</h4><p>每个文件对应一个页面,每个页面构建时都会先执行一下 <code>getStaticProps</code>,将 <code>props</code>传递给页面组件,然后根据页面组件生成对应的<code>html</code>, 浏览器直接请求对应的<code>html</code>会包含样式，所以即使禁用<code>javascript</code>还是可以正常浏览</p>
+<h2 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h2><p>动态路由同静态生成类似,需要有静态数据用于生成对应的路由和页面</p>
+<p>我们希望每个帖子都有 <code>path/posts/id</code><br>首先，我们将在pages&#x2F;posts创建一个名为<code>[id].js</code>的页面。 注意是<code>[id]</code>需要带 <code>[]</code></p>
+<h3 id="getStaticPaths"><a href="#getStaticPaths" class="headerlink" title="getStaticPaths"></a>getStaticPaths</h3><p><code>[id].js</code> 文件导出 <code>getStaticPaths</code> 函数</p>
+<p>[id].js</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Post</span>(<span class="params">&#123; postData &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;/* Add this <span class="tag">&lt;<span class="name">Head</span>&gt;</span> tag */&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;postData.title&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">article</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.headingXl&#125;</span>&gt;</span>&#123;postData.title&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;postData.date&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">dangerouslySetInnerHTML</span>=<span class="string">&#123;&#123;</span> <span class="attr">__html:</span> <span class="attr">postData.contentHtml</span> &#125;&#125; /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  );</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br><span class="line"><span class="language-xml">/* </span></span><br><span class="line"><span class="language-xml">paths 是所有 id 的集合 （所有 [host]/posts/* 的集合, ps:告诉 next 构建时需要生成哪些页面和路由）</span></span><br><span class="line"><span class="language-xml">paths [</span></span><br><span class="line"><span class="language-xml">  &#123; params: &#123; id: &#x27;pre-rendering&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  &#123; params: &#123; id: &#x27;ssg-ssr&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  &#123; params: &#123; id: &#x27;vue原理&#x27; &#125; &#125;</span></span><br><span class="line"><span class="language-xml">] </span></span><br><span class="line"><span class="language-xml">params 中的参数和文件名 [id].js 需要对应  [id].js =&gt; params.id</span></span><br><span class="line"><span class="language-xml">*/</span></span><br><span class="line"><span class="language-xml">export async function getStaticPaths() &#123;</span></span><br><span class="line"><span class="language-xml">  // Return a list of possible value for id</span></span><br><span class="line"><span class="language-xml">  // Returns an array that looks like this:</span></span><br><span class="line"><span class="language-xml">  // &#123; params: &#123; id: &#x27;pre-rendering&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  // &#123; params: &#123; id: &#x27;ssg-ssr&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  let paths = getAllPostIds();</span></span><br><span class="line"><span class="language-xml">  return &#123;</span></span><br><span class="line"><span class="language-xml">    paths,</span></span><br><span class="line"><span class="language-xml">    fallback: false,</span></span><br><span class="line"><span class="language-xml">  &#125;;</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">// 这里返回的 props 将传递给  Post 组件</span></span><br><span class="line"><span class="language-xml">// 构建时 next 直接根据 postData 生成对应页面</span></span><br><span class="line"><span class="language-xml">export async function getStaticProps(&#123; params &#125;) &#123;</span></span><br><span class="line"><span class="language-xml">  // Fetch necessary data for the blog post using params.id</span></span><br><span class="line"><span class="language-xml">  const postData = await getPostData(params.id);</span></span><br><span class="line"><span class="language-xml">  return &#123;</span></span><br><span class="line"><span class="language-xml">    props: &#123;</span></span><br><span class="line"><span class="language-xml">      postData,</span></span><br><span class="line"><span class="language-xml">    &#125;,</span></span><br><span class="line"><span class="language-xml">  &#125;;</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/07/29/Electron/electron-builder%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +436,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -388,7 +542,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -500,7 +654,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -602,7 +756,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -704,7 +858,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -806,7 +960,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -913,7 +1067,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1037,7 +1191,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1146,7 +1300,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1215,116 +1369,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/04/28/js/%E5%9F%BA%E4%BA%8Eservice-worker%E5%AE%9E%E7%8E%B0%E9%83%A8%E7%BD%B2%E5%90%8E%E6%8F%90%E7%A4%BA%E7%94%A8%E6%88%B7%E5%88%B7%E6%96%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/28/js/%E5%9F%BA%E4%BA%8Eservice-worker%E5%AE%9E%E7%8E%B0%E9%83%A8%E7%BD%B2%E5%90%8E%E6%8F%90%E7%A4%BA%E7%94%A8%E6%88%B7%E5%88%B7%E6%96%B0/" class="post-title-link" itemprop="url">基于service-worker实现部署后提示用户刷新</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-04-28 10:22:38" itemprop="dateCreated datePublished" datetime="2022-04-28T10:22:38+00:00">2022-04-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Vue项目部署新版本后提示用户刷新浏览器"><a href="#Vue项目部署新版本后提示用户刷新浏览器" class="headerlink" title="Vue项目部署新版本后提示用户刷新浏览器"></a>Vue项目部署新版本后提示用户刷新浏览器</h2><h3 id="vue-cli-创建带pwd的项目"><a href="#vue-cli-创建带pwd的项目" class="headerlink" title="vue-cli 创建带pwd的项目"></a>vue-cli 创建带pwd的项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vue create pwa-product</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择 pwd</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改-src-x2F-registerServiceWorker-js"><a href="#修改-src-x2F-registerServiceWorker-js" class="headerlink" title="修改 src&#x2F;registerServiceWorker.js"></a>修改 src&#x2F;registerServiceWorker.js</h3><p><a target="_blank" rel="noopener" href="https://github.com/yyx990803/register-service-worker#readme">registerServiceWorker</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-disable no-console */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; register &#125; <span class="keyword">from</span> <span class="string">&quot;register-service-worker&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (process.<span class="property">env</span>.<span class="property">NODE_ENV</span> === <span class="string">&quot;production&quot;</span> &amp;&amp; navigator.<span class="property">serviceWorker</span>) &#123;</span><br><span class="line">  <span class="title function_">register</span>(<span class="string">`<span class="subst">$&#123;process.env.BASE_URL&#125;</span>service-worker.js`</span>, &#123;</span><br><span class="line">    <span class="title function_">ready</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">        <span class="string">&quot;App is being served from cache by a service worker.\n&quot;</span> +</span><br><span class="line">          <span class="string">&quot;For more details, visit https://goo.gl/AFskqB&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="title function_">registered</span>(<span class="params">registration</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Service worker has been registered.&quot;</span>);</span><br><span class="line">      <span class="comment">// 通过测试新的服务工作线程来定期检查应用更新</span></span><br><span class="line">      <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        registration.<span class="title function_">update</span>();</span><br><span class="line">      &#125;, <span class="number">1000</span>); <span class="comment">// 这里为了测试 每秒检查一次</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">cached</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Content has been cached for offline use.&quot;</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">updatefound</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;New content is downloading.&quot;</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 有个更新 通知页面更新</span></span><br><span class="line">    <span class="title function_">updated</span>(<span class="params">registration</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;New content is available; please refresh.&quot;</span>);</span><br><span class="line">        <span class="comment">//  创建一个自定义事件</span></span><br><span class="line">      <span class="keyword">const</span> event = <span class="keyword">new</span> <span class="title class_">CustomEvent</span>(<span class="string">&quot;swupdatefound&quot;</span>, &#123; <span class="attr">detail</span>: registration &#125;);</span><br><span class="line">        <span class="comment">// 触发这个事件</span></span><br><span class="line">      <span class="variable language_">document</span>.<span class="title function_">dispatchEvent</span>(event);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">offline</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">        <span class="string">&quot;No internet connection found. App is running in offline mode.&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">error</span>(<span class="params">error</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;Error during service worker registration:&quot;</span>, error);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> refreshing;</span><br><span class="line">    <span class="comment">// 监听需要更新事件  调用 window.location.reload()</span></span><br><span class="line">  navigator.<span class="property">serviceWorker</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;controllerchange&quot;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (refreshing) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">location</span>.<span class="title function_">reload</span>();</span><br><span class="line"></span><br><span class="line">    refreshing = <span class="literal">true</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="在页面中添加事件监听"><a href="#在页面中添加事件监听" class="headerlink" title="在页面中添加事件监听"></a>在页面中添加事件监听</h3><p>在 main.js 或 store 中添加事件监听</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加对应自定义事件的监听</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;swupdatefound&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 提示用户刷新</span></span><br><span class="line">  <span class="keyword">let</span> res = <span class="title function_">confirm</span>(<span class="string">&quot;新内容可用,请刷新&quot;</span>);</span><br><span class="line">  <span class="keyword">if</span> (res) &#123;</span><br><span class="line">    <span class="comment">// e.detail == registration</span></span><br><span class="line">    <span class="comment">// waiting.postMessage(&#123; type: &quot;SKIP_WAITING&quot; &#125;) 是固定写法 </span></span><br><span class="line">    <span class="comment">// 用于触发更新  navigator.serviceWorker.addEventListener(&quot;controllerchange&quot;...)</span></span><br><span class="line">    e.<span class="property">detail</span>.<span class="property">waiting</span>.<span class="title function_">postMessage</span>(&#123;</span><br><span class="line">      <span class="attr">type</span>: <span class="string">&quot;SKIP_WAITING&quot;</span>,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>为什么 waiting.postMessage({ type: “SKIP_WAITING” }) 会触发更新</p>
-<p>在打包下的 dist 目录下service-worker.js 看到一下代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// self 是 worker 子线程的标准</span></span><br><span class="line"><span class="comment">//  waiting.postMessage(&#123; type: &quot;SKIP_WAITING&quot; &#125;) 会触发下面事件监听</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&#x27;message&#x27;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (event.<span class="property">data</span> &amp;&amp; event.<span class="property">data</span>.<span class="property">type</span> === <span class="string">&#x27;SKIP_WAITING&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">//   调用 触发 controllerchange</span></span><br><span class="line">    self.<span class="title function_">skipWaiting</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1349,13 +1393,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">426k</span>
+    <span title="站点总字数">430k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:27</span>
+    <span title="站点阅读时长">6:31</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">131</span>
+          <span class="site-state-item-count">132</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,119 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/04/12/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/axios%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/04/12/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/axios%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">axios常见问题汇总</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-12 17:08:55" itemprop="dateCreated datePublished" datetime="2020-04-12T17:08:55+00:00">2020-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">网络应用</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="关于-axios-上传文件超时的问题记录"><a href="#关于-axios-上传文件超时的问题记录" class="headerlink" title="关于 axios 上传文件超时的问题记录"></a>关于 axios 上传文件超时的问题记录</h3><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>前端上传一个 7M 文件，上传一半连接中断，后端是 java， 报了一个 tomcat 的问题，让我一直以为是后端断开连接</p>
+<p>但是postman却可以上传（postman没有设置连接超时）</p>
+<p>本地调试发现无法进入后端断点 （进入超时状态）<br>但是后端本地可以进入（后端因为是本地地址没有进入超时状态）</p>
+<p>我想了好久也没有想明白为什么（没有想到是前端超时断开连接 后端让我帮忙看问题 唉！！！ 我一直以为是后端兄弟的问题 让后端兄弟找了好久 结果却是前端的问题 唉！！！）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// axios</span></span><br><span class="line"><span class="keyword">const</span> service = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">  <span class="comment">// 公共接口</span></span><br><span class="line">  <span class="attr">baseURL</span>: config[config[<span class="string">&quot;mode&quot;</span>]].<span class="property">basicURL</span>,</span><br><span class="line">  <span class="attr">timeout</span>: <span class="number">5000</span>, <span class="comment">// 0 永不超时</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 设置了 5秒就超时</span></span><br></pre></td></tr></table></figure>
+
+<p>如果仔细看看 axios 返回的错误信息就可以直接是超时问题 <code>timeout of  5000ms exceeded</code></p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>增大超时时间</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> service = axios.<span class="title function_">create</span>(&#123;</span><br><span class="line">  <span class="comment">// 公共接口</span></span><br><span class="line">  <span class="attr">baseURL</span>: config[config[<span class="string">&quot;mode&quot;</span>]].<span class="property">basicURL</span>,</span><br><span class="line">  <span class="attr">timeout</span>: <span class="number">60000</span>, <span class="comment">// 0 永不超时</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>添加请求错误日志 打印详细错误信息</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 3.响应拦截器</span></span><br><span class="line">service.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(</span><br><span class="line">  <span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(response.<span class="property">data</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; response &#125; = error;</span><br><span class="line">    <span class="keyword">let</span> errMsg = response</span><br><span class="line">      ? <span class="comment">// 使用服务返回错误信息</span></span><br><span class="line">        <span class="title function_">fmtError</span>(response.<span class="property">data</span>.<span class="property">code</span>) || response.<span class="property">data</span>.<span class="property">message</span> || response.<span class="property">status</span></span><br><span class="line">      : <span class="comment">// 使用 axios 返回的错误信息</span></span><br><span class="line">        <span class="string">`<span class="subst">$&#123;error.message ? <span class="string">&quot;:&quot;</span> + error.message : <span class="string">&quot;&quot;</span>&#125;</span>`</span>;</span><br><span class="line">    <span class="title function_">logger</span>(<span class="string">&quot;response error&quot;</span>).<span class="title function_">error</span>(errMsg);</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(error);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>每次出现问题后先看看前端报错信息 再进行分析</strong><br><strong>上传大文件时尽量不设置超时</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/01/15/js/%E8%BD%AC-JavaScript%E7%9A%84%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +395,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -702,7 +815,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -818,7 +931,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -926,7 +1039,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1074,7 +1187,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1195,7 +1308,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1302,7 +1415,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1409,7 +1522,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1512,7 +1625,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1925,112 +2038,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2019/03/02/Vue/vue%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%87%87%E5%9D%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/03/02/Vue/vue%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%87%87%E5%9D%91/" class="post-title-link" itemprop="url">vue 移动端采坑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-03-02 20:54:04" itemprop="dateCreated datePublished" datetime="2019-03-02T20:54:04+00:00">2019-03-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>374</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-报错"><a href="#1-报错" class="headerlink" title="1.报错"></a>1.报错</h2><h3 id="组件没注册报错"><a href="#组件没注册报错" class="headerlink" title="组件没注册报错"></a>组件没注册报错</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vue.<span class="property">esm</span>.<span class="property">js</span>?<span class="attr">efeb</span>:<span class="number">591</span> [<span class="title class_">Vue</span> warn]: <span class="title class_">Unknown</span> custom <span class="attr">element</span>: &lt;el-container&gt; - did you register the component correctly? <span class="title class_">For</span> recursive components, make sure to provide the <span class="string">&quot;name&quot;</span> option.</span><br><span class="line"></span><br><span class="line">found <span class="keyword">in</span></span><br><span class="line"></span><br><span class="line">---&gt; &lt;<span class="title class_">Container</span>&gt; at src/components/<span class="title class_">Container</span>.<span class="property">vue</span></span><br><span class="line">       &lt;<span class="title class_">App</span>&gt; at src/<span class="title class_">App</span>.<span class="property">vue</span></span><br><span class="line">         &lt;<span class="title class_">Root</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>以上错误 表示你没有注册这个组件 需要单独注册</strong></p>
-<h3 id="JSON-parse-的使用"><a href="#JSON-parse-的使用" class="headerlink" title="JSON.parse()的使用"></a><code>JSON.parse()</code>的使用</h3><p><img data-src="https://bitbw.top/public/img/my_gallery/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20191201171855.jpg" alt="搜狗截图20191201171855"></p>
-<blockquote>
-<p>注意：**<code>JSON.parse(null)</code> 是返回 null 其他除了 string 类型的数据都会报错**</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2055,13 +2062,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">426k</span>
+    <span title="站点总字数">430k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:27</span>
+    <span title="站点阅读时长">6:31</span>
   </span>
 </div>
 <div class="busuanzi-count">

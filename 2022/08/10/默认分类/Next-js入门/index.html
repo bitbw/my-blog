@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Bowen_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Bowen_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="g2sghe_aG2NDGFETaIqaIGhfZNoeS9wGBnugQAQXHMI">
+  <meta name="baidu-site-verification" content="code-YK9weY9Iav">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.bitbw.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":true,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/config.min.js"></script>
+
+    <meta name="description" content="Next 特点next 适合用于公司官网、文章类、电商类等对于 SEO 需求高的网站。中后台管理系统无需SEO 所以也不需要使用 Next 创建 Next.js 应用12345npx create-next-app nextjs-blog --use-npm --example &quot;https:&#x2F;&#x2F;github.com&#x2F;vercel&#x2F;next-learn&#x2F;tree&#x2F;master&#x2F;basic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Next.js入门">
+<meta property="og:url" content="https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/">
+<meta property="og:site_name" content="张博文的个人博客">
+<meta property="og:description" content="Next 特点next 适合用于公司官网、文章类、电商类等对于 SEO 需求高的网站。中后台管理系统无需SEO 所以也不需要使用 Next 创建 Next.js 应用12345npx create-next-app nextjs-blog --use-npm --example &quot;https:&#x2F;&#x2F;github.com&#x2F;vercel&#x2F;next-learn&#x2F;tree&#x2F;master&#x2F;basic">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-10T16:56:34.000Z">
+<meta property="article:modified_time" content="2022-08-12T09:41:43.632Z">
+<meta property="article:author" content="Bowen">
+<meta property="article:tag" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/","path":"2022/08/10/默认分类/Next-js入门/","title":"Next.js入门"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Next.js入门 | 张博文的个人博客</title>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/third-party/analytics/baidu-analytics.min.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?aed4bbe397960f5436bd1a9633262fa1"></script>
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">张博文的个人博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Bowen's personal blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-%E7%89%B9%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">Next 特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-Next-js-%E5%BA%94%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">创建 Next.js 应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1"><span class="nav-number">3.</span> <span class="nav-text">路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Link"><span class="nav-number">3.1.</span> <span class="nav-text">Link</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B5%84%E6%BA%90-css-%E7%AD%89"><span class="nav-number">4.</span> <span class="nav-text">资源 css 等</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1"><span class="nav-number">4.1.</span> <span class="nav-text">静态文件服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css"><span class="nav-number">4.2.</span> <span class="nav-text">css</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Sass"><span class="nav-number">4.2.1.</span> <span class="nav-text">使用 Sass</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E6%A0%B7%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">全局样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-layout-%E7%BB%84%E4%BB%B6"><span class="nav-number">5.1.</span> <span class="nav-text">添加 layout 组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E6%B8%B2%E6%9F%93"><span class="nav-number">6.</span> <span class="nav-text">预渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E5%BD%A2%E5%BC%8F%E7%9A%84%E9%A2%84%E6%B8%B2%E6%9F%93"><span class="nav-number">6.1.</span> <span class="nav-text">两种形式的预渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E7%94%9F%E6%88%90"><span class="nav-number">6.2.</span> <span class="nav-text">静态生成</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#getStaticProps"><span class="nav-number">6.2.1.</span> <span class="nav-text">getStaticProps</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E6%B8%B2%E6%9F%93"><span class="nav-number">6.3.</span> <span class="nav-text">服务器端渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E6%B8%B2%E6%9F%93-%E6%80%BB%E7%BB%93"><span class="nav-number">6.4.</span> <span class="nav-text">预渲染 总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E7%94%9F%E6%88%90%E5%8E%9F%E7%90%86"><span class="nav-number">6.4.1.</span> <span class="nav-text">静态生成原理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="nav-number">7.</span> <span class="nav-text">动态路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#getStaticPaths"><span class="nav-number">7.1.</span> <span class="nav-text">getStaticPaths</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Bowen"
+      src="/images/logo-header.jpg">
+  <p class="site-author-name" itemprop="name">Bowen</p>
+  <div class="site-description" itemprop="description">vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">29</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/bitbw" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;bitbw" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/" title="微博 → http:&#x2F;&#x2F;weibo.com" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>微博</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-fw"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://mail.163.com/" title="E-Mail → https:&#x2F;&#x2F;mail.163.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/" title="Twitter → https:&#x2F;&#x2F;twitter.com" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/" title="YouTube → https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.org/" title="https:&#x2F;&#x2F;theme-next.org&#x2F;" rel="noopener" target="_blank">Next主题</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/hanzeng1993/" title="https:&#x2F;&#x2F;www.cnblogs.com&#x2F;hanzeng1993&#x2F;" rel="noopener" target="_blank">Python学习</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/bitbw" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Next.js入门 | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Next.js入门
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-10 16:56:34" itemprop="dateCreated datePublished" datetime="2022-08-10T16:56:34+00:00">2022-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Next-特点"><a href="#Next-特点" class="headerlink" title="Next 特点"></a>Next 特点</h2><p>next 适合用于公司官网、文章类、电商类等对于 SEO 需求高的网站。<br>中后台管理系统无需SEO 所以也不需要使用 Next</p>
+<h2 id="创建-Next-js-应用"><a href="#创建-Next-js-应用" class="headerlink" title="创建 Next.js 应用"></a>创建 Next.js 应用</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npx create-next-app nextjs-blog --use-npm --example <span class="string">&quot;https://github.com/vercel/next-learn/tree/master/basics/learn-starter&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> nextjs-blog</span><br><span class="line"></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>Next 中路由就是对应的文件路径</p>
+<p>例如，在开发中：</p>
+<p>pages&#x2F;index.js与&#x2F;路线相关联。<br>pages&#x2F;posts&#x2F;first-post.js与&#x2F;posts&#x2F;first-post路线相关联。</p>
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><p><code>&lt;Link&gt;</code> 用于在页面中导航</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Link</span> <span class="keyword">from</span> <span class="string">&#x27;next/link&#x27;</span>;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&quot;title&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  Read <span class="tag">&lt;<span class="name">Link</span> <span class="attr">href</span>=<span class="string">&quot;/posts/first-post&quot;</span>&gt;</span>this page!<span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在 Next.js 的生产版本中，每当Link组件出现在浏览器的视口中时，Next.js 都会在后台自动预取链接页面的代码。当您单击链接时，目标页面的代码已经在后台加载，页面转换几乎是即时的！</p>
+</blockquote>
+<h2 id="资源-css-等"><a href="#资源-css-等" class="headerlink" title="资源 css 等"></a>资源 css 等</h2><h3 id="静态文件服务"><a href="#静态文件服务" class="headerlink" title="静态文件服务"></a>静态文件服务</h3><p>Next 可以以 <code>public</code> 为基础,在根目录中的一个文件夹下提供静态文件服务，从基本 <code>baseURL</code>&#x2F; 开始引用 <code>public</code> 其中的文件<br>例如：public&#x2F;me.png 对应 <code>http://localhost:3000/me.png</code><br>这点跟 <code>vue-cli</code> 和 <code>rca</code> 类似</p>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>Next 支持 <a target="_blank" rel="noopener" href="https://nextjs.org/docs/basic-features/built-in-css-support#adding-component-level-css">CSS Modules</a></p>
+<blockquote>
+<p>重要提示：要使用CSS 模块，CSS 文件名必须以.module.css</p>
+</blockquote>
+<h4 id="使用-Sass"><a href="#使用-Sass" class="headerlink" title="使用 Sass"></a>使用 Sass</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D sass</span><br></pre></td></tr></table></figure>
+
+<h2 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h2><p>要加载全局 CSS文件，请创建一个名为的文件pages&#x2F;_app.js，其内容如下</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// `pages/_app.js`</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;../styles/global.css&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">App</span>(<span class="params">&#123; Component, pageProps &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="language-xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...pageProps</span>&#125; /&gt;</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该App组件是所有不同页面通用的顶级组件。例如，您可以使用此App组件在页面之间导航时保​​持状态</p>
+<h3 id="添加-layout-组件"><a href="#添加-layout-组件" class="headerlink" title="添加 layout 组件"></a>添加 layout 组件</h3><p><a target="_blank" rel="noopener" href="https://nextjs.org/learn/basics/assets-metadata-css/polishing-layout">layout 组件</a></p>
+<p>。</p>
+<h2 id="预渲染"><a href="#预渲染" class="headerlink" title="预渲染"></a>预渲染</h2><h3 id="两种形式的预渲染"><a href="#两种形式的预渲染" class="headerlink" title="两种形式的预渲染"></a>两种形式的预渲染</h3><p>Next.js 有两种预渲染形式：静态生成和服务器端渲染。不同之处在于它何时为页面生成 HTML</p>
+<ul>
+<li>静态生成是在构建时生成 HTML 的预渲染方法。然后在每个请求上重用预呈现的 HTML</li>
+<li>服务器端渲染是在每个请求上生成 HTML 的预渲染方法。</li>
+</ul>
+<h3 id="静态生成"><a href="#静态生成" class="headerlink" title="静态生成"></a>静态生成</h3><h4 id="getStaticProps"><a href="#getStaticProps" class="headerlink" title="getStaticProps"></a>getStaticProps</h4><p>getStaticProps 仅在服务器端运行</p>
+<p>开发与生产</p>
+<ul>
+<li>在开发（npm run dev或yarn dev）中，getStaticProps在每个请求上运行。</li>
+<li>在生产中，getStaticProps 在构建时运行。但是，可以使用返回的fallback键来增强此行为 getStaticPaths</li>
+</ul>
+<p>我们建议尽可能使用静态生成（有数据和无数据），因为您的页面可以构建一次并由 CDN 提供服务，这比让服务器在每次请求时呈现页面要快得多。</p>
+<p>您可以将静态生成用于多种类型的页面，包括：</p>
+<ul>
+<li>营销页面</li>
+<li>博客文章</li>
+<li>电子商务产品列表</li>
+<li>帮助和文档</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 服务端</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getStaticProps</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> allPostsData = <span class="title function_">getSortedPostsData</span>();</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      allPostsData,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 客户端</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Home</span>(<span class="params">&#123; allPostsData &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [state, setState] = <span class="title function_">useState</span>(<span class="literal">false</span>);</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Layout</span> <span class="attr">home</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">section</span> <span class="attr">className</span>=<span class="string">&#123;</span>`$&#123;<span class="attr">utilStyles.headingMd</span>&#125; $&#123;<span class="attr">utilStyles.padding1px</span>&#125;`&#125;&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.headingLg&#125;</span>&gt;</span>Blog<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.list&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;allPostsData.map((&#123; id, date, title &#125;) =&gt; (</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.listItem&#125;</span> <span class="attr">key</span>=<span class="string">&#123;id&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">              &#123;title&#125;</span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">              &#123;id&#125;</span></span><br><span class="line"><span class="language-xml">              <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span></span><br><span class="line"><span class="language-xml">              &#123;date&#125;</span></span><br><span class="line"><span class="language-xml">            <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          ))&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意事项</strong></p>
+<ul>
+<li>因为它仅在构建时运行，所以您将无法使用仅在请求期间可用的数据，例如查询参数或 HTTP 标头。</li>
+<li>仅允许在页面中, getStaticProps只能从页面导出。您不能从非页面文件中导出它。这种限制的原因之一是 React 需要在呈现页面之前拥有所有必需的数据</li>
+<li>因为它仅在构建时运行 所以无法获取实时数据（仅适用于类似 静态博客 这种案例）</li>
+</ul>
+<h3 id="服务器端渲染"><a href="#服务器端渲染" class="headerlink" title="服务器端渲染"></a>服务器端渲染</h3><p>如果您需要在请求时而不是在构建时获取数据，您可以尝试服务器端渲染：</p>
+<p>getServerSideProps</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">getServerSideProps</span>(<span class="params">context</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">props</span>: &#123;</span><br><span class="line">      <span class="comment">// props for your component</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>与 SEO 无关的私人、用户特定页面使用服务器端渲染</p>
+<h3 id="预渲染-总结"><a href="#预渲染-总结" class="headerlink" title="预渲染 总结"></a>预渲染 总结</h3><p>优先使用<code>静态生成</code> 实在不能使用<code>静态生成</code>的地方再使用<code>服务器端渲染</code>或<code>客户端渲染</code></p>
+<h4 id="静态生成原理"><a href="#静态生成原理" class="headerlink" title="静态生成原理"></a>静态生成原理</h4><p>每个文件对应一个页面,每个页面构建时都会先执行一下 <code>getStaticProps</code>,将 <code>props</code>传递给页面组件,然后根据页面组件生成对应的<code>html</code>, 浏览器直接请求对应的<code>html</code>会包含样式，所以即使禁用<code>javascript</code>还是可以正常浏览</p>
+<h2 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h2><p>动态路由同静态生成类似,需要有静态数据用于生成对应的路由和页面</p>
+<p>我们希望每个帖子都有 <code>path/posts/id</code><br>首先，我们将在pages&#x2F;posts创建一个名为<code>[id].js</code>的页面。 注意是<code>[id]</code>需要带 <code>[]</code></p>
+<h3 id="getStaticPaths"><a href="#getStaticPaths" class="headerlink" title="getStaticPaths"></a>getStaticPaths</h3><p><code>[id].js</code> 文件导出 <code>getStaticPaths</code> 函数</p>
+<p>[id].js</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Post</span>(<span class="params">&#123; postData &#125;</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;/* Add this <span class="tag">&lt;<span class="name">Head</span>&gt;</span> tag */&#125;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">Head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>&#123;postData.title&#125;<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">Head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">article</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&#123;utilStyles.headingXl&#125;</span>&gt;</span>&#123;postData.title&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          &#123;postData.date&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">dangerouslySetInnerHTML</span>=<span class="string">&#123;&#123;</span> <span class="attr">__html:</span> <span class="attr">postData.contentHtml</span> &#125;&#125; /&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  );</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br><span class="line"><span class="language-xml">/* </span></span><br><span class="line"><span class="language-xml">paths 是所有 id 的集合 （所有 [host]/posts/* 的集合, ps:告诉 next 构建时需要生成哪些页面和路由）</span></span><br><span class="line"><span class="language-xml">paths [</span></span><br><span class="line"><span class="language-xml">  &#123; params: &#123; id: &#x27;pre-rendering&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  &#123; params: &#123; id: &#x27;ssg-ssr&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  &#123; params: &#123; id: &#x27;vue原理&#x27; &#125; &#125;</span></span><br><span class="line"><span class="language-xml">] </span></span><br><span class="line"><span class="language-xml">params 中的参数和文件名 [id].js 需要对应  [id].js =&gt; params.id</span></span><br><span class="line"><span class="language-xml">*/</span></span><br><span class="line"><span class="language-xml">export async function getStaticPaths() &#123;</span></span><br><span class="line"><span class="language-xml">  // Return a list of possible value for id</span></span><br><span class="line"><span class="language-xml">  // Returns an array that looks like this:</span></span><br><span class="line"><span class="language-xml">  // &#123; params: &#123; id: &#x27;pre-rendering&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  // &#123; params: &#123; id: &#x27;ssg-ssr&#x27; &#125; &#125;,</span></span><br><span class="line"><span class="language-xml">  let paths = getAllPostIds();</span></span><br><span class="line"><span class="language-xml">  return &#123;</span></span><br><span class="line"><span class="language-xml">    paths,</span></span><br><span class="line"><span class="language-xml">    fallback: false,</span></span><br><span class="line"><span class="language-xml">  &#125;;</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml">// 这里返回的 props 将传递给  Post 组件</span></span><br><span class="line"><span class="language-xml">// 构建时 next 直接根据 postData 生成对应页面</span></span><br><span class="line"><span class="language-xml">export async function getStaticProps(&#123; params &#125;) &#123;</span></span><br><span class="line"><span class="language-xml">  // Fetch necessary data for the blog post using params.id</span></span><br><span class="line"><span class="language-xml">  const postData = await getPostData(params.id);</span></span><br><span class="line"><span class="language-xml">  return &#123;</span></span><br><span class="line"><span class="language-xml">    props: &#123;</span></span><br><span class="line"><span class="language-xml">      postData,</span></span><br><span class="line"><span class="language-xml">    &#125;,</span></span><br><span class="line"><span class="language-xml">  &#125;;</span></span><br><span class="line"><span class="language-xml">&#125;</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Bowen 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="Bowen 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/07/29/Electron/electron-builder%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" rel="prev" title="electron-builder常见问题汇总">
+                  <i class="fa fa-chevron-left"></i> electron-builder常见问题汇总
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bowen</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">430k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:31</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/comments.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/motion.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/next-boot.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/pjax.min.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/third-party/search/local-search.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/third-party/fancybox.min.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/"}</script>
+  <script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/third-party/quicklink.min.js"></script>
+<script src="https://unpkg.com/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.3s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"bitbw","repo":"gitalk-store","client_id":"081dca720868e966811f","client_secret":"1ee6c9b1069968b2227532b2cc671858c25ef2b6","admin_user":"bitbw","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.7.2/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"215c30ede69a9c306ae20f3cf3ab59d7"}</script>
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-next@8.12.3/source/js/third-party/comments/gitalk.min.js"></script>
+
+</body>
+</html>

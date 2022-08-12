@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">131</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">131</span>
+          <span class="site-state-item-count">132</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,111 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/01/10/Linux/Ubuntu-%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6%E5%90%8E%E5%90%8D%E7%A7%B0%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/10/Linux/Ubuntu-%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6%E5%90%8E%E5%90%8D%E7%A7%B0%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Ubuntu 解压文件后名称乱码问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-01-10 16:09:01" itemprop="dateCreated datePublished" datetime="2021-01-10T16:09:01+00:00">2021-01-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>286</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>由于中文的 Windows 使用的是 GBK 编码，而 Linux 默认使用 UTF-8 编码的，如果在 Windows 打包带中文文件的 zip 包，则这个 zip 包在 Linux 下面使用默认的归档管理器打开这个 zip 包的时候，中文文件名会显示乱码。</p>
+<h2 id="解决方法-1："><a href="#解决方法-1：" class="headerlink" title="解决方法 1："></a>解决方法 1：</h2><p>使用 GBK 格式解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip -O GBK *.zip</span><br></pre></td></tr></table></figure>
+
+<h2 id="解决方法-2"><a href="#解决方法-2" class="headerlink" title="解决方法 2:"></a>解决方法 2:</h2><p>安装 p7zip-rar</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install p7zip-rar</span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN.GBK  		<span class="comment"># 临时在控制台修改环境为zh_CN.GBK，然后解压缩即可</span></span><br><span class="line">7za  x  需要解压的文件.zip</span><br><span class="line"><span class="built_in">export</span> LANG=zh_CN.utf-8 	<span class="comment"># 用完别忘了改回来</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/01/10/Linux/Ubuntu-%E4%B8%8B%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9A%84%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +387,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -398,7 +503,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -532,7 +637,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -743,7 +848,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1014,7 +1119,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1411,7 +1516,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1620,7 +1725,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h2><h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>webpack 5 需要使用 npm i <a href="mailto:&#x77;&#101;&#98;&#x70;&#97;&#x63;&#107;&#45;&#100;&#101;&#x76;&#45;&#115;&#x65;&#114;&#118;&#x65;&#x72;&#64;&#52;&#x2e;&#x30;&#46;&#48;&#45;&#98;&#x65;&#116;&#97;&#x2e;&#x30;">&#x77;&#101;&#98;&#x70;&#97;&#x63;&#107;&#45;&#100;&#101;&#x76;&#45;&#115;&#x65;&#114;&#118;&#x65;&#x72;&#64;&#52;&#x2e;&#x30;&#46;&#48;&#45;&#98;&#x65;&#116;&#97;&#x2e;&#x30;</a></p>
+<h2 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h2><h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>webpack 5 需要使用 npm i <a href="mailto:&#119;&#101;&#98;&#112;&#x61;&#99;&#107;&#45;&#x64;&#101;&#x76;&#45;&#115;&#101;&#114;&#118;&#x65;&#x72;&#x40;&#x34;&#x2e;&#48;&#x2e;&#x30;&#x2d;&#98;&#x65;&#116;&#97;&#x2e;&#x30;">&#119;&#101;&#98;&#112;&#x61;&#99;&#107;&#45;&#x64;&#101;&#x76;&#45;&#115;&#101;&#114;&#118;&#x65;&#x72;&#x40;&#x34;&#x2e;&#48;&#x2e;&#x30;&#x2d;&#98;&#x65;&#116;&#97;&#x2e;&#x30;</a></p>
 <p>但是目前 4.0.0-beta.0 还不完善 文档没有更新 热模块重载不好使</p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>hot module replacement 热模块替换 &#x2F; 模块热替换</p>
 <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>一个模块发生变化，只会重新打包这一个模块（而不是打包所有模块）<br>极大提升构建速度</p>
@@ -1821,7 +1926,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2030,7 +2135,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2150,7 +2255,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
+      <time title="修改时间：2022-08-12 09:41:43" itemprop="dateModified" datetime="2022-08-12T09:41:43+00:00">2022-08-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2229,119 +2334,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/" class="post-title-link" itemprop="url">React学习理解</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-12-24 14:35:01" itemprop="dateCreated datePublished" datetime="2020-12-24T14:35:01+00:00">2020-12-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-09 09:47:28" itemprop="dateModified" datetime="2022-08-09T09:47:28+00:00">2022-08-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>688</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h2><h3 id="受控组件"><a href="#受控组件" class="headerlink" title="受控组件"></a>受控组件</h3><p>官方定义</p>
-<blockquote>
-<p>在 HTML 中，表单元素（如<code>&lt;input&gt;</code>、 <code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code>）通常自己维护 state，并根据用户输入进行更新。而在 React 中，可变&gt; 状态（mutable state）通常保存在组件的 state 属性中，并且只能通过使用 setState()来更新。</p>
-<p>我们可以把两者结合起来，使 React 的 state 成为“唯一数据源”。渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。被 React 以这种方式控制取值的表单输入元素就叫做“受控组件”。</p>
-</blockquote>
-<p>总结： 受控组件就相当与 Vue 中的 v-model</p>
-<p>注意点：在受控组件上指定 value 的 prop 会阻止用户更改输入 ，value 设置为 undefined 或 null 了 用户可以自行输入</p>
-<p>正确的方式是：</p>
-<ul>
-<li>有 value 的绑定，就得有对应的 onChange 或者 onInupt 通过 setState 修改 value</li>
-<li>如果让用户自行输入数据值，而无需对变化做处理 ，可以使用<strong>非受控组件</strong></li>
-</ul>
-<h3 id="react-router-dom"><a href="#react-router-dom" class="headerlink" title="react-router-dom"></a>react-router-dom</h3><p>Route 放入 children 和 component 中的区别</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// children 中 home 通过 props 获取不到路由数据</span></span><br><span class="line">&lt;<span class="title class_">Route</span> path=<span class="string">&quot;/home&quot;</span>&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">Home</span> /&gt;</span></span></span><br><span class="line">&lt;/<span class="title class_">Route</span>&gt;</span><br><span class="line"><span class="comment">// component 中 home 通过 props 可以获取到路由数据</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Route</span> <span class="attr">path</span>=<span class="string">&quot;/home&quot;</span> <span class="attr">component</span>=<span class="string">&#123;Home&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">Route</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2366,13 +2358,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">426k</span>
+    <span title="站点总字数">430k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:27</span>
+    <span title="站点阅读时长">6:31</span>
   </span>
 </div>
 <div class="busuanzi-count">
