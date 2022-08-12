@@ -234,6 +234,7 @@ export async function getStaticPaths() {
 // 构建时 next 直接根据 postData 生成对应页面
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the blog post using params.id
+  // postData : { contentHtml date  title}
   const postData = await getPostData(params.id);
   return {
     props: {
