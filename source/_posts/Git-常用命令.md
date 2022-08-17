@@ -218,3 +218,15 @@ git add A.js
   git config --global alias.ci commit
   git config --global alias.st status
 ```
+
+## git 根据用户名统和时间查看代码统计
+
+[参考:git 时间 查看代码统计](https://www.csdn.net/tags/OtTaEg4sNzU1NC1ibG9n.html)
+[参考:gitlab代码查看行数](https://blog.csdn.net/fsjwin/article/details/122267764)
+[参考:git log排除文件](https://www.csdn.net/tags/MtjaYg3sNjE1NTMtYmxvZwO0O0OO0O0O.html)
+
+```sh
+# 代码量统计
+# 说明 ":(exclude)nouse" 为需要排除的文件  -- since开始时间 --until 结束时间   git log '分支名称'
+git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git log 'bowen' --author="$name" --since=2022-02-07 --until=2022-8-15 --pretty=tformat: --numstat  -- . ":(exclude)nouse_backup"  ":(exclude)package-lock.json" ":(exclude)yarn.lock"   | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -; done
+```

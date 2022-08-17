@@ -8,7 +8,7 @@ categories:
 ## Next 特点
 
 next 适合用于公司官网、文章类、电商类等对于 SEO 需求高的网站。
-中后台管理系统无需SEO 所以也不需要使用 Next
+中后台管理系统无需 SEO 所以也不一定需要使用 Next
 
 ## 创建 Next.js 应用
 
@@ -33,7 +33,7 @@ pages/posts/first-post.js与/posts/first-post路线相关联。
 
 `<Link>` 用于在页面中导航
 
-```js
+```jsx
 import Link from 'next/link';
 <h1 className="title">
   Read <Link href="/posts/first-post">this page!</Link>
@@ -60,6 +60,32 @@ Next 支持 [CSS Modules](https://nextjs.org/docs/basic-features/built-in-css-su
 
 ```sh
 npm install -D sass
+```
+
+### 图片
+
+```jsx
+import Image from 'next/image';
+
+const YourComponent = () => (
+  <Image
+    src="/images/profile.jpg" // Route of the image file
+    height={144} // Desired size with correct aspect ratio
+    width={144} // Desired size with correct aspect ratio
+    alt="Your Name"
+  />
+);
+```
+
+### head
+
+```jsx
+import Head from 'next/head';
+// 直接会渲染到 head 标签中
+<Head>
+  <title>Create Next App</title>
+  <link rel="icon" href="/favicon.ico" />
+</Head>
 ```
 
 ## 全局样式
@@ -226,7 +252,7 @@ export async function getStaticPaths() {
   let paths = getAllPostIds();
   return {
     paths,
-    fallback: false,
+    fallback: true, // 如果fallback是false，则任何无法匹配的路径getStaticPaths都将导致404 页面。 true 则会报错
   };
 }
 
@@ -245,3 +271,70 @@ export async function getStaticProps({ params }) {
 
 
 ```
+
+### getStaticPaths 中的  fallback 参数
+
+如果fallback是
+
+- false，则任何无法匹配的路径getStaticPaths都将导致404 页面。
+- true 则会报错
+- 如果fallback是blocking，那么新路径将在服务器端呈现getStaticProps，并缓存以供将来的请求使用，因此每个路径仅发生一次。
+
+### 多重路径动态路由
+
+...通过在括号内添加三个点 ( ) 可以扩展动态路由以捕获所有路径例如：
+
+- pages/posts/[...id].js匹配/posts/a, 但也/posts/a/b,/posts/a/b/c等等。
+如果你这样做， in getStaticPaths，你必须返回一个数组作为id键的值，如下所示：
+
+```js
+return [
+  {
+    params: {
+      // Statically Generates /posts/a/b/c
+      id: ['a', 'b', 'c'],
+    },
+  },
+  //...
+];
+```
+
+并且params.id将是一个数组getStaticProps:
+
+```jsx
+export async function getStaticProps({ params }) {
+  // params.id will be like ['a', 'b', 'c']
+}
+
+```
+
+### router
+
+如果你想访问 Next.js 路由器，你可以通过useRouter从next/router.
+
+### 404页
+
+要创建自定义 404 页面，请创建pages/404.js. 该文件是在构建时静态生成的
+
+## API 接口
+
+使用 Next 创建 api 接口,跟创建页面类似，可以使用文件路由的形式 `pages/api` 下创建对应的接口文件
+
+在  `pages/api` 下 创建 `hello.js`
+
+```js
+export default function handler(req, res) {
+  res.status(200).json({ text: 'Hello' });
+}
+
+```
+
+尝试在<http://localhost:3000/api/hello>访问它。你应该看到{"text":"Hello"}。
+
+### 文章接口实现（利用 next API）
+
+#### 创建文件
+
+- `pages/api/post/index.js`  -> <http://localhost:3000/api/post> // 获取所有文章数据
+- `pages/api/post/[postId].js`  -> <http://localhost:3000/api/post/postId> // 获取单个文章数据
+- `pages/api/post/ids.js`  -> <http://localhost:3000/api/post/ids> // 获取所有文章的id
