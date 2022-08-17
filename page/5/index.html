@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -401,7 +401,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -420,7 +420,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.2k</span>
+      <span>3.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -511,6 +511,9 @@
 <p>此后，你只需要git push origin master，即可同时推送到两个不同仓库的master。</p>
 <h2 id="git-别名配置"><a href="#git-别名配置" class="headerlink" title="git 别名配置"></a>git 别名配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.co checkout</span><br><span class="line">git config --global alias.br branch</span><br><span class="line">git config --global alias.ci commit</span><br><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
 
+<h2 id="git-根据用户名统和时间查看代码统计"><a href="#git-根据用户名统和时间查看代码统计" class="headerlink" title="git 根据用户名统和时间查看代码统计"></a>git 根据用户名统和时间查看代码统计</h2><p><a target="_blank" rel="noopener" href="https://www.csdn.net/tags/OtTaEg4sNzU1NC1ibG9n.html">参考:git 时间 查看代码统计</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/fsjwin/article/details/122267764">参考:gitlab代码查看行数</a><br><a target="_blank" rel="noopener" href="https://www.csdn.net/tags/MtjaYg3sNjE1NTMtYmxvZwO0O0OO0O0O.html">参考:git log排除文件</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 代码量统计</span></span><br><span class="line"><span class="comment"># 说明 &quot;:(exclude)nouse&quot; 为需要排除的文件  -- since开始时间 --until 结束时间   git log &#x27;分支名称&#x27;</span></span><br><span class="line">git <span class="built_in">log</span> --format=<span class="string">&#x27;%aN&#x27;</span> | <span class="built_in">sort</span> -u | <span class="keyword">while</span> <span class="built_in">read</span> name; <span class="keyword">do</span> <span class="built_in">echo</span> -en <span class="string">&quot;<span class="variable">$name</span>\t&quot;</span>; git <span class="built_in">log</span> <span class="string">&#x27;bowen&#x27;</span> --author=<span class="string">&quot;<span class="variable">$name</span>&quot;</span> --since=2022-02-07 --until=2022-8-15 --pretty=tformat: --numstat  -- . <span class="string">&quot;:(exclude)nouse_backup&quot;</span>  <span class="string">&quot;:(exclude)package-lock.json&quot;</span> <span class="string">&quot;:(exclude)yarn.lock&quot;</span>   | awk <span class="string">&#x27;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#x27;</span> -; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -572,7 +575,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -720,7 +723,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -834,7 +837,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -941,7 +944,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1011,7 +1014,7 @@
 
 <p>run build</p>
 <p><em>这一步会出现一个特别恶心的 webpack,webpack-cli 互相依赖缺失的问题，提示没有 webpack 模块，然后全局安装 webpack 模块，npm install -g webpack，这时候运行 webpack 指令，会发现缺失 webpack-cli，再次全局安装 webpack-cli，npm install -g webpack-cli，这时候运行 webpack-cli 指令，又莫名其妙的提示缺失 webpack 模块。</em></p>
-<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#119;&#x65;&#x62;&#x70;&#97;&#99;&#107;&#x40;&#x33;&#46;&#x36;&#x2e;&#x30;">&#119;&#x65;&#x62;&#x70;&#97;&#99;&#107;&#x40;&#x33;&#46;&#x36;&#x2e;&#x30;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
+<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#119;&#101;&#98;&#x70;&#x61;&#99;&#107;&#64;&#51;&#x2e;&#x36;&#46;&#48;">&#119;&#101;&#98;&#x70;&#x61;&#99;&#107;&#64;&#51;&#x2e;&#x36;&#46;&#48;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
 <p><em>但是有的系统如果以前全局安装过 webpack，还是会报这些相互依赖的问题，或者是环境变量导致的 webpack,webpack-cli 安装进了 node 目录，而以前有的 webpack 安装进了 C:\Users\Administrator\AppData\Roaming\npm 这个目录。解决办法就是删除 C:\Users\Administrator\AppData\Roaming\npm 目录下的 webpack。</em></p>
 <h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>然后将 build 生成的 shells 目录中的 chrome 目录拷贝出来，这个就是 build 生成的 vue-devtools 插件<br>浏览器安装容易，直接打开插件管理，切换开发模式，加载已解压插件，选择刚刚的 chrome 目录就行了。但是 electron 项目中安装会有点麻烦：</p>
 <p>找到 background.js 文件 (如果没有 background.js 找到 main&#x2F;index.js)，找到这段代码：</p>
@@ -1115,7 +1118,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1231,7 +1234,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1342,7 +1345,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1523,7 +1526,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 09:42:30" itemprop="dateModified" datetime="2022-08-12T09:42:30+00:00">2022-08-12</time>
+      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1707,13 +1710,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">430k</span>
+    <span title="站点总字数">433k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:31</span>
+    <span title="站点阅读时长">6:34</span>
   </span>
 </div>
 <div class="busuanzi-count">
