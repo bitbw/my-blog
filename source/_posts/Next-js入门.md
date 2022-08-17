@@ -338,3 +338,49 @@ export default function handler(req, res) {
 - `pages/api/post/index.js`  -> <http://localhost:3000/api/post> // 获取所有文章数据
 - `pages/api/post/[postId].js`  -> <http://localhost:3000/api/post/postId> // 获取单个文章数据
 - `pages/api/post/ids.js`  -> <http://localhost:3000/api/post/ids> // 获取所有文章的id
+
+`pages/api/post/index.js`
+
+```js
+// 查询全部
+import { getSortedPostsData } from "../../../lib/posts";
+
+export default function handler(req, res) {
+  let PostsDatas = getSortedPostsData();
+  res.status(200).json(PostsDatas);
+}
+```
+
+`pages/api/post/[postId].js`
+
+```js
+import { getPostData } from "../../../lib/posts";
+
+// 查询单个
+export default async function handler(req, res) {
+  const { postId } = req.query;
+  try {
+    let data = await getPostData(postId);
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({ error: "failed to load data" });
+  }
+}
+```
+
+`pages/api/post/ids.js`
+
+```js
+// id list
+import { getAllPostIds } from "../../../lib/posts";
+
+export default function handler(req, res) {
+  let data = getAllPostIds();
+  res.status(200).json(data);
+}
+
+```
+### 官方文档
+[动态 API 路由](https://nextjs.org/docs/api-routes/dynamic-api-routes)
+[请求助手](https://nextjs.org/docs/api-routes/request-helpers)
+[响应助手](https://nextjs.org/docs/api-routes/response-helpers)
