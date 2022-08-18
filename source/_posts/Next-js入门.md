@@ -380,7 +380,48 @@ export default function handler(req, res) {
 }
 
 ```
+
 ### 官方文档
+
 [动态 API 路由](https://nextjs.org/docs/api-routes/dynamic-api-routes)
 [请求助手](https://nextjs.org/docs/api-routes/request-helpers)
 [响应助手](https://nextjs.org/docs/api-routes/response-helpers)
+
+## 部署到 Vercel
+
+[官方教程](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy)
+
+### Vercel
+
+Next.js 和 Vercel
+Vercel由 Next.js 的创建者制作，并为 Next.js 提供一流的支持。当您将 Next.js 应用程序部署到Vercel时，默认情况下会发生以下情况：
+
+使用静态生成和资产（JS、CSS、图像、字体等）的页面将自动从速度极快的Vercel 边缘网络提供服务。
+使用Server-Side Rendering和API 路由的页面将自动成为孤立的Serverless Functions。这允许页面呈现和 API 请求无限扩展
+
+### 流程
+
+- 源代码上传 github
+- 注册 Vercel
+- [导入github项目](https ://vercel.com/import/git)(导入时会提示安装Vercel)
+
+添加后vercel根据分支自动部署（相当于预配置好的git action）
+
+### 预览
+
+- 创建预览分支
+- 修改并上传预览分支
+- 回到 github 仓库 会看到提示添加 Pull requests 根据提示添加 Pull requests
+- 进到新创建的 Pull requests 中可以查看预览分支 部署好的页面
+[Pull requests](https://bitbw.top/public/img/my_gallery/20220818112329.png)
+- 预览分支没问题就可以合并到主分支了
+
+### 自定义域名
+
+[自定义域名](https://vercel.com/docs/concepts/projects/custom-domains#dns-records)
+
+- 进入项目setting
+- 选择域菜单项
+- 添加域名随便写个域名会提示正确的域名填写方式
+- 添加域名 （同时添加域名解析  CNAME cname.vercel-dns.com）
+- 添加预览域名 （同时添加域名解析 CNAME cname.vercel-dns.com）
