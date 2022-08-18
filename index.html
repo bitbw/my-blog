@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
 
   
@@ -292,14 +292,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>7.1k</span>
+      <span>7.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -414,7 +414,32 @@
 
 <p><code>pages/api/post/ids.js</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// id list</span></span><br><span class="line"><span class="keyword">import</span> &#123; getAllPostIds &#125; <span class="keyword">from</span> <span class="string">&quot;../../../lib/posts&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">handler</span>(<span class="params">req, res</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> data = <span class="title function_">getAllPostIds</span>();</span><br><span class="line">  res.<span class="title function_">status</span>(<span class="number">200</span>).<span class="title function_">json</span>(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a target="_blank" rel="noopener" href="https://nextjs.org/docs/api-routes/dynamic-api-routes">动态 API 路由</a><br><a target="_blank" rel="noopener" href="https://nextjs.org/docs/api-routes/request-helpers">请求助手</a><br><a target="_blank" rel="noopener" href="https://nextjs.org/docs/api-routes/response-helpers">响应助手</a></p>
+<h2 id="部署到-Vercel"><a href="#部署到-Vercel" class="headerlink" title="部署到 Vercel"></a>部署到 Vercel</h2><p><a target="_blank" rel="noopener" href="https://nextjs.org/learn/basics/deploying-nextjs-app/deploy">官方教程</a></p>
+<h3 id="Vercel"><a href="#Vercel" class="headerlink" title="Vercel"></a>Vercel</h3><p>Next.js 和 Vercel<br>Vercel由 Next.js 的创建者制作，并为 Next.js 提供一流的支持。当您将 Next.js 应用程序部署到Vercel时，默认情况下会发生以下情况：</p>
+<p>使用静态生成和资产（JS、CSS、图像、字体等）的页面将自动从速度极快的Vercel 边缘网络提供服务。<br>使用Server-Side Rendering和API 路由的页面将自动成为孤立的Serverless Functions。这允许页面呈现和 API 请求无限扩展</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><ul>
+<li>源代码上传 github</li>
+<li>注册 Vercel</li>
+<li>[导入github项目](https :&#x2F;&#x2F;vercel.com&#x2F;import&#x2F;git)(导入时会提示安装Vercel)</li>
+</ul>
+<p>添加后vercel根据分支自动部署（相当于预配置好的git action）</p>
+<h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><ul>
+<li>创建预览分支</li>
+<li>修改并上传预览分支</li>
+<li>回到 github 仓库 会看到提示添加 Pull requests 根据提示添加 Pull requests</li>
+<li>进到新创建的 Pull requests 中可以查看预览分支 部署好的页面<br><a target="_blank" rel="noopener" href="https://bitbw.top/public/img/my_gallery/20220818112329.png">Pull requests</a></li>
+<li>预览分支没问题就可以合并到主分支了</li>
+</ul>
+<h3 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h3><p><a target="_blank" rel="noopener" href="https://vercel.com/docs/concepts/projects/custom-domains#dns-records">自定义域名</a></p>
+<ul>
+<li>进入项目setting</li>
+<li>选择域菜单项</li>
+<li>添加域名随便写个域名会提示正确的域名填写方式</li>
+<li>添加域名 （同时添加域名解析  CNAME cname.vercel-dns.com）</li>
+<li>添加预览域名 （同时添加域名解析 CNAME cname.vercel-dns.com）</li>
+</ul>
 
       
     </div>
@@ -477,7 +502,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -583,7 +608,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -695,7 +720,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -797,7 +822,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -899,7 +924,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1001,7 +1026,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1108,7 +1133,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1232,7 +1257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1341,7 +1366,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-17 10:01:45" itemprop="dateModified" datetime="2022-08-17T10:01:45+00:00">2022-08-17</time>
+      <time title="修改时间：2022-08-18 09:55:13" itemprop="dateModified" datetime="2022-08-18T09:55:13+00:00">2022-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1434,13 +1459,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">433k</span>
+    <span title="站点总字数">434k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:34</span>
+    <span title="站点阅读时长">6:35</span>
   </span>
 </div>
 <div class="busuanzi-count">
