@@ -425,3 +425,18 @@ Vercel由 Next.js 的创建者制作，并为 Next.js 提供一流的支持。�
 - 添加域名随便写个域名会提示正确的域名填写方式
 - 添加域名 （同时添加域名解析  CNAME cname.vercel-dns.com）
 - 添加预览域名 （同时添加域名解析 CNAME cname.vercel-dns.com）
+
+## 环境变量
+
+### 环境变量加载顺序
+
+环境变量按顺序在以下位置查找，一旦找到变量就停止。
+
+- process.env
+- .env.$(NODE_ENV).local
+- .env.local（未检查何时 NODE_ENV 是 test。）
+- .env.$(NODE_ENV)
+- .env
+例如，如果NODE_ENVis并且您在 and development中都定义了一个变量，则将使用in 中的值 `.env.development.local` `.env` .env.development.local
+
+注意：NODE_ENV允许的值为 production,development 和 test。
