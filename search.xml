@@ -129,6 +129,129 @@
       </tags>
   </entry>
   <entry>
+    <title>Data URI详细介绍</title>
+    <url>/2020/12/31/HTML/Data-URI%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<p>最近学习 webpack 遇到了 Data URI 这种格式，觉得很有趣稍微学习一下，转载一篇别人写的比较好的文章；</p>
+<p>原文地址：<a href="https://blog.csdn.net/qq_38128179/article/details/100663085">https://blog.csdn.net/qq_38128179/article/details/100663085</a></p>
+<h2 id="一、URI-介绍"><a href="#一、URI-介绍" class="headerlink" title="一、URI 介绍"></a>一、URI 介绍</h2><p>URI（统一资源标识符） 是 uniform resource identifier 的缩写，它定义了接受内容的协议以及附带的相关内容，如果附带的相关内容是一个地址，那么此时的 URI 也是一个 URL （uniform resource locator<code> </code>)。</p>
+<h2 id="二、什么是-data-URI-scheme？"><a href="#二、什么是-data-URI-scheme？" class="headerlink" title="二、什么是 data URI scheme？"></a>二、什么是 data URI scheme？</h2><p>Data URI scheme 简称 Data URI，经常会被<strong>错误</strong>地写成 data URLs。即前缀为 data：协议的的 URL，其允许内容创建者向文档中嵌入小文件。</p>
+<blockquote>
+<p>假设我们有一个图片需要显示在网页上</p>
+<p>1、通常我们会使用 http 链接，这种取得资料的方法称为 <strong>http URI scheme</strong>：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 从外部请求一张图片</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、使用 <strong>data URI scheme</strong> 获取资料可以写成：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 在HTML中嵌入一个小红点的图片</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">alt</span>=<span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过 data RUI scheme，我们把图像内容内置在 HTML 中，节省了一个 HTTP 请求。</p>
+</blockquote>
+<h2 id="三、Data-URI-scheme-的语法"><a href="#三、Data-URI-scheme-的语法" class="headerlink" title="三、Data URI scheme 的语法"></a>三、<strong>Data URI scheme 的语法</strong></h2><blockquote>
+<p><strong>data:①[<mime type>]②[;charset&#x3D;<charset>]③[;<encoding>]④,<encoded data>⑤</strong></p>
+</blockquote>
+<p><strong>【1】第 ① 部分 data：</strong> 协议头，它标识这个内容为一个 data URI 资源。</p>
+<p><strong>【2】第 ② 部分 MIME 类型（可选项）：</strong>浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理文档；因此服务器设置正确以将正确的 MIME 类型附加到响应对象的头部是非常重要的。MIME 类型对大小写不敏感，但是传统写法都是小写。</p>
+<table>
+<thead>
+<tr>
+<th><strong>类型</strong></th>
+<th><strong>描述</strong></th>
+<th>**示例（语法：type&#x2F;subtype 类型&#x2F;子类型****）**</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>text</td>
+<td>表明文件是普通文件，理论上是人类可读的</td>
+<td><strong>text&#x2F;plain，text&#x2F;html，text&#x2F;css，text&#x2F;javascript</strong></td>
+</tr>
+<tr>
+<td>image</td>
+<td>表明文件某种是图像文件，gif 动态图也属于 image 类型</td>
+<td><strong>image&#x2F;gif，image&#x2F;png，image&#x2F;jpeg，image&#x2F;bmp，image&#x2F;webp，image&#x2F;x-icon，image&#x2F;vnd.microsoft.icon</strong></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>表明文件是某种音频文件</td>
+<td><strong>audio&#x2F;midi，audio&#x2F;mpeg，audio&#x2F;webm，audio&#x2F;ogg，audio&#x2F;wav</strong></td>
+</tr>
+<tr>
+<td>video</td>
+<td>表明文件是某种视频文件</td>
+<td><strong>video&#x2F;webm，video&#x2F;ogg</strong></td>
+</tr>
+<tr>
+<td>application</td>
+<td>表明文件是某种二进制数据</td>
+<td><strong>application&#x2F;octet-stream，application&#x2F;pkcs12，application&#x2F;vnd.mspowerpoint，application&#x2F;xhtml+xml，application&#x2F;xml，application&#x2F;pdf</strong></td>
+</tr>
+</tbody></table>
+<p><strong>【3】第 ③ 部分 <a href="%E5%8F%AF%E9%80%89%E9%A1%B9">;charset&#x3D;<charset></a>：</strong> 源文本的字符集编码方式，默认编码是 charset&#x3D;US-ASCII, 即数据部分的每个字符都会自动编码为 %xx</p>
+<p><strong>【4】第 ④ 部分 [;<encoding>] ：</strong> 数据编码方式（默认 US-ASCII，BASE64 两种）</p>
+<p><strong>【5】第 ⑤ 部分 ,<encoded data></strong> <strong>：</strong> 编码后的数据</p>
+<blockquote>
+<p>关于 base64 可以参考阮一峰写的文章：<a href="http://www.ruanyifeng.com/blog/2008/06/base64.html">http://www.ruanyifeng.com/blog/2008/06/base64.html</a></p>
+</blockquote>
+<h2 id="四、Data-URI-scheme-的利弊"><a href="#四、Data-URI-scheme-的利弊" class="headerlink" title="四、Data URI scheme 的利弊"></a>四、<strong>Data URI scheme 的利弊</strong></h2><blockquote>
+<p><strong>利：</strong></p>
+<ul>
+<li>减少 HTTP 请求</li>
+<li>当访问外部资源很麻烦或受限时（比如服务器 ip 被墙）</li>
+<li>当图片是在服务器端用程序动态生成，每个访问用户显示的都不同时</li>
+<li>当图片的体积太小，占用一个 HTTP 会话不值得时</li>
+<li>没有图片更新要重新上传，还要清理缓存的问题</li>
+</ul>
+<p><strong>弊：</strong></p>
+<ul>
+<li>Base64 编码的数据体积通常是原数据的体积 4&#x2F;3，也就是 Data URL 形式的图片会比二进制格式的图片体积大 1&#x2F;3</li>
+<li>Data URL 形式的图片不会被浏览器缓存，这意味着每次访问页面时都被下载一次。</li>
+<li>增加了 CSS 文件的尺寸</li>
+<li>IE678 兼容性</li>
+<li>不适合 lazy loading</li>
+<li>不利于维护</li>
+<li>移动端不宜使用 Data URI 技术（解码耗 CPU）</li>
+</ul>
+</blockquote>
+<h2 id="五、Data-URI-scheme-的应用实例"><a href="#五、Data-URI-scheme-的应用实例" class="headerlink" title="五、Data URI scheme 的应用实例"></a>五、<strong>Data URI scheme 的应用实例</strong></h2><p><strong>【1】在 Html 的 Img 对象中使用</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAF...&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【2】在 Css 的 background-image 属性中使用</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.image</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAF...</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>【3】在 Html 的 css 链接处使用</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">  <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">href</span>=<span class="string">&quot;data:text/css;base64,LyogKioqKiogVGVtcGxhdGUgKioq...&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【4】在 Html 的 javaScript 链接处使用</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;data:text/javascript;base64,LyogKioqKiogVGVtcGxhdGUgKioq...&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【5】data RUI scheme 也可以直接在浏览器的地址栏中输入进行访问</strong></p>
+<p><strong>①</strong>在浏览器中输入以下的 Url，会得到一个加粗的”Hello, world!”。也就是说，data:后面的数据直接用做网页的内容，而不是网页的地址。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">data</span>: text / html,</span><br><span class="line">  (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">b</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>下面的例子会显示出 “你好，中文！”。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">data</span>:text/plain;charset=<span class="variable constant_">UTF</span>-<span class="number">8</span>;base64,5L2g5aW977yM5Lit5paH77yB</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、兼容-IE678-MHTML"><a href="#六、兼容-IE678-MHTML" class="headerlink" title="六、兼容 IE678 - MHTML"></a>六、兼容 IE678 - MHTML</h2><p>MHTML 即 MIME HTML（Multipurpose Internet Mail Extensions HyperText Markup Language），就是将 Data URI 以附件的形式附加到页面页面上，具体示例如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/** FilePath: http://example.com/test.css */</span></span><br><span class="line"><span class="comment">/*!@ignore</span></span><br><span class="line"><span class="comment">Content-Type: multipart/related; boundary=&quot;_ANY_SEPARATOR&quot;</span></span><br><span class="line"><span class="comment">--_ANY_SEPARATOR</span></span><br><span class="line"><span class="comment">Content-Location:myidBackground</span></span><br><span class="line"><span class="comment">Content-Transfer-Encoding:base64</span></span><br><span class="line"><span class="comment">iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==</span></span><br><span class="line"><span class="comment">--_ANY_SEPARATOR--</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-class">.myid</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span>);</span><br><span class="line">  *<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">mhtml:http://example.com/test.css!myidBackground</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面注释的部分就是一个附件， 这个附件的内容是一个名为 myidBackground 的 Base64 编码图片，然后在 class 为 myid 的 css 中使用。</p>
+<p>注意：1、boundary 字段值可自定义；</p>
+<p>​ 2、附件的末行必须为 boundary 字段值；</p>
+<p>​ 3、附件内容不能被压缩工具擦写掉；</p>
+<p>​ 4、由于高版本的 IE 在使用 IE8 兼容模式时能认识*这个 css hack 符号，但却不支持 mhtml，所以会导致背景图片失效。应该采用 IE 的条件注释更为稳妥。</p>
+<h2 id="七、base64-转换工具"><a href="#七、base64-转换工具" class="headerlink" title="七、base64 转换工具"></a>七、base64 转换工具</h2><p><a href="http://www.pjhome.net/web/html5/encodeDataUrl.htm">Encode Data URL </a></p>
+<p><a href="http://www.atool9.com/img2base64.php">aTool 在线工具</a></p>
+<p><a href="https://duri.me/">Duri.me</a></p>
+<p><a href="https://dataurl.sveinbjorn.org/#dataurlmaker">DATAURL</a></p>
+]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>js</tag>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker入门</title>
     <url>/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Docker%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<p>阮一峰教程：</p>
@@ -239,7 +362,7 @@
 
 <p>run build</p>
 <p><em>这一步会出现一个特别恶心的 webpack,webpack-cli 互相依赖缺失的问题，提示没有 webpack 模块，然后全局安装 webpack 模块，npm install -g webpack，这时候运行 webpack 指令，会发现缺失 webpack-cli，再次全局安装 webpack-cli，npm install -g webpack-cli，这时候运行 webpack-cli 指令，又莫名其妙的提示缺失 webpack 模块。</em></p>
-<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#119;&#101;&#98;&#112;&#97;&#99;&#107;&#64;&#51;&#x2e;&#54;&#46;&#48;">&#119;&#101;&#98;&#112;&#97;&#99;&#107;&#64;&#51;&#x2e;&#54;&#46;&#48;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
+<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#119;&#x65;&#x62;&#x70;&#x61;&#x63;&#107;&#64;&#51;&#46;&#54;&#46;&#48;">&#119;&#x65;&#x62;&#x70;&#x61;&#x63;&#107;&#64;&#51;&#46;&#54;&#46;&#48;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
 <p><em>但是有的系统如果以前全局安装过 webpack，还是会报这些相互依赖的问题，或者是环境变量导致的 webpack,webpack-cli 安装进了 node 目录，而以前有的 webpack 安装进了 C:\Users\Administrator\AppData\Roaming\npm 这个目录。解决办法就是删除 C:\Users\Administrator\AppData\Roaming\npm 目录下的 webpack。</em></p>
 <h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>然后将 build 生成的 shells 目录中的 chrome 目录拷贝出来，这个就是 build 生成的 vue-devtools 插件<br>浏览器安装容易，直接打开插件管理，切换开发模式，加载已解压插件，选择刚刚的 chrome 目录就行了。但是 electron 项目中安装会有点麻烦：</p>
 <p>找到 background.js 文件 (如果没有 background.js 找到 main&#x2F;index.js)，找到这段代码：</p>
@@ -3702,6 +3825,15 @@
 <li>添加域名 （同时添加域名解析  CNAME cname.vercel-dns.com）</li>
 <li>添加预览域名 （同时添加域名解析 CNAME cname.vercel-dns.com）</li>
 </ul>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><h3 id="环境变量加载顺序"><a href="#环境变量加载顺序" class="headerlink" title="环境变量加载顺序"></a>环境变量加载顺序</h3><p>环境变量按顺序在以下位置查找，一旦找到变量就停止。</p>
+<ul>
+<li>process.env</li>
+<li>.env.$(NODE_ENV).local</li>
+<li>.env.local（未检查何时 NODE_ENV 是 test。）</li>
+<li>.env.$(NODE_ENV)</li>
+<li>.env<br>例如，如果NODE_ENVis并且您在 and development中都定义了一个变量，则将使用in 中的值 <code>.env.development.local</code> <code>.env</code> .env.development.local</li>
+</ul>
+<p>注意：NODE_ENV允许的值为 production,development 和 test。</p>
 ]]></content>
   </entry>
   <entry>
@@ -3886,7 +4018,7 @@
 
 <h3 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add -D babel-plugin-import react-app-rewired customize-cra less less-loader@5.0.0</span><br></pre></td></tr></table></figure>
 
-<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p><a href="mailto:&#108;&#x65;&#115;&#115;&#x2d;&#108;&#x6f;&#97;&#x64;&#x65;&#x72;&#64;&#53;&#46;&#x30;&#46;&#x30;">&#108;&#x65;&#115;&#115;&#x2d;&#108;&#x6f;&#97;&#x64;&#x65;&#x72;&#64;&#53;&#46;&#x30;&#46;&#x30;</a> 下载 5.0.0 防止报错 TypeError: this.getOptions is not a function</p>
+<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p><a href="mailto:&#x6c;&#101;&#x73;&#115;&#x2d;&#108;&#111;&#x61;&#100;&#x65;&#x72;&#x40;&#x35;&#x2e;&#x30;&#46;&#48;">&#x6c;&#101;&#x73;&#115;&#x2d;&#108;&#111;&#x61;&#100;&#x65;&#x72;&#x40;&#x35;&#x2e;&#x30;&#46;&#48;</a> 下载 5.0.0 防止报错 TypeError: this.getOptions is not a function</p>
 <h4 id="修改-peckage-json"><a href="#修改-peckage-json" class="headerlink" title="修改 peckage.json"></a>修改 peckage.json</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired start&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired build&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired test&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;eject&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts eject&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="新建-config-overrides-js-文件"><a href="#新建-config-overrides-js-文件" class="headerlink" title="新建 config-overrides.js 文件"></a>新建 config-overrides.js 文件</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; override, fixBabelImports, addLessLoader &#125; = <span class="built_in">require</span>(<span class="string">&quot;customize-cra&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">override</span>(</span><br><span class="line">  <span class="title function_">fixBabelImports</span>(<span class="string">&quot;import&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">libraryName</span>: <span class="string">&quot;antd&quot;</span>,</span><br><span class="line">    <span class="attr">libraryDirectory</span>: <span class="string">&quot;es&quot;</span>,</span><br><span class="line">    <span class="attr">style</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="title function_">addLessLoader</span>(&#123;</span><br><span class="line">    <span class="attr">javascriptEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 主题</span></span><br><span class="line">    <span class="attr">modifyVars</span>: &#123; <span class="string">&quot;@primary-color&quot;</span>: <span class="string">&quot;#3acea0&quot;</span> &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -5085,7 +5217,7 @@
 <p>package.json</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// 直接复制到项目中 yarn 更新依赖</span></span><br><span class="line"><span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;babel-plugin-import&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;less&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.7.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;less-loader&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;react-app-rewired&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.2.9&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>less-loader 不要超过 5.0， react-app-rewired 不要超过 2.0.2-next.0，<a href="mailto:&#108;&#101;&#115;&#x73;&#x40;&#x32;&#x2e;&#55;&#46;&#x33;">&#108;&#101;&#115;&#x73;&#x40;&#x32;&#x2e;&#55;&#46;&#x33;</a></p>
+<p>less-loader 不要超过 5.0， react-app-rewired 不要超过 2.0.2-next.0，<a href="mailto:&#x6c;&#101;&#x73;&#x73;&#64;&#x32;&#x2e;&#x37;&#46;&#51;">&#x6c;&#101;&#x73;&#x73;&#64;&#x32;&#x2e;&#x37;&#46;&#51;</a></p>
 ]]></content>
       <categories>
         <category>React</category>
@@ -7711,7 +7843,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h2><h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>webpack 5 需要使用 npm i <a href="mailto:&#119;&#101;&#98;&#x70;&#97;&#x63;&#107;&#x2d;&#100;&#101;&#118;&#x2d;&#115;&#x65;&#x72;&#x76;&#x65;&#114;&#x40;&#52;&#x2e;&#x30;&#x2e;&#48;&#x2d;&#x62;&#x65;&#116;&#x61;&#46;&#48;">&#119;&#101;&#98;&#x70;&#97;&#x63;&#107;&#x2d;&#100;&#101;&#118;&#x2d;&#115;&#x65;&#x72;&#x76;&#x65;&#114;&#x40;&#52;&#x2e;&#x30;&#x2e;&#48;&#x2d;&#x62;&#x65;&#116;&#x61;&#46;&#48;</a></p>
+<h2 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h2><h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>webpack 5 需要使用 npm i <a href="mailto:&#x77;&#x65;&#98;&#x70;&#97;&#99;&#x6b;&#45;&#100;&#101;&#x76;&#x2d;&#x73;&#x65;&#x72;&#118;&#101;&#114;&#64;&#x34;&#46;&#48;&#46;&#x30;&#45;&#98;&#101;&#116;&#x61;&#46;&#x30;">&#x77;&#x65;&#98;&#x70;&#97;&#99;&#x6b;&#45;&#100;&#101;&#x76;&#x2d;&#x73;&#x65;&#x72;&#118;&#101;&#114;&#64;&#x34;&#46;&#48;&#46;&#x30;&#45;&#98;&#101;&#116;&#x61;&#46;&#x30;</a></p>
 <p>但是目前 4.0.0-beta.0 还不完善 文档没有更新 热模块重载不好使</p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>hot module replacement 热模块替换 &#x2F; 模块热替换</p>
 <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>一个模块发生变化，只会重新打包这一个模块（而不是打包所有模块）<br>极大提升构建速度</p>
@@ -10102,129 +10234,6 @@
       </categories>
       <tags>
         <tag>前端工程化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Data URI详细介绍</title>
-    <url>/2020/12/31/HTML/Data-URI%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/</url>
-    <content><![CDATA[<p>最近学习 webpack 遇到了 Data URI 这种格式，觉得很有趣稍微学习一下，转载一篇别人写的比较好的文章；</p>
-<p>原文地址：<a href="https://blog.csdn.net/qq_38128179/article/details/100663085">https://blog.csdn.net/qq_38128179/article/details/100663085</a></p>
-<h2 id="一、URI-介绍"><a href="#一、URI-介绍" class="headerlink" title="一、URI 介绍"></a>一、URI 介绍</h2><p>URI（统一资源标识符） 是 uniform resource identifier 的缩写，它定义了接受内容的协议以及附带的相关内容，如果附带的相关内容是一个地址，那么此时的 URI 也是一个 URL （uniform resource locator<code> </code>)。</p>
-<h2 id="二、什么是-data-URI-scheme？"><a href="#二、什么是-data-URI-scheme？" class="headerlink" title="二、什么是 data URI scheme？"></a>二、什么是 data URI scheme？</h2><p>Data URI scheme 简称 Data URI，经常会被<strong>错误</strong>地写成 data URLs。即前缀为 data：协议的的 URL，其允许内容创建者向文档中嵌入小文件。</p>
-<blockquote>
-<p>假设我们有一个图片需要显示在网页上</p>
-<p>1、通常我们会使用 http 链接，这种取得资料的方法称为 <strong>http URI scheme</strong>：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 从外部请求一张图片</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>2、使用 <strong>data URI scheme</strong> 获取资料可以写成：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 在HTML中嵌入一个小红点的图片</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">alt</span>=<span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>通过 data RUI scheme，我们把图像内容内置在 HTML 中，节省了一个 HTTP 请求。</p>
-</blockquote>
-<h2 id="三、Data-URI-scheme-的语法"><a href="#三、Data-URI-scheme-的语法" class="headerlink" title="三、Data URI scheme 的语法"></a>三、<strong>Data URI scheme 的语法</strong></h2><blockquote>
-<p><strong>data:①[<mime type>]②[;charset&#x3D;<charset>]③[;<encoding>]④,<encoded data>⑤</strong></p>
-</blockquote>
-<p><strong>【1】第 ① 部分 data：</strong> 协议头，它标识这个内容为一个 data URI 资源。</p>
-<p><strong>【2】第 ② 部分 MIME 类型（可选项）：</strong>浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理文档；因此服务器设置正确以将正确的 MIME 类型附加到响应对象的头部是非常重要的。MIME 类型对大小写不敏感，但是传统写法都是小写。</p>
-<table>
-<thead>
-<tr>
-<th><strong>类型</strong></th>
-<th><strong>描述</strong></th>
-<th>**示例（语法：type&#x2F;subtype 类型&#x2F;子类型****）**</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>text</td>
-<td>表明文件是普通文件，理论上是人类可读的</td>
-<td><strong>text&#x2F;plain，text&#x2F;html，text&#x2F;css，text&#x2F;javascript</strong></td>
-</tr>
-<tr>
-<td>image</td>
-<td>表明文件某种是图像文件，gif 动态图也属于 image 类型</td>
-<td><strong>image&#x2F;gif，image&#x2F;png，image&#x2F;jpeg，image&#x2F;bmp，image&#x2F;webp，image&#x2F;x-icon，image&#x2F;vnd.microsoft.icon</strong></td>
-</tr>
-<tr>
-<td>audio</td>
-<td>表明文件是某种音频文件</td>
-<td><strong>audio&#x2F;midi，audio&#x2F;mpeg，audio&#x2F;webm，audio&#x2F;ogg，audio&#x2F;wav</strong></td>
-</tr>
-<tr>
-<td>video</td>
-<td>表明文件是某种视频文件</td>
-<td><strong>video&#x2F;webm，video&#x2F;ogg</strong></td>
-</tr>
-<tr>
-<td>application</td>
-<td>表明文件是某种二进制数据</td>
-<td><strong>application&#x2F;octet-stream，application&#x2F;pkcs12，application&#x2F;vnd.mspowerpoint，application&#x2F;xhtml+xml，application&#x2F;xml，application&#x2F;pdf</strong></td>
-</tr>
-</tbody></table>
-<p><strong>【3】第 ③ 部分 <a href="%E5%8F%AF%E9%80%89%E9%A1%B9">;charset&#x3D;<charset></a>：</strong> 源文本的字符集编码方式，默认编码是 charset&#x3D;US-ASCII, 即数据部分的每个字符都会自动编码为 %xx</p>
-<p><strong>【4】第 ④ 部分 [;<encoding>] ：</strong> 数据编码方式（默认 US-ASCII，BASE64 两种）</p>
-<p><strong>【5】第 ⑤ 部分 ,<encoded data></strong> <strong>：</strong> 编码后的数据</p>
-<blockquote>
-<p>关于 base64 可以参考阮一峰写的文章：<a href="http://www.ruanyifeng.com/blog/2008/06/base64.html">http://www.ruanyifeng.com/blog/2008/06/base64.html</a></p>
-</blockquote>
-<h2 id="四、Data-URI-scheme-的利弊"><a href="#四、Data-URI-scheme-的利弊" class="headerlink" title="四、Data URI scheme 的利弊"></a>四、<strong>Data URI scheme 的利弊</strong></h2><blockquote>
-<p><strong>利：</strong></p>
-<ul>
-<li>减少 HTTP 请求</li>
-<li>当访问外部资源很麻烦或受限时（比如服务器 ip 被墙）</li>
-<li>当图片是在服务器端用程序动态生成，每个访问用户显示的都不同时</li>
-<li>当图片的体积太小，占用一个 HTTP 会话不值得时</li>
-<li>没有图片更新要重新上传，还要清理缓存的问题</li>
-</ul>
-<p><strong>弊：</strong></p>
-<ul>
-<li>Base64 编码的数据体积通常是原数据的体积 4&#x2F;3，也就是 Data URL 形式的图片会比二进制格式的图片体积大 1&#x2F;3</li>
-<li>Data URL 形式的图片不会被浏览器缓存，这意味着每次访问页面时都被下载一次。</li>
-<li>增加了 CSS 文件的尺寸</li>
-<li>IE678 兼容性</li>
-<li>不适合 lazy loading</li>
-<li>不利于维护</li>
-<li>移动端不宜使用 Data URI 技术（解码耗 CPU）</li>
-</ul>
-</blockquote>
-<h2 id="五、Data-URI-scheme-的应用实例"><a href="#五、Data-URI-scheme-的应用实例" class="headerlink" title="五、Data URI scheme 的应用实例"></a>五、<strong>Data URI scheme 的应用实例</strong></h2><p><strong>【1】在 Html 的 Img 对象中使用</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAF...&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>【2】在 Css 的 background-image 属性中使用</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.image</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAF...</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>【3】在 Html 的 css 链接处使用</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">  <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">href</span>=<span class="string">&quot;data:text/css;base64,LyogKioqKiogVGVtcGxhdGUgKioq...&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>【4】在 Html 的 javaScript 链接处使用</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;data:text/javascript;base64,LyogKioqKiogVGVtcGxhdGUgKioq...&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>【5】data RUI scheme 也可以直接在浏览器的地址栏中输入进行访问</strong></p>
-<p><strong>①</strong>在浏览器中输入以下的 Url，会得到一个加粗的”Hello, world!”。也就是说，data:后面的数据直接用做网页的内容，而不是网页的地址。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">data</span>: text / html,</span><br><span class="line">  (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">b</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
-
-<p><strong>②</strong>下面的例子会显示出 “你好，中文！”。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">data</span>:text/plain;charset=<span class="variable constant_">UTF</span>-<span class="number">8</span>;base64,5L2g5aW977yM5Lit5paH77yB</span><br></pre></td></tr></table></figure>
-
-<h2 id="六、兼容-IE678-MHTML"><a href="#六、兼容-IE678-MHTML" class="headerlink" title="六、兼容 IE678 - MHTML"></a>六、兼容 IE678 - MHTML</h2><p>MHTML 即 MIME HTML（Multipurpose Internet Mail Extensions HyperText Markup Language），就是将 Data URI 以附件的形式附加到页面页面上，具体示例如下：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/** FilePath: http://example.com/test.css */</span></span><br><span class="line"><span class="comment">/*!@ignore</span></span><br><span class="line"><span class="comment">Content-Type: multipart/related; boundary=&quot;_ANY_SEPARATOR&quot;</span></span><br><span class="line"><span class="comment">--_ANY_SEPARATOR</span></span><br><span class="line"><span class="comment">Content-Location:myidBackground</span></span><br><span class="line"><span class="comment">Content-Transfer-Encoding:base64</span></span><br><span class="line"><span class="comment">iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==</span></span><br><span class="line"><span class="comment">--_ANY_SEPARATOR--</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-class">.myid</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span>);</span><br><span class="line">  *<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">mhtml:http://example.com/test.css!myidBackground</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面注释的部分就是一个附件， 这个附件的内容是一个名为 myidBackground 的 Base64 编码图片，然后在 class 为 myid 的 css 中使用。</p>
-<p>注意：1、boundary 字段值可自定义；</p>
-<p>​ 2、附件的末行必须为 boundary 字段值；</p>
-<p>​ 3、附件内容不能被压缩工具擦写掉；</p>
-<p>​ 4、由于高版本的 IE 在使用 IE8 兼容模式时能认识*这个 css hack 符号，但却不支持 mhtml，所以会导致背景图片失效。应该采用 IE 的条件注释更为稳妥。</p>
-<h2 id="七、base64-转换工具"><a href="#七、base64-转换工具" class="headerlink" title="七、base64 转换工具"></a>七、base64 转换工具</h2><p><a href="http://www.pjhome.net/web/html5/encodeDataUrl.htm">Encode Data URL </a></p>
-<p><a href="http://www.atool9.com/img2base64.php">aTool 在线工具</a></p>
-<p><a href="https://duri.me/">Duri.me</a></p>
-<p><a href="https://dataurl.sveinbjorn.org/#dataurlmaker">DATAURL</a></p>
-]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>js</tag>
-        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
