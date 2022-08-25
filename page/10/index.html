@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">133</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,129 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/30/CSS/CSS%E9%87%8C%E7%9A%84pointer-events%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/30/CSS/CSS%E9%87%8C%E7%9A%84pointer-events%E5%B1%9E%E6%80%A7/" class="post-title-link" itemprop="url">CSS里的pointer-events属性</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-30 09:57:22" itemprop="dateCreated datePublished" datetime="2020-12-30T09:57:22+00:00">2020-12-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>990</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="因为-pointer-events-出现的问题"><a href="#因为-pointer-events-出现的问题" class="headerlink" title="因为 pointer-events 出现的问题"></a>因为 pointer-events 出现的问题</h2><p>在 Vuetify 项目中，因为在 input 中使用了 tooltip ，意愿是文字溢出隐藏显示… ,</p>
+<p>但 input 在 disabled 的状态内部文字的 tooptip 居然不显示了</p>
+<p>在控制台发现了这个样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.v-input--is-disabled</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.v-input--is-readonly</span>) &#123;</span><br><span class="line">  <span class="attribute">pointer-events</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>pointer-events: none; 这个很不常用， 下面看下这个属性具体是干什么的 <a target="_blank" rel="noopener" href="https://www.webhek.com/post/pointer-events.html">原文</a></p>
+<h2 id="pointer-events"><a href="#pointer-events" class="headerlink" title="pointer-events"></a>pointer-events</h2><p>现代浏览器里 CSS 的职责范围和 JavaScript 的越来越模糊分不清。比如 CSS 里<code>-webkit-touch-callout</code>属性在 iOS 里能禁止当用户点击时弹出气泡框。而本文要说的<code>pointer-events</code>的风格更像 JavaScript，它能够：</p>
+<ul>
+<li>阻止用户的点击动作产生任何效果</li>
+<li>阻止缺省鼠标指针的显示</li>
+<li>阻止 CSS 里的<code>hover</code>和<code>active</code>状态的变化触发事件</li>
+<li>阻止 JavaScript 点击动作触发的事件</li>
+</ul>
+<p>一个 CSS 属性能做所有的这么多事情！</p>
+<h3 id="The-CSS"><a href="#The-CSS" class="headerlink" title="The CSS"></a>The CSS</h3><p>这个<code>pointer-events</code>属性有很多可以使用的属性值，但大部分都是针对 SVG 的：<code>auto</code>, <code>none</code>, <code>visiblePainted*</code>, <code>visibleFill*</code>, <code>visibleStroke*</code>, <code>visible*</code>, <code>painted*</code>, <code>fill*</code>, <code>stroke*</code>, <code>all*</code>, 以及 <code>inherit</code>。其中<code>none</code>值能阻止点击、状态变化和鼠标指针变化：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.disabled</span> &#123;</span><br><span class="line">  <span class="attribute">pointer-events</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一些需要注意的关于<code>pointer-events</code>的事项：</p>
+<ul>
+<li>子元素可以声明<code>pointer-events</code>来解禁父元素的阻止鼠标事件限制。</li>
+<li>如果你对一个元素设置了 click 事件监听器，然后你移除了<code>pointer-events</code>样式声明，或把它的值改变为<code>auto</code>，监听器会重新生效。基本上，监听器会遵守<code>pointer-events</code>的设定。</li>
+</ul>
+<h2 id="处理问题"><a href="#处理问题" class="headerlink" title="处理问题"></a>处理问题</h2><p>为了只让 tooltip 显示，而 input 的本身的禁用还在，可以直接在 tooltip 中的显示文字上添加 pointer-events: auto; 即可</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 内容部分</span></span><br><span class="line"><span class="selector-class">.tooltip-default-text</span> &#123;</span><br><span class="line">  <span class="attribute">pointer-events</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +405,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -395,7 +518,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -680,7 +803,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -789,7 +912,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -930,7 +1053,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1156,7 +1279,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1267,7 +1390,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1286,14 +1409,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>3.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -1304,15 +1427,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>不推荐安装最新的 node 版本 好多包都没有对应的最新 node 版本的编译好的包</p>
+          <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fireblackman/p/15688513.html">ubuntu 安装 node 的三种方式</a></p>
+<blockquote>
+<p>不推荐安装最新的 node 版本 好多 npm 包都没有对应的最新 node 版本的编译好的包</p>
 </blockquote>
 <h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul>
 <li>本机系统：CentOS Linux release 7.5</li>
 <li>Node.js：v12.18.1</li>
 </ul>
 <h2 id="获取-Node-js-安装包"><a href="#获取-Node-js-安装包" class="headerlink" title="获取 Node.js 安装包"></a>获取 Node.js 安装包</h2><ul>
-<li>Node.js 安装包及源码下载地址为：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/%EF%BC%8C%E4%BD%A0%E5%8F%AF%E4%BB%A5%E6%A0%B9%E6%8D%AE%E4%B8%8D%E5%90%8C%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9A%84">https://nodejs.org/en/download/，你可以根据不同平台系统选择你需要的</a> Node.js 安装包，这里选择的是 [LTS] Linux Binaries (x64)。</li>
+<li>Node.js 安装包及源码下载地址为：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>，你可以根据不同平台系统选择你需要的 Node.js 安装包，这里选择的是 [LTS] Linux Binaries (x64)。</li>
 <li>官方下载地址 <a target="_blank" rel="noopener" href="https://nodejs.org/dist/latest-v12.x/">https://nodejs.org/dist/latest-v12.x/</a></li>
 </ul>
 <h2 id="Linux-上安装-Node-js"><a href="#Linux-上安装-Node-js" class="headerlink" title="Linux 上安装 Node.js"></a>Linux 上安装 Node.js</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-x64.tar.xz    // 下载</span><br><span class="line">tar xf node-v12.18.1-linux-x64.tar.xz                                   // 解压</span><br><span class="line"><span class="built_in">cd</span> node-v12.18.1-linux-x64                                              // 进入解压目录</span><br></pre></td></tr></table></figure>
@@ -1362,6 +1486,15 @@
 
 <p>卸载完成！</p>
 <p>现在如果需要其他版本的 node ，就可以按上面的步骤从新安装一个其他版本的 node 了</p>
+<h2 id="ubuntu-安装-node-的三种方式"><a href="#ubuntu-安装-node-的三种方式" class="headerlink" title="ubuntu 安装 node 的三种方式"></a>ubuntu 安装 node 的三种方式</h2><h3 id="直接使用ubuntu软件源安装"><a href="#直接使用ubuntu软件源安装" class="headerlink" title="直接使用ubuntu软件源安装"></a>直接使用ubuntu软件源安装</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> apt update</span><br><span class="line"><span class="attribute">sudo</span> apt install nodejs npm</span><br><span class="line"><span class="attribute">nodejs</span> --version</span><br><span class="line"><span class="attribute">v10</span>.<span class="number">19</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">npm</span> -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="从nodesource安装nodejs和npm"><a href="#从nodesource安装nodejs和npm" class="headerlink" title="从nodesource安装nodejs和npm"></a>从nodesource安装nodejs和npm</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装仓库</span></span><br><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/nodesource/</span>distributions</span><br><span class="line">Installation instructions</span><br><span class="line">Node.js v17.x:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_17.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_17.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line">Node.js v16.x:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_16.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_16.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line">Node.js v14.x:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_14.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_14.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line">Node.js v12.x:</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_12.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_12.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line">Node.js LTS (v16.x):</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_lts.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_lts.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line">Node.js Current (v17.x):</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Ubuntu</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_current.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Using Debian, as root</span></span><br><span class="line">curl -fsSL https:<span class="regexp">//</span>deb.nodesource.com/setup_current.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line">Optional: install build tools</span><br><span class="line"></span><br><span class="line">To compile and install native addons from npm you may also need to install build tools:</span><br><span class="line"></span><br><span class="line"><span class="comment"># use `sudo` on Ubuntu or run this as root on debian</span></span><br><span class="line">apt-get install -y build-essential</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="nvm安装"><a href="#nvm安装" class="headerlink" title="nvm安装"></a>nvm安装</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过脚本安装</span></span><br><span class="line">curl -o- https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/nvm-sh/</span>nvm<span class="regexp">/v0.39.0/i</span>nstall.sh | bash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim .bashrc</span><br><span class="line"><span class="comment"># 添加如下代码</span></span><br><span class="line"><span class="built_in">export</span> NVM_DIR=<span class="string">&quot;<span class="subst">$([ -z <span class="string">&quot;<span class="variable">$&#123;XDG_CONFIG_HOME-&#125;</span>&quot;</span> ] &amp;&amp; printf %s <span class="string">&quot;<span class="variable">$&#123;HOME&#125;</span>/.nvm&quot;</span> || printf %s <span class="string">&quot;<span class="variable">$&#123;XDG_CONFIG_HOME&#125;</span>/nvm&quot;</span>)</span>&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> <span class="comment"># This loads nvm# 保存退出后，执行下面命令让配置生效source .bashrc</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">master<span class="variable">@master</span><span class="symbol">:~</span><span class="variable">$ </span>nvm -v</span><br><span class="line"><span class="number">0.39</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1424,7 +1557,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1537,7 +1670,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1797,190 +1930,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/09/16/Vue/Vue%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/09/16/Vue/Vue%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">Vue常见问题汇总</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-09-16 11:34:54" itemprop="dateCreated datePublished" datetime="2020-09-16T11:34:54+00:00">2020-09-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h2><blockquote>
-<p>这篇文章是我在工作中使用 vue 遇到的问题做的简单汇总，希望能对看到这篇文章的你有所帮助</p>
-</blockquote>
-<h3 id="对象数组-响应式所引发的问题"><a href="#对象数组-响应式所引发的问题" class="headerlink" title="对象数组 响应式所引发的问题"></a>对象数组 响应式所引发的问题</h3><h4 id="对于对象"><a href="#对于对象" class="headerlink" title="对于对象"></a>对于对象</h4><p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/guide/reactivity.html#%E5%AF%B9%E4%BA%8E%E5%AF%B9%E8%B1%A1">官方文档</a></p>
-<p> Vue 无法检测 property 的添加或移除。由于 Vue 会在初始化实例时对 property 执行 getter&#x2F;setter （defineProperty）转化，所以 property 必须在 data 对象上存在才能让 Vue 将它转换为响应式的</p>
-<h5 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vm.$set(obj,<span class="string">&quot;key&quot;</span>,value)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">obj</span> = &#123;...vm.<span class="property">obj</span>,<span class="attr">key</span>:value&#125;</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">obj</span> = <span class="title class_">Object</span>.<span class="title function_">assgin</span>(&#123;&#125;,vm.<span class="property">obj</span>,&#123;<span class="attr">key</span>:value&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="对于数组"><a href="#对于数组" class="headerlink" title="对于数组"></a>对于数组</h4><p>Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：</p>
-<p>push()<br>pop()<br>shift()<br>unshift()<br>splice()<br>sort()<br>reverse()</p>
-<p>Vue 不能检测以下数组的变动：</p>
-<p>当你利用索引直接设置一个数组项时，例如：vm.items[indexOfItem] &#x3D; newValue<br>当你修改数组的长度时，例如：vm.items.length &#x3D; newLength</p>
-<h5 id="解决-1"><a href="#解决-1" class="headerlink" title="解决"></a>解决</h5><p>修改数组某一项</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vm.$set(vm.<span class="property">items</span>, indexOfItem, newValue)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">items</span>.<span class="title function_">splice</span>(indexOfItem, <span class="number">1</span>, newValue)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>修改数组长度</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vm.<span class="property">items</span>.<span class="title function_">splice</span>(newLength)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">vm.<span class="property">items</span> = vm.<span class="property">items</span>.<span class="title function_">slice</span>(<span class="number">0</span>,newLength)</span><br></pre></td></tr></table></figure>
-
-<h4 id="vue-中给数组中的对象-添加新属性属性"><a href="#vue-中给数组中的对象-添加新属性属性" class="headerlink" title="vue 中给数组中的对象,添加新属性属性"></a>vue 中给数组中的对象,添加新属性属性</h4><p>不能使用直接遍历设置的方法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">  item.<span class="property">key</span> = value;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h5 id="解决-2"><a href="#解决-2" class="headerlink" title="解决"></a>解决</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">forEach</span>(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">this</span>.$set(<span class="variable language_">this</span>.<span class="property">items</span>, index, &#123; ...item, ...&#123; <span class="attr">key</span>:value &#125; &#125;);</span><br><span class="line">  <span class="comment">//或者</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">splice</span>(index, <span class="number">1</span>, &#123; ...item, ...&#123; <span class="attr">key</span>:value &#125; &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">items</span> = <span class="variable language_">this</span>.<span class="property">items</span>.<span class="title function_">map</span>( <span class="function"><span class="params">item</span> =&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123; ...item, ...&#123; <span class="attr">key</span>:value &#125; &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>tip 修改数组中的属性 直接修改即可 数组中的对象同外层对象的响应方式</p>
-</blockquote>
-<h3 id="v-if-使用时注意-vue-会将一样的元素复用-需要加-key-解决"><a href="#v-if-使用时注意-vue-会将一样的元素复用-需要加-key-解决" class="headerlink" title="v-if 使用时注意 vue 会将一样的元素复用 需要加 key 解决"></a>v-if 使用时注意 vue 会将一样的元素复用 需要加 key 解决</h3><blockquote>
-<p>在下面的案例中 即使渲染出返回按钮 因为下面的每个 else 元素都一样 但是返回依然不现实 因为复用了下面的元素样式 display: none; 需要在不需要复用的元素上加 key 解决</p>
-</blockquote>
-<p><a href="%5Bhttps://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0%5D(https://cn.vuejs.org/v2/guide/conditional.html#%E7%94%A8-key-%E7%AE%A1%E7%90%86%E5%8F%AF%E5%A4%8D%E7%94%A8%E7%9A%84%E5%85%83%E7%B4%A0)">vue 原文链接</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;top-button&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;isView&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;isView = false&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-back&quot;</span>&gt;</span>返回<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;top-button&quot;</span> <span class="attr">v-else-if</span>=<span class="string">&quot;isEdit === false&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onNewPayment&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-add&quot;</span> <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>新建&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">   <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-xinchou-fabu&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">plain</span></span></span><br><span class="line"><span class="tag">   @<span class="attr">click</span>=<span class="string">&quot;onPublish(true)&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>发布&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">   <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-xinchou-quxiaofabu&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">plain</span></span></span><br><span class="line"><span class="tag">   @<span class="attr">click</span>=<span class="string">&quot;onPublish(false)&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>取消发布&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onClickCancelPublish&quot;</span> <span class="attr">v-btn:edit</span>=<span class="string">&quot;$route.query&quot;</span>&gt;</span>设置启动时间<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">   <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">plain</span></span></span><br><span class="line"><span class="tag">   @<span class="attr">click</span>=<span class="string">&quot;$refs.changeLogDialog.open(currentNode.data.id, false)&quot;</span></span></span><br><span class="line"><span class="tag">   <span class="attr">v-btn:view</span>=<span class="string">&quot;$route.query&quot;</span></span></span><br><span class="line"><span class="tag">   &gt;</span>查看变更记录&lt;/el-button</span><br><span class="line">  &gt;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;top-button&quot;</span> <span class="attr">v-else-if</span>=<span class="string">&quot;isEdit&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onEditSave&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-save&quot;</span>&gt;</span>保存<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">plain</span> @<span class="attr">click</span>=<span class="string">&quot;onEditCancel&quot;</span> <span class="attr">icon</span>=<span class="string">&quot;iconfont iconfont-hcm-delete&quot;</span>&gt;</span>取消<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-header</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="vue-样式：scoped-使用"><a href="#vue-样式：scoped-使用" class="headerlink" title="vue 样式：scoped 使用"></a>vue 样式：scoped 使用</h3><h4 id="深度作用选择器"><a href="#深度作用选择器" class="headerlink" title="深度作用选择器"></a>深度作用选择器</h4><p>如果你希望 <code>scoped</code> 样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用 <code>&gt;&gt;&gt;</code> 操作符：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.a</span> &gt;&gt;&gt; <span class="selector-class">.b</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="comment">/* ... */</span></span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>上述代码将会编译成：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span><span class="selector-attr">[data-v-f3f3eg9]</span> <span class="selector-class">.b</span> &#123;</span><br><span class="line">  <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><blockquote>
-<p>注意点：如果子组件dom不在父组件内部 例如：dialog组件, 通过深度作用选择器也不会生效<br>这时需要通过 全局样式即去除 scoped  + 子组件calss  + 选择器 来实现</p>
-</blockquote>
-<p>有些像 Sass 之类的预处理器无法正确解析 <code>&gt;&gt;&gt;</code>。这种情况下你可以使用 <code>/deep/</code> 或 <code>::v-deep</code> 操作符取而代之——两者都是 <code>&gt;&gt;&gt;</code> 的别名，同样可以正常工作。</p>
-<p>参考： <a href="%5Bhttps://vue-loader.vuejs.org/zh/guide/scoped-css.html#%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8%5D(https://vue-loader.vuejs.org/zh/guide/scoped-css.html#%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8)">vue-loader 官方文档-深度作用选择器</a></p>
-<h3 id="Vue-中的-v-bind-使用问题"><a href="#Vue-中的-v-bind-使用问题" class="headerlink" title="Vue 中的 v-bind 使用问题"></a>Vue 中的 v-bind 使用问题</h3><blockquote>
-<p>在 vue 中使用 v-bind 绑定对象时 需要注意 ：v-bind 绑定值不会覆盖之前的属性</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;test&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:disabled</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;&#123; disabled: true, class: &#x27;test3&#x27; &#125;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 上面的代码disabled显示的还是false 但是class可以进行合并 显示：class=&quot;test test3&quot; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;test&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:class</span>=<span class="string">&quot;&#x27;test2&#x27;&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:disabled</span>=<span class="string">&quot;false&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-bind</span>=<span class="string">&quot;&#123; disabled: true, class: &#x27;test3&#x27; &#125;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br><span class="line"><span class="comment">&lt;!--注意： class 只能合并一次  最后显示 class=&quot;test test2&quot;--&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="模板-v-bind-绑定值的变量名为-class-报-‘v-bind’-directives-require-an-attribute-value-eslint"><a href="#模板-v-bind-绑定值的变量名为-class-报-‘v-bind’-directives-require-an-attribute-value-eslint" class="headerlink" title="模板 v-bind 绑定值的变量名为 class 报 ‘v-bind’ directives require an attribute value.eslint"></a>模板 v-bind 绑定值的变量名为 class 报 ‘v-bind’ directives require an attribute value.eslint</h4><blockquote>
-<p>在模板中绑定的名称不要用 class 作为命名 否则 eslint 会报’v-bind’ directives require an attribute value.eslint</p>
-</blockquote>
-<blockquote>
-<p>$attrs 可以获取任何绑定在组件上的属性 但（ <code>porp</code>中的属性和 <code>class</code> 和 <code>style</code> 除外）</p>
-</blockquote>
-<h3 id="vue-property-decorator-注意事项（ts-项目中）"><a href="#vue-property-decorator-注意事项（ts-项目中）" class="headerlink" title="vue-property-decorator 注意事项（ts 项目中）"></a>vue-property-decorator 注意事项（ts 项目中）</h3><p>介绍链接[<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000019906321]">https://segmentfault.com/a/1190000019906321]</a></p>
-<h4 id="1-新建组件必须加-Component-否则组件会怎样都不现实"><a href="#1-新建组件必须加-Component-否则组件会怎样都不现实" class="headerlink" title="1.新建组件必须加@Component 否则组件会怎样都不现实"></a>1.新建组件必须加@Component 否则组件会怎样都不现实</h4><h3 id="router-传参-注意事项"><a href="#router-传参-注意事项" class="headerlink" title="router 传参 注意事项"></a>router 传参 注意事项</h3><blockquote>
-<p>路由传参 query 和 params 显示到地址栏形式的 注意 不要超长 ，否则浏览器会报 413 错误 ， 传参需要按需传送</p>
-</blockquote>
-<h3 id="prop-中默认值返回空对象"><a href="#prop-中默认值返回空对象" class="headerlink" title="prop 中默认值返回空对象"></a>prop 中默认值返回空对象</h3><p>prop 中 default 默认值 返回对象或数组需要使用工厂函数 ，一般我们都会用箭头函数简写</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">props</span>: &#123;</span><br><span class="line">  <span class="attr">defaultText</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">Array</span>,</span><br><span class="line">    <span class="attr">default</span>: <span class="function">()=&gt;</span> []    <span class="comment">// 工厂函数返回空数组</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 错误写法</span></span><br><span class="line">  <span class="attr">defaultAttrs</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">    <span class="attr">default</span>: <span class="function">()=&gt;</span> &#123;&#125;    <span class="comment">// 但是返回空对象就不能直接=&gt;&#123;&#125; 这样就代表函数的块级作用域了 会报错</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 正确写法</span></span><br><span class="line">   <span class="attr">defaultAttrs</span>: &#123;</span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">Object</span>,</span><br><span class="line">    <span class="attr">default</span>: <span class="function">()=&gt;</span> (&#123;&#125;)    <span class="comment">// 在&#123;&#125;外面包一层()即可</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用-v-on-x3D-”-listeners”-的注意事项"><a href="#使用-v-on-x3D-”-listeners”-的注意事项" class="headerlink" title="使用 v-on&#x3D;”$listeners” 的注意事项"></a>使用 v-on&#x3D;”$listeners” 的注意事项</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p> 内部使用了 v-on&#x3D;”$listeners” 的组件事件被重复调用</p>
-<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>这里有个 Father 组件</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">v-on</span>=<span class="string">&quot;$listeners&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;$emit(&#x27;click&#x27;)&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Child组件上用$listeners接收外部传入的所有事件 同时有独立 click 绑定</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Father</span> @<span class="attr">click</span>=<span class="string">&quot;onClick&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">Father</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Father 组件上 绑定  onClick  </p>
-<h5 id="行为"><a href="#行为" class="headerlink" title="行为"></a>行为</h5><p>此时触发 Child组件的 click 事件</p>
-<h5 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h5><p>onClick事件被触发 2 次</p>
-<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>$listeners 中 click 和  单独绑定的 click 都被掉用了<br>我们在 Father 的 created中看一下 $listeners</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">$listeners</span>  <span class="comment">// &#123; click: ƒ, input: ƒ&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h5><p>Father.$listeners.click 直接被绑到了 Child 上  @click 也被绑定到到了 Child 上<br>Child click 被触发<br>1 调用 Father.$listeners.click  （也就是onClick）<br>2 调用 @click -&gt; 触发 $emit(‘click’) -&gt; 调用 onClick</p>
-<h4 id="解决-3"><a href="#解决-3" class="headerlink" title="解决"></a>解决</h4><p>v-on&#x3D;”$listeners” 同时又想自己绑定一些事件的情况 防止重复调用 可以使用合并事件的方式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">v-on</span>=<span class="string">&quot;listeners&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Father&quot;</span>,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">Child</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    <span class="title function_">listeners</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...<span class="variable language_">this</span>.<span class="property">$listeners</span>,</span><br><span class="line">        <span class="comment">// 用下面 click 覆盖  this.$listeners.click</span></span><br><span class="line">        <span class="attr">click</span>: <span class="function">() =&gt;</span> <span class="variable language_">this</span>.$emit(<span class="string">&quot;click&quot;</span>),</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h4 id="注意点-attrs-不会出现这种情况"><a href="#注意点-attrs-不会出现这种情况" class="headerlink" title="注意点 $attrs 不会出现这种情况"></a>注意点 $attrs 不会出现这种情况</h4><blockquote>
-<p>$attrs 包含了父作用域中不作为 prop 被识别 (且获取) 的 attribute 绑定 (class 和 style 除外)</p>
-</blockquote>
-<p>意味着 prop中的属性 就不会出现在 $attrs 中 ，导致重复出现</p>
-<h4 id="Vue3-去除了-listeners"><a href="#Vue3-去除了-listeners" class="headerlink" title="Vue3 去除了$listeners"></a>Vue3 去除了$listeners</h4><p>vue3 中去除了 $listeners 统一在 $attrs 中</p>
-<p>并且 添加了 emits ，同 props 用法类似， 是用于定义需要触发的事件的</p>
-<p>在 emits 和 props 定义的属性 都不会在 $attrs 中出现 ，这意味的不会出现多次调用的可能 ！ vue3是挺好！😏</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -2005,13 +1954,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">434k</span>
+    <span title="站点总字数">437k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:35</span>
+    <span title="站点阅读时长">6:38</span>
   </span>
 </div>
 <div class="busuanzi-count">

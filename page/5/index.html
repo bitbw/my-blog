@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">133</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,163 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Jenkins%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Jenkins%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">Jenkins的使用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-02 10:24:03" itemprop="dateCreated datePublished" datetime="2021-07-02T10:24:03+00:00">2021-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">工具使用</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><p><a target="_blank" rel="noopener" href="https://www.likecs.com/show-103109.html">https://www.likecs.com/show-103109.html</a></p>
+<h3 id="war-包"><a href="#war-包" class="headerlink" title="war 包"></a>war 包</h3><blockquote>
+<p>前提：需要 java 环境</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar ./jenkins.war(jenkins.war文件的路径) --Port=8080（端口）</span><br></pre></td></tr></table></figure>
+
+<h2 id="基于-node-环境构建-react-或-vue-项目"><a href="#基于-node-环境构建-react-或-vue-项目" class="headerlink" title="基于 node 环境构建 react 或 vue 项目"></a>基于 node 环境构建 react 或 vue 项目</h2><p>官方教程：<a target="_blank" rel="noopener" href="https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/">https://www.jenkins.io/zh/doc/tutorials/build-a-node-js-and-react-app-with-npm/</a></p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="Docker-在-WSL，windows-下出现-Cannot-connect-to-the-Docker-daemon-at-unix-x2F-x2F-x2F-var-x2F-run-x2F-docker-sock-问题"><a href="#Docker-在-WSL，windows-下出现-Cannot-connect-to-the-Docker-daemon-at-unix-x2F-x2F-x2F-var-x2F-run-x2F-docker-sock-问题" class="headerlink" title="Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock 问题"></a>Docker 在 WSL，windows 下出现:Cannot connect to the Docker daemon at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock 问题</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48031922/article/details/116529198">https://blog.csdn.net/weixin_48031922/article/details/116529198</a></p>
+<p>ps：</p>
+<p>-v &#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock \</p>
+<p>上面这条命令是使容器内系统，可以直接使用当前运行容器的系统的 docker</p>
+<p>也就是说 在容器内使用 <code>docker ps -a </code>可以看到当前系统中所有运行的容器，包括当前容器本身</p>
+<blockquote>
+<p>最佳解决方案是直接在 ubutun 子系统中使用，docker run …</p>
+<p>&#x2F;var&#x2F;run&#x2F;docker.sock:&#x2F;var&#x2F;run&#x2F;docker.sock 就不会出现错误 ，win 上我实在不知道 &#x2F;var&#x2F;run&#x2F;docker.sock 在哪</p>
+</blockquote>
+<h4 id="出现-WorkflowScript-3-Invalid-agent-type-“docker”-specified"><a href="#出现-WorkflowScript-3-Invalid-agent-type-“docker”-specified" class="headerlink" title="出现 WorkflowScript: 3: Invalid agent type “docker” specified"></a>出现 WorkflowScript: 3: Invalid agent type “docker” specified</h4><p>下载 <code>Docker Pipeline</code> 插件 即可解决</p>
+<h2 id="使用流水线语法实现构建后上传服务器"><a href="#使用流水线语法实现构建后上传服务器" class="headerlink" title="使用流水线语法实现构建后上传服务器"></a>使用流水线语法实现构建后上传服务器</h2><p>基于这篇文章：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wangzan18/article/details/105864373/">https://blog.csdn.net/wangzan18/article/details/105864373/</a></p>
+<h3 id="sshPublisher-文档："><a href="#sshPublisher-文档：" class="headerlink" title="sshPublisher 文档："></a>sshPublisher 文档：</h3><p><a target="_blank" rel="noopener" href="https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20send%20build%20artifacts%20over%20ssh">https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/#-sshpublisher-%20send%20build%20artifacts%20over%20ssh</a></p>
+<h3 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h3><h4 id="Publish-over-SSH-插件-，"><a href="#Publish-over-SSH-插件-，" class="headerlink" title="Publish over SSH 插件 ，"></a><strong>Publish over SSH</strong> 插件 ，</h4><p>配置 <strong>Publish over SSH</strong></p>
+<p>系统管理-&gt;系统配置-&gt;Publish over SSH</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/Publish%20over%20SSH%E9%85%8D%E7%BD%AE.png" alt="配置 **Publish over SSH** "></p>
+<p>ps:</p>
+<p>这里配置的私钥就是使用 ssh 免密登录时生成的私钥</p>
+<p>全部了解 ssh 见 我的文章 Linux 命令入门 <a href="https://blog.bitbw.top/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/">https://blog.bitbw.top/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/</a></p>
+<h4 id="免密码登录"><a href="#免密码登录" class="headerlink" title="免密码登录"></a>免密码登录</h4><h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><ul>
+<li>配置公钥<ul>
+<li>执行 <code>ssh-keygen</code> 即可生成 SSH 钥匙，一路回车即可</li>
+</ul>
+</li>
+<li>上传公钥到服务器<ul>
+<li>执行 <code>ssh-copy-id -p port user@remote</code>，可以让远程服务器记住我们的公钥</li>
+<li>上传后的公钥在远端用户家目录下<code>.ssh</code>文件夹 <code>authorized_keys</code> 中</li>
+</ul>
+</li>
+</ul>
+<p>执行<code>ssh-keygen</code>后会在当前用户家目录下生成<code>.ssh</code>文件夹</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> <span class="built_in">cd</span> .ssh/</span><br><span class="line"> ll</span><br><span class="line"><span class="comment">#total 20</span></span><br><span class="line"><span class="comment">#drwx------  2 bowen bowen 4096 Aug  2 14:34 ./</span></span><br><span class="line"><span class="comment">#drwxr-xr-x 13 bowen bowen 4096 Aug  4 09:24 ../</span></span><br><span class="line"><span class="comment">#-rw-------  1 bowen bowen 3243 Aug  2 14:32 id_rsa</span></span><br><span class="line"><span class="comment">#-rw-r--r--  1 bowen bowen  747 Aug  2 14:32 id_rsa.pub</span></span><br><span class="line"><span class="comment">#-rw-r--r--  1 bowen bowen  222 Aug  2 13:43 known_hosts</span></span><br></pre></td></tr></table></figure>
+
+<p>id_rsa 就是私钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> id_rsa</span><br></pre></td></tr></table></figure>
+
+<p>全部复制放到 key 字段中</p>
+<h4 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h4><h5 id="测试连接报错：jenkins-plugins-publish-over-BapPublisherException-Failed-to-add-SSH-key"><a href="#测试连接报错：jenkins-plugins-publish-over-BapPublisherException-Failed-to-add-SSH-key" class="headerlink" title="测试连接报错：jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key"></a>测试连接报错：jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key</h5><p>解决：<a target="_blank" rel="noopener" href="http://www.wallcopper.com/linux/3689.htmljenkins">http://www.wallcopper.com/linux/3689.htmljenkins</a></p>
+<p>无密码 ssh 时报错:jenkins.plugins.publish_over.BapPublisherException: Failed to add SSH key. Message [invalid privatekey: [B@6a581993]<br>com.jcraft.jsch.JSchException: invalid privatekey, 部分库（如：JSch）不支持 OPENSSH PRIVATE KEY 格式的私钥</p>
+<p>1、jenkins 使用 <code>ssh-keygen -m PEM -t rsa -b 4096</code> 来生成 key 就可以用了。<br>-m 参数指定密钥的格式，PEM（也就是 RSA 格式）是之前使用的旧格式</p>
+<h5 id="ssh-copy-id-上传时报：IT-IS-POSSIBLE-THAT-SOMEONE-IS-DOING-SOMETHING-NASTY"><a href="#ssh-copy-id-上传时报：IT-IS-POSSIBLE-THAT-SOMEONE-IS-DOING-SOMETHING-NASTY" class="headerlink" title="ssh-copy-id 上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!"></a>ssh-copy-id 上传时报：IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!</h5><p>解决：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44545265/article/details/88362272">https://blog.csdn.net/weixin_44545265/article/details/88362272</a></p>
+<p>文件传输不过去，只需要删除.ssh 目录下的 known_hosts 文件就能传输了<br><code>[root@xx]# rm -rf ~/.ssh/known_hosts</code></p>
+<h4 id="我的-jenkinsfile"><a href="#我的-jenkinsfile" class="headerlink" title="我的 jenkinsfile"></a>我的 jenkinsfile</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">    agent &#123;</span><br><span class="line">        docker &#123;</span><br><span class="line">            image <span class="string">&#x27;node:12-alpine&#x27;</span></span><br><span class="line">            args <span class="string">&#x27;-p 3000:3000&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    stages &#123;</span><br><span class="line">        <span class="title function_ invoke__">stage</span>(<span class="string">&#x27;Build&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                sh <span class="string">&#x27;npm install&#x27;</span></span><br><span class="line">                sh <span class="string">&#x27;npm run buildtest&#x27;</span></span><br><span class="line">                sh <span class="string">&#x27;ls -lha&#x27;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">	<span class="title function_ invoke__">stage</span>(<span class="string">&#x27;Deploy&#x27;</span>) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                <span class="title function_ invoke__">sshPublisher</span>(<span class="attr">publishers</span>: [<span class="title function_ invoke__">sshPublisherDesc</span>(<span class="attr">configName</span>: <span class="string">&#x27;IPSServer&#x27;</span>, <span class="attr">transfers</span>: [<span class="title function_ invoke__">sshTransfer</span>(<span class="attr">cleanRemote</span>: <span class="literal">false</span>, <span class="attr">excludes</span>: <span class="string">&#x27;&#x27;</span>, <span class="attr">execCommand</span>: <span class="string">&#x27;&#x27;</span><span class="string">&#x27;</span></span><br><span class="line"><span class="string">                echo &quot;dist_temp/ ls&quot;</span></span><br><span class="line"><span class="string">                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/</span></span><br><span class="line"><span class="string">                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                mkdir /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                cp -r /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/.   /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                echo &quot;dist/ ls&quot;</span></span><br><span class="line"><span class="string">                ls /home/ipsconfig/deployment/docker_front/product_config/test/dist/</span></span><br><span class="line"><span class="string">                rm -rf /home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/</span></span><br><span class="line"><span class="string">                docker restart product-nginx-test</span></span><br><span class="line"><span class="string">                &#x27;</span><span class="string">&#x27;&#x27;</span>, <span class="attr">execTimeout</span>: <span class="number">120000</span>, <span class="attr">flatten</span>: <span class="literal">false</span>, <span class="attr">makeEmptyDirs</span>: <span class="literal">false</span>, <span class="attr">noDefaultExcludes</span>: <span class="literal">false</span>, <span class="attr">patternSeparator</span>: <span class="string">&#x27;[, ]+&#x27;</span>, <span class="attr">remoteDirectory</span>: <span class="string">&#x27;/home/ipsconfig/deployment/docker_front/product_config/test/dist_temp/&#x27;</span>, <span class="attr">remoteDirectorySDF</span>: <span class="literal">false</span>, <span class="attr">removePrefix</span>: <span class="string">&#x27;dist&#x27;</span>, <span class="attr">sourceFiles</span>: <span class="string">&#x27;dist/**&#x27;</span>)], <span class="attr">usePromotionTimestamp</span>: <span class="literal">false</span>, <span class="attr">useWorkspaceInPromotion</span>: <span class="literal">false</span>, <span class="attr">verbose</span>: <span class="literal">true</span>)])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="sshPublisher-显示操作日志"><a href="#sshPublisher-显示操作日志" class="headerlink" title="sshPublisher 显示操作日志"></a>sshPublisher 显示操作日志</h4><p>sshPublisher(publishers: [sshPublisherDesc()])内添加 verbose: true</p>
+<p>verbose：选择为 Jenkins 控制台启用大量信息 - 仅对帮助追踪问题非常有用。</p>
+<h2 id="构建触发器"><a href="#构建触发器" class="headerlink" title="构建触发器"></a>构建触发器</h2><h3 id="使用轮询-SCM-实现收到-git-post-commit-即构建"><a href="#使用轮询-SCM-实现收到-git-post-commit-即构建" class="headerlink" title="使用轮询 SCM 实现收到 git post-commit 即构建"></a>使用轮询 SCM 实现收到 git post-commit 即构建</h3><p><img data-src="https://bitbw.top/public/img/my_gallery/%E4%BD%BF%E7%94%A8%E8%BD%AE%E8%AF%A2SCM%20%E5%AE%9E%E7%8E%B0%E6%94%B6%E5%88%B0%20git%20post-commit%20%E5%8D%B3%E6%9E%84%E5%BB%BA-20210818150222789.png" alt="image-20210818150222789"></p>
+<p>日程表使用 cron 语法</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#每15分钟(可能在:07,22,37,52):</span></span><br><span class="line">H/15 <span class="emphasis">* *</span> <span class="emphasis">* *</span></span><br><span class="line">每小时前半小时每十分钟一次(三次，可能在:04,14,24)</span><br><span class="line">H(0-29)/10 <span class="emphasis">* *</span> <span class="emphasis">* *</span></span><br><span class="line"><span class="section">#每两个小时，在每小时后45分钟，从早上9:45开始，下午3:45结束，每周一次:</span></span><br><span class="line">45 9-16/2 <span class="emphasis">* *</span> 1-5</span><br><span class="line"><span class="section">#在工作日早上8点到下午4点之间每两个小时一次(可能在上午9:38，上午11:38，下午1:38，下午3:38):</span></span><br><span class="line">H H(8-15)/2 <span class="emphasis">* *</span> 1-5</span><br><span class="line">每月1号和15号每天一次，12月除外:</span><br><span class="line">H H 1,15 1-11 <span class="emphasis">*</span></span><br></pre></td></tr></table></figure>
+
+<p>规则有点难可以使用 cron 在线解析工具：<a target="_blank" rel="noopener" href="http://cron.qqe2.com/">http://cron.qqe2.com/</a></p>
+<p>使用轮询 SCM 检查到 commit 更新 就会触发构建</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Docker%E5%85%A5%E9%97%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +439,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -301,7 +458,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>702</span>
+      <span>847</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -320,7 +477,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>阮一峰教程：</p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html">https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html">Docker 入门教程</a><br><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html">Docker 微服务教程</a></p>
 <h2 id="以-Jenkins-为例的使用过程"><a href="#以-Jenkins-为例的使用过程" class="headerlink" title="以 Jenkins 为例的使用过程"></a>以 Jenkins 为例的使用过程</h2><p>下载镜像</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull jenkins/jenkins</span><br></pre></td></tr></table></figure>
 
@@ -331,7 +488,7 @@
 <p><strong>-d 后台运行镜像</strong></p>
 <p><strong>-p 10240:8080 将镜像的 8080 端口映射到服务器的 10240 端口。</strong></p>
 <p><strong>-p 10241:50000 将镜像的 50000 端口映射到服务器的 10241 端口</strong></p>
-<p><strong>-v &#x2F;var&#x2F;jenkins_**mount**:&#x2F;var&#x2F;jenkins_mount &#x2F;var&#x2F;jenkins_home 目录为容器 jenkins 工作目录，我们将硬盘上的一个目录挂载到这个位置，方便后续更新镜像后继续使用原来的工作目录。这里我们设置的就是上面我们创建的 &#x2F;var&#x2F;jenkins_mount 目录</strong></p>
+<p><strong>-v &#x2F;var&#x2F;jenkins_**mount**:&#x2F;var&#x2F;jenkins_mount &#x2F;var&#x2F;jenkins_home 目录为容器 jenkins 工作目录，我们将硬盘上的一个目录挂载到这个位置，方便后续更新镜像后继续使用原来的工作目录。这里我们设置的就是上面我们创建的 &#x2F;var&#x2F;jenkins_mount 目录 (文件映射)</strong></p>
 <p><strong>-v &#x2F;etc&#x2F;localtime:&#x2F;etc&#x2F;localtime 让容器使用和服务器同样的时间设置。</strong></p>
 <p><strong>–name myjenkins 给容器起一个别名</strong></p>
 <p>查看 jenkins 是否启动成功，如下图出现端口号，就为启动成功了</p>
@@ -339,6 +496,11 @@
 
 <p>查看 docker 容器日志</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker logs myjenkins</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Docker-查看镜像仓库中镜像的版本信息"><a href="#Docker-查看镜像仓库中镜像的版本信息" class="headerlink" title="Docker-查看镜像仓库中镜像的版本信息"></a>Docker-查看镜像仓库中镜像的版本信息</h2><p>浏览器中查看</p>
+<p>直接在浏览器中个输入下面URL格式的地址查询</p>
+<p><a target="_blank" rel="noopener" href="https://registry.hub.docker.com/v1/repositories/%7Bdocker_img%7D/tags">https://registry.hub.docker.com/v1/repositories/{docker_img}/tags</a></p>
+<p>例如：node<br><a target="_blank" rel="noopener" href="https://registry.hub.docker.com/v1/repositories/node/tags">https://registry.hub.docker.com/v1/repositories/node/tags</a></p>
 
       
     </div>
@@ -401,7 +563,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -575,7 +737,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -723,7 +885,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -837,7 +999,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -944,7 +1106,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1014,7 +1176,7 @@
 
 <p>run build</p>
 <p><em>这一步会出现一个特别恶心的 webpack,webpack-cli 互相依赖缺失的问题，提示没有 webpack 模块，然后全局安装 webpack 模块，npm install -g webpack，这时候运行 webpack 指令，会发现缺失 webpack-cli，再次全局安装 webpack-cli，npm install -g webpack-cli，这时候运行 webpack-cli 指令，又莫名其妙的提示缺失 webpack 模块。</em></p>
-<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#119;&#x65;&#x62;&#x70;&#x61;&#x63;&#107;&#64;&#51;&#46;&#54;&#46;&#48;">&#119;&#x65;&#x62;&#x70;&#x61;&#x63;&#107;&#64;&#51;&#46;&#54;&#46;&#48;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
+<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#x77;&#101;&#x62;&#x70;&#97;&#99;&#107;&#x40;&#x33;&#46;&#54;&#x2e;&#x30;">&#x77;&#101;&#x62;&#x70;&#97;&#99;&#107;&#x40;&#x33;&#46;&#54;&#x2e;&#x30;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
 <p><em>但是有的系统如果以前全局安装过 webpack，还是会报这些相互依赖的问题，或者是环境变量导致的 webpack,webpack-cli 安装进了 node 目录，而以前有的 webpack 安装进了 C:\Users\Administrator\AppData\Roaming\npm 这个目录。解决办法就是删除 C:\Users\Administrator\AppData\Roaming\npm 目录下的 webpack。</em></p>
 <h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>然后将 build 生成的 shells 目录中的 chrome 目录拷贝出来，这个就是 build 生成的 vue-devtools 插件<br>浏览器安装容易，直接打开插件管理，切换开发模式，加载已解压插件，选择刚刚的 chrome 目录就行了。但是 electron 项目中安装会有点麻烦：</p>
 <p>找到 background.js 文件 (如果没有 background.js 找到 main&#x2F;index.js)，找到这段代码：</p>
@@ -1118,7 +1280,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1234,7 +1396,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1345,7 +1507,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1482,210 +1644,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2021/05/28/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/28/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86/" class="post-title-link" itemprop="url">最好用的内网穿透工具合集</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-05-28 14:35:15" itemprop="dateCreated datePublished" datetime="2021-05-28T14:35:15+00:00">2021-05-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">网络应用</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1、ngrok"><a href="#1、ngrok" class="headerlink" title="1、ngrok"></a><strong>1、ngrok</strong></h2><p>ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道。</p>
-<p>官网地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>ngrok.com</span><br></pre></td></tr></table></figure>
-
-<p>使用步骤：</p>
-<p>（1）进入 ngrok 官网注册账号，并下载 ngrok。</p>
-<p>（2）在目标机器上，填写授权码，运行 ngrok。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ngrok authtoken 授权码</span><br></pre></td></tr></table></figure>
-
-<p>（3）将 HTTP 隧道转发到本地端口 80，如下图，通过外网域名即可访问到本地 80 端口。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ngrok http 80</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://bitbw.top/public/img/my_gallery/f13010897045010bae8241e305d0ce03.png" alt="img"></p>
-<h2 id="2、frp"><a href="#2、frp" class="headerlink" title="2、frp"></a><strong>2、frp</strong></h2><p>frp 是一个高性能的反向代理应用，可以帮助您轻松地进行内网穿透，对外网提供服务，支持 tcp, http, https 等协议类型，并且 web 服务支持根据域名进行路由转发。</p>
-<p>git 项目地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/fatedier/</span>frp</span><br></pre></td></tr></table></figure>
-
-<p>使用步骤：</p>
-<p>（1）将 frps 及 frps.ini 放到有公网 IP 的机器上，修改 frps.ini 文件，配置一个名为 ssh 的反向代理：</p>
-<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># frps.ini[common]bind_<span class="keyword">port</span> = 7000</span><br><span class="line">[ssh]listen_<span class="keyword">port</span>=6000auth_token=123</span><br></pre></td></tr></table></figure>
-
-<p>（2）启动 frps：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="regexp">/frps -c ./</span>frps.ini</span><br></pre></td></tr></table></figure>
-
-<p>（3）将 frpc 及 frpc.ini 放到处于内网环境的机器上，修改 frpc.ini 文件，设置 frps 所在服务器的 IP 为 x.x.x.x：</p>
-<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># frpc.ini[common]server_addr = <span class="number">192.168</span><span class="number">.172</span><span class="number">.131</span>server_<span class="keyword">port</span> = 7000auth_token =123</span><br><span class="line">[ssh]<span class="keyword">type</span> = tcplocal_ip = 127.0.0.1local_port = 22remote_port = 6000</span><br></pre></td></tr></table></figure>
-
-<p>（4）启动 frpc：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.<span class="regexp">/frpc -c ./</span>frpc.ini</span><br></pre></td></tr></table></figure>
-
-<p>（5）通过 ssh 访问内网服务器，假设用户名为 test：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -<span class="selector-tag">p</span> <span class="number">6000</span> test@x<span class="selector-class">.x</span><span class="selector-class">.x</span>.x</span><br></pre></td></tr></table></figure>
-
-<h2 id="3、Sunny-Ngrok"><a href="#3、Sunny-Ngrok" class="headerlink" title="3、Sunny-Ngrok"></a><strong>3、Sunny-Ngrok</strong></h2><p>一条命令解决的外网访问内网问题，无需任何配置，一条命令让外网访问您的内网不再是距离。Ngrok 客户端，支持 Windows、Linux、Mac，提供 python、PHP 等版本。</p>
-<p>官网地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>www.ngrok.cc</span><br></pre></td></tr></table></figure>
-
-<p>使用步骤：</p>
-<p>(1) 开通 http 隧道，设置隧道协议、本地端口等信息。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/ec482ca12b228da6abaff1c73b97f7f1.png" alt="img"></p>
-<p>（2）通过隧道 id 启动隧道。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/094a510cb3634d077eba2bb00b0d7b93.png" alt="img"></p>
-<p>（3）在公网上访问域名，即可访问到内网的网站。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/ab33b6cb60e1c72327f158a71fe05bc8.png" alt="img"></p>
-<h2 id="4、Natapp"><a href="#4、Natapp" class="headerlink" title="4、Natapp"></a><strong>4、Natapp</strong></h2><p>基于 ngrok 的内网映射工具，免费版本提供 http,tcp,udp 全隧道穿透、随机域名&#x2F;随机 TCP,UDP 端口、不定时强制更换域名&#x2F;端口和自定义本地端口。</p>
-<p>下载地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//</span>natapp.cn</span><br></pre></td></tr></table></figure>
-
-<p>（1）购买隧道，设置隧道协议和本地端口。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/8e5db4e1349fe4ec13ff9d0e3465f4ba.png" alt="img"></p>
-<p>（2）下载客户端，到目标主机，运行 natapp。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/4b995772ba9e08262c9a08d4366a5f8c.png" alt="img"></p>
-<p>（3）将 natapp 分配的网址复制下来，在浏览器中访问，可以看到内网穿透成功了!</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/5d8e62ea2c422619d66e75b9d6b8265a.png" alt="img"></p>
-<h2 id="5、Earthworm-内网穿透"><a href="#5、Earthworm-内网穿透" class="headerlink" title="5、Earthworm 内网穿透"></a><strong>5、Earthworm 内网穿透</strong></h2><p>EW 是一套便携式的网络穿透工具，具有 SOCKS v5 服务架设和端口转发两大核心功能，可在复杂网络环境下完成网络穿透。</p>
-<p>支持 Windows、Linux、MacOS、Arm-Linux。</p>
-<p>项目地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span>rootkiter.com/EarthWorm</span><br></pre></td></tr></table></figure>
-
-<p>使用方法：</p>
-<p>（1）正向 SOCKS v5 服务器，适用于目标网络边界存在公网 IP 且可任意开监听端口。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ew -s ssocksd -l 1080</span><br></pre></td></tr></table></figure>
-
-<p>（2）反弹 SOCKS v5 服务器，适用于目标网络边界不存在公网 IP，需要通过反弹方式创建 socks 代理</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">a</span>) 先在一台具有公网 ip 的主机A上运行以下命令： ./ew -s rcsocks -l <span class="number">1080</span> -e <span class="number">8888</span></span><br><span class="line"><span class="attribute">b</span>) 在目标主机B上启动 SOCKS v5 服务 并反弹到公网主机的 <span class="number">8888</span>端口  ./ew -s rssocks -d <span class="number">1.1.1.1</span> -e <span class="number">8888</span></span><br></pre></td></tr></table></figure>
-
-<p>（3）多级级联，适用于多层级的复杂网络环境，将内网深层的服务转发到外网。</p>
-<p><img data-src="https://img-blog.csdnimg.cn/img_convert/48304ba5e6f9fe08f3fa1abda7d326ab.png" alt="复制代码"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 二级级联测试用例</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">方式一：利用lcx_tran $ ./ew -s ssocksd  -l 9999 $ ./ew -s lcx_tran -l 1080 -f 127.0.0.1 -g 9999</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">方式二： $ ./ew -s lcx_listen -l 1080 -e 8888 $ ./ew -s ssocksd    -l 9999 $ ./ew -s lcx_slave  -d 127.0.0.1 -e 8888 -f 127.0.0.1 -g 9999</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 三级级联测试用例</span></span></span><br><span class="line"><span class="meta prompt_">  $ </span><span class="language-bash">./ew -s rcsocks -l 1080 -e 8888  $ ./ew -s lcx_slave -d 127.0.0.1 -e 8888 -f 127.0.0.1 -g 9999  $ ./ew -s lcx_listen -l 9999 -e 7777  $ ./ew -s rssocks -d 127.0.0.1 -e 7777</span></span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://img-blog.csdnimg.cn/img_convert/48304ba5e6f9fe08f3fa1abda7d326ab.png" alt="复制代码"></p>
-<h2 id="6、reDuh"><a href="#6、reDuh" class="headerlink" title="6、reDuh"></a><strong>6、reDuh</strong></h2><p>ReDuh 是一个通过 HTTP 协议建立隧道传输各种其他数据的工具，通过在服务器上传 JSP&#x2F;PHP&#x2F;ASP 脚本，就可以轻易地连接到服务器后面的主机。</p>
-<p>github 项目地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/sensepost/</span>reDuh</span><br></pre></td></tr></table></figure>
-
-<p>（1）上传服务端 jsp 脚本到目标机器</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/dfc158effb2e8b274d87cb0b7c330667.png" alt="img"></p>
-<p>（2）使用 reDuh 客户端连接服务端脚本上传后的地址。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar reDuhClient.jar http:<span class="regexp">//</span><span class="number">192.168</span>.<span class="number">172.1</span>/reDuh.jsp</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://bitbw.top/public/img/my_gallery/c226988f3c7ec7dcfa8f24e64aefb5c4.png" alt="img"></p>
-<h2 id="7、reGeorg"><a href="#7、reGeorg" class="headerlink" title="7、reGeorg"></a><strong>7、reGeorg</strong></h2><p>reGeorg 是 reDuh 的继承者,利用了会话层的 socks5 协议,结合 Proxifier 使用效率会更高。</p>
-<p>下载地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/sensepost/</span>reGeorg</span><br></pre></td></tr></table></figure>
-
-<p>使用方法：</p>
-<p>（1）将 tunnel 脚本（aspx | ashx | jsp | php）上传到 Web 服务器，访问显示“Georg says, ‘All seems fine’“，表示脚本运行正常。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/422517009f797cd1579225320a5700d5.png" alt="img"></p>
-<p>（2）在攻击者机器上，启动 reGeorgSocksProxy.py，监听 9999 端口，看到 Checking if Georg is ready，确认正常运行。</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/d5f591dfsdeb9c8f9ac427b0d641b42f5a13.png" alt="img"></p>
-<h2 id="8、Tunna"><a href="#8、Tunna" class="headerlink" title="8、Tunna"></a><strong>8、Tunna</strong></h2><p>Tunna 是一款神奇的工具，它可以通过 HTTP 封装隧道通信任何 TCP，以及用于绕过防火墙环境中的网络限制。</p>
-<p>github 项目地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/SECFORCE/</span>Tunna</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://bitbw.top/public/img/my_gallery/Tunna6976179aa16eaa0b6cda3dd0fe40e17b.png" alt="img"></p>
-<h2 id="9、sSocks"><a href="#9、sSocks" class="headerlink" title="9、sSocks"></a><strong>9、sSocks</strong></h2><p>sSocks 是一个 socks 代理工具套装，可用来开启 socks 代理服务，支持 socks5 验证，支持 IPV6 和 UDP，并提供反向 socks 代理服务，即将远程计算机作为 socks 代理服务端，反弹回本地，极大方便内网的渗透测试。</p>
-<p>下载地址：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="regexp">//</span>sourceforge.net<span class="regexp">/projects/</span>ssocks/</span><br></pre></td></tr></table></figure>
-
-<p>使用方法：</p>
-<p>（1）正向代理</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./ssocksd</span> <span class="params">--bind</span> 192.168.172.131 <span class="params">--port</span> 1234</span><br></pre></td></tr></table></figure>
-
-<p>（2）反向代理</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 监听<span class="number">6020</span>端口转发到<span class="number">6010.</span>/rcsocks -l <span class="number">6020</span> -p <span class="number">6010</span> -vv</span><br><span class="line">## 反向连接代理主机<span class="number">6010</span>端口./rssocks -s <span class="number">192.168</span><span class="number">.172</span><span class="number">.131</span>:<span class="number">6010</span> -vv</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1710,13 +1668,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">434k</span>
+    <span title="站点总字数">437k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:35</span>
+    <span title="站点阅读时长">6:38</span>
   </span>
 </div>
 <div class="busuanzi-count">

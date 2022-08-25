@@ -90,7 +90,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">132</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">85</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">133</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-count">133</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -246,6 +246,211 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2016/06/25/js/javaScript-%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2016/06/25/js/javaScript-%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">javaScript-数组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2016-06-25 23:10:55" itemprop="dateCreated datePublished" datetime="2016-06-25T23:10:55+00:00">2016-06-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
+<li>数组是一个有<strong>顺序</strong>、<strong>有长度</strong>的数据集合；</li>
+<li>数组：类型 Object；</li>
+<li>特点：<ul>
+<li>把数据放在一起；</li>
+<li>有先后位置上的顺序；</li>
+<li>有数据的长度；</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>注意：数组的 typeof 结果是 object</p>
+</blockquote>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5个人的成绩为： 91，88，72，45，63</span></span><br><span class="line"><span class="comment">// 先声明一个数组，字面量的形式</span></span><br><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="keyword">var</span> a = <span class="string">&quot;null&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出 []  这是一个没有数据在里面的数组，称为空数组</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr, <span class="keyword">typeof</span> arr);</span><br></pre></td></tr></table></figure>
+
+<h2 id="存值"><a href="#存值" class="headerlink" title="存值"></a>存值</h2><ul>
+<li>数组中的数据使用<strong>索引</strong>管理。</li>
+<li>索引：<strong>序号、顺序、排位、位置、下标</strong></li>
+<li><strong>索引从 0 开始</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//把成绩存储到数组中</span></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">91</span>;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">88</span>;</span><br><span class="line">arr[<span class="number">2</span>] = <span class="number">72</span>;</span><br><span class="line">arr[<span class="number">3</span>] = <span class="number">45</span>;</span><br><span class="line">arr[<span class="number">4</span>] = <span class="number">63</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出 [91,88,72,45,63] 就是一个数据集合</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>把 <code>数组[索引]</code>格式当成一个变量使用就行，</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化赋值完成后，也可以再次改变值，把前面的值覆盖掉；</span></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果一开始就知道数组了，可以直接使用一个简单的语法存储数据</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">91</span>, <span class="number">88</span>, <span class="number">72</span>, <span class="number">45</span>, <span class="number">63</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出的结果是一样的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上面每个位置上存的都是数字类型，可以为其他类型；</li>
+</ul>
+<h2 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h2><ul>
+<li>把数据取出来，得知道你要取哪个位置上的数据把。</li>
+<li>数据取值同样使用<strong>索引</strong>取。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 拿到索引为0，顺序上第一个位置上的数据；</span></span><br><span class="line"><span class="comment">// 把 数组[索引] 格式当成一个变量使用就行；</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组求和：班里的成绩总和</span></span><br><span class="line"><span class="keyword">var</span> sum = arr[<span class="number">0</span>] + arr[<span class="number">1</span>] + arr[<span class="number">2</span>] + arr[<span class="number">3</span>] + arr[<span class="number">4</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum); <span class="comment">// 输出370</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><ul>
+<li>求成绩总和：一个一个地把数组里面的数组取出来了，从索引 0 到最后一个索引，</li>
+<li>索引从 0 开始到结束的过程，<strong>有重复的思想，需要用到循环；</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最初的写法</span></span><br><span class="line"><span class="keyword">var</span> sum = arr[<span class="number">0</span>] + arr[<span class="number">1</span>] + arr[<span class="number">2</span>] + arr[<span class="number">3</span>] + arr[<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环 这个从0~最后一个索引，有重复的思想在里面，使用循环。</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= <span class="number">4</span>; i++) &#123;</span><br><span class="line">  sum += arr[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum); <span class="comment">// 输出 370，和我们一个一个相加是一样的</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用<strong>循环来遍历</strong>数组，当数组中的数据比较多的时候，会比较方便。<strong>一般是使用 for 循环；</strong></li>
+</ul>
+<h2 id="数组长度"><a href="#数组长度" class="headerlink" title="数组长度"></a>数组长度</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
+<li>存取数据：涉及到就是数组的<strong>顺序</strong>问题，通过索引去存取；</li>
+<li>数组长度：数组中一共存放了多少个数据；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="property">length</span>); <span class="comment">// 数组.length 就是数组的长度</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果数组的长度是 5，最后一个元素的<strong>索引</strong>就是 4；</li>
+<li><strong>我们发现最大索引总是比长度少 1 ，所以遍历还可以这么写</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;= arr.<span class="property">length</span> - <span class="number">1</span>; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 简化一下</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(arr[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例：求数组中所有数字的总和的平均值"><a href="#案例：求数组中所有数字的总和的平均值" class="headerlink" title="案例：求数组中所有数字的总和的平均值"></a>案例：求数组中所有数字的总和的平均值</h3><ul>
+<li>分析：<ul>
+<li>总和：循环遍历，加在一个变量上得到；</li>
+<li>均值：总和 &#x2F; 个数；（arr.length）</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 还可以更简单</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  sum += arr[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sum);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 求平均分</span></span><br><span class="line"><span class="comment">// 平均分= 总分 / 数组的长度</span></span><br><span class="line"><span class="keyword">var</span> avg = sum / arr.<span class="property">length</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例：求数组中的最大值"><a href="#案例：求数组中的最大值" class="headerlink" title="案例：求数组中的最大值"></a>案例：求数组中的最大值</h3><ul>
+<li>分析：生活中，一堆人最高的（人很多，多到你一下看不出来）；<ul>
+<li>最大值：最起码得两个数比较下，得到最大值；</li>
+<li>假设：其中随便一个是最大值 MAX，每个元素和 max 比较，<ul>
+<li>若有比 MAX 大的，那该元素代替 MAX；</li>
+<li>若都没有 MAX 大，恭喜，你一开始就猜对了；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> max = arr[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (max &lt; arr[i]) &#123;</span><br><span class="line">    max = arr[i];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>需求：求数组中的最大值的索引</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 分析：找打最大值的时候，记录下最大值的下标就行了。</span></span><br><span class="line"><span class="keyword">var</span> max_index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span> max = arr[max_index];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (max &lt; arr[i]) &#123;</span><br><span class="line">    max = arr[i];</span><br><span class="line">    max_index = i;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="清空数组"><a href="#清空数组" class="headerlink" title="清空数组"></a>清空数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="property">length</span> = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组的构造函数"><a href="#数组的构造函数" class="headerlink" title="数组的构造函数"></a>数组的构造函数</h2><ul>
+<li>数组在 JS 中还可以使用另一种方式创建，这个方式我们称为 ： 构造函数</li>
+<li>构造函数：能构造一个你需要的东西（对象）；</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 构造函数 创建数组</span></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line"><span class="comment">// 存储数据</span></span><br><span class="line">arr[<span class="number">0</span>] = <span class="number">10</span>;</span><br><span class="line">arr[<span class="number">1</span>] = <span class="number">20</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>, <span class="number">20</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意：一个数据，不要使用这个方式存储数据；它会认为你想要设置数组的长度，而不是要把数据存储在数组中。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">10</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr); <span class="comment">// 输出 [empty × 10]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="JS-实现数组去重（重复的元素只保留一个）"><a href="#JS-实现数组去重（重复的元素只保留一个）" class="headerlink" title="JS 实现数组去重（重复的元素只保留一个）"></a>JS 实现数组去重（重复的元素只保留一个）</h2><p><strong>优化遍历数组法（推荐）</strong></p>
+<p>实现思路：双层循环，外循环表示从 0 到 arr.length，内循环表示从 i+1 到 arr.length</p>
+<p>将没重复的右边值放入新数组。（检测到有重复值时终止当前循环同时进入外层循环的下一轮判断）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">unique4</span>(<span class="params">arr</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> hash = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = i + <span class="number">1</span>; j &lt; arr.<span class="property">length</span>; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (arr[i] === arr[j]) &#123;</span><br><span class="line">        ++i;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    hash.<span class="title function_">push</span>(arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> hash;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2016/06/05/js/javaScript-%E5%8F%98%E9%87%8F-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +487,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -397,7 +602,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-23 09:58:28" itemprop="dateModified" datetime="2022-08-23T09:58:28+00:00">2022-08-23</time>
+      <time title="修改时间：2022-08-25 10:05:59" itemprop="dateModified" datetime="2022-08-25T10:05:59+00:00">2022-08-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -557,13 +762,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">434k</span>
+    <span title="站点总字数">437k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:35</span>
+    <span title="站点阅读时长">6:38</span>
   </span>
 </div>
 <div class="busuanzi-count">
