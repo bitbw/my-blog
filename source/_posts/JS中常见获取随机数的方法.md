@@ -12,8 +12,15 @@ hash: b2438dd4644533a4c34c2df170d7ac638f73f79b6221efd416dc77912a7a554b
 ## JS 获取固定区间的随机数
 
 ```js
-const min = 0;
-const max = 20;
+const start = 0;
+const end = 20;
+// parseInt
+parseInt(Math.random() * (end - start + 1)) + start;
+// floor
+Math.floor(Math.random() * (end - start + 1)) + start;
+// ceil
+Math.ceil(Math.random() * (end - start + 1));
+// 注意 round 首尾不是等比例 首尾比例是其他的 1/2
 Math.round(Math.random() * (max - min)) + min;
 ```
 

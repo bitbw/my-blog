@@ -11,7 +11,8 @@ hash: 00f7bae4a7ccd6afba84202c9e40eb00b6db4f8ea07376d70d70ae62ea02265f
 
 阮一峰教程：
 
-https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html
+[Docker 入门教程](https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
+[Docker 微服务教程](https://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)
 
 ## 以 Jenkins 为例的使用过程
 
@@ -35,7 +36,7 @@ docker run -d -p 8868:8080 -p 10241:50000 -v C:/test/jenkins:/var/jenkins_home -
 
 **-p 10241:50000 将镜像的 50000 端口映射到服务器的 10241 端口**
 
-**-v /var/jenkins\_\*\*mount\*\*:/var/jenkins_mount /var/jenkins_home 目录为容器 jenkins 工作目录，我们将硬盘上的一个目录挂载到这个位置，方便后续更新镜像后继续使用原来的工作目录。这里我们设置的就是上面我们创建的 /var/jenkins_mount 目录**
+**-v /var/jenkins\_\*\*mount\*\*:/var/jenkins_mount /var/jenkins_home 目录为容器 jenkins 工作目录，我们将硬盘上的一个目录挂载到这个位置，方便后续更新镜像后继续使用原来的工作目录。这里我们设置的就是上面我们创建的 /var/jenkins_mount 目录 (文件映射)**
 
 **-v /etc/localtime:/etc/localtime 让容器使用和服务器同样的时间设置。**
 
@@ -52,3 +53,14 @@ docker ps -l
 ```
 docker logs myjenkins
 ```
+
+## Docker-查看镜像仓库中镜像的版本信息
+
+浏览器中查看
+
+直接在浏览器中个输入下面URL格式的地址查询
+
+<https://registry.hub.docker.com/v1/repositories/{docker_img}/tags>
+
+例如：node
+<https://registry.hub.docker.com/v1/repositories/node/tags>
