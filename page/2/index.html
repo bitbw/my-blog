@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">87</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">134</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">87</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">135</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -162,7 +162,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">134</span>
+          <span class="site-state-item-count">135</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -247,6 +247,130 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/06/08/js/js%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86_Blob_File_Buffer_TypedArray_ArrayBuffer%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/06/08/js/js%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86_Blob_File_Buffer_TypedArray_ArrayBuffer%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">js文件处理 Blob File Buffer TypedArray ArrayBuffer之间的关系</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-06-08 16:33:44" itemprop="dateCreated datePublished" datetime="2022-06-08T16:33:44+00:00">2022-06-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob">Blob</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/File">File</a><br><a target="_blank" rel="noopener" href="https://nodejs.org/dist/latest-v14.x/docs/api/buffer.html#buffer_buffers_and_typedarrays">Buffer</a><br><a target="_blank" rel="noopener" href="https://nodejs.org/dist/latest-v14.x/docs/api/buffer.html#buffer_static_method_buffer_from_arraybuffer_byteoffset_length">Buffer.from</a><br><a target="_blank" rel="noopener" href="https://nodejs.org/dist/latest-v14.x/docs/api/buffer.html#buffer_static_method_buffer_from_arraybuffer_byteoffset_length">Buffer.from</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></p>
+<h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><h3 id="继承关系"><a href="#继承关系" class="headerlink" title="继承关系"></a>继承关系</h3><p>Buffer 是 node 中的类型 Buffer 继承于 Uint8Array<br>Uint8Array 继承于 TypedArray （或者说是其中一种实现 TypedArray 不能直接new ）<br>TypedArray 有以下类型</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8Array">Int8Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray">Uint8ClampedArray</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int16Array">Int16Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array">Uint16Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int32Array">Int32Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array">Uint32Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Float64Array">Float64Array</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView">DataView</a><br>ArrayBufferView 就是  TypedArray<br>File 继承于 Blob</li>
+</ul>
+<h3 id="转换关系"><a href="#转换关系" class="headerlink" title="转换关系"></a>转换关系</h3><p>ArrayBuffer 类型转换中的关键！ 可以转换为任何类型， 其他类型也可以转化为 ArrayBuffer</p>
+<p>Buffer.from 接收 ArrayBuffer 转换为 Buffer<br>Buffer.buffer 可以获取到 ArrayBuffer</p>
+<p>Uint8Array.buffer 可以获取到 ArrayBuffer<br>new Uint8Array 接收 ArrayBuffer 可以转化为 Uint8Array</p>
+<p>new Blob 和 File 都可以接收 ArrayBuffer，ArrayBufferView，Blob 生成参数<br>Blob.arrayBuffer() 返回一个 promise 且包含 blob 所有内容的二进制格式的 ArrayBuffer</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Uint8Array | ArrayBufferView | TypedArray</span></span><br><span class="line"><span class="keyword">const</span> buffer = <span class="keyword">new</span> <span class="title class_">ArrayBuffer</span>(<span class="number">8</span>);</span><br><span class="line"><span class="keyword">const</span> uint8 = <span class="keyword">new</span> <span class="title class_">Uint8Array</span>(buffer)</span><br><span class="line">uint8.<span class="property">buffer</span> === buffer <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// node buffer</span></span><br><span class="line"><span class="keyword">const</span> buffer = <span class="keyword">new</span> <span class="title class_">ArrayBuffer</span>(<span class="number">8</span>);</span><br><span class="line"><span class="keyword">const</span> buf = <span class="title class_">Buffer</span>.<span class="title function_">from</span>(buffer)</span><br><span class="line">buf.<span class="property">buffer</span> === buffer <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Blob</span></span><br><span class="line"><span class="keyword">const</span> buffer = <span class="keyword">new</span> <span class="title class_">ArrayBuffer</span>(<span class="number">8</span>);</span><br><span class="line"><span class="keyword">let</span> blob = <span class="keyword">new</span> <span class="title class_">Blob</span>([buffer])</span><br><span class="line">blob.<span class="title function_">arrayBuffer</span>().<span class="title function_">then</span>((<span class="function"><span class="params">buf</span>=&gt;</span><span class="variable language_">console</span>.<span class="title function_">log</span>(buf))) <span class="comment">// buf !== buffer</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// File</span></span><br><span class="line"><span class="keyword">const</span> buffer = <span class="keyword">new</span> <span class="title class_">ArrayBuffer</span>(<span class="number">8</span>);</span><br><span class="line"><span class="keyword">let</span> file = <span class="keyword">new</span> <span class="title class_">File</span>([buffer],<span class="string">&quot;file.xxx&quot;</span>)</span><br><span class="line">file.<span class="title function_">arrayBuffer</span>().<span class="title function_">then</span>((<span class="function"><span class="params">buf</span>=&gt;</span><span class="variable language_">console</span>.<span class="title function_">log</span>(buf))) <span class="comment">// buf !== buffer</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/05/11/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/picgo%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,7 +407,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -392,7 +516,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -505,7 +629,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -615,7 +739,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -716,7 +840,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -825,7 +949,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -980,7 +1104,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1080,7 +1204,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1190,7 +1314,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1272,119 +1396,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2022/03/07/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/AntV-G6%E5%85%A5%E9%97%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/07/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/AntV-G6%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">AntV/G6入门</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-07 16:47:17" itemprop="dateCreated datePublished" datetime="2022-03-07T16:47:17+00:00">2022-03-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/" itemprop="url" rel="index"><span itemprop="name">前端可视化</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>20k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>18 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://g6.antv.vision/zh/docs/manual/tutorial/preface">官方教程</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save @antv/g6</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>使用 vue 作为模板</p>
-</blockquote>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;v-container&gt;</span><br><span class="line">    &lt;!--步骤.1 容器 --&gt;</span><br><span class="line">    &lt;div id=&quot;mountNode&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/v-container&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import G6 from &quot;@antv/g6&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;G6&quot;,</span><br><span class="line">  async mounted() &#123;</span><br><span class="line">    /*</span><br><span class="line">    ## 步骤.2 数据准备</span><br><span class="line">    引入 G6 的数据源为 JSON 格式的对象。该对象中需要有节点（nodes）和边（edges）字段，分别用数组表示：</span><br><span class="line">     */</span><br><span class="line"></span><br><span class="line">    // 初始化数据</span><br><span class="line">    const initData = &#123;</span><br><span class="line">      // 点集</span><br><span class="line">      nodes: [</span><br><span class="line">        &#123;</span><br><span class="line">          id: &quot;node1&quot;, // 节点的唯一标识</span><br><span class="line">          x: 100, // 节点横坐标</span><br><span class="line">          y: 200, // 节点纵坐标</span><br><span class="line">          label: &quot;起始点&quot;, // 节点文本</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          id: &quot;node2&quot;,</span><br><span class="line">          x: 300,</span><br><span class="line">          y: 200,</span><br><span class="line">          label: &quot;目标点&quot;,</span><br><span class="line">        &#125;,</span><br><span class="line">      ],</span><br><span class="line">      // 边集</span><br><span class="line">      edges: [</span><br><span class="line">        // 表示一条从 node1 节点连接到 node2 节点的边</span><br><span class="line">        &#123;</span><br><span class="line">          source: &quot;node1&quot;, // 起始点 id</span><br><span class="line">          target: &quot;node2&quot;, // 目标点 id</span><br><span class="line">          label: &quot;我是连线&quot;, // 边的文本</span><br><span class="line">        &#125;,</span><br><span class="line">      ],</span><br><span class="line">    &#125;;</span><br><span class="line">    /*</span><br><span class="line">    ## 步骤.3 图实例化</span><br><span class="line">    图实例化时，至少需要为图设置容器、宽、高：</span><br><span class="line">     */</span><br><span class="line">    const graph = new G6.Graph(&#123;</span><br><span class="line">      container: &quot;mountNode&quot;, // 指定挂载容器</span><br><span class="line">      width: 800, // 图的宽度</span><br><span class="line">      height: 500, // 图的高度</span><br><span class="line">    &#125;);</span><br><span class="line">    /*</span><br><span class="line">    ## 步骤.4 图的渲染</span><br><span class="line">    数据的加载和图的渲染是两个步骤，可以分开进行。</span><br><span class="line">     */</span><br><span class="line"></span><br><span class="line">    graph.data(initData); // 加载数据</span><br><span class="line"></span><br><span class="line">    graph.render(); // 渲染 调用 graph.render() 方法之后，G6 引擎会根据加载的数据进行图的绘制。</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/03/07/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/AntV-G6%E5%85%A5%E9%97%A8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1409,13 +1420,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">441k</span>
+    <span title="站点总字数">442k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:41</span>
+    <span title="站点阅读时长">6:42</span>
   </span>
 </div>
 <div class="busuanzi-count">

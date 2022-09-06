@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">87</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">134</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">87</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">29</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">135</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -162,7 +162,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">134</span>
+          <span class="site-state-item-count">135</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -247,6 +247,215 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/31/HTML/Data-URI%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo-header.jpg">
+      <meta itemprop="name" content="Bowen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="张博文的个人博客">
+      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 张博文的个人博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/31/HTML/Data-URI%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/" class="post-title-link" itemprop="url">Data URI详细介绍</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-12-31 09:09:56" itemprop="dateCreated datePublished" datetime="2020-12-31T09:09:56+00:00">2020-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>最近学习 webpack 遇到了 Data URI 这种格式，觉得很有趣稍微学习一下，转载一篇别人写的比较好的文章；</p>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38128179/article/details/100663085">https://blog.csdn.net/qq_38128179/article/details/100663085</a></p>
+<h2 id="一、URI-介绍"><a href="#一、URI-介绍" class="headerlink" title="一、URI 介绍"></a>一、URI 介绍</h2><p>URI（统一资源标识符） 是 uniform resource identifier 的缩写，它定义了接受内容的协议以及附带的相关内容，如果附带的相关内容是一个地址，那么此时的 URI 也是一个 URL （uniform resource locator<code> </code>)。</p>
+<h2 id="二、什么是-data-URI-scheme？"><a href="#二、什么是-data-URI-scheme？" class="headerlink" title="二、什么是 data URI scheme？"></a>二、什么是 data URI scheme？</h2><p>Data URI scheme 简称 Data URI，经常会被<strong>错误</strong>地写成 data URLs。即前缀为 data：协议的的 URL，其允许内容创建者向文档中嵌入小文件。</p>
+<blockquote>
+<p>假设我们有一个图片需要显示在网页上</p>
+<p>1、通常我们会使用 http 链接，这种取得资料的方法称为 <strong>http URI scheme</strong>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 从外部请求一张图片</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、使用 <strong>data URI scheme</strong> 获取资料可以写成：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 在HTML中嵌入一个小红点的图片</span><br><span class="line"><span class="tag">&lt;<span class="name">img</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">alt</span>=<span class="string">&quot;&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过 data RUI scheme，我们把图像内容内置在 HTML 中，节省了一个 HTTP 请求。</p>
+</blockquote>
+<h2 id="三、Data-URI-scheme-的语法"><a href="#三、Data-URI-scheme-的语法" class="headerlink" title="三、Data URI scheme 的语法"></a>三、<strong>Data URI scheme 的语法</strong></h2><blockquote>
+<p><strong>data:①[<mime type>]②[;charset&#x3D;<charset>]③[;<encoding>]④,<encoded data>⑤</strong></p>
+</blockquote>
+<p><strong>【1】第 ① 部分 data：</strong> 协议头，它标识这个内容为一个 data URI 资源。</p>
+<p><strong>【2】第 ② 部分 MIME 类型（可选项）：</strong>浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理文档；因此服务器设置正确以将正确的 MIME 类型附加到响应对象的头部是非常重要的。MIME 类型对大小写不敏感，但是传统写法都是小写。</p>
+<table>
+<thead>
+<tr>
+<th><strong>类型</strong></th>
+<th><strong>描述</strong></th>
+<th>**示例（语法：type&#x2F;subtype 类型&#x2F;子类型****）**</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>text</td>
+<td>表明文件是普通文件，理论上是人类可读的</td>
+<td><strong>text&#x2F;plain，text&#x2F;html，text&#x2F;css，text&#x2F;javascript</strong></td>
+</tr>
+<tr>
+<td>image</td>
+<td>表明文件某种是图像文件，gif 动态图也属于 image 类型</td>
+<td><strong>image&#x2F;gif，image&#x2F;png，image&#x2F;jpeg，image&#x2F;bmp，image&#x2F;webp，image&#x2F;x-icon，image&#x2F;vnd.microsoft.icon</strong></td>
+</tr>
+<tr>
+<td>audio</td>
+<td>表明文件是某种音频文件</td>
+<td><strong>audio&#x2F;midi，audio&#x2F;mpeg，audio&#x2F;webm，audio&#x2F;ogg，audio&#x2F;wav</strong></td>
+</tr>
+<tr>
+<td>video</td>
+<td>表明文件是某种视频文件</td>
+<td><strong>video&#x2F;webm，video&#x2F;ogg</strong></td>
+</tr>
+<tr>
+<td>application</td>
+<td>表明文件是某种二进制数据</td>
+<td><strong>application&#x2F;octet-stream，application&#x2F;pkcs12，application&#x2F;vnd.mspowerpoint，application&#x2F;xhtml+xml，application&#x2F;xml，application&#x2F;pdf</strong></td>
+</tr>
+</tbody></table>
+<p><strong>【3】第 ③ 部分 <a href="%E5%8F%AF%E9%80%89%E9%A1%B9">;charset&#x3D;<charset></a>：</strong> 源文本的字符集编码方式，默认编码是 charset&#x3D;US-ASCII, 即数据部分的每个字符都会自动编码为 %xx</p>
+<p><strong>【4】第 ④ 部分 [;<encoding>] ：</strong> 数据编码方式（默认 US-ASCII，BASE64 两种）</p>
+<p><strong>【5】第 ⑤ 部分 ,<encoded data></strong> <strong>：</strong> 编码后的数据</p>
+<blockquote>
+<p>关于 base64 可以参考阮一峰写的文章：<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2008/06/base64.html">http://www.ruanyifeng.com/blog/2008/06/base64.html</a></p>
+</blockquote>
+<h2 id="四、Data-URI-scheme-的利弊"><a href="#四、Data-URI-scheme-的利弊" class="headerlink" title="四、Data URI scheme 的利弊"></a>四、<strong>Data URI scheme 的利弊</strong></h2><blockquote>
+<p><strong>利：</strong></p>
+<ul>
+<li>减少 HTTP 请求</li>
+<li>当访问外部资源很麻烦或受限时（比如服务器 ip 被墙）</li>
+<li>当图片是在服务器端用程序动态生成，每个访问用户显示的都不同时</li>
+<li>当图片的体积太小，占用一个 HTTP 会话不值得时</li>
+<li>没有图片更新要重新上传，还要清理缓存的问题</li>
+</ul>
+<p><strong>弊：</strong></p>
+<ul>
+<li>Base64 编码的数据体积通常是原数据的体积 4&#x2F;3，也就是 Data URL 形式的图片会比二进制格式的图片体积大 1&#x2F;3</li>
+<li>Data URL 形式的图片不会被浏览器缓存，这意味着每次访问页面时都被下载一次。</li>
+<li>增加了 CSS 文件的尺寸</li>
+<li>IE678 兼容性</li>
+<li>不适合 lazy loading</li>
+<li>不利于维护</li>
+<li>移动端不宜使用 Data URI 技术（解码耗 CPU）</li>
+</ul>
+</blockquote>
+<h2 id="五、Data-URI-scheme-的应用实例"><a href="#五、Data-URI-scheme-的应用实例" class="headerlink" title="五、Data URI scheme 的应用实例"></a>五、<strong>Data URI scheme 的应用实例</strong></h2><p><strong>【1】在 Html 的 Img 对象中使用</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAF...&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【2】在 Css 的 background-image 属性中使用</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.image</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAF...</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>【3】在 Html 的 css 链接处使用</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span></span></span><br><span class="line"><span class="tag">  <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">href</span>=<span class="string">&quot;data:text/css;base64,LyogKioqKiogVGVtcGxhdGUgKioq...&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【4】在 Html 的 javaScript 链接处使用</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;data:text/javascript;base64,LyogKioqKiogVGVtcGxhdGUgKioq...&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>【5】data RUI scheme 也可以直接在浏览器的地址栏中输入进行访问</strong></p>
+<p><strong>①</strong>在浏览器中输入以下的 Url，会得到一个加粗的”Hello, world!”。也就是说，data:后面的数据直接用做网页的内容，而不是网页的地址。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">data</span>: text / html,</span><br><span class="line">  (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">          <span class="tag">&lt;<span class="name">b</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br><span class="line">  );</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>下面的例子会显示出 “你好，中文！”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">data</span>:text/plain;charset=<span class="variable constant_">UTF</span>-<span class="number">8</span>;base64,5L2g5aW977yM5Lit5paH77yB</span><br></pre></td></tr></table></figure>
+
+<h2 id="六、兼容-IE678-MHTML"><a href="#六、兼容-IE678-MHTML" class="headerlink" title="六、兼容 IE678 - MHTML"></a>六、兼容 IE678 - MHTML</h2><p>MHTML 即 MIME HTML（Multipurpose Internet Mail Extensions HyperText Markup Language），就是将 Data URI 以附件的形式附加到页面页面上，具体示例如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** FilePath: http://example.com/test.css */</span></span><br><span class="line"><span class="comment">/*!@ignore</span></span><br><span class="line"><span class="comment">Content-Type: multipart/related; boundary=&quot;_ANY_SEPARATOR&quot;</span></span><br><span class="line"><span class="comment">--_ANY_SEPARATOR</span></span><br><span class="line"><span class="comment">Content-Location:myidBackground</span></span><br><span class="line"><span class="comment">Content-Transfer-Encoding:base64</span></span><br><span class="line"><span class="comment">iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==</span></span><br><span class="line"><span class="comment">--_ANY_SEPARATOR--</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="selector-class">.myid</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span>);</span><br><span class="line">  *<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">mhtml:http://example.com/test.css!myidBackground</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面注释的部分就是一个附件， 这个附件的内容是一个名为 myidBackground 的 Base64 编码图片，然后在 class 为 myid 的 css 中使用。</p>
+<p>注意：1、boundary 字段值可自定义；</p>
+<p>​ 2、附件的末行必须为 boundary 字段值；</p>
+<p>​ 3、附件内容不能被压缩工具擦写掉；</p>
+<p>​ 4、由于高版本的 IE 在使用 IE8 兼容模式时能认识*这个 css hack 符号，但却不支持 mhtml，所以会导致背景图片失效。应该采用 IE 的条件注释更为稳妥。</p>
+<h2 id="七、base64-转换工具"><a href="#七、base64-转换工具" class="headerlink" title="七、base64 转换工具"></a>七、base64 转换工具</h2><p><a target="_blank" rel="noopener" href="http://www.pjhome.net/web/html5/encodeDataUrl.htm">Encode Data URL </a></p>
+<p><a target="_blank" rel="noopener" href="http://www.atool9.com/img2base64.php">aTool 在线工具</a></p>
+<p><a target="_blank" rel="noopener" href="https://duri.me/">Duri.me</a></p>
+<p><a target="_blank" rel="noopener" href="https://dataurl.sveinbjorn.org/#dataurlmaker">DATAURL</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/30/Nodejs/path-resolve-%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,7 +492,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -403,7 +612,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -526,7 +735,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -639,7 +848,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -924,7 +1133,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1033,7 +1242,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1174,7 +1383,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1400,7 +1609,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1511,7 +1720,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
+      <time title="修改时间：2022-09-06 09:53:36" itemprop="dateModified" datetime="2022-09-06T09:53:36+00:00">2022-09-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1634,119 +1843,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.bitbw.top/2020/12/12/Nodejs/npm-%E4%B8%8B%E5%8C%85%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo-header.jpg">
-      <meta itemprop="name" content="Bowen">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="张博文的个人博客">
-      <meta itemprop="description" content="vue js javaScript ts typeScript HTML css Sass less webpack git hexo  Node.js 算法 前端 小程序 技术个人博客">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 张博文的个人博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/12/Nodejs/npm-%E4%B8%8B%E5%8C%85%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">npm 下包问题</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-12-12 18:40:51" itemprop="dateCreated datePublished" datetime="2020-12-12T18:40:51+00:00">2020-12-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-06 09:42:20" itemprop="dateModified" datetime="2022-09-06T09:42:20+00:00">2022-09-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Nodejs/" itemprop="url" rel="index"><span itemprop="name">Nodejs</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>701</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="node-下包的过程"><a href="#node-下包的过程" class="headerlink" title="node 下包的过程"></a>node 下包的过程</h3><p>首先说下 node 下 需要预编译的包（例如<a target="_blank" rel="noopener" href="https://npmmirror.com/mirrors/node-sass/">node-sass</a>）的过程 ：</p>
-<ul>
-<li>node 下包首先会在线上找对应本地 node 版本和操作系统的包</li>
-<li>有的无需系统支持就直接下</li>
-<li>有的需要根据系统下对应的 tar.gz 包 用到 node-pre-gyp，如果找不到对应的 node 版本号和系统的包，node 会下载源码进行编译</li>
-<li>node 编译使用 node-gyp ,而 node-gyp 在不同的操作系统下需要不同的支持工具 ，win 是 python 和 Visual Studio ，在 linux 下需要 Python， make, 和 GCC ，在MacOS  需要 <a target="_blank" rel="noopener" href="https://developer.apple.com/xcode/download/">Xcode</a>，Python v3.6、v3.7、v3.8 或 v3.9，这里有详细的描述 <a target="_blank" rel="noopener" href="https://github.com/nodejs/node-gyp">https://github.com/nodejs/node-gyp</a></li>
-</ul>
-<h3 id="node版本问题"><a href="#node版本问题" class="headerlink" title="node版本问题"></a>node版本问题</h3><p>node 不同版本影响到是否能直接下对应的包，所以装包前可以先看下<a target="_blank" rel="noopener" href="https://npmmirror.com/mirrors">淘宝镜像</a>上有没有对应 node 版本的包</p>
-<blockquote>
-<p>以这个为例<code>node-v72-win32-x64.tar.gz </code>代表 node 的 NODE_MODULE_VERSION 版本号是 72 的 windows64 位的包，NODE_MODULE_VERSION 对应的 node 版本可以在<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/releases/">https://nodejs.org/zh-cn/download/releases/</a> node 官网查询</p>
-</blockquote>
-<p>ps: 使用 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/48185ef12fbf">nvm</a> 可以自如的切换 node 版本</p>
-<h3 id="设置国内镜像源"><a href="#设置国内镜像源" class="headerlink" title="设置国内镜像源"></a>设置国内镜像源</h3><p>cnpm 安装：<a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/NPM?from=tnpm">https://developer.aliyun.com/mirror/NPM?from=tnpm</a></p>
-<p>设置 npm 下包地址 ： <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40920953/article/details/86547291">https://blog.csdn.net/weixin_40920953/article/details/86547291</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -1771,13 +1867,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">441k</span>
+    <span title="站点总字数">442k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:41</span>
+    <span title="站点阅读时长">6:42</span>
   </span>
 </div>
 <div class="busuanzi-count">
