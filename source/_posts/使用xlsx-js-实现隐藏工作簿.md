@@ -5,7 +5,7 @@ tags:
   - js
   - XLSX
   - 插件
-categories: XLSX
+categories: js插件
 cnblogs:
   postid: "15393034"
 hash: 9b511f3e37f1fedda5a38b2a66fe5fc2938ad32046f9bf01440307e6525e96fb
