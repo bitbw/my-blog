@@ -367,7 +367,7 @@
 
 <p>run build</p>
 <p><em>这一步会出现一个特别恶心的 webpack,webpack-cli 互相依赖缺失的问题，提示没有 webpack 模块，然后全局安装 webpack 模块，npm install -g webpack，这时候运行 webpack 指令，会发现缺失 webpack-cli，再次全局安装 webpack-cli，npm install -g webpack-cli，这时候运行 webpack-cli 指令，又莫名其妙的提示缺失 webpack 模块。</em></p>
-<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#x77;&#101;&#x62;&#x70;&#97;&#99;&#107;&#x40;&#x33;&#46;&#54;&#x2e;&#x30;">&#x77;&#101;&#x62;&#x70;&#97;&#99;&#107;&#x40;&#x33;&#46;&#54;&#x2e;&#x30;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
+<p><em>原因就是 webpack4.0 的问题，解决办法就是安装指定版本的 webpack：npm install -g <a href="mailto:&#119;&#x65;&#98;&#112;&#97;&#99;&#107;&#64;&#51;&#46;&#x36;&#x2e;&#48;">&#119;&#x65;&#98;&#112;&#97;&#99;&#107;&#64;&#51;&#46;&#x36;&#x2e;&#48;</a>，而不是默认，默认会出现 4 以上版本，甚至 5.1 版本或者更高。</em></p>
 <p><em>但是有的系统如果以前全局安装过 webpack，还是会报这些相互依赖的问题，或者是环境变量导致的 webpack,webpack-cli 安装进了 node 目录，而以前有的 webpack 安装进了 C:\Users\Administrator\AppData\Roaming\npm 这个目录。解决办法就是删除 C:\Users\Administrator\AppData\Roaming\npm 目录下的 webpack。</em></p>
 <h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>然后将 build 生成的 shells 目录中的 chrome 目录拷贝出来，这个就是 build 生成的 vue-devtools 插件<br>浏览器安装容易，直接打开插件管理，切换开发模式，加载已解压插件，选择刚刚的 chrome 目录就行了。但是 electron 项目中安装会有点麻烦：</p>
 <p>找到 background.js 文件 (如果没有 background.js 找到 main&#x2F;index.js)，找到这段代码：</p>
@@ -4047,7 +4047,7 @@
 
 <h3 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add -D babel-plugin-import react-app-rewired customize-cra less less-loader@5.0.0</span><br></pre></td></tr></table></figure>
 
-<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p><a href="mailto:&#x6c;&#x65;&#x73;&#x73;&#x2d;&#x6c;&#x6f;&#97;&#100;&#x65;&#114;&#x40;&#53;&#46;&#48;&#46;&#48;">&#x6c;&#x65;&#x73;&#x73;&#x2d;&#x6c;&#x6f;&#97;&#100;&#x65;&#114;&#x40;&#53;&#46;&#48;&#46;&#48;</a> 下载 5.0.0 防止报错 TypeError: this.getOptions is not a function</p>
+<h4 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h4><p><a href="mailto:&#108;&#x65;&#115;&#x73;&#x2d;&#108;&#x6f;&#x61;&#x64;&#x65;&#114;&#x40;&#x35;&#x2e;&#48;&#46;&#48;">&#108;&#x65;&#115;&#x73;&#x2d;&#108;&#x6f;&#x61;&#x64;&#x65;&#114;&#x40;&#x35;&#x2e;&#48;&#46;&#48;</a> 下载 5.0.0 防止报错 TypeError: this.getOptions is not a function</p>
 <h4 id="修改-peckage-json"><a href="#修改-peckage-json" class="headerlink" title="修改 peckage.json"></a>修改 peckage.json</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired start&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired build&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-app-rewired test&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;eject&quot;</span><span class="punctuation">:</span> <span class="string">&quot;react-scripts eject&quot;</span></span><br><span class="line"> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="新建-config-overrides-js-文件"><a href="#新建-config-overrides-js-文件" class="headerlink" title="新建 config-overrides.js 文件"></a>新建 config-overrides.js 文件</h4><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; override, fixBabelImports, addLessLoader &#125; = <span class="built_in">require</span>(<span class="string">&quot;customize-cra&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">override</span>(</span><br><span class="line">  <span class="title function_">fixBabelImports</span>(<span class="string">&quot;import&quot;</span>, &#123;</span><br><span class="line">    <span class="attr">libraryName</span>: <span class="string">&quot;antd&quot;</span>,</span><br><span class="line">    <span class="attr">libraryDirectory</span>: <span class="string">&quot;es&quot;</span>,</span><br><span class="line">    <span class="attr">style</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;),</span><br><span class="line">  <span class="title function_">addLessLoader</span>(&#123;</span><br><span class="line">    <span class="attr">javascriptEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 主题</span></span><br><span class="line">    <span class="attr">modifyVars</span>: &#123; <span class="string">&quot;@primary-color&quot;</span>: <span class="string">&quot;#3acea0&quot;</span> &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -4316,49 +4316,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue-cli4+HbuilderX打包android+ios应用</title>
-    <url>/2021/03/25/Vue/Vue+HbuilderX%E6%89%93%E5%8C%85App%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="打包-vue-web-项目"><a href="#打包-vue-web-项目" class="headerlink" title="打包 vue web 项目"></a>打包 vue web 项目</h2><h3 id="1-修改-build-的配置"><a href="#1-修改-build-的配置" class="headerlink" title="1.修改 build 的配置"></a>1.修改 build 的配置</h3><p>在 vue-cli(4.x 版本)下，修改 vue.config.js, 如果没有就创建一个</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 选项...</span></span><br><span class="line">  <span class="attr">publicPath</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-修改路由模式为-hash-模式"><a href="#2-修改路由模式为-hash-模式" class="headerlink" title="2.修改路由模式为 hash 模式"></a>2.修改路由模式为 hash 模式</h3><p>如果使用了路由并且路由模式为 history 模式的话，需要改为 hash 模式</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">mode</span>: <span class="string">&quot;hash&quot;</span>,</span><br><span class="line">  <span class="attr">base</span>: process.<span class="property">env</span>.<span class="property">BASE_URL</span>,</span><br><span class="line">  routes,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-打包"><a href="#3-打包" class="headerlink" title="3.打包"></a>3.打包</h3><p>运行 npm run build</p>
-<p>打包后会生成 dist 目录， dist 目录之后会用到</p>
-<h2 id="使用-hbuildx-打包成-App"><a href="#使用-hbuildx-打包成-App" class="headerlink" title="使用 hbuildx 打包成 App"></a>使用 hbuildx 打包成 App</h2><h3 id="1-先在-dcloud-注册个开发者账号："><a href="#1-先在-dcloud-注册个开发者账号：" class="headerlink" title="1.先在 dcloud 注册个开发者账号："></a>1.先在 dcloud 注册个开发者账号：</h3><p><a href="https://dev.dcloud.net.cn/">https://dev.dcloud.net.cn/</a></p>
-<h3 id="2-下载-hubilderx-App-开发版本"><a href="#2-下载-hubilderx-App-开发版本" class="headerlink" title="2.下载 hubilderx App 开发版本"></a>2.下载 hubilderx App 开发版本</h3><p>（<a href="https://www.dcloud.io/hbuilderx.html%EF%BC%89%EF%BC%8C%E6%89%93%E5%BC%80hbuilderx%EF%BC%8C%E7%82%B9%E5%87%BB%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7%E3%80%82">https://www.dcloud.io/hbuilderx.html），打开hbuilderx，点击左下角登录账号。</a></p>
-<h3 id="3-新建-h5-App-项目："><a href="#3-新建-h5-App-项目：" class="headerlink" title="3.新建 h5+ App 项目："></a>3.新建 h5+ App 项目：</h3><p>文件-&gt;新建-&gt;项目</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022101926.png" alt="image-20211022101917225"></p>
-<h3 id="4-将-dist-目录和新建的项目合并"><a href="#4-将-dist-目录和新建的项目合并" class="headerlink" title="4.将 dist 目录和新建的项目合并"></a>4.将 dist 目录和新建的项目合并</h3><p>删除 myApp 项目里面的 css、img、js 文件夹；将打包后的 vue 静态资源文件夹 dist 里面的文件拷贝进 app 项目里：</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022102250.png" alt="image-20211022102250128"></p>
-<h3 id="5-修改-app-的配置文件-mainfest-json"><a href="#5-修改-app-的配置文件-mainfest-json" class="headerlink" title="5.修改 app 的配置文件 mainfest.json"></a>5.修改 app 的配置文件 mainfest.json</h3><p><img data-src="https://bitbw.top/public/img/my_gallery/20211022102642.png" alt="image-20211022102642627"></p>
-<h4 id="可选配置"><a href="#可选配置" class="headerlink" title="可选配置"></a>可选配置</h4><p>图标配置<br>安装到手机上后显示的 app 图标。可以选择一个分辨率较大的图片，然后点击自动生成所有图标并配置。</p>
-<p>启动图配置<br>取消勾选：启动界面显示等待雪花</p>
-<p>SDK 配置<br>根据 app 项目需求，选择相应的第三方 SDK（一般需要去相应的 SDK 官网申请 key）</p>
-<p>模块权限配置<br>app 需要用到的权限，会询问用户打开这些权限。勾选相应的权限模块即可。</p>
-<h3 id="6-云打包-Android-app"><a href="#6-云打包-Android-app" class="headerlink" title="6.云打包 Android app"></a>6.云打包 Android app</h3><p>选中需要打包的项目名，点击工具栏的“发行”，选择”原生 App-云打包“.</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022103310.png" alt="image-20211022103310806"></p>
-<p>在弹出的框中，选择”使用 DCloud 公用证书“（也可以使用自有证书，需要查看官网说明），取消勾选 ”广告联盟“ 和 ”换量联盟“，点击最底部的”打包“按钮：</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022103342.png" alt="image-20211022103342804"></p>
-<p>打包完成后打开文件位置 就可以看到生成的 apk 安卓安装文件了</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022105826.png" alt="image-20211022105826098"></p>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>因为是使用云打包需要排队，具体时间无法确定</p>
-<h3 id="7-调试"><a href="#7-调试" class="headerlink" title="7.调试"></a>7.调试</h3><p>调试需要手机打开开发者模式通过 usb 连接电脑</p>
-<p>运行-》运行到手机或模拟器 -》调试控制台</p>
-<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022104006.png" alt="image-20211022104005852"></p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>HbuilderX</tag>
-        <tag>android</tag>
-        <tag>ios</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue3学习理解</title>
     <url>/2020/12/24/Vue/Vue3%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/</url>
     <content><![CDATA[<h1 id="vue3-新特性"><a href="#vue3-新特性" class="headerlink" title="vue3 新特性"></a>vue3 新特性</h1><blockquote>
@@ -4553,6 +4510,49 @@
       </categories>
       <tags>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue-cli4+HbuilderX打包android+ios应用</title>
+    <url>/2021/03/25/Vue/Vue+HbuilderX%E6%89%93%E5%8C%85App%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="打包-vue-web-项目"><a href="#打包-vue-web-项目" class="headerlink" title="打包 vue web 项目"></a>打包 vue web 项目</h2><h3 id="1-修改-build-的配置"><a href="#1-修改-build-的配置" class="headerlink" title="1.修改 build 的配置"></a>1.修改 build 的配置</h3><p>在 vue-cli(4.x 版本)下，修改 vue.config.js, 如果没有就创建一个</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 选项...</span></span><br><span class="line">  <span class="attr">publicPath</span>: <span class="string">&quot;./&quot;</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-修改路由模式为-hash-模式"><a href="#2-修改路由模式为-hash-模式" class="headerlink" title="2.修改路由模式为 hash 模式"></a>2.修改路由模式为 hash 模式</h3><p>如果使用了路由并且路由模式为 history 模式的话，需要改为 hash 模式</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">mode</span>: <span class="string">&quot;hash&quot;</span>,</span><br><span class="line">  <span class="attr">base</span>: process.<span class="property">env</span>.<span class="property">BASE_URL</span>,</span><br><span class="line">  routes,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-打包"><a href="#3-打包" class="headerlink" title="3.打包"></a>3.打包</h3><p>运行 npm run build</p>
+<p>打包后会生成 dist 目录， dist 目录之后会用到</p>
+<h2 id="使用-hbuildx-打包成-App"><a href="#使用-hbuildx-打包成-App" class="headerlink" title="使用 hbuildx 打包成 App"></a>使用 hbuildx 打包成 App</h2><h3 id="1-先在-dcloud-注册个开发者账号："><a href="#1-先在-dcloud-注册个开发者账号：" class="headerlink" title="1.先在 dcloud 注册个开发者账号："></a>1.先在 dcloud 注册个开发者账号：</h3><p><a href="https://dev.dcloud.net.cn/">https://dev.dcloud.net.cn/</a></p>
+<h3 id="2-下载-hubilderx-App-开发版本"><a href="#2-下载-hubilderx-App-开发版本" class="headerlink" title="2.下载 hubilderx App 开发版本"></a>2.下载 hubilderx App 开发版本</h3><p>（<a href="https://www.dcloud.io/hbuilderx.html%EF%BC%89%EF%BC%8C%E6%89%93%E5%BC%80hbuilderx%EF%BC%8C%E7%82%B9%E5%87%BB%E5%B7%A6%E4%B8%8B%E8%A7%92%E7%99%BB%E5%BD%95%E8%B4%A6%E5%8F%B7%E3%80%82">https://www.dcloud.io/hbuilderx.html），打开hbuilderx，点击左下角登录账号。</a></p>
+<h3 id="3-新建-h5-App-项目："><a href="#3-新建-h5-App-项目：" class="headerlink" title="3.新建 h5+ App 项目："></a>3.新建 h5+ App 项目：</h3><p>文件-&gt;新建-&gt;项目</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022101926.png" alt="image-20211022101917225"></p>
+<h3 id="4-将-dist-目录和新建的项目合并"><a href="#4-将-dist-目录和新建的项目合并" class="headerlink" title="4.将 dist 目录和新建的项目合并"></a>4.将 dist 目录和新建的项目合并</h3><p>删除 myApp 项目里面的 css、img、js 文件夹；将打包后的 vue 静态资源文件夹 dist 里面的文件拷贝进 app 项目里：</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022102250.png" alt="image-20211022102250128"></p>
+<h3 id="5-修改-app-的配置文件-mainfest-json"><a href="#5-修改-app-的配置文件-mainfest-json" class="headerlink" title="5.修改 app 的配置文件 mainfest.json"></a>5.修改 app 的配置文件 mainfest.json</h3><p><img data-src="https://bitbw.top/public/img/my_gallery/20211022102642.png" alt="image-20211022102642627"></p>
+<h4 id="可选配置"><a href="#可选配置" class="headerlink" title="可选配置"></a>可选配置</h4><p>图标配置<br>安装到手机上后显示的 app 图标。可以选择一个分辨率较大的图片，然后点击自动生成所有图标并配置。</p>
+<p>启动图配置<br>取消勾选：启动界面显示等待雪花</p>
+<p>SDK 配置<br>根据 app 项目需求，选择相应的第三方 SDK（一般需要去相应的 SDK 官网申请 key）</p>
+<p>模块权限配置<br>app 需要用到的权限，会询问用户打开这些权限。勾选相应的权限模块即可。</p>
+<h3 id="6-云打包-Android-app"><a href="#6-云打包-Android-app" class="headerlink" title="6.云打包 Android app"></a>6.云打包 Android app</h3><p>选中需要打包的项目名，点击工具栏的“发行”，选择”原生 App-云打包“.</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022103310.png" alt="image-20211022103310806"></p>
+<p>在弹出的框中，选择”使用 DCloud 公用证书“（也可以使用自有证书，需要查看官网说明），取消勾选 ”广告联盟“ 和 ”换量联盟“，点击最底部的”打包“按钮：</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022103342.png" alt="image-20211022103342804"></p>
+<p>打包完成后打开文件位置 就可以看到生成的 apk 安卓安装文件了</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022105826.png" alt="image-20211022105826098"></p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>因为是使用云打包需要排队，具体时间无法确定</p>
+<h3 id="7-调试"><a href="#7-调试" class="headerlink" title="7.调试"></a>7.调试</h3><p>调试需要手机打开开发者模式通过 usb 连接电脑</p>
+<p>运行-》运行到手机或模拟器 -》调试控制台</p>
+<p><img data-src="https://bitbw.top/public/img/my_gallery/20211022104006.png" alt="image-20211022104005852"></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>HbuilderX</tag>
+        <tag>android</tag>
+        <tag>ios</tag>
       </tags>
   </entry>
   <entry>
@@ -5246,7 +5246,7 @@
 <p>package.json</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"> <span class="comment">// 直接复制到项目中 yarn 更新依赖</span></span><br><span class="line"><span class="attr">&quot;devDependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;babel-plugin-import&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;less&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.7.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;less-loader&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;react-app-rewired&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.2.9&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>less-loader 不要超过 5.0， react-app-rewired 不要超过 2.0.2-next.0，<a href="mailto:&#x6c;&#101;&#115;&#115;&#64;&#50;&#x2e;&#x37;&#46;&#51;">&#x6c;&#101;&#115;&#115;&#64;&#50;&#x2e;&#x37;&#46;&#51;</a></p>
+<p>less-loader 不要超过 5.0， react-app-rewired 不要超过 2.0.2-next.0，<a href="mailto:&#108;&#101;&#x73;&#x73;&#x40;&#x32;&#46;&#55;&#x2e;&#x33;">&#108;&#101;&#x73;&#x73;&#x40;&#x32;&#46;&#55;&#x2e;&#x33;</a></p>
 ]]></content>
       <categories>
         <category>React</category>
@@ -7872,7 +7872,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h2><h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>webpack 5 需要使用 npm i <a href="mailto:&#x77;&#x65;&#x62;&#x70;&#97;&#x63;&#107;&#x2d;&#100;&#x65;&#x76;&#45;&#x73;&#101;&#114;&#x76;&#101;&#114;&#x40;&#52;&#x2e;&#48;&#46;&#48;&#x2d;&#98;&#101;&#116;&#97;&#x2e;&#48;">&#x77;&#x65;&#x62;&#x70;&#97;&#x63;&#107;&#x2d;&#100;&#x65;&#x76;&#45;&#x73;&#101;&#114;&#x76;&#101;&#114;&#x40;&#52;&#x2e;&#48;&#46;&#48;&#x2d;&#98;&#101;&#116;&#97;&#x2e;&#48;</a></p>
+<h2 id="HMR"><a href="#HMR" class="headerlink" title="HMR"></a>HMR</h2><h3 id="tip"><a href="#tip" class="headerlink" title="tip"></a>tip</h3><p>webpack 5 需要使用 npm i <a href="mailto:&#119;&#x65;&#x62;&#112;&#97;&#99;&#x6b;&#x2d;&#x64;&#x65;&#x76;&#45;&#x73;&#x65;&#114;&#x76;&#101;&#114;&#x40;&#52;&#x2e;&#48;&#x2e;&#x30;&#45;&#x62;&#101;&#x74;&#x61;&#x2e;&#48;">&#119;&#x65;&#x62;&#112;&#97;&#99;&#x6b;&#x2d;&#x64;&#x65;&#x76;&#45;&#x73;&#x65;&#114;&#x76;&#101;&#114;&#x40;&#52;&#x2e;&#48;&#x2e;&#x30;&#45;&#x62;&#101;&#x74;&#x61;&#x2e;&#48;</a></p>
 <p>但是目前 4.0.0-beta.0 还不完善 文档没有更新 热模块重载不好使</p>
 <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>hot module replacement 热模块替换 &#x2F; 模块热替换</p>
 <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>一个模块发生变化，只会重新打包这一个模块（而不是打包所有模块）<br>极大提升构建速度</p>
@@ -8568,6 +8568,37 @@
       </tags>
   </entry>
   <entry>
+    <title>代码编辑器插件 codemirror 和 monaco-editor 的使用</title>
+    <url>/2022/09/06/js%E6%8F%92%E4%BB%B6/%E4%BB%A3%E7%A0%81%E7%BC%96%E8%BE%91%E5%99%A8%E6%8F%92%E4%BB%B6codemirror%E5%92%8Cmonaco-editor%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="codemirror"><a href="#codemirror" class="headerlink" title="codemirror"></a>codemirror</h2><p><a href="https://codemirror.net/5/index.html">codemirror 官方文档</a><br><a href="https://v1.github.surmon.me/vue-codemirror/">vue-codemirror 官方文档</a><br><a href="https://github.com/surmon-china/surmon-china.github.io/tree/vue2/projects/vue-codemirror/examples">vue-codemirror 官方 examples</a><br>因为是本项目是 vue2 所以先记录 vue2 中的使用</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>4.0.6 配合 vue2</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install vue-codemirror@4.0.6 </span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;codemirror&quot;&gt;</span><br><span class="line">    &lt;codemirror v-model=&quot;code&quot; :options=&quot;cmOption&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import dedent from &quot;dedent&quot;;</span><br><span class="line">import &#123; codemirror &#125; from &quot;vue-codemirror&quot;;</span><br><span class="line">// base style</span><br><span class="line">import &quot;codemirror/lib/codemirror.css&quot;;</span><br><span class="line">// language</span><br><span class="line">import &quot;codemirror/mode/vue/vue.js&quot;;</span><br><span class="line">// theme css</span><br><span class="line">import &quot;codemirror/theme/base16-dark.css&quot;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;codemirror-example-vue&quot;,</span><br><span class="line">  title: &quot;Mode: text/x-vue &amp; Theme: base16-dark&quot;,</span><br><span class="line">  components: &#123;</span><br><span class="line">    codemirror,</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      code: dedent`</span><br><span class="line">          &lt;template&gt;</span><br><span class="line">            &lt;h1&gt;Hello World!&lt;/h1&gt;</span><br><span class="line">            &lt;codemirror v-model=&quot;code&quot; :options=&quot;cmOption&quot; /&gt;</span><br><span class="line">          &lt;/template&gt;</span><br><span class="line"></span><br><span class="line">          &lt;script&gt;</span><br><span class="line">            // import &#x27;some-codemirror-resource&#x27;</span><br><span class="line">            export default &#123;</span><br><span class="line">              data() &#123;</span><br><span class="line">                return &#123;</span><br><span class="line">                  code: &#x27;const A = 10&#x27;,</span><br><span class="line">                  cmOption: &#123;</span><br><span class="line">                    tabSize: 4,</span><br><span class="line">                    styleActiveLine: true,</span><br><span class="line">                    lineNumbers: true,</span><br><span class="line">                    line: true,</span><br><span class="line">                    foldGutter: true,</span><br><span class="line">                    styleSelectedText: true,</span><br><span class="line">                    mode: &#x27;text/javascript&#x27;,</span><br><span class="line">                    keyMap: &quot;sublime&quot;,</span><br><span class="line">                    matchBrackets: true,</span><br><span class="line">                    showCursorWhenSelecting: true,</span><br><span class="line">                    theme: &quot;monokai&quot;,</span><br><span class="line">                    extraKeys: &#123; &quot;Ctrl&quot;: &quot;autocomplete&quot; &#125;,</span><br><span class="line">                    hintOptions:&#123;</span><br><span class="line">                      completeSingle: false</span><br><span class="line">                    &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          $&#123;&quot;&lt;\\/script&gt;&quot;&#125;</span><br><span class="line"></span><br><span class="line">          &lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">            @import &#x27;./sass/mixins&#x27;;</span><br><span class="line">            @import &#x27;./sass/variables&#x27;;</span><br><span class="line">            main &#123;</span><br><span class="line">              position: relative;</span><br><span class="line">            &#125;</span><br><span class="line">          &lt;/style&gt;</span><br><span class="line">        `,</span><br><span class="line">      cmOption: &#123;</span><br><span class="line">        tabSize: 4,</span><br><span class="line">        styleActiveLine: true,</span><br><span class="line">        lineNumbers: true,</span><br><span class="line">        line: true,</span><br><span class="line">        mode: &quot;text/x-vue&quot;,</span><br><span class="line">        lineWrapping: true,</span><br><span class="line">        theme: &quot;base16-dark&quot;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">.codemirror &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100vh;</span><br><span class="line">  ::v-deep &#123;</span><br><span class="line">    .CodeMirror &#123;</span><br><span class="line">      height: 100vh;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意 没有如果默认安装 <code>dedent</code> 还需要安装一下 <code>dedent</code></p>
+</blockquote>
+<h2 id="Monaco-Editor"><a href="#Monaco-Editor" class="headerlink" title="Monaco Editor"></a>Monaco Editor</h2><p><a href="https://github.com/microsoft/monaco-editor">github地址</a><br><a href="https://microsoft.github.io/monaco-editor/">Monaco Editor 官网</a></p>
+<p>Monaco Editor 就是 网页版的 vscode 所以编辑功能更强大, 但相对体积也更大</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install monaco-editor</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h3><p><a href="https://github.com/microsoft/monaco-editor/tree/main/samples">Monaco Editor 所以使用示例</a></p>
+<p>使用方式有很多种 因为是 vue 项目所以直接使用<a href="https://github.com/microsoft/monaco-editor/blob/main/docs/integrate-esm.md">集成 ESM</a>方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;monaco-editor&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;container&quot; style=&quot;height: 100%&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import * as monaco from &quot;monaco-editor&quot;;</span><br><span class="line">let monacoInstance;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;MonacoEditor&quot;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    monacoInstance = monaco.editor.create(</span><br><span class="line">      document.getElementById(&quot;container&quot;),</span><br><span class="line">      &#123;</span><br><span class="line">        value: &quot;function hello() &#123;\n\talert(&#x27;Hello world!&#x27;);\n&#125;&quot;,</span><br><span class="line">        language: &quot;javascript&quot;,</span><br><span class="line">        theme: &quot;vs-dark&quot;,</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line">  destroyed() &#123;</span><br><span class="line">    monacoInstance.dispose();</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">.monaco-editor &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100vh;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>vue.config.js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; defineConfig &#125; = <span class="built_in">require</span>(<span class="string">&quot;@vue/cli-service&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">MonacoWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&quot;monaco-editor-webpack-plugin&quot;</span>);</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">transpileDependencies</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">configureWebpack</span>: &#123;</span><br><span class="line">    <span class="attr">plugins</span>: [<span class="keyword">new</span> <span class="title class_">MonacoWebpackPlugin</span>()],</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js插件</category>
+      </categories>
+      <tags>
+        <tag>monaco-editor</tag>
+        <tag>codemirror</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用 ubuntu 打造 NAS</title>
     <url>/2021/06/03/Linux/%E4%BD%BF%E7%94%A8-ubuntu-%E6%89%93%E9%80%A0-NAS/</url>
     <content><![CDATA[<h1 id="Ubuntu-文件管理软件安装"><a href="#Ubuntu-文件管理软件安装" class="headerlink" title="Ubuntu 文件管理软件安装"></a>Ubuntu 文件管理软件安装</h1><h2 id="Ubuntu-的安装"><a href="#Ubuntu-的安装" class="headerlink" title="Ubuntu 的安装"></a>Ubuntu 的安装</h2><p>参考： <a href="https://www.cnblogs.com/masbay/p/10745170.html">https://www.cnblogs.com/masbay/p/10745170.html</a></p>
@@ -8709,7 +8740,7 @@
   </entry>
   <entry>
     <title>使用xlsx.js 实现隐藏工作簿</title>
-    <url>/2020/12/13/XLSX/%E4%BD%BF%E7%94%A8xlsx-js-%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%B7%A5%E4%BD%9C%E7%B0%BF/</url>
+    <url>/2020/12/13/js%E6%8F%92%E4%BB%B6/%E4%BD%BF%E7%94%A8xlsx-js-%E5%AE%9E%E7%8E%B0%E9%9A%90%E8%97%8F%E5%B7%A5%E4%BD%9C%E7%B0%BF/</url>
     <content><![CDATA[<p><a href="http://sheetjs.com/">SheetJS js-xlsx</a> 中文文档： <a href="https://github.com/rockboom/SheetJS-docs-zh-CN">https://github.com/rockboom/SheetJS-docs-zh-CN</a></p>
 <p>下面是对工作簿能见度的描述文档</p>
 <h2 id="数据表能见度"><a href="#数据表能见度" class="headerlink" title="数据表能见度"></a>数据表能见度</h2><p>Excel 支持将表格隐藏在更低的标签栏。表格数据存储文件内，但是 UI 不容易让它可以使用。标准的隐藏表格会被显示在”Unhide”菜单内。Excel 也有”very hidden”表格，这些表格不能被显示在菜单内。只可以通过 Vb 编辑器访问。</p>
@@ -8754,7 +8785,7 @@
 <h2 id="具体实现："><a href="#具体实现：" class="headerlink" title="具体实现："></a>具体实现：</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 隐藏采购员表   因为整个xlsx的使用是以class实现的这里截取隐藏工作表的方法</span></span><br><span class="line"><span class="title function_">hideBuyerSheet</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">let</span> indexs = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> [i,name] <span class="keyword">of</span> <span class="variable language_">this</span>.<span class="property">workbook</span>.<span class="property">SheetNames</span>.<span class="title function_">entries</span>()) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="regexp">/采购员/</span>.<span class="title function_">test</span>(name))&#123; <span class="comment">//找到所有带采购员名称的表的下标</span></span><br><span class="line">      indexs.<span class="title function_">push</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> i <span class="keyword">of</span> indexs) &#123;</span><br><span class="line">     <span class="comment">// 将对应下标的工作簿隐藏</span></span><br><span class="line">    <span class="variable constant_">XLSX</span>.<span class="property">utils</span>.<span class="title function_">book_set_sheet_visibility</span>(<span class="variable language_">this</span>.<span class="property">workbook</span>, i, <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>XLSX</category>
+        <category>js插件</category>
       </categories>
       <tags>
         <tag>js</tag>
