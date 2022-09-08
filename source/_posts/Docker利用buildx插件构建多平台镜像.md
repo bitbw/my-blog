@@ -13,7 +13,7 @@ categories: 工具使用
 
 ## 运行 Docker 镜像分发的跨平台模拟器
 
-```
+```sh
 docker run --privileged --rm tonistiigi/binfmt --install all
 ```
 
