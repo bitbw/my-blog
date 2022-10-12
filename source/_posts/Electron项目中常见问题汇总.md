@@ -267,6 +267,15 @@ npm i electron-builder@next
 npm i electron-builder@next
 ```
 
+## vue-cli使用vue-cli-plugin-electron-builder插件，运行时不启动electron程序
+
+### 原因
+当一个项目有yarn.lock但是电脑运行环境没有yarn环境时，就会出现启动不了electron程序的情况
+[vue-cli使用vue-cli-plugin-electron-builder插件，运行时不启动electron程序](https://blog.csdn.net/fyt0215/article/details/106293049)
+
+### 解决
+删除yarn.lock 或者使用  yarn 装包
+
 ## 常用文档汇总
 
 electron <https://www.electronjs.org/>
