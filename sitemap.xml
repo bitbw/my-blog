@@ -182,249 +182,6 @@
   </url>
   
   <url>
-    <loc>https://blog.bitbw.top/2022/04/28/js/%E5%9F%BA%E4%BA%8Eservice-worker%E5%AE%9E%E7%8E%B0%E9%83%A8%E7%BD%B2%E5%90%8E%E6%8F%90%E7%A4%BA%E7%94%A8%E6%88%B7%E5%88%B7%E6%96%B0/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/11/12/React/antd-mobile%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/04/12/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/axios%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/12/13/Electron/electron-builder-install-app-deps-%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/06/07/Electron/electron-builder-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8C%85%E5%90%AB%E6%89%93%E5%8C%85%E6%97%B6%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/07/27/Electron/electron-builder%E5%8F%8C%E5%87%BB%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E5%85%B3%E8%81%94%E5%BA%94%E7%94%A8-%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/07/29/Electron/electron-builder%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/04/12/Electron/electron-builder%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E5%8D%B8%E8%BD%BD%E7%95%8C%E9%9D%A2/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/06/04/Electron/electron-vue%E9%A1%B9%E7%9B%AE%E5%BF%AB%E6%8D%B7%E5%88%9B%E5%BB%BA%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/06/09/Electron/electron%E9%A1%B9%E7%9B%AE%E5%BF%AB%E6%8D%B7%E7%94%9F%E6%88%90%E6%89%80%E6%9C%89%E7%AB%AF%E5%AF%B9%E5%BA%94%E5%9B%BE%E6%A0%87/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/07/31/Vue/element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2019/11/30/js/es6%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/03/07/Nodejs/express%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/01/19/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/gitlab%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2019/11/28/Hexo/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2016/06/05/js/javaScript-%E5%8F%98%E9%87%8F-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2016/07/05/js/javaScript-%E6%93%8D%E4%BD%9C%E7%AC%A6-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2016/06/25/js/javaScript-%E6%95%B0%E7%BB%84/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2016/08/31/js/javaScript==%E5%92%8CObject.is%E5%92%8C===/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/09/08/js/javaScript%E4%B8%ADPromise%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/03/11/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95/jest%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/04/24/js/js%E5%B8%B8%E7%94%A8%E5%86%B7%E7%9F%A5%E8%AF%86/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/06/08/js/js%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86_Blob_File_Buffer_TypedArray_ArrayBuffer%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/03/Linux/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.bitbw.top/2020/08/01/Hexo/next%E4%B8%BB%E9%A2%98%E7%9A%84%E8%AE%BE%E7%BD%AE/</loc>
     
     <lastmod>2022-10-14</lastmod>
@@ -821,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://blog.bitbw.top/2022/03/07/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/AntV-G6%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://blog.bitbw.top/2022/04/28/js/%E5%9F%BA%E4%BA%8Eservice-worker%E5%AE%9E%E7%8E%B0%E9%83%A8%E7%BD%B2%E5%90%8E%E6%8F%90%E7%A4%BA%E7%94%A8%E6%88%B7%E5%88%B7%E6%96%B0/</loc>
     
     <lastmod>2022-10-14</lastmod>
     
@@ -830,34 +587,7 @@
   </url>
   
   <url>
-    <loc>https://blog.bitbw.top/2020/06/08/CSS/CSS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2020/12/30/CSS/CSS%E9%87%8C%E7%9A%84pointer-events%E5%B1%9E%E6%80%A7/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2021/07/05/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/Canvas%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/2022/07/05/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/Canvas%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <loc>https://blog.bitbw.top/2020/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/</loc>
     
     <lastmod>2022-10-14</lastmod>
     
@@ -1271,6 +1001,267 @@
   </url>
   
   <url>
+    <loc>https://blog.bitbw.top/2021/11/12/React/antd-mobile%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/04/12/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/axios%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/12/13/Electron/electron-builder-install-app-deps-%E5%8D%A1%E4%BD%8F%E4%B8%8D%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/06/07/Electron/electron-builder-%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%EF%BC%8C%E5%8C%85%E5%90%AB%E6%89%93%E5%8C%85%E6%97%B6%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/07/27/Electron/electron-builder%E5%8F%8C%E5%87%BB%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E5%85%B3%E8%81%94%E5%BA%94%E7%94%A8-%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/07/29/Electron/electron-builder%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/04/12/Electron/electron-builder%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85%E5%8D%B8%E8%BD%BD%E7%95%8C%E9%9D%A2/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/06/04/Electron/electron-vue%E9%A1%B9%E7%9B%AE%E5%BF%AB%E6%8D%B7%E5%88%9B%E5%BB%BA%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/06/09/Electron/electron%E9%A1%B9%E7%9B%AE%E5%BF%AB%E6%8D%B7%E7%94%9F%E6%88%90%E6%89%80%E6%9C%89%E7%AB%AF%E5%AF%B9%E5%BA%94%E5%9B%BE%E6%A0%87/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/07/31/Vue/element-sortablejs%E5%AE%9E%E7%8E%B0%E8%A1%A8%E6%A0%BC%E6%89%98%E6%8B%BD/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/09/16/Vue/elementUI%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2019/11/30/js/es6%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/03/07/Nodejs/express%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/01/19/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/gitlab%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2019/11/28/Hexo/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2016/06/05/js/javaScript-%E5%8F%98%E9%87%8F-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BD%AC%E6%8D%A2/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2016/07/05/js/javaScript-%E6%93%8D%E4%BD%9C%E7%AC%A6-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84-%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2016/06/25/js/javaScript-%E6%95%B0%E7%BB%84/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2016/08/31/js/javaScript==%E5%92%8CObject.is%E5%92%8C===/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/03/11/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95/jest%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/09/14/js/js%E4%B8%AD%E7%9A%84%E5%BE%AE%E8%A7%82%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%8F%E8%A7%82%E4%BB%BB%E5%8A%A1/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/04/24/js/js%E5%B8%B8%E7%94%A8%E5%86%B7%E7%9F%A5%E8%AF%86/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/06/08/js/js%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86_Blob_File_Buffer_TypedArray_ArrayBuffer%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/03/Linux/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/03/07/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/AntV-G6%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/06/08/CSS/CSS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2020/12/30/CSS/CSS%E9%87%8C%E7%9A%84pointer-events%E5%B1%9E%E6%80%A7/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2021/07/05/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/Canvas%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.bitbw.top/2022/07/05/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/Canvas%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    
+    <lastmod>2022-10-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.bitbw.top/404</loc>
     
     <lastmod>2022-10-14</lastmod>
@@ -1647,13 +1638,6 @@
   
   <url>
     <loc>https://blog.bitbw.top/tags/hexo/</loc>
-    <lastmod>2022-10-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.bitbw.top/tags/promise/</loc>
     <lastmod>2022-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
