@@ -1,173 +1,96 @@
-# 项目启动
+## 参考文档
 
-### [electron API](https://blog.csdn.net/k157507281/article/details/99415263)
-![electron_api](https://raw.githubusercontent.com/zhangbowen-github/my-gallery/main/img/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS82LzEwLzE2YjNkMWM5ZDJlMjJhNGE.png)
-### [sqliste3-API ]( https://github.com/mapbox/node-sqlite3/wiki/API)
+[electron 官方文档](https://www.electronjs.org/zh/docs/latest/tutorial/quick-start)
+[electron的使用](https://juejin.cn/post/6844904159104204814)
 
-![image-20200923144912093](https://bitbw.top/public/img/my_gallery/image-20200923144912093.png)
+[electron-builder](https://www.electron.build/)
+[electron-builder自动更新插件文档](https://www.electron.build/auto-update)
 
-## main.js
+[vue-cli-plugin-electron-builder](https://nklayman.github.io/vue-cli-plugin-electron-builder/guide/guide.html#table-of-contents)
+
+[sqliste3-API]( https://github.com/mapbox/node-sqlite3/wiki/API)
+[@journeyapps/sqlcipher加密版sqliste3](https://github.com/journeyapps/node-sqlcipher)
+
+## 项目启动
+
+### 启动流程
+
+#### 主进程
+
+src\main\index.js 主进程启动 ->  new BrowserWindow 创建浏览器窗口(渲染进程启动)
+
+#### 渲染进程
+
+src\renderer\index.js 渲染进程启动 -> 检查更新 CheckAndUpdate -> new Vue( App.vue)
+
+->加载 bootstrap.js (sysDB 更新和 app 更新->获取本地存储数据 ->获取数据库数据)
+
+#### bootstrap.js
 
 ```js
-import Vue from 'vue';
-import store from './plugins/vuex';
-import router from './plugins/router';
-import vuetify from './plugins/vuetify';
-import i18n from './plugins/i18n';
-
-import App from './App.vue';
-import LaunchPage from './Launch.vue';
-import ErrorPage from './Error.vue';
-
-import { Delay } from '@/util/func';
-import fs from 'fs';
-import path from 'path';
-import { userDB, dbPath, openDB } from '@/api';
-import UpdateFrom from './update';
-import { remote } from 'electron';
-
-import Test from './test';
-
-// import common from './../src/static/common_js/common'
-
-Vue.config.productionTip = false;
-
-const dev = process.env.NODE_ENV !== 'production';
-
-if (dev) {
-  window.DebugTest = Test;
-}
-
-const delay = new Delay(3500); //创建一个3.5秒的延时
-
-const main = () => {
-  Check()
-    .then(result => showApp())
-    .catch(result => showError());
-};
-
-// Vue.use(common)
-
-async function Check() {
-  try {
-    // check if db exist
-    // 判断 数据库 是否已经存在
-    if (!userDB.exists()) {
-      // load first launch page
-      // 加载首次启动页面
-      showLaunch();
-      // create db
-      // 创建数据库
-      await createDB();
-      // relaunch app when create action finish
-      // 创建数据库完成重新启动项目
-      remote.app.relaunch();
-      // 生产环境 执行一下退出操作
-      if (!dev) remote.app.quit();
-    }
-    // check version when db is ready, first db is packed from exe file, maybe out of date
-    let versionRow = await userDB
-      .table('t_local_setting')
-      .where('key_name="version"')
-      .findOne();
-    let nowVersionRow = await openDB(path.join(process.cwd(), 'file/init/iconfig_user.config'))
-      .table('t_local_setting')
-      .where('key_name="version"')
-      .findOne();
-    // :TODO check online version
-    // 查看当前版本号与本地版本号是否一致
-    if (versionRow.key_value === nowVersionRow.key_value) return true;
-    //不一致 则 更新数据
-    else {
-      showLaunch();
-      // 调用更新本地数据库方法
-      await delay.run(updateApp(versionRow.key_value, nowVersionRow.key_value));
-      remote.app.relaunch();
-      // 生产环境 执行一下退出操作
-      if (!dev) remote.app.quit();
-    }
-  } catch (error) {
-    console.log(error);
-    return false;
+export default async function Initializer() {
+  //////////////////////////////////////////////////////////////////////////////
+  // sysDB 更新和 app 更新
+  //////////////////////////////////////////////////////////////////////////////
+  if (isProd) {
+    //  sysDB 更新
+    await store.dispatch(`update/checkSysDBUpdate`);
+    //  app 更新
+    store.dispatch(`update/checkAppUpdate`);
+  } else {
+    store.dispatch("globality/loadLocalSysDBVersion");
+    // TODO 开发时测试更新
+    //  sysDB 更新
+    await store.dispatch(`update/checkSysDBUpdate`);
+    //  app 更新
+    store.dispatch(`update/checkAppUpdate`);
   }
+  //////////////////////////////////////////////////////////////////////////////
+  // 获取本地存储数据
+  //////////////////////////////////////////////////////////////////////////////
+  // 主题
+  store.commit(`globality/${THEME}`, storage.get(THEME, "light"));
+  // 主题色
+  store.commit(`globality/${THEME_COLOR}`, storage.get(THEME_COLOR, null));
+  // 用户登录信息
+  store.commit(`user/${LOGIN_INFO}`, storage.get(LOGIN_INFO, null));
+  // 用户登录时间
+  store.commit(`user/${LOGIN_TIMESTAMP}`, storage.get(LOGIN_TIMESTAMP, null));
+  // 用户是否自动上传
+  store.commit(`cloudSync/${IS_AUTOUPLOAD}`, storage.get(IS_AUTOUPLOAD, true));
+  // 用户供应链订单查询历史
+  store.commit(
+    `supply/${CONFIG_QUERY_HISTORY}`,
+    storage.get(CONFIG_QUERY_HISTORY, null)
+  );
+  // 获取用户信息
+  store.commit(`user/${USER_INFO}`, session.get(USER_INFO, null));
+  store.commit(`user/${ACCESS_TOKEN}`, session.get(ACCESS_TOKEN, null));
+  store.commit(`user/${PERMISSIONS}`, session.get(PERMISSIONS, null));
+  store.commit(`user/${LAST_USER_ID}`, session.get(LAST_USER_ID, null));
+
+  //////////////////////////////////////////////////////////////////////////////
+  // 获取数据库数据
+  //////////////////////////////////////////////////////////////////////////////
+  // 获取用户设置
+  store.dispatch(`globality/LoadingSettings`);
+  // 获取所有机型
+  store.dispatch(`configurator/LoadingProducts`);
+  // 获取人员 （模拟数据暂时没用）
+  store.dispatch(`basic/LoadingPersons`);
+  // 获取客户（模拟数据暂时没用）
+  store.dispatch(`basic/LoadingCustomer`);
+  // 获取用户方案
+  await store.dispatch(`solution/LoadingSolutions`);
+  // 自动登录 等待获取用户方案后再登录
+  await store.dispatch("user/autoLogin");
 }
-async function createDB() {
-  // 从file目录拷贝到本地目录
-  let copy = async () => {
-    let files = [
-      'e950.rule',
-      's914.rule',
-      's920.rule',
-      's922.rule',
-      's924.rule',
-      'iconfig_sys.config',
-      'iconfig_user.config',
-    ];
-    try {
-      //创建目录
-      fs.mkdirSync(dbPath);
-    } catch (error) {
-      console.log('exist');
-    }
-    files.forEach(file => {
-      let data = fs.readFileSync(path.join(process.cwd(), 'file/init', file));
-      fs.writeFileSync(path.join(dbPath, file), data);
-    });
-    return true;
-  };
-  return delay.run(copy());
-}
-
-async function updateApp(from, to) {
-  await UpdateFrom(from, to);
-  return true;
-}
-
-const showApp = () => {
-  new Vue({
-    store,
-    router,
-    vuetify,
-    i18n,
-    render: h => h(App),
-  }).$mount('#app');
-};
-
-const showLaunch = () => {
-  new Vue({
-    vuetify,
-    render: h => h(LaunchPage),
-  }).$mount('#app');
-};
-
-const showError = () => {
-  new Vue({
-    vuetify,
-    render: h => h(ErrorPage),
-  }).$mount('#app');
-};
-
-// Main
-
-main();
 
 ```
 
-## app.vue
+## 获取数据库数据
 
-### 方法调用模式
-
-> vuex  调用 api 调用 util
-
-```js
-    //在数据库中取出数据并更新
-    this.LoadingSettings();
-    this.LoadingProducts();
-    this.LoadingPersons();
-    this.LoadingCustomer();
-```
-
-###  this.LoadingSettings();
+### this.LoadingSettings()
 
 以上方法定义在 vuex中
 
@@ -199,9 +122,7 @@ export default {
 
 ![image-20200923114843141](https://bitbw.top/public/img/my_gallery/image-20200923114843141.png)
 
-
-
-###  this.LoadingPersons();
+### this.LoadingPersons()
 
 以上方法定义在 vuex中
 
@@ -231,7 +152,7 @@ api.person  在 src\api\public\person.js 目前是写死的  数据库中没数�
   }
 ```
 
-### this.LoadingCustomer();
+### this.LoadingCustomer()
 
 src\plugins\store\public.js
 
@@ -259,7 +180,7 @@ src\plugins\store\public.js
   }
 ```
 
-###  this.LoadingProducts();
+### this.LoadingProducts()
 
 以上方法定义在 vuex中
 
@@ -315,46 +236,45 @@ engine.js  的核心方法NewConfigurator定义在@/util/configurator/index.js�
 
 #### sys库
 
-| 表名 | 说明 |
-| ---- | ---- |
-|t_def_a6p_info|A6P数据|
-|t_def_component_CPU|CPU数据|
-|t_def_component_card|IO卡数据|
-|t_def_component_disk|硬盘数据|
-|t_def_component_enclosure|硬盘扩展柜数据|
-|t_def_component_enclosuremode|硬盘扩展柜Mode类型|
-|t_def_component_fomodule|IO扩展柜的FOModule类型|
-|t_def_component_iodrawer|IO扩展柜|
-|t_def_component_listprice|所有的部件的价格都在找个表中 通过productsave类进行刷新价格|
-|t_def_component_memory|内存|
-|t_def_component_motherboard|背板|
-|t_def_component_peripheral|外设部件|
-|t_def_component_power|电源|
-|t_def_hpo_info|预装软件|
-|t_def_product_info|机型|
-|t_def_software_info|软件包括OS SW|
-|t_def_swma_info|维保|
-|t_template_info|模板信息|
-|t_template_component|模板对应的组件部分|
-|t_version_info|版本信息|
+| 表名                          | 说明                                                       |
+| ----------------------------- | ---------------------------------------------------------- |
+| t_def_a6p_info                | A6P数据                                                    |
+| t_def_component_CPU           | CPU数据                                                    |
+| t_def_component_card          | IO卡数据                                                   |
+| t_def_component_disk          | 硬盘数据                                                   |
+| t_def_component_enclosure     | 硬盘扩展柜数据                                             |
+| t_def_component_enclosuremode | 硬盘扩展柜Mode类型                                         |
+| t_def_component_fomodule      | IO扩展柜的FOModule类型                                     |
+| t_def_component_iodrawer      | IO扩展柜                                                   |
+| t_def_component_listprice     | 所有的部件的价格都在找个表中 通过productsave类进行刷新价格 |
+| t_def_component_memory        | 内存                                                       |
+| t_def_component_motherboard   | 背板                                                       |
+| t_def_component_peripheral    | 外设部件                                                   |
+| t_def_component_power         | 电源                                                       |
+| t_def_hpo_info                | 预装软件                                                   |
+| t_def_product_info            | 机型                                                       |
+| t_def_software_info           | 软件包括OS SW                                              |
+| t_def_swma_info               | 维保                                                       |
+| t_template_info               | 模板信息                                                   |
+| t_template_component          | 模板对应的组件部分                                         |
+| t_version_info                | 版本信息                                                   |
 
 #### user库
-| 表名 | 说明 |
-| ---- | ---- |
-|t_schema_info|方案列表|
-|t_schema_product_list|方案和产品信息的关联表|
-|t_config_info|产品信息表|
-|t_config_component|产品对应组件部分|
-|t_config_component|产品对应组件部分|
-|t_local_setting|本地信息用于对比的app版本号|
-|t_template_info|模板信息（现在没用上）|
-|t_template_component|模板对应的组件部分（现在没用上）|
 
-
+| 表名                  | 说明                             |
+| --------------------- | -------------------------------- |
+| t_schema_info         | 方案列表                         |
+| t_schema_product_list | 方案和产品信息的关联表           |
+| t_config_info         | 产品信息表                       |
+| t_config_component    | 产品对应组件部分                 |
+| t_config_component    | 产品对应组件部分                 |
+| t_local_setting       | 本地信息用于对比的app版本号      |
+| t_template_info       | 模板信息（现在没用上）           |
+| t_template_component  | 模板对应的组件部分（现在没用上） |
 
 方案信息储存在 t_schema_info 用于这里的展示和导出    用于联查产品信息的表的id是`schemaID`
 
-![image-20200928163103055](%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3/image-20200928163103055.png)
+![image-20200928163103055](C:\Users\WX03\Desktop\张博文_文档_20221014\iConfig张博文记录文档\项目理解\image-20200928163103055.png)
 
 t_schema_info 使用 jion   联查 t_schema_product_list   利用`t_schema_info.schemaID = t_schema_product_list.schemaID`
 
@@ -376,7 +296,7 @@ t_config_component 表中存着所有的配置信息，用于改配和导出  �
 
 原始数据库对象通过database获取的 挂载在DB对象的connections 的connection下
 
-![image-20200923160153652](%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3/image-20200923160153652-1608010286920-1608010446156.png)
+![image-20200923160153652](C:\Users\WX03\Desktop\张博文_文档_20221014\iConfig张博文记录文档\项目理解\image-20200923160153652-1608010286920-1608010446156.png)
 
 ```js
 {
@@ -421,8 +341,6 @@ t_config_component 表中存着所有的配置信息，用于改配和导出  �
     }
 }
 ```
-
-
 
 数据库对象的属性和方法  DB 通过DB类生成
 
@@ -672,7 +590,7 @@ productSummary中的配置预览数据就由componentList而来
 用户表字段名含义
 
 - placeDef 主体软件每个部件都有 存着主体软件的UUID
--  placeGroup ： `mes_n`   `n`代表第多少次mes添加的部件
+- placeGroup ： `mes_n`   `n`代表第多少次mes添加的部件
 
 ### 点击需要预装软件（HPO）
 
@@ -692,7 +610,7 @@ productSummary中的配置预览数据就由componentList而来
 
 每次选择部件后  
 
-调用productSave方法的   
+调用productSave方法的
 
 LoadComponents -> loadSW->pack(os,sw,hpo)Components ->packSoftwareAndChildren  
 
@@ -700,7 +618,7 @@ packSoftwareAndChildren 将json转化对象添加compoentList 中
 
 ### A6P（光盘）
 
-#### 添加软件后   已选部件中 5692-A6P （软件信息） 1100（实物DVD交付）3435（DVD/CD-ROM） 只出现一次的原因：
+#### 添加软件后   已选部件中 5692-A6P （软件信息） 1100（实物DVD交付）3435（DVD/CD-ROM） 只出现一次的原因
 
 loadSW 方法返回 swcomponents   的过程 遍历所有数据 :
 
@@ -708,19 +626,15 @@ loadSW 方法返回 swcomponents   的过程 遍历所有数据 :
 
 一般相同的就只有5692-A6P （软件信息） 1100（实物DVD交付）3435（DVD/CD-ROM）这几个会重复， 就直接进行去重操作了
 
+#### 添加软件后 a6p 中 swcomponents 的 3450 (电子交付) 1101 (不使用实物DVD交付) 不在配置列表中显示的原因
 
-
-#### 添加软件后 a6p 中 swcomponents 的 3450 (电子交付) 1101 (不使用实物DVD交付) 不在配置列表中显示的原因：
-
-有这两个3450 电子交付 1101 不使用实物DVD交付    的 软件 虽然在A6p中 但属于不需要实际发货类型 
+有这两个3450 电子交付 1101 不使用实物DVD交付    的 软件 虽然在A6p中 但属于不需要实际发货类型
 
 这两个组件的 subType 是 A6P_COMPONENT_ELE
 
 在productSummary  index.vue 中 使用 mergeComponentList 方法过滤了A6P_COMPONENT_ELE 同时将相同部件合并显示数量
 
 然后放到展示列表中
-
-
 
 ### 已知bug
 
@@ -729,8 +643,6 @@ MES未做任何改变后导出xslx 总价 合计价格计算公式会出错 因�
 mes计算totalLines 的 是changeinfo 的总计 但是 如果未作改变的话 changeinfo长度为0 计算就会出问题
 
 并且 因为没有changeinfo 所有汇总中的价格都是0
-
-
 
 ### packSWComponents方法
 
@@ -742,7 +654,7 @@ mes计算totalLines 的 是changeinfo 的总计 但是 如果未作改变的话 
 
 - 设置自动带出部件的 placeDef（所属部件UUID） placeGroup （所属分组）  
 - 将自动带出部件的数量 quantity 为-1 或者 0 的部件的数量设置为options.actquantity （主部件的激活数量）
-- 调用 packSWComponent  将打包好的部件列表数据返回 
+- 调用 packSWComponent  将打包好的部件列表数据返回
 
 ##### packSWComponent方法
 
@@ -757,7 +669,7 @@ mes计算totalLines 的 是changeinfo 的总计 但是 如果未作改变的话 
 hpo和A6p
 
 - constTrue 之前软件的复选框 默认选择
--  defHPOComponent  机型对应的HPO
+- defHPOComponent  机型对应的HPO
 - HPOChekbox 是否选择预装软件
 - selHPOComponent 已选预装软件
 - oldA6Ps 之前的软件a6p
@@ -846,8 +758,6 @@ handleSWs() {
     },
 ```
 
-
-
 # uitl中的主要类
 
 ## ProductDefine类
@@ -895,8 +805,6 @@ handleSWs() {
 
 - packBareboneComponents   加载产品默认带的部件 this.productConfig.bareboneList 进行打包 返回
 
-  
-
 ## 上面三个类的关系
 
 > ProductSave 包含 ProductConfig（productConfig）
@@ -907,7 +815,7 @@ handleSWs() {
 
 > 说明 ：可选软件的集合 ProductDefine 用于定义可选硬件， SoftwareDefine 用于定义可选软件；
 >
-> 
+>
 
 属性:
 
@@ -924,7 +832,7 @@ handleSWs() {
 >没有的话 productSave 的 packOSComponents 或 packSWComponents 会报错  ：FCcode  undefinde
 
 ```js
-  async initialize() { 								
+  async initialize() {         
     [
       this.osList,                                          //操作系统列表
       this.swList,                                          //软件列表
@@ -976,15 +884,13 @@ prepares(){
 }
 ```
 
-
-
 ## RuleParser规则构造函数（jison 语法编译器）
 
 >说明 ：解析.rule 文件 ， 进行规则检查
 >
 >tip ：内部主要使用  jison（语法编译器）[官网](http://zaa.ch/jison/)  coffeeScript 就是使用 jison 进行编译的
 
-属性： 
+属性：
 
 > objs : 用来进行规则检查的数据判断 见 symbols.js
 >
@@ -1035,7 +941,7 @@ productSummary的主要校验规则方法checkConfig-》this.productRuleParser.m
       );
       this.CreateSnap(); //赋值productConfigSnap
     }
-	//规则检查器对象
+ //规则检查器对象
      productRuleParser: function() {
       return this.productRule && this.productRule.getRuleParser();
     }
@@ -1110,7 +1016,7 @@ function matchRules(className,group){
        }     
       }
       return {
-            errList :errMsg,							  // 提示的错误信息
+            errList :errMsg,         // 提示的错误信息
             appendList: context.symbols.server.extensions // 执行@(Server ...)  自动带出的fccode和数量的数组
      };
     }
@@ -1125,13 +1031,12 @@ function execRule(r,obj){
   let dumfun = newFun("dumy_function",[newRef(r.arg)],r.vdl,r.sl);
    //{args: [{…}],body: (2) [{…}, {…}],name: "dumy_function",ntype: 1,vdl: []}
   let funCall = newFunCall("dumy_function",[newDeRef(obj)])
-	//{name: "dumy_function",ntype: 22,symlist: [{…}]}
+ //{name: "dumy_function",ntype: 22,symlist: [{…}]}
   updateSymbol(stack.top(),["dumy_function"],dumfun,true,[[]])
   return exec(funCall)   // exec 是一个多个函数相互递归的函数 
 }
 
 ```
-
 
 > exec 通过对比 语法对象中的ntype  和 AIF， AFOR 等 执行对应的 exec_if_stat ，exec_for_stat ,eval_expr 等
 >
@@ -1190,7 +1095,7 @@ function call(name, symlist) {
     for (let i in fnref.args) {
       updateSymbol(stack.top(), fnref.args[i].names, args[i], true, [[]]);
     }
-	// 将所有的执行检查函数的内部变量添加到 stack.stacks[0中]
+ // 将所有的执行检查函数的内部变量添加到 stack.stacks[0中]
     if (fnref.vdl != null) {
       for (let i in fnref.vdl) {
         var c = fnref.vdl[i];
@@ -1205,7 +1110,7 @@ function call(name, symlist) {
         }
       }
     }
-	// 执行所有body （逻辑） stack.finished() 将stack 中的语法对象全部执行完毕返回true 
+ // 执行所有body （逻辑） stack.finished() 将stack 中的语法对象全部执行完毕返回true 
     for (let i in fnref.body) {
       ret = exec(fnref.body[i]); // 返回最后的执行结果 true 或 false 就是规则检查的结果
       if (stack.finished()) {
@@ -1230,7 +1135,7 @@ updateSymbol 会在stack.stacks 中从前添加一个context上下文对象
 
 ### 自动带出实现（自动补全项）
 
-- .rule 文件中 sever有这个属性 extensions=[],"自动补全项"; 
+- .rule 文件中 sever有这个属性 extensions=[],"自动补全项";
 
 ```js
 @(Server,sr,"激活码数量限制","cpu"){ // 规则检查时直接将 extensions 推进去对应的数据对象
@@ -1308,10 +1213,10 @@ struct Server {
    var cpuActivated = 0, "激活的CPU数量";
    ...
 }
-var noDiskFCs=["0837"]; 	// 用以判断是否是磁盘索引 （SAN负载源指定）	使用： return !(fc in noDiskFCs);
-var server = new Server;	// 生成server对象
+var noDiskFCs=["0837"];  // 用以判断是否是磁盘索引 （SAN负载源指定） 使用： return !(fc in noDiskFCs);
+var server = new Server; // 生成server对象
 
-func convert(sr){	        // 规则检查每次先调用这个函数将已选数据 selxxxComponent 转化到server数据中 sr即 server
+func convert(sr){         // 规则检查每次先调用这个函数将已选数据 selxxxComponent 转化到server数据中 sr即 server
      if (!sr.checking){
        sr.checking = true;
        convertCPUMem(sr);
@@ -1328,7 +1233,7 @@ func convert(sr){	        // 规则检查每次先调用这个函数将已选数
        sr.checking = false;
      }
 }
-@(Server,sr,"CPU数限制","cpu"){	// 核心的检查方法 sr 即 server 数据 ，规则解析后被放置到 Server的rules中
+@(Server,sr,"CPU数限制","cpu"){ // 核心的检查方法 sr 即 server 数据 ，规则解析后被放置到 Server的rules中
      errMsg="必须选配1-2个[EP1F]CPU";
     (sr.cpuFC == "EP1F") && (sr.cpuQuantity>=1) && (sr.cpuQuantity <=2);
 }
@@ -1346,9 +1251,9 @@ parse-> 赋值所有数据 -> 使用 while 循环 一直解析 -> 调用lexer.le
 
 - symbol  = lex() 找到.rule文件字符串中能够匹配的rules的下标 对应 performAction的返回值(token)
 - action =  table中下标为上一个动作的symbol的对象  中的key等于当前symbol的值(一般是数组)
-- action [0]  进行判断 
+- action [0]  进行判断
   - 1  保存当前匹配字符 和 symbol   和 列行数到对应的 vstack stack 和lstack 中
-  - 2  主要的生成语法解析对象方法  this.performAction.apply(xxxx , action[1] ,xxx)  根据action[1]进行分配合成方法,最终放到`this.stack.stacks[0]` (上下文对象)中 
+  - 2  主要的生成语法解析对象方法  this.performAction.apply(xxxx , action[1] ,xxx)  根据action[1]进行分配合成方法,最终放到`this.stack.stacks[0]` (上下文对象)中
   - 3 return  循环结束  退出 解析
 
 #### 核心代码
@@ -1529,7 +1434,7 @@ BarItem :{
 - names 代表变量名 或者 对象.属性   例如 sr.perlist 的names 是   ["sr", "perlist"]
 - val  代表 值   例如`ntype: 3, val: 0` 代表数字类型 的 0
 - offs 代表  数组[下标 ]   offs 中放置下标    例如   sr.barebone[i]    offs 中存放着 i  （ 变量 或者 对象.属性 都会带offs ，没用到就会是空数组）
-- annotations 代表注释  会将 `var FCCode ="EM62", "内存编号"` 中 `"内存编号" `放进去 （变量赋值都带， 没用到显示空字符串）
+- annotations 代表注释  会将 `var FCCode ="EM62", "内存编号"` 中 `"内存编号"`放进去 （变量赋值都带， 没用到显示空字符串）
 
 ##### if
 
@@ -1540,7 +1445,7 @@ BarItem :{
 
 ##### for
 
-- init  for的初始化操作 
+- init  for的初始化操作
 - cond 条件: false 就停止循环 i < len(sr.barebone)
 - step  步骤 ： i = i + 1 （i ++）
 
@@ -1549,29 +1454,29 @@ BarItem :{
 - args 函数参数
 - body 函数体
 
-赋值操作 
+赋值操作
 
 ```js
  var FCCode ="EM62", "内存编号"; 
 //解析对象如下
 {
-  "ntype": 19,			
+  "ntype": 19,   
   // 19 AASSIGN  代表赋值操作    这个语法对象 就是进行赋值操作 执行到这个对象时会执行：var FCCode ="EM62", "内存编号"; 
-  "lhs": {				//前面（左边）的操作（变量）
-    "ntype": 23,		// 23 AREF 代表变量
+  "lhs": {    //前面（左边）的操作（变量）
+    "ntype": 23,  // 23 AREF 代表变量
     "names": [
-      "FCCode"			// 变量名     （是数组说明可以 var 后面多个变量声明 赋值）
+      "FCCode"   // 变量名     （是数组说明可以 var 后面多个变量声明 赋值）
     ],
-    "offs": [			// 现在还不太理解
+    "offs": [   // 现在还不太理解
       []
     ]
   },
-  "rhs": {				// 后面（右边）的操作 （值）
-    "ntype": 4,			// 4 AQSTR  代表字符串
+  "rhs": {    // 后面（右边）的操作 （值）
+    "ntype": 4,   // 4 AQSTR  代表字符串
     "val": "EM62"
   },
-  "annotations": {		// annotations注释
-    "ntype": 4,			// 4 AQSTR  代表字符串			
+  "annotations": {  // annotations注释
+    "ntype": 4,   // 4 AQSTR  代表字符串   
     "val": "内存编号"
   }
 }
@@ -1582,33 +1487,33 @@ BarItem :{
 ```js
 // if(len(sr.perlist) == 0){...}
 {
-    ntype: 25,								// 25 AIF 代表if
+    ntype: 25,        // 25 AIF 代表if
     // c 代表 if()  中的判断
-    c: {									
-      ntype: 13,							// 13 AEQ 代表 ==
+    c: {         
+      ntype: 13,       // 13 AEQ 代表 ==
       lhs: {
-        ntype: 21,							// 21 ABCALL 函数调用
-        name: "len",						// 函数名
-        symlist: [							// 参数	
+        ntype: 21,       // 21 ABCALL 函数调用
+        name: "len",      // 函数名
+        symlist: [       // 参数 
           {
-            ntype: 24,						//24 AMREF 成员类型 sr.perlist
-            names: ["sr", "perlist"],		
+            ntype: 24,      //24 AMREF 成员类型 sr.perlist
+            names: ["sr", "perlist"],  
             offs: [[], []]
           }
         ]
       },
       rhs: {
-        ntype: 3,							// 3 ANUM 代表数字
-        val: 0								
+        ntype: 3,       // 3 ANUM 代表数字
+        val: 0        
       }
     }, 
     // tvl 是判断正确后  变量的声明赋值操作
-    tvl: [... ]								
+    tvl: [... ]        
      // t 判断正确后执行的操作
-    t: [									
-         ....	
+    t: [         
+         .... 
          {
-            ntype: 19,						// errMsg="TF5配置错误:" + "["+ bar.FCCode +"]" + "必选" ;
+            ntype: 19,      // errMsg="TF5配置错误:" + "["+ bar.FCCode +"]" + "必选" ;
             lhs: {
               ntype: 23,
               names: ["errMsg"],
@@ -1618,13 +1523,13 @@ BarItem :{
             赋值操作右侧 是多个 + + 拼接 采用树状结构表示 使用递归解析 先解析最里层 
             6  APLUS  表示 +
             */
-            rhs: {							
-              ntype: 6,						//  lhs + rhs = "TF5配置错误:[ fccode(bar.FCCode)]必选"
+            rhs: {       
+              ntype: 6,      //  lhs + rhs = "TF5配置错误:[ fccode(bar.FCCode)]必选"
               lhs: {
-                ntype: 6,					//  lhs + rhs = "TF5配置错误:[ fccode(bar.FCCode)]"
+                ntype: 6,     //  lhs + rhs = "TF5配置错误:[ fccode(bar.FCCode)]"
                 lhs: {
-                  ntype: 6,					//  lhs + rhs = "TF5配置错误:[ fccode(bar.FCCode)"
-                  lhs: {					//	lhs + rhs = "TF5配置错误:["
+                  ntype: 6,     //  lhs + rhs = "TF5配置错误:[ fccode(bar.FCCode)"
+                  lhs: {     // lhs + rhs = "TF5配置错误:["
                     ntype: 6,
                     lhs: {
                       ntype: 4,
@@ -1785,9 +1690,9 @@ BarItem :{
 ```js
 {
     conditionStack: ["INITIAL"]
-    done: false																 // 解析完成
-    match: "Cpu"															 // 当前正则解析的字符串
-    matched: "struct MemItem {             									 // 已解析的字符串
+    done: false                 // 解析完成
+    match: "Cpu"                // 当前正则解析的字符串
+    matched: "struct MemItem {                       // 已解析的字符串
     ↵      var FCCode ="EM62", "内存编号";
     ↵      var count = 1, "内存条数";
     ↵}
@@ -1796,10 +1701,10 @@ BarItem :{
     matches: (2) ["Cpu", "Cpu", index: 0, input: "Cpu {
     ↵      var FCCode = "",  "处理器编号";
     ↵      var…urn false;
-    ↵				}
-    ↵			}
-    ↵	}
-    ↵	return true;
+    ↵    }
+    ↵   }
+    ↵ }
+    ↵ return true;
     ↵}
     ↵
     ↵", groups: undefined]
@@ -1810,7 +1715,7 @@ BarItem :{
     yylloc: {first_line: 6, last_line: 6, first_column: 7, last_column: 10}
     yytext: "Cpu"
     _backtrack: false
-    _input: " {																	// 还没有解析的字符串
+    _input: " {                 // 还没有解析的字符串
     ↵      var FCCode = "",  "处理器编号";
     ↵      var co"
     _more: false
@@ -1820,34 +1725,32 @@ BarItem :{
 #### parse中变量的含义
 
 ```js
-lstack : [{					//每次lexer.lex() 匹配的字符  的开始行和结束行 开始列和结束列
-  "first_line": 1,			//开始行
-  "first_column": 0,		//开始列
-  "last_line": 1,			//结束行
-  "last_column": 0			//结束列
+lstack : [{     //每次lexer.lex() 匹配的字符  的开始行和结束行 开始列和结束列
+  "first_line": 1,   //开始行
+  "first_column": 0,  //开始列
+  "last_line": 1,   //结束行
+  "last_column": 0   //结束列
 } ...]
-yyloc:{						//单次的 的开始行和结束行 开始列和结束列 完成后放入lstack中
+yyloc:{      //单次的 的开始行和结束行 开始列和结束列 完成后放入lstack中
   "first_line": 1,
   "last_line": 1,
   "first_column": 15,
   "last_column": 16
 }
 
-stack : [0,20,4,12,]		//lexer.lex() 返回的token在table中的匹配项（）
+stack : [0,20,4,12,]  //lexer.lex() 返回的token在table中的匹配项（）
 state = stack[stack.length - 1] // 上一次循环的匹配字符的token table中的匹配项
 
-vstack : [ null,"struct", "MemItem","{"] 	//lexer.lex() 返回的匹配字符
-yytext："{"				   //单次 返回的匹配字符 完成后放入vstack中
+vstack : [ null,"struct", "MemItem","{"]  //lexer.lex() 返回的匹配字符
+yytext："{"       //单次 返回的匹配字符 完成后放入vstack中
 
 ```
-
-
 
 # 文件导出
 
 ## 文件导出的概念（重要）
 
-iconfig配置的概念： 
+iconfig配置的概念：
 
 - 首次配置 = new box
 - 升级配置 = mes
@@ -1861,8 +1764,8 @@ iconfig配置的概念：
 在 cfr 和 xlsx 中各个展示部分的名称
 
 - cfr
-  - base         012BASE CONFIGURATION 
-  - change     014ORDER TRANSACTIONS 
+  - base         012BASE CONFIGURATION
+  - change     014ORDER TRANSACTIONS
   - target        013PROPOSED CONFIGURATION
 
 - xlsx
@@ -2012,7 +1915,7 @@ iconfig配置的概念：
 
 #### ImportIPC的操作
 
-JSZip.loadAsync-》加载zip文件， 
+JSZip.loadAsync-》加载zip文件，
 
 zip.files['_d_i_p_s_c_'].async('string')-》获取_d_i_p_s_c_文件的字符串
 
@@ -2056,9 +1959,9 @@ const toBinary = (str) => {
 }
 ```
 
-encode方法 (base64编码) 
+encode方法 (base64编码)
 
-> 参考：http://www.ruanyifeng.com/blog/2008/06/base64.html
+> 参考：<http://www.ruanyifeng.com/blog/2008/06/base64.html>
 
 ```js
 // base64编码
@@ -2074,7 +1977,7 @@ encode(inputString) {
       chr2 = inputString.charCodeAt(i++)
       chr3 = inputString.charCodeAt(i++)
       // 将三个字符 转化为 四个字符 不足的用 @ 补位
-      enc1 = chr1 >> 2  			
+      enc1 = chr1 >> 2     
       enc2 = ((chr1 & 3) << 4) | (chr2 >> 4)
       enc3 = ((chr2 & 15) << 2) | (chr3 >> 6)
       enc4 = chr3 & 63
@@ -2117,22 +2020,20 @@ const utf8Encode = (string) => {
 Jszip用法
 
 ```js
-var zip = new JSZip(); 								//创建一个zip对象 也就是zip文件
-zip.file("Hello.txt", "Hello World\n");				//在内部创建一个hello.txt 文件 内容是Hello World\n
-var img = zip.folder("images");						//在内部创建一个images文件夹
-img.file("smile.gif", imgData, {base64: true});		//在images文件加中添加一个smile.gif 文件 ，以base64位编码
-zip.generateAsync({type:"blob"})					//生成zip的blob对象
+var zip = new JSZip();         //创建一个zip对象 也就是zip文件
+zip.file("Hello.txt", "Hello World\n");    //在内部创建一个hello.txt 文件 内容是Hello World\n
+var img = zip.folder("images");      //在内部创建一个images文件夹
+img.file("smile.gif", imgData, {base64: true});  //在images文件加中添加一个smile.gif 文件 ，以base64位编码
+zip.generateAsync({type:"blob"})     //生成zip的blob对象
 .then(function(content) {
     // see FileSaver.js
-    saveAs(content, "example.zip");					//下载 （saveAs 就是使用a标签的方式下载）
+    saveAs(content, "example.zip");     //下载 （saveAs 就是使用a标签的方式下载）
 });
 ```
 
-
-
 ## CFR
 
-### 导出过程 
+### 导出过程
 
 > 正常机器使用直接使用cfr.js  而mes机器使用mes文件夹下的index.js再调用cfr.js
 
@@ -2144,7 +2045,7 @@ ParseMachine方法传入machine-》
 
 new CFR -> 生成 header  body   footer  -》调用实例的 ParseMachine 传入 machine （对应的产品信息），->调用 实例的Print 生成CFR字符串
 
-#### header   
+#### header
 
 固定格式的1-6行
 
@@ -2187,14 +2088,14 @@ new CFR -> 生成 header  body   footer  -》调用实例的 ParseMachine 传入
 
 第2行
 
--  03 开头
+- 03 开头
 - 0Unclassified   安全性分类 安全性分类 // 默认0Unclassified    也可以是xConfidential
 
 其他行
 
 固定格式 时间不同
 
-#### body   
+#### body
 
 流程
 
@@ -2211,7 +2112,7 @@ Parse方法传入machineInfo   -》 new CFRContent(this._CFR, machineInfo)
 
 setDefault -》 parseMachine 生成07行 —》 this.body.Parse 按类型将部件分类-》调用parse xxx 生成对应的cfr部分-》FixLength修复每一行的长度
 
-FixLength修复 header的 _00Line _03Line _0506Lines ，body的07和01行 软硬件的05行（如果有的话），生成footer
+FixLength修复 header的 _00Line_03Line _0506Lines ，body的07和01行 软硬件的05行（如果有的话），生成footer
 
 07和01行
 
@@ -2223,15 +2124,13 @@ FixLength修复 header的 _00Line _03Line _0506Lines ，body的07和01行 软硬
 07行
 
 - 07 开头
-- K1 Power S924 -2    第5位    机型信息 占40位 
-- 
-
-
+- K1 Power S924 -2    第5位    机型信息 占40位
+-
 
 01行
 
 - 01开头
--  INITIAL ORDER CONFIGURATION  代表这是哪一部分cfr的代码，1=initial order，2=base 3=proposed 4=order transactions //默认 INITIAL ORDER CONFIGURATION
+- INITIAL ORDER CONFIGURATION  代表这是哪一部分cfr的代码，1=initial order，2=base 3=proposed 4=order transactions //默认 INITIAL ORDER CONFIGURATION
 
 ##### 硬件部分
 
@@ -2291,25 +2190,19 @@ Software 和 SWMA （软件和维保 ）由parseSoftwareAndSWMA生成数据
 993761877396
 ```
 
-算法：[GenCheckSum(点击跳转)](#divtop) 
+算法：[GenCheckSum(点击跳转)](#divtop)
 
-#### Print 
+#### Print
 
 打印当前的信息，依次输出header，body，footer的content 用换行符拼接
 
 ### 导出 MES CFR（待完成）
 
-
-
-
-
-
-
 ### ForceUpdate(更新)
 
 cfrString （cfr字符串）-》/n换行符截取成数组-》lines-》去掉05和06开头的元素，-》去掉98行和后面的（尾部）-》new Line(311)生成00行对象-00Line》lines[_00LineIndex]赋值 给`_00Line`-》将00行的时间更新-》以03行_03LineIndex为界将lines数组分割为prepend 和append-》从新生成三个05行-》从新拼接新的lines -》 调用GenCheckSum方法更新底部合计-》98行：7个字符 98 后面跟lines.length+1 -》99行：7个字符 99 后面跟合计的编码结果   -》最后 return lines.join('\n')
 
- #### <a  name="divtop">GenCheckSum</a>（获取footer生成校验码）
+#### <a  name="divtop">GenCheckSum</a>（获取footer生成校验码）
 
 ```js
 static GenCheckSum(lines) {
@@ -2334,7 +2227,7 @@ static GenCheckSum(lines) {
 
 2. GetHash使用预设ASCIICODETABLE 获取每个字符对应的值
 
-3. 然后* mask :每4个字符为一组分别乘16777216、65536、256、1 
+3. 然后* mask :每4个字符为一组分别乘16777216、65536、256、1
 
 4. 将每次计算后的值求和得到checksum
 
@@ -2360,8 +2253,6 @@ CheckSumLines(lines = []) {
   return checksum
 }
 ```
-
-
 
 ##### calcLine
 
@@ -2391,8 +2282,6 @@ CheckSumLines(lines = []) {
 
 >0x20 是16进制的数字32，在js中可以直接用0x20 表示32
 
-
-
 ### line类
 
 new 的时候传入length 生成对应长度的空格字符串，保存在实例对象的words中
@@ -2401,13 +2290,11 @@ new 的时候传入length 生成对应长度的空格字符串，保存在实例
 
 参数1 targetString， 参数2 length 根据设定的长度返回字符串 ，超过目标字符串的长度后面补空格 ，少于的slice截取
 
-#### WriteStrAtIndex 
+#### WriteStrAtIndex
 
 在定好的位置添加字符串 比如 123456.WriteStrAtIndex(xx,4) 最后得到  1234xx56
 
 ## XLSX
-
-
 
 导出方案的xlsx 和 当前机器的xslx都是使用 new XLS().Export方法
 
@@ -2430,8 +2317,8 @@ async Export(solution, options) {
       let supply = this.newWorkSheet(`${sheetname}-供应链`)
       let buyer = this.newWorkSheet(`${sheetname}-采购员`)
       let quotation = new Quotation(machine)
-      sales.data = quotation.Gen('sales') 		//获取二维数组
-      sales.define = quotation.GetDefine()		//获取公式项的单元格对象
+      sales.data = quotation.Gen('sales')   //获取二维数组
+      sales.define = quotation.GetDefine()  //获取公式项的单元格对象
       order.data = quotation.Gen('order')
       order.define = quotation.GetDefine()
       supply.data = quotation.Gen('supply')
@@ -2488,7 +2375,7 @@ detail
 ```js
 genTotal() { // 分别获取定位  this.targetRow 时是13  而对应值的计算分别放在对应的数组中
     this.productTotalCountPosition = `D${this.targetRow + 2}`  // 对应productTotalCount
-    this.totalListPriceRMBPosition = `B${this.targetRow + 4}` //对应totalListPrice	
+    this.totalListPriceRMBPosition = `B${this.targetRow + 4}` //对应totalListPrice 
     this.totalSalePriceRMBPosition = `C${this.targetRow + 4}` //对应totalSalePrice
     this.totalSalePriceTaxRMBPosition = `D${this.targetRow + 4}` // ...
     this.totalListPriceUSDPosition = `B${this.targetRow + 5}`
@@ -2504,7 +2391,7 @@ genTotal() { // 分别获取定位  this.targetRow 时是13  而对应值的计�
 
 成交价 = 折后价格 *（1 + 执行税率(D4)）
 
-单台总价 = SUM( 硬件， 软件 ，服务)    // SUM(B${this.targetRow + 13 + index * 19}:B${this.targetRow + 15 + index * 19})
+单台总价 = SUM( 硬件， 软件 ，服务)    // SUM(B${this.targetRow + 13 + index *19}:B${this.targetRow + 15 + index* 19})
 
 总价 = 单台总价*数量(D3)
 
@@ -2513,7 +2400,7 @@ genTotal() { // 分别获取定位  this.targetRow 时是13  而对应值的计�
       ...
       // 这里将需要汇总的定位全放到数组中 最后在GetDefine中合并到this.defines
       // 关于这里为什么用index *19 因为每个机器的明细（detail） 都占19行， 多个机器依次向下添加 对应的detail（19行）
-	  this.totalListPriceRMB.push(`B${this.targetRow + 11 + index * 19}`)
+   this.totalListPriceRMB.push(`B${this.targetRow + 11 + index * 19}`)
       this.totalSalePriceRMB.push(`D${this.targetRow + 11 + index * 19}`)
       ...
       // 合并当前detail的需要公式单元格
@@ -2530,7 +2417,7 @@ genTotal() { // 分别获取定位  this.targetRow 时是13  而对应值的计�
      // this.productTotalCount ['D31',...]
     this.defines[this.productTotalCountPosition] = { t: 'n', f: `SUM(${this.productTotalCount.join(',')})` }
     this.defines[this.totalListPriceRMBPosition] = { t: 'n', f: `SUM(${this.totalListPriceRMB.join(',')})` }
-	...
+ ...
     return this.defines
      //{ B17: {t: "n", f: "SUM(B31)"} , B18: {t: "n", f: "SUM(B37)"},B30: {t: "n", f: "SUM(B27:B29)"},...}
   }
@@ -2566,8 +2453,6 @@ genTotal() { // 分别获取定位  this.targetRow 时是13  而对应值的计�
   }
 ```
 
-
-
 ![image-20201215111528918](https://bitbw.top/public/img/my_gallery/image-20201215111528918-1608010490368.png)
 
 ### Quotation
@@ -2586,15 +2471,15 @@ constructor(machine) {
     this.targetInfo = this.grepComponents(this.machine.components) 
     /**
     a6pList: (10) [ {…}] 光盘信息 components
-    hpoList: [] 			软件预装 components
+    hpoList: []    软件预装 components
     hwList: (21)[{…}, {…}] 硬件 components
-    swList: (9)[{…}, }]  	软件components
+    swList: (9)[{…}, }]   软件components
     swList4MES: (2) [{…}, {…}]  软件的解析后的对象
      { auto: [],
      base: {
      entity:  {…},                  //本体 AIX7.x标准版 或者 PowerVM企业版
      cps: Array(1),                 //软件部件 （AIX7标准版激活码）
-     swma: {…},                    	//维保 （3年维保）
+     swma: {…},                     //维保 （3年维保）
      swmacps: Array(2),             //维保部件（AIX7标准版 3年支持服务（10），注册AIX服务支持）
      actquantity: 10                //激活数量
      },
@@ -2616,20 +2501,20 @@ constructor(machine) {
   }
 ```
 
-#### Gen 
+#### Gen
 
 返回data二维数组
 
 ```js
   Gen(type = 'sales') {
     switch (type) {
-      case 'sales':				//销售
+      case 'sales':    //销售
         return this.Gen4Sales()
-      case 'order':				//订单员
+      case 'order':    //订单员
         return this.Gen4Order()
-      case 'supply':			//供应链
+      case 'supply':   //供应链
         return this.Gen4Supply()
-      case 'buyer':				//采购员
+      case 'buyer':    //采购员
         return this.Gen4Buyer()
       default:
         break;
@@ -2656,7 +2541,7 @@ constructor(machine) {
   }
 ```
 
-#### genQuotation 
+#### genQuotation
 
 销售和订单员公用的生成方法
 
@@ -2665,18 +2550,18 @@ constructor(machine) {
 genQuotation() {
     this.defines = {}
     let rows = []
-    let title = this.genQuotationTitle() 				
+    let title = this.genQuotationTitle()     
     //配置信息 表单日期 方案ID 表单ID 订单类型  价格版本 配置名称 序列号 数量
-    let tableHeader = this.genQuotationTableHeader()	
-    //表头    Model	FCCode	PNCode	数量	描述	列表价(RMB)	列表价(USD)
+    let tableHeader = this.genQuotationTableHeader() 
+    //表头    Model FCCode PNCode 数量 描述 列表价(RMB) 列表价(USD)
     let tableBody = this.genQuotationTableBody()
-    //部件列表   9009	42A	9009-42A	1	K1 Power S924	960750	128100 ...
+    //部件列表   9009 42A 9009-42A 1 K1 Power S924 960750 128100 ...
     let tableFooter = this.genQuotationTableFooter() 
-    // 底部汇总 	单价	数量	总价
+    // 底部汇总  单价 数量 总价
     rows = rows.concat(title, tableHeader, tableBody, tableFooter)
     //this.totalLines 部件的行数
     let start = rows.length - 4 - this.totalLines // start部件列表的开始位置
-    let end = rows.length - 4 - 1				  // end部件列表的结束位置
+    let end = rows.length - 4 - 1      // end部件列表的结束位置
     let calcList = []
     for (let index = start; index <= end; index++) {
       // PATCH for listprice < 0  如果有数量小于0的部件价格让其等于0
@@ -2691,11 +2576,11 @@ genQuotation() {
     // 数量 = 机器数量（B10）
     // 总价 = 单价 * 数量
     this.defines[`B${rows.length - 1}`] = { t: 'n', f: `SUM(F${calcList.join(',F')})` } //RMB单价
-    this.defines[`B${rows.length}`] = { t: 'n', f: `SUM(G${calcList.join(',G')})` }		//USD单价
-    this.defines[`C${rows.length - 1}`] = { t: 'n', f: `B10` }							//数量
+    this.defines[`B${rows.length}`] = { t: 'n', f: `SUM(G${calcList.join(',G')})` }  //USD单价
+    this.defines[`C${rows.length - 1}`] = { t: 'n', f: `B10` }       //数量
     this.defines[`C${rows.length}`] = { t: 'n', f: `B10` }
     this.defines[`D${rows.length - 1}`] = { t: 'n', f: `B${rows.length - 1}*C${rows.length - 1}` }//RMB总价
-    this.defines[`D${rows.length}`] = { t: 'n', f: `B${rows.length}*C${rows.length}` }			  //USD总价
+    this.defines[`D${rows.length}`] = { t: 'n', f: `B${rows.length}*C${rows.length}` }     //USD总价
     return rows
   }
 ```
@@ -2787,11 +2672,11 @@ async function IPC2CFR(path) {
 
 #### app本地更新(更新user库和rule文件)
 
-#### 对比更新：
+#### 对比更新
 
 - 首先判断本地是否有user库 没有直接将工作目录下的file/init下的数据放到对应的本地版本对应的文件夹中
 
-- 通过通过  main.js 的Check 检查 本地userDB的t_local_setting表中version  是否小于  本项目工作目录里的user库的t_local_setting表中version   
+- 通过通过  main.js 的Check 检查 本地userDB的t_local_setting表中version  是否小于  本项目工作目录里的user库的t_local_setting表中version
 
 如果小于：执行updateApp方法
 
@@ -2817,7 +2702,7 @@ vue.config.js
     },
     publish: {
       provider: "generic",
-      url,					//更新地址这里可以固定一个，等调用updater再传入url
+      url,     //更新地址这里可以固定一个，等调用updater再传入url
     },
 ```
 
@@ -2827,15 +2712,15 @@ vue.config.js
 
 在mounted 中 sys库更新后 发出检查更新事件  对应触发各个阶段的 handle
 
-通过调用 ipcRenderer 的方法向主进程通信 
+通过调用 ipcRenderer 的方法向主进程通信
 
 ```js
 import {
-  onUpdateMessage,    		// 监听更新的各个事件
-  sendCheckForUpdate,		// 发送执行检查更新的通知  调用 autoUpdater.checkForUpdates() 
-  sendStarDownload,			// 发送开始下载的通知 	 调用 autoUpdater.downloadUpdate()
-  sendQuitAndInstall,		// 发送退出程序并开始安装  调用 autoUpdater.quitAndInstall()
-  sendReplaceSysDB			// 发送请求远端数据库替换本地的通知 传入url
+  onUpdateMessage,      // 监听更新的各个事件
+  sendCheckForUpdate,  // 发送执行检查更新的通知  调用 autoUpdater.checkForUpdates() 
+  sendStarDownload,   // 发送开始下载的通知   调用 autoUpdater.downloadUpdate()
+  sendQuitAndInstall,  // 发送退出程序并开始安装  调用 autoUpdater.quitAndInstall()
+  sendReplaceSysDB   // 发送请求远端数据库替换本地的通知 传入url
 } from "@/bridge/ipcRenderer"; // 调用渲染进程方法
 ```
 
@@ -2849,7 +2734,7 @@ file/init/iconfig_sys.config
 - 远程版本信息 （请求价格版本和部件版本）有三种情况
   - 返回的都是null 就没办法更新 直接退出sys库更新
   - 返回的有一个是null  就直接拿url请求替换
-  - 返回两个版本信息  三种情况 
+  - 返回两个版本信息  三种情况
     - 本地没有版本信息 那就直接请求替换
     - 分别对比价格和部件版本任何一个小于线上就 请求替换
     - 不小于线上版本 不执行操作
@@ -2858,41 +2743,16 @@ file/init/iconfig_sys.config
 
 ## 可能优化的点
 
-### 加载速度
-
-#### 问题
-
-ProductDefine 中加载了一次产品对应的部件数据
-
-ProductConfig 又加载了一遍
-
-#### 优化
-
-现在ProductConfig  的 productDef属性是直接选择机型传进来的产品数据 ，
-
-可以在 ProductDefine 实例化后挂载到 ProductConfig 中
-
-然后ProductConfig 刷新描述时用的部件列表直接使用 ProductDefine  中的部件数据
-
 #### 问题
 
 rule文件的语言是自己写的语言解析器，没有详细的文档，后期维护很麻烦
 
 #### 优化
 
-rule文件字符串语言改用js ，js内部导出server，   
+rule文件字符串语言改用js ，js内部导出server，
 
 GetProductRule方法时使用eval(ruleStr),获取导出的这个server ，其他用法就跟之前一致 ，
 
 server内部实现数据的挂载，检查时调用server内部的 check方法进行检查
 
-http://192.168.1.104:8888/IConfig_TEST/iConfig_ADMIN_TEST Setup 1.6.0-local03.exe
-
-
-
-## 软件
-
-
-
-
-
+<http://192.168.1.104:8888/IConfig_TEST/iConfig_ADMIN_TEST> Setup 1.6.0-local03.exe
