@@ -283,7 +283,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -396,7 +396,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -700,7 +700,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -815,6 +815,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Child</span> <span class="attr">v-on</span>=<span class="string">&quot;listeners&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;Father&quot;</span>,</span><br><span class="line">  <span class="attr">components</span>: &#123;</span><br><span class="line">    <span class="title class_">Child</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">computed</span>: &#123;</span><br><span class="line">    <span class="title function_">listeners</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        ...<span class="variable language_">this</span>.<span class="property">$listeners</span>,</span><br><span class="line">        <span class="comment">// 用下面 click 覆盖  this.$listeners.click</span></span><br><span class="line">        <span class="attr">click</span>: <span class="function">() =&gt;</span> <span class="variable language_">this</span>.$emit(<span class="string">&quot;click&quot;</span>),</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <h4 id="注意点-attrs-不会出现这种情况"><a href="#注意点-attrs-不会出现这种情况" class="headerlink" title="注意点 $attrs 不会出现这种情况"></a>注意点 $attrs 不会出现这种情况</h4><blockquote>
 <p>$attrs 包含了父作用域中不作为 prop 被识别 (且获取) 的 attribute 绑定 (class 和 style 除外)</p>
 </blockquote>
@@ -822,6 +823,10 @@
 <h4 id="Vue3-去除了-listeners"><a href="#Vue3-去除了-listeners" class="headerlink" title="Vue3 去除了$listeners"></a>Vue3 去除了$listeners</h4><p>vue3 中去除了 $listeners 统一在 $attrs 中</p>
 <p>并且 添加了 emits ，同 props 用法类似， 是用于定义需要触发的事件的</p>
 <p>在 emits 和 props 定义的属性 都不会在 $attrs 中出现 ，这意味的不会出现多次调用的可能 ！ vue3是挺好！😏</p>
+<h3 id="Vetur-在vue文件中-script-不高亮"><a href="#Vetur-在vue文件中-script-不高亮" class="headerlink" title="Vetur 在vue文件中 script 不高亮"></a>Vetur 在vue文件中 script 不高亮</h3><p><a target="_blank" rel="noopener" href="https://bitbw.top/public/img/my_gallery/Snipaste_2022-10-20_11-06-39.png">不高亮</a></p>
+<p>在 vue 文件中不高量</p>
+<h4 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h4><p><code>&lt;/template&gt;</code>标签位置不对</p>
+<p><a target="_blank" rel="noopener" href="https://bitbw.top/public/img/my_gallery/Snipaste_2022-10-20_11-11-08.png">解决</a></p>
 
       
     </div>
@@ -884,7 +889,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1127,7 +1132,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1236,7 +1241,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1389,7 +1394,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1991,7 +1996,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2116,7 +2121,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2223,7 +2228,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-14 08:18:05" itemprop="dateModified" datetime="2022-10-14T08:18:05+00:00">2022-10-14</time>
+      <time title="修改时间：2022-10-20 03:27:37" itemprop="dateModified" datetime="2022-10-20T03:27:37+00:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2312,7 +2317,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:43</span>
+    <span title="站点阅读时长">6:44</span>
   </span>
 </div>
 <div class="busuanzi-count">
