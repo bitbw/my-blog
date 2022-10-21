@@ -17,7 +17,7 @@ cnblogs:
 ### 安装
 
 ```bash
-npm i -D webpack webpack-cli webpack-dev-server
+npm i -D webpack webpack-cli webpack-dev-server@next
 ```
 
 ### package.json
