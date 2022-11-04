@@ -35,6 +35,7 @@ module.exports = {
   ...
 }
 ```
+
 ### 关闭部分校验规则
 
 .eslintrc.js
@@ -62,3 +63,33 @@ module.exports = {
 
 
 ```
+
+## 添加 vue-cli 添加 babel
+
+[参考文档](https://blog.csdn.net/qq_37493515/article/details/118628968)
+
+babel.config.js
+
+```js
+module.exports = {
+  presets: [
+    '@vue/cli-plugin-babel/preset'
+  ]
+}
+```
+
+### package.json
+
+```json
+ "dependencies": {
+  "core-js": "^3.6.5",    //core-js 是 babel-polyfill 的底层依赖，
+ },
+ "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",  // 包含  Babel 7 + babel-loader+ @vue/babel-preset-app
+    "@vue/cli-plugin-eslint": "~4.4.0", // 跟其他 @vue/cli-plugin 和 @vue/cli-service 相近的版本
+    "@vue/cli-service": "~4.4.0",
+```
+
+### 容易出现的问题
+
+@vue/cli-plugin-babel 不要直接安装 最好使用与当前项目 @vue/cli-plugin 和 @vue/cli-service 相近的版本
