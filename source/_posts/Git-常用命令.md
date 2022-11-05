@@ -230,3 +230,27 @@ git add A.js
 # 说明 ":(exclude)nouse" 为需要排除的文件  -- since开始时间 --until 结束时间   git log '分支名称'
 git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git log 'bowen' --author="$name" --since=2022-02-07 --until=2022-8-15 --pretty=tformat: --numstat  -- . ":(exclude)nouse_backup"  ":(exclude)package-lock.json" ":(exclude)yarn.lock"   | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -; done
 ```
+
+## git worktree 的使用
+
+参考 [git worktree 使用笔记](https://www.cnblogs.com/jasongrass/p/11178079.html)
+
+### 工作模式
+
+- worktree add 新的文件夹
+- 打开的文件夹下载依赖后修改
+- 测试没问题后  git push -u origin HEAD:目标分支
+- 删除新的文件夹  git worktree prune 清理
+
+### 注意事项
+
+worktree 不允许两个 worktree 使用同一个分支。如果有这个需要怎么办？
+
+- 新建一个分支，reset 到目标分支，再基于这个新分支工作，效果一样。
+- 新建一个分支，使用 git push -u origin HEAD:目标分支， 目标分支再 pull
+
+使用后不使再用的 worktree 删除后 ，运行 git worktree prune 清理
+
+## git 远程分支详解
+
+ 参考[Git refspec与远程分支的重要操作](https://blog.csdn.net/weixin_39616416/article/details/111160820)
