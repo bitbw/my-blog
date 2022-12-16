@@ -5,10 +5,6 @@
     <lastmod>2022-12-16</lastmod>
   </url>
   <url>
-    <loc>https://blog.bitbw.top/2021/11/14/%E9%9D%A2%E8%AF%95/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
     <loc>https://blog.bitbw.top/2021/03/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2022-12-16</lastmod>
   </url>
@@ -62,6 +58,46 @@
   </url>
   <url>
     <loc>https://blog.bitbw.top/2019/07/21/Vue/%E5%B8%83%E5%B1%80%E5%AE%B9%E5%99%A8%E5%B8%83%E5%B1%80%E4%B8%8B%E7%9A%84%E5%B7%A6%E5%8F%B3%E6%89%98%E6%8B%BD%E6%8C%87%E4%BB%A4/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/11/14/%E9%9D%A2%E8%AF%95/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/04/22/Vue/vue-cli3+git-hook%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E5%89%8D%E8%87%AA%E5%8A%A8eslint%E9%AA%8C%E8%AF%81%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/12/Vue/vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/06/09/Vue/vuetify%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/11/Vue/vuetify%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E5%BA%A6%E5%8A%A8%E7%94%BBcreateSimpleTransition%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2019/03/02/Vue/vue%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%87%87%E5%9D%91/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2022/04/29/Webpack/webpack5%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/02/Webpack/webpack%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/02/Webpack/webpack%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/02/18/Webpack/webpack%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
     <lastmod>2022-12-16</lastmod>
   </url>
   <url>
@@ -130,6 +166,106 @@
   </url>
   <url>
     <loc>https://blog.bitbw.top/2020/12/07/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E7%94%A8%E7%9F%A5%E8%AF%86/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E7%AC%94%E8%AE%B0%EF%BC%9AASCII%EF%BC%8CUnicode%20%E5%92%8C%20UTF-8/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/02/06/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2020/12/13/Nodejs/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Nodejs/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/04/22/SQL/MySQL%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/11/19/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Nginx%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2022/07/14/Nodejs/NodeJS%E4%BD%BF%E7%94%A8nodemailer%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/05/03/Nodejs/NodeJS%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2022/08/25/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/NodeJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2018/05/28/js/Promise%E5%AF%B9%E8%B1%A1%E5%92%8Casync%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/11/21/React/React%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2018/12/04/js/RegExp%E5%AF%B9%E8%B1%A1%E5%92%8Cstring-replac%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2022/03/11/TypeScript/TypeScript%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/04/25/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/10/Linux/Ubuntu-%E4%B8%8B%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/01/10/Linux/Ubuntu-%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6%E5%90%8E%E5%90%8D%E7%A7%B0%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/11/18/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/VScode%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/03/25/Vue/Vue+HbuilderX%E6%89%93%E5%8C%85App%E5%BA%94%E7%94%A8/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2020/12/24/Vue/Vue3%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/11/12/Vue/VueCli%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/11/12/Vue/VueRouter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2018/11/29/Vue/Vuex/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2018/12/04/Vue/Vue%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93%E4%B8%AD%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2019/12/14/Vue/Vue%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2022-12-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.bitbw.top/2021/03/25/Vue/Vue%E5%B8%B8%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2022-12-16</lastmod>
   </url>
   <url>
@@ -333,42 +469,6 @@
     <lastmod>2022-12-16</lastmod>
   </url>
   <url>
-    <loc>https://blog.bitbw.top/2021/04/22/Vue/vue-cli3+git-hook%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E5%89%8D%E8%87%AA%E5%8A%A8eslint%E9%AA%8C%E8%AF%81%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/12/Vue/vue-vuetify-electron-%E5%AE%9E%E7%8E%B0ctrl-f%E7%9A%84%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/06/09/Vue/vuetify%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/11/Vue/vuetify%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E5%BA%A6%E5%8A%A8%E7%94%BBcreateSimpleTransition%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2019/03/02/Vue/vue%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%87%87%E5%9D%91/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2022/04/29/Webpack/webpack5%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/02/Webpack/webpack%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/02/Webpack/webpack%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/02/18/Webpack/webpack%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
     <loc>https://blog.bitbw.top/2022/03/07/%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96/AntV-G6%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2022-12-16</lastmod>
   </url>
@@ -450,106 +550,6 @@
   </url>
   <url>
     <loc>https://blog.bitbw.top/2021/07/02/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Jenkins%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/02/06/Linux/Linux%E5%91%BD%E4%BB%A4%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2020/12/13/Nodejs/Linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Nodejs/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/04/22/SQL/MySQL%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2022/08/10/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/Next-js%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/11/19/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Nginx%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2022/07/14/Nodejs/NodeJS%E4%BD%BF%E7%94%A8nodemailer%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/05/03/Nodejs/NodeJS%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2022/08/25/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/NodeJS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2018/05/28/js/Promise%E5%AF%B9%E8%B1%A1%E5%92%8Casync%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/11/21/React/React%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2020/12/24/React/React%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2018/12/04/js/RegExp%E5%AF%B9%E8%B1%A1%E5%92%8Cstring-replac%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2022/03/11/TypeScript/TypeScript%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/04/25/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/Typora%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/10/Linux/Ubuntu-%E4%B8%8B%E5%87%A0%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/01/10/Linux/Ubuntu-%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6%E5%90%8E%E5%90%8D%E7%A7%B0%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/11/18/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/VScode%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/03/25/Vue/Vue+HbuilderX%E6%89%93%E5%8C%85App%E5%BA%94%E7%94%A8/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2020/12/24/Vue/Vue3%E5%AD%A6%E4%B9%A0%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/11/12/Vue/VueCli%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/11/12/Vue/VueRouter%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2018/11/29/Vue/Vuex/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2018/12/04/Vue/Vue%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93%E4%B8%AD%E5%AF%B9%E8%B1%A1%E5%92%8C%E6%95%B0%E7%BB%84%E5%8F%98%E6%9B%B4%E6%A3%80%E6%B5%8B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2019/12/14/Vue/Vue%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2022-12-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.bitbw.top/2021/03/25/Vue/Vue%E5%B8%B8%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2022-12-16</lastmod>
   </url>
 </urlset> 
